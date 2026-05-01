@@ -1,0 +1,164 @@
+{
+  "id": "oil-shock-1990",
+  "structure": {
+    "chartType": "line",
+    "title": "90년 유가 급등, 긴축 반영 후 결국 인하",
+    "subtitle": "좌: 지수(1990.6.1=0), 우: 유가지수(1990.6.1=100)",
+    "source": "Bloomberg, 골드만삭스 글로벌투자리서치",
+    "timeRange": "1990-06 ~ 1991-02",
+    "xAxis": {
+      "label": "월",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "성장/정책 충격 지수",
+      "unit": "",
+      "min": -20,
+      "max": 40
+    },
+    "secondaryYAxis": {
+      "label": "유가 지수",
+      "unit": "",
+      "min": 0,
+      "max": 300
+    },
+    "legend": [
+      {
+        "name": "누적 미국 성장 충격",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "누적 미국 정책 충격",
+        "color": "#90CAF9",
+        "originalColor": "#90CAF9",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "유가",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "누적 미국 성장 충격",
+        "yAxisId": "left",
+        "data": [
+          { "x": "1990-06", "y": 0 },
+          { "x": "1990-07", "y": 2 },
+          { "x": "1990-08", "y": 5 },
+          { "x": "1990-09", "y": 10 },
+          { "x": "1990-10", "y": 15 },
+          { "x": "1990-11", "y": 5 },
+          { "x": "1990-12", "y": -5 },
+          { "x": "1991-01", "y": -10 },
+          { "x": "1991-02", "y": -8 }
+        ]
+      },
+      {
+        "name": "누적 미국 정책 충격",
+        "yAxisId": "left",
+        "data": [
+          { "x": "1990-06", "y": 0 },
+          { "x": "1990-07", "y": -2 },
+          { "x": "1990-08", "y": 5 },
+          { "x": "1990-09", "y": 15 },
+          { "x": "1990-10", "y": 20 },
+          { "x": "1990-11", "y": 15 },
+          { "x": "1990-12", "y": 5 },
+          { "x": "1991-01", "y": -5 },
+          { "x": "1991-02", "y": -10 }
+        ]
+      },
+      {
+        "name": "유가",
+        "yAxisId": "right",
+        "data": [
+          { "x": "1990-06", "y": 100 },
+          { "x": "1990-07", "y": 110 },
+          { "x": "1990-08", "y": 200 },
+          { "x": "1990-09", "y": 240 },
+          { "x": "1990-10", "y": 250 },
+          { "x": "1990-11", "y": 190 },
+          { "x": "1990-12", "y": 160 },
+          { "x": "1991-01", "y": 120 },
+          { "x": "1991-02", "y": 100 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "1990-10",
+      "y": 250,
+      "displayText": "유가 피크: 250 (1990년 10월)"
+    },
+    "annotations": [
+      {
+        "text": "유가 피크 250",
+        "position": { "x": "1990-10", "y": 250 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "성장충격 마이너스 전환",
+        "position": { "x": "1990-12", "y": -5 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "정책충격 피크 20",
+        "position": { "x": "1990-10", "y": 20 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "1990-08",
+        "toX": "1990-11",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "유가 급등 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "1990년 걸프전 유가 급등 시 시장은 초기에 매파적 정책 충격(긴축)을 반영했으나, 유가 하락과 함께 성장 충격이 마이너스로 전환되며 Fed는 결국 금리 인하로 선회했다. 현재 상황과 유사한 패턴이 반복될 가능성을 시사한다.",
+    "supportResistance": [
+      { "level": -10, "type": "support", "strength": "moderate" },
+      { "level": 20, "type": "resistance", "strength": "moderate" },
+      { "level": 250, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -10,
+      "max": 15,
+      "average": 1.6,
+      "latest": -8
+    },
+    "changeRates": [
+      { "period": "6월→10월 유가", "percentChange": 150.0 },
+      { "period": "10월→2월 성장충격", "percentChange": -153.3 }
+    ]
+  },
+  "narrative": {
+    "headline": "걸프전 유가 150% 급등 후 Fed 긴축→인하 전환, 현재와 데자뷔",
+    "keyTakeaways": [
+      "1990년 걸프전으로 유가가 6월 대비 150% 급등(지수 100→250)하며 스태그플레이션 공포 확산",
+      "초기 시장은 매파적 정책 충격(금리 인상 기대)을 반영, 정책충격 지수 20까지 상승",
+      "그러나 11월부터 성장 충격이 급락하며 마이너스 전환 — 경기 침체 우려가 인플레 우려를 압도",
+      "결국 Fed는 1991년 초 금리 인하로 전환 — 유가 충격 시 '먼저 긴축 반영, 나중에 인하'하는 패턴이 현재에도 반복될 수 있음을 시사"
+    ],
+    "sentiment": "bearish"
+  }
+}

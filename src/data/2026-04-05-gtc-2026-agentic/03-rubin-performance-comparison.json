@@ -1,0 +1,58 @@
+{
+  "id": "rubin-performance-comparison",
+  "contentType": "infographic",
+  "structure": {
+    "title": "베라 루빈, 블랙웰 대비 무엇이 달라졌나",
+    "subtitle": "세대 교체의 핵심은 칩 스펙보다 토큰 생산성 개선 폭에 있다",
+    "source": "더밀크, NVIDIA GTC 2026"
+  },
+  "infographicData": {
+    "subType": "kpi_card",
+    "items": [
+      {
+        "label": "추론 처리량/W",
+        "value": "10",
+        "unit": "배",
+        "change": { "value": 900, "direction": "up", "period": "NVL72 단독 기준" }
+      },
+      {
+        "label": "추론 처리량/MW",
+        "value": "35",
+        "unit": "배",
+        "change": { "value": 3400, "direction": "up", "period": "GPU + LPU 조합" }
+      },
+      {
+        "label": "학습 필요 GPU 수",
+        "value": "1/4",
+        "unit": "수준",
+        "change": { "value": 75, "direction": "down", "period": "동일 성능 기준" }
+      },
+      {
+        "label": "100만 토큰 비용",
+        "value": "1/10",
+        "unit": "수준",
+        "change": { "value": 90, "direction": "down", "period": "비용 기준" }
+      },
+      {
+        "label": "조립·서비스 시간",
+        "value": "18",
+        "unit": "배 단축",
+        "change": { "value": 18, "direction": "down", "period": "케이블리스 모듈" }
+      }
+    ],
+    "layout": "grid"
+  },
+  "narrative": {
+    "headline": "베라 루빈의 핵심은 '더 센 GPU'가 아니라 토큰을 더 싸고 빠르게 뽑는 공장 운영 효율의 개선입니다.",
+    "keyTakeaways": [
+      "전력당 처리량 개선이 크기 때문에 같은 전력 예산으로 더 많은 AI 작업을 처리할 수 있습니다.",
+      "토큰 비용 1/10은 AI 서비스 사업자의 수익 모델 자체를 다시 쓰게 만드는 변화입니다.",
+      "조립·서비스 시간 단축은 하드웨어 도입 속도와 운영 비용까지 함께 낮춰줍니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "토큰 비용 1/10"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "14-gev-transformer-ppi",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-4.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "line",
+    "title": "변압기 가격, 구조적 상승",
+    "subtitle": "변압기 PPI 지수, 원본 그래프 기반 근사",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2011",
+        "2013",
+        "2015",
+        "2017",
+        "2019",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "PPI",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "min": 0,
+      "max": 414,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "변압기 PPI",
+        "originalColor": "#D97706",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "변압기 PPI",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2011",
+            "y": 190,
+            "confidence": 0.92
+          },
+          {
+            "x": "2013",
+            "y": 188,
+            "confidence": 0.92
+          },
+          {
+            "x": "2015",
+            "y": 195,
+            "confidence": 0.92
+          },
+          {
+            "x": "2017",
+            "y": 200,
+            "confidence": 0.92
+          },
+          {
+            "x": "2019",
+            "y": 205,
+            "confidence": 0.92
+          },
+          {
+            "x": "2021",
+            "y": 220,
+            "confidence": 0.92
+          },
+          {
+            "x": "2023",
+            "y": 330,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 360,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "변압기 공급 부족은 GE베르노바 전력 부문의 가격 협상력을 높인다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.7288135593220338,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 89.47368421052632,
+        "absoluteChange": 170,
+        "from": 190,
+        "to": 360
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 360,
+        "at": "2025"
+      },
+      "min": {
+        "value": 188,
+        "at": "2013"
+      },
+      "average": 236,
+      "median": 202.5,
+      "range": 172
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2025",
+          "y": 360
+        },
+        "seriesName": "변압기 PPI",
+        "description": "2025에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "전력기기 가격이 뛰었다",
+    "subMessage": "2021년 이후 변압기 가격 지수가 급격히 상승했다",
+    "headline": "변압기 공급 부족은 GE베르노바 전력 부문의 가격 협상력을 높인다.",
+    "summary": "원본 PPI 그래프를 장기 방향 중심으로 재구성했다.",
+    "story": "원본 PPI 그래프를 장기 방향 중심으로 재구성했다.",
+    "keyTakeaways": [
+      "2021년 이후 급등",
+      "전력기기 공급 부족을 반영",
+      "수주 가격 상승의 배경"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2025",
+          "y": 360
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D97706",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2025",
+        "y": 360
+      },
+      "reason": "변압기 공급 부족은 GE베르노바 전력 부문의 가격 협상력을 높인다.",
+      "displayText": "전력기기 가격이 뛰었다"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "01-valuation-overview",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-tables/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "빅테크 밸류에이션 한눈에",
+    "subtitle": "현재가·목표가·상승여력·Forward P/E·EPS 성장률 비교",
+    "source": "사용자 제공 이미지, 표 수치 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "company", "label": "기업", "dataType": "text", "isRowHeader": true, "width": "24%" },
+      { "key": "current", "label": "현재가", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "target", "label": "목표가", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "upside", "label": "상승여력", "dataType": "percent", "align": "right" },
+      { "key": "pe", "label": "Fwd P/E", "dataType": "number", "align": "right", "unit": "배" },
+      { "key": "eps", "label": "EPS 성장", "dataType": "percent", "align": "right" },
+      { "key": "highGap", "label": "고점차", "dataType": "percent", "align": "right" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "company": { "value": "Microsoft" },
+          "current": { "value": 424.46, "displayValue": "$424.46" },
+          "target": { "value": 570.72, "displayValue": "$570.72" },
+          "upside": { "value": 34.5, "displayValue": "+34.5%", "highlight": "positive", "badge": "최대" },
+          "pe": { "value": 25.7, "displayValue": "25.7배" },
+          "eps": { "value": 22.4, "displayValue": "22.4%" },
+          "highGap": { "value": -23.6, "displayValue": "-23.6%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Alphabet" },
+          "current": { "value": 349.94, "displayValue": "$349.94" },
+          "target": { "value": 378.5, "displayValue": "$378.50" },
+          "upside": { "value": 8.2, "displayValue": "+8.2%" },
+          "pe": { "value": 30.4, "displayValue": "30.4배" },
+          "eps": { "value": 6.5, "displayValue": "6.5%" },
+          "highGap": { "value": -1.6, "displayValue": "-1.6%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Meta" },
+          "current": { "value": 669.12, "displayValue": "$669.12" },
+          "target": { "value": 855.11, "displayValue": "$855.11" },
+          "upside": { "value": 27.8, "displayValue": "+27.8%" },
+          "pe": { "value": 22.6, "displayValue": "22.6배" },
+          "eps": { "value": 26.6, "displayValue": "26.6%", "highlight": "positive", "badge": "최고" },
+          "highGap": { "value": -16.0, "displayValue": "-16.0%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Amazon" },
+          "current": { "value": 263.04, "displayValue": "$263.04" },
+          "target": { "value": 283.98, "displayValue": "$283.98" },
+          "upside": { "value": 8.0, "displayValue": "+8.0%" },
+          "pe": { "value": 33.2, "displayValue": "33.2배" },
+          "eps": { "value": 9.2, "displayValue": "9.2%" },
+          "highGap": { "value": -1.1, "displayValue": "-1.1%" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "MS·Meta가 남아있다",
+    "subMessage": "상승여력과 성장률이 둘 다 높은 쪽은 두 종목이다",
+    "headline": "빅테크 4개사 중 Microsoft와 Meta가 상승여력과 EPS 성장률에서 동시에 돋보인다.",
+    "summary": "Microsoft는 목표가 대비 상승여력 34.5%로 가장 높고, Meta는 EPS 성장률 26.6%와 낮은 Forward P/E가 함께 보인다.",
+    "story": "원본 표의 핵심은 단순한 목표가 비교가 아니다. 목표가 여력, 밸류에이션, EPS 성장률, 고점 회복 위치를 같이 봐야 종목별 성격이 분리된다.",
+    "keyTakeaways": [
+      "Microsoft는 상승여력이 가장 크다.",
+      "Meta는 성장률이 가장 높고 P/E도 가장 낮다.",
+      "Alphabet과 Amazon은 고점에 가까워 추가 여력은 작게 보인다."
+    ],
+    "questionsRaised": [
+      "목표가 상향 여력이 실적 성장으로 뒷받침되는가?",
+      "고점에 가까운 종목은 추가 촉매가 필요한가?"
+    ],
+    "viewerAction": "상승여력만 보지 말고 EPS 성장률과 Forward P/E를 함께 비교한다.",
+    "contextualNotes": ["현재가와 목표가는 이미지에 표시된 수치를 그대로 사용했다."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "MS +34.5%, Meta +27.8%", "reason": "상승여력이 가장 큰 두 종목" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "upside", "reason": "상승여력 1위" },
+      { "row": 2, "col": "eps", "reason": "EPS 성장률 1위" }
+    ]
+  }
+}

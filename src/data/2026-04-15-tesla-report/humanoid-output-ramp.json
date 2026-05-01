@@ -1,0 +1,97 @@
+{
+  "id": "humanoid-output-ramp",
+  "structure": {
+    "chartType": "bar",
+    "title": "휴머노이드 로봇은 이제 개념 검증이 아니라 양산 램프업 구간이다",
+    "subtitle": "중국 휴머노이드 로봇 생산량 추정 (천대)",
+    "source": "MIR, 원문 리포트 33페이지 재구성",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "생산량",
+      "unit": "천대",
+      "min": 0,
+      "max": 30
+    },
+    "legend": [
+      {
+        "name": "생산량",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "생산량",
+        "data": [
+          { "x": "2023", "y": 0.5 },
+          { "x": "2024", "y": 2.0 },
+          { "x": "2025", "y": 10.0 },
+          { "x": "2026", "y": 16.0 },
+          { "x": "2027", "y": 27.0 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2027",
+      "y": 27.0,
+      "displayText": "2027년 2.7만대"
+    },
+    "annotations": [
+      {
+        "text": "2025년 1만대 양산 시작",
+        "position": { "x": "2025", "y": 10.0 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "2027년 2.7만대",
+        "position": { "x": "2027", "y": 27.0 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025",
+        "toX": "2027",
+        "color": "rgba(15, 76, 129, 0.10)",
+        "label": "양산 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "휴머노이드 로봇은 2024년까지는 실험 단계였지만, 2025년 이후 생산량이 가파르게 증가하는 양산 램프업 구간으로 넘어간다. 즉 투자 포인트도 기술 시연에서 공급망과 원가구조로 이동한다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.5,
+      "max": 27.0,
+      "average": 11.1,
+      "latest": 27.0
+    },
+    "changeRates": [
+      { "period": "2024→2025", "percentChange": 400.0 },
+      { "period": "2025→2027", "percentChange": 170.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "옵티머스의 사업성은 '사람처럼 걷나'보다 '양산 곡선에 올라타나'로 봐야 합니다.",
+    "keyTakeaways": [
+      "2025년부터 생산량이 유의미하게 증가하며 시장이 양산 단계로 이동하고 있습니다.",
+      "중국 업체들이 먼저 공급망과 원가 구조를 빠르게 학습하고 있다는 점이 중요합니다.",
+      "테슬라가 이 시장에서 이기려면 기술 시연이 아니라 대량 생산과 적용 시나리오를 증명해야 합니다."
+    ],
+    "sentiment": "neutral"
+  }
+}

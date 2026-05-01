@@ -1,0 +1,102 @@
+{
+  "id": "petrochemical-capacity-cuts",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "석화 공급 차질, 에틸렌 1천만톤대 흔들림",
+    "subtitle": "주요 기업별 에틸렌 CAPA와 감산·중단 조치 (만톤)",
+    "source": "언론보도 취합, DS투자증권 리서치센터",
+    "xAxis": {
+      "label": "기업",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "에틸렌 CAPA",
+      "unit": "만톤",
+      "min": 0,
+      "max": 230
+    },
+    "legend": [
+      {
+        "name": "에틸렌 CAPA",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "에틸렌 CAPA",
+        "data": [
+          { "x": "LG화학 여수", "y": 208, "color": "#0F4C81" },
+          { "x": "여천NCC", "y": 181, "color": "#FF6F61" },
+          { "x": "한화토탈", "y": 155, "color": "#6667AB" },
+          { "x": "LG화학 대산", "y": 127, "color": "#0F4C81" },
+          { "x": "롯데케미칼 여수", "y": 120, "color": "#939597" },
+          { "x": "롯데케미칼 대산", "y": 110, "color": "#939597" },
+          { "x": "대한유화", "y": 90, "color": "#F5DF4D" },
+          { "x": "GS칼텍스", "y": 90, "color": "#FF6F61" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "LG화학 여수",
+      "y": 208,
+      "displayText": "최대 CAPA 208만톤"
+    },
+    "annotations": [
+      {
+        "text": "여수 NCC 중단",
+        "position": { "x": "LG화학 여수", "y": 208 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "3월 4일 불가항력",
+        "position": { "x": "여천NCC", "y": 181 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "가동률 60%까지 감축",
+        "position": { "x": "GS칼텍스", "y": 90 },
+        "importance": "high",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "감산과 가동 중단이 특정 기업이 아니라 주요 NCC 전반으로 확산되고 있다. 핵심은 한국 석화 업종의 공급 제약이 단기 이벤트가 아니라 비용 상승과 환율 부담을 동반하는 구조적 물가 압력으로 번질 수 있다는 점이다.",
+    "supportResistance": [
+      { "level": 90, "type": "support", "strength": "moderate" },
+      { "level": 208, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 90,
+      "max": 208,
+      "average": 135.1,
+      "latest": 90
+    },
+    "changeRates": [
+      { "period": "최대 CAPA vs 최소 CAPA", "percentChange": 131.1 }
+    ]
+  },
+  "narrative": {
+    "headline": "공급 차질이 석화 업종 전반으로 번지며 한국 물가의 상단을 밀어올리는 압력이 커지고 있습니다.",
+    "keyTakeaways": [
+      "LG화학 여수 208만톤, 여천NCC 181만톤 등 핵심 설비가 동시에 흔들리고 있습니다.",
+      "롯데케미칼, LG화학, 대한유화, GS칼텍스까지 가동률 하향이 광범위하게 나타났습니다.",
+      "이 보고서는 이런 공급 제약이 수입 대체와 환율 상승을 통해 한국 물가를 더 자극할 수 있다고 봅니다."
+    ],
+    "sentiment": "bearish"
+  }
+}

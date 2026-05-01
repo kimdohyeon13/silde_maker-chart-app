@@ -1,0 +1,188 @@
+{
+  "id": "01-bloom-revenue-trajectory",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/bloom-2.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "블룸 매출, 2028년 75억달러",
+    "subtitle": "연간 매출 전망, 십억달러",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "min": 0,
+      "max": 9,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "매출",
+        "originalColor": "#1F78E5",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024",
+            "y": 1.474,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 2.024,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026F",
+            "y": 3.249,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 5.388,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 7.514,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "블룸에너지는 2026F 이후에도 매출 고성장 구간이 이어진다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.5369738918011093,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 409.7693351424695,
+        "absoluteChange": 6.04,
+        "from": 1.474,
+        "to": 7.514
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 7.514,
+        "at": "2028F"
+      },
+      "min": {
+        "value": 1.474,
+        "at": "2024"
+      },
+      "average": 3.9298,
+      "median": 3.249,
+      "range": 6.04
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2028F",
+          "y": 7.514
+        },
+        "seriesName": "매출",
+        "description": "2028F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "성장 속도는 아직 가파르다",
+    "subMessage": "2024년 15억달러에서 2028년 75억달러로 확대된다",
+    "headline": "블룸에너지는 2026F 이후에도 매출 고성장 구간이 이어진다.",
+    "summary": "원본 표의 연간 매출 전망을 단순 막대 차트로 재구성했다. 핵심은 2024년 14.7억달러에서 2028F 75.1억달러까지 빠르게 커지는 매출 레버리지다.",
+    "story": "원본 표의 연간 매출 전망을 단순 막대 차트로 재구성했다. 핵심은 2024년 14.7억달러에서 2028F 75.1억달러까지 빠르게 커지는 매출 레버리지다.",
+    "keyTakeaways": [
+      "2026F 매출은 32.5억달러로 전년 대비 60.5% 증가 전망",
+      "2028F에는 75.1억달러까지 확대",
+      "수요와 증설이 동시에 확인되는지 추적해야 한다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2028F",
+          "y": 7.514
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1F78E5",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028F",
+        "y": 7.514
+      },
+      "reason": "블룸에너지는 2026F 이후에도 매출 고성장 구간이 이어진다.",
+      "displayText": "성장 속도는 아직 가파르다"
+    }
+  }
+}

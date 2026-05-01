@@ -1,0 +1,204 @@
+{
+  "id": "13-gev-wind-turbine-pressure",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-4.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "line",
+    "title": "풍력터빈 수주는 줄고 있다",
+    "subtitle": "연간 풍력터빈 판매량과 수주, GW",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "GW",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "GW",
+      "min": 0,
+      "max": 11,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "판매량",
+        "originalColor": "#64748B",
+        "role": "secondary"
+      },
+      {
+        "name": "수주",
+        "originalColor": "#1F78E5",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "판매량",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "2023",
+            "y": 8.9,
+            "confidence": 0.92
+          },
+          {
+            "x": "2024",
+            "y": 7.8,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 7,
+            "confidence": 0.92
+          }
+        ]
+      },
+      {
+        "name": "수주",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2023",
+            "y": 9.2,
+            "confidence": 0.92
+          },
+          {
+            "x": "2024",
+            "y": 5.3,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 4.8,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.82,
+      "description": "풍력 부문은 가스터빈과 반대로 수주와 판매가 모두 둔화된다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.6139534883720931,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -21.348314606741575,
+        "absoluteChange": -1.9000000000000004,
+        "from": 8.9,
+        "to": 7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 8.9,
+        "at": "2023"
+      },
+      "min": {
+        "value": 7,
+        "at": "2025"
+      },
+      "average": 7.166666666666665,
+      "median": 7.4,
+      "range": 4.3999999999999995
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2023",
+          "y": 8.9
+        },
+        "seriesName": "판매량",
+        "description": "2023에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "풍력은 회복이 느리다",
+    "subMessage": "2025년 수주는 4.8GW로 2023년 대비 절반 수준이다",
+    "headline": "풍력 부문은 가스터빈과 반대로 수주와 판매가 모두 둔화된다.",
+    "summary": "풍력터빈 수주와 판매량의 하락 흐름을 단순화했다.",
+    "story": "풍력터빈 수주와 판매량의 하락 흐름을 단순화했다.",
+    "keyTakeaways": [
+      "풍력 수주는 2023년 9.2GW",
+      "2025년 4.8GW",
+      "마진 적자와 함께 리스크 요인"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2023",
+          "y": 8.9
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#64748B",
+      "secondary": [
+        "#1F78E5"
+      ],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2023",
+        "y": 8.9
+      },
+      "reason": "풍력 부문은 가스터빈과 반대로 수주와 판매가 모두 둔화된다.",
+      "displayText": "풍력은 회복이 느리다"
+    }
+  }
+}

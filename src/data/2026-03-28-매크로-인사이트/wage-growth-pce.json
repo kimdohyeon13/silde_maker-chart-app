@@ -1,0 +1,153 @@
+{
+  "id": "wage-growth-pce",
+  "structure": {
+    "chartType": "line",
+    "title": "임금 15%→4.6%, 과열 해소 중",
+    "subtitle": "미국 임금 상승률 vs 근원 PCE 상승률 (%)",
+    "source": "tradingeconomics.com, FRED",
+    "timeRange": "2020~2026",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "상승률",
+      "unit": "%",
+      "min": 0,
+      "max": 16
+    },
+    "legend": [
+      {
+        "name": "임금 상승률",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "role": "primary"
+      },
+      {
+        "name": "근원 PCE",
+        "color": "#795548",
+        "originalColor": "#795548",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "임금 상승률",
+        "data": [
+          { "x": "2020-01", "y": 3 },
+          { "x": "2020-07", "y": 1.5 },
+          { "x": "2021-01", "y": 5 },
+          { "x": "2021-07", "y": 10 },
+          { "x": "2022-01", "y": 14 },
+          { "x": "2022-07", "y": 12 },
+          { "x": "2023-01", "y": 8 },
+          { "x": "2023-07", "y": 6 },
+          { "x": "2024-01", "y": 5 },
+          { "x": "2024-07", "y": 4.8 },
+          { "x": "2025-01", "y": 4.6 },
+          { "x": "2025-07", "y": 4.6 },
+          { "x": "2026-01", "y": 4.6 }
+        ]
+      },
+      {
+        "name": "근원 PCE",
+        "data": [
+          { "x": "2020-01", "y": 1.7 },
+          { "x": "2020-07", "y": 1.3 },
+          { "x": "2021-01", "y": 1.5 },
+          { "x": "2021-07", "y": 3.5 },
+          { "x": "2022-01", "y": 5.2 },
+          { "x": "2022-07", "y": 5.0 },
+          { "x": "2023-01", "y": 4.7 },
+          { "x": "2023-07", "y": 3.8 },
+          { "x": "2024-01", "y": 2.9 },
+          { "x": "2024-07", "y": 2.7 },
+          { "x": "2025-01", "y": 2.6 },
+          { "x": "2025-07", "y": 2.5 },
+          { "x": "2026-01", "y": 2.5 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-01",
+      "y": 4.6,
+      "displayText": "현재: 4.6%"
+    },
+    "annotations": [
+      {
+        "text": "피크 임금 ~15%",
+        "position": { "x": "2022-01", "y": 14 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "현재 4.6%",
+        "position": { "x": "2026-01", "y": 4.6 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2021-07",
+        "toX": "2023-01",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "임금 과열 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2020-01", "y": 4.5 },
+        "to": { "x": "2026-01", "y": 4.5 },
+        "label": "4.5% 기준선",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "임금 상승률이 2022년 초 ~14% 피크 후 급격히 하락하여 현재 4.6%로 안정화. 근원 PCE도 동반 하락하며 인플레 압력 완화 확인.",
+    "supportResistance": [
+      {
+        "level": 4.5,
+        "type": "support",
+        "strength": "moderate"
+      },
+      {
+        "level": 14,
+        "type": "resistance",
+        "strength": "strong"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 1.5,
+      "max": 14,
+      "average": 6.5,
+      "latest": 4.6
+    },
+    "changeRates": [
+      {
+        "period": "피크 대비",
+        "percentChange": -67.1
+      },
+      {
+        "period": "전년 대비",
+        "percentChange": -8.0
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "임금 과열 종료, 4.6%로 연착륙 궤도 진입",
+    "keyTakeaways": [
+      "러우전쟁 전후 임금 상승률 14%까지 급등 후 현재 4.6%로 정상화",
+      "근원 PCE 2.5%로 Fed 목표(2%) 근접, 추가 긴축 필요성 감소",
+      "임금-물가 스파이럴 우려는 사실상 해소, 연착륙 시나리오 유력"
+    ],
+    "sentiment": "cautiously optimistic"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "fsd-subscriber-ramp",
+  "structure": {
+    "chartType": "bar",
+    "title": "FSD 구독자 110만대, 이제 핵심은 침투율 재가속이다",
+    "subtitle": "연간 FSD 구독자 수 추이 (백만대), 침투율은 2025년 12.4%",
+    "source": "원문 리포트 14페이지 재구성",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "FSD 구독자 수",
+      "unit": "백만대",
+      "min": 0,
+      "max": 1.2
+    },
+    "legend": [
+      {
+        "name": "FSD 구독자 수",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "FSD 구독자 수",
+        "data": [
+          { "x": "2021", "y": 0.4 },
+          { "x": "2022", "y": 0.5 },
+          { "x": "2023", "y": 0.6 },
+          { "x": "2024", "y": 0.8 },
+          { "x": "2025", "y": 1.1 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2025",
+      "y": 1.1,
+      "displayText": "2025년 110만대"
+    },
+    "annotations": [
+      {
+        "text": "2021 침투율 16.7%",
+        "position": { "x": "2021", "y": 0.4 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "2023 침투율 10.9%",
+        "position": { "x": "2023", "y": 0.6 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "2025 침투율 12.4%",
+        "position": { "x": "2025", "y": 1.1 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2024",
+        "toX": "2025",
+        "color": "rgba(15, 76, 129, 0.08)",
+        "label": "재가속 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "FSD 구독자 수는 2021년 40만대에서 2025년 110만대로 늘었지만, 침투율은 2021년 16.7%에서 2023년 10.9%까지 내려갔다가 2025년 12.4%로 반등했다. 결국 절대 구독자 증가보다 중요한 것은 침투율이 다시 올라가는지 여부다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.4,
+      "max": 1.1,
+      "average": 0.68,
+      "latest": 1.1
+    },
+    "changeRates": [
+      { "period": "2021→2025", "percentChange": 175.0 },
+      { "period": "2024→2025", "percentChange": 37.5 }
+    ]
+  },
+  "narrative": {
+    "headline": "FSD 매출이 진짜 의미를 가지려면 구독자 증가보다 침투율 회복이 먼저 확인돼야 합니다.",
+    "keyTakeaways": [
+      "2025년 FSD 구독자는 110만대로 늘었지만, 아직 전체 판매 대비 침투율은 12.4% 수준입니다.",
+      "2023년 침투율 저점 이후 반등이 시작됐다는 점이 중요합니다.",
+      "중국과 유럽 배포가 붙으면 이익 기여도는 판매대수보다 빠르게 커질 수 있습니다."
+    ],
+    "sentiment": "neutral"
+  }
+}

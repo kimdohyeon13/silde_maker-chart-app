@@ -1,0 +1,105 @@
+{
+  "id": "trillion-dollar-demand",
+  "structure": {
+    "chartType": "bar",
+    "title": "블랙웰+루빈 수요 전망, 1년 만에 2배",
+    "subtitle": "GTC 2025 대비 GTC 2026에서 제시된 매출 기회 상향",
+    "source": "NVIDIA GTC 2026 기자회견, 더밀크 정리",
+    "timeRange": "2025 ~ 2027 전망",
+    "xAxis": {
+      "label": "기준 시점",
+      "type": "category",
+      "tickValues": ["GTC 2024", "GTC 2025", "GTC 2026", "확장 기준"],
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출 기회",
+      "type": "numeric",
+      "tickValues": ["0", "250", "500", "750", "1000", "1250"],
+      "unit": "십억달러",
+      "min": 0,
+      "max": 1250,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "블랙웰+루빈 기준",
+        "originalColor": "#6E59FF",
+        "remakeColor": "#6E59FF",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "블랙웰+루빈 기준",
+        "data": [
+          { "x": "GTC 2024", "y": 100, "confidence": 0.92 },
+          { "x": "GTC 2025", "y": 500, "confidence": 0.98 },
+          { "x": "GTC 2026", "y": 1000, "confidence": 0.98 },
+          { "x": "확장 기준", "y": 1250, "confidence": 0.9 }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.94,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "GTC 2026",
+      "y": 1000,
+      "displayText": "$1.0T+"
+    },
+    "annotations": [
+      {
+        "text": "1년 만에 2배 상향",
+        "position": { "x": "GTC 2026", "y": 1000 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "CPU·스토리지 포함 시 1.25T 가능성",
+        "position": { "x": "확장 기준", "y": 1250 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "GTC 2024에서 약 100B, GTC 2025에서 500B, GTC 2026에서 1T+로 수요 전망이 급격하게 상향됐다.",
+    "supportResistance": [
+      { "level": 500, "type": "support", "strength": "moderate" },
+      { "level": 1000, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 100,
+      "max": 1250,
+      "average": 712.5,
+      "latest": 1250
+    },
+    "changeRates": [
+      { "period": "GTC 2025→GTC 2026", "percentChange": 100.0 },
+      { "period": "GTC 2026→확장 기준", "percentChange": 25.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "같은 GPU 사이클을 두고도 엔비디아의 수요 전망은 1년 만에 500B에서 1T+로 두 배 높아졌습니다.",
+    "keyTakeaways": [
+      "GTC 2025의 500B 전망이 GTC 2026에서는 1T+로 상향됐습니다.",
+      "황 CEO는 CPU, 스토리지, 그록을 빼고도 이 숫자라고 설명했습니다.",
+      "포함 범위를 넓히면 잠재 기회는 1.25T 수준까지 커질 수 있습니다."
+    ]
+  }
+}

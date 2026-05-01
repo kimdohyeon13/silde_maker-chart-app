@@ -1,0 +1,212 @@
+{
+  "id": "systematic-macro-flow",
+  "structure": {
+    "chartType": "line",
+    "title": "매크로 -275bn 매도, 추가 투매 가능",
+    "subtitle": "시뮬레이션 플로우 및 향후 1개월 조건부 기대, $bn",
+    "source": "Goldman Sachs FICC and Equities, Futures Strats Group (2026년 4월 3일 기준)",
+    "timeRange": "2026-02-05 ~ 2026-04-27",
+    "xAxis": {
+      "label": "날짜",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "누적 플로우",
+      "unit": "$bn",
+      "min": -400,
+      "max": 0
+    },
+    "legend": [
+      {
+        "name": "실현값 & 시장횡보 기준선",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "line",
+        "role": "primary"
+      },
+      {
+        "name": "하락 1 표준편차",
+        "color": "#E8A060",
+        "originalColor": "#E8A060",
+        "style": "dashed",
+        "role": "secondary"
+      },
+      {
+        "name": "하락 2+ 표준편차",
+        "color": "#D4C040",
+        "originalColor": "#D4C040",
+        "style": "dashed",
+        "role": "secondary"
+      },
+      {
+        "name": "상승 1 표준편차",
+        "color": "#64B5F6",
+        "originalColor": "#64B5F6",
+        "style": "dashed",
+        "role": "secondary"
+      },
+      {
+        "name": "상승 2 표준편차",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "dashed",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "실현값 & 시장횡보 기준선",
+        "data": [
+          { "x": "2026-02-05", "y": 0 },
+          { "x": "2026-02-10", "y": -10 },
+          { "x": "2026-02-16", "y": -25 },
+          { "x": "2026-02-20", "y": -25 },
+          { "x": "2026-03-02", "y": -30 },
+          { "x": "2026-03-10", "y": -75 },
+          { "x": "2026-03-16", "y": -150 },
+          { "x": "2026-03-20", "y": -200 },
+          { "x": "2026-03-25", "y": -250 },
+          { "x": "2026-03-30", "y": -275 },
+          { "x": "2026-04-03", "y": -220 },
+          { "x": "2026-04-10", "y": -220 },
+          { "x": "2026-04-15", "y": -215 },
+          { "x": "2026-04-27", "y": -210 }
+        ]
+      },
+      {
+        "name": "하락 1 표준편차",
+        "data": [
+          { "x": "2026-03-30", "y": -275 },
+          { "x": "2026-04-03", "y": -260 },
+          { "x": "2026-04-10", "y": -260 },
+          { "x": "2026-04-15", "y": -255 },
+          { "x": "2026-04-27", "y": -250 }
+        ]
+      },
+      {
+        "name": "하락 2+ 표준편차",
+        "data": [
+          { "x": "2026-03-30", "y": -275 },
+          { "x": "2026-04-03", "y": -280 },
+          { "x": "2026-04-10", "y": -310 },
+          { "x": "2026-04-15", "y": -350 },
+          { "x": "2026-04-27", "y": -375 }
+        ]
+      },
+      {
+        "name": "상승 1 표준편차",
+        "data": [
+          { "x": "2026-03-30", "y": -275 },
+          { "x": "2026-04-03", "y": -250 },
+          { "x": "2026-04-10", "y": -200 },
+          { "x": "2026-04-15", "y": -150 },
+          { "x": "2026-04-27", "y": -75 }
+        ]
+      },
+      {
+        "name": "상승 2 표준편차",
+        "data": [
+          { "x": "2026-03-30", "y": -275 },
+          { "x": "2026-04-03", "y": -240 },
+          { "x": "2026-04-10", "y": -175 },
+          { "x": "2026-04-15", "y": -110 },
+          { "x": "2026-04-27", "y": -50 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-04-03",
+      "y": -220,
+      "displayText": "현재: -220bn (4월 3일)"
+    },
+    "annotations": [
+      {
+        "text": "오늘 (4/3)",
+        "position": { "x": "2026-04-03" },
+        "importance": "critical",
+        "style": "neutral"
+      },
+      {
+        "text": "최저점: -275bn",
+        "position": { "x": "2026-03-30", "y": -275 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "최악 시나리오: -375bn",
+        "position": { "x": "2026-04-27", "y": -375 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "최선 시나리오: -50bn",
+        "position": { "x": "2026-04-27", "y": -50 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026-03-30",
+        "toX": "2026-04-27",
+        "color": "#E3F2FD",
+        "label": "전망 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2026-04-03", "y": 0 },
+        "to": { "x": "2026-04-03", "y": -400 },
+        "label": "오늘",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "2월 초부터 시스템적 매크로 전략이 지속적으로 주식을 매도하여 3월 말 -275bn까지 하락 후, 4월 초 소폭 반등. 향후 시장 방향에 따라 -375bn(추가 매도)에서 -50bn(대규모 환매)까지 넓은 범위의 시나리오 존재.",
+    "supportResistance": [
+      {
+        "level": -275,
+        "type": "support",
+        "strength": "strong"
+      },
+      {
+        "level": -200,
+        "type": "resistance",
+        "strength": "moderate"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -375,
+      "max": 0,
+      "average": -175,
+      "latest": -220
+    },
+    "changeRates": [
+      {
+        "period": "2월 초 ~ 3월 말",
+        "percentChange": -100
+      },
+      {
+        "period": "3월 30일 ~ 4월 3일 (반등)",
+        "percentChange": 20
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "시스템적 매크로 -275bn 매도 후 반등, 하방 리스크 -375bn 잔존",
+    "keyTakeaways": [
+      "2월 이후 글로벌 주식에서 시스템적 매크로 전략이 약 275bn 달러 순매도",
+      "4월 초 -220bn으로 소폭 반등했으나 시장 횡보 시 추가 매도 제한적",
+      "하락 2SD 시나리오에서 4월 말 -375bn까지 추가 투매 가능",
+      "상승 2SD 시나리오에서는 -50bn까지 대규모 환매수 가능"
+    ],
+    "sentiment": "bearish"
+  }
+}

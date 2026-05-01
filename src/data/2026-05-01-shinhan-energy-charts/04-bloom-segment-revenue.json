@@ -1,0 +1,263 @@
+{
+  "id": "04-bloom-segment-revenue",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/bloom-2.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "line",
+    "title": "블룸 성장은 제품 매출 주도",
+    "subtitle": "분기 부문별 매출, 백만달러",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "min": 0,
+      "max": 751,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "제품",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      },
+      {
+        "name": "서비스",
+        "originalColor": "#1F78E5",
+        "role": "secondary"
+      },
+      {
+        "name": "설치",
+        "originalColor": "#64748B",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "제품",
+        "role": "primary",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 212,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q25",
+            "y": 297,
+            "confidence": 0.92
+          },
+          {
+            "x": "3Q25",
+            "y": 384,
+            "confidence": 0.92
+          },
+          {
+            "x": "4Q25",
+            "y": 639,
+            "confidence": 0.92
+          },
+          {
+            "x": "1Q26",
+            "y": 653,
+            "confidence": 0.92
+          }
+        ]
+      },
+      {
+        "name": "서비스",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 54,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q25",
+            "y": 54,
+            "confidence": 0.92
+          },
+          {
+            "x": "3Q25",
+            "y": 59,
+            "confidence": 0.92
+          },
+          {
+            "x": "4Q25",
+            "y": 62,
+            "confidence": 0.92
+          },
+          {
+            "x": "1Q26",
+            "y": 62,
+            "confidence": 0.92
+          }
+        ]
+      },
+      {
+        "name": "설치",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 34,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q25",
+            "y": 37,
+            "confidence": 0.92
+          },
+          {
+            "x": "3Q25",
+            "y": 66,
+            "confidence": 0.92
+          },
+          {
+            "x": "4Q25",
+            "y": 67,
+            "confidence": 0.92
+          },
+          {
+            "x": "1Q26",
+            "y": 26,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "블룸의 성장 축은 제품 출하 확대에 집중되어 있다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.475609756097561,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 208.01886792452828,
+        "absoluteChange": 441,
+        "from": 212,
+        "to": 653
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 653,
+        "at": "1Q26"
+      },
+      "min": {
+        "value": 212,
+        "at": "1Q25"
+      },
+      "average": 180.4,
+      "median": 62,
+      "range": 627
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "1Q26",
+          "y": 653
+        },
+        "seriesName": "제품",
+        "description": "1Q26에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "제품 매출이 압도적이다",
+    "subMessage": "1Q26 제품 매출은 6.53억달러로 전년 대비 급증했다",
+    "headline": "블룸의 성장 축은 제품 출하 확대에 집중되어 있다.",
+    "summary": "부문별 매출을 단순화해 주연을 제품 매출로 잡았다. 서비스와 설치는 보조 시리즈로 낮춰 읽기 쉽게 만들었다.",
+    "story": "부문별 매출을 단순화해 주연을 제품 매출로 잡았다. 서비스와 설치는 보조 시리즈로 낮춰 읽기 쉽게 만들었다.",
+    "keyTakeaways": [
+      "제품 매출은 1Q25 2.12억달러에서 1Q26 6.53억달러",
+      "서비스 매출은 안정적",
+      "설치 매출은 분기 변동성이 크다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "1Q26",
+          "y": 653
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [
+        "#1F78E5",
+        "#64748B"
+      ],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "1Q26",
+        "y": 653
+      },
+      "reason": "블룸의 성장 축은 제품 출하 확대에 집중되어 있다.",
+      "displayText": "제품 매출이 압도적이다"
+    }
+  }
+}

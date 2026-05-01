@@ -1,0 +1,188 @@
+{
+  "id": "15-vertiv-revenue-trajectory",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/vertiv-2.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "버티브 매출, 200억달러 근접",
+    "subtitle": "연간 매출 전망, 십억달러",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "min": 0,
+      "max": 23,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "매출",
+        "originalColor": "#1F78E5",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024",
+            "y": 8.012,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 10.23,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026F",
+            "y": 13.618,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 16.932,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 19.985,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "버티브는 AI 데이터센터 전력·냉각 투자 확대의 직접 수혜주다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.8704217979847914,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 149.43834248627056,
+        "absoluteChange": 11.972999999999999,
+        "from": 8.012,
+        "to": 19.985
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 19.985,
+        "at": "2028F"
+      },
+      "min": {
+        "value": 8.012,
+        "at": "2024"
+      },
+      "average": 13.7554,
+      "median": 13.618,
+      "range": 11.972999999999999
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2028F",
+          "y": 19.985
+        },
+        "seriesName": "매출",
+        "description": "2028F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "데이터센터가 외형을 키운다",
+    "subMessage": "2028F 매출은 200억달러에 근접한다",
+    "headline": "버티브는 AI 데이터센터 전력·냉각 투자 확대의 직접 수혜주다.",
+    "summary": "연간 매출 전망을 단순 막대로 재구성했다.",
+    "story": "연간 매출 전망을 단순 막대로 재구성했다.",
+    "keyTakeaways": [
+      "2026F 매출 136억달러",
+      "2028F 매출 200억달러",
+      "데이터센터 투자 사이클이 핵심"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2028F",
+          "y": 19.985
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1F78E5",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028F",
+        "y": 19.985
+      },
+      "reason": "버티브는 AI 데이터센터 전력·냉각 투자 확대의 직접 수혜주다.",
+      "displayText": "데이터센터가 외형을 키운다"
+    }
+  }
+}

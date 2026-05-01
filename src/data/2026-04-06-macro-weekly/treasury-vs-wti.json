@@ -1,0 +1,152 @@
+{
+  "id": "treasury-vs-wti",
+  "structure": {
+    "chartType": "line",
+    "title": "금리↓ 유가↑, 디커플링 심화",
+    "subtitle": "좌: %, 우: USD/bbl, 2026년 1월~4월 일별",
+    "source": "Citi Research",
+    "timeRange": "2026-01 ~ 2026-04",
+    "xAxis": {
+      "label": "날짜",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "2년물 국채 금리",
+      "unit": "%",
+      "min": 3.3,
+      "max": 4.1
+    },
+    "secondaryYAxis": {
+      "label": "WTI 유가",
+      "unit": "USD/bbl",
+      "min": 40,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "2년물 국채 금리",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "WTI 유가",
+        "color": "#64B5F6",
+        "originalColor": "#64B5F6",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2년물 국채 금리",
+        "yAxisId": "left",
+        "data": [
+          { "x": "2026-01-01", "y": 3.48 },
+          { "x": "2026-01-08", "y": 3.50 },
+          { "x": "2026-01-15", "y": 3.55 },
+          { "x": "2026-01-22", "y": 3.60 },
+          { "x": "2026-01-29", "y": 3.55 },
+          { "x": "2026-02-05", "y": 3.50 },
+          { "x": "2026-02-12", "y": 3.45 },
+          { "x": "2026-02-19", "y": 3.42 },
+          { "x": "2026-02-26", "y": 3.53 },
+          { "x": "2026-03-05", "y": 3.55 },
+          { "x": "2026-03-12", "y": 3.75 },
+          { "x": "2026-03-19", "y": 3.85 },
+          { "x": "2026-03-26", "y": 3.90 },
+          { "x": "2026-04-02", "y": 3.83 }
+        ]
+      },
+      {
+        "name": "WTI 유가",
+        "yAxisId": "right",
+        "data": [
+          { "x": "2026-01-01", "y": 58 },
+          { "x": "2026-01-08", "y": 60 },
+          { "x": "2026-01-15", "y": 62 },
+          { "x": "2026-01-22", "y": 60 },
+          { "x": "2026-01-29", "y": 63 },
+          { "x": "2026-02-05", "y": 62 },
+          { "x": "2026-02-12", "y": 60 },
+          { "x": "2026-02-19", "y": 58 },
+          { "x": "2026-02-26", "y": 63 },
+          { "x": "2026-03-05", "y": 90 },
+          { "x": "2026-03-12", "y": 95 },
+          { "x": "2026-03-19", "y": 100 },
+          { "x": "2026-03-26", "y": 98 },
+          { "x": "2026-04-02", "y": 110 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-04-02",
+      "y": 3.83,
+      "displayText": "금리 3.83% vs WTI $110"
+    },
+    "annotations": [
+      {
+        "text": "디커플링 시작",
+        "position": { "x": "2026-02-26", "y": 63 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "WTI $110 돌파",
+        "position": { "x": "2026-04-02", "y": 110 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "금리 저점 3.42%",
+        "position": { "x": "2026-02-19", "y": 3.42 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026-02-26",
+        "toX": "2026-04-02",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "디커플링 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2월 말부터 WTI 유가가 급등하는 동안 국채 금리는 소폭 상승 후 하락 전환 — 전형적인 스태그플레이션 우려 신호로 시장이 경기 둔화를 유가 상승보다 더 크게 반영하고 있다.",
+    "supportResistance": [
+      { "level": 3.42, "type": "support", "strength": "moderate" },
+      { "level": 3.90, "type": "resistance", "strength": "moderate" },
+      { "level": 110, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 3.42,
+      "max": 3.90,
+      "average": 3.60,
+      "latest": 3.83
+    },
+    "changeRates": [
+      { "period": "1월→4월 금리", "percentChange": 10.1 },
+      { "period": "1월→4월 WTI", "percentChange": 89.7 }
+    ]
+  },
+  "narrative": {
+    "headline": "유가 90% 급등에도 금리 하락, 시장은 경기 둔화 베팅 중",
+    "keyTakeaways": [
+      "WTI 유가가 1월 $58에서 4월 $110으로 89.7% 급등하며 공급 충격 반영",
+      "2년물 금리는 3월 말 3.90% 고점 후 3.83%로 하락 전환 — 연준 금리 인하 기대 반영",
+      "2월 말부터 금리-유가 디커플링 본격화: 유가 상승 = 인플레 압력이지만, 시장은 경기 둔화 우려를 더 크게 반영",
+      "스태그플레이션 시나리오 가능성 부각 — 유가발 비용 상승 + 소비 위축 동시 발생 리스크"
+    ],
+    "sentiment": "bearish"
+  }
+}

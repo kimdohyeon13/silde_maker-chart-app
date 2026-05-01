@@ -1,0 +1,76 @@
+{
+  "id": "grid-interconnection-delay",
+  "structure": {
+    "chartType": "bar",
+    "title": "계통 연결 대기, 2.3년에서 4.8년으로 두 배 이상 증가",
+    "subtitle": "미국 발전소 계통 연결 신청부터 상업가동까지 평균 소요기간",
+    "source": "Berkeley Lab(2025.08)",
+    "timeRange": "2000년대 vs 2024년",
+    "xAxis": {
+      "label": "시점",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "평균 소요기간",
+      "unit": "개월",
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "평균 소요기간",
+        "originalColor": "#6667AB",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "평균 소요기간",
+        "data": [
+          { "x": "2000년대 평균", "y": 28 },
+          { "x": "2024년 평균", "y": 57 }
+        ]
+      }
+    ],
+    "totalDataPoints": 2
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2024년 평균",
+      "y": 57,
+      "displayText": "57개월"
+    },
+    "annotations": [
+      {
+        "text": "전력망 대기가 투자 병목으로 전환",
+        "position": { "x": "2024년 평균", "y": 57 },
+        "importance": "critical",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "발전 설비 자체보다 계통 연결과 인허가가 더 큰 병목이 되면서, 빠른 온사이트 전원의 가치가 커지는 구조다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 28,
+      "max": 57,
+      "average": 42.5,
+      "latest": 57
+    },
+    "changeRates": [
+      { "period": "2000년대 → 2024년", "percentChange": 103.6 }
+    ]
+  },
+  "narrative": {
+    "headline": "미국 전력난의 본질은 발전 아이디어 부족이 아니라 연결 지연입니다.",
+    "summary": "평균 계통 연결 기간은 2000년대 28개월에서 2024년 57개월로 늘었다. 데이터센터를 빨리 열어야 하는 빅테크 입장에서는 발전단가보다 연결 시간 자체가 훨씬 더 비싼 비용이 됐다.",
+    "story": "이 수치는 왜 연료전지와 ESS, 온사이트 전원이 동시에 주목받는지 설명해 준다. 전기를 싸게 만드는 기술이 아니라, 지금 당장 붙일 수 있는 전원이 더 높은 경제적 가치를 갖게 된 것이다. 투자자 입장에서는 송배전 장비, 계통 보강, 현장 전원 솔루션이 같은 문장 안에서 읽혀야 하는 이유다."
+  }
+}

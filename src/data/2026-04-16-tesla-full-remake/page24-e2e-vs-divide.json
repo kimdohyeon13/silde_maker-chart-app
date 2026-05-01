@@ -1,0 +1,115 @@
+{
+  "id": "page24-e2e-vs-divide",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "End-to-End가 중요한 이유는 성능보다 학습 속도가 빨라질 수 있기 때문이다",
+    "subtitle": "End-to-End와 Divide-and-Conquer 접근 비교 재구성",
+    "source": "ChatGPT"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "비교 항목",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": 140
+      },
+      {
+        "key": "e2e",
+        "label": "End-to-End 방식",
+        "dataType": "text",
+        "width": 280
+      },
+      {
+        "key": "modular",
+        "label": "Divide-and-Conquer 방식",
+        "dataType": "text",
+        "width": 280
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "처리 방식",
+            "displayValue": "처리 방식"
+          },
+          "e2e": {
+            "value": "시작에서 목적지까지 신경망으로 직접 연결",
+            "displayValue": "시작에서 목적지까지 신경망으로 직접 연결",
+            "highlight": "accent"
+          },
+          "modular": {
+            "value": "인지·판단·제어 문제를 나눠 개별 모듈 처리",
+            "displayValue": "인지·판단·제어 문제를 나눠 개별 모듈 처리"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "장점",
+            "displayValue": "장점"
+          },
+          "e2e": {
+            "value": "단순 구조, 데이터 기반 학습, 전체 시스템 통합 최적화",
+            "displayValue": "단순 구조, 데이터 기반 학습, 전체 시스템 통합 최적화"
+          },
+          "modular": {
+            "value": "모듈화 용이, 해석 가능성 높음, 단계별 검증 가능",
+            "displayValue": "모듈화 용이, 해석 가능성 높음, 단계별 검증 가능"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "단점",
+            "displayValue": "단점"
+          },
+          "e2e": {
+            "value": "블랙박스 문제, 고품질 데이터 의존, 안전성 검증 부담",
+            "displayValue": "블랙박스 문제, 고품질 데이터 의존, 안전성 검증 부담"
+          },
+          "modular": {
+            "value": "복잡성 증가, 데이터 손실, 통합 비용 부담",
+            "displayValue": "복잡성 증가, 데이터 손실, 통합 비용 부담"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "대표 적용사",
+            "displayValue": "대표 적용사"
+          },
+          "e2e": {
+            "value": "Tesla, Huawei, 샤오펑, 리오토, BYD",
+            "displayValue": "Tesla, Huawei, 샤오펑, 리오토, BYD",
+            "highlight": "positive"
+          },
+          "modular": {
+            "value": "Waymo, Cruise, Motional",
+            "displayValue": "Waymo, Cruise, Motional"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "자율주행 경쟁은 더 똑똑한 모듈을 붙이는 게임이 아니라, 실주행 데이터가 더 빨리 성능으로 돌아오는 구조를 누가 갖췄느냐의 게임이 되고 있습니다.",
+    "keyTakeaways": [
+      "End-to-End는 구조는 단순하지만 데이터와 검증 부담이 큽니다.",
+      "모듈형은 해석과 검증은 쉽지만 통합 비용이 커집니다.",
+      "테슬라가 플릿과 칩을 같이 쥐고 있다는 점이 End-to-End 전략의 실행 가능성을 높입니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "학습 속도의 차이"
+    }
+  }
+}

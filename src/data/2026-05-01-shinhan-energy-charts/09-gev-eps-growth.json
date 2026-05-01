@@ -1,0 +1,188 @@
+{
+  "id": "09-gev-eps-growth",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-5.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "GEV EPS, 2028년 30달러",
+    "subtitle": "Adj-EPS 전망",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "EPS",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "min": 0,
+      "max": 36,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Adj-EPS",
+        "originalColor": "#0F9D58",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adj-EPS",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024",
+            "y": 5.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 17.7,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026F",
+            "y": 14.5,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 22.3,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 30.8,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "GEV는 밸류에이션보다 EPS 성장 지속성이 더 중요한 구간이다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.3861386138613863,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 450.0000000000001,
+        "absoluteChange": 25.200000000000003,
+        "from": 5.6,
+        "to": 30.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 30.8,
+        "at": "2028F"
+      },
+      "min": {
+        "value": 5.6,
+        "at": "2024"
+      },
+      "average": 18.18,
+      "median": 17.7,
+      "range": 25.200000000000003
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2028F",
+          "y": 30.8
+        },
+        "seriesName": "Adj-EPS",
+        "description": "2028F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "평가는 EPS가 받친다",
+    "subMessage": "2027F 이후 EPS 성장 재가속이 핵심이다",
+    "headline": "GEV는 밸류에이션보다 EPS 성장 지속성이 더 중요한 구간이다.",
+    "summary": "EPS는 2026F 일시 둔화 뒤 2027F와 2028F에 다시 큰 폭으로 증가한다.",
+    "story": "EPS는 2026F 일시 둔화 뒤 2027F와 2028F에 다시 큰 폭으로 증가한다.",
+    "keyTakeaways": [
+      "2025 EPS 17.7달러",
+      "2027F 22.3달러",
+      "2028F 30.8달러"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2028F",
+          "y": 30.8
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F9D58",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028F",
+        "y": 30.8
+      },
+      "reason": "GEV는 밸류에이션보다 EPS 성장 지속성이 더 중요한 구간이다.",
+      "displayText": "평가는 EPS가 받친다"
+    }
+  }
+}

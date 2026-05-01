@@ -1,0 +1,107 @@
+{
+  "id": "market-sector",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "지수 상승, 업종은 선별적 혼조",
+    "subtitle": "주요 지수 및 섹터별 등락, 2026년 4월 첫째 주",
+    "source": "Bloomberg, NYSE"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "name", "label": "항목", "dataType": "text", "isRowHeader": true },
+      { "key": "change", "label": "등락률", "dataType": "percentage", "unit": "%", "align": "right" },
+      { "key": "direction", "label": "방향", "dataType": "text", "align": "center" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "name": { "value": "S&P500" },
+          "change": { "value": 0.44, "displayValue": "+0.44%", "highlight": "positive" },
+          "direction": { "value": "▲" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "Nasdaq" },
+          "change": { "value": 0.54, "displayValue": "+0.54%", "highlight": "positive" },
+          "direction": { "value": "▲" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "Dow" },
+          "change": { "value": 0.36, "displayValue": "+0.36%", "highlight": "positive" },
+          "direction": { "value": "▲" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "" },
+          "change": { "value": null, "displayValue": "" },
+          "direction": { "value": "" }
+        },
+        "rowType": "divider"
+      },
+      {
+        "cells": {
+          "name": { "value": "소비재" },
+          "change": { "value": null, "displayValue": "상승", "highlight": "positive" },
+          "direction": { "value": "▲" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "에너지" },
+          "change": { "value": null, "displayValue": "상승", "highlight": "positive" },
+          "direction": { "value": "▲" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "유틸리티" },
+          "change": { "value": null, "displayValue": "하락", "highlight": "negative" },
+          "direction": { "value": "▼" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "헬스케어" },
+          "change": { "value": null, "displayValue": "하락", "highlight": "negative" },
+          "direction": { "value": "▼" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "name": { "value": "소재" },
+          "change": { "value": null, "displayValue": "하락", "highlight": "negative" },
+          "direction": { "value": "▼" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "지수 3대장 모두 소폭 상승했으나, 섹터 간 방향성은 뚜렷하게 갈려",
+    "keyTakeaways": [
+      "S&P500 +0.44%, Nasdaq +0.54%, Dow +0.36% 소폭 상승",
+      "소비재·에너지 상승 vs 유틸리티·헬스케어·소재 하락",
+      "방어와 공격 동시 혼재, 선별적 장세"
+    ],
+    "sentiment": "mixed"
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "선별적 혼조세", "reason": "지수 상승에도 불구하고 업종별 차별화 뚜렷" },
+    "colorStrategy": { "positive": "#2E7D32", "negative": "#C62828" },
+    "densityLevel": "balanced",
+    "highlightCells": []
+  }
+}

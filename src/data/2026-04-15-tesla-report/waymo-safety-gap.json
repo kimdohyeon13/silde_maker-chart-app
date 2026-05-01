@@ -1,0 +1,66 @@
+{
+  "id": "waymo-safety-gap",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "웨이모는 이미 사람보다 사고율이 낮다는 증거를 쌓고 있다",
+    "subtitle": "백만 마일당 사고 건수 비교",
+    "source": "Waymo Safety Impact Data Hub, 원문 리포트 19페이지 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "사고 유형", "dataType": "text", "isRowHeader": true, "width": 180 },
+      { "key": "waymo", "label": "Waymo", "dataType": "text", "width": 180 },
+      { "key": "human", "label": "인간 운전자", "dataType": "text", "width": 200 },
+      { "key": "gap", "label": "상대 비교", "dataType": "text", "width": 180 }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "상해 사고", "displayValue": "상해 사고" },
+          "waymo": { "value": "0.8건", "displayValue": "0.8건", "highlight": "positive" },
+          "human": { "value": "3.96건", "displayValue": "3.96건" },
+          "gap": { "value": "-80%", "displayValue": "인간 대비 -80%", "highlight": "positive", "badge": "우위" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "에어백 전개", "displayValue": "에어백 전개" },
+          "waymo": { "value": "0.35건", "displayValue": "0.35건", "highlight": "positive" },
+          "human": { "value": "1.65건", "displayValue": "1.65건" },
+          "gap": { "value": "-79%", "displayValue": "인간 대비 -79%", "highlight": "positive", "badge": "우위" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "중대 상해 이상", "displayValue": "중대 상해 이상" },
+          "waymo": { "value": "0.02건", "displayValue": "0.02건", "highlight": "positive" },
+          "human": { "value": "0.23건", "displayValue": "0.23건" },
+          "gap": { "value": "-91%", "displayValue": "인간 대비 -91%", "highlight": "positive", "badge": "우위" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "경찰 보고 사고", "displayValue": "경찰 보고 사고" },
+          "waymo": { "value": "2.1건", "displayValue": "2.1건", "highlight": "positive" },
+          "human": { "value": "4.68건", "displayValue": "4.68건" },
+          "gap": { "value": "-55%", "displayValue": "인간 대비 -55%", "highlight": "positive", "badge": "우위" }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "로보택시 경쟁의 첫 번째 해자는 요금이 아니라 안전 데이터입니다.",
+    "keyTakeaways": [
+      "웨이모는 상해 사고, 에어백 전개, 중대 상해, 경찰 보고 사고 모두에서 인간 운전자보다 낮은 수치를 보여줍니다.",
+      "이 데이터는 규제와 보험 구조를 바꾸는 핵심 근거가 됩니다.",
+      "테슬라는 같은 수준의 공개 안전 통계를 아직 충분히 쌓아 보여주지 못했다는 점이 약점입니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "상해 사고 -80%"
+    }
+  }
+}

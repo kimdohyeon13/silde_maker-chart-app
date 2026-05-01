@@ -1,0 +1,74 @@
+{
+  "id": "brent-crude-intraday",
+  "structure": {
+    "chartType": "area",
+    "title": "브렌트 장중 $5 급등, 전일비 하락 마감",
+    "subtitle": "ICE 브렌트 원유 5월물, 2026.03.25, $/bbl",
+    "source": "ICE (Intercontinental Exchange)",
+    "timeRange": "02:00 ~ 18:00 (BST)",
+    "xAxis": { "label": "시간 (BST)", "type": "time" },
+    "yAxis": { "label": "가격", "unit": "$/bbl", "min": 97, "max": 104 },
+    "legend": [
+      { "name": "브렌트 원유", "color": "#1A6FA0", "originalColor": "#1A6FA0", "style": "area" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "브렌트 원유",
+        "data": [
+          { "x": "02:00", "y": 98.0 },
+          { "x": "03:00", "y": 98.5 },
+          { "x": "04:00", "y": 99.0 },
+          { "x": "05:00", "y": 99.1 },
+          { "x": "06:00", "y": 99.2 },
+          { "x": "07:00", "y": 99.3 },
+          { "x": "08:00", "y": 99.5 },
+          { "x": "09:00", "y": 99.8 },
+          { "x": "10:00", "y": 100.0 },
+          { "x": "11:00", "y": 100.5 },
+          { "x": "12:00", "y": 101.0 },
+          { "x": "13:00", "y": 101.8 },
+          { "x": "14:00", "y": 102.5 },
+          { "x": "15:00", "y": 103.0 },
+          { "x": "16:00", "y": 103.5 },
+          { "x": "17:00", "y": 103.0 },
+          { "x": "18:00", "y": 103.14 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": { "x": "18:00", "y": 103.14, "displayText": "종가: $103.14" },
+    "annotations": [
+      { "text": "저점: $98.0", "position": { "x": "02:00", "y": 98.0 }, "importance": "high", "style": "neutral" },
+      { "text": "고점: $103.5", "position": { "x": "16:00", "y": 103.5 }, "importance": "high", "style": "positive" },
+      { "text": "-1.29% 하락 마감", "position": { "x": "18:00", "y": 103.14 }, "importance": "critical", "style": "negative" }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      { "from": { "x": "02:00", "y": 99.24 }, "to": { "x": "18:00", "y": 99.24 }, "label": "전일 종가", "color": "#FF8C00" }
+    ]
+  },
+  "patterns": {
+    "trend": "아시아 세션 저점에서 유럽·미국 세션으로 넘어가며 종일 우상향, 16시 고점 후 소폭 조정",
+    "supportResistance": [
+      { "level": 98.0, "type": "support", "strength": "high" },
+      { "level": 99.24, "type": "support", "strength": "medium" },
+      { "level": 103.5, "type": "resistance", "strength": "high" }
+    ]
+  },
+  "statistics": {
+    "summary": { "min": 98.0, "max": 103.5, "average": 100.56, "latest": 103.14 },
+    "changeRates": [{ "period": "당일", "percentChange": -1.29 }]
+  },
+  "narrative": {
+    "headline": "브렌트 원유, 장중 $98→$103.5 급등에도 전일 대비 하락 마감으로 혼조세",
+    "keyTakeaways": [
+      "아시아 시간대 $98 저점에서 출발, 유럽 세션 진입 후 상승 가속",
+      "16시 $103.5 장중 고점 기록 후 소폭 되돌림",
+      "전일 대비 -1.29% 하락이나 장중 흐름 자체는 강한 매수세 확인"
+    ],
+    "sentiment": "mixed"
+  }
+}

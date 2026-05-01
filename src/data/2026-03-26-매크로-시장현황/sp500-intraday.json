@@ -1,0 +1,125 @@
+{
+  "id": "sp500-intraday",
+  "structure": {
+    "chartType": "area",
+    "title": "S&P 500 개장 급등 후 횡보, +0.54%",
+    "subtitle": "S&P 500 지수, 2026년 3월 25일 인트라데이, 전일 종가 6,556.37 대비",
+    "source": "Google Finance",
+    "timeRange": "09:30 ~ 16:00 (ET)",
+    "xAxis": { "label": "시간", "type": "time" },
+    "yAxis": { "label": "지수", "unit": "", "min": 6540, "max": 6640 },
+    "legend": [
+      {
+        "name": "S&P 500",
+        "color": "#0B8043",
+        "originalColor": "#0B8043",
+        "style": "area"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P 500",
+        "data": [
+          { "x": "09:30", "y": 6595 },
+          { "x": "09:45", "y": 6615 },
+          { "x": "10:00", "y": 6630 },
+          { "x": "10:15", "y": 6620 },
+          { "x": "10:30", "y": 6610 },
+          { "x": "10:45", "y": 6595 },
+          { "x": "11:00", "y": 6600 },
+          { "x": "11:15", "y": 6575 },
+          { "x": "11:30", "y": 6590 },
+          { "x": "11:45", "y": 6600 },
+          { "x": "12:00", "y": 6605 },
+          { "x": "12:15", "y": 6610 },
+          { "x": "12:30", "y": 6605 },
+          { "x": "12:45", "y": 6600 },
+          { "x": "13:00", "y": 6605 },
+          { "x": "13:15", "y": 6610 },
+          { "x": "13:30", "y": 6605 },
+          { "x": "13:45", "y": 6600 },
+          { "x": "14:00", "y": 6600 },
+          { "x": "14:15", "y": 6605 },
+          { "x": "14:30", "y": 6610 },
+          { "x": "14:45", "y": 6605 },
+          { "x": "15:00", "y": 6600 },
+          { "x": "15:15", "y": 6595 },
+          { "x": "15:30", "y": 6585 },
+          { "x": "15:45", "y": 6590 },
+          { "x": "16:00", "y": 6592 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "16:00",
+      "y": 6591.9,
+      "displayText": "종가: 6,591.90"
+    },
+    "annotations": [
+      {
+        "text": "장중 고점: 6,630",
+        "position": { "x": "10:00", "y": 6630 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "장중 저점: 6,575",
+        "position": { "x": "11:15", "y": 6575 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "오후 저점: 6,585",
+        "position": { "x": "15:30", "y": 6585 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "종가: 6,592",
+        "position": { "x": "16:00", "y": 6592 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "09:30", "y": 6556.37 },
+        "to": { "x": "16:00", "y": 6556.37 },
+        "label": "전일 종가",
+        "color": "#999999"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "개장 초 6,630까지 급등 후 되돌림, 이후 6,590~6,610 좁은 박스권 횡보하며 전일비 소폭 상승 마감",
+    "supportResistance": [
+      { "level": 6575, "type": "support", "strength": "moderate" },
+      { "level": 6630, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 6575,
+      "max": 6630,
+      "average": 6601.4,
+      "latest": 6591.9
+    },
+    "changeRates": [
+      { "period": "당일", "percentChange": 0.54 }
+    ]
+  },
+  "narrative": {
+    "headline": "S&P 500, 개장 초 6,630 급등 후 횡보하며 +0.54% 마감",
+    "keyTakeaways": [
+      "개장 직후 30분 만에 6,630까지 급등, 이후 빠르게 되돌림",
+      "장중 대부분 6,590~6,610 좁은 박스권 횡보",
+      "전일 종가 6,556 대비 종일 상방 유지, 상승 마감 확정"
+    ],
+    "sentiment": "cautiously_bullish"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "02-upside-ranking",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-tables/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "ranking",
+  "structure": {
+    "title": "상승여력은 MS가 압도",
+    "subtitle": "애널리스트 목표가 기준 현재가 대비 기대 상승률",
+    "source": "사용자 제공 이미지, 표 수치 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "rank", "label": "No", "dataType": "number", "align": "center", "width": 72 },
+      { "key": "company", "label": "기업", "dataType": "text", "isRowHeader": true },
+      { "key": "current", "label": "현재가", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "target", "label": "목표가", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "gapDollar", "label": "주당 차이", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "upside", "label": "상승여력", "dataType": "percent", "align": "right" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "rank": { "value": 1, "displayValue": "1" },
+          "company": { "value": "Microsoft" },
+          "current": { "value": 424.46, "displayValue": "$424.46" },
+          "target": { "value": 570.72, "displayValue": "$570.72" },
+          "gapDollar": { "value": 146.26, "displayValue": "+$146.26" },
+          "upside": { "value": 34.5, "displayValue": "+34.5%", "highlight": "positive", "badge": "1위" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 2, "displayValue": "2" },
+          "company": { "value": "Meta" },
+          "current": { "value": 669.12, "displayValue": "$669.12" },
+          "target": { "value": 855.11, "displayValue": "$855.11" },
+          "gapDollar": { "value": 185.99, "displayValue": "+$185.99" },
+          "upside": { "value": 27.8, "displayValue": "+27.8%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 3, "displayValue": "3" },
+          "company": { "value": "Alphabet" },
+          "current": { "value": 349.94, "displayValue": "$349.94" },
+          "target": { "value": 378.5, "displayValue": "$378.50" },
+          "gapDollar": { "value": 28.56, "displayValue": "+$28.56" },
+          "upside": { "value": 8.2, "displayValue": "+8.2%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 4, "displayValue": "4" },
+          "company": { "value": "Amazon" },
+          "current": { "value": 263.04, "displayValue": "$263.04" },
+          "target": { "value": 283.98, "displayValue": "$283.98" },
+          "gapDollar": { "value": 20.94, "displayValue": "+$20.94" },
+          "upside": { "value": 8.0, "displayValue": "+8.0%" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "목표가 여력은 두 갈래",
+    "subMessage": "MS·Meta는 20%대 이상, 나머지는 8%대다",
+    "headline": "상승여력 기준으로는 Microsoft와 Meta가 뚜렷하게 앞선다.",
+    "summary": "Microsoft의 목표가 대비 상승여력은 34.5%로 가장 높다. Meta도 27.8%로 높지만 Alphabet과 Amazon은 8% 안팎에 그친다.",
+    "story": "목표가와 현재가 차이를 순위로 놓으면 빅테크 4개사가 두 그룹으로 갈린다. 큰 재평가 여력을 기대하는 쪽은 Microsoft와 Meta, 고점 근접 종목은 Alphabet과 Amazon이다.",
+    "keyTakeaways": [
+      "Microsoft가 상승여력 1위다.",
+      "Meta는 주당 목표가 차이가 가장 크다.",
+      "Alphabet과 Amazon은 목표가 기준 여력이 제한적이다."
+    ],
+    "questionsRaised": ["큰 상승여력은 실적 추정 상향을 반영한 것인가?"],
+    "viewerAction": "목표가 여력을 기준으로 우선 관심 종목을 좁힌다.",
+    "contextualNotes": ["주당 차이는 목표가에서 현재가를 뺀 값이다."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "MS +34.5%", "reason": "목표가 대비 상승여력 1위" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "upside", "reason": "최대 상승여력" }
+    ]
+  }
+}

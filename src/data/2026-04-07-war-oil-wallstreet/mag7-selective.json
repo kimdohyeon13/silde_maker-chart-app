@@ -1,0 +1,93 @@
+{
+  "id": "mag7-selective",
+  "contentType": "table",
+  "tableSubType": "ranking",
+  "structure": {
+    "title": "매그니피센트7 분화, 3:1:3 갈림길",
+    "subtitle": "빅테크 7개 종목 등락 현황, 2026년 4월 첫째 주",
+    "source": "Bloomberg, NASDAQ"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "company", "label": "종목", "dataType": "text", "isRowHeader": true },
+      { "key": "direction", "label": "등락", "dataType": "text", "align": "center" },
+      { "key": "status", "label": "평가", "dataType": "text", "align": "center" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "company": { "value": "아마존" },
+          "direction": { "value": "▲", "highlight": "positive" },
+          "status": { "value": "강세", "highlight": "positive", "badge": "승자" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "애플" },
+          "direction": { "value": "▲", "highlight": "positive" },
+          "status": { "value": "강세", "highlight": "positive", "badge": "승자" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "알파벳" },
+          "direction": { "value": "▲", "highlight": "positive" },
+          "status": { "value": "강세", "highlight": "positive", "badge": "승자" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "엔비디아" },
+          "direction": { "value": "−", "highlight": "warning" },
+          "status": { "value": "보합" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "테슬라" },
+          "direction": { "value": "▼", "highlight": "negative" },
+          "status": { "value": "약세", "highlight": "negative" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "메타" },
+          "direction": { "value": "▼", "highlight": "negative" },
+          "status": { "value": "약세", "highlight": "negative" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "마이크로소프트" },
+          "direction": { "value": "▼", "highlight": "negative" },
+          "status": { "value": "약세", "highlight": "negative" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "매그니피센트7 내부에서 아마존·애플·알파벳 3강 vs 테슬라·메타·MS 3약 구도",
+    "keyTakeaways": [
+      "아마존·애플·알파벳 3종목 상승 — 빅테크 내 승자",
+      "엔비디아 보합 — 중립적 위치",
+      "테슬라·메타·마이크로소프트 3종목 하락 — 차별화 심화"
+    ],
+    "sentiment": "mixed"
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "3:1:3 분화", "reason": "매그니피센트7 일괄 상승 시대 종료" },
+    "colorStrategy": { "positive": "#2E7D32", "negative": "#C62828", "neutral": "#9E9E9E" },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "status", "reason": "최강세 종목" }
+    ]
+  }
+}

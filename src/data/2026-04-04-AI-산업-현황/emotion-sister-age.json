@@ -1,0 +1,160 @@
+{
+  "id": "emotion-sister-age",
+  "structure": {
+    "chartType": "line",
+    "title": "5세 사망 '슬픔' 최고, 100세는 '평온' — LLM의 맥락 이해",
+    "subtitle": "코사인 유사도, 사망 나이별 감정 프로브",
+    "source": "Emotion Probes Track Numerical Semantics",
+    "xAxis": {
+      "label": "사망 나이",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "코사인 유사도",
+      "unit": "",
+      "min": -0.08,
+      "max": 0.10
+    },
+    "legend": [
+      {
+        "name": "슬픔",
+        "color": "#E65100",
+        "originalColor": "#E65100",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "평온",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "행복",
+        "color": "#2E7D32",
+        "originalColor": "#2E7D32",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "공포",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "solid",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "슬픔",
+        "data": [
+          { "x": "5", "y": 0.082 },
+          { "x": "10", "y": 0.078 },
+          { "x": "20", "y": 0.075 },
+          { "x": "50", "y": 0.065 },
+          { "x": "80", "y": 0.030 },
+          { "x": "100", "y": 0.028 }
+        ]
+      },
+      {
+        "name": "평온",
+        "data": [
+          { "x": "5", "y": 0.020 },
+          { "x": "10", "y": 0.020 },
+          { "x": "20", "y": 0.025 },
+          { "x": "50", "y": 0.035 },
+          { "x": "80", "y": 0.045 },
+          { "x": "100", "y": 0.048 }
+        ]
+      },
+      {
+        "name": "행복",
+        "data": [
+          { "x": "5", "y": -0.008 },
+          { "x": "10", "y": -0.008 },
+          { "x": "20", "y": -0.006 },
+          { "x": "50", "y": -0.005 },
+          { "x": "80", "y": 0.008 },
+          { "x": "100", "y": 0.040 }
+        ]
+      },
+      {
+        "name": "공포",
+        "data": [
+          { "x": "5", "y": 0.015 },
+          { "x": "10", "y": 0.012 },
+          { "x": "20", "y": 0.010 },
+          { "x": "50", "y": -0.005 },
+          { "x": "80", "y": -0.008 },
+          { "x": "100", "y": -0.035 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "5",
+      "y": 0.082,
+      "displayText": "5세: 슬픔 0.082 최고"
+    },
+    "annotations": [
+      {
+        "text": "5세: 슬픔 최고",
+        "position": { "x": "5", "y": 0.082 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "100세: 평온+행복",
+        "position": { "x": "100", "y": 0.048 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "5", "y": 0 },
+        "to": { "x": "100", "y": 0 },
+        "label": "기준선 (0)",
+        "color": "#9E9E9E",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "슬픔은 어린 나이에서 최고치 후 고령으로 갈수록 하락, 평온은 반대로 상승. 행복은 80세 이후 급등, 공포는 고령에서 음수로 전환 — LLM이 '어린 나이 사망 = 슬픔', '장수 = 평온'이라는 인간 감정 맥락을 학습했음을 시사",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": -0.035,
+      "max": 0.082,
+      "average": 0.018,
+      "latest": 0.048
+    },
+    "changeRates": [
+      {
+        "period": "슬픔 5세→100세",
+        "percentChange": -65.9
+      },
+      {
+        "period": "평온 5세→100세",
+        "percentChange": 140.0
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "LLM, 어린 사망엔 슬픔·고령 사망엔 평온으로 반응 — 인간 감정 구조 내재화 확인",
+    "keyTakeaways": [
+      "5세 사망 시 '슬픔' 프로브가 0.082로 전 구간 최고치 기록",
+      "100세 사망 시 '평온'(0.048)과 '행복'(0.040)이 동반 상승하며 슬픔(0.028)을 추월",
+      "'공포'는 고령에서 음수로 전환 — 장수는 두려움이 아닌 안도로 해석",
+      "LLM이 수치(나이)에 따른 감정적 맥락을 정확히 구분하는 의미론적 이해 능력 보유"
+    ],
+    "sentiment": "neutral-insightful"
+  }
+}

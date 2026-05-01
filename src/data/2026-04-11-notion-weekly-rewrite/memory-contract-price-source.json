@@ -1,0 +1,102 @@
+{
+  "id": "memory-contract-price-source",
+  "structure": {
+    "chartType": "bar",
+    "title": "2Q26 메모리 계약가격, DRAM도 NAND도 급등",
+    "subtitle": "리서치 하우스별 2Q26 가격 상승 전망 (QoQ, %)",
+    "source": "TrendForce, Mizuho, 원문 노트 재구성",
+    "xAxis": {
+      "label": "리서치 하우스",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "가격 상승률",
+      "unit": "%",
+      "min": 0,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "DRAM",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary"
+      },
+      {
+        "name": "NAND",
+        "color": "#FF6F61",
+        "originalColor": "#FF6F61",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "DRAM",
+        "data": [
+          { "x": "TrendForce", "y": 60.5 },
+          { "x": "Mizuho", "y": 60.0 }
+        ]
+      },
+      {
+        "name": "NAND",
+        "data": [
+          { "x": "TrendForce", "y": 72.5 },
+          { "x": "Mizuho", "y": 75.0 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "Mizuho",
+      "y": 75.0,
+      "displayText": "NAND +75%"
+    },
+    "annotations": [
+      {
+        "text": "DRAM도 +60% 안팎",
+        "position": { "x": "TrendForce", "y": 60.5 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "NAND는 +70%대",
+        "position": { "x": "Mizuho", "y": 75.0 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "두 리서치 하우스 모두 2Q26 메모리 계약가격이 매우 큰 폭으로 오를 것으로 예상한다. DRAM은 60% 안팎, NAND는 70%대 상승으로, 메모리 업체의 가격 결정력이 뚜렷하게 강화된 국면이다.",
+    "supportResistance": [
+      { "level": 60, "type": "support", "strength": "strong" },
+      { "level": 75, "type": "resistance", "strength": "moderate" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 60.0,
+      "max": 75.0,
+      "average": 67.0,
+      "latest": 75.0
+    },
+    "changeRates": [
+      { "period": "TrendForce DRAM vs NAND", "percentChange": 19.8 },
+      { "period": "Mizuho DRAM vs NAND", "percentChange": 25.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "메모리 계약가격은 이제 단순 반등이 아니라 공급자의 협상력 회복을 보여주는 수준까지 올라왔습니다.",
+    "keyTakeaways": [
+      "TrendForce와 Mizuho 모두 DRAM 60% 안팎 상승을 예상합니다.",
+      "NAND는 70%를 웃도는 상승률이 제시되며 더 가파른 가격 탄력성을 보여줍니다.",
+      "이는 메모리 업종의 밸류에이션 리레이팅 논리를 강화하는 데이터입니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

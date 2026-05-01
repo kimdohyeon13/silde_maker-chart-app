@@ -1,0 +1,79 @@
+{
+  "id": "global-ess-growth",
+  "structure": {
+    "chartType": "bar",
+    "title": "가장 빠르게 커지는 전력 설비는 ESS",
+    "subtitle": "글로벌 전력설비별 2024~2035 연평균 성장률 전망",
+    "source": "IEA World Energy Outlook 2025",
+    "timeRange": "2024~2035",
+    "xAxis": {
+      "label": "전력설비",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "연평균 성장률",
+      "unit": "%",
+      "min": -1,
+      "max": 23
+    },
+    "legend": [
+      {
+        "name": "2024~2035 CAGR",
+        "originalColor": "#0F4C81",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2024~2035 CAGR",
+        "data": [
+          { "x": "ESS", "y": 21.5 },
+          { "x": "태양광", "y": 12.7 },
+          { "x": "풍력", "y": 7.7 },
+          { "x": "원자력", "y": 2.7 },
+          { "x": "천연가스", "y": 2.0 },
+          { "x": "기타", "y": 1.2 },
+          { "x": "석탄", "y": 1.1 }
+        ]
+      }
+    ],
+    "totalDataPoints": 7
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "ESS",
+      "y": 21.5,
+      "displayText": "21.5%"
+    },
+    "annotations": [
+      {
+        "text": "전력 저장이 가장 빠른 성장축",
+        "position": { "x": "ESS", "y": 21.5 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "재생에너지 비중이 높아질수록 저장 수요가 폭증하면서, ESS가 다른 발전 설비보다 훨씬 가파른 성장률을 보인다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 1.1,
+      "max": 21.5,
+      "average": 7.0,
+      "latest": 1.1
+    },
+    "changeRates": []
+  },
+  "narrative": {
+    "headline": "ESS는 단순 배터리 테마가 아니라, 미래 전력 시스템에서 가장 빠르게 커지는 핵심 축입니다.",
+    "summary": "IEA 전망 기준 2024~2035년 ESS의 연평균 성장률은 21.5%로 태양광(12.7%), 풍력(7.7%)보다도 높다. 2024~2050 장기 구간에서도 ESS는 11.4%로 여전히 최상위 성장률을 유지한다.",
+    "story": "이 수치는 왜 ESS를 '배터리 업황 반등 기대' 정도로만 보면 안 되는지를 말해 준다. 재생에너지의 간헐성을 보완하고, 데이터센터처럼 전력 품질이 중요한 수요처에 시간을 옮겨 주는 장치가 바로 ESS이기 때문이다. 그래서 ESS는 발전원의 보조재가 아니라, 미래 전력망의 운영 핵심으로 읽어야 한다."
+  }
+}

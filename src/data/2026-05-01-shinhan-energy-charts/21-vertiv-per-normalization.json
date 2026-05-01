@@ -1,0 +1,176 @@
+{
+  "id": "21-vertiv-per-normalization",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/vertiv-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "버티브 PER, 성장 따라 정상화",
+    "subtitle": "연간 PER 전망",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "PER",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "배",
+      "min": 0,
+      "max": 58,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "PER",
+        "originalColor": "#D97706",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "PER",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2026F",
+            "y": 50,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 37.4,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 30.2,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.82,
+      "description": "버티브의 높은 밸류에이션은 이익 성장으로 점차 흡수되는 구조다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5051020408163265,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -39.6,
+        "absoluteChange": -19.8,
+        "from": 50,
+        "to": 30.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 50,
+        "at": "2026F"
+      },
+      "min": {
+        "value": 30.2,
+        "at": "2028F"
+      },
+      "average": 39.2,
+      "median": 37.4,
+      "range": 19.8
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2026F",
+          "y": 50
+        },
+        "seriesName": "PER",
+        "description": "2026F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "비싸지만 낮아진다",
+    "subMessage": "이익 성장 덕분에 PER은 2028F 30배까지 내려간다",
+    "headline": "버티브의 높은 밸류에이션은 이익 성장으로 점차 흡수되는 구조다.",
+    "summary": "원본 재무 표의 PER 전망을 별도 그래프로 만들었다.",
+    "story": "원본 재무 표의 PER 전망을 별도 그래프로 만들었다.",
+    "keyTakeaways": [
+      "2026F PER 50.0배",
+      "2027F 37.4배",
+      "2028F 30.2배"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2026F",
+          "y": 50
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D97706",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026F",
+        "y": 50
+      },
+      "reason": "버티브의 높은 밸류에이션은 이익 성장으로 점차 흡수되는 구조다.",
+      "displayText": "비싸지만 낮아진다"
+    }
+  }
+}

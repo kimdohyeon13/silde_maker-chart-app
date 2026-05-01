@@ -1,0 +1,126 @@
+{
+  "id": "nfp-breakeven-waterfall",
+  "structure": {
+    "chartType": "bar",
+    "title": "ICE 강화 시 NFP 손익분기 13K로 급락",
+    "subtitle": "이민정책 시나리오별 월간 노동공급 변화 (천 명/월)",
+    "source": "골드만삭스 글로벌투자리서치, 2025년 8월 19일",
+    "xAxis": {
+      "label": "항목",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "노동공급",
+      "unit": "천 명/월",
+      "min": 0,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "기존 전망",
+        "color": "#64B5F6",
+        "originalColor": "#64B5F6",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "감소 요인",
+        "color": "#E091A0",
+        "originalColor": "#E091A0",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "최종 결과",
+        "color": "#212121",
+        "originalColor": "#212121",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "워터폴",
+        "data": [
+          { "x": "기존 노동공급 전망", "y": 112 },
+          { "x": "ICE 구금", "y": -54 },
+          { "x": "자진 출국", "y": -25 },
+          { "x": "총 이민 감소", "y": -20 },
+          { "x": "신규 노동공급 전망", "y": 13 },
+          { "x": "암시적 NFP 손익분기", "y": 13 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "암시적 NFP 손익분기",
+      "y": 13,
+      "displayText": "NFP 손익분기: 13K/월"
+    },
+    "annotations": [
+      {
+        "text": "112",
+        "position": { "x": "기존 노동공급 전망", "y": 112 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "-54",
+        "position": { "x": "ICE 구금", "y": -54 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "-25",
+        "position": { "x": "자진 출국", "y": -25 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "-20",
+        "position": { "x": "총 이민 감소", "y": -20 },
+        "importance": "high",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "이민 단속 강화 시 월간 노동공급이 112K에서 13K로 88% 급감하며, NFP 손익분기점이 극적으로 하락",
+    "supportResistance": [
+      {
+        "level": 13,
+        "type": "support",
+        "strength": "critical"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 13,
+      "max": 112,
+      "average": 62.5,
+      "latest": 13
+    },
+    "changeRates": [
+      {
+        "period": "총 감소분",
+        "percentChange": -88.4
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "ICE 구금 일 2천 명 확대 시 노동공급 정체, NFP 손익분기 13K로 급락",
+    "keyTakeaways": [
+      "ICE 구금이 일 2,000명(연 72만 명)으로 확대되면 월 54K의 노동공급 감소 발생",
+      "자진 출국 효과(-25K)와 총 이민 감소(-20K)까지 합산하면 99K 감소",
+      "기존 전망 112K에서 13K로 하락하여 NFP 손익분기점이 사실상 무의미해짐",
+      "노동시장 과열 판단 기준이 근본적으로 바뀌어야 한다는 시사점"
+    ],
+    "sentiment": "bearish"
+  }
+}

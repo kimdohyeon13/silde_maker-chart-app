@@ -1,0 +1,200 @@
+{
+  "id": "page29-chip-table",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "테슬라의 진짜 해자는 센서가 아니라 칩-데이터-소프트웨어를 같이 굴린다는 점이다",
+    "subtitle": "HW3·HW4·AI5 비교 재구성",
+    "source": "InsideEVs, ChatGPT, Wikipedia"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "비교 항목",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": 150
+      },
+      {
+        "key": "hw3",
+        "label": "HW3",
+        "dataType": "text",
+        "width": 190
+      },
+      {
+        "key": "hw4",
+        "label": "HW4",
+        "dataType": "text",
+        "width": 210
+      },
+      {
+        "key": "ai5",
+        "label": "AI5",
+        "dataType": "text",
+        "width": 220
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "출시",
+            "displayValue": "출시"
+          },
+          "hw3": {
+            "value": "2019년 4월",
+            "displayValue": "2019년 4월"
+          },
+          "hw4": {
+            "value": "2023년 초(모델S/X부터 순차 적용)",
+            "displayValue": "2023년 초(모델S/X부터 순차 적용)"
+          },
+          "ai5": {
+            "value": "2026년 말 예정",
+            "displayValue": "2026년 말 예정",
+            "highlight": "accent"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "제조공정",
+            "displayValue": "제조공정"
+          },
+          "hw3": {
+            "value": "14nm 삼성전자",
+            "displayValue": "14nm 삼성전자"
+          },
+          "hw4": {
+            "value": "7nm 삼성전자",
+            "displayValue": "7nm 삼성전자"
+          },
+          "ai5": {
+            "value": "3nm급 예상(TSMC/삼성)",
+            "displayValue": "3nm급 예상(TSMC/삼성)",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "CPU",
+            "displayValue": "CPU"
+          },
+          "hw3": {
+            "value": "12x ARM A72 @ 2.2GHz",
+            "displayValue": "12x ARM A72 @ 2.2GHz"
+          },
+          "hw4": {
+            "value": "20x ARM A72 @ 2.35GHz",
+            "displayValue": "20x ARM A72 @ 2.35GHz"
+          },
+          "ai5": {
+            "value": "큰 폭의 향상 예상",
+            "displayValue": "큰 폭의 향상 예상"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "NPU",
+            "displayValue": "NPU"
+          },
+          "hw3": {
+            "value": "2개 NPU, 칩당 72 TOPS",
+            "displayValue": "2개 NPU, 칩당 72 TOPS"
+          },
+          "hw4": {
+            "value": "3개 NPU, 칩당 50 TOPS",
+            "displayValue": "3개 NPU, 칩당 50 TOPS"
+          },
+          "ai5": {
+            "value": "칩당 2,000~2,500 TOPS",
+            "displayValue": "칩당 2,000~2,500 TOPS",
+            "highlight": "positive",
+            "badge": "점프"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "메모리",
+            "displayValue": "메모리"
+          },
+          "hw3": {
+            "value": "8GB LPDDR4",
+            "displayValue": "8GB LPDDR4"
+          },
+          "hw4": {
+            "value": "16GB RAM",
+            "displayValue": "16GB RAM"
+          },
+          "ai5": {
+            "value": "RAM·대역폭 증가, GDDR7",
+            "displayValue": "RAM·대역폭 증가, GDDR7"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "연산 능력",
+            "displayValue": "연산 능력"
+          },
+          "hw3": {
+            "value": "144 TOPS",
+            "displayValue": "144 TOPS"
+          },
+          "hw4": {
+            "value": "300~500 TOPS",
+            "displayValue": "300~500 TOPS"
+          },
+          "ai5": {
+            "value": "4,000~5,000 TOPS",
+            "displayValue": "4,000~5,000 TOPS",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "소비전력",
+            "displayValue": "소비전력"
+          },
+          "hw3": {
+            "value": "~100W",
+            "displayValue": "~100W"
+          },
+          "hw4": {
+            "value": "~160W",
+            "displayValue": "~160W"
+          },
+          "ai5": {
+            "value": "~800W",
+            "displayValue": "~800W"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "자율주행과 로봇의 공통 분모는 결국 추론 칩과 데이터 루프를 한 회사 안에서 돌릴 수 있느냐입니다.",
+    "keyTakeaways": [
+      "HW3에서 시작된 내재화는 HW4에서 End-to-End 전환 기반으로 이어졌습니다.",
+      "AI5는 단순 차량용 칩이 아니라 로봇과 로보택시까지 염두에 둔 추론 칩 성격이 강합니다.",
+      "이 로드맵은 부품 외주형 경쟁사와 테슬라를 구분하는 중요한 축입니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "144 -> 4,000~5,000 TOPS"
+    }
+  }
+}

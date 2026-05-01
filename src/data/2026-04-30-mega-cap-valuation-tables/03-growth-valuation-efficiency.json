@@ -1,0 +1,99 @@
+{
+  "id": "03-growth-valuation-efficiency",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-tables/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "ranking",
+  "structure": {
+    "title": "성장 대비 가격은 Meta 우위",
+    "subtitle": "Forward P/E를 EPS 성장률로 나눈 간이 PEG: 낮을수록 성장 대비 부담이 작음",
+    "source": "사용자 제공 이미지 기반 계산"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "rank", "label": "No", "dataType": "number", "align": "center", "width": 72 },
+      { "key": "company", "label": "기업", "dataType": "text", "isRowHeader": true, "width": "20%" },
+      { "key": "pe", "label": "Fwd P/E", "dataType": "number", "align": "right", "unit": "배" },
+      { "key": "eps", "label": "EPS", "dataType": "percent", "align": "right" },
+      { "key": "peg", "label": "간이 PEG", "dataType": "number", "align": "right" },
+      { "key": "read", "label": "해석", "dataType": "text", "align": "left", "width": "28%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "rank": { "value": 1, "displayValue": "1" },
+          "company": { "value": "Meta" },
+          "pe": { "value": 22.6, "displayValue": "22.6배" },
+          "eps": { "value": 26.6, "displayValue": "26.6%" },
+          "peg": { "value": 0.85, "displayValue": "0.85", "highlight": "positive", "badge": "최저" },
+          "read": { "value": "성장 대비 저렴" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 2, "displayValue": "2" },
+          "company": { "value": "Microsoft" },
+          "pe": { "value": 25.7, "displayValue": "25.7배" },
+          "eps": { "value": 22.4, "displayValue": "22.4%" },
+          "peg": { "value": 1.15, "displayValue": "1.15" },
+          "read": { "value": "균형 양호" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 3, "displayValue": "3" },
+          "company": { "value": "Amazon" },
+          "pe": { "value": 33.2, "displayValue": "33.2배" },
+          "eps": { "value": 9.2, "displayValue": "9.2%" },
+          "peg": { "value": 3.61, "displayValue": "3.61" },
+          "read": { "value": "성장률 낮음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "rank": { "value": 4, "displayValue": "4" },
+          "company": { "value": "Alphabet" },
+          "pe": { "value": 30.4, "displayValue": "30.4배" },
+          "eps": { "value": 6.5, "displayValue": "6.5%" },
+          "peg": { "value": 4.68, "displayValue": "4.68" },
+          "read": { "value": "가격 부담 큼" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Meta가 가장 효율적",
+    "subMessage": "낮은 P/E와 높은 EPS 성장률이 동시에 보인다",
+    "headline": "성장 대비 밸류에이션 관점에서는 Meta가 가장 우위에 있다.",
+    "summary": "Meta는 Forward P/E 22.6배, EPS 성장률 26.6%로 간이 PEG가 0.85까지 내려간다. Microsoft도 1.15로 양호하지만 Alphabet과 Amazon은 성장률 대비 P/E 부담이 크다.",
+    "story": "P/E는 주가가 이익 대비 비싼지 보는 숫자고, EPS 성장률은 앞으로 이익이 얼마나 커질지 보는 숫자다. 두 값을 같이 보면 단순히 비싼 종목과 성장으로 비싼 값을 정당화하는 종목이 분리된다.",
+    "keyTakeaways": [
+      "Meta는 간이 PEG가 가장 낮다.",
+      "Microsoft는 고성장과 중간 P/E가 균형을 이룬다.",
+      "Alphabet은 EPS 성장률이 낮아 밸류 부담이 가장 크다."
+    ],
+    "questionsRaised": ["EPS 성장률 추정이 유지되면 현재 P/E가 정당화되는가?"],
+    "viewerAction": "성장주 비교에서는 P/E와 EPS 성장률을 한 쌍으로 본다.",
+    "contextualNotes": ["간이 PEG = Forward P/E / EPS 성장률."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "Meta PEG 0.85", "reason": "성장 대비 밸류 부담이 가장 작음" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "peg", "reason": "간이 PEG 최저" }
+    ]
+  }
+}

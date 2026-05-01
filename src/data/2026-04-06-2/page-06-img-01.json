@@ -1,0 +1,58 @@
+{
+  "id": "model-scaling-network-bottleneck",
+  "contentType": "infographic",
+  "structure": {
+    "title": "모델이 커질수록 병목은 연산보다 연결로 이동한다",
+    "subtitle": "거대 모델 시대에는 단일 GPU보다 멀티 GPU 연결 구조가 더 중요해진다",
+    "source": "키움증권 리포트 6페이지 재구성"
+  },
+  "infographicData": {
+    "subType": "kpi_card",
+    "layout": "grid",
+    "items": [
+      {
+        "label": "GPT-1",
+        "value": "1.17억",
+        "unit": "파라미터"
+      },
+      {
+        "label": "GPT-3",
+        "value": "1,750억",
+        "unit": "파라미터",
+        "change": {
+          "value": 1495.0,
+          "direction": "up",
+          "period": "GPT-1 대비 배수 기준"
+        }
+      },
+      {
+        "label": "GPT-4 추정",
+        "value": "1.8조",
+        "unit": "파라미터",
+        "change": {
+          "value": 10.3,
+          "direction": "up",
+          "period": "GPT-3 대비 배수 기준"
+        }
+      },
+      {
+        "label": "단일 H100 메모리",
+        "value": "80",
+        "unit": "GB"
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "거대 모델은 한 장의 GPU가 아니라 여러 GPU가 실시간으로 데이터를 주고받는 팀플레이 구조를 요구합니다.",
+    "keyTakeaways": [
+      "파라미터가 조 단위로 커지면서 모델 전체를 단일 GPU 메모리에 담기 어려워졌습니다.",
+      "모델 병렬화가 늘어날수록 연산 성능보다 GPU 간 통신 성능이 전체 효율을 좌우합니다.",
+      "AI 인프라의 다음 병목은 칩 자체보다 인터커넥트 구조입니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "연산 -> 연결"
+    }
+  }
+}

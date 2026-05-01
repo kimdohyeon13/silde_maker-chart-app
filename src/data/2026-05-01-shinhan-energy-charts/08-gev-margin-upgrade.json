@@ -1,0 +1,188 @@
+{
+  "id": "08-gev-margin-upgrade",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-2.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "GEV OPM, 17% 근접",
+    "subtitle": "연간 영업이익률 전망",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "영업이익률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "min": 0,
+      "max": 20,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "영업이익률",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "영업이익률",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024",
+            "y": 1.3,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 3.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026F",
+            "y": 9.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 13.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 16.6,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "GE베르노바는 전력 부문 개선으로 수익성 레벨이 빠르게 올라간다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.7114093959731542,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1176.923076923077,
+        "absoluteChange": 15.3,
+        "from": 1.3,
+        "to": 16.6
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 16.6,
+        "at": "2028F"
+      },
+      "min": {
+        "value": 1.3,
+        "at": "2024"
+      },
+      "average": 8.940000000000001,
+      "median": 9.6,
+      "range": 15.3
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2028F",
+          "y": 16.6
+        },
+        "seriesName": "영업이익률",
+        "description": "2028F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "마진 레벨이 바뀐다",
+    "subMessage": "2024년 1.3%에서 2028F 16.6%로 개선된다",
+    "headline": "GE베르노바는 전력 부문 개선으로 수익성 레벨이 빠르게 올라간다.",
+    "summary": "영업이익률 개선이 리포트의 핵심 메시지다.",
+    "story": "영업이익률 개선이 리포트의 핵심 메시지다.",
+    "keyTakeaways": [
+      "2026F OPM 9.6%",
+      "2028F OPM 16.6%",
+      "파워와 전력 부문 믹스 개선이 중요"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2028F",
+          "y": 16.6
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028F",
+        "y": 16.6
+      },
+      "reason": "GE베르노바는 전력 부문 개선으로 수익성 레벨이 빠르게 올라간다.",
+      "displayText": "마진 레벨이 바뀐다"
+    }
+  }
+}

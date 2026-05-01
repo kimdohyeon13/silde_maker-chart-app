@@ -1,0 +1,139 @@
+{
+  "id": "housing-price-rate",
+  "structure": {
+    "chartType": "line",
+    "title": "주거비 20%→1.4%, 인플레 피크 통과",
+    "subtitle": "S&P Case-Shiller 주택가격 YoY (%) vs 기준금리 (%)",
+    "source": "S&P Case-Shiller, FRED",
+    "timeRange": "2020-01 ~ 2026-01",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "주택가격 상승률",
+      "unit": "%",
+      "min": -5,
+      "max": 25
+    },
+    "secondaryYAxis": {
+      "label": "기준금리",
+      "unit": "%",
+      "min": 0,
+      "max": 6
+    },
+    "legend": [
+      {
+        "name": "주택가격 상승률",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "role": "primary"
+      },
+      {
+        "name": "기준금리",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "주택가격 상승률",
+        "data": [
+          { "x": "2020-01", "y": 3.5 },
+          { "x": "2020-07", "y": 5.0 },
+          { "x": "2021-01", "y": 10.5 },
+          { "x": "2021-07", "y": 19.0 },
+          { "x": "2022-01", "y": 20.0 },
+          { "x": "2022-07", "y": 16.0 },
+          { "x": "2023-01", "y": 2.0 },
+          { "x": "2023-07", "y": 0.5 },
+          { "x": "2024-01", "y": 6.0 },
+          { "x": "2024-07", "y": 5.0 },
+          { "x": "2025-01", "y": 3.5 },
+          { "x": "2025-07", "y": 1.5 },
+          { "x": "2026-01", "y": 1.4 }
+        ]
+      },
+      {
+        "name": "기준금리",
+        "data": [
+          { "x": "2020-01", "y": 1.5 },
+          { "x": "2020-07", "y": 0.1 },
+          { "x": "2021-01", "y": 0.1 },
+          { "x": "2021-07", "y": 0.1 },
+          { "x": "2022-01", "y": 0.1 },
+          { "x": "2022-07", "y": 2.5 },
+          { "x": "2023-01", "y": 4.5 },
+          { "x": "2023-07", "y": 5.3 },
+          { "x": "2024-01", "y": 5.3 },
+          { "x": "2024-07", "y": 5.0 },
+          { "x": "2025-01", "y": 4.3 },
+          { "x": "2025-07", "y": 4.3 },
+          { "x": "2026-01", "y": 4.3 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-01",
+      "y": 1.4,
+      "displayText": "현재 1.4%"
+    },
+    "annotations": [
+      {
+        "text": "피크 주거비 20%",
+        "position": { "x": "2022-01", "y": 20 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "현재 1.4%",
+        "position": { "x": "2026-01", "y": 1.4 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "2020-01", "y": 20 },
+        "to": { "x": "2026-01", "y": 20 },
+        "label": "피크 20%",
+        "color": "#C62828",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "주택가격 상승률은 2022년 초 20% 피크 후 급락, 2023년 중반 0.5%까지 하락 후 소폭 반등했으나 2026년 1.4%로 안정세. 기준금리는 2022년부터 급등하여 5.3%까지 상승 후 4.3%에서 유지 중.",
+    "supportResistance": [
+      { "level": 20, "type": "resistance", "strength": "strong" },
+      { "level": 0.5, "type": "support", "strength": "moderate" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.5,
+      "max": 20.0,
+      "average": 7.2,
+      "latest": 1.4
+    },
+    "changeRates": [
+      { "period": "피크 대비", "percentChange": -93 },
+      { "period": "전반기 대비", "percentChange": -6.7 }
+    ]
+  },
+  "narrative": {
+    "headline": "주택가격 상승률 피크 20%에서 1.4%로 급냉, 고금리가 주거비 인플레 억제",
+    "keyTakeaways": [
+      "2022년 초 주택가격 YoY 20%로 정점 찍은 뒤 급락, 현재 1.4%로 안정",
+      "기준금리 4.3% 고금리 유지가 주택시장 과열을 효과적으로 억제",
+      "주거비 인플레이션은 사실상 정상화 완료, 금리 인하 시 재가속 리스크 주시 필요"
+    ],
+    "sentiment": "neutral-positive"
+  }
+}

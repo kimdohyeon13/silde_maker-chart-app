@@ -1,0 +1,90 @@
+{
+  "id": "power-build-timeline-source",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "데이터센터 착공 속도와 전력망 준비 속도의 시간차",
+    "subtitle": "계획 수립부터 실제 전력 확보까지 필요한 시간 (개월)",
+    "source": "원문 노트 재구성",
+    "xAxis": {
+      "label": "구간",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "기간",
+      "unit": "개월",
+      "min": 0,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "필요 기간",
+        "color": "#6667AB",
+        "originalColor": "#6667AB",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "필요 기간",
+        "data": [
+          { "x": "하이퍼스케일러 계획 최소", "y": 18, "color": "#0F4C81" },
+          { "x": "하이퍼스케일러 계획 최대", "y": 24, "color": "#0F4C81" },
+          { "x": "유틸리티 준비 최소", "y": 60, "color": "#FF6F61" },
+          { "x": "유틸리티 준비 최대", "y": 120, "color": "#FF6F61" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "유틸리티 준비 최대",
+      "y": 120,
+      "displayText": "최대 120개월"
+    },
+    "annotations": [
+      {
+        "text": "빅테크는 18~24개월 안에 움직입니다",
+        "position": { "x": "하이퍼스케일러 계획 최대", "y": 24 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "전력망은 5~10년이 걸릴 수 있습니다",
+        "position": { "x": "유틸리티 준비 최대", "y": 120 },
+        "importance": "critical",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "데이터센터 수요자는 2년 안에 계획을 집행하려 하지만, 유틸리티 인프라는 실제 전력망 준비에 5~10년이 걸릴 수 있다. 이 시간차가 현장 발전과 ESS, 냉각 인프라 업체의 수혜 논리를 만든다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 18,
+      "max": 120,
+      "average": 55.5,
+      "latest": 120
+    },
+    "changeRates": [
+      { "period": "24개월 -> 60개월", "percentChange": 150.0 },
+      { "period": "24개월 -> 120개월", "percentChange": 400.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "데이터센터 투자에서 가장 비싼 비용은 전기 가격보다 전기를 기다리는 시간일 수 있습니다.",
+    "keyTakeaways": [
+      "하이퍼스케일러는 18~24개월 안에 사이트를 준비하려 합니다.",
+      "반면 유틸리티 인프라는 실제 전력 공급까지 5~10년이 걸릴 수 있습니다.",
+      "이 차이가 버티브, 블룸에너지, BTM 솔루션 논리를 한 문장으로 묶어줍니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

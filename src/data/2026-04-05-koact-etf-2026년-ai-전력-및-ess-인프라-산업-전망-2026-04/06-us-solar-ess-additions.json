@@ -1,0 +1,111 @@
+{
+  "id": "us-solar-ess-additions",
+  "structure": {
+    "chartType": "line",
+    "title": "태양광과 배터리 ESS는 이미 설치 증가가 숫자로 확인된다",
+    "subtitle": "미국 연도별 태양광·배터리 ESS 신규 설치량 추이 및 전망",
+    "source": "US EIA Short-Term Energy Outlook(2025.10)",
+    "timeRange": "2022~2026E",
+    "xAxis": {
+      "label": "연도",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "신규 설치량",
+      "unit": "GW",
+      "min": 0,
+      "max": 42
+    },
+    "legend": [
+      {
+        "name": "태양광",
+        "originalColor": "#FF4F8B",
+        "role": "primary"
+      },
+      {
+        "name": "배터리 ESS",
+        "originalColor": "#1565C0",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "태양광",
+        "data": [
+          { "x": "2022", "y": 11.3 },
+          { "x": "2023", "y": 19.7 },
+          { "x": "2024", "y": 31.2 },
+          { "x": "2025E", "y": 30.9 },
+          { "x": "2026E", "y": 39.6 }
+        ]
+      },
+      {
+        "name": "배터리 ESS",
+        "data": [
+          { "x": "2022", "y": 4.3 },
+          { "x": "2023", "y": 6.9 },
+          { "x": "2024", "y": 11.3 },
+          { "x": "2025E", "y": 18.2 },
+          { "x": "2026E", "y": 22.1 }
+        ]
+      }
+    ],
+    "totalDataPoints": 10
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026E",
+      "y": 39.6,
+      "displayText": "태양광 39.6GW"
+    },
+    "annotations": [
+      {
+        "text": "ESS도 2026E 22.1GW까지 확대",
+        "position": { "x": "2026E", "y": 22.1 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "태양광은 2024 이후 재차 상향",
+        "position": { "x": "2024", "y": 31.2 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2024",
+        "toX": "2026E",
+        "color": "#FF6F61",
+        "label": "설치량 재상향 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "정책 후퇴 우려에도 미국 태양광과 배터리 ESS 설치량은 2024년 이후 재차 가속한다. 특히 ESS는 태양광보다 더 빠른 기울기로 확대된다.",
+    "supportResistance": [
+      { "level": 11.3, "type": "support", "strength": "중간" },
+      { "level": 39.6, "type": "resistance", "strength": "강함" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 4.3,
+      "max": 39.6,
+      "average": 19.6,
+      "latest": 39.6
+    },
+    "changeRates": [
+      { "period": "태양광 2022 → 2026E", "percentChange": 250.4 },
+      { "period": "ESS 2022 → 2026E", "percentChange": 414.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "IRA 수정 이후에도 미국 태양광과 ESS 설치량은 오히려 더 높은 레벨로 올라가고 있습니다.",
+    "summary": "태양광 신규 설치량은 2022년 11.3GW에서 2026E 39.6GW로, 배터리 ESS는 4.3GW에서 22.1GW로 늘어날 전망이다. ESS의 증가 속도가 특히 가파르다는 점이 2026년 투자 포인트다.",
+    "story": "이 차트는 '정책 후퇴 = 재생에너지 붕괴'라는 단순한 해석이 틀릴 수 있음을 보여준다. 빅테크가 원하는 것은 빠른 설치와 전력 가시성이고, 태양광+ESS는 그 조건을 가장 현실적으로 만족하는 조합 중 하나다. 그래서 공급망이 재편될수록 비중국계 소재·배터리·부품 업체들에 수혜가 집중될 가능성이 높다."
+  }
+}

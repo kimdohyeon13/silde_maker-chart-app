@@ -1,0 +1,156 @@
+{
+  "id": "emotion-dog-missing",
+  "structure": {
+    "chartType": "line",
+    "title": "반려견 100일 실종, '슬픔'만 상승 — 감정 분화 확인",
+    "subtitle": "코사인 유사도, 실종 일수별 감정 프로브",
+    "source": "Emotion Probes Track Numerical Semantics",
+    "xAxis": {
+      "label": "실종 일수",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "코사인 유사도",
+      "unit": "",
+      "min": -0.08,
+      "max": 0.08
+    },
+    "legend": [
+      {
+        "name": "슬픔",
+        "color": "#E65100",
+        "originalColor": "#E65100",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "공포",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "행복",
+        "color": "#2E7D32",
+        "originalColor": "#2E7D32",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "평온",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "style": "solid",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "슬픔",
+        "data": [
+          { "x": "2", "y": 0.025 },
+          { "x": "7", "y": 0.025 },
+          { "x": "14", "y": 0.028 },
+          { "x": "25", "y": 0.035 },
+          { "x": "50", "y": 0.040 },
+          { "x": "100", "y": 0.055 }
+        ]
+      },
+      {
+        "name": "공포",
+        "data": [
+          { "x": "2", "y": 0.025 },
+          { "x": "7", "y": 0.025 },
+          { "x": "14", "y": 0.025 },
+          { "x": "25", "y": 0.025 },
+          { "x": "50", "y": 0.025 },
+          { "x": "100", "y": 0.028 }
+        ]
+      },
+      {
+        "name": "행복",
+        "data": [
+          { "x": "2", "y": -0.005 },
+          { "x": "7", "y": -0.005 },
+          { "x": "14", "y": -0.005 },
+          { "x": "25", "y": -0.005 },
+          { "x": "50", "y": -0.008 },
+          { "x": "100", "y": -0.008 }
+        ]
+      },
+      {
+        "name": "평온",
+        "data": [
+          { "x": "2", "y": -0.008 },
+          { "x": "7", "y": -0.008 },
+          { "x": "14", "y": -0.008 },
+          { "x": "25", "y": -0.010 },
+          { "x": "50", "y": -0.010 },
+          { "x": "100", "y": -0.015 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "100",
+      "y": 0.055,
+      "displayText": "슬픔 0.055 (100일)"
+    },
+    "annotations": [
+      {
+        "text": "슬픔 0.055",
+        "position": { "x": "100", "y": 0.055 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "공포 정체",
+        "position": { "x": "100", "y": 0.028 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "2", "y": 0 },
+        "to": { "x": "100", "y": 0 },
+        "label": "기준선 (0)",
+        "color": "#9E9E9E",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "실종 기간이 길어질수록 '슬픔' 감정만 유의미하게 상승하며, 공포/행복/평온은 거의 변화 없음. LLM이 숫자 크기에 따라 감정 강도를 분화시킨다는 증거.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": -0.015,
+      "max": 0.055,
+      "average": 0.0088,
+      "latest": 0.055
+    },
+    "changeRates": [
+      {
+        "period": "2일→100일 (슬픔)",
+        "percentChange": 120
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "실종 일수 증가 시 슬픔만 선형 상승, LLM 감정 스케일링 확인",
+    "keyTakeaways": [
+      "슬픔 시리즈만 2일(0.025) → 100일(0.055)로 120% 상승",
+      "공포는 0.025~0.028로 거의 정체, 숫자 크기에 둔감",
+      "행복/평온은 음수 영역에서 소폭 하락 — 부정 맥락 인식",
+      "LLM이 숫자 스케일에 따라 적절한 감정만 선별 증폭"
+    ],
+    "sentiment": "negative"
+  }
+}

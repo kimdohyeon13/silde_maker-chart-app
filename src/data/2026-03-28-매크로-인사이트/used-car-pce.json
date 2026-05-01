@@ -1,0 +1,148 @@
+{
+  "id": "used-car-pce",
+  "structure": {
+    "chartType": "line",
+    "title": "중고차 +45%→-3%, 디플레 전환",
+    "subtitle": "중고차 CPI YoY (%) vs 근원 PCE YoY (%)",
+    "source": "BLS, FRED",
+    "timeRange": "2020-01 ~ 2026-01",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "근원 PCE YoY",
+      "unit": "%",
+      "min": 0,
+      "max": 6
+    },
+    "secondaryYAxis": {
+      "label": "중고차 CPI YoY",
+      "unit": "%",
+      "min": -24,
+      "max": 48
+    },
+    "legend": [
+      {
+        "name": "중고차 CPI YoY",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "role": "primary"
+      },
+      {
+        "name": "근원 PCE YoY",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "중고차 CPI YoY",
+        "yAxisId": "secondary",
+        "data": [
+          { "x": "2020-01", "y": 2 },
+          { "x": "2020-07", "y": 8 },
+          { "x": "2021-01", "y": 12 },
+          { "x": "2021-07", "y": 45 },
+          { "x": "2022-01", "y": 40 },
+          { "x": "2022-07", "y": 8 },
+          { "x": "2023-01", "y": -8 },
+          { "x": "2023-07", "y": -5 },
+          { "x": "2024-01", "y": -2 },
+          { "x": "2024-07", "y": -4 },
+          { "x": "2025-01", "y": 0 },
+          { "x": "2025-07", "y": -1 },
+          { "x": "2026-01", "y": -3 }
+        ]
+      },
+      {
+        "name": "근원 PCE YoY",
+        "yAxisId": "primary",
+        "data": [
+          { "x": "2020-01", "y": 1.7 },
+          { "x": "2020-07", "y": 1.3 },
+          { "x": "2021-01", "y": 1.5 },
+          { "x": "2021-07", "y": 3.5 },
+          { "x": "2022-01", "y": 5.2 },
+          { "x": "2022-07", "y": 5.0 },
+          { "x": "2023-01", "y": 4.7 },
+          { "x": "2023-07", "y": 3.8 },
+          { "x": "2024-01", "y": 2.9 },
+          { "x": "2024-07", "y": 2.7 },
+          { "x": "2025-01", "y": 2.6 },
+          { "x": "2025-07", "y": 2.5 },
+          { "x": "2026-01", "y": 2.5 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-01",
+      "y": -3,
+      "displayText": "현재 중고차 -3%"
+    },
+    "annotations": [
+      {
+        "text": "피크 중고차 +45%",
+        "position": { "x": "2021-07", "y": 45 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "현재 -3%",
+        "position": { "x": "2026-01", "y": -3 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2021-01",
+        "toX": "2022-01",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "중고차 급등기"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2020-01", "y": 0 },
+        "to": { "x": "2026-01", "y": 0 },
+        "label": "기준선 0%",
+        "color": "#9E9E9E",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "중고차 가격은 2021년 7월 +45% 피크 후 급락, 2023년부터 디플레 전환. 근원 PCE는 2022년 초 5.2% 피크 후 점진 하락, 2.5%에서 정체 중",
+    "supportResistance": [
+      { "level": 0, "type": "support", "strength": "중고차 CPI 0% 기준선" },
+      { "level": 2.5, "type": "support", "strength": "근원 PCE 하방 경직" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -8,
+      "max": 45,
+      "average": 6.8,
+      "latest": -3
+    },
+    "changeRates": [
+      { "period": "피크 대비 현재", "percentChange": -106.7 },
+      { "period": "전년비 (중고차)", "percentChange": -3 }
+    ]
+  },
+  "narrative": {
+    "headline": "중고차 디플레가 인플레 하방 압력으로 작용, 근원 PCE 2.5% 정체 중",
+    "keyTakeaways": [
+      "중고차 가격은 2021년 +45% 폭등 후 현재 -3%로 디플레 전환 완료",
+      "근원 PCE는 2.5%에서 하방 경직, 중고차 효과만으로는 추가 하락 한계",
+      "중고차 디플레가 헤드라인 CPI 하락에 기여하나 근원 물가에는 제한적 영향"
+    ],
+    "sentiment": "cautiously optimistic"
+  }
+}

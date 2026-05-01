@@ -1,0 +1,194 @@
+{
+  "id": "20-vertiv-book-to-bill",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/vertiv-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "Book-to-bill, 2.9배로 급등",
+    "subtitle": "원본 그래프 주요 시점",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "1Q20",
+        "2021 피크",
+        "2022 저점",
+        "2024",
+        "1Q25",
+        "4Q25"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "배수",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "배",
+      "min": 0,
+      "max": 4,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Book-to-bill",
+        "originalColor": "#0F9D58",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Book-to-bill",
+        "role": "primary",
+        "data": [
+          {
+            "x": "1Q20",
+            "y": 1.3,
+            "confidence": 0.92
+          },
+          {
+            "x": "2021 피크",
+            "y": 2.4,
+            "confidence": 0.92
+          },
+          {
+            "x": "2022 저점",
+            "y": 1,
+            "confidence": 0.92
+          },
+          {
+            "x": "2024",
+            "y": 1.5,
+            "confidence": 0.92
+          },
+          {
+            "x": "1Q25",
+            "y": 1.4,
+            "confidence": 0.92
+          },
+          {
+            "x": "4Q25",
+            "y": 2.9,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "버티브는 신규 주문이 매출 인식보다 빠르게 쌓이는 구간에 있다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.0857142857142856,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 123.07692307692307,
+        "absoluteChange": 1.5999999999999999,
+        "from": 1.3,
+        "to": 2.9
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.9,
+        "at": "4Q25"
+      },
+      "min": {
+        "value": 1,
+        "at": "2022 저점"
+      },
+      "average": 1.75,
+      "median": 1.45,
+      "range": 1.9
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "4Q25",
+          "y": 2.9
+        },
+        "seriesName": "Book-to-bill",
+        "description": "4Q25에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "주문 속도가 매출을 앞선다",
+    "subMessage": "4Q25 book-to-bill은 2.9배로 수요 우위가 강하다",
+    "headline": "버티브는 신규 주문이 매출 인식보다 빠르게 쌓이는 구간에 있다.",
+    "summary": "Book-to-bill 지표를 주요 변곡점 중심으로 단순화했다.",
+    "story": "Book-to-bill 지표를 주요 변곡점 중심으로 단순화했다.",
+    "keyTakeaways": [
+      "4Q25 2.9배",
+      "2021 피크 2.4배보다 높음",
+      "수요 강도를 보여주는 핵심 지표"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "4Q25",
+          "y": 2.9
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F9D58",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "4Q25",
+        "y": 2.9
+      },
+      "reason": "버티브는 신규 주문이 매출 인식보다 빠르게 쌓이는 구간에 있다.",
+      "displayText": "주문 속도가 매출을 앞선다"
+    }
+  }
+}

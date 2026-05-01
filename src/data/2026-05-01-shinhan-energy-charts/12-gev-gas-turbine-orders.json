@@ -1,0 +1,204 @@
+{
+  "id": "12-gev-gas-turbine-orders",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "line",
+    "title": "가스터빈 수주, 3년 연속 확대",
+    "subtitle": "연간 가스터빈 판매량과 수주, GW",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "GW",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "GW",
+      "min": 0,
+      "max": 35,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "판매량",
+        "originalColor": "#64748B",
+        "role": "secondary"
+      },
+      {
+        "name": "수주",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "판매량",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "2023",
+            "y": 13.9,
+            "confidence": 0.92
+          },
+          {
+            "x": "2024",
+            "y": 11.9,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 13,
+            "confidence": 0.92
+          }
+        ]
+      },
+      {
+        "name": "수주",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2023",
+            "y": 9.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2024",
+            "y": 20.2,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 29.8,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.82,
+      "description": "전력 부족과 데이터센터 수요가 가스터빈 수주를 밀어 올린다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.231707317073171,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -6.4748201438848945,
+        "absoluteChange": -0.9000000000000004,
+        "from": 13.9,
+        "to": 13
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 13.9,
+        "at": "2023"
+      },
+      "min": {
+        "value": 11.9,
+        "at": "2024"
+      },
+      "average": 16.4,
+      "median": 13.45,
+      "range": 20.200000000000003
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2023",
+          "y": 13.9
+        },
+        "seriesName": "판매량",
+        "description": "2023에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "가스터빈 수주가 폭증했다",
+    "subMessage": "2025년 수주는 29.8GW로 2023년의 3배 수준이다",
+    "headline": "전력 부족과 데이터센터 수요가 가스터빈 수주를 밀어 올린다.",
+    "summary": "원본의 가스터빈 그래프에서 가장 중요한 수주 증가만 선명하게 남겼다.",
+    "story": "원본의 가스터빈 그래프에서 가장 중요한 수주 증가만 선명하게 남겼다.",
+    "keyTakeaways": [
+      "2023년 수주 9.6GW",
+      "2024년 20.2GW",
+      "2025년 29.8GW"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2023",
+          "y": 13.9
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#64748B",
+      "secondary": [
+        "#CF222E"
+      ],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2023",
+        "y": 13.9
+      },
+      "reason": "전력 부족과 데이터센터 수요가 가스터빈 수주를 밀어 올린다.",
+      "displayText": "가스터빈 수주가 폭증했다"
+    }
+  }
+}

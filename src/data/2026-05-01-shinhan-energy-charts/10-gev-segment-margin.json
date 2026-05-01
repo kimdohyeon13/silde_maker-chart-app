@@ -1,0 +1,176 @@
+{
+  "id": "10-gev-segment-margin",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/ge-vernova-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "GEV, 전력은 좋고 풍력은 아프다",
+    "subtitle": "1Q26 부문별 Adj-EBITDA 마진",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "파워",
+        "풍력",
+        "전력"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "마진율",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "min": -35,
+      "max": 25,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "1Q26 마진율",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "1Q26 마진율",
+        "role": "primary",
+        "data": [
+          {
+            "x": "파워",
+            "y": 16.3,
+            "confidence": 0.92
+          },
+          {
+            "x": "풍력",
+            "y": -26.7,
+            "confidence": 0.92
+          },
+          {
+            "x": "전력",
+            "y": 17.8,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.82,
+      "description": "GEV의 투자 포인트는 전력 호조와 풍력 적자 리스크의 균형이다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 18.040540540540537,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 9.202453987730062,
+        "absoluteChange": 1.5,
+        "from": 16.3,
+        "to": 17.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 17.8,
+        "at": "전력"
+      },
+      "min": {
+        "value": -26.7,
+        "at": "풍력"
+      },
+      "average": 2.4666666666666672,
+      "median": 16.3,
+      "range": 44.5
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "전력",
+          "y": 17.8
+        },
+        "seriesName": "1Q26 마진율",
+        "description": "전력에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "사업부 온도차가 크다",
+    "subMessage": "전력과 파워가 벌고, 풍력은 손실이 확대됐다",
+    "headline": "GEV의 투자 포인트는 전력 호조와 풍력 적자 리스크의 균형이다.",
+    "summary": "1Q26 부문별 마진을 한 장으로 단순화했다.",
+    "story": "1Q26 부문별 마진을 한 장으로 단순화했다.",
+    "keyTakeaways": [
+      "전력 마진율 17.8%",
+      "파워 마진율 16.3%",
+      "풍력 마진율 -26.7%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "전력",
+          "y": 17.8
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "전력",
+        "y": 17.8
+      },
+      "reason": "GEV의 투자 포인트는 전력 호조와 풍력 적자 리스크의 균형이다.",
+      "displayText": "사업부 온도차가 크다"
+    }
+  }
+}

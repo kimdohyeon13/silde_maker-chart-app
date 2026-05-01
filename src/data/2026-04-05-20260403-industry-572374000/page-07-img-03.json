@@ -1,0 +1,112 @@
+{
+  "id": "page-07-img-03",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "광트랜시버, 전기 신호를 빛으로 바꾸는 환승 구조",
+    "subtitle": "송신(TOSA)과 수신(ROSA)을 묶는 신호 흐름",
+    "source": "DEXERIALS, QSFPTEK, 유안타증권 리서치센터",
+    "xAxis": {
+      "label": "블록",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "역할 중요도",
+      "unit": "점",
+      "min": 0,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "신호 블록",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "신호 블록",
+        "data": [
+          { "x": "Electric data input", "y": 3, "color": "#939597" },
+          { "x": "PAM4 IC", "y": 4, "color": "#0F4C81" },
+          { "x": "Driver / TIA", "y": 5, "color": "#FF6F61" },
+          { "x": "TOSA box", "y": 5, "color": "#6667AB" },
+          { "x": "MUX / DEMUX", "y": 4, "color": "#F5DF4D" },
+          { "x": "ROSA box", "y": 5, "color": "#1565C0" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "TOSA box",
+      "y": 5,
+      "displayText": "송신부가 전기 신호를 빛으로 전환"
+    },
+    "annotations": [
+      {
+        "text": "전기 입력 → 광 출력",
+        "position": { "x": "PAM4 IC", "y": 4 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "TOSA / ROSA 양방향 구조",
+        "position": { "x": "ROSA box", "y": 5 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "MUX / DEMUX가 파장 분리",
+        "position": { "x": "MUX / DEMUX", "y": 4 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "Driver / TIA",
+        "toX": "ROSA box",
+        "color": "rgba(15, 76, 129, 0.08)",
+        "label": "전기-광-전기 변환 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "광트랜시버는 입력 전기 신호를 PAM4 IC와 Driver/TIA를 거쳐 송신·수신 블록으로 바꾸고, MUX/DEMUX로 파장을 나누어 고속 전송을 구현하는 구조다.",
+    "supportResistance": [
+      { "level": 3, "type": "support", "strength": "moderate" },
+      { "level": 5, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 3,
+      "max": 5,
+      "average": 4.3,
+      "latest": 5
+    },
+    "changeRates": [
+      {
+        "period": "전기→광 변환 강도",
+        "percentChange": 66.7,
+        "absoluteChange": 2,
+        "from": 3,
+        "to": 5
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "광트랜시버는 전기 신호를 빛으로 바꿔 데이터센터의 속도 한계를 넓힙니다.",
+    "keyTakeaways": [
+      "PAM4 IC와 Driver/TIA가 전기 신호의 품질을 끌어올리고, TOSA와 ROSA가 빛과 전기를 오가게 합니다.",
+      "MUX/DEMUX는 여러 파장을 합치고 나누는 역할을 하며, 고속 전송의 핵심 환승 장치입니다.",
+      "이 그림은 광트랜시버가 단순 부품이 아니라 데이터센터 통신의 신경망이라는 점을 보여줍니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

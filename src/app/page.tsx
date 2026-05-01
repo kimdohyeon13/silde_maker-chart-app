@@ -1,65 +1,148 @@
-import Image from "next/image";
+/**
+ * =====================================================
+ * 메인 페이지 — 프로젝트 선택 + 차트 렌더링
+ * =====================================================
+ *
+ * 변경사항:
+ * → 프로젝트 목록/분석 데이터 로딩 로직을 공용 훅으로 분리
+ * → 테마 전환 로직도 공용 훅으로 분리
+ * → 페이지는 "화면을 어떻게 보여줄지"에만 집중
+ */
+
+"use client";
+
+import ActionButton from "@/components/app/ActionButton";
+import PageShell from "@/components/app/PageShell";
+import ProjectSelectBar from "@/components/app/ProjectSelectBar";
+import StatusPanel from "@/components/app/StatusPanel";
+import { ContentRouter } from "@/components/charts";
+import { useProjectBrowser } from "@/hooks/use-project-browser";
+import { useThemeMode } from "@/hooks/use-theme-mode";
+import { allDemoData } from "@/lib/demo-data";
+import { getTheme } from "@/lib/theme/toss-theme";
 
 export default function Home() {
+  const { isDark, themeMode, toggleTheme } = useThemeMode();
+  const {
+    analyses,
+    currentProject,
+    demoProjectSlug,
+    loading,
+    projects,
+    selectedProject,
+    setSelectedProject,
+  } = useProjectBrowser({ demoAnalyses: allDemoData });
+  const theme = getTheme(themeMode);
+  const { colors, typography } = theme;
+
+  const selectedProjectLabel =
+    currentProject?.slug || selectedProject || "프로젝트-slug";
+  const projectOptions = [
+    { value: demoProjectSlug, label: "데모 데이터 (샘플)" },
+    ...projects.map((project) => ({
+      value: project.slug,
+      label: `${project.date} / ${project.topic}${
+        project.analysisCount > 0
+          ? ` (${project.analysisCount}개 콘텐츠)`
+          : " (분석 대기)"
+      }`,
+    })),
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <PageShell
+      themeMode={themeMode}
+      title="Chart Remake"
+      description="차트·표·뉴스 기사를 토스증권 스타일 콘텐츠로 리메이크"
+      actions={
+        <>
+          <ActionButton href="/export" themeMode={themeMode} variant="primary">
+            PNG 내보내기
+          </ActionButton>
+          <ActionButton onClick={toggleTheme} themeMode={themeMode}>
+            {isDark ? "☀ 라이트 모드" : "☾ 다크 모드"}
+          </ActionButton>
+        </>
+      }
+    >
+      <ProjectSelectBar
+        themeMode={themeMode}
+        value={selectedProject}
+        options={projectOptions}
+        onChange={setSelectedProject}
+        trailingContent={
+          currentProject ? (
+            <span
+              style={{
+                fontSize: 12,
+                color: colors.accent,
+                fontFamily: typography.fontFamily.mono,
+                whiteSpace: "nowrap",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              {currentProject.imageCount} img / {currentProject.analysisCount} json
+            </span>
+          ) : null
+        }
+      />
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+        {loading ? (
+          <StatusPanel themeMode={themeMode}>
+            <span style={{ fontSize: 14 }}>프로젝트 데이터 로딩 중...</span>
+          </StatusPanel>
+        ) : analyses.length > 0 ? (
+          analyses.map((analysis) => (
+            <ContentRouter
+              key={analysis.id}
+              analysis={analysis}
+              theme={themeMode}
+              showInsights={true}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          ))
+        ) : (
+          <StatusPanel dashed themeMode={themeMode}>
+            <p style={{ fontSize: 16, fontWeight: 600, margin: "0 0 8px" }}>
+              분석 데이터가 없습니다
+            </p>
+            <p style={{ fontSize: 13, margin: 0 }}>
+              projects/{selectedProjectLabel}/input 폴더에 이미지나 기사 스크린샷을 넣고
+              <br />
+              <code
+                style={{
+                  background: colors.surface,
+                  padding: "2px 6px",
+                  borderRadius: 4,
+                  fontSize: 12,
+                  color: colors.textPrimary,
+                }}
+              >
+                /chart-remake
+              </code>{" "}
+              명령어를 실행하세요
+            </p>
+          </StatusPanel>
+        )}
+      </div>
+
+      <footer
+        style={{
+          marginTop: 48,
+          paddingTop: 24,
+          borderTop: `1px solid ${colors.borderSubtle}`,
+          textAlign: "center",
+        }}
+      >
+        <p
+          style={{
+            fontSize: 12,
+            color: colors.textTertiary,
+            margin: 0,
+          }}
+        >
+          Claude Code 리메이크 엔진 · projects/.../input에 이미지를 넣고 /chart-remake 실행
+        </p>
+      </footer>
+    </PageShell>
   );
 }

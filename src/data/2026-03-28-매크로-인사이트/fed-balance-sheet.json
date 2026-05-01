@@ -1,0 +1,136 @@
+{
+  "id": "fed-balance-sheet",
+  "structure": {
+    "chartType": "line",
+    "title": "연준, 2년간 20년치 유동성 살포",
+    "subtitle": "연준 총자산 (조 달러, 2006~2026)",
+    "source": "Federal Reserve, TradingView",
+    "timeRange": "2006~2026",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "조 달러",
+      "unit": "T",
+      "min": 0,
+      "max": 10
+    },
+    "legend": [
+      {
+        "name": "연준 총자산",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연준 총자산",
+        "data": [
+          { "x": "2006", "y": 0.8 },
+          { "x": "2007", "y": 0.9 },
+          { "x": "2008", "y": 0.9 },
+          { "x": "2009", "y": 2.1 },
+          { "x": "2010", "y": 2.3 },
+          { "x": "2011", "y": 2.8 },
+          { "x": "2012", "y": 2.8 },
+          { "x": "2013", "y": 3.2 },
+          { "x": "2014", "y": 4.5 },
+          { "x": "2015", "y": 4.5 },
+          { "x": "2016", "y": 4.5 },
+          { "x": "2017", "y": 4.5 },
+          { "x": "2018", "y": 4.3 },
+          { "x": "2019", "y": 3.8 },
+          { "x": "2020", "y": 7.2 },
+          { "x": "2021", "y": 8.5 },
+          { "x": "2022", "y": 9.0 },
+          { "x": "2023", "y": 8.3 },
+          { "x": "2024", "y": 7.4 },
+          { "x": "2025", "y": 6.8 },
+          { "x": "2026", "y": 6.66 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026",
+      "y": 6.66,
+      "displayText": "현재: 6.66T"
+    },
+    "annotations": [
+      {
+        "text": "2년간 +5조$ 살포",
+        "position": { "x": "2021", "y": 8.5 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "QT 시작",
+        "position": { "x": "2022", "y": 9.0 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "현재 6.66T",
+        "position": { "x": "2026", "y": 6.66 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2020",
+        "toX": "2022",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "코로나 QE"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2008년 금융위기 이후 QE로 급증, 2014~2017년 안정, 2020년 코로나 QE로 역대 최대 팽창 후 2022년부터 QT로 축소 진행 중",
+    "supportResistance": [
+      {
+        "level": 4.5,
+        "type": "support",
+        "strength": "strong"
+      },
+      {
+        "level": 9.0,
+        "type": "resistance",
+        "strength": "strong"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.8,
+      "max": 9.0,
+      "average": 4.56,
+      "latest": 6.66
+    },
+    "changeRates": [
+      {
+        "period": "2019→2022 (코로나 QE)",
+        "percentChange": 136.8
+      },
+      {
+        "period": "2022→2026 (QT 진행)",
+        "percentChange": -26.0
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "코로나 위기 대응으로 연준 자산이 2년간 4T에서 9T로 급팽창, QT로 축소 중이나 여전히 6.66T",
+    "keyTakeaways": [
+      "2020~2022년 단 2년간 연준 자산이 약 5조 달러 증가 — 이전 20년 누적 증가분에 맞먹는 규모",
+      "2022년 4월 9.0T 피크 후 QT(양적긴축) 진행 중이나, 현재 6.66T로 코로나 이전(4.2T) 대비 여전히 58% 높은 수준",
+      "역사적으로 연준 자산 축소 속도가 팽창 속도보다 훨씬 느려, 유동성 정상화에 수년 소요 전망"
+    ],
+    "sentiment": "cautious"
+  }
+}

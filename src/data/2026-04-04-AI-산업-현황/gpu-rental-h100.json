@@ -1,0 +1,143 @@
+{
+  "id": "gpu-rental-h100",
+  "structure": {
+    "chartType": "line",
+    "title": "H100 임대가 $1.60 저점 찍고 반등, 수요 재점화",
+    "subtitle": "1년 계약 기준 $/hr/GPU, 중간값",
+    "source": "ClusterMAX 리서치, SemiAnalysis",
+    "timeRange": "2023-01 ~ 2026-03",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "임대 가격",
+      "unit": "$/hr/GPU",
+      "min": 1.0,
+      "max": 3.6
+    },
+    "legend": [
+      {
+        "name": "H100 임대 가격",
+        "color": "#B0BEC5",
+        "originalColor": "#B0BEC5",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "H100 임대 가격",
+        "data": [
+          { "x": "2023-01", "y": 3.05 },
+          { "x": "2023-07", "y": 3.00 },
+          { "x": "2024-01", "y": 2.80 },
+          { "x": "2024-04", "y": 2.40 },
+          { "x": "2024-07", "y": 2.35 },
+          { "x": "2024-10", "y": 2.10 },
+          { "x": "2025-01", "y": 1.95 },
+          { "x": "2025-04", "y": 1.95 },
+          { "x": "2025-07", "y": 1.90 },
+          { "x": "2025-08", "y": 1.80 },
+          { "x": "2025-09", "y": 1.75 },
+          { "x": "2025-10", "y": 1.65 },
+          { "x": "2025-11", "y": 1.60 },
+          { "x": "2025-12", "y": 1.60 },
+          { "x": "2026-01", "y": 1.65 },
+          { "x": "2026-02", "y": 1.90 },
+          { "x": "2026-03", "y": 2.30 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-03",
+      "y": 2.30,
+      "displayText": "현재: $2.30 (2026년 3월)"
+    },
+    "annotations": [
+      {
+        "text": "피크 $3.05",
+        "position": { "x": "2023-01", "y": 3.05 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "저점 $1.60",
+        "position": { "x": "2025-12", "y": 1.60 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "반등 $2.30",
+        "position": { "x": "2026-03", "y": 2.30 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025-11",
+        "toX": "2026-03",
+        "color": "rgba(76, 175, 80, 0.08)",
+        "label": "가격 반등 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2023-01", "y": 3.05 },
+        "to": { "x": "2025-12", "y": 1.60 },
+        "label": "하락 추세",
+        "color": "#EF5350"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "2023년 초 $3.05에서 2025년 말 $1.60까지 약 48% 하락 후, 2026년 들어 3개월 만에 44% 급반등. 공급 과잉 해소와 AI 수요 재확대가 동시에 작용.",
+    "supportResistance": [
+      {
+        "level": 1.60,
+        "type": "support",
+        "strength": "strong"
+      },
+      {
+        "level": 3.05,
+        "type": "resistance",
+        "strength": "moderate"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 1.60,
+      "max": 3.05,
+      "average": 2.19,
+      "latest": 2.30
+    },
+    "changeRates": [
+      {
+        "period": "피크 대비 저점",
+        "percentChange": -47.5
+      },
+      {
+        "period": "저점 대비 현재",
+        "percentChange": 43.8
+      },
+      {
+        "period": "전월 대비",
+        "percentChange": 21.1
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "H100 임대 시장, 공급 과잉 해소 후 수요 주도 반등 진입",
+    "keyTakeaways": [
+      "2023년 초 $3.05에서 2025년 말 $1.60까지 지속 하락 — 대규모 GPU 증설에 따른 공급 과잉 반영",
+      "2025년 11~12월 $1.60 바닥 형성 후, 2026년 3월 $2.30으로 44% 반등",
+      "DeepSeek·Llama 4 등 대형 모델 학습 수요 급증이 가격 반등 핵심 동인"
+    ],
+    "sentiment": "bullish"
+  }
+}

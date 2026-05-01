@@ -1,0 +1,97 @@
+{
+  "id": "waymo-valuation-rebound",
+  "structure": {
+    "chartType": "bar",
+    "title": "웨이모 가치 회복은 로보택시가 숫자로 검증되고 있음을 뜻한다",
+    "subtitle": "웨이모 기업가치 추이 (십억 달러)",
+    "source": "원문 리포트 30페이지 재구성",
+    "xAxis": {
+      "label": "시점",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "기업가치",
+      "unit": "십억달러",
+      "min": 0,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "기업가치",
+        "color": "#6667AB",
+        "originalColor": "#6667AB",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "기업가치",
+        "data": [
+          { "x": "2018", "y": 175 },
+          { "x": "2019", "y": 105 },
+          { "x": "2020", "y": 30 },
+          { "x": "2024", "y": 45 },
+          { "x": "2025", "y": 126 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2025",
+      "y": 126,
+      "displayText": "2025년 1,260억달러"
+    },
+    "annotations": [
+      {
+        "text": "팬데믹 후 저점 300억달러",
+        "position": { "x": "2020", "y": 30 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "서비스 확장 기대 반영",
+        "position": { "x": "2025", "y": 126 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2024",
+        "toX": "2025",
+        "color": "rgba(102, 103, 171, 0.10)",
+        "label": "재평가 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "웨이모의 가치가 2020년 300억 달러 저점에서 2025년 1,260억 달러까지 회복됐다는 것은 시장이 로보택시를 다시 실험이 아니라 사업 옵션으로 보기 시작했다는 의미다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 30,
+      "max": 175,
+      "average": 96.2,
+      "latest": 126
+    },
+    "changeRates": [
+      { "period": "2020→2025", "percentChange": 320.0 },
+      { "period": "2024→2025", "percentChange": 180.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "테슬라 로보택시를 보려면 먼저 웨이모 가치가 왜 다시 올라가는지 이해해야 합니다.",
+    "keyTakeaways": [
+      "2020년 이후 웨이모 가치가 다시 회복된 것은 서비스 상용화와 데이터 축적이 맞물렸기 때문입니다.",
+      "이는 로보택시가 아직 작아도 시장이 옵션 가치를 붙이기 시작했다는 뜻입니다.",
+      "테슬라도 결국 운행 대수와 안전 데이터가 쌓여야 같은 재평가를 받을 수 있습니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "id": "02-bloom-margin-lift",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/bloom-2.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "블룸 OPM, 19%까지 개선",
+    "subtitle": "연간 영업이익률 전망",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026F",
+        "2027F",
+        "2028F"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "영업이익률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "min": 0,
+      "max": 23,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "영업이익률",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "영업이익률",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024",
+            "y": 1.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2025",
+            "y": 3.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026F",
+            "y": 9.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "2027F",
+            "y": 16,
+            "confidence": 0.92
+          },
+          {
+            "x": "2028F",
+            "y": 19.2,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "생산 확대 효과가 본격화되며 블룸의 이익률이 빠르게 개선된다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.7599999999999998,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1099.9999999999998,
+        "absoluteChange": 17.599999999999998,
+        "from": 1.6,
+        "to": 19.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 19.2,
+        "at": "2028F"
+      },
+      "min": {
+        "value": 1.6,
+        "at": "2024"
+      },
+      "average": 10,
+      "median": 9.6,
+      "range": 17.599999999999998
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2028F",
+          "y": 19.2
+        },
+        "seriesName": "영업이익률",
+        "description": "2028F에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "규모가 마진을 끌어올린다",
+    "subMessage": "외형 성장과 함께 영업이익률도 두 자릿수로 올라선다",
+    "headline": "생산 확대 효과가 본격화되며 블룸의 이익률이 빠르게 개선된다.",
+    "summary": "블룸의 영업이익률은 2024년 1.6%에서 2028F 19.2%로 높아지는 구조다.",
+    "story": "블룸의 영업이익률은 2024년 1.6%에서 2028F 19.2%로 높아지는 구조다.",
+    "keyTakeaways": [
+      "2026F부터 9.6%로 수익성이 의미 있게 개선",
+      "2027F 16.0%, 2028F 19.2%로 레버리지 강화",
+      "단가 하락과 자동화가 핵심 변수"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2028F",
+          "y": 19.2
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028F",
+        "y": 19.2
+      },
+      "reason": "생산 확대 효과가 본격화되며 블룸의 이익률이 빠르게 개선된다.",
+      "displayText": "규모가 마진을 끌어올린다"
+    }
+  }
+}

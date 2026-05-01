@@ -1,0 +1,182 @@
+{
+  "id": "06-bloom-stock-return",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/bloom-1.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "블룸 주가, 12개월 10배 상승",
+    "subtitle": "기간별 절대수익률",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "1M",
+        "3M",
+        "12M",
+        "YTD"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "수익률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "min": 0,
+      "max": 1239,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "절대수익률",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "절대수익률",
+        "role": "primary",
+        "data": [
+          {
+            "x": "1M",
+            "y": 69.9,
+            "confidence": 0.92
+          },
+          {
+            "x": "3M",
+            "y": 36.9,
+            "confidence": 0.92
+          },
+          {
+            "x": "12M",
+            "y": 1076.6,
+            "confidence": 0.92
+          },
+          {
+            "x": "YTD",
+            "y": 160.5,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "블룸은 실적 모멘텀만큼 주가 기대도 이미 크게 반영됐다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.0945754892477115,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 129.61373390557938,
+        "absoluteChange": 90.6,
+        "from": 69.9,
+        "to": 160.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1076.6,
+        "at": "12M"
+      },
+      "min": {
+        "value": 36.9,
+        "at": "3M"
+      },
+      "average": 335.97499999999997,
+      "median": 115.2,
+      "range": 1039.6999999999998
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "12M",
+          "y": 1076.6
+        },
+        "seriesName": "절대수익률",
+        "description": "12M에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "이미 기대가 크게 붙었다",
+    "subMessage": "12개월 수익률은 1,076.6%로 압도적이다",
+    "headline": "블룸은 실적 모멘텀만큼 주가 기대도 이미 크게 반영됐다.",
+    "summary": "원본 첫 페이지의 수익률 표를 비교 막대로 바꿔 과열 정도를 바로 보이게 했다.",
+    "story": "원본 첫 페이지의 수익률 표를 비교 막대로 바꿔 과열 정도를 바로 보이게 했다.",
+    "keyTakeaways": [
+      "1개월 +69.9%",
+      "12개월 +1,076.6%",
+      "컨센서스 상향이 이어져야 주가 부담을 설명할 수 있다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "12M",
+          "y": 1076.6
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "12M",
+        "y": 1076.6
+      },
+      "reason": "블룸은 실적 모멘텀만큼 주가 기대도 이미 크게 반영됐다.",
+      "displayText": "이미 기대가 크게 붙었다"
+    }
+  }
+}

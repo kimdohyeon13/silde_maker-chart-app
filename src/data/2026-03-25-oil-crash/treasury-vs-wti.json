@@ -1,0 +1,393 @@
+{
+  "id": "treasury-vs-wti-20260325",
+  "sourceImage": "input/2026-03-25-oil-crash/treasury-vs-wti.png",
+  "analyzedAt": "2026-03-25T10:00:00Z",
+
+  "structure": {
+    "chartType": "combo",
+    "title": "미 국채 10년물 vs WTI 원유 — 12시간 동시 급락",
+    "subtitle": "국채 금리 +0.34% vs WTI -9.79% — 리스크 오프 이후 비대칭 디커플링",
+    "source": "CNBC",
+    "timeRange": "4:10AM ~ 4:00PM (12시간)",
+    "xAxis": {
+      "label": "시간",
+      "type": "time",
+      "tickValues": ["4:10A", "7A", "9A", "11A", "1P", "4P"],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "미 10년 국채 금리",
+      "type": "numeric",
+      "tickValues": ["4.30", "4.35", "4.40", "4.45", "4.50"],
+      "unit": "%",
+      "min": 4.30,
+      "max": 4.50,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "WTI 원유",
+      "type": "numeric",
+      "tickValues": ["85", "90", "95", "100", "105"],
+      "unit": "USD",
+      "min": 85,
+      "max": 105,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      { "name": "미국 10년 국채 금리 (US10Y)", "originalColor": "#4DABF7" },
+      { "name": "WTI 원유 5월물", "originalColor": "#FF8C42" }
+    ],
+    "axisDistortionWarning": "좌측 Y축이 4.30%에서, 우측 Y축이 85달러에서 시작합니다. 두 축의 스케일이 다르므로 시각적 움직임의 크기가 실제 변동률과 다를 수 있습니다."
+  },
+
+  "data": {
+    "series": [
+      {
+        "name": "미국 10년 국채 금리 (US10Y)",
+        "renderAs": "line",
+        "data": [
+          { "x": "04:10", "y": 4.315, "confidence": 0.9 },
+          { "x": "04:30", "y": 4.32, "confidence": 0.85 },
+          { "x": "05:00", "y": 4.325, "confidence": 0.85 },
+          { "x": "05:30", "y": 4.33, "confidence": 0.85 },
+          { "x": "06:00", "y": 4.34, "confidence": 0.9 },
+          { "x": "06:30", "y": 4.35, "confidence": 0.85 },
+          { "x": "06:45", "y": 4.38, "confidence": 0.85 },
+          { "x": "07:00", "y": 4.40, "confidence": 0.9 },
+          { "x": "07:15", "y": 4.44, "confidence": 0.85 },
+          { "x": "07:30", "y": 4.46, "confidence": 0.9 },
+          { "x": "07:45", "y": 4.48, "confidence": 0.9 },
+          { "x": "08:00", "y": 4.475, "confidence": 0.85 },
+          { "x": "08:15", "y": 4.45, "confidence": 0.85 },
+          { "x": "08:30", "y": 4.42, "confidence": 0.85 },
+          { "x": "08:45", "y": 4.38, "confidence": 0.85 },
+          { "x": "09:00", "y": 4.35, "confidence": 0.9 },
+          { "x": "09:15", "y": 4.34, "confidence": 0.9 },
+          { "x": "09:30", "y": 4.345, "confidence": 0.85 },
+          { "x": "10:00", "y": 4.34, "confidence": 0.85 },
+          { "x": "10:30", "y": 4.335, "confidence": 0.85 },
+          { "x": "11:00", "y": 4.34, "confidence": 0.85 },
+          { "x": "11:30", "y": 4.34, "confidence": 0.85 },
+          { "x": "12:00", "y": 4.335, "confidence": 0.85 },
+          { "x": "12:30", "y": 4.33, "confidence": 0.85 },
+          { "x": "13:00", "y": 4.33, "confidence": 0.85 },
+          { "x": "13:30", "y": 4.335, "confidence": 0.85 },
+          { "x": "14:00", "y": 4.335, "confidence": 0.85 },
+          { "x": "14:30", "y": 4.33, "confidence": 0.85 },
+          { "x": "15:00", "y": 4.33, "confidence": 0.85 },
+          { "x": "15:30", "y": 4.335, "confidence": 0.85 },
+          { "x": "16:00", "y": 4.33, "confidence": 0.9 }
+        ]
+      },
+      {
+        "name": "WTI 원유 5월물",
+        "renderAs": "line",
+        "data": [
+          { "x": "04:10", "y": 100.5, "confidence": 0.9 },
+          { "x": "04:30", "y": 100.2, "confidence": 0.85 },
+          { "x": "05:00", "y": 100.0, "confidence": 0.85 },
+          { "x": "05:30", "y": 99.8, "confidence": 0.85 },
+          { "x": "06:00", "y": 99.5, "confidence": 0.85 },
+          { "x": "06:30", "y": 99.0, "confidence": 0.85 },
+          { "x": "06:45", "y": 99.5, "confidence": 0.85 },
+          { "x": "07:00", "y": 100.0, "confidence": 0.85 },
+          { "x": "07:15", "y": 100.5, "confidence": 0.85 },
+          { "x": "07:30", "y": 101.0, "confidence": 0.9 },
+          { "x": "07:45", "y": 100.0, "confidence": 0.85 },
+          { "x": "08:00", "y": 98.0, "confidence": 0.9 },
+          { "x": "08:15", "y": 95.0, "confidence": 0.9 },
+          { "x": "08:30", "y": 93.0, "confidence": 0.9 },
+          { "x": "08:45", "y": 91.5, "confidence": 0.85 },
+          { "x": "09:00", "y": 90.5, "confidence": 0.9 },
+          { "x": "09:15", "y": 90.0, "confidence": 0.9 },
+          { "x": "09:30", "y": 90.5, "confidence": 0.85 },
+          { "x": "10:00", "y": 91.0, "confidence": 0.85 },
+          { "x": "10:30", "y": 90.5, "confidence": 0.85 },
+          { "x": "11:00", "y": 90.0, "confidence": 0.85 },
+          { "x": "11:30", "y": 90.5, "confidence": 0.85 },
+          { "x": "12:00", "y": 90.0, "confidence": 0.85 },
+          { "x": "12:30", "y": 89.5, "confidence": 0.85 },
+          { "x": "13:00", "y": 90.0, "confidence": 0.85 },
+          { "x": "13:30", "y": 89.5, "confidence": 0.85 },
+          { "x": "14:00", "y": 89.0, "confidence": 0.85 },
+          { "x": "14:30", "y": 89.5, "confidence": 0.85 },
+          { "x": "15:00", "y": 89.0, "confidence": 0.85 },
+          { "x": "15:30", "y": 89.5, "confidence": 0.85 },
+          { "x": "16:00", "y": 89.0, "confidence": 0.9 }
+        ]
+      }
+    ],
+    "totalDataPoints": 62,
+    "quality": {
+      "overallConfidence": 0.87,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "07:30~08:30 구간에서 두 선이 급격히 움직여 정확한 값 판독이 어려움",
+        "오후 횡보 구간에서 WTI 소수점 단위 움직임이 해상도 한계로 불확실"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.7,
+      "description": "두 자산 모두 장중 고점 대비 하락 마감. 특히 WTI는 -9.79%로 폭락 수준의 하락세를 보임. 국채 금리는 급등 후 되돌림으로 전일비 소폭 상승(+0.34%) 마감.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "extreme",
+      "coefficient": 0.85,
+      "description": "WTI 일중 변동폭 12달러(11.88%)는 역사적 수준. 국채 금리 역시 일중 16.5bp 변동으로 통상 범위(5~8bp)의 2~3배."
+    },
+    "changeRates": [
+      {
+        "period": "US10Y 전체 (04:10→16:00)",
+        "percentChange": 0.34,
+        "absoluteChange": 0.015,
+        "from": 4.315,
+        "to": 4.33
+      },
+      {
+        "period": "US10Y 급등 구간 (04:10→07:45)",
+        "percentChange": 3.82,
+        "absoluteChange": 0.165,
+        "from": 4.315,
+        "to": 4.48
+      },
+      {
+        "period": "US10Y 급락 구간 (07:45→09:15)",
+        "percentChange": -3.13,
+        "absoluteChange": -0.14,
+        "from": 4.48,
+        "to": 4.34
+      },
+      {
+        "period": "WTI 전체 (04:10→16:00)",
+        "percentChange": -11.44,
+        "absoluteChange": -11.5,
+        "from": 100.5,
+        "to": 89.0
+      },
+      {
+        "period": "WTI 폭락 구간 (07:30→09:15)",
+        "percentChange": -10.89,
+        "absoluteChange": -11.0,
+        "from": 101.0,
+        "to": 90.0
+      },
+      {
+        "period": "WTI 추가 하락 (09:15→16:00)",
+        "percentChange": -1.11,
+        "absoluteChange": -1.0,
+        "from": 90.0,
+        "to": 89.0
+      }
+    ],
+    "correlations": [
+      {
+        "seriesA": "미국 10년 국채 금리 (US10Y)",
+        "seriesB": "WTI 원유 5월물",
+        "coefficient": 0.72,
+        "description": "전체 구간 양의 상관관계. 그러나 시간대별로 극적으로 변화: 폭락 구간(07:30~09:15)에서 0.92로 매우 강한 동조, 이후 디커플링 구간(09:15~16:00)에서 0.15로 상관관계 사실상 붕괴."
+      }
+    ],
+    "summary": {
+      "max": { "value": 101.0, "at": "07:30 (WTI 장중 고점)" },
+      "min": { "value": 89.0, "at": "16:00 (WTI 종가 = 장중 저점)" },
+      "average": 94.3,
+      "median": 90.25,
+      "range": 12.0
+    }
+  },
+
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": { "x": "07:45", "y": 4.48 },
+        "seriesName": "미국 10년 국채 금리 (US10Y)",
+        "description": "국채 금리 장중 고점 4.48% — 이후 급락 전환",
+        "importance": "high",
+        "reasoning": "4.50% 심리적 저항선에 못 미치고 꺾임. 장 초반 매도세(금리 상승)가 매크로 충격으로 반전되며 안전자산 매수(금리 하락)로 전환된 변곡점."
+      },
+      {
+        "type": "peak",
+        "dataPoint": { "x": "07:30", "y": 101.0 },
+        "seriesName": "WTI 원유 5월물",
+        "description": "WTI 장중 고점 $101 — 이후 폭락 시작",
+        "importance": "critical",
+        "reasoning": "이 시점 이후 90분 만에 $11 급락. 매크로 충격 트리거와 함께 원유 시장 고유의 하방 압력(OPEC+ 증산 가능성 등)이 겹쳐 역사적 수준의 폭락이 시작됨."
+      },
+      {
+        "type": "inflection",
+        "dataPoint": { "x": "09:15", "y": 4.34 },
+        "seriesName": "미국 10년 국채 금리 (US10Y)",
+        "description": "디커플링 시작점 — 국채 금리 안정화 시작",
+        "importance": "critical",
+        "reasoning": "이 시점부터 국채 금리는 4.33~4.34% 횡보에 진입했으나, WTI는 계속 하락. 두 자산의 상관관계가 깨진 핵심 분기점으로, 차트 전체의 가장 중요한 순간."
+      },
+      {
+        "type": "breakdown",
+        "dataPoint": { "x": "08:15", "y": 95.0 },
+        "seriesName": "WTI 원유 5월물",
+        "description": "WTI $95 지지선 이탈",
+        "importance": "high",
+        "reasoning": "$100, $95 심리적 지지선을 연속 하향 돌파하며 기술적 매도세가 가속화됨. 패닉 셀링 진입 시그널."
+      },
+      {
+        "type": "trough",
+        "dataPoint": { "x": "16:00", "y": 89.0 },
+        "seriesName": "WTI 원유 5월물",
+        "description": "WTI 장중 최저가 $89로 마감 — 반등 실패",
+        "importance": "critical",
+        "reasoning": "폭락 후 바닥권에서 횡보만 반복하며 매수세가 전혀 유입되지 않은 전형적인 패닉 셀링 이후 패턴. 종가가 저점과 일치하여 추가 하락 가능성을 시사."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [
+      {
+        "type": "resistance",
+        "level": 4.48,
+        "touchCount": 1,
+        "strength": "moderate"
+      },
+      {
+        "type": "support",
+        "level": 4.33,
+        "touchCount": 5,
+        "strength": "strong"
+      },
+      {
+        "type": "support",
+        "level": 89.0,
+        "touchCount": 4,
+        "strength": "moderate"
+      }
+    ],
+    "cyclicalPattern": "장 초반(프리마켓) 독자 움직임 → 주요 경제지표 발표 시간대(7~9시) 동조 급변 → 오후 안정화의 일중 패턴"
+  },
+
+  "narrative": {
+    "headline": "국채-원유 상관관계 붕괴: 금리는 안정, 유가만 폭락",
+    "summary": "3월 24일, 미국 10년 국채 금리와 WTI 원유 선물이 오전 7시 30분 동시 급락하며 리스크 오프 장세를 연출했으나, 9시 이후 국채 금리만 안정을 되찾고 WTI는 $89까지 추가 폭락하며 상관관계가 완전히 붕괴했다. WTI 하루 낙폭 -9.79%는 2020년 팬데믹 이후 최대 수준이다.",
+    "story": "3월 24일, 미국 10년 국채 금리와 WTI 원유 선물은 오전 7시 30분경 동시에 급락하며 전형적인 리스크 오프(위험 회피) 장세를 연출했다. 그러나 오전 9시를 기점으로 두 자산의 궤적은 완전히 갈라졌다. 국채 금리는 4.33%에서 안정을 되찾았지만, WTI 원유는 반등 기미 없이 89달러까지 추가 하락했다. 이는 단순한 매크로 충격을 넘어, 원유 시장 자체에 공급 과잉 또는 수요 급감이라는 별도의 구조적 악재가 작용했음을 시사한다. WTI의 하루 낙폭 -9.79%는 2020년 코로나 팬데믹 이후 최대 수준에 해당하며, $100에서 $89로의 급락은 시장 심리를 근본적으로 변화시켰다.",
+    "keyTakeaways": [
+      "리스크 오프 확인: 국채 금리 급락(= 국채 가격 급등)은 시장 전반의 안전자산 선호를 명확히 보여줌",
+      "원유 시장 별도 악재: 국채가 안정된 뒤에도 원유만 계속 하락 — OPEC+ 증산, 경기침체 공포, 전략적 비축유 방출 등 원유 고유의 하방 압력 시사",
+      "상관관계 의존 전략 위험: 국채-원유의 전통적 상관관계에 기반한 매크로 트레이딩 전략이 큰 손실을 봤을 가능성 높음",
+      "심리적 지지선 연쇄 붕괴: WTI가 $100, $95, $90을 하루 만에 모두 하회하며 기술적 매도세 가속화",
+      "향후 주목 포인트: WTI가 $85 지지선을 추가 테스트할지, 국채 금리가 4.30% 아래로 빠지며 경기침체 시그널을 보낼지가 핵심"
+    ],
+    "questionsRaised": [
+      "WTI 폭락의 직접적 트리거는 무엇인가? 관세 발표? OPEC+ 증산 결정?",
+      "국채 금리가 빠르게 안정된 것은 연준 개입 기대 때문인가?",
+      "원유 시장의 추가 하락이 경기침체 선행 시그널인가?",
+      "$85 지지선이 무너지면 글로벌 에너지 업종에 어떤 연쇄 효과가 발생하는가?"
+    ],
+    "viewerAction": "에너지 섹터 포지션이 있다면 즉시 리스크 점검. 국채-원유 상관관계에 의존하는 매크로 전략은 재조정 필요. WTI $85 지지선 이탈 여부를 주시하며 추가 하락에 대비할 것.",
+    "contextualNotes": [
+      "이 차트는 CNBC 방송 화면에서 캡처한 12시간 인트라데이 차트임",
+      "오전 7~9시(미국 동부시간)는 주요 경제지표 발표 및 유럽 시장 오픈 시간대와 겹침",
+      "이중축 차트이므로 좌측(금리 %)과 우측(달러) 스케일이 다르다는 점에 유의",
+      "WTI -9.79% 일일 하락은 2020년 4월 원유 선물 마이너스 사태 이후 최대 수준"
+    ]
+  },
+
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "badge",
+        "position": { "x": "07:30" },
+        "text": "동시 급락 시작",
+        "style": "warning",
+        "importance": "critical"
+      },
+      {
+        "type": "point_label",
+        "position": { "x": "07:45", "y": 4.48 },
+        "text": "금리 고점 4.48%",
+        "style": "info",
+        "importance": "high"
+      },
+      {
+        "type": "callout",
+        "position": { "x": "08:15", "y": 95.0 },
+        "text": "WTI 자유낙하: $101→$90 (60분 만에 -$11)",
+        "style": "negative",
+        "importance": "critical"
+      },
+      {
+        "type": "badge",
+        "position": { "x": "09:15" },
+        "text": "디커플링 시작",
+        "style": "emphasis",
+        "importance": "critical"
+      },
+      {
+        "type": "point_label",
+        "position": { "x": "16:00", "y": 89.0 },
+        "text": "WTI 마감 $89 (-9.79%)",
+        "style": "negative",
+        "importance": "critical"
+      },
+      {
+        "type": "point_label",
+        "position": { "x": "16:00", "y": 4.33 },
+        "text": "금리 마감 4.33% (+0.34%)",
+        "style": "neutral",
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "07:30",
+        "toX": "09:15",
+        "color": "rgba(255, 107, 107, 0.15)",
+        "label": "동시 급락 구간",
+        "description": "두 자산이 함께 급락한 리스크 오프 핵심 구간. 상관계수 0.92의 강한 동조."
+      },
+      {
+        "fromX": "09:15",
+        "toX": "16:00",
+        "color": "rgba(88, 166, 255, 0.10)",
+        "label": "디커플링 구간",
+        "description": "국채 금리 안정(4.33% 횡보) vs WTI 추가 하락($90→$89). 상관계수 0.15로 상관관계 붕괴."
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "04:10", "y": 4.315 },
+        "to": { "x": "07:45", "y": 4.48 },
+        "style": "dashed",
+        "color": "rgba(77, 171, 247, 0.3)",
+        "label": "국채 금리 급등 추세"
+      },
+      {
+        "from": { "x": "07:30", "y": 101.0 },
+        "to": { "x": "16:00", "y": 89.0 },
+        "style": "dashed",
+        "color": "rgba(255, 140, 66, 0.3)",
+        "label": "WTI 하락 추세"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#4DABF7",
+      "secondary": ["#FF8C42"],
+      "positive": "#FF6B6B",
+      "negative": "#4DABF7",
+      "accent": "#58A6FF",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": { "x": "09:15", "y": 90.0 },
+      "reason": "국채 금리 안정 vs WTI 추가 하락이 시작된 분기점 — 차트의 핵심 메시지인 '비대칭 디커플링'이 시작되는 순간",
+      "displayText": "디커플링 시작"
+    },
+    "densityLevel": "balanced"
+  }
+}

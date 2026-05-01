@@ -1,0 +1,176 @@
+{
+  "id": "05-bloom-capacity-path",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/bloom-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "블룸 Capa, 5GW까지 열려있다",
+    "subtitle": "연료전지 생산능력 로드맵",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2025",
+        "2026 말",
+        "현재 부지 잠재력"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "생산능력",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "GW",
+      "min": 0,
+      "max": 6,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "생산능력",
+        "originalColor": "#0F9D58",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "생산능력",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2025",
+            "y": 1,
+            "confidence": 0.92
+          },
+          {
+            "x": "2026 말",
+            "y": 2,
+            "confidence": 0.92
+          },
+          {
+            "x": "현재 부지 잠재력",
+            "y": 5,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "블룸의 장기 매출 잠재력은 5GW 생산능력 확보 속도에 달려 있다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.5,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 400,
+        "absoluteChange": 4,
+        "from": 1,
+        "to": 5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5,
+        "at": "현재 부지 잠재력"
+      },
+      "min": {
+        "value": 1,
+        "at": "2025"
+      },
+      "average": 2.6666666666666665,
+      "median": 2,
+      "range": 4
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "현재 부지 잠재력",
+          "y": 5
+        },
+        "seriesName": "생산능력",
+        "description": "현재 부지 잠재력에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "증설 여지가 핵심이다",
+    "subMessage": "현재 부지에서 5GW까지 확장 가능하다는 점이 포인트다",
+    "headline": "블룸의 장기 매출 잠재력은 5GW 생산능력 확보 속도에 달려 있다.",
+    "summary": "원본 리포트의 Capa 논리를 3단계 막대로 단순화했다.",
+    "story": "원본 리포트의 Capa 논리를 3단계 막대로 단순화했다.",
+    "keyTakeaways": [
+      "2025년 1GW",
+      "2026년 말 2GW 계획",
+      "현재 부지에서 5GW까지 가능하다고 제시"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "현재 부지 잠재력",
+          "y": 5
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F9D58",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "현재 부지 잠재력",
+        "y": 5
+      },
+      "reason": "블룸의 장기 매출 잠재력은 5GW 생산능력 확보 속도에 달려 있다.",
+      "displayText": "증설 여지가 핵심이다"
+    }
+  }
+}

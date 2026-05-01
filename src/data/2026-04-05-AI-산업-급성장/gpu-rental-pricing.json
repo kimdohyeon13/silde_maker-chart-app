@@ -1,0 +1,146 @@
+{
+  "id": "gpu-rental-pricing",
+  "structure": {
+    "chartType": "line",
+    "title": "H100 가격 반등, AI 수요 재가속 신호",
+    "subtitle": "H100 1년 장기 계약 기준, $/hr/GPU",
+    "source": "ClusterMAX research",
+    "timeRange": "2023-01 ~ 2026-03",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "임대 가격",
+      "unit": "$/hr/GPU",
+      "min": 1.2,
+      "max": 3.6
+    },
+    "legend": [
+      {
+        "name": "H100 임대 가격",
+        "color": "#A0A0A0",
+        "originalColor": "#A0A0A0",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "H100 임대 가격",
+        "data": [
+          { "x": "2023-01", "y": 3.00 },
+          { "x": "2023-06", "y": 3.10 },
+          { "x": "2024-01", "y": 2.80 },
+          { "x": "2024-03", "y": 2.40 },
+          { "x": "2024-06", "y": 2.35 },
+          { "x": "2024-09", "y": 2.10 },
+          { "x": "2024-12", "y": 2.00 },
+          { "x": "2025-01", "y": 1.95 },
+          { "x": "2025-03", "y": 2.00 },
+          { "x": "2025-06", "y": 1.85 },
+          { "x": "2025-07", "y": 1.90 },
+          { "x": "2025-08", "y": 1.80 },
+          { "x": "2025-09", "y": 1.75 },
+          { "x": "2025-10", "y": 1.65 },
+          { "x": "2025-11", "y": 1.70 },
+          { "x": "2025-12", "y": 1.70 },
+          { "x": "2026-01", "y": 1.80 },
+          { "x": "2026-02", "y": 1.95 },
+          { "x": "2026-03", "y": 2.35 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-03",
+      "y": 2.35,
+      "displayText": "$2.35/hr"
+    },
+    "annotations": [
+      {
+        "text": "피크: $3.10",
+        "position": { "x": "2023-06", "y": 3.10 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "저점: $1.65",
+        "position": { "x": "2025-10", "y": 1.65 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "반등: $2.35",
+        "position": { "x": "2026-03", "y": 2.35 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025-10",
+        "toX": "2026-03",
+        "color": "rgba(198, 40, 40, 0.08)",
+        "label": "가격 반등 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2023-01", "y": 3.00 },
+        "to": { "x": "2025-10", "y": 1.65 },
+        "label": "하락 추세",
+        "color": "#EF5350"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "2023년 중반 $3.10 피크에서 2025년 10월 $1.65까지 약 47% 하락 후, 5개월 만에 42% 급반등. GPU 공급 과잉 해소와 대형 AI 모델 훈련 수요 재확대가 동시 작용.",
+    "supportResistance": [
+      {
+        "level": 1.65,
+        "type": "support",
+        "strength": "strong"
+      },
+      {
+        "level": 3.10,
+        "type": "resistance",
+        "strength": "moderate"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 1.65,
+      "max": 3.10,
+      "average": 2.17,
+      "latest": 2.35
+    },
+    "changeRates": [
+      {
+        "period": "피크 대비 저점",
+        "percentChange": -46.8
+      },
+      {
+        "period": "저점 대비 현재",
+        "percentChange": 42.4
+      },
+      {
+        "period": "전월 대비",
+        "percentChange": 20.5
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "H100 가격 저점($1.65) 대비 42% 반등, GPU 수급 타이트닝 심화",
+    "keyTakeaways": [
+      "2023년 중반 $3.10 피크에서 2025년 10월 $1.65까지 지속 하락 -- GPU 대규모 증설에 따른 공급 과잉 반영",
+      "2025년 10월 $1.65 바닥 형성 후, 2026년 3월 $2.35로 42% 반등",
+      "DeepSeek, Llama 4 등 대형 모델 학습 수요 급증과 데이터센터 확장이 가격 반등 핵심 동인",
+      "1년 장기 계약 기준이므로 스팟 가격은 더 높을 가능성 -- 실제 수급 압력은 수치 이상"
+    ],
+    "sentiment": "bullish"
+  }
+}

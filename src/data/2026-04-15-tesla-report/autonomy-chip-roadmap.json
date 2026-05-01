@@ -1,0 +1,66 @@
+{
+  "id": "autonomy-chip-roadmap",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "테슬라 자율주행의 진짜 경쟁력은 칩과 스택을 같이 쥔다는 점이다",
+    "subtitle": "HW3 -> HW4 -> AI5 로드맵 비교",
+    "source": "원문 리포트 29페이지 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "비교 항목", "dataType": "text", "isRowHeader": true, "width": 170 },
+      { "key": "hw3", "label": "HW3", "dataType": "text", "width": 180 },
+      { "key": "hw4", "label": "HW4", "dataType": "text", "width": 180 },
+      { "key": "ai5", "label": "AI5", "dataType": "text", "width": 190 }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "도입 시점", "displayValue": "도입 시점" },
+          "hw3": { "value": "2019", "displayValue": "2019" },
+          "hw4": { "value": "2023", "displayValue": "2023" },
+          "ai5": { "value": "2026E", "displayValue": "2026E", "highlight": "accent" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "연산 성능", "displayValue": "연산 성능" },
+          "hw3": { "value": "144 TOPS", "displayValue": "144 TOPS" },
+          "hw4": { "value": "300~500 TOPS", "displayValue": "300~500 TOPS" },
+          "ai5": { "value": "4,000~5,000 TOPS", "displayValue": "4,000~5,000 TOPS", "highlight": "positive", "badge": "점프" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "전력", "displayValue": "전력" },
+          "hw3": { "value": "~100W", "displayValue": "~100W" },
+          "hw4": { "value": "~160W", "displayValue": "~160W" },
+          "ai5": { "value": "~800W", "displayValue": "~800W" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "핵심 의미", "displayValue": "핵심 의미" },
+          "hw3": { "value": "오토파일럿 전용 칩 내재화 시작", "displayValue": "칩 내재화 시작" },
+          "hw4": { "value": "End-to-End FSD 배포 기반", "displayValue": "FSD 14.x 기반", "highlight": "accent" },
+          "ai5": { "value": "로보택시·휴머노이드까지 염두에 둔 차세대 추론 칩", "displayValue": "Physical AI 칩", "highlight": "positive" }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "테슬라의 강점은 센서 한 개나 모델 한 개가 아니라, 칩과 데이터 루프와 소프트웨어 스택을 같은 회사가 묶어 간다는 데 있습니다.",
+    "keyTakeaways": [
+      "HW3에서 시작된 내재화는 HW4에서 End-to-End FSD로 연결됐습니다.",
+      "AI5는 자율주행을 넘어 로봇까지 고려한 Physical AI용 추론 칩 성격이 강합니다.",
+      "이 로드맵은 완성차 업체와 부품·칩 외부 조달형 경쟁사의 가장 큰 차별점입니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "144 -> 4,000+ TOPS"
+    }
+  }
+}

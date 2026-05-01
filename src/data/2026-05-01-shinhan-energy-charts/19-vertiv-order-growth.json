@@ -1,0 +1,188 @@
+{
+  "id": "19-vertiv-order-growth",
+  "sourceImage": "projects/2026-05-01-shinhan-energy-charts/input/pdf-pages/vertiv-3.png",
+  "analyzedAt": "2026-05-01T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "버티브 수주, 4Q25 +252%",
+    "subtitle": "수주 증가율, YoY",
+    "source": "신한투자증권, Bloomberg, LSEG, 회사 자료",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2Q21",
+        "2Q22",
+        "2Q23",
+        "2Q24",
+        "4Q25"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "수주 증가율",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "min": -80,
+      "max": 290,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "수주 증가율",
+        "originalColor": "#CF222E",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "수주 증가율",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2Q21",
+            "y": 75,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q22",
+            "y": 0,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q23",
+            "y": -26,
+            "confidence": 0.92
+          },
+          {
+            "x": "2Q24",
+            "y": 60,
+            "confidence": 0.92
+          },
+          {
+            "x": "4Q25",
+            "y": 252,
+            "confidence": 0.92
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 PDF의 일부 소형 그래프는 페이지 이미지 기반으로 간소화"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.82,
+      "description": "버티브의 하반기 실적 모멘텀은 4Q25 대규모 수주에서 출발한다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.8504155124653736,
+      "description": "핵심 방향만 보이도록 원본의 세부 시계열을 단순화했다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 236,
+        "absoluteChange": 177,
+        "from": 75,
+        "to": 252
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 252,
+        "at": "4Q25"
+      },
+      "min": {
+        "value": -26,
+        "at": "2Q23"
+      },
+      "average": 72.2,
+      "median": 60,
+      "range": 278
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "4Q25",
+          "y": 252
+        },
+        "seriesName": "수주 증가율",
+        "description": "4Q25에 최고치를 기록했다.",
+        "importance": "critical",
+        "reasoning": "리메이크 차트의 핵심 강조 지점이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "해당 없음"
+  },
+  "narrative": {
+    "headMessage": "수주가 다시 폭발했다",
+    "subMessage": "4Q25 수주 증가율은 +252%로 급등했다",
+    "headline": "버티브의 하반기 실적 모멘텀은 4Q25 대규모 수주에서 출발한다.",
+    "summary": "원본 그래프의 핵심 숫자인 4Q25 +252%를 중심으로 재구성했다.",
+    "story": "원본 그래프의 핵심 숫자인 4Q25 +252%를 중심으로 재구성했다.",
+    "keyTakeaways": [
+      "4Q25 수주 증가율 +252%",
+      "1Q26 수주는 미공개",
+      "수주 공개 정책 변화가 주가 변동성을 키울 수 있다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "큰 방향과 병목 지표를 우선 확인한다.",
+    "contextualNotes": [
+      "수치는 PDF 표와 페이지 그래프를 빠르게 재구성한 값이다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "4Q25",
+          "y": 252
+        },
+        "text": "최고치",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#CF222E",
+      "secondary": [],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "4Q25",
+        "y": 252
+      },
+      "reason": "버티브의 하반기 실적 모멘텀은 4Q25 대규모 수주에서 출발한다.",
+      "displayText": "수주가 다시 폭발했다"
+    }
+  }
+}

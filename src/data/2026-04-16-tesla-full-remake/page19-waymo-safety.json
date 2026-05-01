@@ -1,0 +1,145 @@
+{
+  "id": "page19-waymo-safety",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "웨이모는 이미 '사람보다 안전하다'는 공개 데이터를 쌓고 있다",
+    "subtitle": "백만 마일당 사고율 비교 재구성",
+    "source": "Waymo Safety Impact Data Hub, California Public Utilities Commission"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "사고 유형",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": 180
+      },
+      {
+        "key": "waymo",
+        "label": "Waymo",
+        "dataType": "text",
+        "width": 150
+      },
+      {
+        "key": "human",
+        "label": "인간 운전자",
+        "dataType": "text",
+        "width": 170
+      },
+      {
+        "key": "gap",
+        "label": "상대 비교",
+        "dataType": "text",
+        "width": 170
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "상해 사고",
+            "displayValue": "상해 사고"
+          },
+          "waymo": {
+            "value": "0.8",
+            "displayValue": "0.8",
+            "highlight": "positive"
+          },
+          "human": {
+            "value": "3.96",
+            "displayValue": "3.96"
+          },
+          "gap": {
+            "value": "-80%",
+            "displayValue": "인간 대비 -80%",
+            "highlight": "positive",
+            "badge": "우위"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "에어백 전개",
+            "displayValue": "에어백 전개"
+          },
+          "waymo": {
+            "value": "0.35",
+            "displayValue": "0.35",
+            "highlight": "positive"
+          },
+          "human": {
+            "value": "1.65",
+            "displayValue": "1.65"
+          },
+          "gap": {
+            "value": "-79%",
+            "displayValue": "인간 대비 -79%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "중대 상해 이상",
+            "displayValue": "중대 상해 이상"
+          },
+          "waymo": {
+            "value": "0.02",
+            "displayValue": "0.02",
+            "highlight": "positive"
+          },
+          "human": {
+            "value": "0.23",
+            "displayValue": "0.23"
+          },
+          "gap": {
+            "value": "-91%",
+            "displayValue": "인간 대비 -91%",
+            "highlight": "positive",
+            "badge": "핵심"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "경찰 보고 사고",
+            "displayValue": "경찰 보고 사고"
+          },
+          "waymo": {
+            "value": "2.1",
+            "displayValue": "2.1",
+            "highlight": "positive"
+          },
+          "human": {
+            "value": "4.68",
+            "displayValue": "4.68"
+          },
+          "gap": {
+            "value": "-55%",
+            "displayValue": "인간 대비 -55%",
+            "highlight": "accent"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "로보택시 가치의 첫 번째 진입장벽은 요금이 아니라 공개 가능한 안전 통계입니다.",
+    "keyTakeaways": [
+      "상해 사고, 에어백 전개, 중대 상해 이상, 경찰 보고 사고 모두에서 Waymo 수치가 더 낮습니다.",
+      "이 차이는 보험·규제·서비스 허가 구조를 바꾸는 근거가 됩니다.",
+      "테슬라는 결국 같은 수준의 공개 안전 레퍼런스를 쌓아야 멀티플을 재평가받을 수 있습니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "중대 상해 이상 -91%"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "sp500-eps-consensus",
+  "structure": {
+    "chartType": "combo",
+    "title": "8분기 연속 어닝 서프라이즈, 26년 성장 가속",
+    "subtitle": "분기별 전년동기 대비 EPS 성장률, %",
+    "source": "FactSet, 골드만삭스 글로벌투자리서치",
+    "timeRange": "2024-Q1 ~ 2026-Q4",
+    "xAxis": {
+      "label": "분기",
+      "type": "quarter"
+    },
+    "yAxis": {
+      "label": "EPS 성장률",
+      "unit": "%",
+      "min": 0,
+      "max": 25
+    },
+    "legend": [
+      {
+        "name": "컨센서스 예상",
+        "color": "#BBDEFB",
+        "originalColor": "#BBDEFB",
+        "style": "bar",
+        "role": "secondary"
+      },
+      {
+        "name": "실제 실적",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "dot",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "컨센서스 예상",
+        "chartType": "bar",
+        "data": [
+          { "x": "2024-Q1", "y": 1 },
+          { "x": "2024-Q2", "y": 9 },
+          { "x": "2024-Q3", "y": 3 },
+          { "x": "2024-Q4", "y": 9 },
+          { "x": "2025-Q1", "y": 7 },
+          { "x": "2025-Q2", "y": 4 },
+          { "x": "2025-Q3", "y": 6 },
+          { "x": "2025-Q4", "y": 7 },
+          { "x": "2026-Q1", "y": 12 },
+          { "x": "2026-Q2", "y": 18 },
+          { "x": "2026-Q3", "y": 20 },
+          { "x": "2026-Q4", "y": 19 }
+        ]
+      },
+      {
+        "name": "실제 실적",
+        "chartType": "dot",
+        "data": [
+          { "x": "2024-Q1", "y": 7 },
+          { "x": "2024-Q2", "y": 11 },
+          { "x": "2024-Q3", "y": 8 },
+          { "x": "2024-Q4", "y": 15 },
+          { "x": "2025-Q1", "y": 12 },
+          { "x": "2025-Q2", "y": 11 },
+          { "x": "2025-Q3", "y": 12 },
+          { "x": "2025-Q4", "y": 13 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-Q1",
+      "y": 12,
+      "displayText": "현재: 26Q1 예상 12%"
+    },
+    "annotations": [
+      {
+        "text": "최대 서프라이즈 +6%p",
+        "position": { "x": "2024-Q4", "y": 15 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "26년 성장 가속 전망",
+        "position": { "x": "2026-Q3", "y": 20 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "컨센서스 1% vs 실적 7%",
+        "position": { "x": "2024-Q1", "y": 7 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026-Q1",
+        "toX": "2026-Q4",
+        "color": "#E3F2FD",
+        "label": "전망 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2024-Q1", "y": 7 },
+        "to": { "x": "2025-Q4", "y": 13 },
+        "label": "실적 상승 추세",
+        "color": "#1A237E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "2024~2025년 전 분기에서 실적이 컨센서스를 상회하며 안정적 상승세. 2026년 컨센서스는 성장 가속을 반영해 12~20% 범위로 상향.",
+    "supportResistance": [
+      { "level": 7, "type": "support", "strength": "medium" },
+      { "level": 20, "type": "resistance", "strength": "high" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 1,
+      "max": 20,
+      "average": 10.3,
+      "latest": 12
+    },
+    "changeRates": [
+      { "period": "2024 평균 서프라이즈", "percentChange": 5.5 },
+      { "period": "2025 평균 서프라이즈", "percentChange": 5.5 },
+      { "period": "26Q3 컨센서스 vs 25Q3 실적", "percentChange": 66.7 }
+    ]
+  },
+  "narrative": {
+    "headline": "S&P 500 어닝, 8분기 연속 컨센서스 상회하며 26년 두 자릿수 성장 전망",
+    "keyTakeaways": [
+      "2024~2025년 전 분기에서 실적이 컨센서스를 상회, 평균 서프라이즈 +5.5%p",
+      "2024-Q4 최대 서프라이즈: 예상 9% → 실적 15% (+6%p)",
+      "2026년 컨센서스는 Q2 18%, Q3 20%로 성장 가속 전망",
+      "현재 분기(26Q1) 예상 12%, 직전 분기(25Q4) 실적 13% 수준 유지"
+    ],
+    "sentiment": "강세"
+  }
+}

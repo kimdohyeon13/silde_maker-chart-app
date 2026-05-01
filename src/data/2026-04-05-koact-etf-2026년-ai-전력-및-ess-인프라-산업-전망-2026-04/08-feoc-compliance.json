@@ -1,0 +1,126 @@
+{
+  "id": "feoc-compliance",
+  "structure": {
+    "chartType": "line",
+    "title": "FEOC 강화는 비중국 공급망에 구조적 기회",
+    "subtitle": "해외우려기관(FEOC)이 아닌 지역으로부터 조달해야 하는 의무 비율",
+    "source": "미국 의회(2025.07)",
+    "timeRange": "2026E~2030E 이후",
+    "xAxis": {
+      "label": "연도",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "의무 비율",
+      "unit": "%",
+      "min": 35,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "연료전지",
+        "originalColor": "#5BA0A0",
+        "role": "primary"
+      },
+      {
+        "name": "ESS",
+        "originalColor": "#5B8DEF",
+        "role": "primary"
+      },
+      {
+        "name": "배터리",
+        "originalColor": "#7E57C2",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연료전지",
+        "data": [
+          { "x": "2026E", "y": 40 },
+          { "x": "2027E", "y": 45 },
+          { "x": "2028E", "y": 50 },
+          { "x": "2029E", "y": 55 },
+          { "x": "2030E 이후", "y": 60 }
+        ]
+      },
+      {
+        "name": "ESS",
+        "data": [
+          { "x": "2026E", "y": 55 },
+          { "x": "2027E", "y": 60 },
+          { "x": "2028E", "y": 65 },
+          { "x": "2029E", "y": 70 },
+          { "x": "2030E 이후", "y": 75 }
+        ]
+      },
+      {
+        "name": "배터리",
+        "data": [
+          { "x": "2026E", "y": 60 },
+          { "x": "2027E", "y": 65 },
+          { "x": "2028E", "y": 70 },
+          { "x": "2029E", "y": 80 },
+          { "x": "2030E 이후", "y": 85 }
+        ]
+      }
+    ],
+    "totalDataPoints": 15
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2030E 이후",
+      "y": 75,
+      "displayText": "ESS 75%"
+    },
+    "annotations": [
+      {
+        "text": "2026년부터 규제 체감 본격화",
+        "position": { "x": "2026E", "y": 55 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "배터리는 85%까지 상향",
+        "position": { "x": "2030E 이후", "y": 85 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026E",
+        "toX": "2027E",
+        "color": "#FF6F61",
+        "label": "규제 강화 출발점"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "시간이 갈수록 중국 외 공급망 비중을 더 높여야 하므로, 미국향 ESS·연료전지에서 한국 업체의 상대적 경쟁력이 올라간다.",
+    "supportResistance": [
+      { "level": 55, "type": "support", "strength": "중간" },
+      { "level": 75, "type": "resistance", "strength": "강함" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 40,
+      "max": 85,
+      "average": 61.0,
+      "latest": 85
+    },
+    "changeRates": [
+      { "period": "ESS 2026E → 2030E 이후", "percentChange": 36.4 },
+      { "period": "연료전지 2026E → 2030E 이후", "percentChange": 50.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "FEOC 강화는 미국향 수출에서 '누가 비중국 공급망을 갖고 있느냐'를 더 중요하게 만듭니다.",
+    "summary": "연료전지, ESS, 배터리 모두 2026년 이후 FEOC 비해당 지역 조달 비율을 지속적으로 높여야 한다. ESS는 2026E 55%에서 2030E 이후 75%로 올라가며, 이는 한국 업체들의 미국향 납품 기회를 키우는 배경이 된다.",
+    "story": "이 규정은 단순한 정책 뉴스가 아니라, 실제 수주 흐름을 바꾸는 공급망 룰이다. 미국 고객 입장에서는 세액공제를 지키기 위해서라도 비중국 소재와 부품을 더 많이 써야 한다. 그래서 2026년 ESS와 연료전지 투자에서 중요한 질문은 '업황이 좋아지는가'뿐 아니라 '미국 규정을 통과할 공급망을 갖췄는가'가 된다."
+  }
+}

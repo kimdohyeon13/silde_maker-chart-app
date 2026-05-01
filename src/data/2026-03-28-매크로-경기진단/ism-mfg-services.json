@@ -1,0 +1,163 @@
+{
+  "id": "ism-mfg-services",
+  "structure": {
+    "chartType": "line",
+    "title": "ISM 제조·서비스 동반 반등, 체감 경기 빠른 회복",
+    "subtitle": "ISM 제조업·서비스업 지수, 중립=50 (2010~2026)",
+    "source": "LSEG",
+    "timeRange": "2010~2026",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "지수",
+      "unit": "",
+      "min": 40,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "ISM 제조업지수",
+        "color": "#5B9BD5",
+        "originalColor": "#5B9BD5",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "ISM 서비스업지수",
+        "color": "#A0A0A0",
+        "originalColor": "#A0A0A0",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "ISM 제조업지수",
+        "data": [
+          { "x": "2010", "y": 57 },
+          { "x": "2011", "y": 53 },
+          { "x": "2012", "y": 51 },
+          { "x": "2013", "y": 54 },
+          { "x": "2014", "y": 56 },
+          { "x": "2015", "y": 50 },
+          { "x": "2016", "y": 52 },
+          { "x": "2017", "y": 57 },
+          { "x": "2018", "y": 59 },
+          { "x": "2019", "y": 49 },
+          { "x": "2020", "y": 43 },
+          { "x": "2021", "y": 64 },
+          { "x": "2022", "y": 53 },
+          { "x": "2023", "y": 47 },
+          { "x": "2024", "y": 48 },
+          { "x": "2025", "y": 48 },
+          { "x": "2026", "y": 50 }
+        ]
+      },
+      {
+        "name": "ISM 서비스업지수",
+        "data": [
+          { "x": "2010", "y": 55 },
+          { "x": "2011", "y": 55 },
+          { "x": "2012", "y": 56 },
+          { "x": "2013", "y": 55 },
+          { "x": "2014", "y": 57 },
+          { "x": "2015", "y": 57 },
+          { "x": "2016", "y": 55 },
+          { "x": "2017", "y": 57 },
+          { "x": "2018", "y": 59 },
+          { "x": "2019", "y": 55 },
+          { "x": "2020", "y": 42 },
+          { "x": "2021", "y": 68 },
+          { "x": "2022", "y": 57 },
+          { "x": "2023", "y": 54 },
+          { "x": "2024", "y": 53 },
+          { "x": "2025", "y": 52 },
+          { "x": "2026", "y": 55 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026",
+      "y": 55,
+      "displayText": "서비스 55, 제조 50"
+    },
+    "annotations": [
+      {
+        "text": "제조업 50 회복",
+        "position": { "x": "2026", "y": 50 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "서비스업 55 반등",
+        "position": { "x": "2026", "y": 55 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "코로나 저점: 42~43",
+        "position": { "x": "2020", "y": 42 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "코로나 후 피크: 68",
+        "position": { "x": "2021", "y": 68 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "2010", "y": 50 },
+        "to": { "x": "2026", "y": 50 },
+        "label": "중립선 (50)",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "2020년 코로나 충격 이후 급반등했으나 2022년부터 둔화세를 보이다가, 2026년 들어 제조업·서비스업 모두 반등하며 동반 개선 흐름 진입",
+    "supportResistance": [
+      {
+        "level": 50,
+        "type": "support",
+        "strength": "strong"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 42,
+      "max": 68,
+      "average": 53.6,
+      "latest": 55
+    },
+    "changeRates": [
+      {
+        "period": "2025→2026 제조업",
+        "percentChange": 4.2
+      },
+      {
+        "period": "2025→2026 서비스업",
+        "percentChange": 5.8
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "2026년 들어 ISM 제조업 50 회복, 서비스업 55로 반등하며 체감 경기 동반 개선",
+    "keyTakeaways": [
+      "ISM 제조업지수가 2026년 50으로 회복하며 약 3년 만에 중립선 도달",
+      "ISM 서비스업지수도 55로 반등하여 확장 국면 재진입 확인",
+      "제조업·서비스업 동반 개선은 경기 연착륙 가능성을 시사"
+    ],
+    "sentiment": "bullish"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "id": "fed-rate-cut-repricing",
+  "structure": {
+    "chartType": "line",
+    "title": "6~9월 인하 기대, 매년 반복되는 패턴",
+    "subtitle": "금리인하 비율 (선도금리-실효금리)/현재금리, 월별",
+    "source": "Citi Research",
+    "timeRange": "Jan ~ Dec (연도별 비교)",
+    "xAxis": {
+      "label": "월",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "금리인하 비율",
+      "unit": "ratio",
+      "min": -0.32,
+      "max": 0.06
+    },
+    "legend": [
+      {
+        "name": "2024",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "line",
+        "role": "primary"
+      },
+      {
+        "name": "2025",
+        "color": "#90CAF9",
+        "originalColor": "#90CAF9",
+        "style": "line",
+        "role": "secondary"
+      },
+      {
+        "name": "6개월 선도 FF-현재 실효금리/현재금리 (2026)",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "line",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2024",
+        "data": [
+          { "x": "Jan", "y": -0.10 },
+          { "x": "Feb", "y": -0.08 },
+          { "x": "Mar", "y": -0.06 },
+          { "x": "Apr", "y": -0.05 },
+          { "x": "May", "y": -0.04 },
+          { "x": "Jun", "y": -0.10 },
+          { "x": "Jul", "y": -0.13 },
+          { "x": "Aug", "y": -0.26 },
+          { "x": "Sep", "y": -0.30 },
+          { "x": "Oct", "y": -0.18 },
+          { "x": "Nov", "y": -0.10 },
+          { "x": "Dec", "y": -0.10 }
+        ]
+      },
+      {
+        "name": "2025",
+        "data": [
+          { "x": "Jan", "y": -0.12 },
+          { "x": "Feb", "y": -0.08 },
+          { "x": "Mar", "y": -0.07 },
+          { "x": "Apr", "y": -0.05 },
+          { "x": "May", "y": -0.08 },
+          { "x": "Jun", "y": -0.12 },
+          { "x": "Jul", "y": -0.10 },
+          { "x": "Aug", "y": -0.08 },
+          { "x": "Sep", "y": -0.06 },
+          { "x": "Oct", "y": -0.10 },
+          { "x": "Nov", "y": -0.10 },
+          { "x": "Dec", "y": -0.08 }
+        ]
+      },
+      {
+        "name": "6개월 선도 FF-현재 실효금리/현재금리 (2026)",
+        "data": [
+          { "x": "Jan", "y": -0.06 },
+          { "x": "Feb", "y": -0.05 },
+          { "x": "Mar", "y": 0.02 },
+          { "x": "Apr", "y": -0.05 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "Apr",
+      "y": -0.05,
+      "displayText": "2026년 4월: -0.05"
+    },
+    "annotations": [
+      {
+        "text": "2024 최저: -0.30",
+        "position": { "x": "Sep", "y": -0.30 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "3월 일시 양전환",
+        "position": { "x": "Mar", "y": 0.02 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "현재: -0.05",
+        "position": { "x": "Apr", "y": -0.05 },
+        "importance": "critical",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "Jun",
+        "toX": "Jul",
+        "color": "#E3F2FD",
+        "label": "인하 리프라이싱 집중 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "Jan", "y": 0 },
+        "to": { "x": "Dec", "y": 0 },
+        "label": "기준선 (0)",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "매년 여름(6~9월) 금리인하 기대가 급등하는 계절적 패턴이 반복됨. 2024년은 9월 -0.30까지 급락 후 연말 회복. 2026년은 3월 양전환 후 4월 다시 하락하며 인하 기대 재점화.",
+    "supportResistance": [
+      { "level": 0, "type": "resistance", "strength": "strong" },
+      { "level": -0.30, "type": "support", "strength": "moderate" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -0.30,
+      "max": 0.02,
+      "average": -0.10,
+      "latest": -0.05
+    },
+    "changeRates": [
+      { "period": "2026 3월→4월", "percentChange": -350 },
+      { "period": "2024 5월→9월", "percentChange": -650 }
+    ]
+  },
+  "narrative": {
+    "headline": "금리인하 기대 매년 여름 급등, 2026년도 6월 전후 리프라이싱 주시 필요",
+    "keyTakeaways": [
+      "2024년 8~9월 급격한 인하 기대(-0.30)는 연말까지 해소, 올해도 유사 패턴 가능",
+      "2026년 3월 일시적 양전환(+0.02)은 관세 불확실성 영향으로 추정",
+      "6~7월은 매년 인하 리프라이싱이 집중되는 시기 — 포지셔닝 주의 구간"
+    ],
+    "sentiment": "cautious"
+  }
+}

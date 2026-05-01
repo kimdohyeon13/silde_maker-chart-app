@@ -1,0 +1,95 @@
+{
+  "id": "sp500-eps-oil-shocks",
+  "structure": {
+    "chartType": "bar",
+    "title": "유가 충격 후 EPS, 90년만 마이너스",
+    "subtitle": "원유 공급 충격 후 12개월간 S&P 500 EPS 성장률, %",
+    "source": "골드만삭스 글로벌투자리서치",
+    "xAxis": {
+      "label": "원유 공급 충격 이벤트",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "EPS 성장률",
+      "unit": "%",
+      "min": -20,
+      "max": 30
+    },
+    "legend": [
+      {
+        "name": "S&P 500 EPS 성장률",
+        "color": "#1A237E",
+        "originalColor": "#1A237E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P 500 EPS 성장률",
+        "data": [
+          { "x": "아랍 석유 금수조치 (1973)", "y": 8 },
+          { "x": "이란 혁명 (1979)", "y": 1 },
+          { "x": "이라크 쿠웨이트 침공 (1990)", "y": -15 },
+          { "x": "이라크 전쟁 (2003)", "y": 18 },
+          { "x": "러-우 전쟁 (2022)", "y": 1 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "이라크 쿠웨이트 침공 (1990)",
+      "y": -15,
+      "displayText": "쿠웨이트 침공: -15%"
+    },
+    "annotations": [
+      {
+        "text": "유일한 마이너스: -15%",
+        "position": { "x": "이라크 쿠웨이트 침공 (1990)", "y": -15 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "최대 성장: +18%",
+        "position": { "x": "이라크 전쟁 (2003)", "y": 18 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "아랍 석유 금수조치 (1973)", "y": 0 },
+        "to": { "x": "러-우 전쟁 (2022)", "y": 0 },
+        "label": "손익분기선",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "5개 주요 원유 공급 충격 중 4개에서 EPS 양수 성장 유지. 쿠웨이트 침공(1990)만 유일한 마이너스로, 직접적 군사 충돌에 의한 경기침체가 원인.",
+    "supportResistance": [
+      { "level": 0, "type": "support", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -15,
+      "max": 18,
+      "average": 2.6,
+      "latest": 1
+    },
+    "changeRates": []
+  },
+  "narrative": {
+    "headline": "원유 충격은 대부분 EPS에 타격 제한적, 쿠웨이트 침공만 예외",
+    "keyTakeaways": [
+      "5개 주요 원유 공급 충격 중 4개에서 S&P 500 EPS는 양수 성장 유지",
+      "유일한 마이너스는 이라크 쿠웨이트 침공(1990) -15%로, 직접 군사 충돌과 경기침체가 겹친 사례",
+      "이라크 전쟁(2003)은 오히려 +18% 최대 성장 기록 — 전쟁 자체보다 경기 사이클이 핵심",
+      "러-우 전쟁(2022)도 +1%로 양수 유지, 에너지 가격 급등에도 기업 실적 회복력 입증"
+    ],
+    "sentiment": "cautiously_optimistic"
+  }
+}

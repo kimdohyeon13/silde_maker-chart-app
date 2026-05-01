@@ -1,0 +1,155 @@
+{
+  "id": "compounding-gap",
+  "structure": {
+    "chartType": "line",
+    "title": "AI 투자 기업 매출 5배 격차 확대",
+    "subtitle": "Ramp 고객 매출 성장률, 2022년 11월 기준 인덱싱 (%)",
+    "source": "Ramp Economics Lab",
+    "timeRange": "2022-11 ~ 2025-06",
+    "xAxis": {
+      "label": "기간",
+      "type": "date"
+    },
+    "yAxis": {
+      "label": "매출 성장률",
+      "unit": "%",
+      "min": 0,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "AI 고강도 Ramp 고객",
+        "color": "#1B1B1B",
+        "originalColor": "#1B1B1B",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "미국 경제 (명목 GDP)",
+        "color": "#8B0000",
+        "originalColor": "#8B0000",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "AI 미지출 Ramp 고객",
+        "color": "#808080",
+        "originalColor": "#808080",
+        "style": "solid",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "AI 고강도 Ramp 고객",
+        "role": "primary",
+        "data": [
+          { "x": "2022-11", "y": 0 },
+          { "x": "2023-03", "y": 5 },
+          { "x": "2023-06", "y": 10 },
+          { "x": "2023-09", "y": 20 },
+          { "x": "2023-12", "y": 30 },
+          { "x": "2024-03", "y": 45 },
+          { "x": "2024-06", "y": 55 },
+          { "x": "2024-09", "y": 65 },
+          { "x": "2024-12", "y": 75 },
+          { "x": "2025-03", "y": 100 },
+          { "x": "2025-06", "y": 107 }
+        ]
+      },
+      {
+        "name": "미국 경제 (명목 GDP)",
+        "role": "secondary",
+        "data": [
+          { "x": "2022-11", "y": 0 },
+          { "x": "2023-03", "y": 3 },
+          { "x": "2023-06", "y": 5 },
+          { "x": "2023-09", "y": 8 },
+          { "x": "2023-12", "y": 10 },
+          { "x": "2024-03", "y": 12 },
+          { "x": "2024-06", "y": 13 },
+          { "x": "2024-09", "y": 14 },
+          { "x": "2024-12", "y": 15 },
+          { "x": "2025-03", "y": 18 },
+          { "x": "2025-06", "y": 20 }
+        ]
+      },
+      {
+        "name": "AI 미지출 Ramp 고객",
+        "role": "secondary",
+        "data": [
+          { "x": "2022-11", "y": 0 },
+          { "x": "2023-03", "y": 2 },
+          { "x": "2023-06", "y": 5 },
+          { "x": "2023-09", "y": 8 },
+          { "x": "2023-12", "y": 12 },
+          { "x": "2024-03", "y": 15 },
+          { "x": "2024-06", "y": 18 },
+          { "x": "2024-09", "y": 20 },
+          { "x": "2024-12", "y": 18 },
+          { "x": "2025-03", "y": 15 },
+          { "x": "2025-06", "y": 14 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2025-06",
+      "y": 107,
+      "displayText": "107%"
+    },
+    "annotations": [
+      {
+        "text": "AI 고강도 기업 107% 돌파",
+        "position": { "x": "2025-06", "y": 107 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "GDP 대비 5배 격차",
+        "position": { "x": "2025-06", "y": 20 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2024-09",
+        "toX": "2025-06",
+        "color": "rgba(27, 27, 27, 0.08)",
+        "label": "격차 급확대 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "AI 고강도 지출 기업은 2024년 하반기부터 기하급수적 성장 가속. 반면 AI 미지출 기업은 2024년 말부터 역성장 전환하며 격차가 복리로 확대되는 중.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 0,
+      "max": 107,
+      "average": 46.5,
+      "latest": 107
+    },
+    "changeRates": [
+      { "period": "2022-11 ~ 2025-06 (전체)", "percentChange": 107 },
+      { "period": "2024-12 ~ 2025-06 (최근 6개월)", "percentChange": 42.7 },
+      { "period": "AI 미지출 기업 최근 6개월", "percentChange": -22.2 },
+      { "period": "명목 GDP 최근 6개월", "percentChange": 33.3 }
+    ]
+  },
+  "narrative": {
+    "headline": "AI에 투자한 기업, 그렇지 않은 기업 대비 매출 성장 5배 차이",
+    "keyTakeaways": [
+      "AI 고강도 지출 기업은 2.5년간 매출 107% 성장, 같은 기간 GDP 성장(20%)의 5.4배",
+      "AI 미지출 기업은 2024년 말부터 역성장 전환 — 피크 20%에서 14%로 하락하며 경쟁력 약화 뚜렷",
+      "2025년 상반기 AI 고강도 기업이 6개월간 +32%p 추가 성장, 복리 효과가 본격화되는 구간"
+    ],
+    "sentiment": "강세"
+  }
+}

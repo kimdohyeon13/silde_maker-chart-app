@@ -1,0 +1,63 @@
+{
+  "id": "page25-fleet-loop",
+  "contentType": "infographic",
+  "structure": {
+    "title": "테슬라 FSD 플릿 루프의 핵심은 '문제 장면을 더 빨리 다시 학습하는 것'이다",
+    "subtitle": "실주행 데이터 -> 문제 인식 -> 라벨링 -> 재학습 -> OTA 배포 루프 재구성",
+    "source": "Tesla"
+  },
+  "infographicData": {
+    "subType": "timeline",
+    "direction": "vertical",
+    "events": [
+      {
+        "date": "Step 1",
+        "title": "실주행 데이터 수집",
+        "description": "플릿 차량이 실제 도로 데이터를 계속 쌓습니다.",
+        "importance": "high",
+        "category": "수집"
+      },
+      {
+        "date": "Step 2",
+        "title": "문제 장면 감지",
+        "description": "실패하거나 애매했던 장면을 자동으로 모읍니다.",
+        "importance": "critical",
+        "category": "선별"
+      },
+      {
+        "date": "Step 3",
+        "title": "라벨링·정제",
+        "description": "학습 가능한 형태로 데이터를 다시 정리합니다.",
+        "importance": "medium",
+        "category": "가공"
+      },
+      {
+        "date": "Step 4",
+        "title": "모델 재학습",
+        "description": "선별된 사례를 반영해 정책 모델을 업데이트합니다.",
+        "importance": "high",
+        "category": "학습"
+      },
+      {
+        "date": "Step 5",
+        "title": "OTA 배포와 성능 부스트",
+        "description": "업데이트를 차량에 배포하고 다시 플릿에서 검증합니다.",
+        "importance": "critical",
+        "category": "배포"
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "플릿 루프가 강한 회사는 단일 모델 성능보다 '고치는 속도'에서 격차를 벌릴 수 있습니다.",
+    "keyTakeaways": [
+      "플릿은 단순 주행 데이터 저장소가 아니라, 실패 사례를 학습 자산으로 바꾸는 장치입니다.",
+      "데이터 선별과 재학습 속도가 빨라질수록 End-to-End 전략의 장점이 커집니다.",
+      "결국 FSD 경쟁은 모델 버전 숫자보다 학습 루프의 회전수가 좌우할 수 있습니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "문제 장면 -> OTA 개선"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "03-meta",
+  "sourceImage": "projects/2026-04-30-company-valuation-cards/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "Meta 밸류에이션",
+    "subtitle": "현재가·목표가·성장률·52주 고점 위치를 기업별로 정리",
+    "source": "사용자 제공 이미지, 표 수치 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "지표", "dataType": "text", "isRowHeader": true, "width": "28%" },
+      { "key": "value", "label": "수치", "dataType": "text", "align": "right", "width": "28%" },
+      { "key": "read", "label": "해석", "dataType": "text", "align": "left", "width": "44%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "현재가" },
+          "value": { "value": "$669.12" },
+          "read": { "value": "고점까지 아직 여지가 남아 있음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "애널리스트 목표가" },
+          "value": { "value": "$855.11" },
+          "read": { "value": "목표가는 52주 고점을 상회" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "목표가 대비 상승여력" },
+          "value": { "value": "+27.8%" },
+          "read": { "value": "Microsoft 다음으로 높음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "Forward P/E" },
+          "value": { "value": "22.6배", "highlight": "accent" },
+          "read": { "value": "4개사 중 가장 낮음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "EPS 성장 예상" },
+          "value": { "value": "26.6%", "highlight": "positive" },
+          "read": { "value": "4개사 중 가장 높음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "52주 고점" },
+          "value": { "value": "$796.25" },
+          "read": { "value": "목표가가 고점보다 높게 제시됨" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "고점 대비 현재가" },
+          "value": { "value": "84.0% / -16.0%" },
+          "read": { "value": "고점 회복 여지가 남아 있음" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Meta는 성장 효율이 좋다",
+    "subMessage": "EPS 성장률 26.6%, P/E 22.6배가 같이 보인다",
+    "headline": "Meta는 높은 EPS 성장률과 낮은 Forward P/E가 동시에 보이는 종목이다.",
+    "summary": "Meta는 EPS 성장 예상 26.6%로 4개사 중 가장 높고, Forward P/E는 22.6배로 가장 낮다. 목표가 대비 상승여력도 +27.8%로 높다.",
+    "story": "Meta는 단순 상승여력보다 성장 대비 밸류에이션 효율이 가장 명확하게 드러난다.",
+    "keyTakeaways": [
+      "EPS 성장 예상은 26.6%로 가장 높다.",
+      "Forward P/E는 22.6배로 가장 낮다.",
+      "목표가 대비 상승여력은 +27.8%다."
+    ],
+    "questionsRaised": ["높은 EPS 성장률이 실제 실적에서 유지되는가?"],
+    "viewerAction": "Meta는 성장률과 P/E를 함께 보며 효율성을 판단한다.",
+    "contextualNotes": ["수치는 첨부 이미지의 원본 표를 사용했다."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "EPS 26.6%, P/E 22.6배", "reason": "성장률은 높고 밸류에이션은 낮음" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 4, "col": "value", "reason": "EPS 성장률 1위" },
+      { "row": 3, "col": "value", "reason": "가장 낮은 Forward P/E" }
+    ]
+  }
+}

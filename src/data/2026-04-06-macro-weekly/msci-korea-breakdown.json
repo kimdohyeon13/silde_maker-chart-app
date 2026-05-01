@@ -1,0 +1,206 @@
+{
+  "id": "msci-korea-breakdown",
+  "structure": {
+    "chartType": "combo",
+    "title": "이익 상향에도 PE 압축·원화 약세로 급락",
+    "subtitle": "MSCI Korea 1년 성과 분해, USD 기준 %",
+    "source": "FactSet, MSCI, I/B/E/S, 골드만삭스 글로벌투자리서치",
+    "timeRange": "2025-03 ~ 2026-03",
+    "xAxis": {
+      "label": "월",
+      "type": "month"
+    },
+    "yAxis": {
+      "label": "기여도",
+      "unit": "%",
+      "min": -50,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "환율 영향",
+        "color": "#FFFFFF",
+        "originalColor": "#FFFFFF",
+        "style": "bar",
+        "role": "secondary"
+      },
+      {
+        "name": "선행 PE 변화",
+        "color": "#BDBDBD",
+        "originalColor": "#BDBDBD",
+        "style": "bar",
+        "role": "secondary"
+      },
+      {
+        "name": "선행 EPS 변화",
+        "color": "#1A237E",
+        "originalColor": "#1A237E",
+        "style": "bar",
+        "role": "primary"
+      },
+      {
+        "name": "주가 수익률 USD",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "diamond",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "환율 영향",
+        "chartType": "bar",
+        "stackGroup": "decomposition",
+        "data": [
+          { "x": "2025-03", "y": 1 },
+          { "x": "2025-04", "y": -1 },
+          { "x": "2025-05", "y": 2 },
+          { "x": "2025-06", "y": 3 },
+          { "x": "2025-07", "y": 1 },
+          { "x": "2025-08", "y": -2 },
+          { "x": "2025-09", "y": 3 },
+          { "x": "2025-10", "y": 5 },
+          { "x": "2025-11", "y": -3 },
+          { "x": "2025-12", "y": 2 },
+          { "x": "2026-01", "y": 5 },
+          { "x": "2026-02", "y": 3 },
+          { "x": "2026-03", "y": -5 }
+        ]
+      },
+      {
+        "name": "선행 PE 변화",
+        "chartType": "bar",
+        "stackGroup": "decomposition",
+        "data": [
+          { "x": "2025-03", "y": -2 },
+          { "x": "2025-04", "y": 3 },
+          { "x": "2025-05", "y": 2 },
+          { "x": "2025-06", "y": 8 },
+          { "x": "2025-07", "y": 2 },
+          { "x": "2025-08", "y": -5 },
+          { "x": "2025-09", "y": 3 },
+          { "x": "2025-10", "y": 15 },
+          { "x": "2025-11", "y": -10 },
+          { "x": "2025-12", "y": 7 },
+          { "x": "2026-01", "y": 25 },
+          { "x": "2026-02", "y": 15 },
+          { "x": "2026-03", "y": -40 }
+        ]
+      },
+      {
+        "name": "선행 EPS 변화",
+        "chartType": "bar",
+        "stackGroup": "decomposition",
+        "data": [
+          { "x": "2025-03", "y": 2 },
+          { "x": "2025-04", "y": 5 },
+          { "x": "2025-05", "y": 5 },
+          { "x": "2025-06", "y": 10 },
+          { "x": "2025-07", "y": 5 },
+          { "x": "2025-08", "y": 3 },
+          { "x": "2025-09", "y": 5 },
+          { "x": "2025-10", "y": 5 },
+          { "x": "2025-11", "y": 8 },
+          { "x": "2025-12", "y": 5 },
+          { "x": "2026-01", "y": 8 },
+          { "x": "2026-02", "y": 5 },
+          { "x": "2026-03", "y": 15 }
+        ]
+      },
+      {
+        "name": "주가 수익률 USD",
+        "chartType": "diamond",
+        "data": [
+          { "x": "2025-03", "y": -1 },
+          { "x": "2025-04", "y": 5 },
+          { "x": "2025-05", "y": 6 },
+          { "x": "2025-06", "y": 20 },
+          { "x": "2025-07", "y": 5 },
+          { "x": "2025-08", "y": -3 },
+          { "x": "2025-09", "y": 10 },
+          { "x": "2025-10", "y": 25 },
+          { "x": "2025-11", "y": -12 },
+          { "x": "2025-12", "y": 10 },
+          { "x": "2026-01", "y": 25 },
+          { "x": "2026-02", "y": 20 },
+          { "x": "2026-03", "y": -30 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-03",
+      "y": -30,
+      "displayText": "현재: 주가 -30% (3월)"
+    },
+    "annotations": [
+      {
+        "text": "PE -40% 밸류에이션 압축",
+        "position": { "x": "2026-03", "y": -40 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "EPS+PE 동반 상승기",
+        "position": { "x": "2026-01", "y": 25 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "PE 리레이팅 피크",
+        "position": { "x": "2025-10", "y": 15 },
+        "importance": "medium",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025-10",
+        "toX": "2026-01",
+        "color": "rgba(26, 35, 126, 0.08)",
+        "label": "PE 확장기"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2025-03", "y": 0 },
+        "to": { "x": "2026-03", "y": 0 },
+        "label": "기준선",
+        "color": "#9E9E9E"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "EPS는 꾸준히 양(+)의 기여를 유지했으나, PE가 1월 +25%에서 3월 -40%로 급반전하며 주가를 끌어내림. 환율(FX)도 3월 -5%로 추가 악재 작용.",
+    "supportResistance": [
+      { "level": 0, "type": "support", "strength": "기준선" },
+      { "level": 25, "type": "resistance", "strength": "1월 주가 수익률 고점" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -40,
+      "max": 25,
+      "average": 1.5,
+      "latest": -30
+    },
+    "changeRates": [
+      { "period": "3월 PE 변화", "percentChange": -40 },
+      { "period": "3월 주가 수익률", "percentChange": -30 },
+      { "period": "3월 EPS 변화", "percentChange": 15 }
+    ]
+  },
+  "narrative": {
+    "headline": "이익(EPS) 상향 지속에도 밸류에이션 급락과 원화 약세가 3월 -30% 하락 주도",
+    "keyTakeaways": [
+      "선행 EPS 변화는 13개월 연속 양(+)의 기여, 이익 모멘텀은 건재",
+      "3월 PE -40%는 1년 중 가장 극심한 밸류에이션 압축으로 하락의 주범",
+      "1월까지 PE 확장(+25%)이 주가를 끌어올렸으나 2~3월 급반전",
+      "환율 영향도 3월 -5%로 악화, EPS 상향(+15%)을 상쇄하고도 남음"
+    ],
+    "sentiment": "bearish"
+  }
+}

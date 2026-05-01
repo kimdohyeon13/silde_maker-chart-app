@@ -1,0 +1,149 @@
+{
+  "id": "dram-market-share",
+  "structure": {
+    "chartType": "line",
+    "title": "삼성 DRAM 1위 탈환, 기타 업체 급부상",
+    "subtitle": "글로벌 DRAM 매출 기준 시장점유율 (%, 분기별)",
+    "source": "Omdia, 언론종합",
+    "timeRange": "2024-Q4 ~ 2025-Q4",
+    "xAxis": {
+      "label": "분기",
+      "type": "quarter"
+    },
+    "yAxis": {
+      "label": "시장점유율",
+      "unit": "%",
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "삼성전자",
+        "color": "#E65100",
+        "originalColor": "#E65100",
+        "role": "primary"
+      },
+      {
+        "name": "SK하이닉스",
+        "color": "#FF8A65",
+        "originalColor": "#FF8A65",
+        "role": "secondary"
+      },
+      {
+        "name": "Micron",
+        "color": "#FFB74D",
+        "originalColor": "#FFB74D",
+        "role": "secondary"
+      },
+      {
+        "name": "기타",
+        "color": "#BDBDBD",
+        "originalColor": "#BDBDBD",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "삼성전자",
+        "data": [
+          { "x": "2024-Q4", "y": 38 },
+          { "x": "2025-Q1", "y": 35 },
+          { "x": "2025-Q2", "y": 34 },
+          { "x": "2025-Q3", "y": 34.5 },
+          { "x": "2025-Q4", "y": 37.5 }
+        ]
+      },
+      {
+        "name": "SK하이닉스",
+        "data": [
+          { "x": "2024-Q4", "y": 37 },
+          { "x": "2025-Q1", "y": 36 },
+          { "x": "2025-Q2", "y": 39 },
+          { "x": "2025-Q3", "y": 34 },
+          { "x": "2025-Q4", "y": 33.5 }
+        ]
+      },
+      {
+        "name": "Micron",
+        "data": [
+          { "x": "2024-Q4", "y": 22.5 },
+          { "x": "2025-Q1", "y": 25 },
+          { "x": "2025-Q2", "y": 23 },
+          { "x": "2025-Q3", "y": 25.5 },
+          { "x": "2025-Q4", "y": 23 }
+        ]
+      },
+      {
+        "name": "기타",
+        "data": [
+          { "x": "2024-Q4", "y": 3 },
+          { "x": "2025-Q1", "y": 3.5 },
+          { "x": "2025-Q2", "y": 4 },
+          { "x": "2025-Q3", "y": 5.5 },
+          { "x": "2025-Q4", "y": 7.5 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2025-Q4",
+      "y": 37.5,
+      "displayText": "삼성 37.5%, 1위 복귀"
+    },
+    "annotations": [
+      {
+        "text": "삼성 37.5%, 1위 탈환",
+        "position": { "x": "2025-Q4", "y": 37.5 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "SK하이닉스 일시 1위",
+        "position": { "x": "2025-Q2", "y": 39 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "기타 7.5%, 2.5배 성장",
+        "position": { "x": "2025-Q4", "y": 7.5 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "삼성전자가 2025년 상반기 점유율 하락 후 하반기 V자 회복으로 1위를 탈환했다. SK하이닉스는 2Q25에 일시적 1위를 기록했으나 이후 하락세로 전환되었다. 기타 업체(중국 등)는 4분기 연속 점유율을 확대하며 7.5%까지 성장했다.",
+    "supportResistance": [
+      { "level": 34, "type": "support", "strength": "중간" },
+      { "level": 39, "type": "resistance", "strength": "강함" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 3,
+      "max": 39,
+      "average": 23.1,
+      "latest": 37.5
+    },
+    "changeRates": [
+      { "period": "삼성 4Q24→4Q25", "percentChange": -1.3 },
+      { "period": "SK하이닉스 4Q24→4Q25", "percentChange": -9.5 },
+      { "period": "기타 4Q24→4Q25", "percentChange": 150 }
+    ]
+  },
+  "narrative": {
+    "headline": "삼성전자, HBM 투자 효과로 하반기 DRAM 점유율 반등에 성공",
+    "keyTakeaways": [
+      "삼성전자는 2025년 상반기 34%까지 하락했으나 4Q25에 37.5%로 1위를 탈환",
+      "SK하이닉스는 2Q25에 39%로 일시적 1위를 차지했으나 이후 하락세 전환",
+      "기타 업체(중국 CXMT 등)가 3%에서 7.5%로 2.5배 급성장하며 시장 판도 변화 예고",
+      "Micron은 22~25% 구간에서 횡보하며 안정적 3위 유지"
+    ],
+    "sentiment": "cautiously_optimistic"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "datacenter-capacity",
+  "structure": {
+    "chartType": "bar",
+    "title": "AI 데이터센터 2027년 31GW 피크 전망",
+    "subtitle": "전력 용량 기준 (GW), 발표+건설+운영 합산",
+    "source": "업계 종합, 데이터센터 추적 보고서",
+    "timeRange": "2018 ~ 2032",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "전력 용량",
+      "unit": "GW",
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "전력 용량",
+        "color": "#3F51B5",
+        "originalColor": "#D4B896",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전력 용량",
+        "data": [
+          { "x": "2018", "y": 0.1 },
+          { "x": "2021", "y": 0.2 },
+          { "x": "2022", "y": 0.3 },
+          { "x": "2023", "y": 1.2 },
+          { "x": "2024", "y": 4.6 },
+          { "x": "2025", "y": 5.8 },
+          { "x": "2026", "y": 16.2 },
+          { "x": "2027", "y": 31.2 },
+          { "x": "2028", "y": 26.3 },
+          { "x": "2029", "y": 4.6 },
+          { "x": "2030", "y": 6.7 },
+          { "x": "2032", "y": 16.0 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2027",
+      "y": 31.2,
+      "displayText": "2027년 피크: 31.2 GW"
+    },
+    "annotations": [
+      {
+        "text": "피크 31.2 GW",
+        "position": { "x": "2027", "y": 31.2 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "현재 5.8 GW",
+        "position": { "x": "2025", "y": 5.8 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "3배 증가",
+        "position": { "x": "2026", "y": 16.2 },
+        "importance": "high",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026",
+        "toX": "2028",
+        "color": "#3F51B5",
+        "label": "건설 폭증 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "AI 데이터센터 전력 용량은 2023년부터 급증하기 시작하여 2027년 31.2 GW로 피크를 형성할 전망. 2025년 대비 2026년 약 3배 증가. 2028년 이후는 발표 단계 프로젝트 위주로 실행 불확실성 존재.",
+    "supportResistance": [
+      { "level": 5.8, "type": "support", "strength": "strong" },
+      { "level": 31.2, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.1,
+      "max": 31.2,
+      "average": 9.4,
+      "latest": 16.0
+    },
+    "changeRates": [
+      { "period": "2025→2026", "percentChange": 179.3 },
+      { "period": "2026→2027", "percentChange": 92.6 },
+      { "period": "2027→2028", "percentChange": -15.7 }
+    ]
+  },
+  "narrative": {
+    "headline": "AI 인프라 투자 2027년 정점, 건설+운영 19GW로 실질 용량 급팽창",
+    "keyTakeaways": [
+      "2027년 총 전력 용량 31.2 GW로 역대 최대치 전망, 2025년(5.8 GW) 대비 5.4배",
+      "2026~2027년 건설 중 비중이 급증하며 실질적 인프라 확장 본격화",
+      "2028년 이후 발표 상태 비중이 절대적으로 높아 실행 리스크 존재"
+    ],
+    "sentiment": "bullish"
+  }
+}

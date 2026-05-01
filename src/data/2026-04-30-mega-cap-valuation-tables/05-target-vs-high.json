@@ -1,0 +1,99 @@
+{
+  "id": "05-target-vs-high",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-tables/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "목표가는 모두 고점 위",
+    "subtitle": "애널리스트 목표가가 52주 고점을 얼마나 넘어서는지 비교",
+    "source": "사용자 제공 이미지 기반 계산"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "company", "label": "기업", "dataType": "text", "isRowHeader": true, "width": "20%" },
+      { "key": "target", "label": "목표가", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "high", "label": "고점", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "targetPremium", "label": "목표가/고점", "dataType": "percent", "align": "right" },
+      { "key": "gapDollar", "label": "고점 초과", "dataType": "currency", "align": "right", "unit": "$" },
+      { "key": "read", "label": "의미", "dataType": "text", "align": "left", "width": "24%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "company": { "value": "Meta" },
+          "target": { "value": 855.11, "displayValue": "$855.11" },
+          "high": { "value": 796.25, "displayValue": "$796.25" },
+          "targetPremium": { "value": 107.4, "displayValue": "107.4%", "highlight": "positive", "badge": "최대" },
+          "gapDollar": { "value": 58.86, "displayValue": "+$58.86" },
+          "read": { "value": "돌파 기대 최대" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Amazon" },
+          "target": { "value": 283.98, "displayValue": "$283.98" },
+          "high": { "value": 265.91, "displayValue": "$265.91" },
+          "targetPremium": { "value": 106.8, "displayValue": "106.8%" },
+          "gapDollar": { "value": 18.07, "displayValue": "+$18.07" },
+          "read": { "value": "현재도 고점권" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Alphabet" },
+          "target": { "value": 378.5, "displayValue": "$378.50" },
+          "high": { "value": 355.79, "displayValue": "$355.79" },
+          "targetPremium": { "value": 106.4, "displayValue": "106.4%" },
+          "gapDollar": { "value": 22.71, "displayValue": "+$22.71" },
+          "read": { "value": "소폭 돌파" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Microsoft" },
+          "target": { "value": 570.72, "displayValue": "$570.72" },
+          "high": { "value": 555.45, "displayValue": "$555.45" },
+          "targetPremium": { "value": 102.7, "displayValue": "102.7%" },
+          "gapDollar": { "value": 15.27, "displayValue": "+$15.27" },
+          "read": { "value": "회복 우선" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "목표가는 고점을 넘는다",
+    "subMessage": "다만 MS는 고점 회복 자체가 먼저 과제다",
+    "headline": "네 종목 모두 애널리스트 목표가가 52주 고점을 웃돈다.",
+    "summary": "Meta의 목표가는 52주 고점 대비 107.4%로 가장 높다. Microsoft는 현재가 대비 상승여력은 크지만 목표가가 고점을 넘는 폭은 2.7%로 작다.",
+    "story": "목표가를 52주 고점과 비교하면 애널리스트가 단순 회복을 보는지, 새로운 고점 돌파를 보는지 구분할 수 있다. 이 표에서는 네 종목 모두 목표가가 고점 위에 있다.",
+    "keyTakeaways": [
+      "Meta는 고점 대비 목표가 프리미엄이 가장 높다.",
+      "Amazon과 Alphabet도 목표가가 고점보다 6% 이상 높다.",
+      "Microsoft는 상승여력은 크지만 고점 초과폭은 가장 작다."
+    ],
+    "questionsRaised": ["목표가가 고점 위라면 새로운 실적 촉매가 충분한가?"],
+    "viewerAction": "목표가가 고점 회복만 의미하는지, 고점 돌파까지 의미하는지 분리해서 본다.",
+    "contextualNotes": ["목표가/고점 = 애널리스트 목표가를 52주 고점으로 나눈 값이다."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "Meta 107.4%", "reason": "목표가가 52주 고점을 가장 크게 상회" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "targetPremium", "reason": "고점 대비 목표가 프리미엄 최대" }
+    ]
+  }
+}

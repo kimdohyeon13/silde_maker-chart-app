@@ -1,0 +1,98 @@
+{
+  "id": "supplementary-budget-scale",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "26.2조 추경, 코로나급 부양의 재등장",
+    "subtitle": "연도별 주요 추경안 지출총액 비교 (조원)",
+    "source": "국회예산처, DS투자증권 리서치센터",
+    "xAxis": {
+      "label": "회차",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "지출총액",
+      "unit": "조원",
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "지출총액",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "지출총액",
+        "data": [
+          { "x": "2022 2차", "y": 55.2, "color": "#FF6F61" },
+          { "x": "2021 2차", "y": 32.0, "color": "#6667AB" },
+          { "x": "2020 3차", "y": 27.2, "color": "#6667AB" },
+          { "x": "2026 1차", "y": 26.2, "color": "#0F4C81" },
+          { "x": "2022 1차", "y": 16.6, "color": "#939597" },
+          { "x": "2021 1차", "y": 14.9, "color": "#939597" },
+          { "x": "2020 1차", "y": 14.1, "color": "#939597" },
+          { "x": "2020 2차", "y": 8.0, "color": "#939597" },
+          { "x": "2020 4차", "y": 7.77, "color": "#939597" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026 1차",
+      "y": 26.2,
+      "displayText": "2026년 26.2조"
+    },
+    "annotations": [
+      {
+        "text": "역대 최대 55.2조",
+        "position": { "x": "2022 2차", "y": 55.2 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "코로나급 규모",
+        "position": { "x": "2026 1차", "y": 26.2 },
+        "importance": "critical",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2026년 1차 추경 26.2조원은 팬데믹기의 초대형 추경 바로 아래 단계에 놓이는 규모다. 보고서는 직접 지출뿐 아니라 세액공제와 정책펀드가 결합될 때 총수요 자극이 더 커질 수 있다고 본다.",
+    "supportResistance": [
+      { "level": 26.2, "type": "support", "strength": "strong" },
+      { "level": 55.2, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 7.77,
+      "max": 55.2,
+      "average": 22.0,
+      "latest": 26.2
+    },
+    "changeRates": [
+      { "period": "2026 1차 vs 2020 1차", "percentChange": 85.8 },
+      { "period": "2026 1차 vs 2021 1차", "percentChange": 75.8 }
+    ]
+  },
+  "narrative": {
+    "headline": "이번 추경은 단순한 경기 방어가 아니라, 코로나 시기와 비교해야 할 정도의 총수요 이벤트로 읽힙니다.",
+    "keyTakeaways": [
+      "2026년 1차 추경 26.2조원은 2020년 3차 추경 27.2조원과 거의 비슷한 크기입니다.",
+      "보고서는 세액공제와 정책펀드가 붙으면 체감 부양 효과가 표면 지출보다 더 커질 수 있다고 봅니다.",
+      "중앙은행이 물가 우려에 반응하기 시작하면 국채 금리에도 부정적 영향이 재현될 수 있습니다."
+    ],
+    "sentiment": "cautious-negative"
+  }
+}

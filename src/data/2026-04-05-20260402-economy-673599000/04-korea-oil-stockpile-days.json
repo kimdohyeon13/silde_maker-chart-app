@@ -1,0 +1,108 @@
+{
+  "id": "korea-oil-stockpile-days",
+  "structure": {
+    "chartType": "combo",
+    "title": "한국 비축일수 70.2일→61.5일, 완충 여력 감소",
+    "subtitle": "정부 비축량·민간 재고량·비축일수 추이 (2020~2026.03)",
+    "source": "한국석유공사, DS투자증권 리서치센터",
+    "timeRange": "2020 ~ 2026.03",
+    "xAxis": { "label": "연도", "type": "category" },
+    "yAxis": { "label": "비축량", "unit": "백만배럴", "min": 70, "max": 110 },
+    "secondaryYAxis": { "label": "비축일수", "unit": "일", "min": 58, "max": 72 },
+    "legend": [
+      { "name": "정부 비축량", "color": "#0F4C81", "originalColor": "#0F4C81", "style": "line", "role": "primary" },
+      { "name": "민간 재고량", "color": "#FF6F61", "originalColor": "#FF6F61", "style": "line", "role": "primary" },
+      { "name": "비축일수", "color": "#939597", "originalColor": "#939597", "style": "bar", "role": "secondary" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "정부 비축량",
+        "data": [
+          { "x": "2020", "y": 96.9 },
+          { "x": "2021", "y": 97.5 },
+          { "x": "2022", "y": 96.6 },
+          { "x": "2023", "y": 96.9 },
+          { "x": "2024", "y": 99.5 },
+          { "x": "2025", "y": 100.2 },
+          { "x": "2026.03", "y": 77.5 }
+        ]
+      },
+      {
+        "name": "민간 재고량",
+        "data": [
+          { "x": "2020", "y": 92.1 },
+          { "x": "2021", "y": 94.2 },
+          { "x": "2022", "y": 91.5 },
+          { "x": "2023", "y": 93.8 },
+          { "x": "2024", "y": 95.0 },
+          { "x": "2025", "y": 96.3 },
+          { "x": "2026.03", "y": 94.8 }
+        ]
+      },
+      {
+        "name": "비축일수",
+        "data": [
+          { "x": "2020", "y": 67.5 },
+          { "x": "2021", "y": 68.5 },
+          { "x": "2022", "y": 67.2 },
+          { "x": "2023", "y": 68.1 },
+          { "x": "2024", "y": 69.5 },
+          { "x": "2025", "y": 70.2 },
+          { "x": "2026.03", "y": 61.5 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026.03",
+      "y": 61.5,
+      "displayText": "현재 61.5일"
+    },
+    "annotations": [
+      {
+        "text": "최고 70.2일",
+        "position": { "x": "2025", "y": 70.2 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "61.5일로 급감",
+        "position": { "x": "2026.03", "y": 61.5 },
+        "importance": "critical",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2020~2025년에는 비축일수가 67~70일 범위에서 비교적 안정적이었지만, 2026년 3월에는 정부 비축량 감소가 겹치며 61.5일로 크게 낮아졌다.",
+    "supportResistance": [
+      { "level": 61.5, "type": "support", "strength": "strong" },
+      { "level": 70.2, "type": "resistance", "strength": "moderate" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 61.5,
+      "max": 70.2,
+      "average": 67.5,
+      "latest": 61.5
+    },
+    "changeRates": [
+      { "period": "2025→2026.03", "percentChange": -12.4 }
+    ]
+  },
+  "narrative": {
+    "headline": "한국은 재고가 있다는 안도감보다, 비축일수가 60일대 초반까지 내려왔다는 사실을 더 봐야 합니다.",
+    "keyTakeaways": [
+      "정부 비축량은 2025년 100.2에서 2026년 3월 77.5로 크게 줄었습니다.",
+      "민간 재고량은 상대적으로 버티고 있지만, 전체 비축일수는 70.2일에서 61.5일로 후퇴했습니다.",
+      "보고서는 이런 완충 여력 저하가 한국의 공급 제약과 물가 상방 압력을 키울 수 있다고 봅니다."
+    ],
+    "sentiment": "cautious"
+  }
+}

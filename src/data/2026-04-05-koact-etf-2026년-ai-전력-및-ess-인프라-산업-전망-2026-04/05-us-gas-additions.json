@@ -1,0 +1,125 @@
+{
+  "id": "us-gas-additions",
+  "structure": {
+    "chartType": "line",
+    "title": "가스 발전 준공은 결국 늘지만, 본격화 시점은 2028년",
+    "subtitle": "미국 연도별 천연가스·원자력 신규 설치량 추이 및 전망",
+    "source": "US EIA Short-Term Energy Outlook(2025.10)",
+    "timeRange": "2017~2028E",
+    "xAxis": {
+      "label": "연도",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "신규 설치량",
+      "unit": "GW",
+      "min": 0,
+      "max": 25
+    },
+    "legend": [
+      {
+        "name": "천연가스",
+        "originalColor": "#FFB020",
+        "role": "primary"
+      },
+      {
+        "name": "원자력",
+        "originalColor": "#2F80ED",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "천연가스",
+        "data": [
+          { "x": "2017", "y": 10.8 },
+          { "x": "2018", "y": 21.7 },
+          { "x": "2019", "y": 8.4 },
+          { "x": "2020", "y": 7.1 },
+          { "x": "2021", "y": 7.4 },
+          { "x": "2022", "y": 7.0 },
+          { "x": "2023", "y": 9.9 },
+          { "x": "2024", "y": 2.6 },
+          { "x": "2025E", "y": 5.6 },
+          { "x": "2026E", "y": 6.7 },
+          { "x": "2027E", "y": 6.7 },
+          { "x": "2028E", "y": 14.7 }
+        ]
+      },
+      {
+        "name": "원자력",
+        "data": [
+          { "x": "2017", "y": 0.0 },
+          { "x": "2018", "y": 0.0 },
+          { "x": "2019", "y": 0.0 },
+          { "x": "2020", "y": 0.0 },
+          { "x": "2021", "y": 0.0 },
+          { "x": "2022", "y": 0.0 },
+          { "x": "2023", "y": 1.1 },
+          { "x": "2024", "y": 1.1 },
+          { "x": "2025E", "y": 0.0 },
+          { "x": "2026E", "y": 0.0 },
+          { "x": "2027E", "y": 0.0 },
+          { "x": "2028E", "y": 0.0 }
+        ]
+      }
+    ],
+    "totalDataPoints": 24
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2028E",
+      "y": 14.7,
+      "displayText": "2028E 14.7GW"
+    },
+    "annotations": [
+      {
+        "text": "2028년부터 준공 증가",
+        "position": { "x": "2028E", "y": 14.7 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "원전 설치는 여전히 제한적",
+        "position": { "x": "2024", "y": 1.1 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025E",
+        "toX": "2028E",
+        "color": "#FFB020",
+        "label": "준공 회복 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "가스터빈 발주 증가는 확인되지만 실질 설치량은 2028년 전후에야 본격적으로 늘어난다. 원자력은 단기 공급 공백을 메우기엔 여전히 규모가 작다.",
+    "supportResistance": [
+      { "level": 2.6, "type": "support", "strength": "약함" },
+      { "level": 14.7, "type": "resistance", "strength": "강함" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.0,
+      "max": 21.7,
+      "average": 4.6,
+      "latest": 14.7
+    },
+    "changeRates": [
+      { "period": "2024 → 2028E", "percentChange": 465.4 },
+      { "period": "2023 → 2024", "percentChange": -73.7 }
+    ]
+  },
+  "narrative": {
+    "headline": "가스발전은 결국 필요하지만, 2026년 즉시 해법이라기보다 2028년 이후 공급 회복 카드에 가깝습니다.",
+    "summary": "미국 천연가스 발전 신규 설치량은 2024년 2.6GW로 낮아졌다가 2028E 14.7GW로 반등할 전망이다. 반면 원자력 설치량은 2023~2024년 보글 프로젝트 1.1GW 수준 외에는 눈에 띄지 않는다.",
+    "story": "이 차트는 연료전지와 ESS가 왜 2026년 실전 테마인지 보여준다. 가스복합화력은 장기적으로 필요한 해법이지만, 증설이 실제 공급으로 연결되기까지 시간이 걸린다. 따라서 당장 데이터센터 가동 시점을 앞당길 수 있는 온사이트 전원과 저장 솔루션이 먼저 프리미엄을 받는 구조가 된다."
+  }
+}

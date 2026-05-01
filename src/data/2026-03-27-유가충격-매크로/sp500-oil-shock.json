@@ -1,0 +1,151 @@
+{
+  "id": "sp500-oil-shock",
+  "structure": {
+    "chartType": "line",
+    "title": "오일쇼크 후 S&P, 2년 내 12% 회복",
+    "subtitle": "오일쇼크 시점 = 100, 1973/1979/1990/2022 평균",
+    "source": "Bloomberg, 도이치뱅크",
+    "timeRange": "-365일 ~ +730일",
+    "xAxis": {
+      "label": "오일쇼크 이후 일수",
+      "type": "numeric"
+    },
+    "yAxis": {
+      "label": "지수",
+      "unit": "",
+      "min": 50,
+      "max": 150
+    },
+    "legend": [
+      {
+        "name": "과거 평균",
+        "color": "#003399",
+        "originalColor": "#003399",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "현재 (2026)",
+        "color": "#C62828",
+        "originalColor": "#8B0000",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "과거 평균",
+        "data": [
+          { "x": -365, "y": 88 },
+          { "x": -292, "y": 90 },
+          { "x": -219, "y": 93 },
+          { "x": -146, "y": 96 },
+          { "x": -73, "y": 98 },
+          { "x": 0, "y": 100 },
+          { "x": 73, "y": 95 },
+          { "x": 146, "y": 93 },
+          { "x": 219, "y": 96 },
+          { "x": 292, "y": 97 },
+          { "x": 365, "y": 99 },
+          { "x": 438, "y": 103 },
+          { "x": 511, "y": 105 },
+          { "x": 584, "y": 108 },
+          { "x": 657, "y": 110 },
+          { "x": 730, "y": 112 }
+        ]
+      },
+      {
+        "name": "현재 (2026)",
+        "data": [
+          { "x": -365, "y": 90 },
+          { "x": -292, "y": 85 },
+          { "x": -219, "y": 72 },
+          { "x": -146, "y": 80 },
+          { "x": -73, "y": 92 },
+          { "x": 0, "y": 96 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "0",
+      "y": 96,
+      "displayText": "현재: 96 (쇼크 시점)"
+    },
+    "annotations": [
+      {
+        "text": "현재: 96",
+        "position": { "x": "0", "y": 96 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "저점: 72",
+        "position": { "x": "-219", "y": 72 },
+        "importance": "high",
+        "style": "negative"
+      },
+      {
+        "text": "평균: 2년 후 112",
+        "position": { "x": "730", "y": 112 },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "쇼크 후 저점: 93",
+        "position": { "x": "146", "y": 93 },
+        "importance": "medium",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "-365", "y": 100 },
+        "to": { "x": "730", "y": 100 },
+        "label": "기준선 (100)",
+        "color": "#999999"
+      },
+      {
+        "from": { "x": "0", "y": 50 },
+        "to": { "x": "0", "y": 150 },
+        "label": "오일쇼크 시점",
+        "color": "#CCCCCC"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "오일쇼크 발생 후 평균 5~7% 하락, 이후 1년 내 원점 회복, 2년 후 12% 상승. 현재 경로는 쇼크 전 저점(72)에서 빠르게 회복 중이나 과거 평균 대비 낮은 출발.",
+    "supportResistance": [
+      { "level": 100, "type": "resistance", "strength": "strong" },
+      { "level": 93, "type": "support", "strength": "moderate" },
+      { "level": 72, "type": "support", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 72,
+      "max": 112,
+      "average": 97,
+      "latest": 96
+    },
+    "changeRates": [
+      { "period": "쇼크 후 1년", "percentChange": -1 },
+      { "period": "쇼크 후 2년", "percentChange": 12 },
+      { "period": "현재 저점 대비", "percentChange": 33.3 }
+    ]
+  },
+  "narrative": {
+    "headline": "역사적으로 오일쇼크 2년 후 S&P 500은 평균 12% 상승, 장기 투자자에 긍정 시그널",
+    "keyTakeaways": [
+      "과거 4회 오일쇼크(1973, 1979, 1990, 2022) 후 S&P 500은 평균 2년 내 12% 회복",
+      "쇼크 직후 5~7% 조정 후 약 1년 시점에서 원점 복귀하는 패턴 반복",
+      "현재(2026) S&P는 쇼크 전 저점 72에서 96까지 회복, 과거 평균보다 낮은 출발이지만 회복 궤적은 유사",
+      "역사적 패턴이 반복된다면 향후 2년간 추가 상승 여력 존재"
+    ],
+    "sentiment": "cautiously_optimistic"
+  }
+}

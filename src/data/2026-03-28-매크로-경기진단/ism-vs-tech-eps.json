@@ -1,0 +1,170 @@
+{
+  "id": "ism-vs-tech-eps",
+  "structure": {
+    "chartType": "combo",
+    "title": "제조업 위축에도 Tech 이익 급증, AI 디커플링",
+    "subtitle": "ISM 제조업지수(좌, 중립=50) vs S&P500 Tech EPS 성장률(우, %YoY)",
+    "source": "LSEG",
+    "timeRange": "2010~2026",
+    "xAxis": {
+      "label": "연도",
+      "type": "year"
+    },
+    "yAxis": {
+      "label": "ISM 제조업지수",
+      "unit": "지수",
+      "min": 30,
+      "max": 70
+    },
+    "secondaryYAxis": {
+      "label": "S&P500 Tech EPS",
+      "unit": "%YoY",
+      "min": -60,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "ISM 제조업지수(좌)",
+        "color": "#5B9BD5",
+        "originalColor": "#5B9BD5",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "S&P500 Tech EPS(우)",
+        "color": "#A0A0A0",
+        "originalColor": "#A0A0A0",
+        "style": "solid",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "ISM 제조업지수(좌)",
+        "data": [
+          { "x": "2010", "y": 57 },
+          { "x": "2011", "y": 53 },
+          { "x": "2012", "y": 51 },
+          { "x": "2013", "y": 54 },
+          { "x": "2014", "y": 56 },
+          { "x": "2015", "y": 50 },
+          { "x": "2016", "y": 52 },
+          { "x": "2017", "y": 57 },
+          { "x": "2018", "y": 59 },
+          { "x": "2019", "y": 49 },
+          { "x": "2020", "y": 43 },
+          { "x": "2021", "y": 64 },
+          { "x": "2022", "y": 53 },
+          { "x": "2023", "y": 47 },
+          { "x": "2024", "y": 48 },
+          { "x": "2025", "y": 48 },
+          { "x": "2026", "y": 50 }
+        ]
+      },
+      {
+        "name": "S&P500 Tech EPS(우)",
+        "data": [
+          { "x": "2010", "y": 55 },
+          { "x": "2011", "y": 15 },
+          { "x": "2012", "y": 0 },
+          { "x": "2013", "y": 8 },
+          { "x": "2014", "y": 10 },
+          { "x": "2015", "y": 3 },
+          { "x": "2016", "y": 5 },
+          { "x": "2017", "y": 18 },
+          { "x": "2018", "y": 30 },
+          { "x": "2019", "y": 3 },
+          { "x": "2020", "y": -15 },
+          { "x": "2021", "y": 80 },
+          { "x": "2022", "y": -5 },
+          { "x": "2023", "y": -25 },
+          { "x": "2024", "y": 35 },
+          { "x": "2025", "y": 55 },
+          { "x": "2026", "y": 25 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2025",
+      "y": 55,
+      "displayText": "Tech EPS +55% (AI 호황)"
+    },
+    "annotations": [
+      {
+        "text": "AI 주도 디커플링",
+        "position": { "x": "2025", "y": 55 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "코로나 후 동반 급등",
+        "position": { "x": "2021", "y": 80 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "Tech -25% vs ISM 47",
+        "position": { "x": "2023", "y": -25 },
+        "importance": "high",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2023",
+        "toX": "2026",
+        "color": "rgba(76, 175, 80, 0.08)",
+        "label": "AI 디커플링 구간"
+      }
+    ],
+    "trendLines": [
+      {
+        "from": { "x": "2010", "y": 50 },
+        "to": { "x": "2026", "y": 50 },
+        "label": "ISM 중립선 (50)",
+        "color": "#5B9BD5"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "ISM 제조업지수는 2022년 이후 50 부근에서 위축/중립을 오가는 반면, S&P500 Tech EPS는 2023년 저점(-25%) 이후 AI 수혜로 +55%까지 급반등하며 전통적 동조 패턴이 깨짐",
+    "supportResistance": [
+      {
+        "level": 50,
+        "type": "support",
+        "strength": "strong"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": -25,
+      "max": 80,
+      "average": 15.5,
+      "latest": 25
+    },
+    "changeRates": [
+      {
+        "period": "2023→2025",
+        "percentChange": 320
+      },
+      {
+        "period": "2025→2026E",
+        "percentChange": -54.5
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "ISM 제조업 2년간 위축에도 Tech EPS +55% 급증, AI가 전통 경기사이클 디커플링 확인",
+    "keyTakeaways": [
+      "ISM 제조업지수 2023~2025년 3년 연속 50 이하 위축 영역, 전통 제조업 경기는 부진",
+      "S&P500 Tech EPS는 AI 투자 호황으로 2024~2025년 +35%→+55% 급증, ISM과 완전 디커플링",
+      "2026년 Tech EPS +25%로 둔화 전망이나 여전히 높은 성장률 유지, AI 구조적 성장 지속 시사"
+    ],
+    "sentiment": "bullish"
+  }
+}

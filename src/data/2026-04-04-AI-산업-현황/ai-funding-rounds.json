@@ -1,0 +1,114 @@
+{
+  "id": "ai-funding-rounds",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "OpenAI $1,220억, 역대 최대 펀딩 경신",
+    "subtitle": "스타트업 단일 라운드 기준, 십억달러($B)",
+    "source": "각 회사 공시, 언론 보도 종합",
+    "xAxis": {
+      "label": "기업 (연도)",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "펀딩 규모",
+      "unit": "$B",
+      "min": 0,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "AI 기업",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "style": "solid"
+      },
+      {
+        "name": "비AI 기업",
+        "color": "#9E9E9E",
+        "originalColor": "#9E9E9E",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "펀딩 규모",
+        "data": [
+          { "x": "OpenAI (2026)", "y": 122.0, "color": "#1565C0" },
+          { "x": "OpenAI (2025)", "y": 40.0, "color": "#1565C0" },
+          { "x": "Anthropic (2026)", "y": 30.0, "color": "#1565C0" },
+          { "x": "xAI (2026)", "y": 20.0, "color": "#1565C0" },
+          { "x": "Scale AI (2025)", "y": 14.3, "color": "#1565C0" },
+          { "x": "Ant Group (2018)", "y": 14.0, "color": "#9E9E9E" },
+          { "x": "Juul Labs (2018)", "y": 12.8, "color": "#9E9E9E" },
+          { "x": "Databricks (2024)", "y": 10.0, "color": "#1565C0" },
+          { "x": "Didi (2016)", "y": 7.3, "color": "#9E9E9E" },
+          { "x": "OpenAI (2024)", "y": 6.6, "color": "#1565C0" },
+          { "x": "Waymo (2024)", "y": 5.6, "color": "#1565C0" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "OpenAI (2026)",
+      "y": 122.0,
+      "displayText": "현재: $1,220억 (2026)"
+    },
+    "annotations": [
+      {
+        "text": "$1,220억, 2위의 3배",
+        "position": { "x": "OpenAI (2026)", "y": 122.0 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "AI 기업이 Top 11 중 8개",
+        "position": { "x": "Scale AI (2025)", "y": 14.3 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "비AI 기업은 2018년이 마지막",
+        "position": { "x": "Juul Labs (2018)", "y": 12.8 },
+        "importance": "medium",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2024년 이후 AI 기업 메가 펀딩이 급증하며, 역대 최대 라운드 상위권을 AI 기업이 독점하는 추세. 특히 OpenAI는 단일 라운드 기준 역대 최대인 $1,220억을 기록하며 2위와 3배 이상 차이를 벌림.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 5.6,
+      "max": 122.0,
+      "average": 25.69,
+      "latest": 122.0
+    },
+    "changeRates": [
+      {
+        "period": "OpenAI 2025→2026",
+        "percentChange": 205.0
+      },
+      {
+        "period": "AI 기업 비중 (Top 11)",
+        "percentChange": 72.7
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "AI 메가딜 시대, OpenAI가 $1,220억으로 역대 기록 3배 경신",
+    "keyTakeaways": [
+      "OpenAI 2026년 라운드($1,220억)는 2위 자사 기록($400억)의 3배를 초과",
+      "역대 Top 11 중 AI 기업이 8개(72.7%)를 차지, 비AI 대형 라운드는 2018년 이후 부재",
+      "2024~2026년 3년간 AI 기업 7건이 Top 11에 진입하며 메가 펀딩 집중 현상 뚜렷"
+    ],
+    "sentiment": "매우 강세 — AI 산업으로의 자본 집중이 가속화"
+  }
+}

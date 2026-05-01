@@ -1,0 +1,84 @@
+{
+  "id": "fastest-power-options",
+  "structure": {
+    "chartType": "bar",
+    "title": "2030년 이전 승자는 가장 빨리 붙는 전원",
+    "subtitle": "발주부터 상업가동까지 걸리는 기간의 상단 기준 비교",
+    "source": "Morgan Stanley(2025.03)",
+    "timeRange": "2025년 기준",
+    "xAxis": {
+      "label": "발전원",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "상업가동까지 기간",
+      "unit": "년",
+      "min": 0,
+      "max": 11
+    },
+    "legend": [
+      {
+        "name": "상단 기준 설치기간",
+        "originalColor": "#0F4C81",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상단 기준 설치기간",
+        "data": [
+          { "x": "연료전지", "y": 1 },
+          { "x": "태양광+ESS", "y": 2 },
+          { "x": "단순 GT", "y": 3 },
+          { "x": "육상풍력", "y": 3 },
+          { "x": "가스복합", "y": 7 },
+          { "x": "대형원전", "y": 10 }
+        ]
+      }
+    ],
+    "totalDataPoints": 6
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "연료전지",
+      "y": 1,
+      "displayText": "1년 이내"
+    },
+    "annotations": [
+      {
+        "text": "가장 빠른 상업가동",
+        "position": { "x": "연료전지", "y": 1 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "원전은 2026년 해법으로는 너무 느림",
+        "position": { "x": "대형원전", "y": 10 },
+        "importance": "high",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "AI 전력난 해법은 장기적으로 가장 이상적인 발전원이 아니라, 상업가동까지 시간이 가장 짧은 발전원으로 쏠린다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 1,
+      "max": 10,
+      "average": 4.3,
+      "latest": 10
+    },
+    "changeRates": []
+  },
+  "narrative": {
+    "headline": "속도가 가격을 이기는 국면에서는 연료전지와 태양광+ESS가 가장 먼저 선택됩니다.",
+    "summary": "모건스탠리 자료 기준 연료전지는 1년 이내, 태양광+ESS는 1~2년, 대형 원전은 10년 이상이 필요하다. 데이터센터 상업가동 경쟁이 치열한 상황에서는 '이상적인 발전원'보다 '빨리 붙는 전원'이 더 높은 경제적 가치를 가진다.",
+    "story": "이 차트는 2026년 전력 테마를 읽을 때 기술 우열보다 설치 속도를 먼저 봐야 한다는 점을 보여준다. 그래서 ESS와 SOFC는 단순한 친환경 서사가 아니라, 시간 가치를 현금흐름으로 바꿔주는 실전 솔루션이 된다. 반대로 SMR과 대형 원전은 장기 테마일 수는 있어도, 이번 사이클의 선행 수혜주와는 거리가 있다."
+  }
+}

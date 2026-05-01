@@ -1,0 +1,119 @@
+{
+  "id": "page-05-img-02",
+  "structure": {
+    "chartType": "bar",
+    "barDirection": "horizontal",
+    "title": "엔비디아 CPO, GPU와 스위치를 한 패키지로 묶다",
+    "subtitle": "CPO(Co-Packaged Optics) 핵심 블록과 연결 구조",
+    "source": "엔비디아, 유안타증권 리서치센터",
+    "xAxis": {
+      "label": "핵심 블록",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "구조 중요도",
+      "unit": "점",
+      "min": 0,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "핵심 블록",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "핵심 블록",
+        "data": [
+          { "x": "GPU 패키지", "y": 5, "color": "#0F4C81" },
+          { "x": "스위치 패키지", "y": 5, "color": "#FF6F61" },
+          { "x": "광엔진/OE", "y": 4, "color": "#6667AB" },
+          { "x": "24 NVLINKs", "y": 4, "color": "#939597" },
+          { "x": "24 Laser Fibers", "y": 3, "color": "#F5DF4D" },
+          { "x": "24 TX/RX Fibers", "y": 3, "color": "#0F4C81" },
+          { "x": "5mm~10mm", "y": 2, "color": "#FF6F61" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "광엔진/OE",
+      "y": 4,
+      "displayText": "광학 엔진이 전기-광 경계를 묶는다"
+    },
+    "annotations": [
+      {
+        "text": "GPU와 스위치 통합",
+        "position": { "x": "GPU 패키지", "y": 5 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "24 NVLINKs, 4.8Tbps per direction",
+        "position": { "x": "24 NVLINKs", "y": 4 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "광섬유 수를 패키지 수준에서 최적화",
+        "position": { "x": "24 TX/RX Fibers", "y": 3 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "5mm~10mm 초근접 배치",
+        "position": { "x": "5mm~10mm", "y": 2 },
+        "importance": "medium",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "GPU 패키지",
+        "toX": "광엔진/OE",
+        "color": "rgba(15, 76, 129, 0.08)",
+        "label": "전기-광 통합 구간"
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "엔비디아 CPO는 GPU와 스위치를 패키지 수준에서 가깝게 묶고, 광엔진과 다중 광섬유를 결합해 대역폭과 전력 효율을 동시에 높이려는 방향이다.",
+    "supportResistance": [
+      { "level": 3, "type": "support", "strength": "moderate" },
+      { "level": 5, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 2,
+      "max": 5,
+      "average": 3.7,
+      "latest": 2
+    },
+    "changeRates": [
+      {
+        "period": "핵심 통합도",
+        "percentChange": 66.7,
+        "absoluteChange": 2,
+        "from": 3,
+        "to": 5
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "엔비디아 CPO는 GPU-스위치-광엔진을 한 덩어리로 묶어 데이터 병목을 줄입니다.",
+    "keyTakeaways": [
+      "GPU와 스위치를 패키지 안으로 더 가까이 붙여 지연과 전력 손실을 낮추는 구조입니다.",
+      "24 NVLINKs, 24 Laser Fibers, 24 TX/RX Fibers가 한 화면 안에서 묶이며 통합의 메시지를 분명히 보여줍니다.",
+      "AI 데이터센터의 병목이 칩 성능에서 연결 성능으로 넘어갔다는 점을 강조하는 그림입니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

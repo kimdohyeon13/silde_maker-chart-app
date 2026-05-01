@@ -1,0 +1,51 @@
+{
+  "id": "vera-rubin-platform",
+  "contentType": "infographic",
+  "structure": {
+    "title": "베라 루빈 플랫폼, 6개 핵심 부품 정리",
+    "subtitle": "칩 한 장이 아니라 공장 전체를 설계하는 방식으로 읽어야 한다",
+    "source": "더밀크, NVIDIA GTC 2026"
+  },
+  "infographicData": {
+    "subType": "feature_list",
+    "items": [
+      {
+        "label": "Rubin GPU",
+        "description": "288GB HBM4와 22TB/s 대역폭을 바탕으로 긴 컨텍스트 입력과 대규모 병렬 연산을 담당합니다."
+      },
+      {
+        "label": "Vera CPU",
+        "description": "에이전트 오케스트레이션과 메모리 접근을 전담하며 LPDDR 계열 로드맵으로 데이터센터 구조를 바꿉니다."
+      },
+      {
+        "label": "Groq 3 LPX",
+        "description": "256개 LPU와 128GB SRAM으로 디코딩 단계의 초저지연 추론을 밀어주는 보조 엔진입니다."
+      },
+      {
+        "label": "NVLink 6 Switch",
+        "description": "3.6TB/s 양방향 연결과 260TB/s 랙 내 스위칭으로 다수 GPU를 사실상 하나처럼 묶습니다."
+      },
+      {
+        "label": "ConnectX-9 SuperNIC",
+        "description": "1.6Tb/s 급 스케일아웃 연결을 맡아 랙 간 병목을 줄이고 공장 전체 확장을 돕습니다."
+      },
+      {
+        "label": "BlueField-4 DPU",
+        "description": "KV 캐시, 보안, AI 네이티브 스토리지 처리를 분리해 GPU가 연산에 더 집중하도록 만듭니다."
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "베라 루빈은 GPU 출시가 아니라 AI 팩토리 구성요소를 한 묶음으로 파는 플랫폼 전략에 가깝습니다.",
+    "keyTakeaways": [
+      "핵심은 CPU, GPU, 네트워크, 스토리지를 따로 파는 것이 아니라 함께 최적화하는 데 있습니다.",
+      "추론 시대에는 GPU 성능보다 전체 데이터 흐름과 연결 구조가 수익성을 더 크게 좌우합니다.",
+      "이 구조를 선점한 쪽이 부품 공급자를 넘어 산업 표준을 만들 가능성이 큽니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "6개 핵심 부품"
+    }
+  }
+}

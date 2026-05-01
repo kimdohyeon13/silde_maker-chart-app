@@ -1,0 +1,161 @@
+{
+  "id": "emotion-tylenol",
+  "structure": {
+    "chartType": "line",
+    "title": "과량 복용 시 '공포' 급등, LLM도 위험 인지",
+    "subtitle": "코사인 유사도, 타이레놀 복용량별 감정 프로브",
+    "source": "Emotion Probes Track Numerical Semantics (연구 논문)",
+    "timeRange": "500mg ~ 16,000mg",
+    "xAxis": {
+      "label": "타이레놀 복용량 (mg)",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "코사인 유사도",
+      "unit": "",
+      "min": -0.08,
+      "max": 0.08
+    },
+    "legend": [
+      {
+        "name": "공포 (Afraid)",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "평온 (Calm)",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "행복 (Happy)",
+        "color": "#2E7D32",
+        "originalColor": "#2E7D32",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "슬픔 (Sad)",
+        "color": "#E65100",
+        "originalColor": "#E65100",
+        "style": "solid",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "공포 (Afraid)",
+        "data": [
+          { "x": "500", "y": 0.018 },
+          { "x": "1K", "y": 0.017 },
+          { "x": "2K", "y": 0.012 },
+          { "x": "4K", "y": 0.030 },
+          { "x": "8K", "y": 0.050 },
+          { "x": "16K", "y": 0.075 }
+        ]
+      },
+      {
+        "name": "평온 (Calm)",
+        "data": [
+          { "x": "500", "y": 0.010 },
+          { "x": "1K", "y": 0.012 },
+          { "x": "2K", "y": 0.008 },
+          { "x": "4K", "y": -0.010 },
+          { "x": "8K", "y": -0.035 },
+          { "x": "16K", "y": -0.058 }
+        ]
+      },
+      {
+        "name": "행복 (Happy)",
+        "data": [
+          { "x": "500", "y": -0.008 },
+          { "x": "1K", "y": 0.008 },
+          { "x": "2K", "y": -0.008 },
+          { "x": "4K", "y": -0.008 },
+          { "x": "8K", "y": -0.010 },
+          { "x": "16K", "y": -0.012 }
+        ]
+      },
+      {
+        "name": "슬픔 (Sad)",
+        "data": [
+          { "x": "500", "y": 0.008 },
+          { "x": "1K", "y": 0.005 },
+          { "x": "2K", "y": 0.005 },
+          { "x": "4K", "y": -0.005 },
+          { "x": "8K", "y": -0.005 },
+          { "x": "16K", "y": -0.005 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "16K",
+      "y": 0.075,
+      "displayText": "공포: 0.075"
+    },
+    "annotations": [
+      {
+        "text": "공포 급등",
+        "position": { "x": "16K", "y": 0.075 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "평온 급락",
+        "position": { "x": "16K", "y": -0.058 },
+        "importance": "high",
+        "style": "negative"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "500", "y": 0 },
+        "to": { "x": "16K", "y": 0 },
+        "label": "기준선",
+        "color": "#9E9E9E",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "복용량 4,000mg 이상에서 공포 감정이 급격히 상승하고 평온 감정은 급격히 하락하여, LLM이 숫자의 맥락적 위험도를 감정 차원에서 인지하고 있음을 시사한다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": -0.058,
+      "max": 0.075,
+      "average": 0.001,
+      "latest": 0.075
+    },
+    "changeRates": [
+      {
+        "period": "4K→16K 공포",
+        "percentChange": 150.0
+      },
+      {
+        "period": "4K→16K 평온",
+        "percentChange": -480.0
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "LLM, 타이레놀 16,000mg에서 공포·평온 감정이 극단적으로 분기",
+    "keyTakeaways": [
+      "복용량 4,000mg 이상에서 공포 감정 코사인 유사도가 급등 (0.030→0.075)",
+      "동시에 평온 감정은 급락하여 음의 영역으로 진입 (-0.010→-0.058)",
+      "행복·슬픔 감정은 복용량에 거의 무관하게 0 근처에서 평탄",
+      "LLM이 숫자의 맥락적 위험도를 감정 임베딩 수준에서 이해하고 있음을 시사"
+    ],
+    "sentiment": "경고적 — LLM의 수치 의미론적 이해력을 보여주는 긍정적 연구 결과이나, 과량 복용이라는 위험 맥락"
+  }
+}

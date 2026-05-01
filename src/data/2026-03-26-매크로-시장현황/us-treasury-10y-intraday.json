@@ -1,0 +1,73 @@
+{
+  "id": "us-treasury-10y-intraday",
+  "structure": {
+    "chartType": "area",
+    "title": "10Y 금리 하락, 채권 매수세 유입",
+    "subtitle": "미국 10년 국채 수익률, 인트라데이, 2026.03.25 (%, EDT)",
+    "source": "Tradeweb (CNBC)",
+    "timeRange": "02:00 ~ 17:00 (EDT)",
+    "xAxis": { "label": "시간 (EDT)", "type": "time" },
+    "yAxis": { "label": "수익률", "unit": "%", "min": 4.30, "max": 4.37 },
+    "legend": [
+      { "name": "10년 국채 수익률", "color": "#1A6FA0", "originalColor": "#1A6FA0", "style": "area" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "10년 국채 수익률",
+        "data": [
+          { "x": "02:00", "y": 4.340 },
+          { "x": "03:00", "y": 4.355 },
+          { "x": "04:00", "y": 4.365 },
+          { "x": "05:00", "y": 4.350 },
+          { "x": "06:00", "y": 4.335 },
+          { "x": "07:00", "y": 4.330 },
+          { "x": "08:00", "y": 4.310 },
+          { "x": "09:00", "y": 4.320 },
+          { "x": "10:00", "y": 4.340 },
+          { "x": "10:30", "y": 4.345 },
+          { "x": "11:00", "y": 4.330 },
+          { "x": "12:00", "y": 4.320 },
+          { "x": "13:00", "y": 4.320 },
+          { "x": "14:00", "y": 4.325 },
+          { "x": "14:30", "y": 4.315 },
+          { "x": "15:00", "y": 4.320 },
+          { "x": "16:00", "y": 4.326 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": { "x": "16:00", "y": 4.326, "displayText": "종가: 4.326%" },
+    "annotations": [
+      { "text": "장중 고점 4.365%", "position": { "x": "04:00", "y": 4.365 }, "importance": "high", "style": "negative" },
+      { "text": "장중 저점 4.310%", "position": { "x": "08:00", "y": 4.310 }, "importance": "high", "style": "positive" },
+      { "text": "-6.6bp 하락 마감", "position": { "x": "16:00", "y": 4.326 }, "importance": "critical", "style": "positive" }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      { "from": { "x": "02:00", "y": 4.326 }, "to": { "x": "16:00", "y": 4.326 }, "label": "전일 종가", "color": "#4CAF50" }
+    ]
+  },
+  "patterns": {
+    "trend": "유럽 시간대 4.365% 고점 형성 후 미국 개장과 함께 급락, 오후 4.32% 부근 횡보 안정",
+    "supportResistance": [
+      { "level": 4.310, "type": "support", "strength": "medium" },
+      { "level": 4.365, "type": "resistance", "strength": "high" }
+    ]
+  },
+  "statistics": {
+    "summary": { "min": 4.310, "max": 4.365, "average": 4.332, "latest": 4.326 },
+    "changeRates": [{ "period": "당일", "percentChange": -0.066 }]
+  },
+  "narrative": {
+    "headline": "유럽장 금리 급등 불구, 미국장 매수세에 -6.6bp 하락 마감",
+    "keyTakeaways": [
+      "유럽 시간대 4.365%까지 상승했으나 미국 개장 후 급락 반전",
+      "미국 오전 4.310% 저점 터치 후 4.32% 부근에서 횡보 안정",
+      "전일 대비 -6.6bp 하락 마감, 채권 매수세 우위 확인"
+    ],
+    "sentiment": "mildly_bullish"
+  }
+}

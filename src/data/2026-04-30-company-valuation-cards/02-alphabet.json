@@ -1,0 +1,114 @@
+{
+  "id": "02-alphabet",
+  "sourceImage": "projects/2026-04-30-company-valuation-cards/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "Alphabet A 애프터장 신고가",
+    "subtitle": "정규장 원표 수치에 애프터장 52주 고점 돌파 내용을 반영",
+    "source": "사용자 제공 이미지 및 사용자 제공 애프터장 업데이트"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "지표", "dataType": "text", "isRowHeader": true, "width": "28%" },
+      { "key": "value", "label": "수치", "dataType": "text", "align": "right", "width": "28%" },
+      { "key": "read", "label": "해석", "dataType": "text", "align": "left", "width": "44%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "현재가" },
+          "value": { "value": "$349.94 (정규장)" },
+          "read": { "value": "애프터장에 기존 고점을 상회", "highlight": "positive" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "애널리스트 목표가" },
+          "value": { "value": "$378.50" },
+          "read": { "value": "신고가 이후 남은 여력은 재계산 필요" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "목표가 대비 상승여력" },
+          "value": { "value": "+8.2% (정규장)" },
+          "read": { "value": "애프터장 상승분 반영 전 수치" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "Forward P/E" },
+          "value": { "value": "30.4배" },
+          "read": { "value": "성장률 대비 부담을 함께 봐야 함" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "EPS 성장 예상" },
+          "value": { "value": "6.5%" },
+          "read": { "value": "4개사 중 성장 기대가 낮은 편" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "52주 고점" },
+          "value": { "value": "$355.79 (기존)" },
+          "read": { "value": "애프터장에서 상향 돌파", "highlight": "positive" }
+        },
+        "rowType": "data",
+        "highlight": true
+      },
+      {
+        "cells": {
+          "metric": { "value": "고점 대비 현재가" },
+          "value": { "value": "신고가 갱신", "highlight": "positive" },
+          "read": { "value": "애프터장 기준 기존 고점 돌파", "highlight": "positive" }
+        },
+        "rowType": "data",
+        "highlight": true
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Alphabet 신고가 갱신",
+    "subMessage": "애프터장에서 기존 52주 고점 $355.79를 넘었다",
+    "headline": "Alphabet은 정규장 기준 고점권에서 애프터장에 기존 52주 고점을 돌파했다.",
+    "summary": "Alphabet A의 원표 기준 현재가는 $349.94, 목표가는 $378.50, 상승여력은 +8.2%다. 다만 애프터장에서 기존 52주 고점 $355.79를 넘어 신고가를 갱신했다.",
+    "story": "Alphabet은 이제 '고점에 가까운 종목'이 아니라, 애프터장에서 고점을 새로 쓴 종목으로 읽어야 한다.",
+    "keyTakeaways": [
+      "목표가 대비 상승여력 +8.2%는 정규장 기준이다.",
+      "EPS 성장 예상은 6.5%로 낮은 편이다.",
+      "애프터장에서는 기존 52주 고점을 돌파했다."
+    ],
+    "questionsRaised": ["신고가 이후 목표가까지 남은 실질 여력이 얼마나 되는가?"],
+    "viewerAction": "Alphabet은 정규장 수치와 애프터장 신고가 갱신을 분리해 확인한다.",
+    "contextualNotes": [
+      "현재가, 목표가, 상승여력, P/E, EPS 성장률은 첨부 이미지의 원본 표 수치다.",
+      "애프터장 신고가 갱신은 사용자 제공 업데이트를 반영했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "애프터장 신고가", "reason": "기존 52주 고점을 상향 돌파" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 5, "col": "read", "reason": "기존 52주 고점 돌파" },
+      { "row": 6, "col": "value", "reason": "애프터장 신고가 갱신" }
+    ]
+  }
+}

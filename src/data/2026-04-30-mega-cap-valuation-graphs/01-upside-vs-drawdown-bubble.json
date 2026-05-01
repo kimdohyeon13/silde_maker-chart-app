@@ -1,0 +1,207 @@
+{
+  "id": "01-upside-vs-drawdown-bubble",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-graphs/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "structure": {
+    "chartType": "bubble",
+    "title": "MS·Meta에 상승여력 집중",
+    "subtitle": "버블 크기=EPS 성장 예상",
+    "source": "사용자 제공 이미지, 표 수치 재구성",
+    "xAxis": {
+      "label": "52주 고점 대비 하락률",
+      "type": "numeric",
+      "tickValues": ["0%", "10%", "20%", "30%"],
+      "unit": "%",
+      "min": 0,
+      "max": 30,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "목표가 대비 상승여력",
+      "type": "numeric",
+      "tickValues": ["0%", "10%", "20%", "30%", "40%"],
+      "unit": "%",
+      "min": 0,
+      "max": 40,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      { "name": "Microsoft", "originalColor": "#2563EB", "role": "primary" },
+      { "name": "Meta", "originalColor": "#7C3AED", "role": "primary" },
+      { "name": "Alphabet", "originalColor": "#64748B", "role": "secondary" },
+      { "name": "Amazon", "originalColor": "#94A3B8", "role": "secondary" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "빅테크 밸류에이션 위치",
+        "role": "primary",
+        "data": [
+          {
+            "x": 23.6,
+            "y": 34.5,
+            "z": 22.4,
+            "label": "Microsoft",
+            "color": "#2563EB",
+            "labelPosition": "top",
+            "confidence": 1
+          },
+          {
+            "x": 16.0,
+            "y": 27.8,
+            "z": 26.6,
+            "label": "Meta",
+            "color": "#7C3AED",
+            "labelPosition": "bottom",
+            "confidence": 1
+          },
+          {
+            "x": 1.6,
+            "y": 8.2,
+            "z": 6.5,
+            "label": "Alphabet",
+            "color": "#64748B",
+            "labelPosition": "top",
+            "confidence": 1
+          },
+          {
+            "x": 1.1,
+            "y": 8.0,
+            "z": 9.2,
+            "label": "Amazon",
+            "color": "#94A3B8",
+            "labelPosition": "bottom",
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.86,
+      "description": "고점 대비 더 많이 조정받은 종목일수록 목표가 대비 상승여력도 크게 나타난다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.52,
+      "description": "네 종목은 MS·Meta와 Alphabet·Amazon의 두 그룹으로 나뉜다."
+    },
+    "changeRates": [
+      {
+        "period": "Microsoft 상승여력",
+        "percentChange": 34.5,
+        "absoluteChange": 34.5,
+        "from": 0,
+        "to": 34.5
+      }
+    ],
+    "correlations": [
+      {
+        "seriesA": "52주 고점 대비 하락률",
+        "seriesB": "목표가 대비 상승여력",
+        "coefficient": 0.98,
+        "description": "표의 4개 종목만 보면 조정폭과 상승여력이 강하게 같이 움직인다."
+      }
+    ],
+    "summary": {
+      "max": { "value": 34.5, "at": "Microsoft" },
+      "min": { "value": 8.0, "at": "Amazon" },
+      "average": 19.625,
+      "median": 18.0,
+      "range": 26.5
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "peak",
+        "dataPoint": { "x": 23.6, "y": 34.5 },
+        "seriesName": "빅테크 밸류에이션 위치",
+        "description": "Microsoft는 조정폭과 목표가 상승여력이 모두 가장 크다.",
+        "importance": "critical",
+        "reasoning": "52주 고점 대비 -23.6%, 목표가 대비 +34.5%로 우상단에 위치한다."
+      },
+      {
+        "type": "outlier",
+        "dataPoint": { "x": 16.0, "y": 27.8 },
+        "seriesName": "빅테크 밸류에이션 위치",
+        "description": "Meta는 EPS 성장 예상이 가장 높고 상승여력도 크다.",
+        "importance": "high",
+        "reasoning": "EPS 성장 예상 26.6%로 버블 크기가 가장 크다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [
+      { "type": "support", "level": 10, "touchCount": 2, "strength": "moderate" },
+      { "type": "resistance", "level": 20, "touchCount": 2, "strength": "moderate" }
+    ],
+    "cyclicalPattern": "해당 없음"
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": { "x": 23.6, "y": 34.5 },
+        "text": "조정+여력 1위",
+        "style": "positive",
+        "importance": "critical"
+      },
+      {
+        "type": "point_label",
+        "position": { "x": 16.0, "y": 27.8 },
+        "text": "성장 기대 최대",
+        "style": "info",
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": ["#7C3AED", "#64748B", "#94A3B8"],
+      "positive": "#CF222E",
+      "negative": "#0969DA",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": 23.6, "y": 34.5 },
+      "reason": "상승여력과 고점 대비 할인폭이 동시에 가장 크다.",
+      "displayText": "MS +34.5%"
+    }
+  },
+  "narrative": {
+    "headMessage": "조정받은 종목에 여력 집중",
+    "subMessage": "MS·Meta는 고점에서 멀고 목표가 여지도 크다",
+    "headline": "Microsoft와 Meta는 고점 대비 조정을 받은 동시에 애널리스트 목표가 기준 상승여력이 크다.",
+    "summary": "Microsoft는 52주 고점 대비 23.6% 낮고 목표가 대비 상승여력은 34.5%다. Meta도 고점 대비 16.0% 낮고 상승여력은 27.8%로 두 번째 그룹을 만든다. 반면 Alphabet과 Amazon은 고점 근처에 있어 상승여력이 8% 안팎에 머문다.",
+    "story": "이 그래프는 X축을 오른쪽으로 갈수록 '고점에서 더 많이 내려온 종목', Y축을 위로 갈수록 '목표가까지 더 많이 남은 종목'으로 읽는다. 따라서 우상단에 있는 Microsoft와 Meta가 표 안에서는 가장 재평가 여지가 큰 후보로 보인다.",
+    "keyTakeaways": [
+      "Microsoft는 조정폭과 목표가 상승여력이 모두 가장 크다.",
+      "Meta는 EPS 성장 예상이 가장 높아 버블 크기도 가장 크다.",
+      "Alphabet과 Amazon은 52주 고점에 가까워 추가 여력이 제한적으로 보인다."
+    ],
+    "questionsRaised": [
+      "MS와 Meta의 높은 상승여력은 실적 추정 상향으로 뒷받침되는가?",
+      "고점 근처인 Alphabet과 Amazon은 목표가 상향 여지가 남아 있는가?"
+    ],
+    "viewerAction": "빅테크 4개사를 볼 때 Microsoft와 Meta를 우선 검토 후보로 분리한다.",
+    "contextualNotes": [
+      "버블 크기는 EPS 성장 예상치를 반영했다.",
+      "고점 대비 하락률은 표의 '고점대비 현재주가' 중 음수 값을 양수 거리로 변환했다."
+    ]
+  }
+}

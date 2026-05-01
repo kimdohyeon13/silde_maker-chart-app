@@ -1,0 +1,66 @@
+{
+  "id": "vla-architecture-comparison",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "옵티머스의 승부처는 로봇 몸체보다 VLA 아키텍처 완성도다",
+    "subtitle": "Tesla vs Figure AI vs Unitree 구조 비교",
+    "source": "원문 리포트 44페이지 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "아키텍처 요소", "dataType": "text", "isRowHeader": true, "width": 160 },
+      { "key": "tesla", "label": "Tesla", "dataType": "text", "width": 200 },
+      { "key": "figure", "label": "Figure AI", "dataType": "text", "width": 200 },
+      { "key": "unitree", "label": "Unitree", "dataType": "text", "width": 200 }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "Vision", "displayValue": "Vision" },
+          "tesla": { "value": "Occupancy Network + End-to-End Vision Transformer", "displayValue": "3D 인지 + End-to-End" },
+          "figure": { "value": "Video Encoder + Scene Model(ViT 기반)", "displayValue": "Video Encoder + Scene Model" },
+          "unitree": { "value": "ViT + Video MAE 기반 인지", "displayValue": "ViT + Video MAE" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "Language", "displayValue": "Language" },
+          "tesla": { "value": "World Model 내부 간접 계획, 명시적 LLM은 약함", "displayValue": "간접 계획", "highlight": "accent" },
+          "figure": { "value": "GPT-4 기반 LLM Planner", "displayValue": "LLM Planner", "highlight": "positive" },
+          "unitree": { "value": "Qwen 기반 LLM Planner", "displayValue": "Qwen Planner" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "Action", "displayValue": "Action" },
+          "tesla": { "value": "Neural Policy + Whole-body Control", "displayValue": "Neural Policy" },
+          "figure": { "value": "Action Model 1 & 2", "displayValue": "Action Model" },
+          "unitree": { "value": "Diffusion Policy + Custom Controller", "displayValue": "Diffusion Policy", "highlight": "positive" }
+        }
+      },
+      {
+        "cells": {
+          "metric": { "value": "데이터 전략", "displayValue": "데이터 전략" },
+          "tesla": { "value": "대규모 실세계 비디오 + 로봇 센서 + 플릿러닝", "displayValue": "실세계 플릿 데이터", "highlight": "positive" },
+          "figure": { "value": "텔레옵 + 시뮬레이션 중심", "displayValue": "텔레옵 + 시뮬레이션" },
+          "unitree": { "value": "텔레옵 + 공장 시나리오 기반", "displayValue": "공장 시나리오 기반" }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headline": "옵티머스는 아직 최고의 로봇이 아니라, 자동차에서 쌓은 데이터 루프를 로봇으로 옮길 수 있는 회사라는 점에서 주목받습니다.",
+    "keyTakeaways": [
+      "Tesla는 Vision과 데이터 루프에서 강하고, Figure AI와 Unitree는 LLM Planner나 Diffusion Policy에서 강점을 보입니다.",
+      "즉 아직 승부가 끝난 시장이 아니라, 아키텍처별로 강점이 다른 초기 경쟁 구간입니다.",
+      "테슬라의 우위가 현실이 되려면 자동차 플릿 데이터의 전이 효과를 실제 로봇 작업 성능으로 보여줘야 합니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "플릿 데이터 전이"
+    }
+  }
+}

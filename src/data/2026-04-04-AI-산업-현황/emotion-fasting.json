@@ -1,0 +1,158 @@
+{
+  "id": "emotion-fasting",
+  "structure": {
+    "chartType": "line",
+    "title": "120시간 단식, '공포' 7배 급등 — LLM의 수치 이해력",
+    "subtitle": "코사인 유사도, 공복 시간별 감정 프로브",
+    "source": "Emotion Probes Track Numerical Semantics",
+    "timeRange": "2h ~ 120h",
+    "xAxis": {
+      "label": "공복 시간(h)",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "코사인 유사도",
+      "unit": "",
+      "min": -0.08,
+      "max": 0.08
+    },
+    "legend": [
+      {
+        "name": "공포",
+        "color": "#C62828",
+        "originalColor": "#C62828",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "평온",
+        "color": "#1565C0",
+        "originalColor": "#1565C0",
+        "style": "solid",
+        "role": "primary"
+      },
+      {
+        "name": "슬픔",
+        "color": "#E65100",
+        "originalColor": "#E65100",
+        "style": "solid",
+        "role": "secondary"
+      },
+      {
+        "name": "행복",
+        "color": "#2E7D32",
+        "originalColor": "#2E7D32",
+        "style": "solid",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "공포",
+        "data": [
+          { "x": "2", "y": 0.005 },
+          { "x": "6", "y": 0.008 },
+          { "x": "12", "y": 0.010 },
+          { "x": "24", "y": 0.020 },
+          { "x": "48", "y": 0.035 },
+          { "x": "72", "y": 0.050 },
+          { "x": "120", "y": 0.068 }
+        ]
+      },
+      {
+        "name": "평온",
+        "data": [
+          { "x": "2", "y": 0.025 },
+          { "x": "6", "y": 0.018 },
+          { "x": "12", "y": 0.018 },
+          { "x": "24", "y": 0.008 },
+          { "x": "48", "y": -0.005 },
+          { "x": "72", "y": -0.015 },
+          { "x": "120", "y": -0.020 }
+        ]
+      },
+      {
+        "name": "슬픔",
+        "data": [
+          { "x": "2", "y": 0.008 },
+          { "x": "6", "y": 0.008 },
+          { "x": "12", "y": 0.012 },
+          { "x": "24", "y": 0.012 },
+          { "x": "48", "y": -0.002 },
+          { "x": "72", "y": -0.010 },
+          { "x": "120", "y": 0.015 }
+        ]
+      },
+      {
+        "name": "행복",
+        "data": [
+          { "x": "2", "y": -0.005 },
+          { "x": "6", "y": -0.005 },
+          { "x": "12", "y": -0.008 },
+          { "x": "24", "y": -0.008 },
+          { "x": "48", "y": -0.008 },
+          { "x": "72", "y": -0.010 },
+          { "x": "120", "y": -0.012 }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "120",
+      "y": 0.068,
+      "displayText": "공포 최고: 0.068 (120h)"
+    },
+    "annotations": [
+      {
+        "text": "공포 0.068",
+        "position": { "x": "120", "y": 0.068 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "평온 -0.020",
+        "position": { "x": "120", "y": -0.020 },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": { "x": "2", "y": 0 },
+        "to": { "x": "120", "y": 0 },
+        "label": "기준선 (0)",
+        "color": "#9E9E9E",
+        "style": "dashed"
+      }
+    ]
+  },
+  "patterns": {
+    "trend": "공복 시간이 길어질수록 '공포' 유사도가 단조 증가하고, '평온'은 단조 감소한다. LLM이 수치 크기에 따른 감정 강도를 일관되게 내재화하고 있음을 보여준다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": -0.020,
+      "max": 0.068,
+      "average": 0.007,
+      "latest": 0.068
+    },
+    "changeRates": [
+      { "period": "2h→120h 공포", "percentChange": 1260 },
+      { "period": "2h→120h 평온", "percentChange": -180 }
+    ]
+  },
+  "narrative": {
+    "headline": "LLM, 단식 시간에 비례해 공포 강화·평온 약화 — 수치 의미론 내재화 증거",
+    "keyTakeaways": [
+      "120시간 단식 프롬프트에서 '공포' 코사인 유사도 0.068로 2시간 대비 약 14배 상승",
+      "'평온'은 반대로 0.025에서 -0.020으로 하락, 공포와 역상관 패턴 뚜렷",
+      "'슬픔'과 '행복'은 변동폭이 작아 수치 민감도가 낮은 감정 축으로 분류 가능"
+    ],
+    "sentiment": "neutral"
+  }
+}

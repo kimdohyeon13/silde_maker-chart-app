@@ -1,0 +1,94 @@
+{
+  "id": "hbm-capacity-source",
+  "structure": {
+    "chartType": "bar",
+    "title": "Rubin Ultra, HBM 용량이 1TB로 점프할 가능성",
+    "subtitle": "엔비디아 가속기 세대별 HBM 탑재량 비교 (GB)",
+    "source": "원문 노트 재구성",
+    "xAxis": {
+      "label": "가속기 세대",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "HBM 탑재량",
+      "unit": "GB",
+      "min": 0,
+      "max": 1100
+    },
+    "legend": [
+      {
+        "name": "HBM 탑재량",
+        "color": "#0F4C81",
+        "originalColor": "#0F4C81",
+        "role": "primary",
+        "style": "solid"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "HBM 탑재량",
+        "data": [
+          { "x": "H200 HBM3e", "y": 141, "color": "#939597" },
+          { "x": "B200 HBM3e", "y": 192, "color": "#6667AB" },
+          { "x": "B300 HBM3e", "y": 288, "color": "#6667AB" },
+          { "x": "R200 HBM4", "y": 288, "color": "#0F4C81" },
+          { "x": "Rubin Ultra HBM4e", "y": 1024, "color": "#FF6F61" }
+        ]
+      }
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "Rubin Ultra HBM4e",
+      "y": 1024,
+      "displayText": "1TB"
+    },
+    "annotations": [
+      {
+        "text": "H200: 141GB",
+        "position": { "x": "H200 HBM3e", "y": 141 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "Rubin Ultra: 1,024GB",
+        "position": { "x": "Rubin Ultra HBM4e", "y": 1024 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "HBM 탑재량은 H200 141GB에서 B300 288GB까지 올라온 뒤, Rubin Ultra에서 1TB 수준으로 한 번 더 점프할 가능성이 제기된다. 이는 메모리 수요가 단순 공급 확대보다 더 빠르게 커질 수 있음을 시사한다.",
+    "supportResistance": [
+      { "level": 288, "type": "support", "strength": "moderate" },
+      { "level": 1024, "type": "resistance", "strength": "strong" }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 141,
+      "max": 1024,
+      "average": 386.6,
+      "latest": 1024
+    },
+    "changeRates": [
+      { "period": "H200 -> B200", "percentChange": 36.2 },
+      { "period": "B200 -> B300", "percentChange": 50.0 },
+      { "period": "R200 -> Rubin Ultra", "percentChange": 255.6 }
+    ]
+  },
+  "narrative": {
+    "headline": "차세대 가속기는 칩 성능만이 아니라 HBM 탑재량 자체를 크게 끌어올리며 메모리 수요를 재가속할 수 있습니다.",
+    "keyTakeaways": [
+      "H200의 141GB에서 B300과 R200의 288GB까지 이미 상향이 진행됐습니다.",
+      "Rubin Ultra가 1TB HBM4e를 탑재하면 메모리 콘텐츠는 다시 한 단계 점프합니다.",
+      "이 변화는 HBM뿐 아니라 DRAM과 eSSD를 포함한 전체 메모리 계층 수요 확대로 이어질 수 있습니다."
+    ],
+    "sentiment": "bullish"
+  }
+}

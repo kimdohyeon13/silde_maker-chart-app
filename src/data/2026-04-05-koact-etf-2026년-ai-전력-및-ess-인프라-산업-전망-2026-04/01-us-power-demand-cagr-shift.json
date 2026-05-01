@@ -1,0 +1,84 @@
+{
+  "id": "us-power-demand-cagr-shift",
+  "structure": {
+    "chartType": "bar",
+    "title": "미국 전력 수요, 15년 정체 뒤 AI로 재가속",
+    "subtitle": "미국 발전량 증가율 CAGR 비교",
+    "source": "US EIA(2025.02)",
+    "timeRange": "1950~2024 및 향후 몇 년",
+    "xAxis": {
+      "label": "구간",
+      "type": "category"
+    },
+    "yAxis": {
+      "label": "연평균 증가율",
+      "unit": "%",
+      "min": 0,
+      "max": 6
+    },
+    "legend": [
+      {
+        "name": "CAGR",
+        "originalColor": "#0F4C81",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CAGR",
+        "data": [
+          { "x": "1950~2007", "y": 4.5 },
+          { "x": "2007~2024", "y": 0.2 },
+          { "x": "향후 몇 년", "y": 5.0 }
+        ]
+      }
+    ],
+    "totalDataPoints": 3
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "향후 몇 년",
+      "y": 5.0,
+      "displayText": "연 5% 내외"
+    },
+    "annotations": [
+      {
+        "text": "2007~2024년은 사실상 정체",
+        "position": { "x": "2007~2024", "y": 0.2 },
+        "importance": "critical",
+        "style": "negative"
+      },
+      {
+        "text": "AI·리쇼어링·전기차로 재가속",
+        "position": { "x": "향후 몇 년", "y": 5.0 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "미국 전력 수요는 2007년 이후 거의 멈춰 있었지만, AI 데이터센터와 제조업 리쇼어링으로 다시 구조 성장 구간으로 올라오는 흐름이다.",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.2,
+      "max": 5.0,
+      "average": 3.2,
+      "latest": 5.0
+    },
+    "changeRates": [
+      { "period": "1950~2007 → 2007~2024", "percentChange": -95.6 },
+      { "period": "2007~2024 → 향후 몇 년", "percentChange": 2400.0 }
+    ]
+  },
+  "narrative": {
+    "headline": "미국 전력 수요의 시대 구분은 '고성장 → 정체 → AI 재가속'으로 압축됩니다.",
+    "summary": "1950~2007년 연 4.5% 성장하던 미국 발전량은 2007~2024년 연 0.2%로 사실상 정체됐다. 그러나 향후 몇 년은 연 5% 안팎 성장 전망이 제시되며, 전력 인프라 업황이 교체 수요에서 신규 수요 사이클로 넘어가는 배경이 된다.",
+    "story": "이 차트의 핵심은 절대량보다 속도의 변화다. 시장은 오랫동안 미국 전력 수요를 '성숙 산업'으로 취급했지만, AI 데이터센터와 제조업 리쇼어링은 그 전제를 깨고 있다. 그래서 2026년 투자 포인트는 전력을 싸게 만드는 기업보다, 늘어나는 수요를 빠르게 받쳐줄 수 있는 기업에 더 가까워진다."
+  }
+}

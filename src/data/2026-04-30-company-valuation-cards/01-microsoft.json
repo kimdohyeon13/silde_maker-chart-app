@@ -1,0 +1,108 @@
+{
+  "id": "01-microsoft",
+  "sourceImage": "projects/2026-04-30-company-valuation-cards/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "Microsoft 밸류에이션",
+    "subtitle": "현재가·목표가·성장률·52주 고점 위치를 기업별로 정리",
+    "source": "사용자 제공 이미지, 표 수치 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "지표", "dataType": "text", "isRowHeader": true, "width": "28%" },
+      { "key": "value", "label": "수치", "dataType": "text", "align": "right", "width": "28%" },
+      { "key": "read", "label": "해석", "dataType": "text", "align": "left", "width": "44%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": { "value": "현재가" },
+          "value": { "value": "$424.46" },
+          "read": { "value": "목표가와 52주 고점 대비 아직 낮은 위치" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "애널리스트 목표가" },
+          "value": { "value": "$570.72" },
+          "read": { "value": "현재가 대비 가장 큰 목표가 여력" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "목표가 대비 상승여력" },
+          "value": { "value": "+34.5%", "highlight": "positive" },
+          "read": { "value": "4개사 중 1위" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "Forward P/E" },
+          "value": { "value": "25.7배" },
+          "read": { "value": "Meta보다는 높지만 Amazon보다 낮음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "EPS 성장 예상" },
+          "value": { "value": "22.4%" },
+          "read": { "value": "높은 성장률이 상승여력을 뒷받침" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "52주 고점" },
+          "value": { "value": "$555.45" },
+          "read": { "value": "목표가는 52주 고점보다 높음" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": { "value": "고점 대비 현재가" },
+          "value": { "value": "76.4% / -23.6%" },
+          "read": { "value": "고점 회복 여지도 가장 큼" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Microsoft는 여력이 크다",
+    "subMessage": "상승여력 34.5%, 고점 대비 -23.6%가 핵심이다",
+    "headline": "Microsoft는 목표가 기준 상승여력과 52주 고점 회복 여지가 모두 가장 크다.",
+    "summary": "Microsoft는 현재가 $424.46, 목표가 $570.72로 목표가 대비 상승여력이 +34.5%다. 52주 고점 대비 현재가는 76.4% 수준이라 회복 여지도 가장 크다.",
+    "story": "Microsoft는 4개사 중 가장 명확한 회복 여력 후보로 읽힌다.",
+    "keyTakeaways": [
+      "상승여력은 +34.5%로 4개사 중 가장 높다.",
+      "EPS 성장 예상도 22.4%로 높다.",
+      "52주 고점 대비 -23.6%라 회복 여지가 남아 있다."
+    ],
+    "questionsRaised": ["목표가 상향 여력이 실제 실적 성장으로 확인되는가?"],
+    "viewerAction": "Microsoft는 목표가 여력과 고점 회복 여지를 함께 확인한다.",
+    "contextualNotes": ["수치는 첨부 이미지의 원본 표를 사용했다."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "상승여력 +34.5%", "reason": "4개사 중 목표가 대비 여력이 가장 큼" },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 2, "col": "value", "reason": "상승여력 1위" }
+    ]
+  }
+}

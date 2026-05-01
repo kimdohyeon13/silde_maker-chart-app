@@ -1,0 +1,104 @@
+{
+  "id": "06-company-summary",
+  "sourceImage": "projects/2026-04-30-mega-cap-valuation-tables/input/source-table.png",
+  "analyzedAt": "2026-04-30T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "기업별 투자 포인트 정리",
+    "subtitle": "현재가·목표가·상승여력·Forward P/E·EPS 성장률·52주 고점 위치",
+    "source": "사용자 제공 이미지, 표 수치 재구성"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "company", "label": "기업", "dataType": "text", "isRowHeader": true, "width": "18%" },
+      { "key": "point", "label": "핵심 판단", "dataType": "text", "align": "left", "width": "30%" },
+      { "key": "upside", "label": "목표가 여력", "dataType": "percent", "align": "right", "width": "14%" },
+      { "key": "growthValuation", "label": "성장 / P/E", "dataType": "text", "align": "right", "width": "18%" },
+      { "key": "highPosition", "label": "고점 위치", "dataType": "text", "align": "left", "width": "20%" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "company": { "value": "Microsoft" },
+          "point": { "value": "상승여력 1위. 고점 회복 여지도 가장 큼" },
+          "upside": { "value": 34.5, "displayValue": "+34.5%", "highlight": "positive", "badge": "1위" },
+          "growthValuation": { "value": "EPS 22.4% / 25.7배" },
+          "highPosition": { "value": "76.4% / -23.6%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Alphabet" },
+          "point": { "value": "고점에 거의 붙어 있어 추가 여력은 제한적" },
+          "upside": { "value": 8.2, "displayValue": "+8.2%" },
+          "growthValuation": { "value": "EPS 6.5% / 30.4배" },
+          "highPosition": { "value": "98.4% / -1.6%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Meta" },
+          "point": { "value": "EPS 성장률 1위, P/E는 4개사 중 최저" },
+          "upside": { "value": 27.8, "displayValue": "+27.8%" },
+          "growthValuation": { "value": "EPS 26.6% / 22.6배", "highlight": "positive" },
+          "highPosition": { "value": "84.0% / -16.0%" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": { "value": "Amazon" },
+          "point": { "value": "고점에 가장 근접, P/E 부담은 가장 큼" },
+          "upside": { "value": 8.0, "displayValue": "+8.0%" },
+          "growthValuation": { "value": "EPS 9.2% / 33.2배" },
+          "highPosition": { "value": "98.9% / -1.1%" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "MS·Meta가 더 선명하다",
+    "subMessage": "상승여력, 성장률, 밸류에이션이 기업별로 갈린다",
+    "headline": "Microsoft는 목표가 여력이 가장 크고, Meta는 성장 대비 밸류에이션 효율이 가장 좋다.",
+    "summary": "Microsoft는 +34.5% 상승여력과 -23.6% 고점 대비 낙폭이 돋보인다. Meta는 EPS 성장률 26.6%와 Forward P/E 22.6배가 함께 보여 효율성이 높다. Alphabet과 Amazon은 현재가가 52주 고점에 가까워 단기 추가 여력은 제한적으로 보인다.",
+    "story": "원본 표를 지표별 나열에서 기업별 판단표로 바꾸면, 각 종목의 성격이 더 빨리 읽힌다. Microsoft는 회복 여력, Meta는 성장 효율, Alphabet과 Amazon은 고점 근접이라는 메시지가 분리된다.",
+    "keyTakeaways": [
+      "Microsoft는 목표가 기준 상승여력과 고점 회복 여지가 가장 크다.",
+      "Meta는 EPS 성장률이 가장 높고 Forward P/E는 가장 낮다.",
+      "Alphabet과 Amazon은 현재가가 52주 고점에 거의 붙어 있다."
+    ],
+    "questionsRaised": [
+      "Microsoft의 목표가 여력이 실적 회복으로 이어지는가?",
+      "Meta의 높은 EPS 성장률이 현재 밸류에이션을 계속 정당화하는가?",
+      "고점권 종목은 추가 촉매가 충분한가?"
+    ],
+    "viewerAction": "각 기업을 상승여력, 성장률, 밸류에이션, 고점 위치로 나눠 비교한다.",
+    "contextualNotes": [
+      "현재가, 목표가, Forward P/E, EPS 성장률, 52주 고점 위치는 첨부 이미지의 표 수치를 사용했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "MS는 여력, Meta는 효율",
+      "reason": "두 종목의 강점이 서로 다르지만 가장 명확하게 보임"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": ["#8B95A1", "#D1D6DB"],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "upside", "reason": "목표가 대비 상승여력 1위" },
+      { "row": 2, "col": "growthValuation", "reason": "EPS 성장률 1위이면서 가장 낮은 Forward P/E" }
+    ]
+  }
+}
