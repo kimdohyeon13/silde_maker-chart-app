@@ -24,6 +24,7 @@
 import React from "react";
 import type { VisualAnalysis } from "@/lib/analysis/schema";
 import { isChartAnalysis, isTableAnalysis, isInfographicAnalysis } from "@/lib/analysis/schema";
+import { getAnalysisThemeMode } from "@/lib/style-presets";
 import type { ThemeMode } from "@/lib/theme/toss-theme";
 import ChartRouter from "./charts/ChartRouter";
 import ChartWrapper from "./charts/ChartWrapper";
@@ -47,12 +48,14 @@ export default function ContentRouter({
   width,
   height = 350,
 }: ContentRouterProps) {
+  const renderTheme = getAnalysisThemeMode(analysis, theme);
+
   // ── 기존 차트 → ChartRouter에 그대로 위임 ──
   if (isChartAnalysis(analysis)) {
     return (
       <ChartRouter
         analysis={analysis}
-        theme={theme}
+        theme={renderTheme}
         showInsights={showInsights}
         showHeader={showHeader}
         width={width}
@@ -66,12 +69,12 @@ export default function ContentRouter({
     return (
       <ChartWrapper
         analysis={analysis}
-        theme={theme}
+        theme={renderTheme}
         showInsights={showInsights}
         showHeader={showHeader}
         width={width}
       >
-        <TossTable analysis={analysis} theme={theme} />
+        <TossTable analysis={analysis} theme={renderTheme} />
       </ChartWrapper>
     );
   }
@@ -81,12 +84,12 @@ export default function ContentRouter({
     return (
       <ChartWrapper
         analysis={analysis}
-        theme={theme}
+        theme={renderTheme}
         showInsights={showInsights}
         showHeader={showHeader}
         width={width}
       >
-        <TossInfoCard analysis={analysis} theme={theme} />
+        <TossInfoCard analysis={analysis} theme={renderTheme} />
       </ChartWrapper>
     );
   }

@@ -7,7 +7,7 @@
  *
  * 토스 스타일 표의 핵심:
  * 1. 세로선 없음 — 가로선만으로 행 구분 (미니멀)
- * 2. 넉넉한 여백 — 빽빽하지 않게, 숨 쉴 공간 확보
+ * 2. 압축 여백 — 발표 장표에서 표가 지나치게 길어지지 않게 조정
  * 3. 숫자는 모노스페이스 — 정렬이 맞아야 비교 가능
  * 4. 강조는 색상으로 — 볼드/밑줄 대신 배경색으로 시선 유도
  * 5. 합계/소계 행 구분 — 시각적 위계 표현
@@ -21,6 +21,11 @@
 
 import React from "react";
 import type { TableAnalysis, TableCell, TableColumn, TableRow } from "@/lib/analysis/schema";
+import {
+  getAnalysisStylePreset,
+  getAnalysisThemeMode,
+  getPresetColors,
+} from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
 
@@ -33,15 +38,37 @@ export default function TossTable({
   analysis,
   theme: themeMode = "dark",
 }: TossTableProps) {
-  const theme = getTheme(themeMode);
-  const { colors, typography } = theme;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
+  const theme = getTheme(renderThemeMode);
+  const preset = getAnalysisStylePreset(analysis);
+  const colors = getPresetColors(preset, renderThemeMode);
+  const { typography } = theme;
   const { tableData } = analysis;
   const { columns, rows } = tableData;
-  const ts = chartSettings.table;
-  const isDark = themeMode === "dark";
+  const ts = {
+    ...chartSettings.table,
+    ...tableData.visualOptions,
+    rowHeight:
+      tableData.visualOptions?.rowHeight ??
+      Math.max(30, chartSettings.table.rowHeight + preset.table.rowHeightDelta),
+    zebraStripe:
+      tableData.visualOptions?.zebraStripe ??
+      preset.table.zebraStripe ??
+      chartSettings.table.zebraStripe,
+    highlightMode:
+      tableData.visualOptions?.highlightMode ??
+      preset.table.highlightMode ??
+      "background",
+    fontSize: {
+      ...chartSettings.table.fontSize,
+      ...tableData.visualOptions?.fontSize,
+    },
+  };
+  const isDark = renderThemeMode === "dark";
 
   // 셀 강조 배경색 가져오기
   function getCellBg(highlight?: TableCell["highlight"]): string | undefined {
+    if (ts.highlightMode === "text") return undefined;
     if (!highlight || highlight === "none") return undefined;
     // 라이트 모드에서도 같은 반투명 색상을 사용 (배경과 잘 어울림)
     return ts.highlightCellBg[highlight as keyof typeof ts.highlightCellBg];
@@ -113,20 +140,23 @@ export default function TossTable({
     return (
       <td
         key={col.key}
-        colSpan={cell.colSpan}
-        rowSpan={cell.rowSpan}
-        style={{
-          padding: ts.cellPadding,
-          textAlign: getAlign(col),
-          fontFamily: isNumericType(col) ? typography.fontFamily.mono : typography.fontFamily.sans,
+          colSpan={cell.colSpan}
+          rowSpan={cell.rowSpan}
+          style={{
+            padding: ts.cellPadding,
+            textAlign: getAlign(col),
+          fontFamily: ts.fontFamily ?? (isNumericType(col) ? typography.fontFamily.mono : typography.fontFamily.sans),
           fontSize: isTotal ? ts.fontSize.total : ts.fontSize.body,
-          fontWeight: isTotal || col.isRowHeader ? 700 : isNumericType(col) ? 600 : 500,
+          fontWeight: isTotal || col.isRowHeader ? 800 : isNumericType(col) ? 800 : 700,
           color: getCellColor(cell.highlight),
           background: cellBg,
-          borderBottom: `1.5px solid ${isDark ? ts.borderColor.dark : ts.borderColor.light}`,
-          whiteSpace: isNumericType(col) ? "nowrap" : "normal",
+          borderBottom: `1.5px solid ${colors.borderSubtle}`,
+          whiteSpace: displayText.includes("\n") || !isNumericType(col) ? "pre-line" : "nowrap",
+          wordBreak: "keep-all",
+          overflowWrap: isNumericType(col) ? "normal" : "break-word",
           lineHeight: ts.lineHeight,
           minHeight: ts.rowHeight,
+          height: ts.rowHeight,
           verticalAlign: "top",
           position: "relative",
         }}
@@ -159,12 +189,13 @@ export default function TossTable({
       style={{
         width: "100%",
         overflowX: "auto",
-        fontFamily: typography.fontFamily.sans,
+        fontFamily: ts.fontFamily ?? typography.fontFamily.sans,
       }}
     >
       <table
         style={{
           width: "100%",
+          tableLayout: "fixed",
           borderCollapse: "collapse",
           // 세로선 없음! 토스 스타일의 핵심
           borderSpacing: 0,
@@ -195,15 +226,19 @@ export default function TossTable({
                 style={{
                   padding: ts.cellPadding,
                   textAlign: getAlign(col),
-                  fontFamily: typography.fontFamily.sans,
+                  fontFamily: ts.fontFamily ?? typography.fontFamily.sans,
                   fontSize: ts.fontSize.header,
-                  fontWeight: 700,
+                  fontWeight: 800,
                   color: colors.textSecondary,
-                  background: isDark ? ts.headerBg.dark : ts.headerBg.light,
-                  borderBottom: `2px solid ${isDark ? ts.borderColor.dark : ts.borderColor.light}`,
-                  whiteSpace: "normal",
+                  background: isDark
+                    ? colors.surfaceHover
+                    : colors.surfaceHover,
+                  borderBottom: `2px solid ${colors.borderSubtle}`,
+                  whiteSpace: "pre-line",
                   lineHeight: ts.lineHeight,
+                  height: ts.rowHeight,
                   verticalAlign: "bottom",
+                  textTransform: preset.table.headerTransform === "uppercase" ? "uppercase" : "none",
                 }}
               >
                 {col.label}
@@ -230,7 +265,7 @@ export default function TossTable({
                     style={{
                       height: 1,
                       padding: 0,
-                      background: isDark ? ts.borderColor.dark : ts.borderColor.light,
+                      background: colors.borderSubtle,
                     }}
                   />
                 </tr>
@@ -245,13 +280,14 @@ export default function TossTable({
                   <td
                     colSpan={columns.length}
                     style={{
-                      padding: "12px 16px 6px",
+                      padding: "8px 14px 4px",
                       fontSize: ts.fontSize.groupHeader,
                       fontWeight: 800,
+                      fontFamily: ts.fontFamily ?? typography.fontFamily.sans,
                       color: colors.textSecondary,
                       letterSpacing: "0.05em",
                       textTransform: "uppercase" as const,
-                      borderBottom: `1px solid ${isDark ? ts.borderColor.dark : ts.borderColor.light}`,
+                      borderBottom: `1px solid ${colors.borderSubtle}`,
                     }}
                   >
                     {firstCell?.displayValue ?? String(firstCell?.value ?? "")}
@@ -269,7 +305,7 @@ export default function TossTable({
                 style={{
                   background: getRowBg(row, rowIndex),
                   borderTop: isTotal
-                    ? `2px solid ${isDark ? ts.borderColor.dark : ts.borderColor.light}`
+                    ? `2px solid ${colors.borderSubtle}`
                     : undefined,
                 }}
               >

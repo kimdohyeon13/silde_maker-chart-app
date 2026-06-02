@@ -21,9 +21,12 @@
 
 import React from "react";
 import type { ChartAnalysis } from "@/lib/analysis/schema";
+import { getAnalysisThemeMode } from "@/lib/style-presets";
 import type { ThemeMode } from "@/lib/theme/toss-theme";
 import ChartWrapper from "./ChartWrapper";
+import PanelGrid from "./PanelGrid";
 import TossLineChart from "./TossLineChart";
+import TossComboChart from "./TossComboChart";
 import TossBarChart from "./TossBarChart";
 import TossDonutChart from "./TossDonutChart";
 import TossCandleChart from "./TossCandleChart";
@@ -46,43 +49,48 @@ export default function ChartRouter({
   width,
   height = 350,
 }: ChartRouterProps) {
-  const { chartType } = analysis.structure;
+  const { chartType, panels } = analysis.structure;
+  const renderTheme = getAnalysisThemeMode(analysis, theme);
+
+  // 다중 패널(스몰멀티플) 분기 (P0-2)
+  // → structure.panels[]가 있으면 단일 차트 대신 PanelGrid로 패널별 독립축 격자를 그린다.
+  // → 없으면(undefined/빈 배열) 아래 기존 단일차트 경로를 그대로 사용한다(회귀 금지).
+  const hasPanels = Array.isArray(panels) && panels.length > 0;
 
   /**
    * 차트 타입 → 컴포넌트 매핑
    *
    * 현재 구현된 4종:
    * - line, area → TossLineChart (선 차트)
+   * - combo → TossComboChart (막대+선 조합 차트)
    * - bar, bar_horizontal, stacked_bar, waterfall → TossBarChart (막대 차트)
    * - donut, pie, treemap → TossDonutChart (도넛 차트)
    * - candle → TossCandleChart (캔들 차트)
    *
    * 아직 미구현인 것들은 가장 비슷한 차트로 대체:
    * - scatter, bubble → TossScatterChart
-   * - combo → 선 차트로 대체
    * - heatmap, radar, funnel → 막대 차트로 대체
    */
   function renderChart() {
+    // 다중 패널이 있으면 단일 차트 switch보다 우선해서 PanelGrid로 그린다.
+    if (hasPanels) {
+      return (
+        <PanelGrid
+          analysis={analysis}
+          panels={panels!}
+          theme={renderTheme}
+          height={height}
+        />
+      );
+    }
+
     switch (chartType) {
-      // ── 선 차트 계열 ──
-      case "line":
-      case "area":
+      // ── 콤보 차트 ──
       case "combo":
         return (
-          <TossLineChart
+          <TossComboChart
             analysis={analysis}
-            theme={theme}
-            height={height}
-          />
-        );
-
-      // ── 산점도/버블 차트 계열 ──
-      case "scatter":
-      case "bubble":
-        return (
-          <TossScatterChart
-            analysis={analysis}
-            theme={theme}
+            theme={renderTheme}
             height={height}
           />
         );
@@ -98,7 +106,29 @@ export default function ChartRouter({
         return (
           <TossBarChart
             analysis={analysis}
-            theme={theme}
+            theme={renderTheme}
+            height={height}
+          />
+        );
+
+      // ── 선 차트 계열 ──
+      case "line":
+      case "area":
+        return (
+          <TossLineChart
+            analysis={analysis}
+            theme={renderTheme}
+            height={height}
+          />
+        );
+
+      // ── 산점도/버블 차트 계열 ──
+      case "scatter":
+      case "bubble":
+        return (
+          <TossScatterChart
+            analysis={analysis}
+            theme={renderTheme}
             height={height}
           />
         );
@@ -110,7 +140,7 @@ export default function ChartRouter({
         return (
           <TossDonutChart
             analysis={analysis}
-            theme={theme}
+            theme={renderTheme}
             height={height}
           />
         );
@@ -120,7 +150,7 @@ export default function ChartRouter({
         return (
           <TossCandleChart
             analysis={analysis}
-            theme={theme}
+            theme={renderTheme}
             height={height}
           />
         );
@@ -130,7 +160,7 @@ export default function ChartRouter({
         return (
           <TossLineChart
             analysis={analysis}
-            theme={theme}
+            theme={renderTheme}
             height={height}
           />
         );
@@ -140,7 +170,7 @@ export default function ChartRouter({
   return (
     <ChartWrapper
       analysis={analysis}
-      theme={theme}
+      theme={renderTheme}
       showInsights={showInsights}
       showHeader={showHeader}
       width={width}

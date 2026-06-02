@@ -24,6 +24,11 @@ import React from "react";
 import type { VisualAnalysis } from "@/lib/analysis/schema";
 import { isChartAnalysis, isInfographicAnalysis } from "@/lib/analysis/schema";
 import { getDisplayMessages } from "@/lib/analysis/message-agent";
+import {
+  getAnalysisStylePreset,
+  getAnalysisThemeMode,
+  getPresetColors,
+} from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 
 interface ChartWrapperProps {
@@ -43,6 +48,14 @@ interface ChartWrapperProps {
   height?: number;
 }
 
+function getFidelityNotice(analysis: VisualAnalysis): string | null {
+  const fidelity = analysis.preserveIntent?.dataFidelity;
+  if (fidelity === "exact") return "원본 숫자 보존";
+  if (fidelity === "source-visible") return null;
+  if (fidelity === "directional") return null;
+  return null;
+}
+
 export default function ChartWrapper({
   analysis,
   theme: themeMode = "dark",
@@ -52,11 +65,16 @@ export default function ChartWrapper({
   width = "100%",
   height,
 }: ChartWrapperProps) {
-  const theme = getTheme(themeMode);
-  const { colors } = theme;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
+  const theme = getTheme(renderThemeMode);
+  const preset = getAnalysisStylePreset(analysis);
+  const colors = getPresetColors(preset, renderThemeMode);
   const { structure, emphasis } = analysis;
   const { headMessage, subMessage, metaMessage } = getDisplayMessages(analysis);
+  const fidelityNotice = getFidelityNotice(analysis);
   const isCompactExportCard = !showHeader && !showInsights;
+  const exportOptions = (analysis as { exportOptions?: { sourceReplica?: boolean } }).exportOptions ?? {};
+  const isSourceReplica = !!exportOptions.sourceReplica;
   const isNewsBrief =
     isInfographicAnalysis(analysis) &&
     analysis.infographicData.subType === "news_brief";
@@ -67,10 +85,11 @@ export default function ChartWrapper({
         width: typeof width === "number" ? `${width}px` : width,
         // export 모드(헤더/인사이트 모두 꺼짐)에서는 투명 → 상위 div의 배경색 사용
         background: isCompactExportCard ? "transparent" : colors.surface,
-        borderRadius: isCompactExportCard ? "7px 7px 0 0" : 16,
-        border: `1px solid ${colors.border}`,
+        borderRadius: isSourceReplica ? 0 : isCompactExportCard ? `${preset.card.borderRadius}px ${preset.card.borderRadius}px 0 0` : preset.card.borderRadius,
+        border: isSourceReplica ? "0" : `${preset.card.borderWidth}px solid ${colors.border}`,
+        boxShadow: isCompactExportCard ? "none" : preset.card.shadow,
         overflow: "hidden",
-        fontFamily: theme.typography.fontFamily.sans,
+        fontFamily: preset.typography.fontFamily ?? theme.typography.fontFamily.sans,
       }}
     >
       {/* ── 헤더: 제목 + 헤드라인 (showHeader=false면 숨김) ── */}
@@ -80,10 +99,10 @@ export default function ChartWrapper({
             style={{
               color: colors.textPrimary,
               fontSize: theme.typography.fontSize.chartTitle,
-              fontWeight: theme.typography.fontSize.chartTitleWeight,
+              fontWeight: preset.typography.titleWeight,
               margin: 0,
               lineHeight: 1.3,
-              letterSpacing: "-0.03em",
+              letterSpacing: preset.typography.titleLetterSpacing,
             }}
           >
             {headMessage}
@@ -94,7 +113,7 @@ export default function ChartWrapper({
               style={{
                 color: colors.textSecondary,
                 fontSize: theme.typography.fontSize.messageSubtitle,
-                fontWeight: theme.typography.fontSize.messageSubtitleWeight,
+                fontWeight: preset.typography.subtitleWeight,
                 margin: "8px 0 0",
                 lineHeight: 1.5,
               }}
@@ -106,7 +125,10 @@ export default function ChartWrapper({
           {metaMessage && (
             <p
               style={{
-                color: colors.textTertiary,
+                // 부제/메타 텍스트가 textTertiary(옅은 회색)라 거의 안 보였음(D7-b).
+                // textSecondary로 올려 대비를 확보한다. 폰트 크기/굵기는 그대로 두어
+                // 제목·본문 대비 위계는 유지하면서 판독 가능하게 만든다.
+                color: colors.textSecondary,
                 fontSize: theme.typography.fontSize.chartSubtitle,
                 fontWeight: theme.typography.fontSize.chartSubtitleWeight,
                 margin: "8px 0 0",
@@ -133,7 +155,7 @@ export default function ChartWrapper({
                   fontSize: theme.typography.fontSize.heroValue,
                   fontWeight: theme.typography.fontSize.heroValueWeight,
                   fontFamily: theme.typography.fontFamily.mono,
-                  letterSpacing: "-0.02em",
+                  letterSpacing: 0,
                 }}
               >
                 {emphasis.focusPoint.displayText}
@@ -164,6 +186,24 @@ export default function ChartWrapper({
                   {analysis.statistics.changeRates[0].percentChange.toFixed(1)}%
                 </span>
               )}
+
+              {fidelityNotice && (
+                <span
+                  style={{
+                    alignSelf: "center",
+                    padding: "5px 10px",
+                    borderRadius: 6,
+                    border: `1px solid ${colors.borderSubtle}`,
+                    color: colors.textTertiary,
+                    fontSize: "14px",
+                    fontWeight: 800,
+                    letterSpacing: 0,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {fidelityNotice}
+                </span>
+              )}
             </div>
           )}
         </div>
@@ -172,7 +212,7 @@ export default function ChartWrapper({
       {/* ── 차트 영역 ── */}
       <div
         style={{
-          padding: isCompactExportCard ? "12px 8px" : "16px 12px",
+          padding: isSourceReplica ? 0 : isCompactExportCard ? "6px 4px" : "16px 12px",
           height: height || "auto",
         }}
       >

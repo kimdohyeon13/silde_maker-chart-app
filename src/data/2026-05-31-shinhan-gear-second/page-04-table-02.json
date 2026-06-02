@@ -1,0 +1,208 @@
+{
+  "id": "gear-second-page-04-table-02",
+  "sourceImage": "input/08-page_04_table_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "한 회사가 멈추면 점유율을 잃을 수 있어 모두 투자 확대를 선택하기 쉬운 보상 구조",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한글화",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 표 구조와 셀 내용을 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 신한투자증권",
+    "mode": "faithful",
+    "originalTitle": "죄수의 딜레마 보상 구조 관점에서 본 AI Capex"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "chart-shard-04-owner-check",
+      "label": "Shard 04 범위 검수",
+      "status": "pass",
+      "detail": "원 도식의 핵심인 협력/배신 보상 구조와 전략 결론을 표 형태로 보존했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "contentType": "table",
+  "tableSubType": "strategy_matrix",
+  "structure": {
+    "title": "죄수의 딜레마 보상 구조 관점에서 본 AI Capex",
+    "subtitle": "플레이어의 협력·배신 선택에 따른 보상 구조와 전략",
+    "source": "자료: 신한투자증권"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "choice",
+        "label": "Player 1 선택",
+        "dataType": "text",
+        "width": "20%",
+        "isRowHeader": true,
+        "align": "center"
+      },
+      {
+        "key": "cooperate",
+        "label": "Player 2 협력",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left"
+      },
+      {
+        "key": "defect",
+        "label": "Player 2 배신",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left"
+      },
+      {
+        "key": "strategy",
+        "label": "전략 해석",
+        "dataType": "text",
+        "width": "24%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "choice": {
+            "value": "협력",
+            "displayValue": "Player 1 협력"
+          },
+          "cooperate": {
+            "value": "둘 모두 적정 투자. 산업 전체 ROIC가 높아짐",
+            "displayValue": "둘 모두 적정 투자\n산업 ROIC 방어",
+            "highlight": "positive"
+          },
+          "defect": {
+            "value": "Player 2는 점유율을 확대하고 Player 1은 경쟁에서 밀림",
+            "displayValue": "Player 2 최상\nPlayer 1 최악",
+            "highlight": "negative"
+          },
+          "strategy": {
+            "value": "혼자 협력하면 비대칭 손실을 감수",
+            "displayValue": "혼자 멈추기 어려움"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "choice": {
+            "value": "배신",
+            "displayValue": "Player 1 배신"
+          },
+          "cooperate": {
+            "value": "Player 1은 점유율을 확대하고 Player 2는 경쟁에서 밀림",
+            "displayValue": "Player 1 최상\nPlayer 2 최악",
+            "highlight": "positive"
+          },
+          "defect": {
+            "value": "둘 모두 AI Capex 경쟁. GPU, 메모리, 전력 소진",
+            "displayValue": "양쪽 모두 경쟁\n비용 압박 확대",
+            "highlight": "warning"
+          },
+          "strategy": {
+            "value": "상대가 무엇을 하든 투자 확대가 유리해지는 구조",
+            "displayValue": "치킨게임 압력"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 76,
+      "zebraStripe": true,
+      "highlightMode": "cell",
+      "cellPadding": "12px 14px",
+      "fontSize": {
+        "header": "16px",
+        "body": "15px",
+        "total": "15px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "죄수의 딜레마 보상 구조 관점에서 본 AI Capex",
+    "subMessage": "플레이어의 협력·배신 선택에 따른 보상 구조와 전략",
+    "headline": "죄수의 딜레마 보상 구조 관점에서 본 AI Capex",
+    "summary": "플레이어의 협력·배신 선택에 따른 보상 구조와 전략",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "한 회사가 멈추면 점유율을 잃을 수 있어 모두 투자 확대를 선택하기 쉬운 보상 구조",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 게임이론 보상 구조"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "죄수의 딜레마 보상 구조 관점에서 본 AI Capex",
+      "reason": "플레이어의 협력·배신 선택에 따른 보상 구조와 전략"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "analyzedAt": "2026-05-31T00:00:00+09:00"
+}

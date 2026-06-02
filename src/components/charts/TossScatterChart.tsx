@@ -24,8 +24,15 @@ import {
   Cell,
 } from "recharts";
 import type { ChartAnalysis, DataPoint } from "@/lib/analysis/schema";
-import { getTheme, getRechartsStyle, type ThemeMode } from "@/lib/theme/toss-theme";
+import {
+  getAnalysisStylePreset,
+  getAnalysisThemeMode,
+  getPresetColors,
+  getPresetRechartsStyle,
+} from "@/lib/style-presets";
+import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
+import { getTickUnit, formatValueWithUnit, getAxisFractionDigits } from "@/lib/chart-format";
 
 interface TossScatterChartProps {
   analysis: ChartAnalysis;
@@ -44,6 +51,7 @@ interface ScatterPoint {
   zValue: number;
   fill: string;
   labelPosition: LabelPosition;
+  showLabel: boolean;
 }
 
 type ExtendedDataPoint = DataPoint & {
@@ -52,14 +60,8 @@ type ExtendedDataPoint = DataPoint & {
   z?: number;
   color?: string;
   labelPosition?: LabelPosition;
+  showLabel?: boolean;
 };
-
-function formatPercent(value: number): string {
-  return `${value.toLocaleString("ko-KR", {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
-  })}%`;
-}
 
 export default function TossScatterChart({
   analysis,
@@ -68,9 +70,11 @@ export default function TossScatterChart({
   height = 350,
   animated = true,
 }: TossScatterChartProps) {
-  const theme = getTheme(themeMode);
-  const styles = getRechartsStyle(themeMode);
-  const { colors } = theme;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
+  const theme = getTheme(renderThemeMode);
+  const preset = getAnalysisStylePreset(analysis);
+  const styles = getPresetRechartsStyle(analysis, themeMode);
+  const colors = getPresetColors(preset, renderThemeMode);
 
   const firstSeries = analysis.data.series[0];
   if (!firstSeries) return null;
@@ -86,11 +90,40 @@ export default function TossScatterChart({
       zValue: extended.z ?? 12,
       fill: extended.color ?? legendColor ?? colors.series[index % colors.series.length],
       labelPosition: extended.labelPosition ?? "top",
+      showLabel: extended.showLabel !== false,
     };
   });
 
-  const xUnit = analysis.structure.xAxis.unit ?? "";
-  const yUnit = analysis.structure.yAxis.unit ?? "";
+  const xAxisLabel = analysis.structure.xAxis.label;
+  const yAxisLabel = analysis.structure.yAxis.label;
+  const xMin = analysis.structure.xAxis.min;
+  const xMax = analysis.structure.xAxis.max;
+  const yMin = analysis.structure.yAxis.min;
+  const yMax = analysis.structure.yAxis.max;
+
+  // 축 단위를 "눈금에 붙여도 되는 짧은 단위"로 정제한다.
+  // → %면 %가 붙고, 비었거나 긴/기준 단위면 빈 문자열(숫자만 표시)이 된다.
+  //   덕분에 배수/포인트/연도 산점도에서 "2024%"처럼 잘못된 %가 붙지 않는다.
+  const xTickUnit = getTickUnit(analysis.structure.xAxis.unit, xAxisLabel);
+  const yTickUnit = getTickUnit(analysis.structure.yAxis.unit, yAxisLabel);
+  // 축별 소수 자릿수(눈금 간격 기반). 산점도는 도메인 min/max만 알 수 있어 그것으로 추정.
+  const xFractionDigits = getAxisFractionDigits(xMin, xMax);
+  const yFractionDigits = getAxisFractionDigits(yMin, yMax);
+
+  // 0 기준선 라벨: 단위가 '%'일 때만 "0%", 그 외에는 "0".
+  const xZeroLabel = xTickUnit === "%" ? "0%" : "0";
+  const yZeroLabel = yTickUnit === "%" ? "0%" : "0";
+
+  const showXZeroLine =
+    typeof xMin === "number" && typeof xMax === "number" && xMin < 0 && xMax > 0;
+  const showYZeroLine =
+    typeof yMin === "number" && typeof yMax === "number" && yMin < 0 && yMax > 0;
+
+  // D7 수정: 두 0기준선이 동시에 그려질 때 '0%' 라벨이 2개(좌상단·중앙우측) 떠
+  //          잡음처럼 보였다. 라벨 위치를 축 쪽으로 분리하고, 둘 다 켜질 때는
+  //          한쪽(X 0선)은 라벨 없이 선만 그려 중복 표기를 없앤다.
+  //          두 선은 원점에서 눈에 띄게 교차하므로 Y축 좌측 끝 라벨 하나로 0 기준이 충분히 전달된다.
+  const showBothZeroLines = showXZeroLine && showYZeroLine;
 
   return (
     <ResponsiveContainer width={width} height={height}>
@@ -114,7 +147,10 @@ export default function TossScatterChart({
             analysis.structure.xAxis.min ?? "auto",
             analysis.structure.xAxis.max ?? "auto",
           ]}
-          tickFormatter={(value) => formatPercent(Number(value))}
+          tickFormatter={(value) =>
+            formatValueWithUnit(Number(value), xTickUnit, xFractionDigits)
+          }
+          tickCount={6}
         />
 
         <YAxis
@@ -127,7 +163,10 @@ export default function TossScatterChart({
             analysis.structure.yAxis.min ?? "auto",
             analysis.structure.yAxis.max ?? "auto",
           ]}
-          tickFormatter={(value) => formatPercent(Number(value))}
+          tickFormatter={(value) =>
+            formatValueWithUnit(Number(value), yTickUnit, yFractionDigits)
+          }
+          tickCount={6}
         />
 
         <ZAxis
@@ -139,40 +178,61 @@ export default function TossScatterChart({
         <Tooltip
           {...styles.tooltip}
           formatter={(value, name) => {
-            if (name === "xValue") return [`${formatPercent(Number(value))}${xUnit && xUnit !== "%" ? ` ${xUnit}` : ""}`, "고점 대비 하락"];
-            if (name === "yValue") return [`${formatPercent(Number(value))}${yUnit && yUnit !== "%" ? ` ${yUnit}` : ""}`, "목표가 상승여력"];
-            if (name === "zValue") return [formatPercent(Number(value)), "EPS 성장 예상"];
+            // 툴팁은 축 단위를 그대로 반영한다(%면 %, 배수/포인트면 해당 단위, 없으면 숫자만).
+            if (name === "xValue")
+              return [
+                formatValueWithUnit(Number(value), analysis.structure.xAxis.unit ?? "", xFractionDigits),
+                xAxisLabel,
+              ];
+            if (name === "yValue")
+              return [
+                formatValueWithUnit(Number(value), analysis.structure.yAxis.unit ?? "", yFractionDigits),
+                yAxisLabel,
+              ];
+            // 버블 크기(zValue)는 단위 없는 상대 크기값이라 숫자만 표시.
+            if (name === "zValue") return [formatValueWithUnit(Number(value)), "버블 크기"];
             return [String(value), String(name)];
           }}
           labelFormatter={() => ""}
           cursor={{ stroke: colors.textTertiary, strokeDasharray: "4 4" }}
         />
 
-        <ReferenceLine
-          x={10}
-          stroke={colors.border}
-          strokeDasharray="6 6"
-          label={{
-            value: "고점 대비 10%",
-            position: "insideTop",
-            fill: colors.textTertiary,
-            fontSize: 18,
-            fontWeight: 700,
-          }}
-        />
+        {showXZeroLine && (
+          <ReferenceLine
+            x={0}
+            stroke={colors.border}
+            strokeDasharray="6 6"
+            // X축 0선(세로선): 라벨은 X축 근처(아래)에 둔다.
+            // 단, 두 0선이 동시에 켜질 때는 라벨을 생략해 Y선 라벨과의 '0%' 중복을 없앤다.
+            label={
+              showBothZeroLines
+                ? undefined
+                : {
+                    value: xZeroLabel,
+                    position: "insideBottom",
+                    fill: colors.textTertiary,
+                    fontSize: 18,
+                    fontWeight: 700,
+                  }
+            }
+          />
+        )}
 
-        <ReferenceLine
-          y={20}
-          stroke={colors.border}
-          strokeDasharray="6 6"
-          label={{
-            value: "상승여력 20%",
-            position: "right",
-            fill: colors.textTertiary,
-            fontSize: 18,
-            fontWeight: 700,
-          }}
-        />
+        {showYZeroLine && (
+          <ReferenceLine
+            y={0}
+            stroke={colors.border}
+            strokeDasharray="6 6"
+            // Y축 0선(가로선): 라벨은 Y축 쪽(좌측 끝)에 둔다 → X선 라벨과 위치가 명확히 분리된다.
+            label={{
+              value: yZeroLabel,
+              position: "insideLeft",
+              fill: colors.textTertiary,
+              fontSize: 18,
+              fontWeight: 700,
+            }}
+          />
+        )}
 
         <Scatter
           name={firstSeries.name}
@@ -187,7 +247,7 @@ export default function TossScatterChart({
           ))}
         </Scatter>
 
-        {chartData.map((point) => (
+        {chartData.filter((point) => point.showLabel).map((point) => (
           <ReferenceDot
             key={`label-${point.name}`}
             x={point.xValue}

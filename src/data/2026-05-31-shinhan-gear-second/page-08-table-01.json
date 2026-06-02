@@ -1,0 +1,1556 @@
+{
+  "id": "page-08-table-01",
+  "sourceImage": "input/14-page_08_table_01.png",
+  "analyzedAt": "2026-05-31T17:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "과거 실물 투자 사이클과 주가 선행 구간을 비교하면 AI Capex는 2028년까지 이어질 여지가 있다",
+    "preservedElements": [
+      "상하 2단 차트 구조",
+      "상단 콤보(막대+선 2개)·이중축",
+      "하단 상대주가 2개 선",
+      "녹색·파란 음영밴드",
+      "6/7/2.75년·5.5/6.5/3.25년 주석",
+      "축 범위와 고저점"
+    ],
+    "changedElements": [
+      "한글화",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "AI Capex 사이클, 경험적으로 2028년까지는 이어질 수 있을 것",
+    "dataFidelity": "source-visible",
+    "notes": "원본 crop의 두 패널(상단 신/구산업 투자 콤보, 하단 성장/가치·기술/민감 상대주가)을 패널별 독립축으로 재구성했습니다. 시리즈 방향·고저점·음영밴드·연도별 주석을 눈대중으로 보존했습니다. 세부 수치는 원자료 확보 시 보정 대상입니다.",
+    "sourceAttribution": "LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "content-type-fixed",
+      "label": "차트 재분류",
+      "status": "pass",
+      "detail": "infographic(stat_matrix) 오분류를 시계열 차트로 교정했습니다."
+    },
+    {
+      "id": "panels-split",
+      "label": "2단 패널 분리",
+      "status": "pass",
+      "detail": "상단 콤보·하단 라인을 structure.panels[]로 독립축 분리했습니다."
+    },
+    {
+      "id": "bands-annotations-preserved",
+      "label": "밴드·주석 보존",
+      "status": "pass",
+      "detail": "녹색/파란 음영밴드와 6/7/2.75·5.5/6.5/3.25년 주석을 패널별로 보존했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "화면 기반 값",
+      "status": "pass",
+      "detail": "축 눈금과 선/막대 위치를 기준으로 상대값을 읽었습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "chartHeight": 820
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "AI Capex 사이클, 경험적으로 2028년까지는 이어질 수 있을 것",
+    "subtitle": "상단: 신·구산업 투자 사이클(실물) / 하단: 성장·가치·기술·민감 상대주가 — 과거 사이클(실물 6~7년, 주가 5.5~6.5년) 대비 현재 진행 정도",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "1990~2026",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "1990",
+        "1991",
+        "1992",
+        "1993",
+        "1994",
+        "1995",
+        "1996",
+        "1997",
+        "1998",
+        "1999",
+        "2000",
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "displayTickValues": [
+        "1990",
+        "1994",
+        "1998",
+        "2002",
+        "2006",
+        "2010",
+        "2014",
+        "2018",
+        "2022",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "투자 증가율",
+      "type": "numeric",
+      "tickValues": [
+        "-50",
+        "-25",
+        "0",
+        "25"
+      ],
+      "unit": "%",
+      "min": -50,
+      "max": 25,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "상대강도",
+      "type": "numeric",
+      "tickValues": [
+        "70",
+        "100",
+        "130",
+        "160"
+      ],
+      "unit": "",
+      "min": 70,
+      "max": 160,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "panels": [
+      {
+        "title": "신·구산업 투자 사이클 (실물)",
+        "chartType": "combo",
+        "xAxis": {
+          "label": "연도",
+          "type": "category",
+          "tickValues": [
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "displayTickValues": [
+            "1990",
+            "1994",
+            "1998",
+            "2002",
+            "2006",
+            "2010",
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "yAxis": {
+          "label": "투자 증가율",
+          "type": "numeric",
+          "tickValues": [
+            "-50",
+            "-25",
+            "0",
+            "25"
+          ],
+          "unit": "%",
+          "min": -50,
+          "max": 25,
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "secondaryYAxis": {
+          "label": "상대강도",
+          "type": "numeric",
+          "tickValues": [
+            "70",
+            "100",
+            "130",
+            "160"
+          ],
+          "unit": "",
+          "min": 70,
+          "max": 160,
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "seriesNames": [
+          "신/구산업 투자 상대강도",
+          "구산업 투자",
+          "신산업 투자"
+        ],
+        "highlightZones": [
+          {
+            "fromX": "1994",
+            "toX": "2000",
+            "color": "#2E7D32",
+            "label": "실물 사이클 6년",
+            "description": "실물 투자 사이클이 약 6년간 진행된 구간"
+          },
+          {
+            "fromX": "2014",
+            "toX": "2021",
+            "color": "#2E7D32",
+            "label": "실물 사이클 7년",
+            "description": "실물 투자 사이클이 약 7년간 진행된 구간"
+          },
+          {
+            "fromX": "2024",
+            "toX": "2026",
+            "color": "#2E7D32",
+            "label": "이제 2.75년",
+            "description": "현재 실물 사이클은 약 2.75년 진행"
+          }
+        ]
+      },
+      {
+        "title": "성장·가치 / 기술·민감 상대주가 (1994=100)",
+        "chartType": "line",
+        "xAxis": {
+          "label": "연도",
+          "type": "category",
+          "tickValues": [
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "displayTickValues": [
+            "1990",
+            "1994",
+            "1998",
+            "2002",
+            "2006",
+            "2010",
+            "2014",
+            "2018",
+            "2022",
+            "2026"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "yAxis": {
+          "label": "상대주가 (1994=100)",
+          "type": "numeric",
+          "tickValues": [
+            "100",
+            "200",
+            "300",
+            "400"
+          ],
+          "unit": "",
+          "min": 100,
+          "max": 400,
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "seriesNames": [
+          "성장주/가치주 상대주가",
+          "기술주/민감주 상대주가"
+        ],
+        "highlightZones": [
+          {
+            "fromX": "1994",
+            "toX": "2000",
+            "color": "#4BA3FF",
+            "label": "2개분기 선행 · 5.5년 강세",
+            "description": "주가가 실물 대비 2개 분기 선행하며 약 5.5년간 강세"
+          },
+          {
+            "fromX": "2014",
+            "toX": "2021",
+            "color": "#4BA3FF",
+            "label": "3개분기 선행 · 6.5년 강세",
+            "description": "주가가 실물 대비 3개 분기 선행하며 약 6.5년간 강세"
+          },
+          {
+            "fromX": "2024",
+            "toX": "2026",
+            "color": "#4BA3FF",
+            "label": "이제 3.25년 강세",
+            "description": "현재 주가 강세는 약 3.25년 진행"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "name": "신/구산업 투자 상대강도",
+        "role": "secondary",
+        "seriesKind": "normal",
+        "originalColor": "#C9CDD2",
+        "remakeColor": "#C9CDD2"
+      },
+      {
+        "name": "구산업 투자",
+        "role": "primary",
+        "seriesKind": "normal",
+        "originalColor": "#2F477E",
+        "remakeColor": "#2F477E"
+      },
+      {
+        "name": "신산업 투자",
+        "role": "primary",
+        "seriesKind": "normal",
+        "originalColor": "#D39B00",
+        "remakeColor": "#D39B00"
+      },
+      {
+        "name": "성장주/가치주 상대주가",
+        "role": "primary",
+        "seriesKind": "normal",
+        "originalColor": "#2F477E",
+        "remakeColor": "#2F477E"
+      },
+      {
+        "name": "기술주/민감주 상대주가",
+        "role": "secondary",
+        "seriesKind": "normal",
+        "originalColor": "#C9CDD2",
+        "remakeColor": "#C9CDD2"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "신/구산업 투자 상대강도",
+        "renderAs": "bar",
+        "role": "secondary",
+        "seriesKind": "normal",
+        "color": "#C9CDD2",
+        "axis": "right",
+        "data": [
+          {
+            "x": "1990",
+            "y": 118,
+            "confidence": 0.6
+          },
+          {
+            "x": "1991",
+            "y": 123.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1992",
+            "y": 128,
+            "confidence": 0.6
+          },
+          {
+            "x": "1993",
+            "y": 133.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1994",
+            "y": 138,
+            "confidence": 0.6
+          },
+          {
+            "x": "1995",
+            "y": 144.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1996",
+            "y": 150,
+            "confidence": 0.6
+          },
+          {
+            "x": "1997",
+            "y": 151.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1998",
+            "y": 152,
+            "confidence": 0.6
+          },
+          {
+            "x": "1999",
+            "y": 148.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2000",
+            "y": 145,
+            "confidence": 0.6
+          },
+          {
+            "x": "2001",
+            "y": 120,
+            "confidence": 0.6
+          },
+          {
+            "x": "2002",
+            "y": 105,
+            "confidence": 0.6
+          },
+          {
+            "x": "2003",
+            "y": 113.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2004",
+            "y": 122,
+            "confidence": 0.6
+          },
+          {
+            "x": "2005",
+            "y": 128.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2006",
+            "y": 134,
+            "confidence": 0.6
+          },
+          {
+            "x": "2007",
+            "y": 122.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2008",
+            "y": 110,
+            "confidence": 0.6
+          },
+          {
+            "x": "2009",
+            "y": 78,
+            "confidence": 0.6
+          },
+          {
+            "x": "2010",
+            "y": 115,
+            "confidence": 0.6
+          },
+          {
+            "x": "2011",
+            "y": 121.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2012",
+            "y": 128,
+            "confidence": 0.6
+          },
+          {
+            "x": "2013",
+            "y": 133.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2014",
+            "y": 138,
+            "confidence": 0.6
+          },
+          {
+            "x": "2015",
+            "y": 135.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2016",
+            "y": 132,
+            "confidence": 0.6
+          },
+          {
+            "x": "2017",
+            "y": 136.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2018",
+            "y": 140,
+            "confidence": 0.6
+          },
+          {
+            "x": "2019",
+            "y": 130.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2020",
+            "y": 120,
+            "confidence": 0.6
+          },
+          {
+            "x": "2021",
+            "y": 150,
+            "confidence": 0.6
+          },
+          {
+            "x": "2022",
+            "y": 100,
+            "confidence": 0.6
+          },
+          {
+            "x": "2023",
+            "y": 92,
+            "confidence": 0.6
+          },
+          {
+            "x": "2024",
+            "y": 112,
+            "confidence": 0.6
+          },
+          {
+            "x": "2025",
+            "y": 135,
+            "confidence": 0.6
+          },
+          {
+            "x": "2026",
+            "y": 152,
+            "confidence": 0.6
+          }
+        ]
+      },
+      {
+        "name": "구산업 투자",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#2F477E",
+        "data": [
+          {
+            "x": "1990",
+            "y": 8,
+            "confidence": 0.6
+          },
+          {
+            "x": "1991",
+            "y": -2.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1992",
+            "y": -12,
+            "confidence": 0.6
+          },
+          {
+            "x": "1993",
+            "y": 1.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1994",
+            "y": 14,
+            "confidence": 0.6
+          },
+          {
+            "x": "1995",
+            "y": 15.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1996",
+            "y": 16,
+            "confidence": 0.6
+          },
+          {
+            "x": "1997",
+            "y": 4.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1998",
+            "y": -8,
+            "confidence": 0.6
+          },
+          {
+            "x": "1999",
+            "y": 2.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2000",
+            "y": 12,
+            "confidence": 0.6
+          },
+          {
+            "x": "2001",
+            "y": -5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2002",
+            "y": 4,
+            "confidence": 0.6
+          },
+          {
+            "x": "2003",
+            "y": 9.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2004",
+            "y": 15,
+            "confidence": 0.6
+          },
+          {
+            "x": "2005",
+            "y": 12.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2006",
+            "y": 10,
+            "confidence": 0.6
+          },
+          {
+            "x": "2007",
+            "y": 6.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2008",
+            "y": 2,
+            "confidence": 0.6
+          },
+          {
+            "x": "2009",
+            "y": -45,
+            "confidence": 0.6
+          },
+          {
+            "x": "2010",
+            "y": 18,
+            "confidence": 0.6
+          },
+          {
+            "x": "2011",
+            "y": 12.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2012",
+            "y": 6,
+            "confidence": 0.6
+          },
+          {
+            "x": "2013",
+            "y": 7.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2014",
+            "y": 8,
+            "confidence": 0.6
+          },
+          {
+            "x": "2015",
+            "y": -1.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2016",
+            "y": -10,
+            "confidence": 0.6
+          },
+          {
+            "x": "2017",
+            "y": -2.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2018",
+            "y": 6,
+            "confidence": 0.6
+          },
+          {
+            "x": "2019",
+            "y": -8.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2020",
+            "y": -22,
+            "confidence": 0.6
+          },
+          {
+            "x": "2021",
+            "y": 16,
+            "confidence": 0.6
+          },
+          {
+            "x": "2022",
+            "y": 12,
+            "confidence": 0.6
+          },
+          {
+            "x": "2023",
+            "y": -6,
+            "confidence": 0.6
+          },
+          {
+            "x": "2024",
+            "y": -8,
+            "confidence": 0.6
+          },
+          {
+            "x": "2025",
+            "y": 0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2026",
+            "y": 2,
+            "confidence": 0.6
+          }
+        ]
+      },
+      {
+        "name": "신산업 투자",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#D39B00",
+        "data": [
+          {
+            "x": "1990",
+            "y": 10,
+            "confidence": 0.6
+          },
+          {
+            "x": "1991",
+            "y": 8.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1992",
+            "y": 6,
+            "confidence": 0.6
+          },
+          {
+            "x": "1993",
+            "y": 9.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "1994",
+            "y": 13,
+            "confidence": 0.6
+          },
+          {
+            "x": "1995",
+            "y": 14.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1996",
+            "y": 15,
+            "confidence": 0.6
+          },
+          {
+            "x": "1997",
+            "y": 12.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "1998",
+            "y": 10,
+            "confidence": 0.6
+          },
+          {
+            "x": "1999",
+            "y": 12.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2000",
+            "y": 14,
+            "confidence": 0.6
+          },
+          {
+            "x": "2001",
+            "y": 8,
+            "confidence": 0.6
+          },
+          {
+            "x": "2002",
+            "y": 9,
+            "confidence": 0.6
+          },
+          {
+            "x": "2003",
+            "y": 10.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2004",
+            "y": 12,
+            "confidence": 0.6
+          },
+          {
+            "x": "2005",
+            "y": 11.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2006",
+            "y": 11,
+            "confidence": 0.6
+          },
+          {
+            "x": "2007",
+            "y": 10.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2008",
+            "y": 9,
+            "confidence": 0.6
+          },
+          {
+            "x": "2009",
+            "y": 2,
+            "confidence": 0.6
+          },
+          {
+            "x": "2010",
+            "y": 13,
+            "confidence": 0.6
+          },
+          {
+            "x": "2011",
+            "y": 11.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2012",
+            "y": 10,
+            "confidence": 0.6
+          },
+          {
+            "x": "2013",
+            "y": 10.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2014",
+            "y": 11,
+            "confidence": 0.6
+          },
+          {
+            "x": "2015",
+            "y": 9.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2016",
+            "y": 7,
+            "confidence": 0.6
+          },
+          {
+            "x": "2017",
+            "y": 8.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2018",
+            "y": 9,
+            "confidence": 0.6
+          },
+          {
+            "x": "2019",
+            "y": 6.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2020",
+            "y": 4,
+            "confidence": 0.6
+          },
+          {
+            "x": "2021",
+            "y": 13,
+            "confidence": 0.6
+          },
+          {
+            "x": "2022",
+            "y": 11,
+            "confidence": 0.6
+          },
+          {
+            "x": "2023",
+            "y": 8,
+            "confidence": 0.6
+          },
+          {
+            "x": "2024",
+            "y": 9,
+            "confidence": 0.6
+          },
+          {
+            "x": "2025",
+            "y": 12,
+            "confidence": 0.6
+          },
+          {
+            "x": "2026",
+            "y": 16,
+            "confidence": 0.6
+          }
+        ]
+      },
+      {
+        "name": "성장주/가치주 상대주가",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#2F477E",
+        "data": [
+          {
+            "x": "1990",
+            "y": 110,
+            "confidence": 0.6
+          },
+          {
+            "x": "1991",
+            "y": 115.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1992",
+            "y": 120,
+            "confidence": 0.6
+          },
+          {
+            "x": "1993",
+            "y": 110.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1994",
+            "y": 100,
+            "confidence": 0.6
+          },
+          {
+            "x": "1995",
+            "y": 125.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1996",
+            "y": 150,
+            "confidence": 0.6
+          },
+          {
+            "x": "1997",
+            "y": 162.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "1998",
+            "y": 175,
+            "confidence": 0.6
+          },
+          {
+            "x": "1999",
+            "y": 190.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2000",
+            "y": 205,
+            "confidence": 0.6
+          },
+          {
+            "x": "2001",
+            "y": 175,
+            "confidence": 0.6
+          },
+          {
+            "x": "2002",
+            "y": 140,
+            "confidence": 0.6
+          },
+          {
+            "x": "2003",
+            "y": 135.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2004",
+            "y": 130,
+            "confidence": 0.6
+          },
+          {
+            "x": "2005",
+            "y": 129.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2006",
+            "y": 128,
+            "confidence": 0.6
+          },
+          {
+            "x": "2007",
+            "y": 131.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2008",
+            "y": 135,
+            "confidence": 0.6
+          },
+          {
+            "x": "2009",
+            "y": 120,
+            "confidence": 0.6
+          },
+          {
+            "x": "2010",
+            "y": 138,
+            "confidence": 0.6
+          },
+          {
+            "x": "2011",
+            "y": 144.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2012",
+            "y": 150,
+            "confidence": 0.6
+          },
+          {
+            "x": "2013",
+            "y": 162.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2014",
+            "y": 175,
+            "confidence": 0.6
+          },
+          {
+            "x": "2015",
+            "y": 190.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2016",
+            "y": 205,
+            "confidence": 0.6
+          },
+          {
+            "x": "2017",
+            "y": 222.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2018",
+            "y": 240,
+            "confidence": 0.6
+          },
+          {
+            "x": "2019",
+            "y": 247.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2020",
+            "y": 255,
+            "confidence": 0.6
+          },
+          {
+            "x": "2021",
+            "y": 285,
+            "confidence": 0.6
+          },
+          {
+            "x": "2022",
+            "y": 235,
+            "confidence": 0.6
+          },
+          {
+            "x": "2023",
+            "y": 255,
+            "confidence": 0.6
+          },
+          {
+            "x": "2024",
+            "y": 285,
+            "confidence": 0.6
+          },
+          {
+            "x": "2025",
+            "y": 310,
+            "confidence": 0.6
+          },
+          {
+            "x": "2026",
+            "y": 330,
+            "confidence": 0.6
+          }
+        ]
+      },
+      {
+        "name": "기술주/민감주 상대주가",
+        "renderAs": "line",
+        "role": "secondary",
+        "seriesKind": "normal",
+        "color": "#C9CDD2",
+        "data": [
+          {
+            "x": "1990",
+            "y": 108,
+            "confidence": 0.6
+          },
+          {
+            "x": "1991",
+            "y": 112.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1992",
+            "y": 116,
+            "confidence": 0.6
+          },
+          {
+            "x": "1993",
+            "y": 108.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1994",
+            "y": 100,
+            "confidence": 0.6
+          },
+          {
+            "x": "1995",
+            "y": 121.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "1996",
+            "y": 142,
+            "confidence": 0.6
+          },
+          {
+            "x": "1997",
+            "y": 153.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "1998",
+            "y": 165,
+            "confidence": 0.6
+          },
+          {
+            "x": "1999",
+            "y": 180.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2000",
+            "y": 195,
+            "confidence": 0.6
+          },
+          {
+            "x": "2001",
+            "y": 168,
+            "confidence": 0.6
+          },
+          {
+            "x": "2002",
+            "y": 138,
+            "confidence": 0.6
+          },
+          {
+            "x": "2003",
+            "y": 133.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2004",
+            "y": 128,
+            "confidence": 0.6
+          },
+          {
+            "x": "2005",
+            "y": 127.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2006",
+            "y": 126,
+            "confidence": 0.6
+          },
+          {
+            "x": "2007",
+            "y": 128.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2008",
+            "y": 130,
+            "confidence": 0.6
+          },
+          {
+            "x": "2009",
+            "y": 118,
+            "confidence": 0.6
+          },
+          {
+            "x": "2010",
+            "y": 132,
+            "confidence": 0.6
+          },
+          {
+            "x": "2011",
+            "y": 138.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2012",
+            "y": 144,
+            "confidence": 0.6
+          },
+          {
+            "x": "2013",
+            "y": 156.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2014",
+            "y": 168,
+            "confidence": 0.6
+          },
+          {
+            "x": "2015",
+            "y": 180.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2016",
+            "y": 192,
+            "confidence": 0.6
+          },
+          {
+            "x": "2017",
+            "y": 207.0,
+            "confidence": 0.6
+          },
+          {
+            "x": "2018",
+            "y": 222,
+            "confidence": 0.6
+          },
+          {
+            "x": "2019",
+            "y": 228.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2020",
+            "y": 235,
+            "confidence": 0.6
+          },
+          {
+            "x": "2021",
+            "y": 262,
+            "confidence": 0.6
+          },
+          {
+            "x": "2022",
+            "y": 222,
+            "confidence": 0.6
+          },
+          {
+            "x": "2023",
+            "y": 240,
+            "confidence": 0.6
+          },
+          {
+            "x": "2024",
+            "y": 262,
+            "confidence": 0.6
+          },
+          {
+            "x": "2025",
+            "y": 282,
+            "confidence": 0.6
+          },
+          {
+            "x": "2026",
+            "y": 300,
+            "confidence": 0.6
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 185,
+    "quality": {
+      "overallConfidence": 0.6,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "작은 crop이라 막대/선의 세부 꺾임과 밴드 경계 연도는 추후 원자료 확인 시 보정합니다."
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.6,
+      "description": "두 패널 모두 1994·2014 사이클 후 후반(2024~) 재상승 흐름을 보존했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.7,
+      "description": "상단 투자 증가율은 변동이 크고(특히 2009 급락), 하단 상대주가는 추세적입니다."
+    },
+    "changeRates": [
+      {
+        "period": "성장/가치 상대주가 1994→2026",
+        "percentChange": 230.0,
+        "absoluteChange": 230,
+        "from": 100,
+        "to": 330
+      }
+    ],
+    "correlations": [
+      {
+        "seriesA": "신/구산업 투자 상대강도",
+        "seriesB": "성장주/가치주 상대주가",
+        "coefficient": 0.6,
+        "description": "실물 투자 사이클과 주가 강세 구간이 시차를 두고 동행합니다."
+      }
+    ],
+    "summary": {
+      "max": {
+        "value": 330,
+        "at": "2026"
+      },
+      "min": {
+        "value": -45,
+        "at": "2009"
+      },
+      "average": 0,
+      "median": 0,
+      "range": 375
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "실물 투자 사이클(6~7년)과 주가 강세 구간(5.5~6.5년)이 반복되며, 현재는 각각 2.75년·3.25년 진행 중입니다."
+  },
+  "narrative": {
+    "headMessage": "AI Capex 사이클, 2028년까지 여지",
+    "subMessage": "과거 실물 사이클(6~7년)·주가 강세(5.5~6.5년) 대비 지금은 각각 2.75년·3.25년 진행",
+    "headline": "AI Capex 사이클, 경험적으로 2028년까지는 이어질 수 있을 것",
+    "summary": "과거 실물 투자 사이클과 주가 선행 구간을 비교하면 현재 사이클은 중반 수준으로 2027~2028년까지 여지가 남는다.",
+    "story": "원본의 상하 2단 구조를 그대로 살려, 상단은 신·구산업 투자 콤보(이중축), 하단은 상대주가 라인으로 분리했습니다. 과거 두 차례 사이클의 길이와 주가 선행 폭을 음영밴드로 표시해 현재 진행 정도를 비교합니다.",
+    "keyTakeaways": [
+      "실물 투자 사이클은 과거 6년·7년 진행했고, 현재는 2.75년 진행 중",
+      "주가는 실물보다 2~3개 분기 선행하며 5.5년·6.5년 강세였고, 지금은 3.25년 강세",
+      "경험칙상 남은 사이클을 감안하면 AI Capex는 2028년까지 이어질 여지"
+    ],
+    "questionsRaised": [
+      "이번 사이클이 과거와 같은 길이로 이어질지, 강도는 어떨지?"
+    ],
+    "viewerAction": "상단 투자 사이클의 진행 연차와 하단 주가 강세 구간을 함께 비교합니다.",
+    "contextualNotes": [
+      "LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "range_highlight",
+        "position": {
+          "x": "1997"
+        },
+        "text": "실물 6년",
+        "style": "positive",
+        "importance": "high"
+      },
+      {
+        "type": "range_highlight",
+        "position": {
+          "x": "2017"
+        },
+        "text": "실물 7년",
+        "style": "positive",
+        "importance": "high"
+      },
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2025"
+        },
+        "text": "이제 2.75년",
+        "style": "emphasis",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "1994",
+        "toX": "2000",
+        "color": "#2E7D32",
+        "label": "실물 사이클 6년",
+        "description": "실물 투자 사이클이 약 6년간 진행된 구간"
+      },
+      {
+        "fromX": "2014",
+        "toX": "2021",
+        "color": "#2E7D32",
+        "label": "실물 사이클 7년",
+        "description": "실물 투자 사이클이 약 7년간 진행된 구간"
+      },
+      {
+        "fromX": "2024",
+        "toX": "2026",
+        "color": "#2E7D32",
+        "label": "이제 2.75년",
+        "description": "현재 실물 사이클은 약 2.75년 진행"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#2F477E",
+      "secondary": [
+        "#C9CDD2",
+        "#D39B00",
+        "#4BA3FF"
+      ],
+      "positive": "#2E7D32",
+      "negative": "#EF4444",
+      "accent": "#4BA3FF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2025",
+        "y": 135
+      },
+      "displayText": "지금은 사이클 중반",
+      "reason": "과거 사이클 대비 현재 진행 정도가 절반 수준으로 추가 여력이 남는다"
+    },
+    "densityLevel": "balanced"
+  }
+}

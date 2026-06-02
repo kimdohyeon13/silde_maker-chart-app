@@ -29,6 +29,9 @@ import type {
   KpiItem,
   TimelineEvent,
 } from "@/lib/analysis/schema";
+import {
+  getAnalysisThemeMode,
+} from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
 
@@ -42,25 +45,26 @@ export default function TossInfoCard({
   theme: themeMode = "dark",
 }: TossInfoCardProps) {
   const { infographicData } = analysis;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
 
   // 서브타입별 분기 — switch로 각 서브 렌더러를 선택
   switch (infographicData.subType) {
     case "kpi_card":
-      return <KpiGrid data={infographicData} themeMode={themeMode} />;
+      return <KpiGrid data={infographicData} themeMode={renderThemeMode} />;
     case "stat_matrix":
-      return <StatMatrix data={infographicData} themeMode={themeMode} />;
+      return <StatMatrix data={infographicData} themeMode={renderThemeMode} />;
     case "comparison_card":
-      return <ComparisonGrid data={infographicData} themeMode={themeMode} />;
+      return <ComparisonGrid data={infographicData} themeMode={renderThemeMode} />;
     case "process_flow":
-      return <ProcessFlow data={infographicData} themeMode={themeMode} />;
+      return <ProcessFlow data={infographicData} themeMode={renderThemeMode} />;
     case "timeline":
-      return <TimelineLine data={infographicData} themeMode={themeMode} />;
+      return <TimelineLine data={infographicData} themeMode={renderThemeMode} />;
     case "feature_list":
-      return <FeatureList data={infographicData} themeMode={themeMode} />;
+      return <FeatureList data={infographicData} themeMode={renderThemeMode} />;
     case "news_brief":
-      return <NewsBriefCard data={infographicData} themeMode={themeMode} />;
+      return <NewsBriefCard data={infographicData} themeMode={renderThemeMode} />;
     default:
-      return <FallbackRenderer data={infographicData} themeMode={themeMode} />;
+      return <FallbackRenderer data={infographicData} themeMode={renderThemeMode} />;
   }
 }
 
@@ -510,7 +514,11 @@ function ProcessFlow({
                 color: colors.textPrimary,
                 fontFamily: typography.fontFamily.sans,
                 textAlign: "center",
-                maxWidth: 120,
+                // maxWidth를 넉넉히(160) 두고 줄바꿈을 허용해 제목이 잘리지 않게 한다(D7-a).
+                maxWidth: 160,
+                whiteSpace: "normal",
+                overflowWrap: "break-word",
+                wordBreak: "keep-all",
               }}
             >
               {step.title}
@@ -523,8 +531,12 @@ function ProcessFlow({
                   color: colors.textSecondary,
                   fontFamily: typography.fontFamily.sans,
                   textAlign: "center",
-                  maxWidth: 120,
+                  // 설명도 동일하게 폭을 넓히고 줄바꿈을 허용한다(D7-a).
+                  maxWidth: 160,
                   lineHeight: 1.4,
+                  whiteSpace: "normal",
+                  overflowWrap: "break-word",
+                  wordBreak: "keep-all",
                 }}
               >
                 {step.description}
@@ -747,24 +759,37 @@ function FeatureList({
             </span>
           )}
           {/* 텍스트 */}
-          <div>
-            <div
-              style={{
-                fontSize: "16px",
-                fontWeight: 600,
-                color: colors.textPrimary,
-                fontFamily: typography.fontFamily.sans,
-                marginBottom: 2,
-              }}
-            >
-              {item.label}
-            </div>
+          {/* minWidth:0 — flex 자식이 줄바꿈 없이 넘치는 것을 막아 긴 문장이 카드 밖으로 잘리지 않게 한다(D7-a). */}
+          <div style={{ minWidth: 0 }}>
+            {/* 라벨이 비어 있으면(텍스트 박스형) 빈 제목 줄을 만들지 않는다(D7-a). */}
+            {item.label && (
+              <div
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  color: colors.textPrimary,
+                  fontFamily: typography.fontFamily.sans,
+                  marginBottom: 2,
+                  lineHeight: 1.4,
+                  // 라벨도 한 줄 말줄임 없이 전체가 보이도록 줄바꿈을 허용한다.
+                  whiteSpace: "normal",
+                  overflowWrap: "break-word",
+                  wordBreak: "keep-all",
+                }}
+              >
+                {item.label}
+              </div>
+            )}
             <div
               style={{
                 fontSize: "15px",
                 color: colors.textSecondary,
                 fontFamily: typography.fontFamily.sans,
                 lineHeight: 1.5,
+                // 결론 문장이 끊기지 않도록 전체 문장을 줄바꿈하여 모두 보여준다(D7-a).
+                whiteSpace: "normal",
+                overflowWrap: "break-word",
+                wordBreak: "keep-all",
               }}
             >
               {item.description}

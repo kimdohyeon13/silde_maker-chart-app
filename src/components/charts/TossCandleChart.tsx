@@ -23,6 +23,11 @@
 import React, { useEffect, useRef } from "react";
 import { createChart, CandlestickSeries, type IChartApi, type CandlestickData, type Time } from "lightweight-charts";
 import type { ChartAnalysis } from "@/lib/analysis/schema";
+import {
+  getAnalysisStylePreset,
+  getAnalysisThemeMode,
+  getPresetColors,
+} from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 
 interface TossCandleChartProps {
@@ -63,8 +68,10 @@ export default function TossCandleChart({
   const chartContainerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
 
-  const themeConfig = getTheme(themeMode);
-  const { colors } = themeConfig;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
+  const themeConfig = getTheme(renderThemeMode);
+  const preset = getAnalysisStylePreset(analysis);
+  const colors = getPresetColors(preset, renderThemeMode);
 
   /**
    * useEffect란?

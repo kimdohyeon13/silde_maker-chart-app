@@ -24,6 +24,11 @@ import {
   Tooltip,
 } from "recharts";
 import type { ChartAnalysis } from "@/lib/analysis/schema";
+import {
+  getAnalysisStylePreset,
+  getAnalysisThemeMode,
+  getPresetColors,
+} from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { formatNumber } from "@/lib/analysis/insight-engine";
 
@@ -42,8 +47,10 @@ export default function TossDonutChart({
   height = 350,
   animated = true,
 }: TossDonutChartProps) {
-  const theme = getTheme(themeMode);
-  const { colors } = theme;
+  const renderThemeMode = getAnalysisThemeMode(analysis, themeMode);
+  const theme = getTheme(renderThemeMode);
+  const preset = getAnalysisStylePreset(analysis);
+  const colors = getPresetColors(preset, renderThemeMode);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const firstSeries = analysis.data.series[0];

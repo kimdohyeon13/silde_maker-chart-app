@@ -58,6 +58,31 @@ export interface ProjectAnalysesResponse {
   message?: string;
 }
 
+export interface ProjectAnalysisFileItem {
+  fileName: string;
+  mtimeMs: number;
+  analysis: VisualAnalysis;
+}
+
+export interface ProjectEditorResponse {
+  slug: string;
+  date: string;
+  topic: string;
+  files: ProjectAnalysisFileItem[];
+}
+
+export interface SaveAnalysisRequest {
+  analysis: VisualAnalysis;
+  baseMtimeMs?: number;
+}
+
+export interface SaveAnalysisResponse {
+  success: boolean;
+  fileName: string;
+  mtimeMs: number;
+  analysis: VisualAnalysis;
+}
+
 /**
  * @deprecated ChartAnalysis[] 대신 VisualAnalysis[]를 사용하세요.
  * 기존 코드 호환을 위해 re-export

@@ -21,10 +21,11 @@
  */
 
 import { readdir, mkdir, readFile, stat, writeFile } from "fs/promises";
-import { join } from "path";
+import { join, resolve } from "path";
 import type {
   CreateProjectResult,
   ProjectInfo,
+  ProjectAnalysisFileItem,
   ProjectListItem,
   ProjectMetadata,
 } from "@/lib/project-types";
@@ -56,6 +57,7 @@ const PROJECTS_ROOT = join(SILDE_MAKER_ROOT, "projects");
 const DATA_ROOT = join(CHART_APP_ROOT, "src", "data");
 const PROJECT_SLUG_PATTERN = /^(\d{4}-\d{2}-\d{2})-(.+)$/;
 const IMAGE_FILE_PATTERN = /\.(png|jpg|jpeg|webp|gif)$/i;
+const JSON_FILE_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9._-]*\.json$/;
 const PROJECT_META_FILE = "project.meta.json";
 const PROJECT_META_VERSION = 2;
 const HANGUL_BASE = 0xac00;
@@ -134,6 +136,35 @@ function buildProjectPaths(slug: string) {
     exports: join(root, "output"),
     meta: join(root, PROJECT_META_FILE),
   };
+}
+
+function resolveProjectDataDir(slug: string): string | null {
+  const dataRoot = resolve(DATA_ROOT);
+  const dataDir = resolve(dataRoot, slug);
+
+  if (!dataDir.startsWith(dataRoot)) {
+    return null;
+  }
+
+  return dataDir;
+}
+
+function resolveProjectJsonPath(slug: string, fileName: string): string | null {
+  if (!JSON_FILE_PATTERN.test(fileName)) {
+    return null;
+  }
+
+  const dataDir = resolveProjectDataDir(slug);
+  if (!dataDir) {
+    return null;
+  }
+
+  const filePath = resolve(dataDir, fileName);
+  if (!filePath.startsWith(dataDir)) {
+    return null;
+  }
+
+  return filePath;
 }
 
 function splitProjectSlug(slug: string): { date: string; topic: string } {
@@ -322,7 +353,10 @@ export async function listProjects(): Promise<ProjectInfo[]> {
  * @returns 분석 결과 배열 (ChartAnalysis[])
  */
 export async function getProjectAnalyses(slug: string): Promise<VisualAnalysis[]> {
-  const projectDataDir = join(DATA_ROOT, slug);
+  const projectDataDir = resolveProjectDataDir(slug);
+  if (!projectDataDir) {
+    return [];
+  }
 
   try {
     const files = await readdir(projectDataDir);
@@ -340,6 +374,68 @@ export async function getProjectAnalyses(slug: string): Promise<VisualAnalysis[]
   } catch {
     return [];
   }
+}
+
+export async function getProjectAnalysisFiles(
+  slug: string
+): Promise<ProjectAnalysisFileItem[]> {
+  const projectDataDir = resolveProjectDataDir(slug);
+  if (!projectDataDir) {
+    return [];
+  }
+
+  try {
+    const files = await readdir(projectDataDir);
+    const jsonFiles = files.filter((f) => JSON_FILE_PATTERN.test(f)).sort();
+
+    return Promise.all(
+      jsonFiles.map(async (fileName) => {
+        const filePath = resolveProjectJsonPath(slug, fileName);
+        if (!filePath) {
+          throw new Error(`잘못된 JSON 파일명: ${fileName}`);
+        }
+
+        const [content, info] = await Promise.all([
+          readFile(filePath, "utf-8"),
+          stat(filePath),
+        ]);
+
+        return {
+          fileName,
+          mtimeMs: info.mtimeMs,
+          analysis: JSON.parse(content) as VisualAnalysis,
+        };
+      })
+    );
+  } catch {
+    return [];
+  }
+}
+
+export async function saveProjectAnalysisFile(
+  slug: string,
+  fileName: string,
+  analysis: VisualAnalysis,
+  baseMtimeMs?: number
+): Promise<ProjectAnalysisFileItem> {
+  const filePath = resolveProjectJsonPath(slug, fileName);
+  if (!filePath) {
+    throw new Error("잘못된 JSON 파일 경로입니다.");
+  }
+
+  const info = await stat(filePath);
+  if (baseMtimeMs != null && Math.abs(info.mtimeMs - baseMtimeMs) > 1) {
+    throw new Error("파일이 다른 작업에 의해 먼저 변경되었습니다. 새로고침 후 다시 저장하세요.");
+  }
+
+  await writeFile(filePath, `${JSON.stringify(analysis, null, 2)}\n`, "utf-8");
+  const nextInfo = await stat(filePath);
+
+  return {
+    fileName,
+    mtimeMs: nextInfo.mtimeMs,
+    analysis,
+  };
 }
 
 /**

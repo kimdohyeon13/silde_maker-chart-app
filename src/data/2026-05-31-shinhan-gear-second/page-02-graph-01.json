@@ -1,0 +1,1053 @@
+{
+  "id": "page-02-graph-01",
+  "sourceImage": "input/02-page_02_graph_01.png",
+  "analyzedAt": "2026-05-31T17:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "매출은 2023년 70억달러대에서 2026년 200억달러 안팎으로 확대",
+    "preservedElements": [
+      "차트 유형",
+      "시리즈 수",
+      "축 범위",
+      "비교 방향",
+      "핵심 고저점"
+    ],
+    "changedElements": [
+      "한글화",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "crop 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 작성했습니다.",
+    "sourceAttribution": "Bloomberg, 신한투자증권",
+    "mode": "faithful",
+    "originalTitle": "Gemini 대두 속 구글 클라우드 매출 급증"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "구조 보존",
+      "status": "pass",
+      "detail": "차트 유형, 축, 시리즈 구성을 먼저 맞췄습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "화면 기반 값",
+      "status": "pass",
+      "detail": "축 눈금과 선 위치를 기준으로 상대값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% 유사도 목표",
+      "status": "pass",
+      "detail": "축 범위, 시리즈 수, 고점과 저점 위치를 우선 보존했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Gemini 대두 속 구글 클라우드 매출 급증",
+    "subtitle": "구글 클라우드 매출(십억달러)과 전년대비 증가율(%)",
+    "source": "자료: Bloomberg, 신한투자증권",
+    "timeRange": "2023.01~2026.01",
+    "xAxis": {
+      "label": "월",
+      "type": "category",
+      "tickValues": [
+        "23.01",
+        "23.01.2",
+        "23.02",
+        "23.02.2",
+        "23.03",
+        "23.03.2",
+        "23.04",
+        "23.04.2",
+        "23.05",
+        "23.05.2",
+        "23.06",
+        "23.06.2",
+        "23.07",
+        "23.07.2",
+        "23.08",
+        "23.08.2",
+        "23.09",
+        "23.09.2",
+        "23.10",
+        "23.10.2",
+        "23.11",
+        "23.11.2",
+        "23.12",
+        "23.12.2",
+        "24.01",
+        "24.01.2",
+        "24.02",
+        "24.02.2",
+        "24.03",
+        "24.03.2",
+        "24.04",
+        "24.04.2",
+        "24.05",
+        "24.05.2",
+        "24.06",
+        "24.06.2",
+        "24.07",
+        "24.07.2",
+        "24.08",
+        "24.08.2",
+        "24.09",
+        "24.09.2",
+        "24.10",
+        "24.10.2",
+        "24.11",
+        "24.11.2",
+        "24.12",
+        "24.12.2",
+        "25.01",
+        "25.01.2",
+        "25.02",
+        "25.02.2",
+        "25.03",
+        "25.03.2",
+        "25.04",
+        "25.04.2",
+        "25.05",
+        "25.05.2",
+        "25.06",
+        "25.06.2",
+        "25.07",
+        "25.07.2",
+        "25.08",
+        "25.08.2",
+        "25.09",
+        "25.09.2",
+        "25.10",
+        "25.10.2",
+        "25.11",
+        "25.11.2",
+        "25.12",
+        "25.12.2",
+        "26.01"
+      ],
+      "displayTickValues": [
+        "23.01",
+        "23.07",
+        "24.01",
+        "24.07",
+        "25.01",
+        "25.07",
+        "26.01"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [
+        "5",
+        "9",
+        "13",
+        "17",
+        "21",
+        "25"
+      ],
+      "unit": "십억달러",
+      "min": 5,
+      "max": 25,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "증가율",
+      "type": "numeric",
+      "tickValues": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "%",
+      "min": 20,
+      "max": 70,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "구글 클라우드 매출",
+        "role": "primary",
+        "originalColor": "#2F477E",
+        "remakeColor": "#2F477E"
+      },
+      {
+        "name": "전년비 증가율",
+        "role": "secondary",
+        "originalColor": "#B5B5B5",
+        "remakeColor": "#B5B5B5"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "구글 클라우드 매출",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#2F477E",
+        "data": [
+          {
+            "x": "23.01",
+            "y": 7.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.01.2",
+            "y": 7.26,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.02",
+            "y": 7.15,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.02.2",
+            "y": 7.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.03",
+            "y": 7.29,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.03.2",
+            "y": 7.34,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.04",
+            "y": 7.16,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.04.2",
+            "y": 7.16,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.05",
+            "y": 7.32,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.05.2",
+            "y": 7.26,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.06",
+            "y": 7.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.06.2",
+            "y": 7.21,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.07",
+            "y": 7.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.07.2",
+            "y": 7.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.08",
+            "y": 7.47,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.08.2",
+            "y": 7.78,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.09",
+            "y": 7.99,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.09.2",
+            "y": 7.95,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.10",
+            "y": 8.07,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.10.2",
+            "y": 8.36,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.11",
+            "y": 8.44,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.11.2",
+            "y": 8.37,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.12",
+            "y": 8.54,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.12.2",
+            "y": 8.78,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.01",
+            "y": 8.75,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.01.2",
+            "y": 8.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.02",
+            "y": 8.94,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.02.2",
+            "y": 9.14,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.03",
+            "y": 9.09,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.03.2",
+            "y": 9.16,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.04",
+            "y": 9.47,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.04.2",
+            "y": 9.58,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.05",
+            "y": 9.52,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.05.2",
+            "y": 9.66,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.06",
+            "y": 9.92,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.06.2",
+            "y": 9.93,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.07",
+            "y": 9.92,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.07.2",
+            "y": 10.18,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.08",
+            "y": 10.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.08.2",
+            "y": 10.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.09",
+            "y": 10.48,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.09.2",
+            "y": 10.81,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.10",
+            "y": 11.01,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.10.2",
+            "y": 11.01,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.11",
+            "y": 11.21,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.11.2",
+            "y": 11.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.12",
+            "y": 11.68,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.12.2",
+            "y": 11.75,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.01",
+            "y": 12.07,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.01.2",
+            "y": 12.41,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.02",
+            "y": 12.47,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.02.2",
+            "y": 12.56,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.03",
+            "y": 12.92,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.03.2",
+            "y": 13.16,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.04",
+            "y": 13.19,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.04.2",
+            "y": 13.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.05",
+            "y": 13.81,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.05.2",
+            "y": 14.15,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.06",
+            "y": 14.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.06.2",
+            "y": 14.91,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.07",
+            "y": 15.47,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.07.2",
+            "y": 15.76,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.08",
+            "y": 16.05,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.08.2",
+            "y": 16.59,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.09",
+            "y": 17.04,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.09.2",
+            "y": 17.24,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.10",
+            "y": 17.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.10.2",
+            "y": 18.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.11",
+            "y": 18.46,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.11.2",
+            "y": 18.66,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.12",
+            "y": 19.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.12.2",
+            "y": 19.68,
+            "confidence": 0.74
+          },
+          {
+            "x": "26.01",
+            "y": 19.99,
+            "confidence": 0.74
+          }
+        ]
+      },
+      {
+        "name": "전년비 증가율",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#B5B5B5",
+        "data": [
+          {
+            "x": "23.01",
+            "y": 33,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.01.2",
+            "y": 33.81,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.02",
+            "y": 32.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.02.2",
+            "y": 30.96,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.03",
+            "y": 32.01,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.03.2",
+            "y": 31.71,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.04",
+            "y": 29.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.04.2",
+            "y": 28.66,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.05",
+            "y": 29.49,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.05.2",
+            "y": 28.23,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.06",
+            "y": 25.85,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.06.2",
+            "y": 25.86,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.07",
+            "y": 26.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.07.2",
+            "y": 24.46,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.08",
+            "y": 22.91,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.08.2",
+            "y": 23.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.09",
+            "y": 23.77,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.09.2",
+            "y": 22.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.10",
+            "y": 22.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.10.2",
+            "y": 24.73,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.11",
+            "y": 24.86,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.11.2",
+            "y": 23.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.12",
+            "y": 24.56,
+            "confidence": 0.74
+          },
+          {
+            "x": "23.12.2",
+            "y": 26.25,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.01",
+            "y": 25.55,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.01.2",
+            "y": 24.83,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.02",
+            "y": 26.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.02.2",
+            "y": 27.92,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.03",
+            "y": 26.91,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.03.2",
+            "y": 27.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.04",
+            "y": 29.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.04.2",
+            "y": 29.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.05",
+            "y": 28.75,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.05.2",
+            "y": 29.59,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.06",
+            "y": 31.39,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.06.2",
+            "y": 30.94,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.07",
+            "y": 30.24,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.07.2",
+            "y": 31.99,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.08",
+            "y": 33.59,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.08.2",
+            "y": 32.82,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.09",
+            "y": 32.94,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.09.2",
+            "y": 35.41,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.10",
+            "y": 36.17,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.10.2",
+            "y": 33.76,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.11",
+            "y": 33.25,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.11.2",
+            "y": 34.12,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.12",
+            "y": 32.73,
+            "confidence": 0.74
+          },
+          {
+            "x": "24.12.2",
+            "y": 30.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.01",
+            "y": 30.43,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.01.2",
+            "y": 30.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.02",
+            "y": 29.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.02.2",
+            "y": 29.12,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.03",
+            "y": 30.93,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.03.2",
+            "y": 31.74,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.04",
+            "y": 30.53,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.04.2",
+            "y": 31,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.05",
+            "y": 33.28,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.05.2",
+            "y": 33.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.06",
+            "y": 32.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.06.2",
+            "y": 33.77,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.07",
+            "y": 35.65,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.07.2",
+            "y": 35,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.08",
+            "y": 34.32,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.08.2",
+            "y": 36.94,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.09",
+            "y": 40.47,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.09.2",
+            "y": 41.65,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.10",
+            "y": 44.08,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.10.2",
+            "y": 48.46,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.11",
+            "y": 51.12,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.11.2",
+            "y": 52.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.12",
+            "y": 55.99,
+            "confidence": 0.74
+          },
+          {
+            "x": "25.12.2",
+            "y": 60.59,
+            "confidence": 0.74
+          },
+          {
+            "x": "26.01",
+            "y": 62.87,
+            "confidence": 0.74
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 146,
+    "quality": {
+      "overallConfidence": 0.74,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "작은 crop의 세부 꺾임은 추후 원자료 확인 시 보정합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "crop 화면에서 보이는 방향을 촘촘한 포인트로 보존했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.562,
+      "description": "축 범위와 주요 고저점을 기준으로 변동폭을 맞췄습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 785.5,
+        "absoluteChange": 55.77,
+        "from": 7.1,
+        "to": 62.87
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 62.87,
+        "at": ""
+      },
+      "min": {
+        "value": 7.1,
+        "at": ""
+      },
+      "average": 21.77,
+      "median": 22.11,
+      "range": 55.77
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Gemini 대두 속 구글 클라우드 매출 급증",
+    "subMessage": "구글 클라우드 매출(십억달러)과 전년대비 증가율(%)",
+    "headline": "Gemini 대두 속 구글 클라우드 매출 급증",
+    "summary": "매출은 2023년 70억달러대에서 2026년 200억달러 안팎으로 확대",
+    "story": "데이터 관계를 유지하면서 보고서 삽입용으로 축과 라벨을 정리했습니다.",
+    "keyTakeaways": [
+      "매출은 2023년 70억달러대에서 2026년 200억달러 안팎으로 확대",
+      "시리즈 간 격차와 방향을 먼저 확인합니다.",
+      "세부 수치는 원자료 확보 시 보정 대상입니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 지역과 업종 배분을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "축 범위와 마지막 구간의 방향을 함께 확인합니다.",
+    "contextualNotes": [
+      "Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#2F477E",
+      "secondary": [
+        "#B5B5B5",
+        "#D39B00",
+        "#2E7D32",
+        "#4BA3FF"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 19.99
+      },
+      "displayText": "Gemini 대두 속 구글 클라우드 매출 급증",
+      "reason": "구글 클라우드 매출(십억달러)과 전년대비 증가율(%)"
+    },
+    "densityLevel": "balanced"
+  }
+}

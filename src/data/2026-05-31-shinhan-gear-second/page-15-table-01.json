@@ -1,0 +1,288 @@
+{
+  "id": "page-15-table-01",
+  "sourceImage": "input/29-page_15_table_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "originalTitle": "이익의 무게는 이미 자동차에서 다른 곳으로",
+    "originalMessage": "이익의 무게는 이미 자동차에서 다른 곳으로",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한글화",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권/ 주: GICS Lv.2 기준 상위 10개 종목만 나열"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 38,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "이익의 무게는 이미 자동차에서 다른 곳으로",
+    "subtitle": "26년 이익 성장 기여도 (%p)",
+    "source": "자료: LSEG, 신한투자증권/ 주: GICS Lv.2 기준 상위 10개 종목만 나열",
+    "timeRange": "2026년",
+    "xAxis": {
+      "label": "업종",
+      "type": "category",
+      "tickValues": [
+        "반도체",
+        "자본재",
+        "은행",
+        "자동차",
+        "소재",
+        "음식료&담배",
+        "내구소비재",
+        "바이오테크",
+        "IT H/W",
+        "미디어&엔터"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "이익 성장 기여도",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "unit": "%p",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 3
+    },
+    "legend": [
+      {
+        "name": "26년 이익 성장 기여도",
+        "role": "primary",
+        "originalColor": "#40548B",
+        "remakeColor": "#40548B"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "26년 이익 성장 기여도",
+        "data": [
+          {
+            "x": "반도체",
+            "y": 2.45,
+            "confidence": 0.72
+          },
+          {
+            "x": "자본재",
+            "y": 1.78,
+            "confidence": 0.72
+          },
+          {
+            "x": "은행",
+            "y": 1.35,
+            "confidence": 0.72
+          },
+          {
+            "x": "자동차",
+            "y": 1.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "소재",
+            "y": 1,
+            "confidence": 0.72
+          },
+          {
+            "x": "음식료&담배",
+            "y": 0.66,
+            "confidence": 0.72
+          },
+          {
+            "x": "내구소비재",
+            "y": 0.48,
+            "confidence": 0.72
+          },
+          {
+            "x": "바이오테크",
+            "y": 0.46,
+            "confidence": 0.72
+          },
+          {
+            "x": "IT H/W",
+            "y": 0.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "미디어&엔터",
+            "y": 0.36,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#40548B"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.061,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -85.3,
+        "absoluteChange": -2.09,
+        "from": 2.45,
+        "to": 0.36
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.45,
+        "at": ""
+      },
+      "min": {
+        "value": 0.36,
+        "at": ""
+      },
+      "average": 1.014,
+      "median": 0.8300000000000001,
+      "range": 2.0900000000000003
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "이익의 무게는 이미 자동차에서 다른 곳으로",
+    "subMessage": "26년 이익 성장 기여도 (%p)",
+    "headline": "이익의 무게는 이미 자동차에서 다른 곳으로",
+    "summary": "26년 이익 성장 기여도 (%p)",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "축과 시리즈 수를 먼저 맞추고 라벨만 정리했습니다.",
+      "숫자는 화면 판독값이므로 방향과 격차 중심으로 읽습니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권",
+      "주: GICS Lv.2 기준 상위 10개 종목만 나열"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "callout",
+        "position": {
+          "x": "반도체",
+          "y": 2.45
+        },
+        "text": "전체 이익 성장의 61% 설명",
+        "style": "info",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "반도체",
+        "toX": "은행",
+        "color": "rgba(20, 88, 212, 0.12)",
+        "label": "전체 이익 성장의 61% 설명",
+        "description": "상위 3개 업종(반도체·자본재·은행)이 26년 이익 성장의 61%를 설명"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0.36
+      },
+      "displayText": "이익의 무게는 이미 자동차에서 다른 곳으로",
+      "reason": "원본 제목 그대로 보존"
+    },
+    "densityLevel": "balanced"
+  }
+}

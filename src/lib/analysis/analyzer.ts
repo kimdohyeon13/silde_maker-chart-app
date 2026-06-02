@@ -271,6 +271,125 @@ async function callAnalysisAPI(_request: {
 }
 
 // ─────────────────────────────────────────────
+// contentType 2차 검증 (오분류 재분류 훅) — P0-1
+// ─────────────────────────────────────────────
+//
+// 왜 필요한가?
+// → 1차 분류(프롬프트)는 가끔 시계열/축 기반 그림을 infographic·table로 오분류한다.
+// → 이 경우 데이터가 카드/표로 평탄화되어 구조가 파괴된다(근본원인 1·2).
+// → 그래서 파싱된 JSON 자체의 "구조적 신호"를 보고, chart로 되돌릴 수 있으면 재분류한다.
+//
+// ⚠️ 한계(정직하게 명시):
+// → 이 훅은 "원본 썸네일 픽셀 대조"가 아니라 **JSON 구조 신호 기반**이다.
+//   (이 모듈에는 원본 이미지 바이트가 없고, 실제 Vision 호출은 /api/analyze 라우트에서 일어남)
+// → 따라서 1차 시각 분류 보강의 핵심은 prompts.ts의 0단계 분류 결정트리·강등 금지 가드이며,
+//   이 훅은 그 뒤를 받치는 2차 안전망(safety net)이다.
+// → 픽셀 단위 재대조가 필요하면 API 라우트에서 원본 이미지와 함께 재호출하는 별도 단계가 필요하다.
+
+/** 재분류 판정 결과 */
+export interface ReclassifyResult {
+  /** 재분류가 일어났는지 */
+  reclassified: boolean;
+  /** 판정된(또는 원래) contentType — 차트면 undefined */
+  contentType?: "table" | "infographic";
+  /** 판정 근거(사람이 읽는 설명) */
+  reason: string;
+  /** 재분류된(또는 원본 그대로의) 데이터 — 불변성 유지를 위해 새 객체로 반환 */
+  data: Record<string, unknown>;
+}
+
+/** 문자열이 날짜/연도/시계열 라벨처럼 보이는지 (예: "2024", "26F", "2024-01", "1Q24") */
+function looksLikeTimeLabel(v: unknown): boolean {
+  if (typeof v === "number") return v >= 1900 && v <= 2100; // 연도 추정
+  if (typeof v !== "string") return false;
+  const s = v.trim();
+  // YYYY / YYYY-MM / YYYY.MM / 'NNF(전망) / 1QNN(분기) / NN년 등
+  return (
+    /^\d{4}([-.\/]\d{1,2})?$/.test(s) ||
+    /^\d{2,4}F$/i.test(s) ||
+    /^[1-4]Q\d{2,4}$/i.test(s) ||
+    /^\d{2,4}\s*년/.test(s) ||
+    /^\d{4}(년)?\s*\d{1,2}\s*월$/.test(s)
+  );
+}
+
+/**
+ * reclassifyIfMisclassified
+ *
+ * 파싱된 분석 JSON이 infographic·table로 분류돼 있지만,
+ * 구조 신호상 명백히 시계열/축 기반 차트면 chart로 되돌린다.
+ *
+ * 재분류 신호(하나라도 강하게 충족하면 chart로 승격):
+ *  - structure에 chartType / xAxis.tickValues / panels 등 "축·차트" 구조가 살아 있음
+ *  - infographic items의 라벨이 시계열(날짜/연도)처럼 줄지어 있음(시계열을 카드로 펼친 정황)
+ *
+ * 불변성: 입력을 수정하지 않고, 재분류 시 contentType을 제거한 새 객체를 반환한다.
+ *
+ * @param data - 파싱된 JSON 데이터(객체)
+ * @returns 재분류 판정 + (필요 시 chart로 승격된) 새 데이터
+ */
+export function reclassifyIfMisclassified(data: unknown): ReclassifyResult {
+  if (!data || typeof data !== "object") {
+    return { reclassified: false, reason: "데이터가 객체가 아님", data: {} };
+  }
+  const d = data as Record<string, unknown>;
+  const contentType = d.contentType as "table" | "infographic" | undefined;
+
+  // 이미 차트(contentType 없음)면 건드리지 않는다.
+  if (contentType !== "table" && contentType !== "infographic") {
+    return { reclassified: false, reason: "이미 chart로 분류됨", data: d };
+  }
+
+  const structure = (d.structure as Record<string, unknown>) || {};
+  const hasChartType = typeof structure.chartType === "string" && structure.chartType.length > 0;
+  const hasPanels = Array.isArray(structure.panels) && structure.panels.length > 0;
+  const xAxis = structure.xAxis as Record<string, unknown> | undefined;
+  const yAxis = structure.yAxis as Record<string, unknown> | undefined;
+  const hasAxisTicks =
+    (!!xAxis && Array.isArray(xAxis.tickValues) && xAxis.tickValues.length > 0) ||
+    (!!yAxis && Array.isArray(yAxis.tickValues) && yAxis.tickValues.length > 0);
+
+  // 인포그래픽 항목 라벨이 시계열처럼 줄지어 있는지 검사
+  let timeSeriesLikeItems = false;
+  if (contentType === "infographic") {
+    const igData = d.infographicData as Record<string, unknown> | undefined;
+    const items = (igData?.items as Array<Record<string, unknown>>) || [];
+    if (items.length >= 4) {
+      const timeLabelCount = items.filter((it) => looksLikeTimeLabel(it?.label)).length;
+      // 항목 다수가 날짜/연도 라벨이면 "시계열을 카드로 펼친" 오분류로 본다
+      timeSeriesLikeItems = timeLabelCount >= Math.ceil(items.length * 0.6);
+    }
+  }
+
+  const shouldBeChart = hasChartType || hasPanels || hasAxisTicks || timeSeriesLikeItems;
+
+  if (!shouldBeChart) {
+    return {
+      reclassified: false,
+      reason: `${contentType} 분류 유지 — 차트 구조 신호 없음`,
+      data: d,
+    };
+  }
+
+  // 재분류: contentType을 제거해 chart로 승격한 새 객체 반환 (원본 불변)
+  const reasonBits: string[] = [];
+  if (hasChartType) reasonBits.push("structure.chartType 존재");
+  if (hasPanels) reasonBits.push("structure.panels 존재");
+  if (hasAxisTicks) reasonBits.push("축 tickValues 존재");
+  if (timeSeriesLikeItems) reasonBits.push("항목 라벨이 시계열(날짜/연도)");
+
+  const { contentType: _removed, ...rest } = d;
+  void _removed;
+
+  return {
+    reclassified: true,
+    contentType: undefined,
+    reason: `${contentType} → chart 재분류: ${reasonBits.join(", ")}`,
+    data: rest,
+  };
+}
+
+// ─────────────────────────────────────────────
 // 분석 결과 검증
 // ─────────────────────────────────────────────
 
@@ -280,6 +399,7 @@ async function callAnalysisAPI(_request: {
  * Claude가 출력한 JSON이 스키마에 맞는지 검증합니다.
  * → 필수 필드 누락, 타입 오류 등을 잡아냄
  * → 차트, 표, 인포그래픽 각각의 검증 로직을 contentType으로 분기
+ * → 검증 전에 reclassifyIfMisclassified로 오분류된 시계열/축 차트를 chart로 되돌린 뒤 검증한다.
  *
  * @param data - 파싱된 JSON 데이터
  * @returns 검증 결과
@@ -294,7 +414,9 @@ export function validateAnalysis(data: unknown): {
     return { valid: false, errors: ["데이터가 객체가 아닙니다."] };
   }
 
-  const d = data as Record<string, unknown>;
+  // 2차 검증: 시계열/축 기반인데 infographic·table로 오분류됐으면 chart로 되돌린 뒤 검증
+  const reclassified = reclassifyIfMisclassified(data);
+  const d = reclassified.data;
 
   // contentType으로 분기: "table", "infographic", 또는 차트(기본)
   const contentType = d.contentType as string | undefined;

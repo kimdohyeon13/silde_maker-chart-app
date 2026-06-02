@@ -1,0 +1,620 @@
+{
+  "id": "page-11-table-02",
+  "sourceImage": "input/19-page_11_table_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한글화",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "업종별 주가 - 실적 모멘텀 산포도",
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다. 원본 제목과 출처를 그대로 유지하는 충실 모드로 교정했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop의 축 눈금을 픽셀 기준으로 보정해 24개 업종 점의 좌표와 라벨을 복원했습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 24개 업종 라벨과 위치를 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "업종별 주가 - 실적 모멘텀 산포도",
+    "subtitle": "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "2026년 5월 기준",
+    "xAxis": {
+      "label": "연초 이후 12MF EPS 증가율",
+      "type": "numeric",
+      "tickValues": [
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -10,
+      "max": 50
+    },
+    "yAxis": {
+      "label": "연초 이후 주가 상승률",
+      "type": "numeric",
+      "tickValues": [
+        "-20",
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -20,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "반도체",
+        "role": "primary",
+        "originalColor": "#334B8E",
+        "remakeColor": "#334B8E"
+      },
+      {
+        "name": "에너지",
+        "role": "primary",
+        "originalColor": "#334B8E",
+        "remakeColor": "#334B8E"
+      },
+      {
+        "name": "IT H/W",
+        "role": "primary",
+        "originalColor": "#5B6FA3",
+        "remakeColor": "#5B6FA3"
+      },
+      {
+        "name": "미디어&엔터",
+        "role": "primary",
+        "originalColor": "#5B6FA3",
+        "remakeColor": "#5B6FA3"
+      },
+      {
+        "name": "소재",
+        "role": "secondary",
+        "originalColor": "#6B7280",
+        "remakeColor": "#6B7280"
+      },
+      {
+        "name": "경기소비유통",
+        "role": "secondary",
+        "originalColor": "#6B7280",
+        "remakeColor": "#6B7280"
+      },
+      {
+        "name": "자본재",
+        "role": "secondary",
+        "originalColor": "#6B7280",
+        "remakeColor": "#6B7280"
+      },
+      {
+        "name": "필수소비유통",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "부동산",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "음식료",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "운송",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "유틸리티",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "통신",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "생활용품",
+        "role": "secondary",
+        "originalColor": "#8B95A1",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "자동차",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "은행",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "소비자서비스",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "제약",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "보험",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "금융서비스",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "의료장비",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "내구소비재",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "상업서비스",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      },
+      {
+        "name": "IT S/W",
+        "role": "secondary",
+        "originalColor": "#A1A1AA",
+        "remakeColor": "#A1A1AA"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "업종",
+        "data": [
+          {
+            "x": 42,
+            "y": 38,
+            "confidence": 0.82,
+            "label": "반도체",
+            "z": 14,
+            "color": "#334B8E",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 43,
+            "y": 24,
+            "confidence": 0.82,
+            "label": "에너지",
+            "z": 14,
+            "color": "#334B8E",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 25,
+            "y": 20,
+            "confidence": 0.82,
+            "label": "IT H/W",
+            "z": 14,
+            "color": "#5B6FA3",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 10,
+            "y": 16,
+            "confidence": 0.8,
+            "label": "자본재",
+            "z": 12,
+            "color": "#6B7280",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 4,
+            "y": 15,
+            "confidence": 0.78,
+            "label": "필수소비유통",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 22,
+            "y": 13,
+            "confidence": 0.82,
+            "label": "미디어&엔터",
+            "z": 14,
+            "color": "#5B6FA3",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 19,
+            "y": 13,
+            "confidence": 0.8,
+            "label": "소재",
+            "z": 12,
+            "color": "#6B7280",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 13,
+            "y": 12,
+            "confidence": 0.8,
+            "label": "경기소비유통",
+            "z": 12,
+            "color": "#6B7280",
+            "labelPosition": "bottom",
+            "showLabel": true
+          },
+          {
+            "x": 4,
+            "y": 11,
+            "confidence": 0.76,
+            "label": "부동산",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 3.5,
+            "y": 9,
+            "confidence": 0.74,
+            "label": "음식료",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 2,
+            "y": 8,
+            "confidence": 0.74,
+            "label": "운송",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "bottom",
+            "showLabel": true
+          },
+          {
+            "x": 5.5,
+            "y": 5,
+            "confidence": 0.76,
+            "label": "유틸리티",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": -1,
+            "y": 3,
+            "confidence": 0.74,
+            "label": "통신",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 0.5,
+            "y": 2,
+            "confidence": 0.72,
+            "label": "생활용품",
+            "z": 9,
+            "color": "#8B95A1",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 9,
+            "y": -5,
+            "confidence": 0.8,
+            "label": "자동차",
+            "z": 12,
+            "color": "#A1A1AA",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 7,
+            "y": -5,
+            "confidence": 0.78,
+            "label": "은행",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 3,
+            "y": -6.5,
+            "confidence": 0.7,
+            "label": "소비자서비스",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 1.5,
+            "y": -5.5,
+            "confidence": 0.7,
+            "label": "제약",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 2,
+            "y": -7,
+            "confidence": 0.7,
+            "label": "보험",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "bottom",
+            "showLabel": true
+          },
+          {
+            "x": 6,
+            "y": -7,
+            "confidence": 0.74,
+            "label": "금융서비스",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 5,
+            "y": -10.5,
+            "confidence": 0.76,
+            "label": "의료장비",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 0.5,
+            "y": -9,
+            "confidence": 0.74,
+            "label": "내구소비재",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 3,
+            "y": -14,
+            "confidence": 0.76,
+            "label": "상업서비스",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "bottom",
+            "showLabel": true
+          },
+          {
+            "x": 8,
+            "y": -15,
+            "confidence": 0.78,
+            "label": "IT S/W",
+            "z": 9,
+            "color": "#A1A1AA",
+            "labelPosition": "right",
+            "showLabel": true
+          }
+        ],
+        "renderAs": "scatter",
+        "role": "primary",
+        "color": "#334B8E"
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.77,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "좌하단 소비자서비스·제약·보험 점은 서로 겹쳐 있어 위치를 보간했습니다."
+      ],
+      "readabilityScore": "improved"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "EPS 증가율이 높을수록 주가 상승률도 높은 우상향 관계입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 16.296,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "최저 업종 대비 최고 업종",
+        "percentChange": 0,
+        "absoluteChange": 53.0,
+        "from": -15.0,
+        "to": 38.0
+      }
+    ],
+    "correlations": [
+      {
+        "pair": "12MF EPS 증가율 vs 주가 상승률",
+        "coefficient": 0.78,
+        "description": "실적 모멘텀이 강한 업종일수록 주가 성과도 우수합니다."
+      }
+    ],
+    "summary": {
+      "max": {
+        "value": 38.0,
+        "at": "반도체"
+      },
+      "min": {
+        "value": -15.0,
+        "at": "IT S/W"
+      },
+      "average": 1.6,
+      "median": 2.5,
+      "range": 53.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "업종별 주가 - 실적 모멘텀 산포도",
+    "subMessage": "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다.",
+    "headline": "업종별 주가 - 실적 모멘텀 산포도",
+    "summary": "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 24개 업종 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다.",
+      "EPS 증가율이 높은 우상단 업종일수록 주가 상승률도 높습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "label": "주도주군",
+        "x": 33,
+        "y": 33,
+        "color": "#2563EB"
+      }
+    ],
+    "highlightZones": [
+      {
+        "label": "주도주군",
+        "from": "15",
+        "to": "50",
+        "color": "#DBEAFE",
+        "opacity": 0.38
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 42,
+        "y": 38
+      },
+      "displayText": "업종별 주가-실적 모멘텀 산포",
+      "reason": "연초 이후 EPS와 주가가 함께 강한 업종은 반도체, IT H/W, 미디어&엔터 쪽으로 집중된다."
+    },
+    "densityLevel": "high-label-high-point-density"
+  }
+}

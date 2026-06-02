@@ -24,8 +24,8 @@ export const chartSettings = {
   // 텍스트가 잘리면 해당 방향의 값을 키우세요.
   margin: {
     top: 60,     // 상단: 어노테이션 텍스트가 잘리면 키우기
-    right: 96,   // 오른쪽: 범례나 긴 텍스트가 잘리면 키우기
-    bottom: 54,  // 하단: X축 라벨이 잘리면 키우기
+    right: 118,  // 오른쪽: 직접 라벨이나 긴 텍스트가 잘리면 키우기
+    bottom: 66,  // 하단: X축 라벨이 잘리면 키우기
     left: 18,    // 왼쪽: Y축 숫자 옆 여유 공간
   },
 
@@ -36,7 +36,7 @@ export const chartSettings = {
   // 숫자가 잘리면(앞자리가 안 보이면) 이 값을 키우세요.
   yAxis: {
     width: 122,       // 왼쪽 Y축 너비 (큰 축 라벨 대응)
-    rightWidth: 102,  // 오른쪽 보조 Y축 너비 (듀얼 축용, 예: "105USD")
+    rightWidth: 118,  // 오른쪽 보조 Y축 너비 (듀얼 축용, 예: "$11.5")
   },
 
   // ─────────────────────────────────────────────
@@ -44,7 +44,9 @@ export const chartSettings = {
   // ─────────────────────────────────────────────
   // 데이터가 많을 때 라벨이 겹치지 않게 하는 설정
   xAxis: {
-    maxVisibleLabels: 4,  // 화면에 보이는 최대 라벨 수 (글자가 커진 만큼 더 보수적으로)
+    maxVisibleLabels: 8,  // 화면에 보이는 최대 라벨 수
+    longSeriesThreshold: 48, // 4년 이상 월별 데이터는 라벨을 더 줄임
+    longSeriesMaxVisibleLabels: 3,
   },
 
   // ─────────────────────────────────────────────
@@ -69,12 +71,12 @@ export const chartSettings = {
     showPngButton: false,      // 개별 PNG 다운로드 버튼 (true=보이기, false=숨기기)
     pixelRatio: 2,             // 해상도 배율 (2 = 고해상도)
     borderRadius: "9px 9px 0 0", // 하단은 직선에 가깝게
-    titleFontSize: 50,         // export 제목 폰트 크기
-    subtitleFontSize: 34,      // export 부제목 폰트 크기
-    sourceFontSize: 24,        // export 출처 폰트 크기
-    headerPadding: "34px 36px 0",
-    contentPadding: "16px 18px 22px",
-    sourcePadding: "0 36px 22px",
+    titleFontSize: 56,         // export 제목 폰트 크기
+    subtitleFontSize: 38,      // export 부제목 폰트 크기
+    sourceFontSize: 26,        // export 출처 폰트 크기
+    headerPadding: "30px 42px 0",
+    contentPadding: "12px 14px 14px",
+    sourcePadding: "0 42px 18px",
   },
 
   // ─────────────────────────────────────────────
@@ -85,10 +87,33 @@ export const chartSettings = {
   },
 
   // ─────────────────────────────────────────────
+  // 직접 라벨 (Line 끝의 이름 + 최신값)
+  // ─────────────────────────────────────────────
+  // 범례를 보고 다시 선을 찾는 부담을 줄이기 위한 설정.
+  // 선이 너무 많을 때는 오히려 복잡해지므로 maxSeries 이하에서만 켭니다.
+  directLabels: {
+    enabled: true,
+    maxSeries: 3,
+    extraRightMargin: 148,
+    fontSize: 19,
+    offset: 16,
+    dotRadius: 5,
+  },
+
+  // ─────────────────────────────────────────────
+  // 하이라이트 구간 (급등/위기/회복 구간 배경 밴드)
+  // ─────────────────────────────────────────────
+  highlightZone: {
+    opacity: 0.12,
+    labelFontSize: 15,
+    minLabelSpanRatio: 0.12,
+  },
+
+  // ─────────────────────────────────────────────
   // 듀얼 축 (Y축 2개인 차트)
   // ─────────────────────────────────────────────
   dualAxis: {
-    extraRightMargin: 30, // 오른쪽 Y축이 있을 때 추가 오른쪽 여백
+    extraRightMargin: 34, // 오른쪽 Y축이 있을 때 추가 오른쪽 여백
   },
 
   // ─────────────────────────────────────────────
@@ -98,28 +123,28 @@ export const chartSettings = {
   // 나머지는 secondary로 설정하면 시각적으로 약화됩니다.
   seriesRole: {
     primary: {
-      strokeWidth: 4,       // 굵은 선
+      strokeWidth: 4.6,     // 굵은 선
       opacity: 1,           // 완전 불투명
       areaOpacity: 1,       // 영역 채움 불투명도
     },
     secondary: {
-      strokeWidth: 2.4,     // 가는 선이지만 충분히 읽히는 두께
-      opacity: 0.55,        // 반투명 (주연 대비 눈에 덜 띄게)
-      areaOpacity: 0.38,    // 영역 채움도 약하게
+      strokeWidth: 3.1,     // 가는 선이지만 충분히 읽히는 두께
+      opacity: 0.74,        // 조연이지만 수치 비교가 가능할 만큼 유지
+      areaOpacity: 0.3,     // 영역 채움도 약하게
     },
   },
 
   // ─────────────────────────────────────────────
   // 표(Table) 설정
   // ─────────────────────────────────────────────
-  // 토스 스타일 표: 세로선 없음, 미니멀한 가로선, 넉넉한 여백
+  // 토스 스타일 표: 세로선 없음, 미니멀한 가로선, 발표 장표용 압축 여백
   table: {
     // 헤더 배경색 (다크/라이트 모드별)
     headerBg: {
       dark: "#1C2128",
       light: "#F6F8FA",
     },
-    rowHeight: 58,           // 행 높이 (px) — 글자 크기 확대에 맞춰 더 여유 있게
+    rowHeight: 44,           // 행 높이 (px) — 표가 너무 길어지지 않게 압축
     zebraStripe: true,       // 교대 줄무늬 — 짝수 행에 살짝 다른 배경
     zebraOpacity: 0.03,      // 줄무늬 투명도 — 너무 진하면 산만, 0.03이 적절
     // 테두리(가로선) 색상
@@ -127,9 +152,9 @@ export const chartSettings = {
       dark: "#21262D",
       light: "#E8ECF0",
     },
-    cellPadding: "16px 20px", // 셀 안쪽 여백
+    cellPadding: "6px 14px", // 셀 안쪽 여백
     maxVisibleRows: 15,       // 스크롤 없이 보이는 최대 행 수
-    lineHeight: 1.6,          // 큰 글자에서도 읽기 쉬운 줄간격
+    lineHeight: 1.18,         // 줄간격
     // 셀 강조 배경색 (highlight별)
     highlightCellBg: {
       positive: "rgba(255, 107, 107, 0.12)",   // 상승 (빨강 계열)
@@ -142,9 +167,9 @@ export const chartSettings = {
       header: "20px",        // 헤더 행
       body: "19px",          // 일반 데이터 행
       total: "20px",         // 합계/소계 행
-      badge: "14px",         // 셀 뱃지
-      unit: "14px",          // 헤더 단위
-      groupHeader: "16px",   // 그룹 헤더 행
+      badge: "15px",         // 셀 뱃지
+      unit: "15px",          // 헤더 단위
+      groupHeader: "17px",   // 그룹 헤더 행
     },
   },
 

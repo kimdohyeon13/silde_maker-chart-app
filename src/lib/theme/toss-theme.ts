@@ -136,8 +136,7 @@ export const lightColors = {
 /**
  * 폰트 설정
  *
- * Geist Sans: UI 텍스트, 제목, 설명
- * Geist Mono: 수치, 축 레이블, 코드
+ * Noto Sans KR: UI 텍스트, 제목, 수치, 축 레이블을 모두 통일
  *
  * 왜 Mono를 수치에 쓰는가?
  * → 모노스페이스 폰트는 모든 숫자가 같은 폭이라서
@@ -145,29 +144,29 @@ export const lightColors = {
  */
 export const typography = {
   fontFamily: {
-    sans: '"Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif',
-    mono: '"Geist Mono", "Geist Mono Fallback", ui-monospace, monospace',
+    sans: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
+    mono: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
   },
 
   fontSize: {
     // 차트 제목 / 헤드 메시지
-    chartTitle: "48px",
+    chartTitle: "54px",
     chartTitleWeight: "800",
 
     // 차트 부제목 / 메타 정보
-    chartSubtitle: "27px",
+    chartSubtitle: "30px",
     chartSubtitleWeight: "600",
 
     // 서브 메시지
-    messageSubtitle: "33px",
+    messageSubtitle: "36px",
     messageSubtitleWeight: "700",
 
     // 축 레이블
-    axisLabel: "19px",
+    axisLabel: "18px",
     axisLabelWeight: "600",
 
     // 데이터 수치 (포인트 라벨, 뱃지)
-    dataValue: "20px",
+    dataValue: "22px",
     dataValueWeight: "800",
 
     // 큰 수치 (포커스 포인트, 헤드라인 수치)
@@ -175,11 +174,11 @@ export const typography = {
     heroValueWeight: "800",
 
     // 어노테이션 텍스트
-    annotation: "20px",
+    annotation: "22px",
     annotationWeight: "800",
 
     // 툴팁
-    tooltip: "17px",
+    tooltip: "18px",
     tooltipWeight: "600",
 
     // 인사이트 / 메시지 패널
@@ -357,7 +356,7 @@ export function getRechartsStyle(mode: ThemeMode = "dark") {
         fontFamily: typography.fontFamily.mono,
         fontWeight: parseInt(typography.fontSize.axisLabelWeight),
       },
-      axisLine: false, // Y축 선 숨김 (격자선만으로 충분)
+      axisLine: { stroke: colors.axisLine, strokeWidth: 1.4 },
       tickLine: false,
     },
 

@@ -44,6 +44,14 @@ export interface AxisInfo {
   type: "time" | "category" | "numeric";
   /** 축에 표시된 값들 (눈금) */
   tickValues: string[];
+  /**
+   * 화면에 실제로 표시할 눈금 라벨들 (X축 틱 정규화/솎기용)
+   * → tickValues는 원본에서 읽은 모든 눈금, displayTickValues는 그중 렌더링할 부분집합
+   * → 데이터 x-key(예: "26F.04")와 정확일치(===)가 안 맞아 틱이 사라지던 문제(P0-5) 대응
+   * → 없으면 tickValues를 그대로 사용 (기존 JSON 호환)
+   * (기존에는 TossLineChart에서 인라인 캐스팅으로 사용하던 필드를 정식 필드로 승격)
+   */
+  displayTickValues?: string[];
   /** 단위 (예: "억원", "%", "달러", "명") */
   unit?: string;
   /** 축 최솟값 (숫자축인 경우) */
@@ -66,6 +74,43 @@ export interface LegendItem {
   remakeColor?: string;
   /** 주연/조연 구분 — secondary는 시각적으로 약하게 렌더링 */
   role?: "primary" | "secondary";
+  /**
+   * 시리즈 성격 구분 (P0-3 밴드/전망 처리용)
+   * → "band": PER 밴드 등 상·하한선 묶음 (옅은 부채꼴 채움 + 우측 끝 배수라벨)
+   * → "forecast": 전망선 (점선 + 범례 점선 스와치)
+   * → "normal": 일반 시리즈 (기본값으로 취급)
+   * → 밴드를 forecast로 오판해 범례/라벨이 사라지던 회귀를 막기 위해 명시 필드로 추가
+   * → 없으면 기존 키워드 추론 로직을 그대로 사용 (기존 JSON 호환)
+   */
+  seriesKind?: "band" | "forecast" | "normal";
+}
+
+/**
+ * 패널(Panel) 정보 — 다중 패널/스몰멀티플(small-multiples) 차트의 단일 패널 (P0-2)
+ *
+ * 왜 필요한가?
+ * → 기존 스키마는 단일 xAxis/yAxis/secondaryYAxis만 지원했음
+ * → 그래서 3분할 패널·2단 콤보 차트가 "합성 단일축"으로 평탄화되어 구조가 파괴됨
+ * → 패널마다 독립된 축/시리즈를 가지므로, 각 패널을 이 타입으로 분리해 담는다
+ * → structure.panels[]가 있으면 PanelGrid가 패널별 독립축 격자로 렌더 (합성 X축 생성 금지)
+ *
+ * AxisInfo / ChartType / HighlightZone 은 이 파일에 이미 정의된 타입을 그대로 재사용한다.
+ */
+export interface PanelInfo {
+  /** 패널 제목 (예: "Brent", "WTI") — 없으면 시리즈명으로 대체 */
+  title?: string;
+  /** 이 패널의 차트 종류 (패널마다 다를 수 있음, 예: 한 패널은 line 다른 패널은 bar) */
+  chartType?: ChartType;
+  /** 이 패널의 X축 정보 */
+  xAxis: AxisInfo;
+  /** 이 패널의 Y축 정보 */
+  yAxis: AxisInfo;
+  /** 이 패널의 보조 Y축 (이중축 패널인 경우) */
+  secondaryYAxis?: AxisInfo;
+  /** 이 패널에 그릴 시리즈 이름 목록 (data.series[].name과 매칭) */
+  seriesNames: string[];
+  /** 이 패널에 표시할 강조 구간들 (배경 음영 등) */
+  highlightZones?: HighlightZone[];
 }
 
 /** Layer 1 전체 구조 */
@@ -86,6 +131,12 @@ export interface StructureAnalysis {
   yAxis: AxisInfo;
   /** 보조 Y축 (이중축 차트인 경우) */
   secondaryYAxis?: AxisInfo;
+  /**
+   * 다중 패널 정보 (P0-2) — 스몰멀티플/3분할/2단 콤보 차트용
+   * → 있으면 PanelGrid가 패널별 독립축 격자로 렌더 (단일 xAxis/yAxis로 평탄화 금지)
+   * → 없으면 기존처럼 단일 패널 차트로 취급 (기존 JSON 호환)
+   */
+  panels?: PanelInfo[];
   /** 범례 정보 */
   legend: LegendItem[];
   /**
@@ -125,6 +176,13 @@ export interface DataSeries {
   renderAs?: "line" | "bar" | "area";
   /** 주연/조연 구분 — secondary는 가는 선 + 낮은 투명도로 시각적 약화 */
   role?: "primary" | "secondary";
+  /**
+   * 시리즈 성격 구분 (P0-3 밴드/전망 처리용) — LegendItem.seriesKind와 동일 의미
+   * → "band": PER 밴드 등 상·하한선 묶음 / "forecast": 전망선 / "normal": 일반 시리즈
+   * → 렌더러가 키워드 추론 대신 이 값을 우선 사용해 밴드 오판(범례·라벨 소실)을 방지
+   * → 없으면 기존 키워드 추론 로직을 그대로 사용 (기존 JSON 호환)
+   */
+  seriesKind?: "band" | "forecast" | "normal";
 }
 
 /** 데이터 품질 평가 */
@@ -482,7 +540,7 @@ export interface EmphasisPlan {
 // ─────────────────────────────────────────────
 
 /** 차트 분석 전체 결과 */
-export interface ChartAnalysis {
+export interface ChartAnalysis extends RemakeMetadataFields {
   /** 고유 ID */
   id: string;
   /** 원본 이미지 경로 */
@@ -528,6 +586,85 @@ export interface ChartRenderConfig {
   fontScale: number;
   /** 내보내기용 여부 (true면 더 높은 해상도) */
   forExport: boolean;
+}
+
+// ═════════════════════════════════════════════
+// Style-Preserving Remake 메타데이터
+// ═════════════════════════════════════════════
+//
+// 이 프로젝트의 핵심은 원본 표/그래프의 "본질"은 유지하면서
+// 고품질 스타일로 다시 렌더링하는 것입니다.
+// 아래 메타데이터는 어떤 스타일을 적용했는지, 무엇을 보존해야 하는지,
+// 어떤 변화까지 허용되는지를 JSON 안에 명시하기 위한 계약입니다.
+
+export type StylePresetId =
+  | "toss-clean"
+  | "consulting-slide"
+  | "market-terminal"
+  | "editorial-card";
+
+export type DataFidelityLevel =
+  | "exact"
+  | "source-visible"
+  | "directional";
+
+export type AllowedTransformation =
+  | "translate-text"
+  | "simplify-labels"
+  | "rewrite-title"
+  | "group-rows"
+  | "reorder-emphasis"
+  | "adjust-colors"
+  | "adjust-layout"
+  | "adjust-density"
+  | "crop-source-image";
+
+export interface PreserveIntent {
+  /** 원본이 말하려던 핵심 메시지 */
+  originalMessage?: string;
+  /** 반드시 유지해야 하는 데이터/비교/관계 */
+  preservedElements?: string[];
+  /** 리디자인 과정에서 의도적으로 바꾼 표현 */
+  changedElements?: string[];
+  /** 숫자 보존 수준 */
+  dataFidelity?: DataFidelityLevel;
+  /** 원본 충실도 관련 메모 */
+  notes?: string;
+}
+
+export interface QualityCheck {
+  id: string;
+  label: string;
+  status: "pending" | "pass" | "warning" | "fail";
+  detail?: string;
+  checkedAt?: string;
+}
+
+export interface ExportOptions {
+  headerPadding?: string;
+  contentPadding?: string;
+  sourcePadding?: string;
+  titleFontSize?: number;
+  subtitleFontSize?: number;
+  sourceFontSize?: number;
+  fontFamily?: string;
+  hideHeader?: boolean;
+  hideSource?: boolean;
+  chartHeight?: number;
+  sourceReplica?: boolean;
+}
+
+export interface RemakeMetadataFields {
+  /** 적용할 고급 리디자인 스타일 프리셋 */
+  stylePreset?: StylePresetId;
+  /** 원본에서 보존해야 하는 의미/데이터 계약 */
+  preserveIntent?: PreserveIntent;
+  /** 원본 대비 허용된 리디자인 변화 */
+  allowedTransformations?: AllowedTransformation[];
+  /** export 전후 품질 검수 상태 */
+  qualityChecks?: QualityCheck[];
+  /** 카드별 export 여백/폰트 조정 */
+  exportOptions?: ExportOptions;
 }
 
 // ═════════════════════════════════════════════
@@ -649,6 +786,24 @@ export interface TableRow {
   highlight?: boolean;
 }
 
+export interface TableVisualOptions {
+  rowHeight?: number;
+  cellPadding?: string;
+  lineHeight?: number;
+  zebraStripe?: boolean;
+  zebraOpacity?: number;
+  fontFamily?: string;
+  highlightMode?: "background" | "text";
+  fontSize?: Partial<{
+    header: string;
+    body: string;
+    total: string;
+    badge: string;
+    unit: string;
+    groupHeader: string;
+  }>;
+}
+
 /**
  * 표 데이터 전체 구조 (Layer 2 대체)
  *
@@ -662,6 +817,8 @@ export interface TableData {
   rows: TableRow[];
   /** 합계/소계 행이 있는지 */
   hasTotalRow: boolean;
+  /** 표별 시각 옵션 — 특정 결과물만 글자/여백을 조절할 때 사용 */
+  visualOptions?: TableVisualOptions;
   /**
    * 행 그룹핑 — 섹션으로 나눠진 표에서 사용
    * 예: "제조업" 섹션, "서비스업" 섹션
@@ -902,7 +1059,7 @@ export interface CommonEmphasis {
  * ChartAnalysis와 같은 수준의 최상위 타입이지만,
  * xAxis/yAxis/data.series 대신 tableData를 가집니다.
  */
-export interface TableAnalysis {
+export interface TableAnalysis extends RemakeMetadataFields {
   /** 고유 ID */
   id: string;
   /** 원본 이미지 경로 */
@@ -944,7 +1101,7 @@ export interface TableAnalysis {
  * KPI 카드, 프로세스 플로우, 비교 카드, 타임라인 등
  * 다양한 인포그래픽 형태를 하나의 타입으로 통합합니다.
  */
-export interface InfographicAnalysis {
+export interface InfographicAnalysis extends RemakeMetadataFields {
   /** 고유 ID */
   id: string;
   /** 원본 이미지 경로 */

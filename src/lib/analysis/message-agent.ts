@@ -85,9 +85,12 @@ export function getDisplayMessages(analysis: VisualAnalysis): DisplayMessages {
     subtitle ??
     normalizeText(analysis.narrative.keyTakeaways[0]);
 
-  const headMessage = shortenForCard(headCandidate, 32);
+  // 충실 모드에서는 원본 제목을 그대로 쓰므로 한 줄이 길어질 수 있다.
+  // 32자에서 "…"로 자르면 "Late cycle…"처럼 결론이 끊기므로(A7), 제한을 넉넉히 둔다.
+  // export 헤더는 줄바꿈을 허용하므로 길어도 2줄로 자연스럽게 표시된다.
+  const headMessage = shortenForCard(headCandidate, 48);
   const subMessage = rawSubCandidate
-    ? shortenForCard(rawSubCandidate, 68)
+    ? shortenForCard(rawSubCandidate, 80)
     : undefined;
 
   const deduped = dedupeMessages(headMessage, subMessage);
