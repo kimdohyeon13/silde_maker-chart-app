@@ -1,0 +1,247 @@
+{
+  "id": "03-bar-horizontal-yoy",
+  "mode": "redesign",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "preservedElements": [
+      "원본 8개 분기 값에서 유도한 전년 동기 대비 증가율",
+      "유도 가능한 4개 분기만 표시(값을 추정해 채우지 않음)",
+      "TSMC IR 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "형식 계획: 증가율 비교에 적합한 가로 막대",
+      "밀도 계획: 전년 동기 값이 있는 4개 분기로 한정",
+      "색상 계획: 네이비 단색과 2Q26 단일 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "증가율은 원본 8개 값에서 나눗셈으로 유도했습니다. 2Q26이 33.7%로 원본 부제의 34%와 일치해 유도가 검증됩니다.",
+    "sourceAttribution": "자료: TSMC IR (2026-07-16) · source-visible · 저장소 기존 검증 데이터 재사용"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대, 유도 가능한 4개 분기, 0 기준 x축 0~45%, 4개 전부 값 라벨, 네이비 단색과 2Q26 강조, 분기 라벨 잘림 리스크를 먼저 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "3Q24~2Q26의 8개 값은 원본 화면에서 읽은 source-visible 값이며, 이번 예시에서 값을 새로 만들지 않았습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "출처 문구와 dataFidelity에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "label-plan-matches-render",
+      "label": "라벨 계획과 렌더 일치",
+      "status": "pass",
+      "detail": "막대가 4개뿐이라 전부 값 라벨을 계획했고 렌더 결과와 일치합니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "전년 동기 대비 성장률은 30%대에서 유지",
+    "subtitle": "전년 동기 값이 있는 4개 분기만 표시 (단위: %)",
+    "source": "자료: TSMC IR (2026-07-16) · source-visible · 저장소 기존 검증 데이터 재사용",
+    "timeRange": "3Q25~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "전년 동기 대비 증가율",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전년 동기 대비 증가율",
+        "data": [
+          {
+            "x": "3Q25",
+            "y": 40.9,
+            "confidence": 0.7
+          },
+          {
+            "x": "4Q25",
+            "y": 25.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "1Q26",
+            "y": 40.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2Q26",
+            "y": 33.7,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "3Q24~2Q25는 전년 동기 값이 없어 증가율을 만들지 않았습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.2,
+      "description": "30%대 성장률이 유지되는 구간입니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.2,
+      "description": "4Q25만 25.5%로 낮고 나머지는 30%대입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 40.9,
+        "at": "3Q25"
+      },
+      "min": {
+        "value": 25.5,
+        "at": "4Q25"
+      },
+      "average": 35.175,
+      "median": 37.150000000000006,
+      "range": 15.4
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "전년 동기 대비 성장률은 30%대에서 유지",
+    "subMessage": "2Q26 증가율 33.7%로 원본 부제의 34%와 일치합니다.",
+    "headline": "전년 동기 대비 성장률은 30%대에서 유지",
+    "summary": "2Q26 증가율 33.7%로 원본 부제의 34%와 일치합니다.",
+    "story": "형식 예시 3/3 — 같은 값에서 유도한 증가율을 가로 막대로 비교합니다.",
+    "keyTakeaways": [
+      "3Q25 40.9%가 4개 분기 중 최대입니다.",
+      "4Q25만 25.5%로 낮고 나머지는 30%대입니다.",
+      "전년 동기 값이 없는 분기는 채우지 않고 비웠습니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "성장률이 꺾였는지 30%대에서 유지되는지 확인합니다.",
+    "contextualNotes": [
+      "자료: TSMC IR (2026-07-16) · source-visible · 저장소 기존 검증 데이터 재사용",
+      "데이터 상태: source-visible에서 유도"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#0B63CE",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 33.7
+      },
+      "displayText": "33.7%",
+      "reason": "원본 부제가 밝힌 34%와 일치하는 최신 분기 증가율"
+    },
+    "densityLevel": "focused"
+  }
+}
