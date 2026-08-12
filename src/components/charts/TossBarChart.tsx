@@ -19,18 +19,21 @@ import React from "react";
 import {
   ResponsiveContainer,
   BarChart,
+  ComposedChart,
   Bar,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
   Cell,
   ReferenceLine,
   ReferenceArea,
   ReferenceDot,
   LabelList,
 } from "recharts";
-import type { ChartAnalysis } from "@/lib/analysis/schema";
+import type { ChartAnalysis, ExportOptions } from "@/lib/analysis/schema";
 import {
   getAnalysisStylePreset,
   getAnalysisThemeMode,
@@ -38,7 +41,7 @@ import {
   getPresetRechartsStyle,
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
-import { formatNumber } from "@/lib/analysis/insight-engine";
+import { formatNumber, formatNumberEn } from "@/lib/analysis/insight-engine";
 import { chartSettings } from "@/lib/chart-settings";
 import {
   formatAxisTickLabel,
@@ -47,20 +50,29 @@ import {
   getAxisFractionDigits,
   generateNiceTicks,
 } from "@/lib/chart-format";
+import { mergeOptionDefaults } from "@/lib/visual-system-options";
+import { buildHorizontalSeriesData } from "@/lib/bar-chart-data";
 
 interface TossBarChartProps {
   analysis: ChartAnalysis;
   theme?: ThemeMode;
-  width?: number;
+  width?: number | `${number}%`;
   height?: number;
   showLabels?: boolean;
   animated?: boolean;
 }
 
+type StackedDatum = {
+  name: string;
+  value: number;
+  __total: number;
+  [seriesName: string]: string | number;
+};
+
 export default function TossBarChart({
   analysis,
   theme: themeMode = "dark",
-  width = 800,
+  width = "100%",
   height = 350,
   showLabels = true,
   animated = true,
@@ -70,15 +82,71 @@ export default function TossBarChart({
   const preset = getAnalysisStylePreset(analysis);
   const styles = getPresetRechartsStyle(analysis, themeMode);
   const colors = getPresetColors(preset, renderThemeMode);
+  const exportOptions = mergeOptionDefaults<ExportOptions>(
+    preset.exportDefaults,
+    analysis.exportOptions,
+  );
+  const squareEdges = !!exportOptions.squareEdges;
+  const compactChartMargins = exportOptions.compactChartMargins === true;
+  // 영문 덱은 값 라벨에 "만"·"억" 축약을 쓰지 않는다(기본값 ko는 기존 동작 그대로).
+  const fmt = exportOptions.numberLocale === "en" ? formatNumberEn : formatNumber;
 
   const firstSeries = analysis.data.series[0];
   if (!firstSeries) return null;
+  const chartType = analysis.structure.chartType;
+  const isStackedBarChart = chartType === "stacked_bar";
+  const isHorizontalBarChart = chartType === "bar_horizontal";
+  const horizontalBarSeries = isHorizontalBarChart
+    ? analysis.data.series.filter((series) => series.renderAs !== "line")
+    : [];
+  const horizontalChartData = isHorizontalBarChart
+    ? buildHorizontalSeriesData(horizontalBarSeries)
+    : [];
+
+  const stackedBarSeries = isStackedBarChart
+    ? analysis.data.series.filter((series) => (series.renderAs ?? "bar") !== "line")
+    : [];
+  const stackedLineSeries = isStackedBarChart
+    ? analysis.data.series.filter((series) => series.renderAs === "line")
+    : [];
+  const stackedCategories = Array.from(
+    new Set(stackedBarSeries.flatMap((series) => series.data.map((point) => String(point.x))))
+  );
+  const stackedChartData: StackedDatum[] = stackedCategories.map((name) => {
+    const row: StackedDatum = { name, value: 0, __total: 0 };
+
+    stackedBarSeries.forEach((series) => {
+      const value =
+        series.data.find((point) => String(point.x) === name)?.y ?? 0;
+      row[series.name] = value;
+      row.__total += value;
+    });
+
+    stackedLineSeries.forEach((series) => {
+      const value =
+        series.data.find((point) => String(point.x) === name)?.y ?? 0;
+      row[series.name] = value;
+    });
+
+    const maxLineValue = Math.max(
+      0,
+      ...stackedLineSeries.map((series) => Number(row[series.name] ?? 0))
+    );
+    row.value = Math.max(row.__total, maxLineValue);
+    return row;
+  });
 
   // Recharts 형식으로 변환
-  const chartData = firstSeries.data.map((point) => ({
-    name: String(point.x),
-    value: point.y,
-  }));
+  const chartData =
+    isStackedBarChart && stackedChartData.length > 0
+      ? stackedChartData.map((point) => ({
+          name: point.name,
+          value: point.value,
+        }))
+      : firstSeries.data.map((point) => ({
+          name: String(point.x),
+          value: point.y,
+        }));
 
   // 최댓값/최솟값 인덱스 (강조용)
   const maxIndex = chartData.reduce(
@@ -103,11 +171,49 @@ export default function TossBarChart({
   const baselineValue = baselineTrend?.to.y;
 
   // 막대 색상 결정 함수
+  // → 모든 양수 막대를 빨간 계열로 칠하면 전체가 강조처럼 보여 시선이 퍼진다.
+  // → 기본 막대는 차분한 중립색, 최댓값/음수 같은 "읽어야 할 곳"에만 강조색을 쓴다.
+  const colorStrategy = analysis.emphasis.colorStrategy;
+  const neutralBar =
+    colorStrategy?.secondary?.[0] ??
+    (renderThemeMode === "light" ? "#AEB8C6" : "#6E7681");
+  const neutralBarSubtle = colorStrategy?.secondary?.[1] ?? neutralBar;
+  const positiveAccent =
+    colorStrategy?.accent ??
+    colorStrategy?.positive ??
+    (renderThemeMode === "light" ? "#D92D3A" : "#FF6B6B");
+  const negativeAccent =
+    colorStrategy?.negative ??
+    (renderThemeMode === "light" ? "#2563EB" : "#4DABF7");
+  const negativeSubtle =
+    colorStrategy?.secondary?.[1] ??
+    (renderThemeMode === "light" ? "#8DB7F0" : "#74B9FF");
+  const positiveSeriesColor =
+    analysis.structure.legend[0]?.remakeColor ??
+    colorStrategy?.primary ??
+    colorStrategy?.positive ??
+    positiveAccent;
+  const stackPalette =
+    renderThemeMode === "light"
+      ? ["#D8E0EA", "#BFCAD7", "#9EADBE", "#6F8094"]
+      : ["#38414D", "#4B5664", "#657487", "#8492A6"];
+
   function getBarColor(value: number, index: number): string {
-    if (index === maxIndex) return colors.positive;
-    if (index === minIndex) return colors.negative;
-    if (value >= 0) return `${colors.positive}99`;
-    return `${colors.negative}99`;
+    if (exportOptions.barColorMode === "sign") {
+      return value < 0 ? negativeAccent : positiveSeriesColor;
+    }
+    if (value < 0) return index === minIndex ? negativeAccent : negativeSubtle;
+    if (index === maxIndex) return positiveAccent;
+    return chartData.length <= 5 ? neutralBar : neutralBarSubtle;
+  }
+
+  function getStackColor(index: number, seriesName?: string): string {
+    // JSON에서 시리즈 색을 지정했으면 그것을 먼저 쓴다. 고정 팔레트는 4색뿐이라
+    // 시리즈가 5개 이상이면 첫 색이 되풀이돼 구분이 사라진다.
+    const declared = analysis.structure.legend.find(
+      (item) => item.name === seriesName,
+    )?.remakeColor;
+    return declared ?? stackPalette[index % stackPalette.length];
   }
 
   // X축 라벨 간격 — chartSettings 기반
@@ -123,6 +229,32 @@ export default function TossBarChart({
   // → 임계를 8로 낮춰, 8개 초과면 -45도 회전 + interval={0}으로 모든 라벨을 강제 표시한다.
   //   (회전했으니 라벨이 겹치지 않으므로 솎을 이유가 없다.)
   const isDenseBarChart = chartData.length > 8;
+  const hasLongDenseCategoryLabels =
+    isDenseBarChart && chartData.some((point) => point.name.length > 6);
+  const denseXAxisHeight = hasLongDenseCategoryLabels ? 86 : 56;
+  const denseBottomMargin = hasLongDenseCategoryLabels ? 92 : 42;
+  const denseTickMargin = hasLongDenseCategoryLabels ? 14 : 8;
+  const xAxisWithDisplay = analysis.structure.xAxis as typeof analysis.structure.xAxis & {
+    displayTickValues?: string[];
+  };
+  const sourceTickValues = (xAxisWithDisplay.tickValues ?? []).map(String);
+  const displayTickValues = (xAxisWithDisplay.displayTickValues ?? []).map(String);
+  const displayLabelByKey = new Map<string, string>();
+  let visibleCategoryTicks: string[] | undefined;
+  if (displayTickValues.length > 0) {
+    if (sourceTickValues.length === displayTickValues.length) {
+      sourceTickValues.forEach((tick, index) => {
+        displayLabelByKey.set(tick, displayTickValues[index]);
+      });
+      visibleCategoryTicks = sourceTickValues;
+    } else {
+      visibleCategoryTicks = displayTickValues;
+    }
+  }
+  function formatCategoryTick(value: string | number): string {
+    const key = String(value);
+    return displayLabelByKey.get(key) ?? formatAxisTickLabel(key);
+  }
 
   // ─────────────────────────────────────────────
   // [D2] Y축 자동 눈금 균등화/중복 제거
@@ -161,18 +293,27 @@ export default function TossBarChart({
   })();
   // 명시 max(없으면 데이터 최댓값, 음수만 있으면 0)
   // → 대칭으로, 명시 max가 양수 데이터보다 "아래"면 양수 막대 상단이 잘리므로 올린다.
-  const yMax = (() => {
+  const rawYMax = (() => {
     const explicit = analysis.structure.yAxis.max;
     const dataCeil =
       chartData.length === 0 ? 100 : dataMax < 0 ? 0 : dataMax;
     if (explicit == null) return dataCeil;
     return Math.max(explicit, dataMax);
   })();
-
   // JSON 명시 눈금(있으면 그대로) → 없으면 generateNiceTicks로 균등 눈금 생성
   const explicitYTicks = (analysis.structure.yAxis.tickValues ?? [])
     .map((tick) => Number(tick))
     .filter((tick) => Number.isFinite(tick));
+  // Y축 상단이 데이터보다 지나치게 크면 막대가 바닥에 붙어 보인다.
+  // 명시 max라도 데이터의 2.4배를 넘으면 export 가독성 기준으로 부드럽게 축소한다.
+  const yMax = (() => {
+    if (dataMax <= 0) return rawYMax;
+    if (rawYMax > dataMax * 2.4 && explicitYTicks.length === 0) {
+      return dataMax * 1.18;
+    }
+    return rawYMax;
+  })();
+
   const yAxisTicks =
     explicitYTicks.length > 0 ? explicitYTicks : generateNiceTicks(yMin, yMax);
 
@@ -180,6 +321,10 @@ export default function TossBarChart({
     if (label && label !== "값") return unit ? `${label} (${unit})` : label;
     return unit || label;
   }
+  const yAxisLabel = getAxisLabel(
+    analysis.structure.yAxis.label,
+    analysis.structure.yAxis.unit,
+  );
 
   // ─────────────────────────────────────────────
   // [BAR-강조] highlightZones / annotations 렌더 준비
@@ -251,9 +396,258 @@ export default function TossBarChart({
 
   // 주석 스타일(positive/negative/그 외)에 따른 색상 — 라인차트와 동일한 규칙
   function getAnnotationColor(style: string): string {
-    if (style === "positive") return colors.positive;
-    if (style === "negative") return colors.negative;
+    if (style === "positive") return positiveAccent;
+    if (style === "negative") return negativeAccent;
     return colors.accent;
+  }
+
+  if (isStackedBarChart && stackedChartData.length > 0) {
+    return (
+      <ResponsiveContainer width={width} height={height}>
+        <ComposedChart
+          data={stackedChartData}
+          margin={{
+            top: 18,
+            right: 48,
+            bottom: denseBottomMargin,
+            left: chartSettings.margin.left,
+          }}
+        >
+          <CartesianGrid {...styles.grid} />
+          <XAxis
+            dataKey="name"
+            {...styles.xAxis}
+            interval={0}
+            ticks={visibleCategoryTicks}
+            tickFormatter={formatCategoryTick}
+            height={isDenseBarChart ? denseXAxisHeight : undefined}
+            tickMargin={isDenseBarChart ? denseTickMargin : undefined}
+            tick={
+              // 라벨을 무조건 -45도로 눕히면 카테고리가 적을 때도 왼쪽이 잘리고
+              // 축 높이가 늘어 출처 줄이 카드 밖으로 밀린다. 일반 막대 경로와
+              // 같은 조건(8개 초과)일 때만 회전한다.
+              isDenseBarChart
+                ? {
+                    ...(typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}),
+                    angle: -45,
+                    textAnchor: "end",
+                  }
+                : styles.xAxis.tick
+            }
+          />
+          <YAxis
+            width={chartSettings.yAxis.width}
+            {...styles.yAxis}
+            tickFormatter={(value) =>
+              formatValueWithUnit(
+                Number(value),
+                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
+                getAxisFractionDigits(yMin, yMax, yAxisTicks),
+              )
+            }
+            domain={
+              yAxisTicks.length > 0
+                ? [yAxisTicks[0], yAxisTicks[yAxisTicks.length - 1]]
+                : ["auto", "auto"]
+            }
+            ticks={yAxisTicks.length > 0 ? yAxisTicks : undefined}
+            label={{
+              value: getAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+              position: "insideTopLeft",
+              offset: 0,
+              dy: -16,
+              fill: colors.textTertiary,
+              fontSize: 15,
+              fontWeight: 800,
+              fontFamily: theme.typography.fontFamily.sans,
+            }}
+            tickCount={6}
+          />
+          <Tooltip
+            {...styles.tooltip}
+            formatter={(value, name) => [
+              fmt(Number(value)) + (analysis.structure.yAxis.unit || ""),
+              String(name),
+            ]}
+          />
+          <Legend
+            verticalAlign="top"
+            align="right"
+            height={30}
+            iconType="circle"
+            formatter={(value) => (
+              <span
+                style={{
+                  color: colors.textSecondary,
+                  fontSize: 13,
+                  fontWeight: 800,
+                }}
+              >
+                {String(value)}
+              </span>
+            )}
+          />
+          {stackedBarSeries.map((series, index) => (
+            <Bar
+              key={series.name}
+              dataKey={series.name}
+              stackId="capacity"
+              fill={getStackColor(index, series.name)}
+              radius={
+                !squareEdges && index === stackedBarSeries.length - 1
+                  ? [5, 5, 0, 0]
+                  : [0, 0, 0, 0]
+              }
+              isAnimationActive={animated}
+              animationDuration={theme.animation.chartEntrance.duration}
+              animationEasing="ease-out"
+              maxBarSize={48}
+            />
+          ))}
+          {stackedLineSeries.map((series, index) => (
+            <Line
+              key={series.name}
+              type="linear"
+              dataKey={series.name}
+              stroke={index === 0 ? positiveAccent : colors.accent}
+              strokeWidth={3.2}
+              strokeDasharray="7 5"
+              strokeLinecap={squareEdges ? "butt" : "round"}
+              strokeLinejoin={squareEdges ? "miter" : "round"}
+              dot={false}
+              activeDot={{ r: 5 }}
+              connectNulls
+              isAnimationActive={animated}
+              animationDuration={theme.animation.chartEntrance.duration}
+              animationEasing="ease-out"
+            />
+          ))}
+        </ComposedChart>
+      </ResponsiveContainer>
+    );
+  }
+
+  if (isHorizontalBarChart) {
+    const horizontalValues = horizontalChartData.flatMap((row) =>
+      horizontalBarSeries.map((series) => Number(row[series.name] ?? 0)),
+    );
+    const horizontalMin = Math.min(0, ...horizontalValues);
+    const horizontalMax = Math.max(0, ...horizontalValues);
+    const horizontalTicks =
+      explicitYTicks.length > 0
+        ? explicitYTicks
+        : generateNiceTicks(horizontalMin, horizontalMax);
+
+    return (
+      <ResponsiveContainer width={width} height={height}>
+        <BarChart
+          data={horizontalChartData}
+          layout="vertical"
+          margin={{
+            top: horizontalBarSeries.length > 1 ? 42 : 18,
+            right: 92,
+            bottom: 18,
+            left: 132,
+          }}
+        >
+          <CartesianGrid {...styles.grid} horizontal={false} />
+          <XAxis
+            type="number"
+            {...styles.xAxis}
+            tickFormatter={(value) =>
+              formatValueWithUnit(
+                Number(value),
+                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
+                getAxisFractionDigits(yMin, yMax, yAxisTicks),
+              )
+            }
+            domain={
+              horizontalTicks.length > 0
+                ? [horizontalTicks[0], horizontalTicks[horizontalTicks.length - 1]]
+                : ["auto", "auto"]
+            }
+            ticks={horizontalTicks.length > 0 ? horizontalTicks : undefined}
+          />
+          <YAxis
+            type="category"
+            dataKey="name"
+            width={132}
+            interval={0}
+            tickMargin={8}
+            tick={{
+              ...(typeof styles.yAxis.tick === "object" ? styles.yAxis.tick : {}),
+              fill: colors.textSecondary,
+              fontSize: 18,
+              fontWeight: 800,
+            }}
+            axisLine={false}
+            tickLine={false}
+          />
+          <Tooltip
+            {...styles.tooltip}
+            formatter={(value, name) => [
+              fmt(Number(value)) + (analysis.structure.yAxis.unit || ""),
+              String(name),
+            ]}
+          />
+          {horizontalBarSeries.length > 1 && (
+            <Legend
+              verticalAlign="top"
+              align="right"
+              height={28}
+              iconType="square"
+              formatter={(value) => (
+                <span
+                  style={{
+                    color: colors.textSecondary,
+                    fontSize: 13,
+                    fontWeight: 700,
+                  }}
+                >
+                  {String(value)}
+                </span>
+              )}
+            />
+          )}
+          {horizontalValues.some((value) => value < 0) && (
+            <ReferenceLine x={0} stroke={colors.axisLine} />
+          )}
+          {horizontalBarSeries.map((series, seriesIndex) => {
+            const legendColor = analysis.structure.legend.find(
+              (item) => item.name === series.name,
+            )?.remakeColor;
+            const fill = legendColor ?? stackPalette[seriesIndex % stackPalette.length];
+
+            return (
+              <Bar
+                key={series.name}
+                dataKey={series.name}
+                fill={fill}
+                radius={squareEdges ? [0, 0, 0, 0] : [0, 5, 5, 0]}
+                isAnimationActive={animated}
+                animationDuration={theme.animation.chartEntrance.duration}
+                animationEasing="ease-out"
+                maxBarSize={horizontalBarSeries.length > 1 ? 11 : 18}
+              >
+                {showLabels && (
+                  <LabelList
+                    dataKey={series.name}
+                    position="right"
+                    formatter={(value) => fmt(Number(value ?? 0))}
+                    style={{
+                      fill: colors.textSecondary,
+                      fontSize: horizontalBarSeries.length > 1 ? 13 : 17,
+                      fontFamily: theme.typography.fontFamily.mono,
+                      fontWeight: 700,
+                    }}
+                  />
+                )}
+              </Bar>
+            );
+          })}
+        </BarChart>
+      </ResponsiveContainer>
+    );
   }
 
   return (
@@ -264,12 +658,24 @@ export default function TossBarChart({
           // [BAR-겹침회피] 콜아웃을 플롯 최상단으로 띄우므로(아래 ReferenceDot y=yMax),
           //   막대 위 값 라벨과 분리하려면 상단 여백이 더 필요하다.
           //   강조 콜아웃이 있을 때만 상단 여백을 넉넉히 준다(없으면 기존 그대로).
-          top: hasFloatingCallout
-            ? chartSettings.margin.top + 64
-            : chartSettings.margin.top,
-          right: chartSettings.margin.right,
-          bottom: isDenseBarChart ? 112 : chartSettings.margin.bottom,
-          left: chartSettings.margin.left,
+          top: compactChartMargins
+            ? yAxisLabel
+              ? 30
+              : 12
+            : hasFloatingCallout
+              ? chartSettings.margin.top + 64
+              : Math.max(22, chartSettings.margin.top - 14),
+          right: compactChartMargins ? 36 : chartSettings.margin.right,
+          bottom: compactChartMargins
+            ? 32
+            : isDenseBarChart
+              ? denseBottomMargin
+              : chartSettings.margin.bottom,
+          left: compactChartMargins
+            ? yAxisLabel
+              ? 8
+              : 0
+            : chartSettings.margin.left,
         }}
       >
         <CartesianGrid {...styles.grid} />
@@ -282,9 +688,10 @@ export default function TossBarChart({
           //   22개 종목 중 6개만 보이고 나머지 종목명이 사라졌다.
           // → 솎기는 회전을 안 하는(여유 있는) 경우에만 적용한다.
           interval={isDenseBarChart ? 0 : xLabelInterval}
-          tickFormatter={formatAxisTickLabel}
-          height={isDenseBarChart ? 86 : undefined}
-          tickMargin={isDenseBarChart ? 14 : undefined}
+          ticks={visibleCategoryTicks}
+          tickFormatter={formatCategoryTick}
+          height={isDenseBarChart ? denseXAxisHeight : undefined}
+          tickMargin={isDenseBarChart ? denseTickMargin : undefined}
           tick={
             isDenseBarChart
               ? {
@@ -295,7 +702,7 @@ export default function TossBarChart({
               : styles.xAxis.tick
           }
           label={{
-            value: analysis.structure.xAxis.label || "기간",
+            value: analysis.structure.xAxis.label || "",
             position: "insideBottomRight",
             offset: -30,
             fill: colors.textTertiary,
@@ -327,12 +734,12 @@ export default function TossBarChart({
           }
           ticks={yAxisTicks.length > 0 ? yAxisTicks : undefined}
           label={{
-            value: getAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+            value: yAxisLabel,
             position: "insideTopLeft",
             offset: 0,
-            dy: -28,
+            dy: -16,
             fill: colors.textTertiary,
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 800,
             fontFamily: theme.typography.fontFamily.sans,
           }}
@@ -342,7 +749,7 @@ export default function TossBarChart({
         <Tooltip
           {...styles.tooltip}
           formatter={(value) => [
-            formatNumber(Number(value)) + (analysis.structure.yAxis.unit || ""),
+            fmt(Number(value)) + (analysis.structure.yAxis.unit || ""),
             firstSeries.name,
           ]}
         />
@@ -355,7 +762,7 @@ export default function TossBarChart({
             strokeDasharray="4 4"
             label={{
               // 원본 추세선의 라벨을 그대로 사용(없으면 값만 표시)
-              value: baselineTrend?.label || formatNumber(baselineValue),
+              value: baselineTrend?.label || fmt(baselineValue),
               position: "right",
               fill: colors.textTertiary,
               fontSize: 22,
@@ -416,11 +823,11 @@ export default function TossBarChart({
 
         <Bar
           dataKey="value"
-          radius={[6, 6, 0, 0]}
+          radius={squareEdges ? [0, 0, 0, 0] : [6, 6, 0, 0]}
           isAnimationActive={animated}
           animationDuration={theme.animation.chartEntrance.duration}
           animationEasing="ease-out"
-          maxBarSize={56}
+          maxBarSize={chartData.length <= 3 ? 92 : chartData.length <= 5 ? 72 : 56}
         >
           {chartData.map((entry, index) => (
             <Cell
@@ -429,13 +836,13 @@ export default function TossBarChart({
             />
           ))}
 
-          {/* 막대 위 값 라벨 — 막대가 15개를 초과하면 라벨이 서로 붙어
+          {/* 막대 위 값 라벨 — 막대가 8개를 초과하면 라벨이 서로 붙어
               "385370365360"처럼 읽을 수 없으므로 표시하지 않는다(겹침 방지) [A6-b] */}
-          {showLabels && chartData.length <= 15 && (
+          {showLabels && chartData.length <= 8 && (
             <LabelList
               dataKey="value"
               position="top"
-              formatter={(value) => formatNumber(Number(value ?? 0))}
+              formatter={(value) => fmt(Number(value ?? 0))}
               style={{
                 fill: colors.textSecondary,
                 fontSize: 22,
