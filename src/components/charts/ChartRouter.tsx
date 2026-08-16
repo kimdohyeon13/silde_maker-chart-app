@@ -31,6 +31,7 @@ import TossBarChart from "./TossBarChart";
 import TossDonutChart from "./TossDonutChart";
 import TossCandleChart from "./TossCandleChart";
 import TossScatterChart from "./TossScatterChart";
+import TossChartTable from "./TossChartTable";
 
 interface ChartRouterProps {
   analysis: ChartAnalysis;
@@ -51,6 +52,9 @@ export default function ChartRouter({
 }: ChartRouterProps) {
   const { chartType, panels } = analysis.structure;
   const renderTheme = getAnalysisThemeMode(analysis, theme);
+  const responsiveWidth = (
+    typeof width === "number" ? width : "100%"
+  ) as number | `${number}%`;
 
   // 다중 패널(스몰멀티플) 분기 (P0-2)
   // → structure.panels[]가 있으면 단일 차트 대신 PanelGrid로 패널별 독립축 격자를 그린다.
@@ -72,6 +76,18 @@ export default function ChartRouter({
    * - heatmap, radar, funnel → 막대 차트로 대체
    */
   function renderChart() {
+    if (analysis.tableData) {
+      return (
+        <TossChartTable
+          analysis={analysis as ChartAnalysis & {
+            tableData: NonNullable<ChartAnalysis["tableData"]>;
+          }}
+          theme={renderTheme}
+          height={height}
+        />
+      );
+    }
+
     // 다중 패널이 있으면 단일 차트 switch보다 우선해서 PanelGrid로 그린다.
     if (hasPanels) {
       return (
@@ -91,6 +107,7 @@ export default function ChartRouter({
           <TossComboChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );
@@ -107,6 +124,7 @@ export default function ChartRouter({
           <TossBarChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );
@@ -118,6 +136,7 @@ export default function ChartRouter({
           <TossLineChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );
@@ -129,6 +148,7 @@ export default function ChartRouter({
           <TossScatterChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );
@@ -141,6 +161,7 @@ export default function ChartRouter({
           <TossDonutChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );
@@ -151,6 +172,7 @@ export default function ChartRouter({
           <TossCandleChart
             analysis={analysis}
             theme={renderTheme}
+            width={typeof width === "number" ? width : undefined}
             height={height}
           />
         );
@@ -161,6 +183,7 @@ export default function ChartRouter({
           <TossLineChart
             analysis={analysis}
             theme={renderTheme}
+            width={responsiveWidth}
             height={height}
           />
         );

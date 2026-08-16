@@ -1,0 +1,806 @@
+{
+  "id": "semiconductor-watchlist",
+  "sourceImage": "input/source-02-semiconductor-watchlist.png",
+  "analyzedAt": "2026-06-15T12:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "InvestingPro 워치리스트의 AI 관련 종목 비교",
+    "preservedElements": [
+      "스크린샷에 보이는 현재가, 오늘 등락률, 1개월 수익률, 1년 수익률, 목표가, EPS 성장, Forward P/E",
+      "오늘 주가 움직임을 티커 옆 배지로 크게 표시",
+      "스크린샷 순서와 표시값 보존"
+    ],
+    "changedElements": [
+      "필터 영역, 52주 고점, 시가총액 열 제거",
+      "오늘 등락률을 별도 열이 아닌 티커 옆 신호 배지로 재배치",
+      "소수점은 화면 표시값에서 버림 처리",
+      "상단/본문/하단 여백 축소"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "값은 사용자 제공 화면 캡처에서 보이는 숫자를 기준으로 재구성했다. 네트워킹 장비주 표는 사용자 요청에 따라 NVDA와 AVGO를 제외했다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "스크린샷 표시값 기반",
+      "status": "pass",
+      "detail": "웹 시세를 새로 조회하지 않고 캡처에 보이는 값만 사용",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "compact-v3-b-signal-pill",
+      "label": "compact v3 B 신호 배지형 적용",
+      "status": "pass",
+      "detail": "오늘 등락률은 별도 열이 아니라 ticker sideValue 빨강/파랑 배지로 표시",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "no-yellow-orange",
+      "label": "노란색/주황색 텍스트 미사용",
+      "status": "pass",
+      "detail": "목표가 여력의 양수는 빨강, 음수는 파랑, 중립은 회색 계열만 사용",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "networking-exclusion",
+      "label": "네트워킹 표 제외 조건",
+      "status": "not_applicable",
+      "detail": "해당 없음",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI 반도체",
+    "subtitle": "GPU·ASIC·장비·메모리",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 16,
+    "sourceFontSize": 12,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "20%",
+        "align": "left"
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "15%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "percent",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "percent",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "percent",
+        "width": "13%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NVDA",
+            "displayValue": "NVDA\n엔비디아",
+            "sideValue": {
+              "displayValue": "0.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          },
+          "current": {
+            "value": "205.19",
+            "displayValue": "205"
+          },
+          "m1": {
+            "value": "-8.8%",
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "44.7%",
+            "displayValue": "44%"
+          },
+          "target": {
+            "value": "298.93",
+            "displayValue": "298\n+45%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "87.8%",
+            "displayValue": "87%"
+          },
+          "pe": {
+            "value": "23.0x",
+            "displayValue": "23x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AVGO",
+            "displayValue": "AVGO\n브로드컴",
+            "sideValue": {
+              "displayValue": "0.9%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI ASIC",
+            "displayValue": "AI ASIC"
+          },
+          "current": {
+            "value": "382.07",
+            "displayValue": "382"
+          },
+          "m1": {
+            "value": "-10.1%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "54.9%",
+            "displayValue": "54%"
+          },
+          "target": {
+            "value": "522.06",
+            "displayValue": "522\n+36%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "70.4%",
+            "displayValue": "70%"
+          },
+          "pe": {
+            "value": "31.7x",
+            "displayValue": "31x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSM",
+            "displayValue": "TSM\nTSMC",
+            "sideValue": {
+              "displayValue": "0.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "파운드리",
+            "displayValue": "파운드리"
+          },
+          "current": {
+            "value": "423.93",
+            "displayValue": "423"
+          },
+          "m1": {
+            "value": "5.0%",
+            "displayValue": "5%"
+          },
+          "y1": {
+            "value": "102.5%",
+            "displayValue": "102%"
+          },
+          "target": {
+            "value": "467.84",
+            "displayValue": "467\n+10%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "47.9%",
+            "displayValue": "47%"
+          },
+          "pe": {
+            "value": "23.4x",
+            "displayValue": "23x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ARM",
+            "displayValue": "ARM\nArm",
+            "sideValue": {
+              "displayValue": "11.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "CPU IP",
+            "displayValue": "CPU IP"
+          },
+          "current": {
+            "value": "380.81",
+            "displayValue": "380"
+          },
+          "m1": {
+            "value": "82.1%",
+            "displayValue": "82%"
+          },
+          "y1": {
+            "value": "180.9%",
+            "displayValue": "180%"
+          },
+          "target": {
+            "value": "257.30",
+            "displayValue": "257\n-32%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "22.6%",
+            "displayValue": "22%"
+          },
+          "pe": {
+            "value": "176.0x",
+            "displayValue": "176x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMAT",
+            "displayValue": "AMAT\n어플라이드M",
+            "sideValue": {
+              "displayValue": "2.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 장비",
+            "displayValue": "반도체 장비"
+          },
+          "current": {
+            "value": "567.25",
+            "displayValue": "567"
+          },
+          "m1": {
+            "value": "30.1%",
+            "displayValue": "30%"
+          },
+          "y1": {
+            "value": "235.0%",
+            "displayValue": "235%"
+          },
+          "target": {
+            "value": "517.28",
+            "displayValue": "517\n-8%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "30.3%",
+            "displayValue": "30%"
+          },
+          "pe": {
+            "value": "46.4x",
+            "displayValue": "46x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LRCX",
+            "displayValue": "LRCX\n램리서치",
+            "sideValue": {
+              "displayValue": "1.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "식각 장비",
+            "displayValue": "식각 장비"
+          },
+          "current": {
+            "value": "366.81",
+            "displayValue": "366"
+          },
+          "m1": {
+            "value": "28.8%",
+            "displayValue": "28%"
+          },
+          "y1": {
+            "value": "312.8%",
+            "displayValue": "312%"
+          },
+          "target": {
+            "value": "323.38",
+            "displayValue": "323\n-11%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "37.1%",
+            "displayValue": "37%"
+          },
+          "pe": {
+            "value": "64.1x",
+            "displayValue": "64x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MRVL",
+            "displayValue": "MRVL\n마벨",
+            "sideValue": {
+              "displayValue": "0.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 네트워크",
+            "displayValue": "AI 네트워크"
+          },
+          "current": {
+            "value": "279.70",
+            "displayValue": "279"
+          },
+          "m1": {
+            "value": "58.1%",
+            "displayValue": "58%"
+          },
+          "y1": {
+            "value": "317.4%",
+            "displayValue": "317%"
+          },
+          "target": {
+            "value": "235.70",
+            "displayValue": "235\n-15%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "42.5%",
+            "displayValue": "42%"
+          },
+          "pe": {
+            "value": "66.9x",
+            "displayValue": "66x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMD",
+            "displayValue": "AMD\nAMD",
+            "sideValue": {
+              "displayValue": "4.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          },
+          "current": {
+            "value": "511.57",
+            "displayValue": "511"
+          },
+          "m1": {
+            "value": "20.6%",
+            "displayValue": "20%"
+          },
+          "y1": {
+            "value": "340.4%",
+            "displayValue": "340%"
+          },
+          "target": {
+            "value": "486.33",
+            "displayValue": "486\n-4%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "76.7%",
+            "displayValue": "76%"
+          },
+          "pe": {
+            "value": "68.8x",
+            "displayValue": "68x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "A005930",
+            "displayValue": "A005930\n삼성전자",
+            "sideValue": {
+              "displayValue": "4.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "메모리·HBM",
+            "displayValue": "메모리·HBM"
+          },
+          "current": {
+            "value": "338,250",
+            "displayValue": "338,250"
+          },
+          "m1": {
+            "value": "19.2%",
+            "displayValue": "19%"
+          },
+          "y1": {
+            "value": "462.9%",
+            "displayValue": "462%"
+          },
+          "target": {
+            "value": "426,452",
+            "displayValue": "426,452\n+26%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "579.2%",
+            "displayValue": "579%"
+          },
+          "pe": {
+            "value": "7.3x",
+            "displayValue": "7x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "INTC",
+            "displayValue": "INTC\n인텔",
+            "sideValue": {
+              "displayValue": "6.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "CPU·파운드리",
+            "displayValue": "CPU·파운드리"
+          },
+          "current": {
+            "value": "124.57",
+            "displayValue": "124"
+          },
+          "m1": {
+            "value": "14.5%",
+            "displayValue": "14%"
+          },
+          "y1": {
+            "value": "518.5%",
+            "displayValue": "518%"
+          },
+          "target": {
+            "value": "93.12",
+            "displayValue": "93\n-25%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "159.7%",
+            "displayValue": "159%"
+          },
+          "pe": {
+            "value": "111.0x",
+            "displayValue": "111x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MU",
+            "displayValue": "MU\n마이크론",
+            "sideValue": {
+              "displayValue": "1.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "메모리",
+            "displayValue": "메모리"
+          },
+          "current": {
+            "value": "981.61",
+            "displayValue": "981"
+          },
+          "m1": {
+            "value": "35.5%",
+            "displayValue": "35%"
+          },
+          "y1": {
+            "value": "751.2%",
+            "displayValue": "751%"
+          },
+          "target": {
+            "value": "828.73",
+            "displayValue": "828\n-15%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "610.1%",
+            "displayValue": "610%"
+          },
+          "pe": {
+            "value": "16.2x",
+            "displayValue": "16x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "A000660",
+            "displayValue": "A000660\nSK하이닉스",
+            "sideValue": {
+              "displayValue": "6.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "HBM·메모리",
+            "displayValue": "HBM·메모리"
+          },
+          "current": {
+            "value": "2,289,000",
+            "displayValue": "2,289,000"
+          },
+          "m1": {
+            "value": "18.2%",
+            "displayValue": "18%"
+          },
+          "y1": {
+            "value": "816.8%",
+            "displayValue": "816%"
+          },
+          "target": {
+            "value": "2,690,121",
+            "displayValue": "2,690,121\n+17%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "389.5%",
+            "displayValue": "389%"
+          },
+          "pe": {
+            "value": "7.1x",
+            "displayValue": "7x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SNDK",
+            "displayValue": "SNDK\n샌디스크",
+            "sideValue": {
+              "displayValue": "5.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "낸드·스토리지",
+            "displayValue": "낸드·스토리지"
+          },
+          "current": {
+            "value": "1,980",
+            "displayValue": "1,980"
+          },
+          "m1": {
+            "value": "40.7%",
+            "displayValue": "40%"
+          },
+          "y1": {
+            "value": "4,559.1%",
+            "displayValue": "4,559%"
+          },
+          "target": {
+            "value": "1,751",
+            "displayValue": "1,751\n-11%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "2,078.3%",
+            "displayValue": "2,078%"
+          },
+          "pe": {
+            "value": "29.3x",
+            "displayValue": "29x"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 38,
+      "cellPadding": "0 4px",
+      "lineHeight": 0.96,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "14px",
+        "body": "15px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "15px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 반도체",
+    "subMessage": "GPU·ASIC·장비·메모리",
+    "headline": "AI 반도체",
+    "summary": "B 신호 배지형 기본값을 적용해 오늘 등락 방향을 티커 옆에서 바로 읽게 만든 표다.",
+    "story": "원본 화면은 상단 필터와 보조 열이 많아 종목 간 비교가 느리다. 이번 표는 현재가, 기간 수익률, 목표가 여력, EPS 성장, Forward P/E만 남겨 빠르게 스캔하도록 재구성했다.",
+    "keyTakeaways": [
+      "오늘 등락률은 티커 옆 빨강/파랑 배지로 표시했다.",
+      "52주 고점과 시가총액은 이번 깔끔한 버전에서 제외했다.",
+      "수치는 캡처에 보이는 값만 사용했다."
+    ],
+    "viewerAction": "오늘 등락 배지와 목표가 여력을 같이 보며 과매도인지 밸류에이션 부담인지 구분한다.",
+    "contextualNotes": [
+      "최신 시세 검증용 표가 아니라 화면 캡처를 발표용으로 정리한 결과다.",
+      "소수점은 표시값에서 버림 처리했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "삼성전자 +26% / SK하이닉스 +17% / SNDK -11%",
+      "reason": "오늘 시장 움직임과 목표가 여력을 빠르게 읽기 위한 핵심 신호"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": []
+  }
+}

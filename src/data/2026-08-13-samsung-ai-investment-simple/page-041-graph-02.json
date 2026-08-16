@@ -1,0 +1,102 @@
+{
+  "id": "page-041-graph-02",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/53-page_041_graph_02.png",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "응용처별 디램 장기 수요 전망",
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "HBM 40%, 서버 25%, PC 12%, 모바일 9%, 기타 5%",
+      "HBM 포함 합계 22.4%, HBM 제외 합계 19.1%",
+      "HBM이 가장 높은 수요 전망이라는 비교 관계",
+      "자료: 산업 추정"
+    ],
+    "changedElements": [
+      "응용처와 전체 수요를 색으로만 구분해 범례를 줄임",
+      "긴 합계 라벨을 한 줄로 줄이고 모든 값은 막대 위에 표시",
+      "사각 막대와 넓은 항목 간격 적용"
+    ]
+  },
+  "allowedTransformations": ["rewrite-title", "adjust-layout", "adjust-density", "adjust-labels", "adjust-color-emphasis", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan", "status": "pass", "detail": "7개 항목은 세로 막대로 유지한다. HBM을 파란색, 두 합계는 분홍색으로 구분해 핵심 비교를 먼저 읽게 한다." },
+    { "id": "label-risk", "status": "pass", "detail": "합계 라벨은 한 줄로 줄여 축 라벨 겹침을 막고, 값은 소수점 한 자리까지 유지한다." },
+    { "id": "source-visible", "status": "pass", "detail": "수치는 원본 이미지에서 읽은 값이다." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 28px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#1479F2",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "HBM 수요가 전체 디램 성장을 끌어올린다",
+    "subtitle": "응용처별 장기 수요 전망, 단위: %",
+    "source": "자료: 산업 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["HBM", "서버", "PC", "모바일", "기타", "HBM 포함 합계", "HBM 제외 합계"],
+      "displayTickValues": ["HBM", "서버", "PC", "모바일", "기타", "전체 포함", "전체 제외"]
+    },
+    "yAxis": { "label": "수요 증가율", "unit": "%", "min": 0, "max": 45 },
+    "legend": [
+      { "name": "장기 수요 증가율", "color": "#1479F2", "originalColor": "#1479F2" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "장기 수요 증가율",
+        "renderAs": "bar",
+        "color": "#1479F2",
+        "data": [
+          { "x": "HBM", "y": 40 },
+          { "x": "서버", "y": 25 },
+          { "x": "PC", "y": 12 },
+          { "x": "모바일", "y": 9 },
+          { "x": "기타", "y": 5 },
+          { "x": "HBM 포함 합계", "y": 22.4 },
+          { "x": "HBM 제외 합계", "y": 19.1 }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": { "highest": 40, "totalWithHbm": 22.4, "totalWithoutHbm": 19.1 },
+    "changeRates": [{ "period": "HBM 포함과 제외 합계 차이", "percentChange": 17.3 }]
+  },
+  "narrative": {
+    "headMessage": "HBM 수요가 가장 빠르게 늘어난다",
+    "subMessage": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다.",
+    "headline": "HBM이 장기 디램 수요 성장을 이끈다",
+    "keyTakeaways": ["HBM 수요 전망은 40%로 가장 높다.", "HBM 제외 전체 수요도 19.1%로 높다."],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "HBM", "y": 40, "displayText": "40%" },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1479F2", "secondary": ["#E83A70", "#B8BDC7"], "accent": "#1479F2", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  },
+  "patterns": { "trend": "HBM 수요가 서버·PC·모바일보다 빠르게 증가", "supportResistance": [] }
+}

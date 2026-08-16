@@ -1,0 +1,124 @@
+{
+  "id": "01-earnings-scorecard",
+  "contentType": "infographic",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Alphabet 2Q26 earnings scorecard",
+    "preservedElements": [
+      "매출",
+      "EPS 참고 계산",
+      "Cloud 성장률",
+      "CAPEX 가이던스"
+    ],
+    "changedElements": [
+      "KPI 카드",
+      "Paperlogy 타이포",
+      "핵심 수치 4개"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "공식 공시 원단위를 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "4개 KPI 카드로 실적과 투자 부담을 분리했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 27,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828"
+  },
+  "structure": {
+    "title": "실적은 강했지만, 시장의 질문은 CAPEX로 이동했다",
+    "subtitle": "Alphabet 2Q26 · EPS 2.85달러는 공시된 증권손익 효과를 단순 차감한 참고값",
+    "source": "자료: Alphabet 2Q26 실적 발표, waltechman 계산"
+  },
+  "infographicData": {
+    "subType": "kpi_card",
+    "layout": "grid",
+    "items": [
+      {
+        "label": "매출",
+        "value": "119.8",
+        "unit": "십억달러",
+        "change": {
+          "value": 24.2,
+          "direction": "up",
+          "period": "전년 대비"
+        },
+        "accentColor": "#4285F4"
+      },
+      {
+        "label": "EPS 참고 계산*",
+        "value": "2.85",
+        "unit": "달러",
+        "accentColor": "#667085"
+      },
+      {
+        "label": "Cloud 성장(1Q 63.4%)",
+        "value": "81.8",
+        "unit": "%",
+        "accentColor": "#188038"
+      },
+      {
+        "label": "2026 CAPEX(기존 180~190)",
+        "value": "195~205",
+        "unit": "십억달러",
+        "accentColor": "#D92D3A"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "본업 호조보다 CAPEX 상향이 컸다",
+    "subMessage": "클라우드의 이익 성장에도 현금흐름 부담이 부각됐습니다.",
+    "headline": "광고와 Cloud는 예상보다 강했지만, 2,000억달러 안팎의 투자 계획이 주가 판단의 중심이 됐습니다.",
+    "keyTakeaways": [
+      "매출은 컨센서스를 상회했습니다.",
+      "EPS 2.85달러는 회사 공시 비GAAP 수치가 아닌 참고 계산입니다.",
+      "CAPEX 가이던스는 기존 범위보다 150억달러 올라갔습니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "CAPEX 195~205B",
+      "reason": "가장 큰 주가 변수"
+    },
+    "densityLevel": "balanced"
+  }
+}

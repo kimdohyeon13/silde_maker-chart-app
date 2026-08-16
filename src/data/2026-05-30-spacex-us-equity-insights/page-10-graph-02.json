@@ -1,0 +1,105 @@
+{
+  "id": "page-10-graph-02",
+  "sourceImage": "input/13-page-10-graph-02.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Factset, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "5월은 IT 독주, 방어주는 약세",
+    "subtitle": "업종별 월간(5월) 성과, 전월 대비 %, 5월 28일 기준",
+    "source": "Factset, 삼성증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "업종",
+      "type": "category",
+      "tickValues": ["IT","S&P500","경기소비재","건강관리","통신서비스","부동산","소재","산업재","금융","에너지","필수소비재","유틸리티"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "월간 성과",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "max": 16
+    },
+    "legend": [
+      { "name": "월간 성과", "role": "primary", "originalColor": "#4C8BF5", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "월간 성과",
+        "renderAs": "bar",
+        "role": "primary",
+        "data": [
+          {"x": "IT", "y": 13.8, "confidence": 0.8},
+          {"x": "S&P500", "y": 4.9, "confidence": 0.8},
+          {"x": "경기소비재", "y": 3.6, "confidence": 0.8},
+          {"x": "건강관리", "y": 3.2, "confidence": 0.8},
+          {"x": "통신서비스", "y": 0.8, "confidence": 0.8},
+          {"x": "부동산", "y": -0.2, "confidence": 0.8},
+          {"x": "소재", "y": -0.5, "confidence": 0.8},
+          {"x": "산업재", "y": -0.5, "confidence": 0.8},
+          {"x": "금융", "y": -1.3, "confidence": 0.8},
+          {"x": "에너지", "y": -1.7, "confidence": 0.8},
+          {"x": "필수소비재", "y": -5.1, "confidence": 0.8},
+          {"x": "유틸리티", "y": -5.1, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "down", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "down" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 13.8, "at": "IT"}, "min": {"value": -5.1, "at": "유틸리티"}, "average": 0.96, "median": -0.35, "range": 18.9 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "돈은 IT로 쏠렸다",
+    "subMessage": "IT가 +13.8%로 독주, 필수소비재·유틸리티는 부진",
+    "headline": "5월 S&P500은 IT가 +13.8%로 시장을 끌어올린 반면 방어 업종은 5% 넘게 밀렸습니다.",
+    "summary": "5월에는 IT가 13.8% 오르며 시장을 주도한 반면, 필수소비재와 유틸리티 같은 방어 업종은 5% 넘게 하락했습니다.",
+    "story": "5월에는 IT가 13.8% 오르며 시장을 주도한 반면, 필수소비재와 유틸리티 같은 방어 업종은 5% 넘게 하락했습니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Factset, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"IT +13.8%","position":{"x":"IT"},"importance":"critical","style":"positive"},
+      {"text":"방어주 -5.1%","position":{"x":"유틸리티"},"importance":"high","style":"negative"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"IT","y":13.8}, "displayText": "돈은 IT로 쏠렸다", "reason": "5월에는 IT가 13.8% 오르며 시장을 주도한 반면, 필수소비재와 유틸리티 같은 방어 업종은 5% 넘게 하락했습니다." },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "id": "08-hyperscaler-yield",
+  "mode": "faithful",
+  "sourceImage": "input/08-hyperscaler-yield.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "자본 지출 큰 하이퍼스케일러, 금리 하향세에 수혜 예상",
+    "originalMessage": "자본 지출 큰 하이퍼스케일러, 금리 하향세에 수혜 예상",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 40개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "자본 지출 큰 하이퍼스케일러, 금리 하향세에 수혜 예상",
+    "subtitle": "좌축 상대성과(2025.01=100) · 우축 미 국채 10년물 금리(역축)",
+    "source": "참고: UBXXHYPE Index / SPX Index 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025-01",
+        "2025-04",
+        "2025-07",
+        "2025-10",
+        "2026-01",
+        "2026-04",
+        "2026-07"
+      ],
+      "displayTickValues": [
+        "25.01",
+        "25.04",
+        "25.07",
+        "25.10",
+        "26.01",
+        "26.04",
+        "26.07"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "85",
+        "90",
+        "95",
+        "100",
+        "105",
+        "110",
+        "115"
+      ],
+      "unit": "",
+      "min": 85,
+      "max": 115,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "4.8",
+        "4.6",
+        "4.4",
+        "4.2",
+        "4",
+        "3.8"
+      ],
+      "unit": "%",
+      "min": 4.8,
+      "max": 3.8,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "하이퍼스케일러 상대성과",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "미 국채 10년물 금리",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      }
+    ],
+    "axisDistortionWarning": "우축 금리는 원본과 동일한 역축입니다."
+  },
+  "data": {
+    "series": [
+      {
+        "name": "하이퍼스케일러 상대성과",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "axis": "left",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2025-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-02",
+            "y": 102,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-03",
+            "y": 98,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-04",
+            "y": 94,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-05",
+            "y": 90,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-06",
+            "y": 96,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-07",
+            "y": 102,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 106,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 110,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 112,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 107,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 103,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 104,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 94,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 95,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 92,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 101,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 90,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-08",
+            "y": 92,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "미 국채 10년물 금리",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "axis": "right",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2025-01",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-02",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-03",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-04",
+            "y": 4.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-05",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-06",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-07",
+            "y": 4.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 4.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 4.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 4.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 4.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 4.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-08",
+            "y": 4.6,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 40,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 4,
+      "max": 112,
+      "average": 0,
+      "latest": 92
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "자본 지출 큰 하이퍼스케일러, 금리 하향세에 수혜 예상",
+    "subMessage": "좌축 상대성과(2025.01=100) · 우축 미 국채 10년물 금리(역축)",
+    "headline": "자본 지출 큰 하이퍼스케일러, 금리 하향세에 수혜 예상",
+    "summary": "좌축 상대성과(2025.01=100) · 우축 미 국채 10년물 금리(역축)",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-08",
+        "y": 92
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

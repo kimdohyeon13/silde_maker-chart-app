@@ -1,0 +1,287 @@
+{
+  "id": "page-036-graph-02",
+  "sourceImage": "input/44-page_036_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "예치금리 실제 경로와 당사 기본 전망 (계단형)",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: European Central Bank"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "ECB 정책 금리: 동결 전망",
+    "subtitle": "예치금리 실제 경로와 당사 기본 전망 (계단형)",
+    "source": "자료: European Central Bank",
+    "timeRange": "2021~2026",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "unit": "년",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "정책 금리 (%)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -1,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "예치금리",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "당사 전망 (기본)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "예치금리",
+        "data": [
+          {
+            "x": "2021-01",
+            "y": -0.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2022-06",
+            "y": -0.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2022-12",
+            "y": 2.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2023-06",
+            "y": 3.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2023-09",
+            "y": 4.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2024-06",
+            "y": 4.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2024-12",
+            "y": 3.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2025-06",
+            "y": 2.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2026-06",
+            "y": 2.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "당사 전망 (기본)",
+        "data": [
+          {
+            "x": "2026-06",
+            "y": 2.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2026-08",
+            "y": 2.25,
+            "confidence": 0.72
+          },
+          {
+            "x": "2026-12",
+            "y": 2.25,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.077,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 500.0,
+        "absoluteChange": 2.5,
+        "from": -0.5,
+        "to": 2.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.0,
+        "at": ""
+      },
+      "min": {
+        "value": -0.5,
+        "at": ""
+      },
+      "average": 2.1666666666666665,
+      "median": 2.0,
+      "range": 4.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "ECB 정책 금리: 동결 전망",
+    "subMessage": "예치금리 실제 경로와 당사 기본 전망 (계단형)",
+    "headline": "ECB 정책 금리: 동결 전망",
+    "summary": "예치금리 실제 경로와 당사 기본 전망 (계단형)",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "예치금리 실제 경로와 당사 기본 전망 (계단형)",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: European Central Bank"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 2.25
+      },
+      "displayText": "ECB 정책 금리: 동결 전망",
+      "reason": "예치금리 실제 경로와 당사 기본 전망 (계단형)"
+    },
+    "densityLevel": "balanced"
+  }
+}

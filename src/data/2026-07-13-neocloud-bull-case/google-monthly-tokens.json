@@ -1,0 +1,281 @@
+{
+  "id": "google-monthly-tokens",
+  "mode": "faithful",
+  "sourceImage": "input/10-google-monthly-tokens.png",
+  "analyzedAt": "2026-07-13T12:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "그림 1. 구글 월간 토큰 처리량",
+    "originalMessage": "Monthly Tokens Processed | Across our surfaces",
+    "preservedElements": [
+      "May '24~May '26 시간축과 0·1,750T·3,500T 세로축",
+      "9.7T·~480T·3.2Q+ 직접 표시값",
+      "7x Y/Y growth 콜아웃",
+      "상승 선과 면적 채움",
+      "자료: Google Blog, KB증권"
+    ],
+    "changedElements": [
+      "영문 차트 제목을 한국어 보고서 제목 아래 부제로 배치",
+      "색상·글꼴·간격을 toss-clean 규칙으로 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "9.7T, ~480T, 3.2Q+와 7x는 원본 직접 표시값입니다. 그 밖의 월별 점은 원자료 표가 없어 원본 선의 상대 높이를 T 단위 근사 앵커로 옮겼으며 정확한 월별 관측값으로 사용하면 안 됩니다.",
+    "sourceAttribution": "자료: Google Blog, KB증권",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "단일 상승선, 3개 직접값, 7x 콜아웃, 5개 시간축 라벨을 먼저 고정했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "source-visible-values",
+      "label": "이미지 표시값 보존",
+      "status": "pass",
+      "detail": "9.7T·~480T·3.2Q+·7x와 축 표시값을 원본 그대로 보존했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "approximation-disclosed",
+      "label": "중간값 근사 고지",
+      "status": "pass",
+      "detail": "직접 표시되지 않은 월별 점은 선 모양 재현용 근사치임을 preserveIntent.notes와 품질 정보에 명시했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "source-attribution",
+      "label": "원본 출처 보존",
+      "status": "pass",
+      "detail": "자료: Google Blog, KB증권을 그대로 표기했습니다.",
+      "checkedAt": "2026-07-13"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 620,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerPadding": "18px 32px 0",
+    "contentPadding": "4px 16px 0",
+    "sourcePadding": "0 32px 12px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 440,
+    "showAreaFill": true,
+    "areaFillOpacity": 0.24,
+    "showDirectLabels": false,
+    "lineStrokeWidth": 3,
+    "endLabelRightMargin": 84
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "그림 1. 구글 월간 토큰 처리량",
+    "subtitle": "Monthly Tokens Processed | Across our surfaces",
+    "source": "자료: Google Blog, KB증권",
+    "timeRange": "2024-05 ~ 2026-05",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-05",
+        "2024-10",
+        "2025-05",
+        "2025-10",
+        "2026-05"
+      ],
+      "displayTickValues": [
+        "May '24",
+        "Oct '24",
+        "May '25",
+        "Oct '25",
+        "May '26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "월간 처리 토큰",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "1750",
+        "3500"
+      ],
+      "unit": "T",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 3500
+    },
+    "legend": [
+      {
+        "name": "Monthly Tokens Processed",
+        "originalColor": "#3286D8",
+        "remakeColor": "#3182CE",
+        "role": "primary",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Monthly Tokens Processed",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          { "x": "2024-05", "y": 9.7, "confidence": 0.99 },
+          { "x": "2024-06", "y": 12, "confidence": 0.55 },
+          { "x": "2024-07", "y": 16, "confidence": 0.55 },
+          { "x": "2024-08", "y": 21, "confidence": 0.55 },
+          { "x": "2024-09", "y": 26, "confidence": 0.55 },
+          { "x": "2024-10", "y": 32, "confidence": 0.55 },
+          { "x": "2024-11", "y": 40, "confidence": 0.55 },
+          { "x": "2024-12", "y": 52, "confidence": 0.55 },
+          { "x": "2025-01", "y": 72, "confidence": 0.55 },
+          { "x": "2025-02", "y": 105, "confidence": 0.55 },
+          { "x": "2025-03", "y": 145, "confidence": 0.55 },
+          { "x": "2025-04", "y": 295, "confidence": 0.55 },
+          { "x": "2025-05", "y": 480, "confidence": 0.95 },
+          { "x": "2025-06", "y": 700, "confidence": 0.55 },
+          { "x": "2025-07", "y": 880, "confidence": 0.55 },
+          { "x": "2025-08", "y": 1030, "confidence": 0.55 },
+          { "x": "2025-09", "y": 1030, "confidence": 0.55 },
+          { "x": "2025-10", "y": 1320, "confidence": 0.55 },
+          { "x": "2025-11", "y": 1510, "confidence": 0.55 },
+          { "x": "2025-12", "y": 1680, "confidence": 0.55 },
+          { "x": "2026-01", "y": 1850, "confidence": 0.55 },
+          { "x": "2026-02", "y": 2450, "confidence": 0.55 },
+          { "x": "2026-03", "y": 2700, "confidence": 0.55 },
+          { "x": "2026-04", "y": 3100, "confidence": 0.55 },
+          { "x": "2026-05", "y": 3200, "confidence": 0.95 }
+        ]
+      }
+    ],
+    "totalDataPoints": 25,
+    "quality": {
+      "overallConfidence": 0.66,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "9.7T·~480T·3.2Q+ 외 월별 정확한 수치는 원본 이미지에 표시되지 않음",
+        "중간 월별 점은 선의 상대 높이 재현용 근사치"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.98,
+      "description": "원본은 May '24 9.7T에서 May '26 3.2Q+로 가파른 증가를 표시합니다.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 변동성 계산보다 원본 선 모양과 직접 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "May '25 → May '26",
+        "from": 480,
+        "to": 3200,
+        "displayValue": "7x Y/Y growth"
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 3200, "at": "2026-05 | 3.2Q+" },
+      "min": { "value": 9.7, "at": "2024-05" },
+      "average": 0,
+      "median": 0,
+      "range": 3190.3
+    }
+  },
+  "patterns": {
+    "points": [
+      { "x": "2024-05", "y": 9.7, "label": "9.7T", "type": "source-label" },
+      { "x": "2025-05", "y": 480, "label": "~480T", "type": "source-label" },
+      { "x": "2026-05", "y": 3200, "label": "3.2Q+", "type": "source-label" }
+    ],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "구글 월간 토큰 처리량",
+    "subMessage": "May '25 ~480T에서 May '26 3.2Q+로 7x Y/Y growth",
+    "headline": "그림 1. 구글 월간 토큰 처리량",
+    "summary": "구글이 공개한 월간 토큰 처리량은 2026년 5월 3.2Q+에 도달했습니다.",
+    "story": "원본이 직접 강조한 세 수치와 전년 대비 7배 성장 메시지를 보존했습니다.",
+    "keyTakeaways": [
+      "May '24: 9.7T",
+      "May '25: ~480T",
+      "May '26: 3.2Q+",
+      "7x Y/Y growth"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "직접 표시값과 7배 전년 대비 성장 콜아웃을 확인합니다.",
+    "contextualNotes": [
+      "자료: Google Blog, KB증권",
+      "중간 월별 점은 source-visible 근사치"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "text": "9.7T",
+        "position": { "x": "2024-05", "y": 9.7 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "~480T",
+        "position": { "x": "2025-05", "y": 480 },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "7x Y/Y growth",
+        "position": { "x": "2026-02", "y": 2450 },
+        "importance": "critical",
+        "style": "positive"
+      },
+      {
+        "text": "3.2Q+",
+        "position": { "x": "2026-05", "y": 3200 },
+        "importance": "critical",
+        "style": "positive"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#3182CE",
+      "secondary": ["#BEE3F8", "#90CDF4"],
+      "positive": "#3182CE",
+      "negative": "#2563EB",
+      "accent": "#2B6CB0",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "2026-05", "y": 3200 },
+      "displayText": "3.2Q+",
+      "reason": "원본의 최신 직접 표시값"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "07-build-speed",
+  "mode": "redesign",
+  "sourceImage": "",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "콜로서스 1은 122일에 300메가와트, 콜로서스 2는 6개월에 200메가와트, 미니하드는 약 5개월에 450~500메가와트, 사우스헤이븐 발전소는 5개월에 약 705메가와트를 늘렸다",
+    "preservedElements": [
+      "기사에 서술된 각 사이트의 용량과 기간",
+      "메가와트 단위"
+    ],
+    "changedElements": [
+      "서술형 사실을 월평균 속도로 환산한 신규 구성",
+      "긴 사이트 이름 때문에 가로 막대 선택"
+    ],
+    "dataFidelity": "derived",
+    "notes": "기사 본문의 기간과 용량을 나눈 계산값입니다. 원본에 대응 차트가 없어 신규 구성했습니다. 미니하드는 450~500메가와트의 중간값 475를 5개월로 나눴고, 사우스헤이븐은 2026년 2월 495메가와트에서 7월 1,200메가와트로 늘어난 차이를 5개월로 나눴습니다.",
+    "sourceAttribution": "자료: SemiAnalysis 기사 내 서술을 월 단위로 환산"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "사이트 이름이 길어 가로 막대를 선택했고, 0~160 축에 4개 항목, 최고값 1곳만 강조로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "원자료가 아니라 기사 서술을 나눈 derived 계산값입니다. 반올림 오차가 있습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "달마다 몇 메가와트를 세웠나",
+    "subtitle": "공개된 착공 및 완공 시점으로 환산한 월평균 증설 속도, 단위 메가와트 (본문 서술 기반 계산값)",
+    "source": "자료: SemiAnalysis 기사 내 서술을 월 단위로 환산",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "콜로서스 2 초기",
+        "콜로서스 1",
+        "미니하드",
+        "사우스헤이븐 발전소"
+      ],
+      "displayTickValues": [
+        "콜로서스 2 초기",
+        "콜로서스 1",
+        "미니하드",
+        "사우스헤이븐 발전소"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 160
+    },
+    "legend": [
+      {
+        "name": "월평균 증설",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "월평균 증설",
+        "data": [
+          {
+            "x": "콜로서스 2 초기",
+            "y": 33,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "콜로서스 1",
+            "y": 74,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "미니하드",
+            "y": 95,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "사우스헤이븐 발전소",
+            "y": 141,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료가 아니라 기사 서술을 나눈 derived 계산값입니다. 반올림 오차가 있습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 327.3,
+        "absoluteChange": 108,
+        "from": 33,
+        "to": 141
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 141,
+        "at": "사우스헤이븐 발전소"
+      },
+      "min": {
+        "value": 33,
+        "at": "콜로서스 2 초기"
+      },
+      "average": 85.75,
+      "median": 84.5,
+      "range": 108
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "달마다 몇 메가와트를 세웠나",
+    "subMessage": "공개된 착공 및 완공 시점으로 환산한 월평균 증설 속도, 단위 메가와트 (본문 서술 기반 계산값)",
+    "headline": "달마다 몇 메가와트를 세웠나",
+    "summary": "공개된 착공 및 완공 시점으로 환산한 월평균 증설 속도, 단위 메가와트 (본문 서술 기반 계산값)",
+    "story": "이 속도가 유지되는지가 10기가와트 주장의 성립 조건입니다.",
+    "keyTakeaways": [
+      "콜로서스 1은 122일에 300메가와트",
+      "미니하드는 약 5개월에 450~500메가와트",
+      "발전 설비 증설 속도가 데이터홀 속도보다 빠릅니다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "가장 최근 사이트의 막대가 과거보다 긴지 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis 기사 내 서술을 월 단위로 환산",
+      "데이터 상태: derived"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "id": "page-005-graph-01",
+  "sourceImage": "input/02-page_005_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "주요 자산 가격 지수 (2026.2.27=100)",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "이란 사태 이후 주요 자산 가격 추이",
+    "subtitle": "주요 자산 가격 지수 (2026.2.27=100)",
+    "source": "자료: Bloomberg",
+    "timeRange": "2026.02 ~ 2026.06 (일간)",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "'26.02",
+        "'26.03",
+        "'26.04",
+        "'26.05",
+        "'26.06"
+      ],
+      "unit": "월",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "지수",
+      "type": "value",
+      "tickValues": [],
+      "unit": "p",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 75,
+      "max": 115
+    },
+    "legend": [
+      {
+        "name": "S&P500",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "달러화",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "미 국채10년",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "금",
+        "role": "primary",
+        "originalColor": "#E0A500",
+        "remakeColor": "#E0A500"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P500",
+        "data": [
+          {
+            "x": "26.02.27",
+            "y": 100.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.09",
+            "y": 96.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.16",
+            "y": 92.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.27",
+            "y": 98.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.10",
+            "y": 103.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.20",
+            "y": 105.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.01",
+            "y": 107.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.15",
+            "y": 109.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.25",
+            "y": 110.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.05",
+            "y": 107.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.18",
+            "y": 106.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.30",
+            "y": 108.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "달러화",
+        "data": [
+          {
+            "x": "26.02.27",
+            "y": 100.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.09",
+            "y": 102.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.16",
+            "y": 103.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.27",
+            "y": 102.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.10",
+            "y": 101.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.20",
+            "y": 100.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.01",
+            "y": 100.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.15",
+            "y": 100.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.25",
+            "y": 101.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.05",
+            "y": 102.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.18",
+            "y": 103.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.30",
+            "y": 103.5,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      },
+      {
+        "name": "미 국채10년",
+        "data": [
+          {
+            "x": "26.02.27",
+            "y": 100.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.09",
+            "y": 98.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.16",
+            "y": 96.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.27",
+            "y": 97.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.10",
+            "y": 97.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.20",
+            "y": 97.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.01",
+            "y": 97.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.15",
+            "y": 97.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.25",
+            "y": 97.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.05",
+            "y": 98.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.18",
+            "y": 98.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.30",
+            "y": 98.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#6667AB",
+        "axis": "left"
+      },
+      {
+        "name": "금",
+        "data": [
+          {
+            "x": "26.02.27",
+            "y": 100.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.09",
+            "y": 97.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.16",
+            "y": 84.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.03.27",
+            "y": 86.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.10",
+            "y": 90.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.04.20",
+            "y": 91.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.01",
+            "y": 87.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.15",
+            "y": 89.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.05.25",
+            "y": 85.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.05",
+            "y": 82.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.18",
+            "y": 79.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "26.06.30",
+            "y": 76.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#E0A500",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 48,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.169,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 8.0,
+        "absoluteChange": 8.0,
+        "from": 100.0,
+        "to": 108.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 110.0,
+        "at": ""
+      },
+      "min": {
+        "value": 92.5,
+        "at": ""
+      },
+      "average": 103.5,
+      "median": 105.5,
+      "range": 17.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "이란 사태 이후 주요 자산 가격 추이",
+    "subMessage": "주요 자산 가격 지수 (2026.2.27=100)",
+    "headline": "이란 사태 이후 주요 자산 가격 추이",
+    "summary": "주요 자산 가격 지수 (2026.2.27=100)",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "주요 자산 가격 지수 (2026.2.27=100)",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 76.0
+      },
+      "displayText": "이란 사태 이후 주요 자산 가",
+      "reason": "주요 자산 가격 지수 (2026.2.27=100)"
+    },
+    "densityLevel": "balanced"
+  }
+}

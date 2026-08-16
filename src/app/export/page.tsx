@@ -20,7 +20,7 @@
 
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ActionButton from "@/components/app/ActionButton";
 import PageShell from "@/components/app/PageShell";
 import ProjectSelectBar from "@/components/app/ProjectSelectBar";
@@ -33,12 +33,22 @@ import { getDisplayMessages } from "@/lib/analysis/message-agent";
 import { useProjectBrowser } from "@/hooks/use-project-browser";
 import { useThemeMode } from "@/hooks/use-theme-mode";
 import { chartSettings } from "@/lib/chart-settings";
+import { cleanSourceText } from "@/lib/chart-format";
 import {
   getAnalysisStylePreset,
   getAnalysisThemeMode,
   getPresetColors,
 } from "@/lib/style-presets";
 import { getTheme } from "@/lib/theme/toss-theme";
+import ExportCardHeader from "@/components/export/ExportCardHeader";
+import {
+  resolveCanvasHeight,
+  resolveExportFrame,
+  resolveFilledChartHeight,
+} from "@/lib/export-layout";
+import { mergeOptionDefaults } from "@/lib/visual-system-options";
+import Watermark from "@/components/app/Watermark";
+import type { ThemeMode } from "@/lib/theme/toss-theme";
 
 // ─────────────────────────────────────────────
 // 다중 패널 차트 높이 계산용 지역 상수 (D3)
@@ -48,10 +58,74 @@ import { getTheme } from "@/lib/theme/toss-theme";
 //   그려지도록 export 단계에서 동적으로 height를 산출한다.
 // ⚠️ 단일 차트(panels 없음)는 기존 350을 그대로 유지한다.
 // ⚠️ chart-settings.ts는 다른 에이전트가 작업 중이라, 이 파일 지역 상수로 둔다.
-const SINGLE_CHART_HEIGHT = 350; // 단일 차트 기존 높이(변경 금지)
+const SINGLE_CHART_HEIGHT = 390; // 단일 차트 기본 높이
+const COMPACT_BAR_HEIGHT = 330; // 포인트가 적은 비교 차트용 높이
+const COMPACT_LINE_HEIGHT = 360; // 포인트가 적은 추세 차트용 높이
+const DENSE_CHART_HEIGHT = 470; // 포인트가 촘촘한 차트용 높이
 const PANEL_TARGET_CHART_HEIGHT = 260; // 패널 한 칸의 목표 차트 높이(px)
 const PANEL_TITLE_SPACE = 26; // 패널 제목 한 줄 높이(PanelGrid와 동일)
 const PANEL_ROW_GAP = 20; // 패널 행 간격(PanelGrid와 동일)
+
+const COMPACT_BAR_TYPES = new Set([
+  "bar",
+  "bar_horizontal",
+  "stacked_bar",
+  "waterfall",
+  "heatmap",
+  "radar",
+  "funnel",
+]);
+const COMPACT_SHARE_TYPES = new Set(["donut", "pie", "treemap"]);
+const TREND_TYPES = new Set(["line", "area", "combo", "scatter", "bubble"]);
+
+function getPointStats(analysis: VisualAnalysis) {
+  if (!isChartAnalysis(analysis)) {
+    return { seriesCount: 0, totalPoints: 0, maxSeriesPoints: 0 };
+  }
+
+  const counts = analysis.data.series.map((series) => series.data.length);
+  return {
+    seriesCount: counts.length,
+    totalPoints: counts.reduce((sum, count) => sum + count, 0),
+    maxSeriesPoints: Math.max(0, ...counts),
+  };
+}
+
+/**
+ * 단일 차트의 export 높이를 데이터 밀도에 맞춘다.
+ *
+ * 왜 필요한가?
+ * → 2~5개 포인트짜리 차트를 350px 전체 플롯으로 그리면 빈 공간이 커 보인다.
+ * → 반대로 100개 이상 포인트가 있는 시계열은 plot 영역을 키워야 선과 축이 숨을 쉰다.
+ */
+function computeSingleChartHeight(analysis: VisualAnalysis): number {
+  if (!isChartAnalysis(analysis)) return SINGLE_CHART_HEIGHT;
+
+  const chartType = analysis.structure.chartType;
+  const { totalPoints, maxSeriesPoints } = getPointStats(analysis);
+
+  if (COMPACT_SHARE_TYPES.has(chartType) && totalPoints > 0 && totalPoints <= 5) {
+    return COMPACT_BAR_HEIGHT;
+  }
+
+  if (COMPACT_BAR_TYPES.has(chartType)) {
+    if (totalPoints > 0 && totalPoints <= 6) return COMPACT_BAR_HEIGHT;
+    if (totalPoints >= 24) return DENSE_CHART_HEIGHT - 30;
+    return SINGLE_CHART_HEIGHT;
+  }
+
+  if (TREND_TYPES.has(chartType)) {
+    if (maxSeriesPoints > 0 && maxSeriesPoints <= 5 && totalPoints <= 12) {
+      return analysis.structure.secondaryYAxis ? SINGLE_CHART_HEIGHT : COMPACT_LINE_HEIGHT;
+    }
+
+    if (maxSeriesPoints >= 36 || totalPoints >= 72) {
+      return DENSE_CHART_HEIGHT;
+    }
+  }
+
+  return SINGLE_CHART_HEIGHT;
+}
 
 /**
  * 다중 패널 차트에 넘길 전체 height(px)를 패널 수에 비례해 계산한다.
@@ -75,7 +149,7 @@ function computeChartHeight(analysis: VisualAnalysis): number {
 
   const panels = analysis.structure.panels;
   const fallbackChartType = analysis.structure.chartType;
-  if (!panels || panels.length === 0) return SINGLE_CHART_HEIGHT;
+  if (!panels || panels.length === 0) return computeSingleChartHeight(analysis);
 
   // PanelGrid와 동일: 이중축(secondaryYAxis) 콤보 패널이 하나라도 있으면 1열(세로 스택).
   const hasWideComboPanel = panels.some(
@@ -99,6 +173,75 @@ function buildExportBaseName(index: number, id: string) {
     .toLowerCase();
 
   return `${String(index + 1).padStart(2, "0")}-${safeId || `chart-${index + 1}`}`;
+}
+
+interface ExportCardContentProps {
+  analysis: VisualAnalysis;
+  theme: ThemeMode;
+  canvasHeight?: number;
+  padding: string;
+  requestedHeight: number;
+}
+
+/**
+ * 고정 캔버스 차트가 헤더와 출처 사이의 남은 높이를 모두 사용하게 한다.
+ * 제목 줄 수와 출처 유무가 달라도 브라우저가 계산한 실제 공간을 쓰므로,
+ * 장표마다 chartHeight를 손으로 맞추지 않아도 큰 빈 공간이 남지 않는다.
+ */
+function ExportCardContent({
+  analysis,
+  theme,
+  canvasHeight,
+  padding,
+  requestedHeight,
+}: ExportCardContentProps) {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const shouldFillCanvas = Boolean(canvasHeight && isChartAnalysis(analysis));
+  const [resolvedHeight, setResolvedHeight] = useState(requestedHeight);
+
+  useEffect(() => {
+    if (!shouldFillCanvas || !contentRef.current) return;
+
+    const content = contentRef.current;
+    const updateHeight = () => {
+      const style = window.getComputedStyle(content);
+      const nextHeight = resolveFilledChartHeight(
+        content.clientHeight,
+        Number.parseFloat(style.paddingTop) || 0,
+        Number.parseFloat(style.paddingBottom) || 0,
+        requestedHeight,
+      );
+      setResolvedHeight((current) => (current === nextHeight ? current : nextHeight));
+    };
+
+    const frame = window.requestAnimationFrame(updateHeight);
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(content);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [requestedHeight, shouldFillCanvas]);
+
+  return (
+    <div
+      ref={contentRef}
+      data-export-content
+      style={{
+        padding,
+        flex: shouldFillCanvas ? "1 1 0" : canvasHeight ? "0 0 auto" : undefined,
+        minHeight: shouldFillCanvas ? 0 : undefined,
+      }}
+    >
+      <ContentRouter
+        analysis={analysis}
+        theme={theme}
+        showInsights={false}
+        showHeader={false}
+        height={shouldFillCanvas ? resolvedHeight : requestedHeight}
+      />
+    </div>
+  );
 }
 
 export default function ExportPage() {
@@ -215,11 +358,24 @@ export default function ExportPage() {
             const renderTheme = getTheme(renderThemeMode);
             const preset = getAnalysisStylePreset(analysis);
             const presetColors = getPresetColors(preset, renderThemeMode);
-            const exportOptions = (analysis as { exportOptions?: ExportOptions }).exportOptions ?? {};
             const presetExport = preset.export;
-            const exportBg = presetColors.background;
-            const exportBorder = presetColors.border;
+            const exportOptions = mergeOptionDefaults<ExportOptions>(
+              preset.exportDefaults,
+              analysis.exportOptions,
+            );
+            const exportBg = exportOptions.backgroundColor ?? presetColors.background;
+            const exportBorder = exportOptions.borderColor ?? presetColors.border;
             const exportTypography = renderTheme.typography;
+            const canvasHeight = resolveCanvasHeight(exportOptions.canvasHeight);
+            const frame = resolveExportFrame(
+              exportOptions.frameStyle,
+              preset.card.borderWidth,
+              exportBorder,
+              preset.card.shadow,
+            );
+            // 출처에서 증권사 이름(○○증권)을 제거한 표시용 문자열.
+            // → 증권사만 있던 출처는 빈 문자열이 되어 아래에서 출처 블록 자체가 숨겨진다.
+            const cleanedSource = cleanSourceText(analysis.structure.source);
             return (
               <div key={analysis.id}>
               {/* 캡처 대상 영역 — 이 div가 PNG로 변환됨 */}
@@ -236,78 +392,58 @@ export default function ExportPage() {
                 }}
                 style={{
                   background: exportBg,
-                  borderRadius: exportOptions.sourceReplica ? 0 : presetExport.borderRadius,
-                  border: exportOptions.sourceReplica ? "0" : `${preset.card.borderWidth}px solid ${exportBorder}`,
-                  boxShadow: exportOptions.sourceReplica ? "none" : preset.card.shadow,
+                  position: "relative",
+                  height: canvasHeight ? `${canvasHeight}px` : undefined,
+                  display: canvasHeight ? "flex" : undefined,
+                  flexDirection: canvasHeight ? "column" : undefined,
+                  borderRadius:
+                    exportOptions.sourceReplica || exportOptions.squareEdges
+                      ? 0
+                      : presetExport.borderRadius,
+                  border: exportOptions.sourceReplica ? "0" : frame.border,
+                  boxShadow: exportOptions.sourceReplica ? "none" : frame.boxShadow,
                   overflow: "hidden",
                 }}
               >
-                {/* 제목만 간단히 */}
+                {/* 시안별 구조를 적용한 export 헤더 */}
                 {!exportOptions.hideHeader && (
-                  <div style={{ padding: exportOptions.headerPadding ?? presetExport.headerPadding }}>
-                    <h2
-                      style={{
-                        color: presetColors.textPrimary,
-                        fontSize: exportOptions.titleFontSize ?? presetExport.titleFontSize,
-                        fontWeight: preset.typography.titleWeight,
-                        fontFamily: exportOptions.fontFamily ?? preset.typography.fontFamily ?? exportTypography.fontFamily.sans,
-                        letterSpacing: preset.typography.titleLetterSpacing,
-                        margin: 0,
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {headMessage}
-                    </h2>
-                    {subMessage && (
-                      <p
-                        style={{
-                          color: presetColors.textSecondary,
-                          fontSize: exportOptions.subtitleFontSize ?? presetExport.subtitleFontSize,
-                          fontFamily: exportOptions.fontFamily ?? preset.typography.fontFamily ?? exportTypography.fontFamily.sans,
-                          margin: "6px 0 0",
-                          lineHeight: 1.45,
-                          fontWeight: preset.typography.subtitleWeight,
-                        }}
-                      >
-                        {subMessage}
-                      </p>
-                    )}
-                    {metaMessage && (
-                      <p
-                        style={{
-                          color: presetColors.textTertiary,
-                          fontSize: exportOptions.sourceFontSize ?? presetExport.sourceFontSize,
-                          fontFamily: exportOptions.fontFamily ?? preset.typography.fontFamily ?? exportTypography.fontFamily.sans,
-                          margin: "8px 0 0",
-                          lineHeight: 1.4,
-                          fontWeight: 500,
-                        }}
-                      >
-                        {metaMessage}
-                      </p>
-                    )}
-                  </div>
+                  <ExportCardHeader
+                    headMessage={headMessage}
+                    subMessage={subMessage}
+                    metaMessage={metaMessage}
+                    exportOptions={exportOptions}
+                    defaultPadding={presetExport.headerPadding}
+                    defaultTitleFontSize={presetExport.titleFontSize}
+                    defaultSubtitleFontSize={presetExport.subtitleFontSize}
+                    defaultSourceFontSize={presetExport.sourceFontSize}
+                    defaultFontFamily={preset.typography.fontFamily ?? exportTypography.fontFamily.sans}
+                    titleWeight={preset.typography.titleWeight}
+                    subtitleWeight={preset.typography.subtitleWeight}
+                    titleLetterSpacing={preset.typography.titleLetterSpacing}
+                    textPrimary={presetColors.textPrimary}
+                    textSecondary={presetColors.textSecondary}
+                    textTertiary={presetColors.textTertiary}
+                  />
                 )}
 
-                {/* 차트 (ChartRouter에서 showInsights=false) */}
-                <div style={{ padding: exportOptions.contentPadding ?? presetExport.contentPadding }}>
-                  <ContentRouter
-                    analysis={analysis}
-                    theme={renderThemeMode}
-                    showInsights={false}
-                    showHeader={false}
-                    // 다중 패널 차트는 패널 수에 비례해 height를 키운다(D3).
-                    // → exportOptions.chartHeight가 명시되면 그것을 최우선 존중,
-                    //   없으면 computeChartHeight가 단일=350 / 다중=패널수 비례로 산출.
-                    height={
-                      exportOptions.chartHeight ?? computeChartHeight(analysis)
-                    }
-                  />
-                </div>
+                {/* 고정 캔버스 차트는 헤더와 출처 사이의 실제 남은 높이를 채운다. */}
+                <ExportCardContent
+                  analysis={analysis}
+                  theme={renderThemeMode}
+                  canvasHeight={canvasHeight}
+                  padding={exportOptions.contentPadding ?? presetExport.contentPadding}
+                  requestedHeight={exportOptions.chartHeight ?? computeChartHeight(analysis)}
+                />
 
                 {/* 출처 (작게) */}
-                {analysis.structure.source && !exportOptions.hideSource && (
-                  <div style={{ padding: exportOptions.sourcePadding ?? presetExport.sourcePadding }}>
+                {cleanedSource && !exportOptions.hideSource && (
+                  <div
+                    data-export-source
+                    style={{
+                      padding: exportOptions.sourcePadding ?? presetExport.sourcePadding,
+                      marginTop: canvasHeight ? "auto" : undefined,
+                    }}
+                  >
                     <span
                       style={{
                         color: presetColors.textTertiary,
@@ -315,10 +451,12 @@ export default function ExportPage() {
                         fontFamily: exportOptions.fontFamily ?? preset.typography.fontFamily ?? exportTypography.fontFamily.sans,
                       }}
                     >
-                      {analysis.structure.source}
+                      {cleanedSource}
                     </span>
                   </div>
                 )}
+
+                <Watermark color={presetColors.textTertiary} />
               </div>
 
               {/* 개별 다운로드 버튼 — chartSettings에서 켜고 끌 수 있음 */}

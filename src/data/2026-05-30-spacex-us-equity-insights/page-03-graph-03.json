@@ -1,0 +1,111 @@
+{
+  "id": "page-03-graph-03",
+  "sourceImage": "input/03-page-03-graph-03.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "대형 IPO는 상장 직후 약세가 흔하다",
+    "subtitle": "공모가 대비 %, 상장당일~D+30, 이미지 기반 근사값",
+    "source": "Bloomberg, 삼성증권",
+    "timeRange": "",
+    "xAxis": { "label": "상장 후 경과", "type": "category", "tickValues": ["상장당일","D+5","D+10","D+15","D+20","D+25","D+30"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "공모가 대비", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": false, "isLogScale": false, "max": 5 },
+    "legend": [
+      { "name": "우버", "role": "primary", "originalColor": "#7CB342", "remakeColor": "#34A853" },
+      { "name": "소프트뱅크", "role": "secondary", "originalColor": "#42A5F5", "remakeColor": "#1A73E8" },
+      { "name": "메타", "role": "primary", "originalColor": "#EF5350", "remakeColor": "#EA4335" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "우버", "renderAs": "line", "role": "primary",
+        "data": [
+          {"x": "상장당일", "y": 0, "confidence": 0.8},
+          {"x": "D+5", "y": -8, "confidence": 0.8},
+          {"x": "D+10", "y": -6, "confidence": 0.8},
+          {"x": "D+15", "y": -7, "confidence": 0.8},
+          {"x": "D+20", "y": -5, "confidence": 0.8},
+          {"x": "D+25", "y": -4, "confidence": 0.8},
+          {"x": "D+30", "y": -3, "confidence": 0.8}
+        ],
+        "color": "#34A853"
+      },
+      {
+        "name": "소프트뱅크", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "상장당일", "y": -2, "confidence": 0.8},
+          {"x": "D+5", "y": -10, "confidence": 0.8},
+          {"x": "D+10", "y": -12, "confidence": 0.8},
+          {"x": "D+15", "y": -10, "confidence": 0.8},
+          {"x": "D+20", "y": -8, "confidence": 0.8},
+          {"x": "D+25", "y": -7, "confidence": 0.8},
+          {"x": "D+30", "y": -8, "confidence": 0.8}
+        ],
+        "color": "#1A73E8"
+      },
+      {
+        "name": "메타", "renderAs": "line", "role": "primary",
+        "data": [
+          {"x": "상장당일", "y": 0, "confidence": 0.8},
+          {"x": "D+5", "y": -12, "confidence": 0.8},
+          {"x": "D+10", "y": -25, "confidence": 0.8},
+          {"x": "D+15", "y": -28, "confidence": 0.8},
+          {"x": "D+20", "y": -22, "confidence": 0.8},
+          {"x": "D+25", "y": -15, "confidence": 0.8},
+          {"x": "D+30", "y": -13, "confidence": 0.8}
+        ],
+        "color": "#EA4335"
+      }
+    ],
+    "totalDataPoints": 21,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "down", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "stable" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 0, "at": ""}, "min": {"value": -28, "at": ""}, "average": -10, "median": -8, "range": 28 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "초반 약세는 흔한 일",
+    "subMessage": "메타·우버도 상장 초기엔 공모가를 밑돌았다",
+    "headline": "메타와 우버 같은 대형 공모주도 상장 직후 약세를 거쳐 점차 회복했습니다.",
+    "summary": "메타와 우버처럼 기대가 컸던 대형 공모주도 상장 직후에는 공모가를 밑도는 약세를 겪었습니다.",
+    "story": "메타와 우버처럼 기대가 컸던 대형 공모주도 상장 직후에는 공모가를 밑도는 약세를 겪었습니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"메타 -28%","position":{"x":"D+10"},"importance":"critical","style":"negative"},
+      {"text":"우버 -3%","position":{"x":"D+30"},"importance":"high","style":"neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"D+15","y":-28}, "displayText": "초반 약세는 흔한 일", "reason": "메타와 우버처럼 기대가 컸던 대형 공모주도 상장 직후에는 공모가를 밑도는 약세를 겪었습니다." },
+    "densityLevel": "balanced"
+  }
+}

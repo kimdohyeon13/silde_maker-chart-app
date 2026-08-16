@@ -36,7 +36,7 @@ import {
   ComposedChart,
   Legend,
 } from "recharts";
-import type { ChartAnalysis } from "@/lib/analysis/schema";
+import type { ChartAnalysis, ExportOptions } from "@/lib/analysis/schema";
 import {
   getAnalysisStylePreset,
   getAnalysisThemeMode,
@@ -46,6 +46,15 @@ import {
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
 import {
+  resolveDirectLabelFractionDigits,
+  resolveDirectLabelVisibility,
+  resolveGridMode,
+  shouldRenderTrendLine,
+  shouldShowAreaFill,
+  shouldShowLatestGuide,
+} from "@/lib/chart-render-options";
+import {
+  formatAxisLabel,
   formatAxisTickLabel,
   normalizeXKey,
   matchTickToDataKey,
@@ -54,7 +63,9 @@ import {
   formatValueWithUnit,
   getAxisFractionDigits,
   generateNiceTicks,
+  cleanSourceText,
 } from "@/lib/chart-format";
+import { mergeOptionDefaults } from "@/lib/visual-system-options";
 
 interface TossLineChartProps {
   analysis: ChartAnalysis;
@@ -131,25 +142,47 @@ export default function TossLineChart({
   const preset = getAnalysisStylePreset(analysis);
   const styles = getPresetRechartsStyle(analysis, themeMode);
   const colors = getPresetColors(preset, renderThemeMode);
-  const exportOptions = (analysis as { exportOptions?: { sourceReplica?: boolean } }).exportOptions ?? {};
+  const exportOptions = mergeOptionDefaults<ExportOptions>(
+    preset.exportDefaults,
+    analysis.exportOptions,
+  );
+  const squareEdges = !!exportOptions.squareEdges;
 
   // 듀얼 축 여부 판단
   const hasSecondaryYAxis = !!analysis.structure.secondaryYAxis;
 
   // 선 끝에 라벨을 직접 붙이면 사용자가 범례와 선을 왕복해서 볼 필요가 줄어든다.
-  const showDirectLabels =
+  //
+  // [수정2] 이중축(secondaryYAxis 존재) 차트에서는 인라인 직접라벨을 끈다(&& !hasSecondaryYAxis).
+  //  → 왜? 이중축 차트는 우측 Y축 눈금 숫자가 카드 우측에 이미 있어서, 선 끝의 직접라벨이
+  //    그 눈금·서로와 세로로 겹쳐 읽혔다(page-14-t2 '증권 상대강도 102'↔'실질임금 0', page-07 패널).
+  //  → 직접라벨을 끄면 아래 showLegend 식(series.length > 1 && !showDirectLabels)에 의해
+  //    이중축에서는 범례가 자동으로 켜져, 겹침 없이 하단 범례로 시리즈를 식별한다.
+  //  ⚠️ 단일축(secondaryYAxis 없음) 다중 라인의 기존 직접라벨 동작은 그대로 유지(회귀 금지).
+  //  ⚠️ 밴드/전망 전용 끝라벨(bandLabelPoints/forecastLabelPoints)은 이 분기와 무관하게
+  //     별도로 항상 우측 균등 분산되어 그려지므로 영향받지 않는다.
+  const automaticDirectLabels =
     chartSettings.directLabels.enabled &&
+    !hasSecondaryYAxis &&
     analysis.data.series.length >= 1 &&
     analysis.data.series.length <= chartSettings.directLabels.maxSeries;
+  const showDirectLabels = resolveDirectLabelVisibility(
+    automaticDirectLabels,
+    exportOptions.showDirectLabels,
+  );
 
   // 직접 라벨을 표시할 때는 범례를 숨겨 그래프 본문 공간을 더 넓게 쓴다.
+  // → 이중축에서는 showDirectLabels=false가 되므로 이 식이 자동으로 true가 되어 하단 범례를 켠다.
   const showLegend = analysis.data.series.length > 1 && !showDirectLabels;
 
   // [D5] 다계열(3개 이상)에서는 선 아래 area fill(그라데이션)을 끈다.
   //  → 시리즈가 많은데 모두 면적을 채우면 라인차트가 면적차트처럼 보여 추세가 뭉개진다(page-03-g1).
   //  → 1~2개일 때만 area를 유지(원본이 면적 강조인 경우가 많음).
-  const AREA_FILL_MAX_SERIES = 2;
-  const showAreaFill = analysis.data.series.length <= AREA_FILL_MAX_SERIES;
+  const showAreaFill = shouldShowAreaFill(
+    analysis.data.series.length,
+    exportOptions.showAreaFill,
+  );
+  const gridMode = resolveGridMode(exportOptions.gridMode);
 
   /**
    * getSeriesColor — 시리즈의 색상을 결정하는 함수
@@ -207,11 +240,6 @@ export default function TossLineChart({
     return resolveSeriesKind(i) === "band";
   }
 
-  function getAxisLabel(label = "", unit = ""): string {
-    if (!label || label === unit) return "";
-    return unit ? `${label} (${unit})` : label;
-  }
-
   function getXAxisLabel(label = ""): string {
     if (!label) return "";
     return label;
@@ -253,8 +281,25 @@ export default function TossLineChart({
         ? analysis.structure.secondaryYAxis?.label || ""
         : analysis.structure.yAxis.label || "";
     const inlineUnit = getInlineLabelUnit(getSeriesUnit(index), axisLabel);
+    const valueAxis =
+      hasSecondaryYAxis && index > 0
+        ? analysis.structure.secondaryYAxis
+        : analysis.structure.yAxis;
+    const axisDigits = getAxisFractionDigits(
+      valueAxis?.min,
+      valueAxis?.max,
+      valueAxis?.tickValues,
+    );
+    const automaticValueDigits =
+      Math.abs(value) < 10 && !Number.isInteger(value)
+        ? Math.max(axisDigits, 2)
+        : axisDigits;
+    const valueDigits = resolveDirectLabelFractionDigits(
+      automaticValueDigits,
+      exportOptions.directLabelFractionDigits,
+    );
 
-    return `${compactName} ${formatValueWithUnit(value, inlineUnit, 0)}`;
+    return `${compactName} ${formatValueWithUnit(value, inlineUnit, valueDigits)}`;
   }
 
   // ─────────────────────────────────────────────
@@ -549,6 +594,22 @@ export default function TossLineChart({
 
   // [수정2] 최소 간격 강제 분산(+상/하단 클램프) → 직접라벨끼리 글자가 맞붙지 않게.
   const directLabelDy = buildSpacedEndLabelDyMap(directLabelPoints, MIN_DIRECT_LABEL_GAP);
+  const latestGuideCandidates = directLabelPoints.filter((item) => {
+    const legendItem = analysis.structure.legend[item.index];
+    const role = item.series.role ?? legendItem?.role;
+    return role !== "secondary";
+  });
+  const latestGuidePoint = shouldShowLatestGuide(
+    latestGuideCandidates.length,
+    exportOptions.showLatestGuide,
+    showDirectLabels,
+  )
+    ? latestGuideCandidates[0]
+    : undefined;
+  const latestGuideOpacity = Math.min(
+    1,
+    Math.max(0, exportOptions.latestGuideOpacity ?? 0.24),
+  );
 
   // ─────────────────────────────────────────────
   // 밴드 우측 끝 배수라벨 (P0-3)
@@ -791,15 +852,23 @@ export default function TossLineChart({
       ? chartSettings.xAxis.longSeriesMaxVisibleLabels
       : chartSettings.xAxis.maxVisibleLabels;
 
+  const xAxisDisplayLabelByKey = new Map<string, string>();
+
   const visibleXTicks = (() => {
     const xAxisWithDisplay = analysis.structure.xAxis as typeof analysis.structure.xAxis & {
       displayTickValues?: string[];
     };
+    const tickValues = (xAxisWithDisplay.tickValues ?? []).map(String);
+    const displayTickValues = (xAxisWithDisplay.displayTickValues ?? []).map(String);
     const hasDisplayTicks =
-      !!xAxisWithDisplay.displayTickValues && xAxisWithDisplay.displayTickValues.length > 0;
-    const sourceTicks = hasDisplayTicks
-      ? xAxisWithDisplay.displayTickValues!
-      : (xAxisWithDisplay.tickValues ?? []);
+      displayTickValues.length > 0;
+    const hasMappedDisplayTicks =
+      hasDisplayTicks && tickValues.length === displayTickValues.length;
+    const sourceTicks = hasMappedDisplayTicks
+      ? tickValues
+      : hasDisplayTicks
+        ? displayTickValues
+        : tickValues;
 
     // 데이터에 실제로 존재하는 x-key 목록 (정규화 매칭의 대상)
     const dataKeys = chartData.map((point) => String(point.x));
@@ -809,11 +878,15 @@ export default function TossLineChart({
     // → 중복 제거하되 입력 순서는 보존한다.
     const seen = new Set<string>();
     const explicitTicksRaw: string[] = [];
-    for (const rawTick of sourceTicks.map(String)) {
+    for (let tickIndex = 0; tickIndex < sourceTicks.length; tickIndex++) {
+      const rawTick = String(sourceTicks[tickIndex]);
       const matched = matchTickToDataKey(rawTick, dataKeys);
       if (matched && !seen.has(matched)) {
         seen.add(matched);
         explicitTicksRaw.push(matched);
+        if (hasMappedDisplayTicks) {
+          xAxisDisplayLabelByKey.set(matched, displayTickValues[tickIndex]);
+        }
       }
     }
 
@@ -825,7 +898,7 @@ export default function TossLineChart({
     const seenDisplay = new Set<string>();
     const explicitTicks: string[] = [];
     for (const tick of explicitTicksRaw) {
-      const display = formatAxisTickLabel(tick);
+      const display = xAxisDisplayLabelByKey.get(tick) ?? formatAxisTickLabel(tick);
       if (!seenDisplay.has(display)) {
         seenDisplay.add(display);
         explicitTicks.push(tick);
@@ -855,6 +928,11 @@ export default function TossLineChart({
     if (len <= maxVisibleXLabels) return 0;
     return Math.ceil(len / maxVisibleXLabels);
   })();
+
+  function formatXAxisTickLabel(value: string | number): string {
+    const key = String(value);
+    return xAxisDisplayLabelByKey.get(key) ?? formatAxisTickLabel(key);
+  }
 
   function getHighlightZoneLabel(zone: (typeof analysis.emphasis.highlightZones)[number]) {
     const fromIndex = chartData.findIndex((point) => String(point.x) === String(zone.fromX));
@@ -904,18 +982,33 @@ export default function TossLineChart({
   const isLeftAxisSeries = (index: number): boolean =>
     !(hasSecondaryYAxis && index > 0);
 
+  const xAxisLabelText = getXAxisLabel(analysis.structure.xAxis.label);
+  const compactBottomMargin = xAxisLabelText
+    ? chartSettings.margin.bottom
+    : Math.max(30, chartSettings.margin.bottom - 20);
+  const endLabelRightMargin =
+    exportOptions.endLabelRightMargin ?? chartSettings.directLabels.extraRightMargin;
+  const compactChartMargins = exportOptions.compactChartMargins === true;
+
   const computedMargin = {
-    top: chartSettings.margin.top,
-    right:
-      chartSettings.margin.right +
-      (hasSecondaryYAxis ? chartSettings.dualAxis.extraRightMargin : 0) +
-      (showDirectLabels ? chartSettings.directLabels.extraRightMargin : 0) +
-      (needsBandRightMargin ? chartSettings.directLabels.extraRightMargin : 0) +
-      dualAxisEndLabelRightMargin,
-    bottom: showLegend
-      ? chartSettings.margin.bottom + chartSettings.legend.extraBottomMargin
-      : chartSettings.margin.bottom,
-    left: chartSettings.margin.left,
+    top: compactChartMargins ? 8 : chartSettings.margin.top,
+    right: compactChartMargins
+      ? 48 +
+        (showDirectLabels ? endLabelRightMargin : 0) +
+        (needsBandRightMargin ? endLabelRightMargin : 0)
+      : chartSettings.margin.right +
+        (hasSecondaryYAxis ? chartSettings.dualAxis.extraRightMargin : 0) +
+        (showDirectLabels ? endLabelRightMargin : 0) +
+        (needsBandRightMargin ? endLabelRightMargin : 0) +
+        dualAxisEndLabelRightMargin,
+    bottom: compactChartMargins
+      ? showLegend
+        ? 46
+        : 28
+      : showLegend
+        ? compactBottomMargin + chartSettings.legend.extraBottomMargin
+        : compactBottomMargin,
+    left: compactChartMargins ? 0 : chartSettings.margin.left,
   };
 
   function renderSourceReplicaLineChart() {
@@ -966,7 +1059,8 @@ export default function TossLineChart({
       (analysis.structure.xAxis.tickValues ?? []).length > 0
         ? (analysis.structure.xAxis.tickValues ?? []).map(String)
         : [sourceOrder[0], sourceOrder[Math.floor(sourceOrder.length / 2)], sourceOrder[sourceOrder.length - 1]];
-    const sourceLine = analysis.structure.source || "";
+    // 최종 출처 줄에는 원문 근거만 남기고 내부 제작 메타데이터만 제거한다.
+    const sourceLine = cleanSourceText(analysis.structure.source);
 
     return (
       <div style={{ width: "100%", height: "100%", background: "#ffffff" }}>
@@ -1024,7 +1118,7 @@ export default function TossLineChart({
                   y2={y}
                   stroke={color}
                   strokeWidth="4"
-                  strokeLinecap="round"
+                  strokeLinecap={squareEdges ? "butt" : "round"}
                 />
                 <text x="124" y={y + 5} fontSize="13" fontWeight="800" fill="#111111">
                   {label}
@@ -1085,8 +1179,8 @@ export default function TossLineChart({
               fill="none"
               stroke={getSeriesColor(i)}
               strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinecap={squareEdges ? "butt" : "round"}
+              strokeLinejoin={squareEdges ? "miter" : "round"}
               opacity={i === 0 ? 1 : 0.95}
             />
           ))}
@@ -1128,7 +1222,12 @@ export default function TossLineChart({
         </defs>
 
         {/* 격자선 — 가로만 (토스 스타일) */}
-        <CartesianGrid {...styles.grid} />
+        {gridMode !== "none" && (
+          <CartesianGrid
+            {...styles.grid}
+            strokeDasharray={gridMode === "solid" ? "0" : styles.grid.strokeDasharray}
+          />
+        )}
 
         {/* X축 */}
         <XAxis
@@ -1136,16 +1235,20 @@ export default function TossLineChart({
           {...styles.xAxis}
           interval={xLabelInterval}
           ticks={visibleXTicks}
-          tickFormatter={formatAxisTickLabel}
-          label={{
-            value: getXAxisLabel(analysis.structure.xAxis.label),
-            position: "insideBottomRight",
-            offset: -30,
-            fill: colors.textTertiary,
-            fontSize: 16,
-            fontWeight: 800,
-            fontFamily: theme.typography.fontFamily.sans,
-          }}
+          tickFormatter={formatXAxisTickLabel}
+          label={
+            xAxisLabelText
+              ? {
+                  value: xAxisLabelText,
+                  position: "insideBottomRight",
+                  offset: -30,
+                  fill: colors.textTertiary,
+                  fontSize: 16,
+                  fontWeight: 800,
+                  fontFamily: theme.typography.fontFamily.sans,
+                }
+              : undefined
+          }
         />
 
         {/* Y축 (좌측) — width로 숫자 잘림 방지 */}
@@ -1178,7 +1281,7 @@ export default function TossLineChart({
           allowDataOverflow={analysis.structure.yAxis.isLogScale}
           tickCount={6}
           label={{
-            value: getAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+            value: formatAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
             position: "insideTopLeft",
             offset: 0,
             dy: -28,
@@ -1218,7 +1321,7 @@ export default function TossLineChart({
             }
             tickCount={6}
             label={{
-              value: getAxisLabel(
+              value: formatAxisLabel(
                 analysis.structure.secondaryYAxis!.label,
                 analysis.structure.secondaryYAxis!.unit,
               ),
@@ -1299,6 +1402,18 @@ export default function TossLineChart({
           );
         })}
 
+        {/* 최신값 가이드 — 직접 라벨이 켜진 단 하나의 주 시리즈에서만 옅게 표시 */}
+        {latestGuidePoint && (
+          <ReferenceLine
+            yAxisId={latestGuidePoint.yAxisId}
+            y={latestGuidePoint.point.y}
+            stroke={latestGuidePoint.color}
+            strokeOpacity={latestGuideOpacity}
+            strokeDasharray="2 6"
+            strokeWidth={1.4}
+          />
+        )}
+
         {/* 영역 채움 (그라데이션) — 전망/밴드 시리즈는 제외 */}
         {/* → 전망선은 점선이라 면적 채움이 어색하고, 밴드는 선 자체가 경계라 채움하면 지저분해진다 */}
         {/* [D5] 시리즈 3개 이상이면 area를 통째로 끈다(showAreaFill=false) → 선만 그린다 */}
@@ -1350,21 +1465,29 @@ export default function TossLineChart({
               stroke={seriesColor}
               // 밴드는 옅은 실선, 전망은 점선
               strokeDasharray={isForecast ? "8 4" : undefined}
-              strokeWidth={isForecast ? 3.2 : isBand ? 2.4 : roleStyle.strokeWidth}
+              strokeWidth={
+                isForecast
+                  ? 3.2
+                  : isBand
+                    ? 2.4
+                    : exportOptions.lineStrokeWidth ?? roleStyle.strokeWidth
+              }
               strokeOpacity={isBand ? 0.7 : roleStyle.opacity}
-              strokeLinecap={isDenseLine ? "butt" : "round"}
-              strokeLinejoin={isDenseLine ? "miter" : "round"}
+              strokeLinecap={squareEdges || isDenseLine ? "butt" : "round"}
+              strokeLinejoin={squareEdges || isDenseLine ? "miter" : "round"}
               dot={
-                showDensePointMarkers
-                  ? {
+                squareEdges
+                  ? false
+                  : showDensePointMarkers
+                    ? {
                     r: role === "secondary" ? 0.9 : 1.15,
                     stroke: "none",
                     fill: seriesColor,
                     fillOpacity: role === "secondary" ? 0.45 : 0.62,
                   }
-                  : isDenseLine
-                    ? false
-                  : {
+                    : isDenseLine
+                      ? false
+                      : {
                     r: role === "secondary" ? 3.4 : 4,
                     stroke: colors.surface,
                     strokeWidth: role === "secondary" ? 1.8 : 2.2,
@@ -1372,12 +1495,16 @@ export default function TossLineChart({
                     fillOpacity: roleStyle.opacity,
                   }
               }
-              activeDot={{
-                r: role === "secondary" ? 5 : 7,
-                stroke: colors.surface,
-                strokeWidth: role === "secondary" ? 2.5 : 3.5,
-                fill: seriesColor,
-              }}
+              activeDot={
+                squareEdges
+                  ? false
+                  : {
+                    r: role === "secondary" ? 5 : 7,
+                    stroke: colors.surface,
+                    strokeWidth: role === "secondary" ? 2.5 : 3.5,
+                    fill: seriesColor,
+                  }
+              }
               connectNulls
               isAnimationActive={animated}
               animationDuration={
@@ -1401,10 +1528,10 @@ export default function TossLineChart({
                 yAxisId={item.yAxisId}
                 x={String(item.point.x)}
                 y={item.point.y}
-                r={chartSettings.directLabels.dotRadius}
+                r={squareEdges ? 0 : chartSettings.directLabels.dotRadius}
                 fill={item.color}
                 stroke={colors.surface}
-                strokeWidth={2.5}
+                strokeWidth={squareEdges ? 0 : 2.5}
                 label={{
                   value: getDirectSeriesLabel(item.series.name, item.point.y, item.index),
                   position: "right",
@@ -1433,7 +1560,7 @@ export default function TossLineChart({
               yAxisId={item.yAxisId}
               x={String(item.point.x)}
               y={item.point.y}
-              r={2.5}
+              r={squareEdges ? 0 : 2.5}
               fill={item.color}
               stroke="none"
               label={{
@@ -1465,7 +1592,7 @@ export default function TossLineChart({
               yAxisId={item.yAxisId}
               x={String(item.point.x)}
               y={item.point.y}
-              r={2.5}
+              r={squareEdges ? 0 : 2.5}
               fill={item.color}
               stroke="none"
               label={{
@@ -1484,7 +1611,9 @@ export default function TossLineChart({
 
         {/* 평균선 (추세선이 있으면) */}
         {trendLines
-          .filter((tl) => tl.label?.includes("평균"))
+          .filter((tl) =>
+            shouldRenderTrendLine(tl.label, exportOptions.showAllTrendLines),
+          )
           .map((tl, i) => (
             <ReferenceLine
               key={`avg-${i}`}
@@ -1514,7 +1643,7 @@ export default function TossLineChart({
               yAxisId="left"
               x={String(ann.position.x)}
               y={ann.position.y ?? 0}
-              r={ann.importance === "critical" ? 6 : 5}
+              r={squareEdges ? 0 : ann.importance === "critical" ? 6 : 5}
               fill={
                 ann.style === "positive"
                   ? colors.positive
@@ -1523,7 +1652,7 @@ export default function TossLineChart({
                     : colors.accent
               }
               stroke={colors.surface}
-              strokeWidth={2.5}
+              strokeWidth={squareEdges ? 0 : 2.5}
               label={{
                 value: cleanedText,
                 position: position,

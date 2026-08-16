@@ -23,10 +23,10 @@ export const chartSettings = {
   // 차트 내부에서 그래프 영역과 테두리 사이의 빈 공간.
   // 텍스트가 잘리면 해당 방향의 값을 키우세요.
   margin: {
-    top: 60,     // 상단: 어노테이션 텍스트가 잘리면 키우기
-    right: 118,  // 오른쪽: 직접 라벨이나 긴 텍스트가 잘리면 키우기
-    bottom: 66,  // 하단: X축 라벨이 잘리면 키우기
-    left: 18,    // 왼쪽: Y축 숫자 옆 여유 공간
+    top: 40,     // 상단: 기본 여백을 줄여 plot 영역을 키움
+    right: 108,  // 오른쪽: 직접 라벨 공간은 유지하되 과한 여백은 축소
+    bottom: 50,  // 하단: X축 라벨 공간을 남기면서 카드 하단 여백 축소
+    left: 10,    // 왼쪽: Y축 숫자 옆 여유 공간
   },
 
   // ─────────────────────────────────────────────
@@ -35,8 +35,8 @@ export const chartSettings = {
   // "120$/bbl" 같은 Y축 숫자가 차지하는 가로 폭.
   // 숫자가 잘리면(앞자리가 안 보이면) 이 값을 키우세요.
   yAxis: {
-    width: 122,       // 왼쪽 Y축 너비 (큰 축 라벨 대응)
-    rightWidth: 118,  // 오른쪽 보조 Y축 너비 (듀얼 축용, 예: "$11.5")
+    width: 112,       // 왼쪽 Y축 너비 (큰 축 라벨 대응)
+    rightWidth: 108,  // 오른쪽 보조 Y축 너비 (듀얼 축용, 예: "$11.5")
   },
 
   // ─────────────────────────────────────────────
@@ -71,12 +71,12 @@ export const chartSettings = {
     showPngButton: false,      // 개별 PNG 다운로드 버튼 (true=보이기, false=숨기기)
     pixelRatio: 2,             // 해상도 배율 (2 = 고해상도)
     borderRadius: "9px 9px 0 0", // 하단은 직선에 가깝게
-    titleFontSize: 56,         // export 제목 폰트 크기
-    subtitleFontSize: 38,      // export 부제목 폰트 크기
-    sourceFontSize: 26,        // export 출처 폰트 크기
-    headerPadding: "30px 42px 0",
-    contentPadding: "12px 14px 14px",
-    sourcePadding: "0 42px 18px",
+    titleFontSize: 44,         // export 제목 폰트 크기
+    subtitleFontSize: 28,      // export 부제목 폰트 크기
+    sourceFontSize: 18,        // export 출처 폰트 크기
+    headerPadding: "20px 32px 0",
+    contentPadding: "2px 8px 0",
+    sourcePadding: "0 32px 12px",
   },
 
   // ─────────────────────────────────────────────
@@ -94,7 +94,7 @@ export const chartSettings = {
   directLabels: {
     enabled: true,
     maxSeries: 3,
-    extraRightMargin: 148,
+    extraRightMargin: 128,
     fontSize: 19,
     offset: 16,
     dotRadius: 5,

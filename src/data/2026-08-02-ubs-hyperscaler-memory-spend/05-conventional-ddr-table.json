@@ -1,0 +1,273 @@
+{
+  "id": "conventional-ddr-table",
+  "mode": "redesign",
+  "analyzedAt": "2026-08-02T11:20:00+09:00",
+  "sourceImage": "input/01-ubs-hyperscaler-memory-spend.png",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalTitle": "Figure 28: Hyperscaler memory spend",
+    "originalMessage": "Figure 28: Hyperscaler memory spend",
+    "preservedElements": [
+      "원표 행 순서",
+      "2025·2026E·2027E",
+      "수요·비중·ASP·지출",
+      "Gb/GB 단위",
+      "자료: UBS"
+    ],
+    "changedElements": [
+      "표 블록 분할",
+      "한국어 번역",
+      "Paperlogy 타이포",
+      "핵심 지출 셀 강조",
+      "얇은 행선"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "sourceAttribution": "자료: UBS, Figure 28",
+    "notes": "표 셀에 직접 보이는 숫자는 exact-as-displayed입니다. ASP는 표시 자릿수로 반올림돼 있습니다. 9배는 178,686÷19,871=8.992배의 파생 카피입니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "4행×4열 금융표로 분할하고 마지막 지출 행만 강조했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "visible-values-transcribed",
+      "label": "원표 표시값 전사",
+      "status": "pass",
+      "detail": "UBS Figure 28의 화면 셀 숫자·행 순서·2026E/2027E 표기·Gb/GB 대소문자를 대조했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "1,824×1,026 PNG, 제목 900, 서브메시지 300, overflow 0을 최종 DOM QA에서 확인합니다.",
+      "checkedAt": "2026-08-02"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "1px 8px 1px",
+    "sourcePadding": "0 24px 7px",
+    "titleFontSize": 26,
+    "subtitleFontSize": 13,
+    "sourceFontSize": 10,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828"
+  },
+  "structure": {
+    "title": "일반 서버 DDR도 9배 — 핵심은 단가",
+    "subtitle": "수요는 1.68배, 표시 ASP는 5.35배",
+    "source": "자료: UBS, Figure 28 | ASP 표시값 반올림"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "40%",
+        "align": "left"
+      },
+      {
+        "key": "y2025",
+        "label": "2025",
+        "dataType": "text",
+        "width": "20%",
+        "align": "right"
+      },
+      {
+        "key": "y2026",
+        "label": "2026E",
+        "dataType": "text",
+        "width": "20%",
+        "align": "right"
+      },
+      {
+        "key": "y2027",
+        "label": "2027E",
+        "dataType": "text",
+        "width": "20%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "일반 서버 DDR 수요 (mil Gb)",
+            "displayValue": "일반 서버 DDR 수요 (mil Gb)"
+          },
+          "y2025": {
+            "value": "57,795",
+            "displayValue": "57,795"
+          },
+          "y2026": {
+            "value": "77,002",
+            "displayValue": "77,002"
+          },
+          "y2027": {
+            "value": "97,146",
+            "displayValue": "97,146"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "하이퍼스케일러 비중",
+            "displayValue": "하이퍼스케일러 비중"
+          },
+          "y2025": {
+            "value": "80%",
+            "displayValue": "80%"
+          },
+          "y2026": {
+            "value": "80%",
+            "displayValue": "80%"
+          },
+          "y2027": {
+            "value": "80%",
+            "displayValue": "80%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "서버 DDR 혼합 ASP (US$/Gb)",
+            "displayValue": "서버 DDR 혼합 ASP (US$/Gb)"
+          },
+          "y2025": {
+            "value": "$0.43",
+            "displayValue": "$0.43"
+          },
+          "y2026": {
+            "value": "$1.79",
+            "displayValue": "$1.79"
+          },
+          "y2027": {
+            "value": "$2.30",
+            "displayValue": "$2.30"
+          }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "metric": {
+            "value": "일반 서버 DDR 지출 (US$m)",
+            "displayValue": "일반 서버 DDR 지출 (US$m)"
+          },
+          "y2025": {
+            "value": "$19,871",
+            "displayValue": "$19,871"
+          },
+          "y2026": {
+            "value": "$109,972",
+            "displayValue": "$109,972"
+          },
+          "y2027": {
+            "value": "$178,686",
+            "displayValue": "$178,686",
+            "highlight": "accent"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 52,
+      "cellPadding": "10px 12px",
+      "lineHeight": 1.15,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "groupHeaderTone": "accent-rule",
+      "columnRules": false,
+      "sectionRules": false,
+      "accentColor": "#1458D4",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 650,
+        "rowHeader": 700,
+        "header": 700,
+        "total": 850,
+        "groupHeader": 800
+      },
+      "fontSize": {
+        "body": 16,
+        "header": 14,
+        "total": 16,
+        "badge": 10
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "일반 서버 DDR도 9배 — 핵심은 단가",
+    "subMessage": "수요는 1.68배, 표시 ASP는 5.35배",
+    "headline": "일반 서버 DDR도 9배 — 핵심은 단가. 수요는 1.68배, 표시 ASP는 5.35배",
+    "summary": "수요는 1.68배, 표시 ASP는 5.35배",
+    "story": "일반 서버 DDR도 9배 — 핵심은 단가. 수요는 1.68배, 표시 ASP는 5.35배",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원표 숫자와 단위를 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: UBS, Figure 28",
+      "ASP는 원표 표시값 기준"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "$178,686",
+      "reason": "2027E 핵심 지출"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#8EB7D8",
+        "#D1D6DB",
+        "#F59E0B"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

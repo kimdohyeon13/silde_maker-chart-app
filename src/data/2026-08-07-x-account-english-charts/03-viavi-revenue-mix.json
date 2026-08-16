@@ -1,0 +1,262 @@
+{
+  "id": "03-viavi-revenue-mix",
+  "mode": "faithful",
+  "sourceImage": "input/w79-15.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "회사 매출의 40%가 이미 데이터센터에서 나온다",
+    "originalMessage": "경영진이 밝힌 NSE 구성비를 전사로 환산한 값. 데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 항공우주·방산 13.6%",
+    "preservedElements": [
+      "원본 차트 종류",
+      "막대 개수와 순서",
+      "축 구조와 0 기준선",
+      "원본에 인쇄된 실제 수치",
+      "비교 방향과 핵심 메시지",
+      "출처 맥락",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 노출 문자열의 영어 번역",
+      "색상 조정",
+      "글꼴 조정",
+      "여백 조정"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본의 가로 막대 네 개와 구성비를 그대로 두고 문자열만 영어로 옮겼습니다.",
+    "sourceAttribution": "Source: NSE mix from Viavi Solutions' fiscal Q4 2026 earnings call, converted to a company-wide basis, 5 August 2026 - source-visible"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "faithful-mode-preserved",
+      "label": "원본 충실 모드 유지",
+      "status": "pass",
+      "detail": "원본의 차트 종류, 막대 개수, 시리즈 구성, 실제 수치를 그대로 유지하고 텍스트만 영어로 옮겼습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에서 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "dataFidelity와 출처 줄에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 문자열",
+      "status": "pass",
+      "detail": "@WorldTechRsrch 영문 계정용이므로 화면에 렌더되는 모든 문자열을 영어로 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#0F4C81",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "40% of company revenue already comes from data centers",
+    "subtitle": "Management's NSE mix converted to a company-wide basis: data center 39.9%, telecom 26.4%, OSP 20.1%, aerospace and defense 13.6%",
+    "source": "Source: NSE mix from Viavi Solutions' fiscal Q4 2026 earnings call, converted to a company-wide basis, 5 August 2026 - source-visible",
+    "timeRange": "June quarter 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Data center",
+        "Telecom carriers",
+        "OSP (optics and security)",
+        "Aerospace and defense"
+      ],
+      "displayTickValues": [
+        "Data center",
+        "Telecom carriers",
+        "OSP (optics and security)",
+        "Aerospace and defense"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Share of company revenue",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "Share of company revenue",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Share of company revenue",
+        "data": [
+          {
+            "x": "Data center",
+            "y": 39.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "Telecom carriers",
+            "y": 26.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "OSP (optics and security)",
+            "y": 20.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "Aerospace and defense",
+            "y": 13.6,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Values were read off the source image; check Viavi's own filing before any precision use."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "Direction as read off the source image.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.389,
+      "description": "Spread preserved from the source image."
+    },
+    "changeRates": [
+      {
+        "period": "First versus last bar",
+        "percentChange": -65.9,
+        "absoluteChange": -26.3,
+        "from": 39.9,
+        "to": 13.6
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 39.9,
+        "at": "Data center"
+      },
+      "min": {
+        "value": 13.6,
+        "at": "Aerospace and defense"
+      },
+      "average": 25.0,
+      "median": 23.25,
+      "range": 26.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "40% of company revenue already comes from data centers",
+    "subMessage": "Management's NSE mix converted to a company-wide basis: data center 39.9%, telecom 26.4%, OSP 20.1%, aerospace and defense 13.6%",
+    "headline": "40% of company revenue already comes from data centers",
+    "summary": "Management's NSE mix converted to a company-wide basis: data center 39.9%, telecom 26.4%, OSP 20.1%, aerospace and defense 13.6%",
+    "story": "The original ranked horizontal bar mix is kept intact; only the text has been rendered in English.",
+    "keyTakeaways": [
+      "Management's NSE mix converted to a company-wide basis: data center 39.9%, telecom 26.4%, OSP 20.1%, aerospace and defense 13.6%",
+      "Data center is now larger than the telecom carrier base it grew out of.",
+      "Values are source-visible readings from the original chart."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the top bar against the telecom bar below it.",
+    "contextualNotes": [
+      "Source: NSE mix from Viavi Solutions' fiscal Q4 2026 earnings call, converted to a company-wide basis, 5 August 2026 - source-visible",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#AEB8C6",
+        "#C8D0DA"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#0F4C81",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Data center",
+        "y": 39.9
+      },
+      "displayText": "39.9",
+      "reason": "Management's NSE mix converted to a company-wide basis: data center 39.9%, telecom 26.4%, OSP 20.1%, aerospace and defense 13.6%"
+    },
+    "densityLevel": "focused"
+  }
+}

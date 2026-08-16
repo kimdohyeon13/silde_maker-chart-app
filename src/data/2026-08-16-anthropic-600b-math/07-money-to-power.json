@@ -1,0 +1,144 @@
+{
+  "id": "07-money-to-power",
+  "sourceImage": "input/07-money-to-power.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 공개된 임차 단가와 추론 원가율을 적용한 계산"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "contentType": "infographic",
+  "structure": {
+    "title": "매출 6000억 달러가 전기 8기가와트로 바뀌는 계산",
+    "subtitle": "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈",
+    "source": "자료: 공개된 임차 단가와 추론 원가율을 적용한 계산"
+  },
+  "infographicData": {
+    "subType": "process_flow",
+    "direction": "horizontal",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "목표 매출 6000억 달러",
+        "description": "1년 동안 벌겠다고 잡은 금액입니다",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 2,
+        "title": "원가율 33%",
+        "description": "100원 벌면 33원이 서버 비용으로 나갑니다",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 3,
+        "title": "연간 서버 비용 2000억 달러",
+        "description": "6000억 달러의 33%가 데이터센터로 갑니다",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 4,
+        "title": "1기가와트에 연 250억 달러",
+        "description": "지금 계약들이 실제로 체결되는 임차 단가입니다",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 5,
+        "title": "전용 전력 8기가와트",
+        "description": "2000억 달러를 250억 달러로 나눈 값입니다",
+        "status": "completed"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "매출 6000억 달러가 전기 8기가와트로 바뀌는 계산",
+    "subMessage": "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈",
+    "headline": "매출 6000억 달러가 전기 8기가와트로 바뀌는 계산",
+    "summary": "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 공개된 임차 단가와 추론 원가율을 적용한 계산"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "매출 6000억 달러가 전기 ",
+      "reason": "매출에서 원가를 거쳐 전력 규모까지, 네 번의 나눗셈"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

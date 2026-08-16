@@ -1,0 +1,131 @@
+{
+  "id": "page-030-graph-01",
+  "sourceImage": "35-page_030_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32
+  },
+  "preserveIntent": {
+    "originalTitle": "Kimi K3는 엔비디아의 GB200 NVL72 이상을 요구",
+    "dataFidelity": "source-visible"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "원본의 5개 서버 세대를 보존"
+    }
+  ],
+  "structure": {
+    "chartType": "bar",
+    "title": "Kimi K3는 엔비디아의 GB200 NVL72 이상을 요구",
+    "subtitle": "엔비디아 서버랙 FP8 성능 추이",
+    "source": "자료: SemiAnalysis, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "DGX H200",
+        "GB200 NVL72",
+        "GB300 NVL72",
+        "VR200 NVL72",
+        "VR300 NVL576"
+      ],
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "PFLOPS",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "1000",
+        "2000",
+        "3000",
+        "4000",
+        "5000",
+        "6000"
+      ],
+      "min": 0,
+      "max": 6000,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "data": {
+    "series": [
+      {
+        "name": "FP8 성능",
+        "data": [
+          {
+            "x": "DGX H200",
+            "y": 40,
+            "confidence": 0.7
+          },
+          {
+            "x": "GB200 NVL72",
+            "y": 180,
+            "confidence": 0.7
+          },
+          {
+            "x": "GB300 NVL72",
+            "y": 320,
+            "confidence": 0.7
+          },
+          {
+            "x": "VR200 NVL72",
+            "y": 1150,
+            "confidence": 0.8
+          },
+          {
+            "x": "VR300 NVL576",
+            "y": 5000,
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "초기 3개 막대는 축 대비 작아 근사"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "서버랙 FP8 성능이 VR300 NVL576에서 크게 상승한다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "Kimi K3는 엔비디아의 GB200 NVL72 이상을 요구",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "VR300 NVL576 약 5,000 PFLOPS"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

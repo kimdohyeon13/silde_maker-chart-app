@@ -1,0 +1,268 @@
+{
+  "id": "19-forward-pe-peers",
+  "sourceImage": "input/19-forward-pe-peers.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "FY2027 추정 기준 선행 주가수익비율 43.8배. 시에나·마벨보다 낮고 패브리넷·브로드컴·비아비보다 높다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "Source: stockanalysis.com statistics pages, at the August 11, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "squareEdges": true,
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "chartHeight": 370,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Lumentum sits mid-pack on forward multiple",
+    "subtitle": "43.8x on FY2027: under Ciena and Marvell, over Broadcom and Viavi",
+    "source": "Source: stockanalysis.com statistics pages, at the August 11, 2026 close",
+    "timeRange": "",
+    "xAxis": {
+      "label": "Company",
+      "type": "category",
+      "tickValues": [
+        "Applied Opto",
+        "Ciena",
+        "Marvell",
+        "Coherent",
+        "Lumentum",
+        "Fabrinet",
+        "Broadcom",
+        "Viavi"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "x",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Forward P/E",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Forward P/E",
+        "data": [
+          {
+            "x": "Applied Opto",
+            "y": 54.06,
+            "confidence": 0.74
+          },
+          {
+            "x": "Ciena",
+            "y": 49.68,
+            "confidence": 0.74
+          },
+          {
+            "x": "Marvell",
+            "y": 46.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "Coherent",
+            "y": 43.91,
+            "confidence": 0.74
+          },
+          {
+            "x": "Lumentum",
+            "y": 43.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "Fabrinet",
+            "y": 32,
+            "confidence": 0.74
+          },
+          {
+            "x": "Broadcom",
+            "y": 26.81,
+            "confidence": 0.74
+          },
+          {
+            "x": "Viavi",
+            "y": 23.37,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.766,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": -56.8,
+        "absoluteChange": -30.69,
+        "from": 54.06,
+        "to": 23.37
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 54.06,
+        "at": ""
+      },
+      "min": {
+        "value": 23.37,
+        "at": ""
+      },
+      "average": 40.04125,
+      "median": 43.855,
+      "range": 30.69
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Lumentum sits mid-pack on forward multiple",
+    "subMessage": "43.8x on FY2027: under Ciena and Marvell, over Broadcom and Viavi",
+    "headline": "Lumentum sits mid-pack on forward multiple",
+    "summary": "43.8x on FY2027: under Ciena and Marvell, over Broadcom and Viavi",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "FY2027 추정 기준 선행 주가수익비율 43.8배. 시에나·마벨보다 낮고 패브리넷·브로드컴·비아비보다 높다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "Source: stockanalysis.com statistics pages, at the August 11, 2026 close"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 23.37
+      },
+      "displayText": "Lumentum sits mid-pack on forward multiple",
+      "reason": "43.8x on FY2027: under Ciena and Marvell, over Broadcom and Viavi"
+    },
+    "densityLevel": "balanced"
+  }
+}

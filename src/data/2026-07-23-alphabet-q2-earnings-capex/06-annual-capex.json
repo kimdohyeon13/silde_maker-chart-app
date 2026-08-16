@@ -1,0 +1,200 @@
+{
+  "id": "06-annual-capex",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "2026년 CAPEX 중간값은 2025년의 2.2배다",
+    "preservedElements": [
+      "공식 수치",
+      "기간 순서",
+      "단위",
+      "출처"
+    ],
+    "changedElements": [
+      "주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "강조색"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "공식 공시 원단위를 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈와 3개 데이터 포인트를 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "2026년 CAPEX 중간값은 2025년의 2.2배다",
+    "subtitle": "십억달러 · 2026E 가이드 195~205B, 중간값 200B 사용",
+    "source": "자료: Alphabet 2Q26 실적 발표, waltechman 계산",
+    "timeRange": "2024~2026E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 230,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "연간 CAPEX",
+        "role": "primary",
+        "originalColor": "#D92D3A",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연간 CAPEX",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "2024",
+            "y": 52.535,
+            "confidence": 1
+          },
+          {
+            "x": "2025",
+            "y": 91.447,
+            "confidence": 1
+          },
+          {
+            "x": "2026E",
+            "y": 200,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 52.535,
+      "max": 200,
+      "average": 114.661,
+      "latest": 200
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "2026년 중간값은 2024년 실제치의 3.8배입니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2026년 CAPEX 중간값은 2025년의 2.2배다",
+    "subMessage": "십억달러 · 2026E 가이드 195~205B, 중간값 200B 사용",
+    "headline": "2026년 중간값은 2024년 실제치의 3.8배입니다.",
+    "summary": "2026년 중간값은 2024년 실제치의 3.8배입니다.",
+    "keyTakeaways": [
+      "2025년 CAPEX는 전년 대비 74.1% 늘었습니다.",
+      "2026년 중간값은 2025년보다 118.7% 많습니다.",
+      "기존 가이드에서 상단과 하단이 각각 15B달러 올랐습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2026E",
+        "y": 200
+      },
+      "displayText": "200B달러",
+      "reason": "가이드 중간값"
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

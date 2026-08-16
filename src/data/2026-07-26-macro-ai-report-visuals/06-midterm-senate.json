@@ -1,0 +1,362 @@
+{
+  "id": "06-midterm-senate",
+  "mode": "faithful",
+  "sourceImage": "input/06-midterm-senate.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "예측 시장에 반영된 중간선거 전망 - 상원도 박빙인 상태",
+    "originalMessage": "예측 시장에 반영된 중간선거 전망 - 상원도 박빙인 상태",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 26개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "예측 시장에 반영된 중간선거 전망 - 상원도 박빙인 상태",
+    "subtitle": "2026년 중간선거 이후 상원 다수당 확률 %",
+    "source": "참고: US Polymarket R/D Party control Senate after 2026 Midterm election 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025-10",
+        "2026-01",
+        "2026-04",
+        "2026-07"
+      ],
+      "displayTickValues": [
+        "25.10",
+        "26.01",
+        "26.04",
+        "26.07"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "unit": "%",
+      "min": 20,
+      "max": 80,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "공화당 당선 확률",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "민주당 당선 확률",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "공화당 당선 확률",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2025-07",
+            "y": 70,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 70,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 69,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 68,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 68,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 67,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 65,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 62,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 55,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 45,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 50,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 53,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 55,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "민주당 당선 확률",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2025-07",
+            "y": 28,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 29,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 30,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 30,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 31,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 32,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 34,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 38,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 50,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 55,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 48,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 47,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 45,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 26,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 28,
+      "max": 70,
+      "average": 0,
+      "latest": 55
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "예측 시장에 반영된 중간선거 전망 - 상원도 박빙인 상태",
+    "subMessage": "2026년 중간선거 이후 상원 다수당 확률 %",
+    "headline": "예측 시장에 반영된 중간선거 전망 - 상원도 박빙인 상태",
+    "summary": "2026년 중간선거 이후 상원 다수당 확률 %",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#F43F68",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#F43F68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-07",
+        "y": 55
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

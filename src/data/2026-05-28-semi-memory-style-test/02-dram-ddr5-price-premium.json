@@ -1,0 +1,601 @@
+{
+  "id": "dram-ddr5-spot-contract-spike",
+  "sourceImage": "02-dram-nand-price-trends.webp",
+  "analyzedAt": "2026-05-28T16:00:00.000+09:00",
+  "stylePreset": "editorial-card",
+  "preserveIntent": {
+    "originalMessage": "DDR5 spot prices rose sharply ahead of contract prices, widening the spot premium.",
+    "preservedElements": [
+      "Original left chart focus: DRAM DDR5 spot and contract price with premium/discount context",
+      "Time range from 2023-10 to 2026-03",
+      "Spot price acceleration from late 2025 into early 2026",
+      "Contract price follows later and remains below spot price",
+      "Bloomberg Finance L.P. source attribution"
+    ],
+    "changedElements": [
+      "Split the original two-panel image into a focused DRAM card",
+      "Simplified the premium/discount band into a narrative annotation",
+      "Translated labels and title into Korean",
+      "Applied editorial-card styling with direct line-end labels and visible spike zone"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The source image provides visible plotted lines, not a numeric table. Values are approximated from the chart shape and axis labels."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "simplify-labels",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "trend-preserved",
+      "label": "현물가 선행 급등 구조 보존",
+      "status": "pass",
+      "detail": "2025년 말~2026년 초 현물가가 계약가보다 먼저 급등하는 구조를 유지",
+      "checkedAt": "2026-05-28T16:00:00.000+09:00"
+    },
+    {
+      "id": "source-visible",
+      "label": "그래프 수치 근사 표시",
+      "status": "warning",
+      "detail": "원본 그래프 이미지에서 읽은 근사값이며 원자료 수치가 아님"
+    },
+    {
+      "id": "text-clipping",
+      "label": "축/범례/제목 잘림 확인",
+      "status": "pass",
+      "detail": "X축 날짜를 YYYY-MM 형식으로 정렬하고, 긴 Y축 단위는 부제목으로 이동해 잘림을 줄임",
+      "checkedAt": "2026-05-28T22:07:00.000+09:00"
+    },
+    {
+      "id": "source-time-spacing",
+      "label": "원본 시간 간격 보존",
+      "status": "pass",
+      "detail": "월별 균일 포인트로 보간해 마지막 급등 구간이 과도하게 넓어지는 문제를 줄임",
+      "checkedAt": "2026-05-28T22:20:00.000+09:00"
+    },
+    {
+      "id": "readability-direct-labels",
+      "label": "선 끝 직접 라벨 적용",
+      "status": "pass",
+      "detail": "범례 의존도를 줄이기 위해 현물/계약 최신값을 선 끝에서 바로 읽도록 렌더러를 개선",
+      "checkedAt": "2026-05-28T22:40:00.000+09:00"
+    },
+    {
+      "id": "readability-fidelity-badge",
+      "label": "근사값 표시 명시",
+      "status": "pass",
+      "detail": "source-visible 그래프는 export 하단에 이미지 기반 근사값 문구를 표시",
+      "checkedAt": "2026-05-28T22:40:00.000+09:00"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "34px 44px 0",
+    "contentPadding": "14px 16px 16px",
+    "sourcePadding": "0 44px 22px",
+    "titleFontSize": 48,
+    "subtitleFontSize": 28,
+    "sourceFontSize": 20,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Geist\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "DDR5 현물가가 먼저 폭등했다",
+    "subtitle": "8Gb DDR5 현물·계약가, US$/8Gb 기준",
+    "source": "Bloomberg Finance L.P.",
+    "timeRange": "2023-10 ~ 2026-03",
+    "xAxis": {
+      "label": "월",
+      "type": "time",
+      "tickValues": [
+        "2023-10",
+        "2024-02",
+        "2024-06",
+        "2024-10",
+        "2025-02",
+        "2025-06",
+        "2025-10",
+        "2026-02"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "US$/8Gb",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "4",
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "unit": "$",
+      "min": 0,
+      "max": 20,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "8Gb DDR5 현물가",
+        "originalColor": "#4F6F91",
+        "remakeColor": "#00E0A4",
+        "role": "primary"
+      },
+      {
+        "name": "8Gb DDR5 계약가",
+        "originalColor": "#3A3A3A",
+        "remakeColor": "#FF6A5F",
+        "role": "secondary"
+      }
+    ],
+    "axisDistortionWarning": "원본은 프리미엄/디스카운트 우축을 함께 보여줬지만, 리메이크는 가격선 중심으로 단순화했다."
+  },
+  "data": {
+    "series": [
+      {
+        "name": "8Gb DDR5 현물가",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2023-10",
+            "y": 1.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-11",
+            "y": 1.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-12",
+            "y": 1.9,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-01",
+            "y": 1.95,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-02",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-03",
+            "y": 2.05,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-04",
+            "y": 2.1,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-05",
+            "y": 2.15,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-06",
+            "y": 2.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-07",
+            "y": 2.25,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-08",
+            "y": 2.3,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-09",
+            "y": 2.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-10",
+            "y": 2.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-11",
+            "y": 2.4,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-12",
+            "y": 2.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-01",
+            "y": 2.2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-02",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-03",
+            "y": 2.05,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-04",
+            "y": 2.1,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-05",
+            "y": 2.15,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-06",
+            "y": 2.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-07",
+            "y": 2.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-08",
+            "y": 2.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-09",
+            "y": 3.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-10",
+            "y": 5.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-11",
+            "y": 14,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-12",
+            "y": 14,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-01",
+            "y": 17.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-02",
+            "y": 16.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-03",
+            "y": 16,
+            "confidence": 0.7
+          }
+        ]
+      },
+      {
+        "name": "8Gb DDR5 계약가",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "2023-10",
+            "y": 1.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-11",
+            "y": 1.57,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-12",
+            "y": 1.65,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-01",
+            "y": 1.73,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-02",
+            "y": 1.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-03",
+            "y": 1.88,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-04",
+            "y": 1.95,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-05",
+            "y": 2.02,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-06",
+            "y": 2.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-07",
+            "y": 2.27,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-08",
+            "y": 2.45,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-09",
+            "y": 2.63,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-10",
+            "y": 2.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-11",
+            "y": 2.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-12",
+            "y": 2.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-01",
+            "y": 2.65,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-02",
+            "y": 2.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-03",
+            "y": 2.52,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-04",
+            "y": 2.55,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-05",
+            "y": 2.58,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-06",
+            "y": 2.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-07",
+            "y": 2.7,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-08",
+            "y": 2.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-09",
+            "y": 2.9,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-10",
+            "y": 3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-11",
+            "y": 3.15,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-12",
+            "y": 3.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-01",
+            "y": 3.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-02",
+            "y": 7.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-03",
+            "y": 7.8,
+            "confidence": 0.7
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 60,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본은 숫자표가 아니라 압축된 이미지 그래프라 월별 값은 source-visible 근사값이다.",
+        "RHS 프리미엄/디스카운트 영역은 별도 시리즈로 재현하지 않고 메시지로 보존했다."
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.87,
+      "description": "2025년 말부터 DDR5 현물가가 급가속했고, 계약가는 뒤늦게 따라붙었다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "extreme",
+      "coefficient": 1.18,
+      "description": "초기에는 완만했지만 2025년 말 이후 가격 변동성이 급격히 커졌다."
+    },
+    "changeRates": [
+      {
+        "period": "2023-10 to 2026-03",
+        "percentChange": 788.9,
+        "absoluteChange": 14.2,
+        "from": 1.8,
+        "to": 16
+      }
+    ],
+    "correlations": [
+      {
+        "seriesA": "8Gb DDR5 현물가",
+        "seriesB": "8Gb DDR5 계약가",
+        "coefficient": 0.82,
+        "description": "두 가격은 같은 방향이지만 현물가가 먼저 더 빠르게 상승했다."
+      }
+    ],
+    "summary": {
+      "max": {
+        "value": 17.8,
+        "at": "2026-01"
+      },
+      "min": {
+        "value": 1.5,
+        "at": "2023-10"
+      },
+      "average": 3.68,
+      "median": 2.4,
+      "range": 16.3
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "acceleration",
+        "dataPoint": {
+          "x": "2025-11",
+          "y": 14
+        },
+        "seriesName": "8Gb DDR5 현물가",
+        "description": "현물가 급등 구간",
+        "importance": "critical",
+        "reasoning": "원본 차트에서 2025년 말부터 현물가가 거의 수직으로 상승한다."
+      },
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2026-01",
+          "y": 17.8
+        },
+        "seriesName": "8Gb DDR5 현물가",
+        "description": "현물가 고점",
+        "importance": "high",
+        "reasoning": "원본 차트에서 2026년 초 현물가가 18달러 부근까지 올라간다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "2025년 말 이후 공급 부족성 가격 급등으로 보이는 일회성 급가속 구간이 핵심이다."
+  },
+  "narrative": {
+    "headMessage": "DDR5 현물가가 먼저 폭등",
+    "subMessage": "계약가는 뒤늦게 따라오며 프리미엄이 커졌다",
+    "headline": "DDR5 현물가격은 2025년 말부터 급등했고 계약가격은 후행적으로 반응했다",
+    "summary": "원본 왼쪽 그래프의 핵심은 현물가가 먼저 급등하고 계약가가 뒤늦게 따라왔다는 점이다. 프리미엄/디스카운트 축은 이 격차가 얼마나 커졌는지를 보여주는 보조 신호다.",
+    "story": "DDR5 가격은 2024~2025년 중반까지 낮고 안정적인 흐름이었지만, 2025년 말부터 현물 시장이 먼저 강하게 움직였다. 계약가는 뒤따라 올라가지만 속도가 느려, 단기 수급 압력이 현물가에 먼저 반영된 그림이다.",
+    "keyTakeaways": [
+      "2025년 말부터 현물가 급등이 시작됐다",
+      "계약가는 후행 상승해 현물 프리미엄이 확대됐다",
+      "메모리 수급 긴장이 서버 원가 압력으로 연결될 수 있다"
+    ],
+    "questionsRaised": [
+      "계약가가 현물가를 얼마나 더 따라갈까?",
+      "DDR5 가격 상승이 AI 서버 비용에 얼마나 전가될까?"
+    ],
+    "viewerAction": "메모리 업체 실적을 볼 때 현물가와 계약가의 시간차를 함께 확인해야 한다.",
+    "contextualNotes": [
+      "원본 Figure 8은 프리미엄/디스카운트를 우축으로 함께 표시한다.",
+      "리메이크는 가격선 중심으로 단순화하고 프리미엄은 메시지로 보존했다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "callout",
+        "position": {
+          "x": "2025-11",
+          "y": 14
+        },
+        "text": "현물가 급등",
+        "style": "positive",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2025-10",
+        "toX": "2026-03",
+        "color": "rgba(194, 65, 12, 0.10)",
+        "label": "급등 구간",
+        "description": "현물가가 계약가를 앞서며 빠르게 상승한 구간"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F"
+      ],
+      "positive": "#FF6A5F",
+      "negative": "#4AA8FF",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-01",
+        "y": 17.8
+      },
+      "reason": "DDR5 현물가가 원본 그래프에서 가장 높게 튄 지점",
+      "displayText": "~$18"
+    },
+    "densityLevel": "balanced"
+  }
+}

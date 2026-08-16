@@ -1,0 +1,254 @@
+{
+  "id": "a63msft-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "preservedElements": [
+      "막대 6개의 순서와 값: 750 / 600 / 950 / 1,000 / 2,400 / 6,950",
+      "y축 눈금 0, 2,000, 4,000, 6,000, 8,000"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "작업지시 JSON 의 reading 에 인쇄된 값만 썼습니다.",
+    "sourceAttribution": "자료: World Tech Research · 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 6개, 값 라벨 전부 표시, 최대값 막대만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "판독 출처 줄의 SemiAnalysis 는 리서치샵 이름이라 인쇄하지 않았다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "subtitle": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "source": "자료: World Tech Research · 2026년 8월",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2000",
+        "4000",
+        "6000",
+        "8000"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 8000
+    },
+    "legend": [
+      {
+        "name": "신규 계약 용량 (메가와트)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "신규 계약 용량 (메가와트)",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 750,
+            "confidence": 0.99
+          },
+          {
+            "x": "2Q25",
+            "y": 600,
+            "confidence": 0.99
+          },
+          {
+            "x": "3Q25",
+            "y": 950,
+            "confidence": 0.99
+          },
+          {
+            "x": "4Q25",
+            "y": 1000,
+            "confidence": 0.99
+          },
+          {
+            "x": "1Q26",
+            "y": 2400,
+            "confidence": 0.99
+          },
+          {
+            "x": "2Q26",
+            "y": 6950,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6950,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 600,
+        "at": "2Q25"
+      },
+      "average": 2108.3333333333335,
+      "median": 0,
+      "range": 6350
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "subMessage": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "headline": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "summary": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "story": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "keyTakeaways": [
+      "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: World Tech Research · 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 6950
+      },
+      "displayText": "6950",
+      "reason": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)"
+    },
+    "densityLevel": "focused"
+  }
+}

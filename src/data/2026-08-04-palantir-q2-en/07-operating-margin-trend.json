@@ -1,0 +1,252 @@
+{
+  "id": "07-operating-margin-trend",
+  "sourceImage": "input/07-operating-margin-trend.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Adjusted operating margin went from 38% to 62% over eight quarters",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Margins Rose Even as Revenue Doubled",
+    "subtitle": "Adjusted operating margin went from 38% to 62% over eight quarters",
+    "source": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)",
+    "timeRange": "3Q24~2Q26",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Adjusted operating margin",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adjusted operating margin",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 38,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 45,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 44,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 46,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 51,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 57,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 60,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 62,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.476,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 63.2,
+        "absoluteChange": 24.0,
+        "from": 38.0,
+        "to": 62.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 62.0,
+        "at": ""
+      },
+      "min": {
+        "value": 38.0,
+        "at": ""
+      },
+      "average": 50.375,
+      "median": 48.5,
+      "range": 24.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Margins Rose Even as Revenue Doubled",
+    "subMessage": "Adjusted operating margin went from 38% to 62% over eight quarters",
+    "headline": "Margins Rose Even as Revenue Doubled",
+    "summary": "Adjusted operating margin went from 38% to 62% over eight quarters",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "Adjusted operating margin went from 38% to 62% over eight quarters",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 62.0
+      },
+      "displayText": "38% to 62% margin",
+      "reason": "Adjusted operating margin went from 38% to 62% over eight quarters"
+    },
+    "densityLevel": "balanced"
+  }
+}

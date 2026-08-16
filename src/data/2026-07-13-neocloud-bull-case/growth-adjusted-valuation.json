@@ -1,0 +1,228 @@
+{
+  "id": "growth-adjusted-valuation",
+  "sourceImage": "input/17-growth-adjusted-valuation-table.png",
+  "analyzedAt": "2026-07-13T18:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "12MF EV/Sales를 2026~2028년 매출 성장률로 나누면 네오클라우드 3사의 성장조정 배수가 비교군에서 가장 낮다.",
+    "preservedElements": [
+      "세로 막대차트",
+      "7개 비교 대상과 원본 순서",
+      "모든 성장조정 배수",
+      "평균 기준선",
+      "0~60배 축 범위",
+      "차트의 3.6 스케일"
+    ],
+    "changedElements": [
+      "한글 텍스트 정리",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "그림 10. 네오클라우드 [(12MF EV/매출액)/향후 3년 매출 성장률] 상대비교",
+    "dataFidelity": "exact",
+    "notes": "차트 값은 성장률을 소수로 환산한 3.6·4.2 배수 스케일입니다. 같은 원본 아래 표의 0.04 값과 100배 차이가 나므로 서로 섞지 않습니다.",
+    "sourceAttribution": "FactSet Consensus, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-seven-values",
+      "label": "7개 값 일치",
+      "status": "pass",
+      "detail": "3.6, 4.2, 4.2, 7.8, 22.1, 43.4, 49.5를 감사 문서와 대조했습니다."
+    },
+    {
+      "id": "scale-separation",
+      "label": "100배 스케일 분리",
+      "status": "pass",
+      "detail": "이 차트는 3.6 스케일, 비교표는 0.04 스케일로 별도 유지합니다."
+    },
+    {
+      "id": "average-line-preserved",
+      "label": "평균선 보존",
+      "status": "pass",
+      "detail": "원본 7개 값의 산술평균 약 19.3배를 평균선으로 표시합니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "24px 36px 2px",
+    "contentPadding": "4px 12px 2px",
+    "sourcePadding": "0 36px 16px",
+    "chartHeight": 500
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "그림 10. 네오클라우드 [(12MF EV/매출액)/향후 3년 매출 성장률] 상대비교",
+    "subtitle": "성장률을 소수로 환산한 성장조정 배수(x) · 표 2의 0.04 스케일과 혼용 금지",
+    "source": "자료: FactSet Consensus, KB증권 / 주: 매출 성장성 2026~2028년",
+    "timeRange": "2026~2028",
+    "xAxis": {
+      "label": "비교 대상",
+      "type": "category",
+      "tickValues": [
+        "네비우스",
+        "코어위브",
+        "아이렌",
+        "어플라이드디지털",
+        "아마존",
+        "마이크로소프트",
+        "S&P500"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "EV/Sales ÷ 매출 CAGR",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "unit": "x",
+      "min": 0,
+      "max": 60,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "성장조정 EV/Sales",
+        "role": "primary",
+        "originalColor": "#06345F",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "평균",
+        "role": "secondary",
+        "originalColor": "#C84F4A",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "성장조정 EV/Sales",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {
+            "x": "네비우스",
+            "y": 3.6,
+            "confidence": 1
+          },
+          {
+            "x": "코어위브",
+            "y": 4.2,
+            "confidence": 1
+          },
+          {
+            "x": "아이렌",
+            "y": 4.2,
+            "confidence": 1
+          },
+          {
+            "x": "어플라이드디지털",
+            "y": 7.8,
+            "confidence": 1
+          },
+          {
+            "x": "아마존",
+            "y": 22.1,
+            "confidence": 1
+          },
+          {
+            "x": "마이크로소프트",
+            "y": 43.4,
+            "confidence": 1
+          },
+          {
+            "x": "S&P500",
+            "y": 49.5,
+            "confidence": 1
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 3.6,
+      "max": 49.5,
+      "average": 19.2571428571,
+      "latest": 49.5
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "성장조정 배수는 네비우스 3.6배, 코어위브와 아이렌 각각 4.2배로 비교군 최저권입니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "성장을 반영하면 네오클라우드 3사의 배수가 가장 낮습니다.",
+    "summary": "네비우스 3.6배, 코어위브 4.2배, 아이렌 4.2배로 아마존 22.1배와 마이크로소프트 43.4배를 크게 밑돕니다.",
+    "keyTakeaways": [
+      "네비우스가 3.6배로 비교 대상 중 가장 낮습니다.",
+      "네오클라우드 3사는 원본 평균선 약 19.3배보다 모두 낮습니다.",
+      "낮은 배수는 높은 성장 전망이 실제 매출로 전환될 때만 유지되는 강세 논리입니다."
+    ],
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "네비우스",
+        "y": 3.6
+      },
+      "displayText": "네비우스 3.6x",
+      "reason": "성장률을 반영한 비교에서 가장 낮은 값입니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "네비우스",
+          "y": 19.2571428571
+        },
+        "to": {
+          "x": "S&P500",
+          "y": 19.2571428571
+        },
+        "style": "solid",
+        "color": "#D92D3A",
+        "label": "평균"
+      }
+    ],
+    "highlightZones": []
+  }
+}

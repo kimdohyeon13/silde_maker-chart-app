@@ -1,0 +1,253 @@
+{
+  "id": "10-caught-up-scorecard",
+  "sourceImage": "input/10-caught-up-scorecard-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한국어 제목",
+      "Paperlogy 타이포",
+      "핵심 비교 강조",
+      "16:9 여백",
+      "라벨 밀도"
+    ],
+    "dataFidelity": "exact",
+    "notes": "사용자가 직관적 비교를 요청해 기사 속 수치와 비교 관계를 유지한 채 연간 비교·핵심 표·판정표로 재구성했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)",
+    "mode": "redesign"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "aggregate-stated-values"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "paperlogy-typography",
+      "label": "Paperlogy 900/300",
+      "status": "pass",
+      "detail": "headMessage 900, subMessage 300 계약으로 렌더합니다."
+    },
+    {
+      "id": "article-estimate-labelled",
+      "label": "기사 추정치 구분",
+      "status": "pass",
+      "detail": "2026년 이후 전망과 HBM 수율은 SemiAnalysis 모델로 구분합니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "headerPadding": "25px 38px 2px",
+    "contentPadding": "8px 18px 6px",
+    "sourcePadding": "0 38px 15px",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "subtitleFontWeight": 300,
+    "titleLetterSpacing": -1.2,
+    "canvasHeight": 513,
+    "chartHeight": 292,
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "subtitle": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "source": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "판정 항목",
+        "dataType": "text",
+        "width": "30%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "status",
+        "label": "CXMT 위치",
+        "dataType": "text",
+        "width": "25%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "evidence",
+        "label": "핵심 근거",
+        "dataType": "text",
+        "width": "45%",
+        "align": "left",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "범용 DRAM 가격",
+            "displayValue": "범용 DRAM 가격"
+          },
+          "status": {
+            "value": "거의 추격",
+            "displayValue": "거의 추격",
+            "highlight": "positive"
+          },
+          "evidence": {
+            "value": "빅3보다 5~10% 낮음",
+            "displayValue": "빅3보다 5~10% 낮음"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "웨이퍼 생산능력",
+            "displayValue": "웨이퍼 생산능력"
+          },
+          "status": {
+            "value": "마이크론 근접",
+            "displayValue": "마이크론 근접",
+            "highlight": "positive"
+          },
+          "evidence": {
+            "value": "350k vs 385k WSPM",
+            "displayValue": "350k vs 385k WSPM"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "DDR5 원가",
+            "displayValue": "DDR5 원가"
+          },
+          "status": {
+            "value": "격차 큼",
+            "displayValue": "격차 큼",
+            "highlight": "negative"
+          },
+          "evidence": {
+            "value": "비트당 원가 30% 이상 높음",
+            "displayValue": "비트당 원가 30% 이상 높음"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "공정 세대",
+            "displayValue": "공정 세대"
+          },
+          "status": {
+            "value": "1z 안정화 단계",
+            "displayValue": "1z 안정화 단계"
+          },
+          "evidence": {
+            "value": "G4 주력, G5(1a급) 도전",
+            "displayValue": "G4 주력, G5(1a급) 도전"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "HBM 수율·적층",
+            "displayValue": "HBM 수율·적층"
+          },
+          "status": {
+            "value": "초기 단계",
+            "displayValue": "초기 단계",
+            "highlight": "negative"
+          },
+          "evidence": {
+            "value": "HBM3 8단 총수율 약 25% 모델",
+            "displayValue": "HBM3 8단 총수율 약 25% 모델"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "comfortable",
+      "zebraStripe": true,
+      "highlightMode": "cell"
+    }
+  },
+  "narrative": {
+    "headMessage": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "subMessage": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "headline": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "summary": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "한 줄 판정: 범용 DRAM은",
+      "reason": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

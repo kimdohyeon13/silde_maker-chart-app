@@ -1,0 +1,265 @@
+{
+  "id": "01-cpi-distribution",
+  "mode": "faithful",
+  "sourceImage": "input/01-cpi-distribution.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "6월 CPI 컨센서스 분포 - 실제치는 극단값이 도출",
+    "originalMessage": "6월 CPI 컨센서스 분포 - 실제치는 극단값이 도출",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본에 명시된 값을 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈, 10개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "pass",
+      "detail": "원본에 표시된 값을 사용했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "6월 CPI 컨센서스 분포 - 실제치는 극단값이 도출",
+    "subtitle": "빈도 수 · 실제치 -0.4%",
+    "source": "자료: Bloomberg",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "-0.5",
+        "-0.4",
+        "-0.3",
+        "-0.2",
+        "-0.1",
+        "0",
+        "0.1",
+        "0.2",
+        "0.3",
+        "0.4"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 35,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "컨센서스 빈도",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "컨센서스 빈도",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "-0.5",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "-0.4",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "-0.3",
+            "y": 2,
+            "confidence": 1
+          },
+          {
+            "x": "-0.2",
+            "y": 33,
+            "confidence": 1
+          },
+          {
+            "x": "-0.1",
+            "y": 22,
+            "confidence": 1
+          },
+          {
+            "x": "0",
+            "y": 10,
+            "confidence": 1
+          },
+          {
+            "x": "0.1",
+            "y": 3,
+            "confidence": 1
+          },
+          {
+            "x": "0.2",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "0.3",
+            "y": 1,
+            "confidence": 1
+          },
+          {
+            "x": "0.4",
+            "y": 0,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 0,
+      "max": 33,
+      "average": 0,
+      "latest": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "6월 CPI 컨센서스 분포 - 실제치는 극단값이 도출",
+    "subMessage": "빈도 수 · 실제치 -0.4%",
+    "headline": "6월 CPI 컨센서스 분포 - 실제치는 극단값이 도출",
+    "summary": "빈도 수 · 실제치 -0.4%",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "0.4",
+        "y": 0
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

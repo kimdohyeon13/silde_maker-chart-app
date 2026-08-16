@@ -1,0 +1,373 @@
+{
+  "id": "10-nasdaq-eps-change",
+  "mode": "faithful",
+  "sourceImage": "input/10-nasdaq-eps-change.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "NASDAQ100의 EPS 변화율 - 실적 발표 앞두고 상승세 둔화",
+    "originalMessage": "NASDAQ100의 EPS 변화율 - 실적 발표 앞두고 상승세 둔화",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈, 31개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "NASDAQ100의 EPS 변화율 - 실적 발표 앞두고 상승세 둔화",
+    "subtitle": "12개월 선행 EPS의 6개월 변화율 %",
+    "source": "참고: 12개월 선행 EPS의 6개월 변화율 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-07",
+        "2025-01",
+        "2025-07",
+        "2026-01",
+        "2026-07"
+      ],
+      "displayTickValues": [
+        "24.07",
+        "25.01",
+        "25.07",
+        "26.01",
+        "26.07"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 30,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "NASDAQ100 EPS 변화율",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "NASDAQ100 EPS 변화율",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2024-01",
+            "y": 18,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-02",
+            "y": 17,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-03",
+            "y": 16,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-04",
+            "y": 15,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-05",
+            "y": 14,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-06",
+            "y": 13,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-07",
+            "y": 12,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-08",
+            "y": 11,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-09",
+            "y": 10,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-10",
+            "y": 9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-11",
+            "y": 8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-12",
+            "y": 7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-01",
+            "y": 6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-02",
+            "y": 5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-03",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-04",
+            "y": 3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-05",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-06",
+            "y": 6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-07",
+            "y": 10,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 15,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 18,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 20,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 17,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 16,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 14,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 12,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 11,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 10,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 12,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 15,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 18,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 31,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 3,
+      "max": 20,
+      "average": 0,
+      "latest": 18
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "NASDAQ100의 EPS 변화율 - 실적 발표 앞두고 상승세 둔화",
+    "subMessage": "12개월 선행 EPS의 6개월 변화율 %",
+    "headline": "NASDAQ100의 EPS 변화율 - 실적 발표 앞두고 상승세 둔화",
+    "summary": "12개월 선행 EPS의 6개월 변화율 %",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-07",
+        "y": 18
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

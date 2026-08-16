@@ -1,0 +1,278 @@
+{
+  "id": "iren-revenue-margin",
+  "sourceImage": "input/13-iren-revenue-margin.png",
+  "analyzedAt": "2026-07-13T21:40:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "아이렌 매출액 및 매출총이익률 추이",
+    "originalMessage": "아이렌 매출액 및 매출총이익률 추이",
+    "preservedElements": [
+      "원본 제목",
+      "분기 순서",
+      "매출액 막대와 매출총이익률 선",
+      "좌우 이중축",
+      "실적과 전망의 색 구분",
+      "출처"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-colors",
+      "adjust-fonts",
+      "adjust-spacing"
+    ],
+    "dataFidelity": "source-visible",
+    "mode": "faithful",
+    "notes": "원시 CSV 없이 원본 이미지의 축과 막대·선 위치를 읽어 반올림한 근사값입니다.",
+    "sourceAttribution": "자료: Factset Consensus, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "title-preserved",
+      "label": "제목 원문 보존",
+      "status": "pass",
+      "detail": "원본 제목을 그대로 사용했습니다."
+    },
+    {
+      "id": "series-preserved",
+      "label": "시리즈 구조 보존",
+      "status": "pass",
+      "detail": "매출액 막대와 매출총이익률 선, 좌우 이중축을 유지했습니다."
+    },
+    {
+      "id": "quarter-order-preserved",
+      "label": "분기 순서 보존",
+      "status": "pass",
+      "detail": "2023년 3분기부터 2027년 2분기 전망까지 원본 순서를 유지했습니다."
+    },
+    {
+      "id": "forecast-color-preserved",
+      "label": "전망 구간 색 구분",
+      "status": "pass",
+      "detail": "2026년 2분기부터의 전망 막대를 옅은 파란색으로 구분했습니다."
+    },
+    {
+      "id": "source-visible-disclosed",
+      "label": "근사값 고지",
+      "status": "pass",
+      "detail": "dataFidelity를 source-visible로 표시하고 값을 과도하게 정밀화하지 않았습니다."
+    }
+  ],
+  "structure": {
+    "chartType": "combo",
+    "title": "아이렌 분기 매출과 총이익률",
+    "subtitle": "백만 USD · 매출총이익률은 우측 축 · E는 전망치",
+    "source": "자료: Factset Consensus, KB증권",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2023-Q3",
+        "2023-Q4",
+        "2024-Q1",
+        "2024-Q2",
+        "2024-Q3",
+        "2024-Q4",
+        "2025-Q1",
+        "2025-Q2",
+        "2025-Q3",
+        "2025-Q4",
+        "2026-Q1",
+        "2026-Q2",
+        "2026-Q3",
+        "2026-Q4",
+        "2027-Q1",
+        "2027-Q2"
+      ],
+      "displayTickValues": [
+        "23.9",
+        "23.12",
+        "24.3",
+        "24.6",
+        "24.9",
+        "24.12",
+        "25.3",
+        "25.6",
+        "25.9",
+        "25.12",
+        "26.3",
+        "26.6E",
+        "26.9E",
+        "26.12E",
+        "27.3E",
+        "27.6E"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출액 (백만 USD)",
+      "type": "numeric",
+      "unit": "",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "min": 0,
+      "max": 1200,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "매출총이익률",
+      "type": "numeric",
+      "unit": "%",
+      "tickValues": [
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "min": 20,
+      "max": 100,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "매출액 실적 (좌)",
+        "originalColor": "#17375E",
+        "remakeColor": "#17375E",
+        "role": "primary"
+      },
+      {
+        "name": "매출액 전망 (좌)",
+        "originalColor": "#B9CDE5",
+        "remakeColor": "#B5CAE3",
+        "role": "primary"
+      },
+      {
+        "name": "매출총이익률 (우)",
+        "originalColor": "#B9CDE5",
+        "remakeColor": "#8FAED0",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출액 실적 (좌)",
+        "seriesKind": "normal",
+        "renderAs": "bar",
+        "axis": "left",
+        "role": "primary",
+        "data": [
+          { "x": "2023-Q3", "y": 25, "confidence": 0.72 },
+          { "x": "2023-Q4", "y": 35, "confidence": 0.72 },
+          { "x": "2024-Q1", "y": 45, "confidence": 0.72 },
+          { "x": "2024-Q2", "y": 50, "confidence": 0.72 },
+          { "x": "2024-Q3", "y": 45, "confidence": 0.72 },
+          { "x": "2024-Q4", "y": 105, "confidence": 0.72 },
+          { "x": "2025-Q1", "y": 140, "confidence": 0.72 },
+          { "x": "2025-Q2", "y": 175, "confidence": 0.72 },
+          { "x": "2025-Q3", "y": 225, "confidence": 0.72 },
+          { "x": "2025-Q4", "y": 170, "confidence": 0.72 },
+          { "x": "2026-Q1", "y": 130, "confidence": 0.72 }
+        ]
+      },
+      {
+        "name": "매출액 전망 (좌)",
+        "seriesKind": "forecast",
+        "renderAs": "bar",
+        "axis": "left",
+        "role": "primary",
+        "data": [
+          { "x": "2026-Q2", "y": 145, "confidence": 0.7 },
+          { "x": "2026-Q3", "y": 285, "confidence": 0.7 },
+          { "x": "2026-Q4", "y": 555, "confidence": 0.7 },
+          { "x": "2027-Q1", "y": 900, "confidence": 0.7 },
+          { "x": "2027-Q2", "y": 1070, "confidence": 0.7 }
+        ]
+      },
+      {
+        "name": "매출총이익률 (우)",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "axis": "right",
+        "role": "primary",
+        "data": [
+          { "x": "2023-Q3", "y": 45, "confidence": 0.68 },
+          { "x": "2023-Q4", "y": 60, "confidence": 0.68 },
+          { "x": "2024-Q1", "y": 62, "confidence": 0.68 },
+          { "x": "2024-Q2", "y": 54, "confidence": 0.68 },
+          { "x": "2024-Q3", "y": 47, "confidence": 0.68 },
+          { "x": "2024-Q4", "y": 75, "confidence": 0.68 },
+          { "x": "2025-Q1", "y": 72, "confidence": 0.68 },
+          { "x": "2025-Q2", "y": 70, "confidence": 0.68 },
+          { "x": "2025-Q3", "y": 65, "confidence": 0.68 },
+          { "x": "2025-Q4", "y": 64, "confidence": 0.68 },
+          { "x": "2026-Q1", "y": 71, "confidence": 0.68 },
+          { "x": "2026-Q2", "y": 72, "confidence": 0.66 },
+          { "x": "2026-Q3", "y": 76, "confidence": 0.66 },
+          { "x": "2026-Q4", "y": 78, "confidence": 0.66 },
+          { "x": "2027-Q1", "y": 79, "confidence": 0.66 },
+          { "x": "2027-Q2", "y": 78, "confidence": 0.66 }
+        ]
+      }
+    ],
+    "totalDataPoints": 48,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "막대와 선에 수치 라벨이 없어 축 기준으로 근사"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "원본 축 기준으로 2026년 하반기 이후 매출 전망의 급증과 높은 매출총이익률 흐름을 보존했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "아이렌 분기 매출과 총이익률",
+    "subMessage": "백만 USD · 매출총이익률은 우측 축 · E는 전망치",
+    "headline": "아이렌 분기 매출과 총이익률",
+    "summary": "원본 이미지 기반 source-visible 근사값입니다.",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": { "x": "", "y": 0 },
+      "displayText": "source-visible",
+      "reason": "원본 제목, 축, 분기 순서와 전망 색 구분을 우선 보존합니다."
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#17375E",
+      "secondary": [
+        "#B5CAE3",
+        "#8FAED0"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#17375E",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

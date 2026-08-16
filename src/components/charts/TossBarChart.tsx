@@ -7,7 +7,7 @@
  * 예: 업종별 수익률, 월별 매출, 국가별 GDP 등
  *
  * 토스 스타일 특징:
- * - 둥근 모서리 막대 (radius)
+ * - 데이터 막대는 정밀 비교에 맞춘 직각 모서리
  * - 가장 큰/작은 막대에 자동 강조
  * - 음수 값은 하락 색상으로 자동 구분
  * - 세로 격자선 없음, 가로만
@@ -44,14 +44,17 @@ import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { formatNumber, formatNumberEn } from "@/lib/analysis/insight-engine";
 import { chartSettings } from "@/lib/chart-settings";
 import {
+  formatAxisLabel,
   formatAxisTickLabel,
   getTickUnit,
   formatValueWithUnit,
   getAxisFractionDigits,
   generateNiceTicks,
+  wrapCategoryLabel,
 } from "@/lib/chart-format";
 import { mergeOptionDefaults } from "@/lib/visual-system-options";
 import { buildHorizontalSeriesData } from "@/lib/bar-chart-data";
+import { resolveBarCategoryAxisLayout } from "@/lib/bar-axis-layout";
 
 interface TossBarChartProps {
   analysis: ChartAnalysis;
@@ -68,6 +71,12 @@ type StackedDatum = {
   __total: number;
   [seriesName: string]: string | number;
 };
+
+interface CategoryTickProps {
+  x?: string | number;
+  y?: string | number;
+  payload?: { value?: string | number };
+}
 
 export default function TossBarChart({
   analysis,
@@ -88,6 +97,13 @@ export default function TossBarChart({
   );
   const squareEdges = !!exportOptions.squareEdges;
   const compactChartMargins = exportOptions.compactChartMargins === true;
+  const [measuredChartWidth, setMeasuredChartWidth] = React.useState(
+    typeof width === "number" ? width : 860,
+  );
+  const handleChartResize = React.useCallback((nextWidth: number) => {
+    const rounded = Math.round(nextWidth);
+    setMeasuredChartWidth((current) => (current === rounded ? current : rounded));
+  }, []);
   // 영문 덱은 값 라벨에 "만"·"억" 축약을 쓰지 않는다(기본값 ko는 기존 동작 그대로).
   const fmt = exportOptions.numberLocale === "en" ? formatNumberEn : formatNumber;
 
@@ -96,12 +112,30 @@ export default function TossBarChart({
   const chartType = analysis.structure.chartType;
   const isStackedBarChart = chartType === "stacked_bar";
   const isHorizontalBarChart = chartType === "bar_horizontal";
+  const groupedBarSeries =
+    chartType === "bar"
+      ? analysis.data.series.filter((series) => series.renderAs !== "line")
+      : [];
+  const isGroupedBarChart = groupedBarSeries.length > 1;
   const horizontalBarSeries = isHorizontalBarChart
     ? analysis.data.series.filter((series) => series.renderAs !== "line")
     : [];
   const horizontalChartData = isHorizontalBarChart
     ? buildHorizontalSeriesData(horizontalBarSeries)
     : [];
+
+  const groupedCategories = Array.from(
+    new Set(groupedBarSeries.flatMap((series) => series.data.map((point) => String(point.x))))
+  );
+  const groupedChartData: StackedDatum[] = groupedCategories.map((name) => {
+    const row: StackedDatum = { name, value: 0, __total: 0 };
+    groupedBarSeries.forEach((series) => {
+      const value = series.data.find((point) => String(point.x) === name)?.y ?? 0;
+      row[series.name] = value;
+      row.value = Math.max(row.value, value);
+    });
+    return row;
+  });
 
   const stackedBarSeries = isStackedBarChart
     ? analysis.data.series.filter((series) => (series.renderAs ?? "bar") !== "line")
@@ -212,28 +246,16 @@ export default function TossBarChart({
     // 시리즈가 5개 이상이면 첫 색이 되풀이돼 구분이 사라진다.
     const declared = analysis.structure.legend.find(
       (item) => item.name === seriesName,
-    )?.remakeColor;
-    return declared ?? stackPalette[index % stackPalette.length];
+    );
+    const legacyColor = (declared as typeof declared & { color?: string })?.color;
+    return (
+      declared?.remakeColor ??
+      legacyColor ??
+      declared?.originalColor ??
+      stackPalette[index % stackPalette.length]
+    );
   }
 
-  // X축 라벨 간격 — chartSettings 기반
-  const xLabelInterval = (() => {
-    const len = chartData.length;
-    const maxLabels = chartSettings.xAxis.maxVisibleLabels;
-    if (len <= maxLabels) return 0;
-    return Math.ceil(len / maxLabels);
-  })();
-  // [D4] 막대 카테고리 라벨은 개수와 무관하게 "전부" 표시한다.
-  // → 예전 임계(>12)에선 업종 막대 10개가 안 걸려 솎기(xLabelInterval)가 적용,
-  //   10개 중 4개만 보이고 나머지 업종명이 사라졌다(page-15-t1).
-  // → 임계를 8로 낮춰, 8개 초과면 -45도 회전 + interval={0}으로 모든 라벨을 강제 표시한다.
-  //   (회전했으니 라벨이 겹치지 않으므로 솎을 이유가 없다.)
-  const isDenseBarChart = chartData.length > 8;
-  const hasLongDenseCategoryLabels =
-    isDenseBarChart && chartData.some((point) => point.name.length > 6);
-  const denseXAxisHeight = hasLongDenseCategoryLabels ? 86 : 56;
-  const denseBottomMargin = hasLongDenseCategoryLabels ? 92 : 42;
-  const denseTickMargin = hasLongDenseCategoryLabels ? 14 : 8;
   const xAxisWithDisplay = analysis.structure.xAxis as typeof analysis.structure.xAxis & {
     displayTickValues?: string[];
   };
@@ -268,14 +290,11 @@ export default function TossBarChart({
 
   // 데이터 실제 극값(음수 도메인 보강의 기준). 빈 배열이면 각각 0/0.
   // → 막대 하나하나의 값에서 최솟값/최댓값을 직접 구한다.
-  const dataMin = chartData.reduce(
-    (min, d) => (d.value < min ? d.value : min),
-    chartData.length > 0 ? chartData[0].value : 0
-  );
-  const dataMax = chartData.reduce(
-    (max, d) => (d.value > max ? d.value : max),
-    chartData.length > 0 ? chartData[0].value : 0
-  );
+  const plottedValues = isGroupedBarChart
+    ? groupedBarSeries.flatMap((series) => series.data.map((point) => point.y))
+    : chartData.map((point) => point.value);
+  const dataMin = plottedValues.length > 0 ? Math.min(...plottedValues) : 0;
+  const dataMax = plottedValues.length > 0 ? Math.max(...plottedValues) : 0;
 
   // 명시 min(없으면 데이터 최솟값, 양수만 있으면 0 기준으로 내려 0 눈금이 보이게)
   // ⚠️ [D2-음수] 핵심: 명시 min이 있어도 그 값이 음수 데이터보다 "위"면(예: JSON이
@@ -286,7 +305,7 @@ export default function TossBarChart({
     const explicit = analysis.structure.yAxis.min;
     // 양수 데이터일 때 0부터 그리기 위한 기본 하한(명시값이 없을 때만 적용)
     const dataFloor =
-      chartData.length === 0 ? 0 : dataMin > 0 ? 0 : dataMin;
+      plottedValues.length === 0 ? 0 : dataMin > 0 ? 0 : dataMin;
     if (explicit == null) return dataFloor;
     // 명시값이 있더라도 음수 데이터가 명시값보다 아래면 데이터 최솟값까지 내린다.
     return Math.min(explicit, dataMin);
@@ -296,7 +315,7 @@ export default function TossBarChart({
   const rawYMax = (() => {
     const explicit = analysis.structure.yAxis.max;
     const dataCeil =
-      chartData.length === 0 ? 100 : dataMax < 0 ? 0 : dataMax;
+      plottedValues.length === 0 ? 100 : dataMax < 0 ? 0 : dataMax;
     if (explicit == null) return dataCeil;
     return Math.max(explicit, dataMax);
   })();
@@ -317,14 +336,78 @@ export default function TossBarChart({
   const yAxisTicks =
     explicitYTicks.length > 0 ? explicitYTicks : generateNiceTicks(yMin, yMax);
 
-  function getAxisLabel(label = "", unit = ""): string {
-    if (label && label !== "값") return unit ? `${label} (${unit})` : label;
-    return unit || label;
-  }
-  const yAxisLabel = getAxisLabel(
+  const yAxisLabel = formatAxisLabel(
     analysis.structure.yAxis.label,
     analysis.structure.yAxis.unit,
   );
+
+  const verticalCategoryKeys = isGroupedBarChart
+    ? groupedCategories
+    : isStackedBarChart
+      ? stackedCategories
+      : chartData.map((point) => point.name);
+  const verticalCategoryLabels = verticalCategoryKeys.map(formatCategoryTick);
+  const xAxisTitle = analysis.structure.xAxis.label || "";
+  const categoryAxisLayout = resolveBarCategoryAxisLayout(
+    verticalCategoryLabels,
+    measuredChartWidth,
+    {
+      hasLegend: isGroupedBarChart || isStackedBarChart,
+      hasAxisTitle: Boolean(xAxisTitle),
+      yAxisWidth: chartSettings.yAxis.width,
+      leftMargin: compactChartMargins ? 8 : chartSettings.margin.left,
+      rightMargin: compactChartMargins ? 36 : chartSettings.margin.right,
+    },
+  );
+  const isDenseBarChart = categoryAxisLayout.mode === "rotated";
+  const hasLongCategoryLabels = categoryAxisLayout.mode === "multiline";
+  const renderCategoryTick = ({ x = 0, y = 0, payload }: CategoryTickProps) => {
+    const lines = wrapCategoryLabel(
+      formatCategoryTick(payload?.value ?? ""),
+      categoryAxisLayout.maxCharsPerLine,
+      4,
+    );
+    return (
+      <g transform={`translate(${Number(x)},${Number(y)})`}>
+        <text
+          x={0}
+          y={0}
+          dy={18}
+          textAnchor="middle"
+          fill={colors.textSecondary}
+          fontFamily={theme.typography.fontFamily.sans}
+          fontSize={14}
+          fontWeight={700}
+        >
+          {lines.map((line, index) => (
+            <tspan key={`${line}-${index}`} x={0} dy={index === 0 ? 0 : 17}>
+              {line}
+            </tspan>
+          ))}
+        </text>
+      </g>
+    );
+  };
+  const categoryTick = isDenseBarChart
+    ? {
+        ...(typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}),
+        angle: -45,
+        textAnchor: "end" as const,
+      }
+    : hasLongCategoryLabels
+      ? renderCategoryTick
+      : styles.xAxis.tick;
+  const categoryAxisLabel = xAxisTitle
+    ? {
+        value: xAxisTitle,
+        position: "insideBottomRight" as const,
+        offset: -30,
+        fill: colors.textTertiary,
+        fontSize: 16,
+        fontWeight: 800,
+        fontFamily: theme.typography.fontFamily.sans,
+      }
+    : undefined;
 
   // ─────────────────────────────────────────────
   // [BAR-강조] highlightZones / annotations 렌더 준비
@@ -403,13 +486,13 @@ export default function TossBarChart({
 
   if (isStackedBarChart && stackedChartData.length > 0) {
     return (
-      <ResponsiveContainer width={width} height={height}>
+      <ResponsiveContainer width={width} height={height} onResize={handleChartResize}>
         <ComposedChart
           data={stackedChartData}
           margin={{
-            top: 18,
+            top: yAxisLabel ? 48 : 18,
             right: 48,
-            bottom: denseBottomMargin,
+            bottom: Math.max(22, categoryAxisLayout.bottomMargin),
             left: chartSettings.margin.left,
           }}
         >
@@ -420,20 +503,10 @@ export default function TossBarChart({
             interval={0}
             ticks={visibleCategoryTicks}
             tickFormatter={formatCategoryTick}
-            height={isDenseBarChart ? denseXAxisHeight : undefined}
-            tickMargin={isDenseBarChart ? denseTickMargin : undefined}
-            tick={
-              // 라벨을 무조건 -45도로 눕히면 카테고리가 적을 때도 왼쪽이 잘리고
-              // 축 높이가 늘어 출처 줄이 카드 밖으로 밀린다. 일반 막대 경로와
-              // 같은 조건(8개 초과)일 때만 회전한다.
-              isDenseBarChart
-                ? {
-                    ...(typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}),
-                    angle: -45,
-                    textAnchor: "end",
-                  }
-                : styles.xAxis.tick
-            }
+            height={categoryAxisLayout.xAxisHeight}
+            tickMargin={categoryAxisLayout.tickMargin}
+            tick={categoryTick}
+            label={categoryAxisLabel}
           />
           <YAxis
             width={chartSettings.yAxis.width}
@@ -452,10 +525,10 @@ export default function TossBarChart({
             }
             ticks={yAxisTicks.length > 0 ? yAxisTicks : undefined}
             label={{
-              value: getAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+              value: yAxisLabel,
               position: "insideTopLeft",
               offset: 0,
-              dy: -16,
+              dy: -32,
               fill: colors.textTertiary,
               fontSize: 15,
               fontWeight: 800,
@@ -493,11 +566,7 @@ export default function TossBarChart({
               dataKey={series.name}
               stackId="capacity"
               fill={getStackColor(index, series.name)}
-              radius={
-                !squareEdges && index === stackedBarSeries.length - 1
-                  ? [5, 5, 0, 0]
-                  : [0, 0, 0, 0]
-              }
+              radius={[0, 0, 0, 0]}
               isAnimationActive={animated}
               animationDuration={theme.animation.chartEntrance.duration}
               animationEasing="ease-out"
@@ -527,6 +596,95 @@ export default function TossBarChart({
     );
   }
 
+  if (isGroupedBarChart && groupedChartData.length > 0) {
+    return (
+      <ResponsiveContainer width={width} height={height} onResize={handleChartResize}>
+        <BarChart
+          data={groupedChartData}
+          margin={{
+            top: yAxisLabel ? 48 : 18,
+            right: 28,
+            bottom: Math.max(26, categoryAxisLayout.bottomMargin),
+            left: yAxisLabel ? 8 : 0,
+          }}
+        >
+          <CartesianGrid {...styles.grid} />
+          <XAxis
+            dataKey="name"
+            {...styles.xAxis}
+            interval={0}
+            ticks={visibleCategoryTicks}
+            tickFormatter={formatCategoryTick}
+            height={categoryAxisLayout.xAxisHeight}
+            tickMargin={categoryAxisLayout.tickMargin}
+            tick={categoryTick}
+            label={categoryAxisLabel}
+          />
+          <YAxis
+            width={chartSettings.yAxis.width}
+            {...styles.yAxis}
+            tickFormatter={(value) =>
+              formatValueWithUnit(
+                Number(value),
+                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
+                getAxisFractionDigits(yMin, yMax, yAxisTicks),
+              )
+            }
+            domain={
+              yAxisTicks.length > 0
+                ? [yAxisTicks[0], yAxisTicks[yAxisTicks.length - 1]]
+                : ["auto", "auto"]
+            }
+            ticks={yAxisTicks.length > 0 ? yAxisTicks : undefined}
+            label={{
+              value: yAxisLabel,
+              position: "insideTopLeft",
+              offset: 0,
+              dy: -32,
+              fill: colors.textTertiary,
+              fontSize: 15,
+              fontWeight: 800,
+              fontFamily: theme.typography.fontFamily.sans,
+            }}
+          />
+          <Tooltip
+            {...styles.tooltip}
+            formatter={(value, name) => [
+              formatValueWithUnit(
+                Number(value),
+                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
+                getAxisFractionDigits(yMin, yMax, yAxisTicks),
+              ),
+              String(name),
+            ]}
+          />
+          <Legend
+            verticalAlign="bottom"
+            align="center"
+            iconType="square"
+            formatter={(value) => (
+              <span style={{ color: colors.textSecondary, fontSize: 13, fontWeight: 700 }}>
+                {String(value)}
+              </span>
+            )}
+          />
+          {groupedBarSeries.map((series, seriesIndex) => (
+            <Bar
+              key={series.name}
+              dataKey={series.name}
+              fill={getStackColor(seriesIndex, series.name)}
+              radius={[0, 0, 0, 0]}
+              isAnimationActive={animated}
+              animationDuration={theme.animation.chartEntrance.duration}
+              animationEasing="ease-out"
+              maxBarSize={32}
+            />
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
+    );
+  }
+
   if (isHorizontalBarChart) {
     const horizontalValues = horizontalChartData.flatMap((row) =>
       horizontalBarSeries.map((series) => Number(row[series.name] ?? 0)),
@@ -539,7 +697,7 @@ export default function TossBarChart({
         : generateNiceTicks(horizontalMin, horizontalMax);
 
     return (
-      <ResponsiveContainer width={width} height={height}>
+      <ResponsiveContainer width={width} height={height} onResize={handleChartResize}>
         <BarChart
           data={horizontalChartData}
           layout="vertical"
@@ -623,7 +781,7 @@ export default function TossBarChart({
                 key={series.name}
                 dataKey={series.name}
                 fill={fill}
-                radius={squareEdges ? [0, 0, 0, 0] : [0, 5, 5, 0]}
+                radius={[0, 0, 0, 0]}
                 isAnimationActive={animated}
                 animationDuration={theme.animation.chartEntrance.duration}
                 animationEasing="ease-out"
@@ -651,7 +809,7 @@ export default function TossBarChart({
   }
 
   return (
-    <ResponsiveContainer width={width} height={height}>
+    <ResponsiveContainer width={width} height={height} onResize={handleChartResize}>
       <BarChart
         data={chartData}
         margin={{
@@ -660,17 +818,16 @@ export default function TossBarChart({
           //   강조 콜아웃이 있을 때만 상단 여백을 넉넉히 준다(없으면 기존 그대로).
           top: compactChartMargins
             ? yAxisLabel
-              ? 30
+              ? 48
               : 12
             : hasFloatingCallout
               ? chartSettings.margin.top + 64
               : Math.max(22, chartSettings.margin.top - 14),
           right: compactChartMargins ? 36 : chartSettings.margin.right,
-          bottom: compactChartMargins
-            ? 32
-            : isDenseBarChart
-              ? denseBottomMargin
-              : chartSettings.margin.bottom,
+          bottom: Math.max(
+            categoryAxisLayout.bottomMargin,
+            compactChartMargins ? 24 : chartSettings.margin.bottom,
+          ),
           left: compactChartMargins
             ? yAxisLabel
               ? 8
@@ -683,33 +840,13 @@ export default function TossBarChart({
         <XAxis
           dataKey="name"
           {...styles.xAxis}
-          // 회전 표시(밀집)일 때는 interval={0}으로 모든 카테고리 라벨을 표시한다 [A6-c]
-          // → 회전했으니 라벨이 겹치지 않는데, 예전엔 솎기(xLabelInterval)가 같이 걸려
-          //   22개 종목 중 6개만 보이고 나머지 종목명이 사라졌다.
-          // → 솎기는 회전을 안 하는(여유 있는) 경우에만 적용한다.
-          interval={isDenseBarChart ? 0 : xLabelInterval}
+          interval={0}
           ticks={visibleCategoryTicks}
           tickFormatter={formatCategoryTick}
-          height={isDenseBarChart ? denseXAxisHeight : undefined}
-          tickMargin={isDenseBarChart ? denseTickMargin : undefined}
-          tick={
-            isDenseBarChart
-              ? {
-                  ...(typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}),
-                  angle: -45,
-                  textAnchor: "end",
-                }
-              : styles.xAxis.tick
-          }
-          label={{
-            value: analysis.structure.xAxis.label || "",
-            position: "insideBottomRight",
-            offset: -30,
-            fill: colors.textTertiary,
-            fontSize: 16,
-            fontWeight: 800,
-            fontFamily: theme.typography.fontFamily.sans,
-          }}
+          height={categoryAxisLayout.xAxisHeight}
+          tickMargin={categoryAxisLayout.tickMargin}
+          tick={categoryTick}
+          label={categoryAxisLabel}
         />
 
         <YAxis
@@ -737,7 +874,7 @@ export default function TossBarChart({
             value: yAxisLabel,
             position: "insideTopLeft",
             offset: 0,
-            dy: -16,
+            dy: -32,
             fill: colors.textTertiary,
             fontSize: 15,
             fontWeight: 800,
@@ -823,7 +960,7 @@ export default function TossBarChart({
 
         <Bar
           dataKey="value"
-          radius={squareEdges ? [0, 0, 0, 0] : [6, 6, 0, 0]}
+          radius={[0, 0, 0, 0]}
           isAnimationActive={animated}
           animationDuration={theme.animation.chartEntrance.duration}
           animationEasing="ease-out"

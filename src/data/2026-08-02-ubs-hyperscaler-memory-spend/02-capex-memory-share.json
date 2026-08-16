@@ -1,0 +1,295 @@
+{
+  "id": "capex-memory-share",
+  "mode": "redesign",
+  "analyzedAt": "2026-08-02T11:20:00+09:00",
+  "sourceImage": "input/01-ubs-hyperscaler-memory-spend.png",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalTitle": "Figure 28: Hyperscaler memory spend",
+    "originalMessage": "Figure 28: Hyperscaler memory spend",
+    "preservedElements": [
+      "2025·2026E·2027E",
+      "원표 총계",
+      "구성 관계",
+      "자료: UBS"
+    ],
+    "changedElements": [
+      "차트 형식 전환",
+      "US$m→십억달러 단위 환산",
+      "Paperlogy 타이포",
+      "핵심 시리즈 강조"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "sourceAttribution": "자료: UBS, Figure 28",
+    "notes": "표 셀에 직접 보이는 숫자는 exact-as-displayed입니다. ASP는 표시 자릿수로 반올림돼 있습니다. 2025 CAPEX YoY 70%, 2026E 73%, 2027E 19%를 보조선으로 보존했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis",
+    "convert-display-unit",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "combo 형식으로 시리즈·연도·단위를 먼저 고정했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "visible-values-transcribed",
+      "label": "원표 표시값 전사",
+      "status": "pass",
+      "detail": "UBS Figure 28의 화면 셀 숫자·행 순서·2026E/2027E 표기·Gb/GB 대소문자를 대조했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "1,824×1,026 PNG, 제목 900, 서브메시지 300, overflow 0을 최종 DOM QA에서 확인합니다.",
+      "checkedAt": "2026-08-02"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 29,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "chartHeight": 382
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "2027E 상위 11개 CAPEX의 73%가 메모리",
+    "subtitle": "막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "source": "자료: UBS, Figure 28 | US$m을 십억달러로 환산",
+    "timeRange": "2025~2027E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025",
+        "2026E",
+        "2027E"
+      ],
+      "displayTickValues": [
+        "2025",
+        "2026E",
+        "2027E"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "CAPEX·메모리 지출 (십억달러)",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1100
+    },
+    "secondaryYAxis": {
+      "label": "메모리 비중",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "총 CAPEX",
+        "role": "secondary",
+        "originalColor": "#B7BDC5",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "메모리 지출",
+        "role": "primary",
+        "originalColor": "#6B7280",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "메모리 비중",
+        "role": "primary",
+        "originalColor": "#111111",
+        "remakeColor": "#F59E0B"
+      },
+      {
+        "name": "CAPEX 전년비",
+        "role": "secondary",
+        "originalColor": "#777777",
+        "remakeColor": "#D1D6DB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "총 CAPEX",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#8B95A1",
+        "data": [
+          {
+            "x": "2025",
+            "y": 504.026
+          },
+          {
+            "x": "2026E",
+            "y": 873.904
+          },
+          {
+            "x": "2027E",
+            "y": 1040.338
+          }
+        ]
+      },
+      {
+        "name": "메모리 지출",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {
+            "x": "2025",
+            "y": 72.8
+          },
+          {
+            "x": "2026E",
+            "y": 335.657
+          },
+          {
+            "x": "2027E",
+            "y": 761.317
+          }
+        ]
+      },
+      {
+        "name": "메모리 비중",
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "right",
+        "color": "#F59E0B",
+        "data": [
+          {
+            "x": "2025",
+            "y": 14
+          },
+          {
+            "x": "2026E",
+            "y": 38
+          },
+          {
+            "x": "2027E",
+            "y": 73
+          }
+        ]
+      },
+      {
+        "name": "CAPEX 전년비",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#D1D6DB",
+        "data": [
+          {
+            "x": "2025",
+            "y": 70
+          },
+          {
+            "x": "2026E",
+            "y": 73
+          },
+          {
+            "x": "2027E",
+            "y": 19
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "ASP 표시값은 반올림"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 0,
+      "max": 1040.338,
+      "average": 0,
+      "latest": 1040.338
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2027E 상위 11개 CAPEX의 73%가 메모리",
+    "subMessage": "막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "headline": "2027E 상위 11개 CAPEX의 73%가 메모리. 막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "summary": "막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "story": "2027E 상위 11개 CAPEX의 73%가 메모리. 막대는 십억달러 · 선은 메모리 비중과 CAPEX 전년비",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원표 숫자와 단위를 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: UBS, Figure 28",
+      "ASP는 원표 표시값 기준"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "73%",
+      "reason": "2027E 전체 CAPEX 대비 메모리 비중"
+    },
+    "colorStrategy": {
+      "primary": "#F59E0B",
+      "secondary": [
+        "#8B95A1",
+        "#8EB7D8",
+        "#D1D6DB",
+        "#F59E0B"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

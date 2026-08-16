@@ -1,0 +1,241 @@
+{
+  "id": "05-w6d-guidance-raise",
+  "mode": "faithful",
+  "sourceImage": "input/w7-6-09.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "매출보다 이익 전망이 더 올랐다",
+    "originalMessage": "2026년 연간 가이던스 중간값 변화: 매출 12.5%, 비GAAP 영업이익 25.9%, 비GAAP EPS 31.7%",
+    "preservedElements": [
+      "매출 12.5%",
+      "비GAAP 영업이익 25.9%",
+      "비GAAP EPS 31.7%",
+      "Q1 발표 대비 Q2 발표의 2026년 연간 가이던스 중간값 변화",
+      "세 항목의 순서",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "가로 막대를 세로 막대로 정리",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 가장 크게 오른 항목만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본에 인쇄된 세 개의 중간값 상향률만 옮겼고 다른 수치는 추가하지 않았습니다.",
+    "sourceAttribution": "Bloom Energy Q1 and Q2 2026 earnings releases, guidance midpoints"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "12.5, 25.9, 31.7은 원본 이미지에 인쇄된 값 그대로입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 내림 규칙 적용 대상이 없습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 금지 항목 없음",
+      "status": "pass",
+      "detail": "회사 자체 가이던스 변화만 표시하고 목표주가·투자의견·밸류에이션 의견·보유·수익률은 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "표시 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브를 모두 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Profit guidance rose faster than sales",
+    "subtitle": "2026 midpoints raised: revenue 12.5%, operating income 25.9%, EPS 31.7%",
+    "source": "Source: Bloom Energy Q1 and Q2 2026 earnings releases · midpoints · source-visible",
+    "timeRange": "Q1 2026 guidance vs Q2 2026 guidance",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Revenue",
+        "Non-GAAP operating income",
+        "Non-GAAP EPS"
+      ],
+      "displayTickValues": [
+        "Revenue",
+        "Non-GAAP op income",
+        "Non-GAAP EPS"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Change in 2026 guidance midpoint",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "35"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "Midpoint raise",
+        "role": "primary",
+        "originalColor": "#1B5BD6",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Midpoint raise",
+        "data": [
+          {
+            "x": "Revenue",
+            "y": 12.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "Non-GAAP operating income",
+            "y": 25.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "Non-GAAP EPS",
+            "y": 31.7,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.85,
+      "description": "Every line of the 2026 guidance moved up, and the profit lines moved further.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.35,
+      "description": "All three raises share the same sign; only the size differs."
+    },
+    "changeRates": [
+      {
+        "period": "EPS raise vs revenue raise",
+        "percentChange": 153.6,
+        "absoluteChange": 19.2,
+        "from": 12.5,
+        "to": 31.7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 31.7,
+        "at": "Non-GAAP EPS"
+      },
+      "min": {
+        "value": 12.5,
+        "at": "Revenue"
+      },
+      "average": 23.37,
+      "median": 25.9,
+      "range": 19.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Profit guidance rose faster than sales",
+    "subMessage": "2026 midpoints raised: revenue 12.5%, operating income 25.9%, EPS 31.7%",
+    "headline": "Profit guidance rose faster than sales",
+    "summary": "All three 2026 guidance lines were raised, and the two profit lines were raised roughly twice as far as revenue.",
+    "story": "Raising the revenue midpoint says more units are expected to ship. Raising the operating income midpoint further says the units are expected to be built better than the last plan assumed. That is a claim about the factory, and it is checkable in one quarter.",
+    "keyTakeaways": [
+      "Revenue midpoint raised 12.5%.",
+      "Non-GAAP operating income raised 25.9% and non-GAAP EPS 31.7%.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Watch whether the next print holds the raised revenue range without giving back the margin.",
+    "contextualNotes": [
+      "Source: Bloom Energy Q1 and Q2 2026 earnings releases, guidance midpoints",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Non-GAAP EPS",
+      "y": 31.7,
+      "displayText": "31.7%"
+    },
+    "densityLevel": "focused"
+  }
+}

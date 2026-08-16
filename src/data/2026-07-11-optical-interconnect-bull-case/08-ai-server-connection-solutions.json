@@ -1,0 +1,85 @@
+{
+  "id": "ai-server-connection-solutions",
+  "mode": "faithful",
+  "sourceImage": "input/08-ai-server-optics-roadmap.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "matrix",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 16: Connection solutions of mainstream AI servers",
+    "preservedElements": ["Nvidia·Google·Amazon·Meta·Huawei 13개 모델", "연도", "Scale-up·Scale-out 연결 방식", "속도 표기", "최고 데이터레이트 각주", "출처"],
+    "changedElements": ["열 제목과 연결 방식을 한국어로 번역", "회사별 행 그룹 표시", "폰트·간격 정리"],
+    "dataFidelity": "exact",
+    "notes": "표 셀 직접 전사값입니다. 400G/800G/1.6T/3.2T는 네트워크의 최고 데이터레이트이며 더 낮은 속도 포트가 있을 수 있다는 원본 각주를 유지했습니다.",
+    "sourceAttribution": "Source: Company data, Data compiled by Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "AI 레이아웃 계획 선행", "status": "pass", "detail": "회사·모델·연도·Scale-up·Scale-out 5열로 설계했습니다.", "checkedAt": "2026-07-11" },
+    { "id": "visible-cell-values", "label": "표시 셀 직접값 보존", "status": "pass", "detail": "13개 모델의 연결 방식과 속도를 전사했습니다.", "checkedAt": "2026-07-11" }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF", "canvasHeight": 760, "frameStyle": "none", "contentBorder": false,
+    "squareEdges": true, "headerPadding": "18px 30px 2px", "contentPadding": "6px 25px 3px",
+    "sourcePadding": "0 30px 12px", "titleFontSize": 31, "subtitleFontSize": 14, "sourceFontSize": 10
+  },
+  "structure": {
+    "title": "주류 AI 서버의 연결 솔루션",
+    "subtitle": "400G/800G/1.6T/3.2T는 네트워크 내 최고 데이터레이트이며, 더 낮은 속도 포트가 존재할 수 있음",
+    "source": "Source: Company data, Data compiled by Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "company", "label": "회사", "dataType": "text", "isRowHeader": true, "width": "13%", "align": "left" },
+      { "key": "model", "label": "모델", "dataType": "text", "width": "28%", "align": "left" },
+      { "key": "year", "label": "연도", "dataType": "date", "width": "9%", "align": "center" },
+      { "key": "scale_up", "label": "Scale-up", "dataType": "text", "width": "25%", "align": "left" },
+      { "key": "scale_out", "label": "Scale-out", "dataType": "text", "width": "25%", "align": "left" }
+    ],
+    "rows": [
+      { "rowType": "data", "cells": { "company": { "value": "Nvidia" }, "model": { "value": "GB200" }, "year": { "value": 2024 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Optical (400G, 800G)", "displayValue": "광학 (400G, 800G)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Nvidia" }, "model": { "value": "GB300" }, "year": { "value": 2025 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Optical (800G, 1.6T)", "displayValue": "광학 (800G, 1.6T)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Nvidia" }, "model": { "value": "VR200 (1.6T)" }, "year": { "value": 2026 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Optical (800G, 1.6T)", "displayValue": "광학 (800G, 1.6T)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Nvidia" }, "model": { "value": "Rubin Ultra" }, "year": { "value": 2027 }, "scale_up": { "value": "Copper, PCB, Optical", "displayValue": "구리, PCB, 광학" }, "scale_out": { "value": "Optical (1.6T, 3.2T)", "displayValue": "광학 (1.6T, 3.2T)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Google" }, "model": { "value": "V6" }, "year": { "value": 2024 }, "scale_up": { "value": "Copper, Optical (800G)", "displayValue": "구리, 광학 (800G)" }, "scale_out": { "value": "Optical (800G)", "displayValue": "광학 (800G)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Google" }, "model": { "value": "V7" }, "year": { "value": 2025 }, "scale_up": { "value": "Copper, Optical (1.6T)", "displayValue": "구리, 광학 (1.6T)" }, "scale_out": { "value": "Optical (1.6T)", "displayValue": "광학 (1.6T)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Google" }, "model": { "value": "V8e" }, "year": { "value": 2026 }, "scale_up": { "value": "Copper, Optical", "displayValue": "구리, 광학" }, "scale_out": { "value": "Optical", "displayValue": "광학" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Google" }, "model": { "value": "V8p" }, "year": { "value": 2026 }, "scale_up": { "value": "Copper, Optical", "displayValue": "구리, 광학" }, "scale_out": { "value": "Optical", "displayValue": "광학" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Amazon" }, "model": { "value": "Trainium 2" }, "year": { "value": 2025 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Copper, Optical (400G)", "displayValue": "구리, 광학 (400G)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Amazon" }, "model": { "value": "Trainium 3 (Teton 3 PDS/MAX)" }, "year": { "value": 2026 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Copper, Optical", "displayValue": "구리, 광학" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Amazon" }, "model": { "value": "Trainium 4" }, "year": { "value": 2027 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Copper, Optical", "displayValue": "구리, 광학" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Meta" }, "model": { "value": "MITA-T V1 (Minerva)" }, "year": { "value": 2026 }, "scale_up": { "value": "Copper", "displayValue": "구리" }, "scale_out": { "value": "Optical (800G)", "displayValue": "광학 (800G)" } } },
+      { "rowType": "data", "cells": { "company": { "value": "Huawei" }, "model": { "value": "Cloud Matrix 384" }, "year": { "value": 2025 }, "scale_up": { "value": "Copper, Optical", "displayValue": "구리, 광학" }, "scale_out": { "value": "Optical", "displayValue": "광학" } } }
+    ],
+    "hasTotalRow": false,
+    "rowGroups": [
+      { "label": "Nvidia", "startIndex": 0, "endIndex": 3 },
+      { "label": "Google", "startIndex": 4, "endIndex": 7 },
+      { "label": "Amazon", "startIndex": 8, "endIndex": 10 },
+      { "label": "Meta", "startIndex": 11, "endIndex": 11 },
+      { "label": "Huawei", "startIndex": 12, "endIndex": 12 }
+    ],
+    "visualOptions": {
+      "rowHeight": 41, "cellPadding": "7px 9px", "lineHeight": 1.16, "zebraStripe": false,
+      "highlightMode": "text", "headerTone": "inverse", "rowRules": "soft", "groupHeaderTone": "band",
+      "columnRules": true, "accentColor": "#123E73",
+      "fontWeight": { "body": 500, "numeric": 650, "rowHeader": 700, "header": 760, "groupHeader": 760 },
+      "fontSize": { "header": "13px", "body": "13px", "total": "14px", "badge": "10px", "unit": "10px", "groupHeader": "12px" }
+    }
+  },
+  "narrative": {
+    "headMessage": "주류 AI 서버의 연결 솔루션", "subMessage": "회사·세대별 Scale-up과 Scale-out 비교",
+    "headline": "주류 AI 서버의 연결 솔루션", "summary": "원본 13개 모델의 연결 방식과 최고 속도를 보존했습니다.",
+    "story": "원본 표의 행 순서와 회사 그룹을 유지했습니다.", "keyTakeaways": [], "questionsRaised": [],
+    "viewerAction": "회사·세대별 Scale-up과 Scale-out 방식을 비교합니다.",
+    "contextualNotes": ["Source: Company data, Data compiled by Goldman Sachs Global Investment Research"]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "exact", "reason": "표 셀 직접 전사값" },
+    "colorStrategy": { "primary": "#123E73", "secondary": ["#D8E8F5"], "positive": "#D92D3A", "negative": "#2563EB", "accent": "#5D95BF", "backgroundTone": "light" },
+    "densityLevel": "detailed",
+    "highlightCells": []
+  }
+}

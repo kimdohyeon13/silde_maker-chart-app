@@ -1,0 +1,218 @@
+{
+  "id": "10-capex-step-up",
+  "sourceImage": "input/10-capex-step-up.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 스페이스X 2026년 2분기 실적발표 수치를 기초로 한 자체 추정, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true,
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", sans-serif"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "설비투자는 한 해 만에 여섯 배 가까이 뜁니다",
+    "subtitle": "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정",
+    "source": "자료: 스페이스X 2026년 2분기 실적발표 수치를 기초로 한 자체 추정, 2026년 8월",
+    "timeRange": "2026년 대비 2027년",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2026년 예상",
+        "2027년 추정"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "십억 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0
+    },
+    "legend": [
+      {
+        "name": "연간 설비투자",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연간 설비투자",
+        "data": [
+          {
+            "x": "2026년 예상",
+            "y": 60,
+            "confidence": 0.74
+          },
+          {
+            "x": "2027년 추정",
+            "y": 350,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.415,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 483.3,
+        "absoluteChange": 290.0,
+        "from": 60.0,
+        "to": 350.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 350.0,
+        "at": ""
+      },
+      "min": {
+        "value": 60.0,
+        "at": ""
+      },
+      "average": 205.0,
+      "median": 205.0,
+      "range": 290.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "설비투자는 한 해 만에 여섯 배 가까이 뜁니다",
+    "subMessage": "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정",
+    "headline": "설비투자는 한 해 만에 여섯 배 가까이 뜁니다",
+    "summary": "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 스페이스X 2026년 2분기 실적발표 수치를 기초로 한 자체 추정, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 350.0
+      },
+      "displayText": "설비투자는 한 해 만에 여섯 ",
+      "reason": "단위 십억 달러. 2026년은 회사 제시 하한, 2027년은 용량 목표에서 역산한 추정"
+    },
+    "densityLevel": "balanced"
+  }
+}

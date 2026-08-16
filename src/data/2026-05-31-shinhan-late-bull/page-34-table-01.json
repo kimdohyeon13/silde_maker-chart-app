@@ -1,0 +1,908 @@
+{
+  "id": "page-34-table-01",
+  "sourceImage": "input/54-page_34_table_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "늦은 사이클 진입 신호",
+    "subtitle": "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1996",
+        "1996.31",
+        "1996.62",
+        "1996.94",
+        "1997.25",
+        "1997.56",
+        "1997.88",
+        "1998.19",
+        "1998.5",
+        "1998.81",
+        "1999.12",
+        "1999.44",
+        "1999.75",
+        "2000.06",
+        "2000.38",
+        "2000.69",
+        "2001",
+        "2001.31",
+        "2001.62",
+        "2001.94",
+        "2002.25",
+        "2002.56",
+        "2002.88",
+        "2003.19",
+        "2003.5",
+        "2003.81",
+        "2004.12",
+        "2004.44",
+        "2004.75",
+        "2005.06",
+        "2005.38",
+        "2005.69",
+        "2006",
+        "2006.31",
+        "2006.62",
+        "2006.94",
+        "2007.25",
+        "2007.56",
+        "2007.88",
+        "2008.19",
+        "2008.5",
+        "2008.81",
+        "2009.12",
+        "2009.44",
+        "2009.75",
+        "2010.06",
+        "2010.38",
+        "2010.69",
+        "2011",
+        "2011.31",
+        "2011.62",
+        "2011.94",
+        "2012.25",
+        "2012.56",
+        "2012.88",
+        "2013.19",
+        "2013.5",
+        "2013.81",
+        "2014.12",
+        "2014.44",
+        "2014.75",
+        "2015.06",
+        "2015.38",
+        "2015.69",
+        "2016",
+        "2016.31",
+        "2016.62",
+        "2016.94",
+        "2017.25",
+        "2017.56",
+        "2017.88",
+        "2018.19",
+        "2018.5",
+        "2018.81",
+        "2019.12",
+        "2019.44",
+        "2019.75",
+        "2020.06",
+        "2020.38",
+        "2020.69",
+        "2021",
+        "2021.31",
+        "2021.62",
+        "2021.94",
+        "2022.25",
+        "2022.56",
+        "2022.88",
+        "2023.19",
+        "2023.5",
+        "2023.81",
+        "2024.12",
+        "2024.44",
+        "2024.75",
+        "2025.06",
+        "2025.38",
+        "2025.69",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "1996",
+        "2006",
+        "2016",
+        "2026"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "0.06",
+        "1",
+        "2",
+        "4",
+        "7",
+        "12",
+        "23"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0.0,
+      "max": 23.0
+    },
+    "legend": [
+      {
+        "name": "늦은 사이클 진입 신호 값",
+        "role": "primary",
+        "originalColor": "#C9D5EC",
+        "remakeColor": "#C9D5EC"
+      },
+      {
+        "name": "늦은 사이클 진입 신호 추세",
+        "role": "primary",
+        "originalColor": "#7EA7C6",
+        "remakeColor": "#7EA7C6"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 0.0,
+      "max": 23.0
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "늦은 사이클 진입 신호 값",
+        "data": [
+          {
+            "x": "1996",
+            "y": 14.95,
+            "confidence": 0.68
+          },
+          {
+            "x": "1998",
+            "y": 17,
+            "confidence": 0.68
+          },
+          {
+            "x": "2000",
+            "y": 19,
+            "confidence": 0.68
+          },
+          {
+            "x": "2002",
+            "y": 19.92,
+            "confidence": 0.68
+          },
+          {
+            "x": "2004",
+            "y": 19.73,
+            "confidence": 0.68
+          },
+          {
+            "x": "2006",
+            "y": 19.55,
+            "confidence": 0.68
+          },
+          {
+            "x": "2008",
+            "y": 19.64,
+            "confidence": 0.68
+          },
+          {
+            "x": "2010",
+            "y": 19.73,
+            "confidence": 0.68
+          },
+          {
+            "x": "2012",
+            "y": 19.78,
+            "confidence": 0.68
+          },
+          {
+            "x": "2014",
+            "y": 19.78,
+            "confidence": 0.68
+          },
+          {
+            "x": "2016",
+            "y": 19.78,
+            "confidence": 0.68
+          },
+          {
+            "x": "2018",
+            "y": 19.87,
+            "confidence": 0.68
+          },
+          {
+            "x": "2020",
+            "y": 20,
+            "confidence": 0.68
+          },
+          {
+            "x": "2022",
+            "y": 19,
+            "confidence": 0.68
+          },
+          {
+            "x": "2024",
+            "y": 17,
+            "confidence": 0.68
+          },
+          {
+            "x": "2026",
+            "y": 14.95,
+            "confidence": 0.68
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C9D5EC",
+        "axis": "left"
+      },
+      {
+        "name": "늦은 사이클 진입 신호 추세",
+        "data": [
+          {
+            "x": "1996",
+            "y": 7.13,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.31",
+            "y": 6.67,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.62",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.94",
+            "y": 6.67,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.25",
+            "y": 6.21,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.56",
+            "y": 5.75,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.88",
+            "y": 5.75,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.19",
+            "y": 4.83,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.5",
+            "y": 4.83,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.81",
+            "y": 5.52,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.12",
+            "y": 6.21,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.44",
+            "y": 6.44,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.75",
+            "y": 6.67,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.06",
+            "y": 6.44,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.38",
+            "y": 5.75,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.69",
+            "y": 5.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001",
+            "y": 5.29,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.31",
+            "y": 4.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.62",
+            "y": 5.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.94",
+            "y": 5.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.25",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.56",
+            "y": 3.68,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.88",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.19",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.5",
+            "y": 4.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.81",
+            "y": 3.68,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.12",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.44",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.75",
+            "y": 4.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.06",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.38",
+            "y": 4.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.69",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006",
+            "y": 5.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.31",
+            "y": 5.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.62",
+            "y": 13.11,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.94",
+            "y": 9.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.25",
+            "y": 4.83,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.56",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.88",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.19",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.5",
+            "y": 3.68,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.81",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.12",
+            "y": 3.22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.44",
+            "y": 3.22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.75",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.06",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.38",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.69",
+            "y": 2.76,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011",
+            "y": 3.22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.31",
+            "y": 2.53,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.62",
+            "y": 1.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.94",
+            "y": 1.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.25",
+            "y": 1.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.56",
+            "y": 1.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.88",
+            "y": 1.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.19",
+            "y": 1.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.5",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.81",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.12",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.44",
+            "y": 2.07,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.75",
+            "y": 1.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.06",
+            "y": 1.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.38",
+            "y": 1.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.69",
+            "y": 1.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016",
+            "y": 1.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.31",
+            "y": 1.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.62",
+            "y": 0.92,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.94",
+            "y": 1.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.25",
+            "y": 1.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.56",
+            "y": 1.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.88",
+            "y": 2.07,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.19",
+            "y": 2.53,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.5",
+            "y": 2.53,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.81",
+            "y": 2.76,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.12",
+            "y": 2.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.44",
+            "y": 1.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.75",
+            "y": 1.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.06",
+            "y": 0.92,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.38",
+            "y": 2.07,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.69",
+            "y": 21.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021",
+            "y": 0.23,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.31",
+            "y": 0.92,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.62",
+            "y": 0.69,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.94",
+            "y": 0.92,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.25",
+            "y": 2.07,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.56",
+            "y": 3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.88",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.19",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.5",
+            "y": 3.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.81",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.12",
+            "y": 3.91,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.44",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.75",
+            "y": 3.68,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.06",
+            "y": 4.37,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.38",
+            "y": 4.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.69",
+            "y": 4.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 3.91,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#7EA7C6",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 113,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.55,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -73.8,
+        "absoluteChange": -11.04,
+        "from": 14.95,
+        "to": 3.91
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 21.16,
+        "at": ""
+      },
+      "min": {
+        "value": 0.23,
+        "at": ""
+      },
+      "average": 5.896548672566372,
+      "median": 3.91,
+      "range": 20.93
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "늦은 사이클 진입 신호",
+    "subMessage": "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다.",
+    "headline": "늦은 사이클 진입 신호",
+    "summary": "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 3.91
+      },
+      "displayText": "늦은 사이클 진입 신호",
+      "reason": "늦은 사이클로 들어왔지만 아직 1년 이상 확장 여지가 남았다는 판단입니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

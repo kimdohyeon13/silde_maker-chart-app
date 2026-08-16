@@ -1,0 +1,226 @@
+{
+  "id": "ev-sales-comparison",
+  "sourceImage": "input/16-valuation-growth-charts.png",
+  "analyzedAt": "2026-07-13T18:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "네오클라우드와 비교기업의 12MF EV/Sales를 같은 축에서 비교한다.",
+    "preservedElements": [
+      "세로 막대차트",
+      "7개 비교 대상과 원본 순서",
+      "모든 막대 수치",
+      "평균 기준선",
+      "0~12배 축 범위"
+    ],
+    "changedElements": [
+      "한글 텍스트 정리",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "그림 8. 네오클라우드 12MF 기업가치/매출액 상대비교",
+    "dataFidelity": "exact",
+    "notes": "막대값은 pdf-audit.md의 그림 8 감사값과 일치합니다. 평균선은 원본에 표시된 7개 값의 산술평균(약 6.3배)입니다.",
+    "sourceAttribution": "FactSet Consensus, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-seven-values",
+      "label": "7개 값 일치",
+      "status": "pass",
+      "detail": "8.9, 4.2, 5.1, 11.2, 3.1, 7.5, 3.8을 감사 문서와 대조했습니다."
+    },
+    {
+      "id": "order-preserved",
+      "label": "종목 순서 보존",
+      "status": "pass",
+      "detail": "네비우스부터 S&P500까지 원본 순서를 유지했습니다."
+    },
+    {
+      "id": "unit-preserved",
+      "label": "배수 단위 보존",
+      "status": "pass",
+      "detail": "EV/Sales를 배수(x)로 표기했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "24px 36px 2px",
+    "contentPadding": "4px 12px 2px",
+    "sourcePadding": "0 36px 16px",
+    "chartHeight": 500
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "그림 8. 네오클라우드 12MF 기업가치/매출액 상대비교",
+    "subtitle": "12개월 선행 EV/Sales · 배수(x)",
+    "source": "자료: FactSet Consensus, KB증권",
+    "xAxis": {
+      "label": "비교 대상",
+      "type": "category",
+      "tickValues": [
+        "네비우스",
+        "코어위브",
+        "아이렌",
+        "어플라이드디지털",
+        "아마존",
+        "마이크로소프트",
+        "S&P500"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "12MF EV/Sales",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "unit": "x",
+      "min": 0,
+      "max": 12,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "12MF EV/Sales",
+        "role": "primary",
+        "originalColor": "#06345F",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "평균",
+        "role": "secondary",
+        "originalColor": "#C84F4A",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "12MF EV/Sales",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {
+            "x": "네비우스",
+            "y": 8.9,
+            "confidence": 1
+          },
+          {
+            "x": "코어위브",
+            "y": 4.2,
+            "confidence": 1
+          },
+          {
+            "x": "아이렌",
+            "y": 5.1,
+            "confidence": 1
+          },
+          {
+            "x": "어플라이드디지털",
+            "y": 11.2,
+            "confidence": 1
+          },
+          {
+            "x": "아마존",
+            "y": 3.1,
+            "confidence": 1
+          },
+          {
+            "x": "마이크로소프트",
+            "y": 7.5,
+            "confidence": 1
+          },
+          {
+            "x": "S&P500",
+            "y": 3.8,
+            "confidence": 1
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 3.1,
+      "max": 11.2,
+      "average": 6.2571428571,
+      "latest": 3.8
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "네비우스의 원시 EV/Sales 8.9배는 비교군 안에서 높은 편이며, 어플라이드디지털 11.2배보다는 낮습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "네비우스의 원시 EV/Sales는 낮지 않습니다.",
+    "summary": "성장률을 반영하기 전에는 네비우스 8.9배가 코어위브 4.2배와 아이렌 5.1배를 웃돕니다.",
+    "keyTakeaways": [
+      "어플라이드디지털이 11.2배로 가장 높습니다.",
+      "네비우스는 8.9배로 아마존 3.1배와 S&P500 3.8배보다 높습니다.",
+      "이 차트만으로 저평가를 주장하지 않고 다음 성장률·성장조정 차트와 함께 읽어야 합니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "네비우스",
+        "y": 8.9
+      },
+      "displayText": "네비우스 8.9x",
+      "reason": "네오클라우드 강세 논지에서 원시 밸류에이션이 높다는 반대 근거도 함께 보여줍니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "네비우스",
+          "y": 6.2571428571
+        },
+        "to": {
+          "x": "S&P500",
+          "y": 6.2571428571
+        },
+        "style": "solid",
+        "color": "#D92D3A",
+        "label": "평균"
+      }
+    ],
+    "highlightZones": []
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "id": "13-growth-deceleration",
+  "sourceImage": "input/13-growth-deceleration.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%.",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Calculated from Palantir appendix reconciliation and 2026 guidance (Q4 implied by subtracting Q1-Q3 from full-year guidance)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Growth Peaks in Q2 on the Company's Own Guidance",
+    "subtitle": "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%.",
+    "source": "Source: Calculated from Palantir appendix reconciliation and 2026 guidance (Q4 implied by subtracting Q1-Q3 from full-year guidance)",
+    "timeRange": "3Q24~4Q26",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26 Guidance",
+        "4Q26 Implied"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Year-over-year revenue growth",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Year-over-year revenue growth",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 30,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 36,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 39,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 48,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 63,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 70,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 85,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 93,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26 Guidance",
+            "y": 83,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26 Implied",
+            "y": 72,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.018,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 140.0,
+        "absoluteChange": 42.0,
+        "from": 30.0,
+        "to": 72.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 93.0,
+        "at": ""
+      },
+      "min": {
+        "value": 30.0,
+        "at": ""
+      },
+      "average": 61.9,
+      "median": 66.5,
+      "range": 63.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Growth Peaks in Q2 on the Company's Own Guidance",
+    "subMessage": "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%.",
+    "headline": "Growth Peaks in Q2 on the Company's Own Guidance",
+    "summary": "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%.",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%.",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Calculated from Palantir appendix reconciliation and 2026 guidance (Q4 implied by subtracting Q1-Q3 from full-year guidance)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 72.0
+      },
+      "displayText": "Growth peaks in Q2",
+      "reason": "Q4 is implied from full-year guidance. Growth steps down from 93% to 72%."
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "id": "02-2026-quarterly-economics",
+  "sourceImage": "input/02-2026-quarterly-economics-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "출하량보다 ASP가 훨씬 빠르게 뛰는 구조",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한국어 제목",
+      "Paperlogy 타이포",
+      "핵심 비교 강조",
+      "16:9 여백",
+      "라벨 밀도"
+    ],
+    "dataFidelity": "exact",
+    "notes": "사용자가 직관적 비교를 요청해 기사 속 수치와 비교 관계를 유지한 채 연간 비교·핵심 표·판정표로 재구성했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)",
+    "mode": "redesign"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "aggregate-stated-values"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "paperlogy-typography",
+      "label": "Paperlogy 900/300",
+      "status": "pass",
+      "detail": "headMessage 900, subMessage 300 계약으로 렌더합니다."
+    },
+    {
+      "id": "article-estimate-labelled",
+      "label": "기사 추정치 구분",
+      "status": "pass",
+      "detail": "2026년 이후 전망과 HBM 수율은 SemiAnalysis 모델로 구분합니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "headerPadding": "25px 38px 2px",
+    "contentPadding": "8px 18px 6px",
+    "sourcePadding": "0 38px 15px",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "subtitleFontWeight": 300,
+    "titleLetterSpacing": -1.2,
+    "canvasHeight": 513,
+    "chartHeight": 292,
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "2026년 폭발적 실적의 주인공은 가격",
+    "subtitle": "출하량보다 ASP가 훨씬 빠르게 뛰는 구조",
+    "source": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "width": "25%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "q1",
+        "label": "1Q26",
+        "dataType": "text",
+        "width": "18.75%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q2",
+        "label": "2Q26E",
+        "dataType": "text",
+        "width": "18.75%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q3",
+        "label": "3Q26E",
+        "dataType": "text",
+        "width": "18.75%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q4",
+        "label": "4Q26E",
+        "dataType": "text",
+        "width": "18.75%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "매출(백만달러)",
+            "displayValue": "매출(백만달러)"
+          },
+          "q1": {
+            "value": "7,339",
+            "displayValue": "7,339"
+          },
+          "q2": {
+            "value": "11,898",
+            "displayValue": "11,898"
+          },
+          "q3": {
+            "value": "16,623",
+            "displayValue": "16,623"
+          },
+          "q4": {
+            "value": "19,997",
+            "displayValue": "19,997"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "출하량(백만Gb)",
+            "displayValue": "출하량(백만Gb)"
+          },
+          "q1": {
+            "value": "8,739",
+            "displayValue": "8,739"
+          },
+          "q2": {
+            "value": "8,855",
+            "displayValue": "8,855"
+          },
+          "q3": {
+            "value": "10,574",
+            "displayValue": "10,574"
+          },
+          "q4": {
+            "value": "11,257",
+            "displayValue": "11,257"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "ASP(달러/Gb)",
+            "displayValue": "ASP(달러/Gb)"
+          },
+          "q1": {
+            "value": "0.84",
+            "displayValue": "0.84"
+          },
+          "q2": {
+            "value": "1.34",
+            "displayValue": "1.34"
+          },
+          "q3": {
+            "value": "1.57",
+            "displayValue": "1.57"
+          },
+          "q4": {
+            "value": "1.78",
+            "displayValue": "1.78",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "원가(달러/Gb)",
+            "displayValue": "원가(달러/Gb)"
+          },
+          "q1": {
+            "value": "0.20",
+            "displayValue": "0.20"
+          },
+          "q2": {
+            "value": "0.23",
+            "displayValue": "0.23"
+          },
+          "q3": {
+            "value": "0.23",
+            "displayValue": "0.23"
+          },
+          "q4": {
+            "value": "0.22",
+            "displayValue": "0.22",
+            "highlight": "neutral"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "comfortable",
+      "zebraStripe": true,
+      "highlightMode": "cell"
+    }
+  },
+  "narrative": {
+    "headMessage": "2026년 폭발적 실적의 주인공은 가격",
+    "subMessage": "출하량보다 ASP가 훨씬 빠르게 뛰는 구조",
+    "headline": "2026년 폭발적 실적의 주인공은 가격",
+    "summary": "출하량보다 ASP가 훨씬 빠르게 뛰는 구조",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "출하량보다 ASP가 훨씬 빠르게 뛰는 구조",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2026년 폭발적 실적의 주인",
+      "reason": "출하량보다 ASP가 훨씬 빠르게 뛰는 구조"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

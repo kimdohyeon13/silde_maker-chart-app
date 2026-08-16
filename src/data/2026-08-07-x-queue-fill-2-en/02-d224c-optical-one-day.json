@@ -1,0 +1,262 @@
+{
+  "id": "02-d224c-optical-one-day",
+  "mode": "faithful",
+  "sourceImage": "input/dib-224-16.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "09. 광통신, 중국산 규제 기대에 동반 급등",
+    "originalMessage": "2026-08-04 장세 · 비교 기준: 시작일=100 · 전일 대비 등락률",
+    "preservedElements": [
+      "The four optical names printed in the source legend",
+      "Each name's one-day percentage change as printed",
+      "The 2026-08-04 close as the reference date",
+      "Yahoo Finance attribution",
+      "source-visible data status"
+    ],
+    "changedElements": [
+      "Layout plan: the legend's one-day column redrawn as a ranked bar",
+      "Label plan: every bar labelled, with the AAOI bar carrying the focus",
+      "Colour plan: neutral grey bars and a single navy accent",
+      "Language plan: all visible strings translated to English"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 범례에 인쇄된 4개 광통신 종목의 전일 대비 등락률만 사용했습니다.",
+    "sourceAttribution": "Source: Yahoo Finance, close of 2026-08-04"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-point-color",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않아 플롯 영역이 비는 렌더 실패를 방지했습니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "100 이상 값은 모두 10 단위로 내려 표기했고, 부제 문구도 내림 처리된 숫자와 일치시켰습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에 인쇄된 숫자를 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 5개 금지항목 없음",
+      "status": "pass",
+      "detail": "목표주가, 매수·매도 의견, 밸류에이션 의견, 보유 여부, 실현 수익률을 카드에 넣지 않았습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "노출 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·주석·내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "under-100-decimals",
+      "label": "100 미만 소수 유지",
+      "status": "pass",
+      "detail": "네 값 모두 100 미만이라 인쇄된 소수 두 자리를 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Optical jumped on a rule not yet written",
+    "subtitle": "Aug 4, 2026 close: AAOI +19.44%, Fabrinet +16.47%, Coherent +12.35%, Lumentum +8.92%",
+    "source": "Source: Yahoo Finance, close of 2026-08-04 · source-visible",
+    "timeRange": "2026-08-04 session",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AAOI",
+        "Fabrinet",
+        "Coherent",
+        "Lumentum"
+      ],
+      "displayTickValues": [
+        "AAOI",
+        "Fabrinet",
+        "Coherent",
+        "Lumentum"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "One-day change",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 20
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#C3CCD8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "AAOI",
+            "y": 19.44,
+            "confidence": 0.72
+          },
+          {
+            "x": "Fabrinet",
+            "y": 16.47,
+            "confidence": 0.72
+          },
+          {
+            "x": "Coherent",
+            "y": 12.35,
+            "confidence": 0.72
+          },
+          {
+            "x": "Lumentum",
+            "y": 8.92,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C3CCD8"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에 인쇄된 숫자를 읽은 값이라 원자료 대조가 필요합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.6,
+      "description": "Direction read from the source image.",
+      "recentDirection": "accelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "The spread visible in the source image is preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": -54.1,
+        "absoluteChange": -10.52,
+        "from": 19.44,
+        "to": 8.92
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 19.44,
+        "at": "AAOI"
+      },
+      "min": {
+        "value": 8.92,
+        "at": "Lumentum"
+      },
+      "average": 14.295,
+      "median": 14.41,
+      "range": 10.52
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Optical jumped on a rule not yet written",
+    "subMessage": "Aug 4, 2026 close: AAOI +19.44%, Fabrinet +16.47%, Coherent +12.35%, Lumentum +8.92%",
+    "headline": "Optical jumped on a rule not yet written",
+    "summary": "Aug 4, 2026 close: AAOI +19.44%, Fabrinet +16.47%, Coherent +12.35%, Lumentum +8.92%",
+    "story": "The source chart's data relationships are kept; only the information hierarchy and language were rebuilt.",
+    "keyTakeaways": [
+      "All four optical names moved together on the same session.",
+      "The spread runs from +19.44% to +8.92% across four suppliers.",
+      "Values are source-visible reads of the printed legend."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Count how few suppliers it takes for one possibility to move a whole group.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, close of 2026-08-04",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C3CCD8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "AAOI",
+      "y": 19.44,
+      "displayText": "19.44"
+    },
+    "densityLevel": "focused"
+  }
+}

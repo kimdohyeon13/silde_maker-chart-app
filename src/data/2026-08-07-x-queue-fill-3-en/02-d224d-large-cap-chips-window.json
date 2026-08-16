@@ -1,0 +1,264 @@
+{
+  "id": "02-d224d-large-cap-chips-window",
+  "mode": "faithful",
+  "sourceImage": "input/dib-224-14.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "05. 반도체 대형주, 인텔·AMD 급등",
+    "originalMessage": "2026-08-04 장세 · 비교 기준: 시작일=100 · 전일 대비 등락률",
+    "preservedElements": [
+      "The four large-cap chip names printed in the source legend",
+      "Each name's change over the indexed window as printed",
+      "The 05-01 to 2026-08-04 window and the =100 base",
+      "Yahoo Finance attribution",
+      "source-visible data status"
+    ],
+    "changedElements": [
+      "Layout plan: four indexed lines collapsed into the four printed window changes as a ranked bar",
+      "Label plan: every bar labelled, with the AMD bar carrying the focus",
+      "Colour plan: neutral grey bars and a single navy accent",
+      "Language plan: all visible strings translated to English"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 범례에 인쇄된 구간 등락률만 사용했고, 라인의 일자별 값은 읽지 않았습니다. AMD의 가속기 시장 전망 수치는 이 이미지에 없어 카드에 넣지 않았습니다.",
+    "sourceAttribution": "Source: Yahoo Finance, close of 2026-08-04"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-point-color",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않아 플롯 영역이 비는 렌더 실패를 방지했습니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "100 이상 값은 모두 10 단위로 내려 표기했고, 부제 문구도 내림 처리된 숫자와 일치시켰습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에 인쇄된 숫자를 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 5개 금지항목 없음",
+      "status": "pass",
+      "detail": "목표주가, 매수·매도 의견, 밸류에이션 의견, 보유 여부, 실현 수익률을 카드에 넣지 않았습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "노출 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·주석·내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "claim-not-overstated",
+      "label": "이미지에 없는 수치 미표기",
+      "status": "pass",
+      "detail": "포스트의 1.4조 달러 TAM 전망은 이 이미지에 인쇄되어 있지 않아 카드에 표기하지 않았습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Second place led the large-cap chips",
+    "subtitle": "May 1 to Aug 4, 2026, indexed to 100: AMD +46.0%, Nvidia +7.9%, Broadcom -2.2%, Intel -6.7%",
+    "source": "Source: Yahoo Finance, close of 2026-08-04 · source-visible",
+    "timeRange": "2026-05-01 to 2026-08-04",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AMD",
+        "Nvidia",
+        "Broadcom",
+        "Intel"
+      ],
+      "displayTickValues": [
+        "AMD",
+        "Nvidia",
+        "Broadcom",
+        "Intel"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Change over the window",
+      "type": "value",
+      "tickValues": [
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -10,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "Change over the window",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#C3CCD8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Change over the window",
+        "data": [
+          {
+            "x": "AMD",
+            "y": 46.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "Nvidia",
+            "y": 7.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "Broadcom",
+            "y": -2.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "Intel",
+            "y": -6.7,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C3CCD8"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에 인쇄된 숫자를 읽은 값이라 원자료 대조가 필요합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.6,
+      "description": "Direction read from the source image.",
+      "recentDirection": "accelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "The spread visible in the source image is preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": -114.6,
+        "absoluteChange": -52.7,
+        "from": 46.0,
+        "to": -6.7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 46.0,
+        "at": "AMD"
+      },
+      "min": {
+        "value": -6.7,
+        "at": "Intel"
+      },
+      "average": 11.25,
+      "median": 2.85,
+      "range": 52.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Second place led the large-cap chips",
+    "subMessage": "May 1 to Aug 4, 2026, indexed to 100: AMD +46.0%, Nvidia +7.9%, Broadcom -2.2%, Intel -6.7%",
+    "headline": "Second place led the large-cap chips",
+    "summary": "May 1 to Aug 4, 2026, indexed to 100: AMD +46.0%, Nvidia +7.9%, Broadcom -2.2%, Intel -6.7%",
+    "story": "The source chart's data relationships are kept; only the information hierarchy and language were rebuilt.",
+    "keyTakeaways": [
+      "AMD gained 46.0% over the window, the widest of the four.",
+      "Nvidia printed +7.9% over the same window.",
+      "Values are source-visible reads of the printed legend."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Note which vendor the window favoured before reading its forecasts.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, close of 2026-08-04",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C3CCD8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "AMD",
+      "y": 46.0,
+      "displayText": "46.0"
+    },
+    "densityLevel": "focused"
+  }
+}

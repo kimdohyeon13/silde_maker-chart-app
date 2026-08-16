@@ -1,0 +1,257 @@
+{
+  "id": "w76mgn-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "규모와 이익이 함께 커졌다",
+    "preservedElements": [
+      "2계열 × 2분기의 값: 총이익률 28.2 → 34.3, 영업이익률 7.1 → 22.5",
+      "가로축 눈금 0, 5, 10, 15, 20, 25, 30, 35",
+      "원본 출처 줄(블룸에너지 분기 실적 발표)"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용",
+      "세로 그룹 막대 → 가로 그룹 막대"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 막대 4개의 값, 계열 순서, 축 범위를 그대로 유지했습니다. 세로 그룹 막대는 두 번째 계열이 렌더러에서 떨어져 나가 값이 사라져, 값이 전부 남는 가로 그룹 막대로 옮겼습니다.",
+    "sourceAttribution": "Source: Bloom Energy quarterly results, Jul 31, 2025 and Jul 28, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "change-chart-type"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "가로 막대 2행(총이익률·영업이익률) × 2계열. 값 라벨 전부 표시, 최신 분기만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "1차 자료(회사 분기 실적 발표)만 적었다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Margins climbed with the revenue",
+    "subtitle": "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026",
+    "source": "Source: Bloom Energy quarterly results, Jul 31, 2025 and Jul 28, 2026",
+    "timeRange": "2025-2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Gross margin",
+        "Operating margin"
+      ],
+      "displayTickValues": [
+        "Gross margin",
+        "Operating margin"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "Q2 2025 (%)",
+        "role": "secondary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#275A50"
+      },
+      {
+        "name": "Q2 2026 (%)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Q2 2025 (%)",
+        "data": [
+          {
+            "x": "Gross margin",
+            "y": 28.2,
+            "confidence": 0.99
+          },
+          {
+            "x": "Operating margin",
+            "y": 7.1,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#275A50"
+      },
+      {
+        "name": "Q2 2026 (%)",
+        "data": [
+          {
+            "x": "Gross margin",
+            "y": 34.3,
+            "confidence": 0.99
+          },
+          {
+            "x": "Operating margin",
+            "y": 22.5,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 34.3,
+        "at": "Gross margin"
+      },
+      "min": {
+        "value": 7.1,
+        "at": "Operating margin"
+      },
+      "average": 23.025,
+      "median": 0,
+      "range": 27.199999999999996
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Margins climbed with the revenue",
+    "subMessage": "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026",
+    "headline": "Margins climbed with the revenue",
+    "summary": "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026",
+    "story": "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026",
+    "keyTakeaways": [
+      "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Bloom Energy quarterly results, Jul 31, 2025 and Jul 28, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Gross margin",
+        "y": 34.3
+      },
+      "displayText": "34.3",
+      "reason": "Non-GAAP gross margin 34.3% and operating margin 22.5% in Q2 2026"
+    },
+    "densityLevel": "focused"
+  }
+}

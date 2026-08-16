@@ -1,0 +1,236 @@
+{
+  "id": "04-cloud-revenue-margin",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Cloud는 매출과 영업이익률을 동시에 끌어올렸다",
+    "preservedElements": [
+      "공식 수치",
+      "기간 순서",
+      "단위",
+      "출처"
+    ],
+    "changedElements": [
+      "주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "강조색"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "공식 공시 원단위를 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈와 4개 데이터 포인트를 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 90
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "Cloud는 매출과 영업이익률을 동시에 끌어올렸다",
+    "subtitle": "매출은 십억달러, 영업이익률은 % · 2Q25 vs 2Q26",
+    "source": "자료: Alphabet 2Q26 실적 발표, waltechman 계산",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Cloud 매출 (십억달러)",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 30,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "영업이익률",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 40,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Cloud 매출",
+        "role": "primary",
+        "originalColor": "#4285F4",
+        "remakeColor": "#4285F4"
+      },
+      {
+        "name": "영업이익률",
+        "role": "secondary",
+        "originalColor": "#D92D3A",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Cloud 매출",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#4285F4",
+        "axis": "left",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 13.624,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26",
+            "y": 24.768,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "영업이익률",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#D92D3A",
+        "axis": "right",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 20.743,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26",
+            "y": 35.586,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 13.624,
+      "max": 35.586,
+      "average": 23.68,
+      "latest": 35.586
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Cloud 매출은 81.8% 늘고 영업이익률은 14.8%p 상승했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Cloud는 매출과 영업이익률을 동시에 끌어올렸다",
+    "subMessage": "매출은 십억달러, 영업이익률은 % · 2Q25 vs 2Q26",
+    "headline": "Cloud 매출은 81.8% 늘고 영업이익률은 14.8%p 상승했습니다.",
+    "summary": "Cloud 매출은 81.8% 늘고 영업이익률은 14.8%p 상승했습니다.",
+    "keyTakeaways": [
+      "매출은 13.624B달러에서 24.768B달러로 늘었습니다.",
+      "영업이익은 2.826B달러에서 8.814B달러로 증가했습니다.",
+      "투자 확대가 매출과 이익으로 연결되고 있습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 35.586
+      },
+      "displayText": "마진 35.6%",
+      "reason": "수익성 개선"
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

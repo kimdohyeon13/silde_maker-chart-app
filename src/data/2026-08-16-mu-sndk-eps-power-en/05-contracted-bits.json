@@ -1,0 +1,201 @@
+{
+  "id": "05-contracted-bits",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Sandisk disclosed that new business model agreements cover roughly 50% of FY2027 bits and 67% of FY2028 bits",
+    "preservedElements": [
+      "The two disclosed figures, about 50% for FY27 and about 67% for FY28",
+      "Sandisk 2026 Investor Day attribution"
+    ],
+    "changedElements": [
+      "Turned a press release sentence into two stacked bars",
+      "Red for contracted, grey for the remainder"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Uses the disclosed ~50% and ~67% as stated. The remainder is simply 100 minus those figures, not a separately disclosed number."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "disclosed-values-only",
+      "label": "Disclosed values only",
+      "status": "pass",
+      "detail": "Only the disclosed ~50% and ~67% are used; the remainder is documented as 100 minus those."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#D92D20",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Half of FY27 Bits Are Already Locked In",
+    "subtitle": "Share of shipped bits covered by new business model agreements, in percent",
+    "source": "Source: Sandisk 2026 Investor Day (Aug 13, 2026)",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2027",
+        "2028"
+      ],
+      "displayTickValues": [
+        "FY27",
+        "FY28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 100,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Bits under agreement",
+        "originalColor": "#D92D20",
+        "remakeColor": "#D92D20"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Bits under agreement",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2027",
+            "y": 50,
+            "confidence": 1
+          },
+          {
+            "x": "2028",
+            "y": 67,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.1,
+      "description": ""
+    },
+    "changeRates": [
+      {
+        "period": "FY27 → FY28",
+        "percentChange": 34.0,
+        "absoluteChange": 17,
+        "from": 50,
+        "to": 67
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 67,
+        "at": "FY28"
+      },
+      "min": {
+        "value": 50,
+        "at": "FY27"
+      },
+      "average": 58.5,
+      "median": 58.5,
+      "range": 17
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Half of FY27 Bits Are Already Locked In",
+    "subMessage": "Share of shipped bits covered by new business model agreements, in percent",
+    "headline": "Half of FY27 Bits Are Already Locked In",
+    "summary": "Share of shipped bits covered by new business model agreements, in percent",
+    "story": "Share of shipped bits covered by new business model agreements, in percent",
+    "keyTakeaways": [
+      "About 50% of FY27 shipped bits are covered by agreements",
+      "That rises to about 67% in FY28",
+      "Contracted bits are not settled at spot prices"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Share of shipped bits covered by new business model agreements, in percent",
+    "contextualNotes": [
+      "Source: Sandisk 2026 Investor Day (Aug 13, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D20",
+      "secondary": [
+        "#C7CDD4"
+      ],
+      "positive": "#D92D20",
+      "negative": "#C7CDD4",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

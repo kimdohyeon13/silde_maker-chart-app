@@ -1,0 +1,228 @@
+{
+  "id": "07-cash-flow",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "OCF 증가보다 CAPEX 증가가 빨라 FCF가 적자로 돌아섰다",
+    "preservedElements": [
+      "공식 수치",
+      "기간 순서",
+      "단위",
+      "출처"
+    ],
+    "changedElements": [
+      "주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "강조색"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "공식 공시 원단위를 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈와 6개 데이터 포인트를 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "barColorMode": "sign",
+    "gridMode": "solid"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "OCF 증가보다 CAPEX 증가가 빨라 FCF가 적자로 돌아섰다",
+    "subtitle": "2Q25 vs 2Q26 · 십억달러 · FCF=영업현금흐름-CAPEX",
+    "source": "자료: Alphabet 2Q26 실적 발표, waltechman 계산",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2Q25 OCF",
+        "2Q26 OCF",
+        "2Q25 CAPEX",
+        "2Q26 CAPEX",
+        "2Q25 FCF",
+        "2Q26 FCF"
+      ],
+      "displayTickValues": [
+        "25 영업",
+        "26 영업",
+        "25 투자",
+        "26 투자",
+        "25 FCF",
+        "26 FCF"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억달러",
+      "type": "numeric",
+      "tickValues": [
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "min": -10,
+      "max": 50,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "현금흐름",
+        "role": "primary",
+        "originalColor": "#D92D3A",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현금흐름",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "2Q25 OCF",
+            "y": 27.747,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26 OCF",
+            "y": 39.069,
+            "confidence": 1
+          },
+          {
+            "x": "2Q25 CAPEX",
+            "y": 22.446,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26 CAPEX",
+            "y": 44.924,
+            "confidence": 1
+          },
+          {
+            "x": "2Q25 FCF",
+            "y": 5.301,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26 FCF",
+            "y": -5.855,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": -5.855,
+      "max": 44.924,
+      "average": 22.272,
+      "latest": -5.855
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "2Q26 FCF는 -5.855B달러로 전년 동기 5.301B달러에서 적자 전환했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "OCF 증가보다 CAPEX 증가가 빨라 FCF가 적자로 돌아섰다",
+    "subMessage": "2Q25 vs 2Q26 · 십억달러 · FCF=영업현금흐름-CAPEX",
+    "headline": "2Q26 FCF는 -5.855B달러로 전년 동기 5.301B달러에서 적자 전환했습니다.",
+    "summary": "2Q26 FCF는 -5.855B달러로 전년 동기 5.301B달러에서 적자 전환했습니다.",
+    "keyTakeaways": [
+      "OCF는 40.8% 늘었습니다.",
+      "CAPEX는 100.1% 늘었습니다.",
+      "CAPEX/매출 비율은 23.3%에서 37.5%로 상승했습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2Q26 FCF",
+        "y": -5.855
+      },
+      "displayText": "FCF -5.9B달러",
+      "reason": "현금흐름 부담"
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

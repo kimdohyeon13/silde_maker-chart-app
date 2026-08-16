@@ -1,0 +1,171 @@
+{
+  "id": "03-xai-merger-value",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "xAI 합병으로 기업가치 1.25조 달러 인정",
+    "subtitle": "합병 전 1,030 → 합병 후 1,250 (단위: 십억 달러)",
+    "source": "삼성증권 SpaceX 리포트, 2026-06-04",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구분",
+      "type": "category",
+      "tickValues": [
+        "합병 전",
+        "합병 후"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "기업가치",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "십억 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 1180.0
+    },
+    "legend": [
+      {
+        "name": "스페이스X",
+        "role": "primary"
+      },
+      {
+        "name": "xAI",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "스페이스X",
+        "data": [
+          {
+            "x": "합병 전",
+            "y": 800,
+            "confidence": 0.95
+          },
+          {
+            "x": "합병 후",
+            "y": 1000,
+            "confidence": 0.95
+          }
+        ],
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "xAI",
+        "data": [
+          {
+            "x": "합병 전",
+            "y": 230,
+            "confidence": 0.95
+          },
+          {
+            "x": "합병 후",
+            "y": 250,
+            "confidence": 0.95
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원문 수치를 그대로 옮겨 읽기 쉽게 재배치했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "from": 800.0,
+        "to": 1000.0,
+        "absoluteChange": 200.0,
+        "percentChange": 25.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1000.0,
+        "at": ""
+      },
+      "min": {
+        "value": 800.0,
+        "at": ""
+      },
+      "average": 900.0,
+      "median": 900.0,
+      "range": 200.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "약 2,000억 달러의 합병 프리미엄",
+    "subMessage": "합병 전 1,030 → 합병 후 1,250 (단위: 십억 달러)",
+    "headline": "약 2,000억 달러의 합병 프리미엄",
+    "summary": "합병 전 단순 합산(1,030)보다 합병 법인 가치(1,250)가 커지며 약 2,000억 달러의 프리미엄이 생겼습니다.",
+    "story": "합병 전 단순 합산(1,030)보다 합병 법인 가치(1,250)가 커지며 약 2,000억 달러의 프리미엄이 생겼습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원문 crop과 숫자를 대조해 보세요.",
+    "contextualNotes": [
+      "삼성증권 SpaceX 리포트, 2026-06-04"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#F5DF4D"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "합병 후",
+        "y": 1000.0
+      },
+      "reason": "합병 전 단순 합산(1,030)보다 합병 법인 가치(1,250)가 커지며 약 2,000억 달러의 프리미엄이 생겼습니다.",
+      "displayText": "약 2,000억 달러의 합병 프리미엄"
+    },
+    "densityLevel": "balanced"
+  }
+}

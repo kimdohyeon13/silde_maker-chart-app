@@ -349,6 +349,20 @@ export function formatNumber(num: number): string {
 }
 
 /**
+ * 숫자 포맷 (영문 덱용)
+ *
+ * formatNumber와 달리 "만"·"억" 축약을 쓰지 않는다. 영문 차트에 한글 단위가
+ * 섞이는 것을 막고, 큰 값도 자릿수를 그대로 읽히게 한다.
+ *
+ * 예:
+ * 1234 → "1,234"
+ * 10550 → "10,550"
+ */
+export function formatNumberEn(num: number): string {
+  return num.toLocaleString("en-US", { maximumFractionDigits: 1 });
+}
+
+/**
  * 하이라이트 구간 생성
  *
  * 연속된 상승/하락 구간이나 특별한 기간을 배경색으로 강조

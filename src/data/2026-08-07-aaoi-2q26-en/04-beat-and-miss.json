@@ -1,0 +1,236 @@
+{
+  "id": "04-beat-and-miss-en",
+  "sourceImage": "input/04-beat-and-miss.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "June revenue beat consensus by 1% and the September guide sits 2% below",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: company release and market consensus compilation, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The quarter beat but the guide did not",
+    "subtitle": "June revenue beat consensus by 1% and the September guide sits 2% below",
+    "source": "Source: company release and market consensus compilation, August 6, 2026",
+    "timeRange": "Jun 2026 quarter and Sep 2026 quarter",
+    "xAxis": {
+      "label": "Measure",
+      "type": "category",
+      "tickValues": [
+        "Jun actual",
+        "Jun consensus",
+        "Sep guidance",
+        "Sep consensus"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Jun actual",
+        "Jun consensus",
+        "Sep guidance",
+        "Sep consensus"
+      ]
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 150.0,
+      "max": 300.0
+    },
+    "legend": [
+      {
+        "name": "Revenue",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue",
+        "data": [
+          {
+            "x": "Jun actual",
+            "y": 191.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun consensus",
+            "y": 190.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep guidance",
+            "y": 272.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep consensus",
+            "y": 278.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.378,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 44.9,
+        "absoluteChange": 86.1,
+        "from": 191.9,
+        "to": 278.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 278.0,
+        "at": ""
+      },
+      "min": {
+        "value": 190.0,
+        "at": ""
+      },
+      "average": 233.1,
+      "median": 232.2,
+      "range": 88.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The quarter beat but the guide did not",
+    "subMessage": "June revenue beat consensus by 1% and the September guide sits 2% below",
+    "headline": "The quarter beat but the guide did not",
+    "summary": "June revenue beat consensus by 1% and the September guide sits 2% below",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "June revenue beat consensus by 1% and the September guide sits 2% below",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: company release and market consensus compilation, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 278.0
+      },
+      "displayText": "The quarter beat but the g",
+      "reason": "June revenue beat consensus by 1% and the September guide sits 2% below"
+    },
+    "densityLevel": "balanced"
+  }
+}

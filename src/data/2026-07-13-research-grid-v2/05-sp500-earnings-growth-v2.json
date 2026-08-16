@@ -1,0 +1,359 @@
+{
+  "id": "sp500-earnings-growth-v2",
+  "sourceImage": "input/source-05-sp500-earnings-growth.png",
+  "analyzedAt": "2026-07-13T20:30:00+09:00",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "S&P 500 이익 증가율(Y/Y): 2026년 2분기",
+    "preservedElements": [
+      "title",
+      "source",
+      "axis",
+      "series",
+      "order",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-colors",
+      "adjust-fonts",
+      "adjust-spacing"
+    ],
+    "dataFidelity": "exact",
+    "notes": "화면에 직접 보이는 표기값을 옮겼습니다.",
+    "sourceAttribution": "Source: FactSet | exact",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-exact-values",
+      "label": "표시값 직접 전사",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 27,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 2px",
+    "contentPadding": "0 18px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 395,
+    "gridMode": "solid"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "S&P 500 이익 증가율 전망은 에너지·기술주가 주도",
+    "subtitle": "현재 vs 3월 말 | 헬스케어 현재 -9.5%",
+    "source": "자료: FactSet | 원문 표 수치 보존",
+    "xAxis": {
+      "label": "섹터",
+      "type": "category",
+      "tickValues": [
+        "에너지",
+        "정보기술",
+        "소재",
+        "S&P 500",
+        "유틸리티",
+        "산업재",
+        "커뮤니케이션\n서비스",
+        "자유소비재",
+        "금융",
+        "필수소비재",
+        "부동산",
+        "헬스케어"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "에너지",
+        "정보기술",
+        "소재",
+        "S&P 500",
+        "유틸리티",
+        "산업재",
+        "커뮤니케이션\n서비스",
+        "자유소비재",
+        "금융",
+        "필수소비재",
+        "부동산",
+        "헬스케어"
+      ]
+    },
+    "yAxis": {
+      "label": "이익 증가율",
+      "type": "numeric",
+      "tickValues": [
+        "-20",
+        "0",
+        "30",
+        "60",
+        "90",
+        "120"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -20,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "현재",
+        "originalColor": "#1B2A4E",
+        "remakeColor": "#344054",
+        "role": "primary"
+      },
+      {
+        "name": "3월 말",
+        "originalColor": "#D9D9D9",
+        "remakeColor": "#D0D5DD",
+        "role": "secondary"
+      }
+    ]
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본 시각 요소를 보존하는 faithful 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 통계보다 원본 형태와 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P 500 이익 증가율 전망은 에너지·기술주가 주도",
+    "subMessage": "현재 vs 3월 말 | 헬스케어 현재 -9.5%",
+    "headline": "S&P 500 이익 증가율 전망은 에너지·기술주가 주도",
+    "summary": "현재 vs 3월 말 | 헬스케어 현재 -9.5%",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "Today vs 31-Mar | Health Care Today -9.5%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "자료: FactSet | 원문 표 수치 보존"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1B2A4E",
+      "secondary": [
+        "#BFC5CF"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "exact"
+    },
+    "densityLevel": "balanced"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현재",
+        "data": [
+          {
+            "x": "에너지",
+            "y": 122.1,
+            "confidence": 0.98
+          },
+          {
+            "x": "정보기술",
+            "y": 63.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "소재",
+            "y": 35.2,
+            "confidence": 0.98
+          },
+          {
+            "x": "S&P 500",
+            "y": 23.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "유틸리티",
+            "y": 14.2,
+            "confidence": 0.98
+          },
+          {
+            "x": "산업재",
+            "y": 9.6,
+            "confidence": 0.98
+          },
+          {
+            "x": "커뮤니케이션\n서비스",
+            "y": 7.1,
+            "confidence": 0.98
+          },
+          {
+            "x": "자유소비재",
+            "y": 6.5,
+            "confidence": 0.98
+          },
+          {
+            "x": "금융",
+            "y": 5.8,
+            "confidence": 0.98
+          },
+          {
+            "x": "필수소비재",
+            "y": 5.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "부동산",
+            "y": 5.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "헬스케어",
+            "y": -9.5,
+            "confidence": 0.98
+          }
+        ],
+        "renderAs": "bar",
+        "axis": "left",
+        "confidence": 0.98
+      },
+      {
+        "name": "3월 말",
+        "data": [
+          {
+            "x": "에너지",
+            "y": 48.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "정보기술",
+            "y": 48.6,
+            "confidence": 0.98
+          },
+          {
+            "x": "소재",
+            "y": 29.6,
+            "confidence": 0.98
+          },
+          {
+            "x": "S&P 500",
+            "y": 18.8,
+            "confidence": 0.98
+          },
+          {
+            "x": "유틸리티",
+            "y": 15.1,
+            "confidence": 0.98
+          },
+          {
+            "x": "산업재",
+            "y": 11.7,
+            "confidence": 0.98
+          },
+          {
+            "x": "커뮤니케이션\n서비스",
+            "y": 6.1,
+            "confidence": 0.98
+          },
+          {
+            "x": "자유소비재",
+            "y": 6.5,
+            "confidence": 0.98
+          },
+          {
+            "x": "금융",
+            "y": 5.2,
+            "confidence": 0.98
+          },
+          {
+            "x": "필수소비재",
+            "y": 6.6,
+            "confidence": 0.98
+          },
+          {
+            "x": "부동산",
+            "y": 4.3,
+            "confidence": 0.98
+          },
+          {
+            "x": "헬스케어",
+            "y": 6.7,
+            "confidence": 0.98
+          }
+        ],
+        "renderAs": "bar",
+        "axis": "left",
+        "role": "secondary",
+        "confidence": 0.98
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.98,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

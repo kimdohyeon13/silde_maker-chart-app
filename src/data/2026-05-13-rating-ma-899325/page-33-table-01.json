@@ -1,0 +1,163 @@
+{
+  "id": "vision-banana-reasoning-bench",
+  "sourceImage": "input/07-vision-banana-reasoning-bench.png",
+  "analyzedAt": "2026-05-13T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "Vision Banana는 복합 추론 비전에서도 전문 모델을 추격했다",
+    "subtitle": "RefCOCOg와 ReasonSeg는 이미지 속 관계와 텍스트 조건을 함께 묻는다",
+    "source": "원문 PDF 기반 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "VB RefCOCOg",
+        "Gemini 2.5",
+        "VB ReasonSeg",
+        "LLaVA+",
+        "SAM3"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "값",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "점수",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "점수",
+        "data": [
+          {
+            "x": "VB RefCOCOg",
+            "y": 0.738,
+            "confidence": 0.86
+          },
+          {
+            "x": "Gemini 2.5",
+            "y": 0.734,
+            "confidence": 0.86
+          },
+          {
+            "x": "VB ReasonSeg",
+            "y": 0.793,
+            "confidence": 0.86
+          },
+          {
+            "x": "LLaVA+",
+            "y": 0.77,
+            "confidence": 0.86
+          },
+          {
+            "x": "SAM3",
+            "y": 0.65,
+            "confidence": 0.86
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.86,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "일부 원문 OCR 숫자는 사람이 읽어 보정했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.7,
+      "description": "핵심 방향성만 간명하게 보여주기 위한 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원문 수치를 읽기 쉽게 재배치했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": -11.924119241192408,
+        "absoluteChange": -0.08799999999999997,
+        "from": 0.738,
+        "to": 0.65
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0.793,
+        "at": ""
+      },
+      "min": {
+        "value": 0.65,
+        "at": ""
+      },
+      "average": 0.737,
+      "median": 0.738,
+      "range": 0.14300000000000002
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "0.793",
+    "subMessage": "RefCOCOg와 ReasonSeg는 이미지 속 관계와 텍스트 조건을 함께 묻는다",
+    "headline": "0.793",
+    "summary": "범용 생성 모델이 관계 추론형 비전 벤치마크까지 들어왔다는 점이 핵심입니다.",
+    "story": "범용 생성 모델이 관계 추론형 비전 벤치마크까지 들어왔다는 점이 핵심입니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 해설과 함께 확인합니다.",
+    "contextualNotes": [
+      "원문 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "SAM3",
+        "y": 0.65
+      },
+      "reason": "범용 생성 모델이 관계 추론형 비전 벤치마크까지 들어왔다는 점이 핵심입니다.",
+      "displayText": "0.793"
+    },
+    "densityLevel": "balanced"
+  }
+}

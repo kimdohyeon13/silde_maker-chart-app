@@ -1,0 +1,357 @@
+{
+  "id": "page-027-graph-01",
+  "sourceImage": "input/26-page_027_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: UN Comtrade (참고: BEC Rev.3 기준)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "중국 중간재 수출 비중 확대",
+    "subtitle": "",
+    "source": "자료: UN Comtrade (참고: BEC Rev.3 기준)",
+    "timeRange": "2013~2024년 (연간)",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2013",
+        "2015",
+        "2017",
+        "2019",
+        "2021",
+        "2023"
+      ],
+      "unit": "년",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "(%)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 40,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "중간재 수출액 (조달러, 우축)",
+        "role": "secondary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "중간재 수출 비중 (%, 좌축)",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "(조달러)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 0,
+      "max": 2
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "중간재 수출액 (조달러, 우축)",
+        "data": [
+          {
+            "x": "2013",
+            "y": 0.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "2014",
+            "y": 0.95,
+            "confidence": 0.72
+          },
+          {
+            "x": "2015",
+            "y": 0.95,
+            "confidence": 0.72
+          },
+          {
+            "x": "2016",
+            "y": 0.88,
+            "confidence": 0.72
+          },
+          {
+            "x": "2017",
+            "y": 0.96,
+            "confidence": 0.72
+          },
+          {
+            "x": "2018",
+            "y": 1.08,
+            "confidence": 0.72
+          },
+          {
+            "x": "2019",
+            "y": 1.09,
+            "confidence": 0.72
+          },
+          {
+            "x": "2020",
+            "y": 1.11,
+            "confidence": 0.72
+          },
+          {
+            "x": "2021",
+            "y": 1.51,
+            "confidence": 0.72
+          },
+          {
+            "x": "2022",
+            "y": 1.72,
+            "confidence": 0.72
+          },
+          {
+            "x": "2023",
+            "y": 1.57,
+            "confidence": 0.72
+          },
+          {
+            "x": "2024",
+            "y": 1.64,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#0F4C81",
+        "axis": "right"
+      },
+      {
+        "name": "중간재 수출 비중 (%, 좌축)",
+        "data": [
+          {
+            "x": "2013",
+            "y": 41.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2014",
+            "y": 41.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "2015",
+            "y": 42.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "2016",
+            "y": 42.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "2017",
+            "y": 43.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "2018",
+            "y": 44.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "2019",
+            "y": 44.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "2020",
+            "y": 43.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2021",
+            "y": 46.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "2022",
+            "y": 48.8,
+            "confidence": 0.72
+          },
+          {
+            "x": "2023",
+            "y": 47.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "2024",
+            "y": 46.8,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.167,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 12.8,
+        "absoluteChange": 5.3,
+        "from": 41.5,
+        "to": 46.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 48.8,
+        "at": ""
+      },
+      "min": {
+        "value": 41.4,
+        "at": ""
+      },
+      "average": 44.40833333333333,
+      "median": 43.95,
+      "range": 7.399999999999999
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "중국 중간재 수출 비중 확대",
+    "subMessage": "",
+    "headline": "중국 중간재 수출 비중 확대",
+    "summary": "",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: UN Comtrade (참고: BEC Rev.3 기준)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 46.8
+      },
+      "displayText": "중국 중간재 수출 비중 확대",
+      "reason": ""
+    },
+    "densityLevel": "balanced"
+  }
+}

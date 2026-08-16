@@ -1,0 +1,255 @@
+{
+  "id": "page-037-graph-02",
+  "sourceImage": "input/46-page_037_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Stanford AI Index 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "AI 역량을 요구하는 채용 공고 비중: 상대적으로 높은 편",
+    "subtitle": "",
+    "source": "자료: Stanford AI Index 2026",
+    "timeRange": "",
+    "xAxis": {
+      "label": "국가",
+      "type": "category",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "AI 역량 요구 채용 공고 비중",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "AI 역량 요구 채용 공고 비중",
+        "data": [
+          {
+            "x": "싱가포르",
+            "y": 4.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "스페인",
+            "y": 3.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "캐나다",
+            "y": 3.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "스웨덴",
+            "y": 2.8,
+            "confidence": 0.72
+          },
+          {
+            "x": "미국",
+            "y": 2.6,
+            "confidence": 0.72
+          },
+          {
+            "x": "영국",
+            "y": 1.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "스위스",
+            "y": 1.6,
+            "confidence": 0.72
+          },
+          {
+            "x": "벨기에",
+            "y": 1.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "이탈리아",
+            "y": 1.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "독일",
+            "y": 1.1,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.519,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -76.6,
+        "absoluteChange": -3.6,
+        "from": 4.7,
+        "to": 1.1
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.7,
+        "at": ""
+      },
+      "min": {
+        "value": 1.1,
+        "at": ""
+      },
+      "average": 2.37,
+      "median": 2.25,
+      "range": 3.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 역량을 요구하는 채용 공고 비중: 상대적으로 높은 편",
+    "subMessage": "",
+    "headline": "AI 역량을 요구하는 채용 공고 비중: 상대적으로 높은 편",
+    "summary": "",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Stanford AI Index 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 1.1
+      },
+      "displayText": "AI 역량을 요구하는 채용 공",
+      "reason": ""
+    },
+    "densityLevel": "balanced"
+  }
+}

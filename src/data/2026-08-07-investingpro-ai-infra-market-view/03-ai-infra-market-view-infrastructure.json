@@ -1,0 +1,738 @@
+{
+  "id": "03-ai-infra-market-view-infrastructure",
+  "mode": "redesign",
+  "sourceImage": "input/source-01-market-view.png",
+  "sourceImages": [
+    "input/source-01-market-view.png",
+    "input/source-02-amd-overview.png",
+    "input/source-03-amd-eps-consensus.png"
+  ],
+  "analyzedAt": "2026-08-07T06:32:25+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰",
+    "originalMessage": "InvestingPro 마켓 뷰 워치리스트의 종목 비교",
+    "preservedElements": [
+      "25개 티커",
+      "현재가·오늘 등락·1개월/1년 수익률·52주 고점·목표가/여력·EPS·Fwd P/E·시총"
+    ],
+    "changedElements": [
+      "필터·체크박스·빈 상단 영역 제거",
+      "25개 종목을 7·9·9개 16:9 표로 분할",
+      "오늘 등락률을 티커 옆 신호 배지로 이동",
+      "40의 규칙·PEG·베타는 CSV에 보존",
+      "소수점 아래를 PNG에서 버리고 CSV에 원문 보존"
+    ],
+    "dataFidelity": "exact-investingpro",
+    "notes": "인증된 InvestingPro Pro 개별 화면의 원문 지표를 사용했다. 목표가 여력은 Pro 목표가와 현재가의 산술 결과다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [
+    {
+      "id": "pro-session-source",
+      "label": "InvestingPro Pro 인증 세션 원문",
+      "status": "pass",
+      "detail": "25개 ticker의 Pro 개별 overview와 metric 페이지를 수집 JSON에 보존",
+      "checkedAt": "2026-08-07T06:32:25+09:00"
+    },
+    {
+      "id": "compact-v3-b-signal-pill",
+      "label": "compact v3 B 신호 배지형",
+      "status": "pass",
+      "detail": "상승은 빨강, 하락은 파랑 신호 배지",
+      "checkedAt": "2026-08-07T06:32:25+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI 인프라 마켓 뷰 · 3/3",
+    "subtitle": "데이터센터·전력·테스트 9종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n($B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "데이터센터·전력 인프라",
+            "displayValue": "데이터센터·전력 인프라"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SNDK",
+            "displayValue": "SNDK\n샌디스크",
+            "sideValue": {
+              "displayValue": "-6.7%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "낸드·스토리지",
+            "displayValue": "낸드·스토리지"
+          },
+          "current": {
+            "value": "1,259.54",
+            "displayValue": "1,259"
+          },
+          "m1": {
+            "value": "-22.6%",
+            "displayValue": "-22%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "3,107.8%",
+            "displayValue": "3,107%"
+          },
+          "high52": {
+            "value": "53.5%",
+            "displayValue": "53%"
+          },
+          "target": {
+            "value": "2,131",
+            "displayValue": "2,131\n69% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "2,110.6%",
+            "displayValue": "2,110%"
+          },
+          "pe": {
+            "value": "19.7x",
+            "displayValue": "19x"
+          },
+          "marketCap": {
+            "value": "201.2 B",
+            "displayValue": "201 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VRT",
+            "displayValue": "VRT\n버티브",
+            "sideValue": {
+              "displayValue": "-1%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "데이터센터 전력",
+            "displayValue": "데이터센터 전력"
+          },
+          "current": {
+            "value": "275.17",
+            "displayValue": "275"
+          },
+          "m1": {
+            "value": "-12.7%",
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "99.1%",
+            "displayValue": "99%"
+          },
+          "high52": {
+            "value": "72.4%",
+            "displayValue": "72%"
+          },
+          "target": {
+            "value": "338.15",
+            "displayValue": "338\n22% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "60.1%",
+            "displayValue": "60%"
+          },
+          "pe": {
+            "value": "40.6x",
+            "displayValue": "40x"
+          },
+          "marketCap": {
+            "value": "107 B",
+            "displayValue": "107 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GEV",
+            "displayValue": "GEV\nGE 버노바",
+            "sideValue": {
+              "displayValue": "-1.7%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력 설비",
+            "displayValue": "전력 설비"
+          },
+          "current": {
+            "value": "1,000.30",
+            "displayValue": "1,000"
+          },
+          "m1": {
+            "value": "-11.6%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "53.5%",
+            "displayValue": "53%"
+          },
+          "high52": {
+            "value": "83.6%",
+            "displayValue": "83%"
+          },
+          "target": {
+            "value": "1,231",
+            "displayValue": "1,231\n23% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-10.0%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "69.1x",
+            "displayValue": "69x"
+          },
+          "marketCap": {
+            "value": "271.1 B",
+            "displayValue": "271 B"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "AI 클라우드",
+            "displayValue": "AI 클라우드"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "IREN",
+            "displayValue": "IREN\n아이렌",
+            "sideValue": {
+              "displayValue": "-2.5%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 데이터센터",
+            "displayValue": "AI 데이터센터"
+          },
+          "current": {
+            "value": "37.93",
+            "displayValue": "37"
+          },
+          "m1": {
+            "value": "-11.4%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "112.3%",
+            "displayValue": "112%"
+          },
+          "high52": {
+            "value": "49.3%",
+            "displayValue": "49%"
+          },
+          "target": {
+            "value": "81.73",
+            "displayValue": "81\n115% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-679.9%",
+            "displayValue": "-679%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "50.8x",
+            "displayValue": "50x"
+          },
+          "marketCap": {
+            "value": "13.898 B",
+            "displayValue": "13 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NBIS",
+            "displayValue": "NBIS\n네비우스",
+            "sideValue": {
+              "displayValue": "-13.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 클라우드",
+            "displayValue": "AI 클라우드"
+          },
+          "current": {
+            "value": "189.85",
+            "displayValue": "189"
+          },
+          "m1": {
+            "value": "2.8%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "297.5%",
+            "displayValue": "297%"
+          },
+          "high52": {
+            "value": "63.3%",
+            "displayValue": "63%"
+          },
+          "target": {
+            "value": "255.44",
+            "displayValue": "255\n34% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "-91.3x",
+            "displayValue": "-91x",
+            "highlight": "negative"
+          },
+          "marketCap": {
+            "value": "56.071 B",
+            "displayValue": "56 B"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "반도체 테스트·광소재",
+            "displayValue": "반도체 테스트·광소재"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TER",
+            "displayValue": "TER\n테라다인",
+            "sideValue": {
+              "displayValue": "-1.2%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 테스트",
+            "displayValue": "반도체 테스트"
+          },
+          "current": {
+            "value": "384.60",
+            "displayValue": "384"
+          },
+          "m1": {
+            "value": "2.6%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "272.2%",
+            "displayValue": "272%"
+          },
+          "high52": {
+            "value": "78.8%",
+            "displayValue": "78%"
+          },
+          "target": {
+            "value": "449.80",
+            "displayValue": "449\n17% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "129.6%",
+            "displayValue": "129%"
+          },
+          "pe": {
+            "value": "42.8x",
+            "displayValue": "42x"
+          },
+          "marketCap": {
+            "value": "60.878 B",
+            "displayValue": "60 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SMTC",
+            "displayValue": "SMTC\n셈텍",
+            "sideValue": {
+              "displayValue": "+11.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "신호·연결 칩",
+            "displayValue": "신호·연결 칩"
+          },
+          "current": {
+            "value": "134.83",
+            "displayValue": "134"
+          },
+          "m1": {
+            "value": "-12.7%",
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "137.9%",
+            "displayValue": "137%"
+          },
+          "high52": {
+            "value": "76.0%",
+            "displayValue": "76%"
+          },
+          "target": {
+            "value": "205.25",
+            "displayValue": "205\n52% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "55.5%",
+            "displayValue": "55%"
+          },
+          "pe": {
+            "value": "43.8x",
+            "displayValue": "43x"
+          },
+          "marketCap": {
+            "value": "11.295 B",
+            "displayValue": "11 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FORM",
+            "displayValue": "FORM\n폼팩터",
+            "sideValue": {
+              "displayValue": "+0.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "테스트 소켓",
+            "displayValue": "테스트 소켓"
+          },
+          "current": {
+            "value": "115.21",
+            "displayValue": "115"
+          },
+          "m1": {
+            "value": "-3.6%",
+            "displayValue": "-3%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "314.3%",
+            "displayValue": "314%"
+          },
+          "high52": {
+            "value": "71.9%",
+            "displayValue": "71%"
+          },
+          "target": {
+            "value": "138.63",
+            "displayValue": "138\n20% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "135.2%",
+            "displayValue": "135%"
+          },
+          "pe": {
+            "value": "36.7x",
+            "displayValue": "36x"
+          },
+          "marketCap": {
+            "value": "8.94 B",
+            "displayValue": "8 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AXTI",
+            "displayValue": "AXTI\nAXT(미국)",
+            "sideValue": {
+              "displayValue": "+9.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광소재·부품",
+            "displayValue": "광소재·부품"
+          },
+          "current": {
+            "value": "75.17",
+            "displayValue": "75"
+          },
+          "m1": {
+            "value": "8.0%",
+            "displayValue": "8%"
+          },
+          "y1": {
+            "value": "3,214.5%",
+            "displayValue": "3,214%"
+          },
+          "high52": {
+            "value": "52.5%",
+            "displayValue": "52%"
+          },
+          "target": {
+            "value": "91.60",
+            "displayValue": "91\n21% Upside",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "312.2%",
+            "displayValue": "312%"
+          },
+          "pe": {
+            "value": "76.8x",
+            "displayValue": "76x"
+          },
+          "marketCap": {
+            "value": "4.378 B",
+            "displayValue": "4 B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 29,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.98,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "11px",
+        "body": "11.5px",
+        "total": "14px",
+        "badge": "9px",
+        "unit": "10px",
+        "groupHeader": "10.5px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 인프라 마켓 뷰 · 3/3",
+    "subMessage": "데이터센터·전력·테스트 9종목",
+    "headline": "AI 인프라 마켓 뷰 · 3/3",
+    "summary": "인증된 InvestingPro 마켓 뷰 지표를 발표용 비교표로 정리했다.",
+    "story": "종목·목표가·수익률·EPS 성장·밸류에이션을 사업군별로 비교한다.",
+    "keyTakeaways": [
+      "오늘 등락은 티커 옆 배지로 표시",
+      "Pro가 반환한 수치와 - 또는 NM을 보존",
+      "40의 규칙·PEG·베타는 CSV에 보존"
+    ],
+    "viewerAction": "사업군별로 52주 고점 대비, 목표가 여력, EPS 성장, Fwd P/E, 시총을 비교한다."
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  }
+}

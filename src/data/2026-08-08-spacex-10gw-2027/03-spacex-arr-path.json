@@ -1,0 +1,272 @@
+{
+  "id": "03-spacex-arr-path",
+  "mode": "faithful",
+  "sourceImage": "input/05_spacex_arr_path.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "스페이스X 연환산 매출이 1Q26 190억 달러에서 4Q27 3,050억 달러로 늘고 AI 컴퓨트가 그 77퍼센트를 차지한다",
+    "preservedElements": [
+      "1Q26~4Q27 8개 분기 총액",
+      "10억 달러 단위와 연환산 정의",
+      "2026년 계약 기준 · 2027년 예시라는 구분",
+      "SemiAnalysis Tokenomics Model 출처"
+    ],
+    "changedElements": [
+      "4개 세그먼트 누적 막대를 총액 단일 시리즈로 단순화",
+      "세그먼트 구성은 별도 도넛 장표로 분리",
+      "2026년 회색, 2027년 강조로 시점 구분"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "누적 구성은 04번 도넛 장표로 옮기고 이 장표는 총액 궤적만 남겼습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Tokenomics Model, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 8개, 0~340 축, 전 분기 라벨, 마지막 분기 1곳 레드 강조로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "값은 원본 화면 판독 기반 source-visible이며 2027년 구간은 예시 경로입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "여덟 분기 만에 컴퓨트 회사가 되는 경로",
+    "subtitle": "스페이스X 분기말 연환산 매출, 단위 10억 달러 (2026년 계약 기준, 2027년 10기가와트 예시)",
+    "source": "자료: SemiAnalysis Tokenomics Model, 재구성",
+    "timeRange": "1Q26~4Q27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q27",
+        "2Q27",
+        "3Q27",
+        "4Q27"
+      ],
+      "displayTickValues": [
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q27",
+        "2Q27",
+        "3Q27",
+        "4Q27"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 400
+    },
+    "legend": [
+      {
+        "name": "연환산 매출",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연환산 매출",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 19,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "2Q26",
+            "y": 38,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "3Q26",
+            "y": 54,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "4Q26",
+            "y": 102,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "1Q27",
+            "y": 126,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "2Q27",
+            "y": 166,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "3Q27",
+            "y": 223,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "4Q27",
+            "y": 305,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "값은 원본 화면 판독 기반 source-visible이며 2027년 구간은 예시 경로입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1505.3,
+        "absoluteChange": 286,
+        "from": 19,
+        "to": 305
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 305,
+        "at": "4Q27"
+      },
+      "min": {
+        "value": 19,
+        "at": "1Q26"
+      },
+      "average": 129.125,
+      "median": 114,
+      "range": 286
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "여덟 분기 만에 컴퓨트 회사가 되는 경로",
+    "subMessage": "스페이스X 분기말 연환산 매출, 단위 10억 달러 (2026년 계약 기준, 2027년 10기가와트 예시)",
+    "headline": "여덟 분기 만에 컴퓨트 회사가 되는 경로",
+    "summary": "스페이스X 분기말 연환산 매출, 단위 10억 달러 (2026년 계약 기준, 2027년 10기가와트 예시)",
+    "story": "우주 회사의 매출 구조가 두 해 만에 컴퓨트 중심으로 바뀝니다.",
+    "keyTakeaways": [
+      "1Q26 190억 달러에서 4Q27 3,050억 달러",
+      "2026년은 체결 계약 기준, 2027년은 10기가와트 예시",
+      "증분 컴퓨트의 절반만 외부 판매한다고 가정한 수치입니다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "2026년 구간과 2027년 구간의 기울기 차이를 봅니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Tokenomics Model, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

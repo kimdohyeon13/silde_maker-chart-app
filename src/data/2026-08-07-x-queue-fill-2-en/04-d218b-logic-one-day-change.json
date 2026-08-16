@@ -1,0 +1,266 @@
+{
+  "id": "04-d218b-logic-one-day-change",
+  "mode": "faithful",
+  "sourceImage": "input/dib-218-05.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "04. 반도체 로직, 엔비디아 홀로 반등",
+    "originalMessage": "2026-07-28 종가 기준 전일 대비 등락률: AMD -8.15%, 마벨 -7.77%, 인텔 -5.86%, 퀄컴 -4.21%, 엔비디아 +0.25%",
+    "preservedElements": [
+      "다섯 개 로직 종목과 전일 대비 등락률",
+      "엔비디아만 상승했다는 관계",
+      "% 단위",
+      "2026-07-28 종가 기준",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "지수화 라인 차트를 하루 등락률 막대 차트로 정리",
+      "영문 표기로 번역",
+      "회색 막대와 엔비디아 한 개 강조",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 차트 오른쪽에 인쇄된 '오늘' 등락률 다섯 개를 그대로 옮겼습니다. 100 미만 값이므로 소수점을 유지했습니다.",
+    "sourceAttribution": "Source: Yahoo Finance, close of 2026-07-28"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "다섯 종목의 전일 대비 등락률은 원본 차트에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 그대로 유지했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "제목·부제·축·범례·출처·내러티브를 모두 영문으로 작성했습니다."
+    },
+    {
+      "id": "no-point-color-key",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Only one logic name closed up",
+    "subtitle": "One-day change, 2026-07-28: AMD -8.15%, Marvell -7.77%, Intel -5.86%, Qualcomm -4.21%, Nvidia +0.25%",
+    "source": "Source: Yahoo Finance, close of 2026-07-28 · source-visible",
+    "timeRange": "2026-07-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AMD",
+        "Marvell",
+        "Intel",
+        "Qualcomm",
+        "Nvidia"
+      ],
+      "displayTickValues": [
+        "AMD",
+        "Marvell",
+        "Intel",
+        "Qualcomm",
+        "Nvidia"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-10",
+        "-8",
+        "-6",
+        "-4",
+        "-2",
+        "0",
+        "2"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -10,
+      "max": 2
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#B9C0C9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "AMD",
+            "y": -8.15,
+            "confidence": 0.88
+          },
+          {
+            "x": "Marvell",
+            "y": -7.77,
+            "confidence": 0.88
+          },
+          {
+            "x": "Intel",
+            "y": -5.86,
+            "confidence": 0.88
+          },
+          {
+            "x": "Qualcomm",
+            "y": -4.21,
+            "confidence": 0.88
+          },
+          {
+            "x": "Nvidia",
+            "y": 0.25,
+            "confidence": 0.88
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C0C9"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.86,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Values are read from the printed labels on the source chart rather than from a data file."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.62,
+      "description": "The set is negative apart from a single name at the right edge.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.55,
+      "description": "The spread between the weakest and the only positive name is 8.4 points."
+    },
+    "changeRates": [
+      {
+        "period": "AMD to Nvidia",
+        "percentChange": 0,
+        "absoluteChange": 8.4,
+        "from": -8.15,
+        "to": 0.25
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0.25,
+        "at": "Nvidia"
+      },
+      "min": {
+        "value": -8.15,
+        "at": "AMD"
+      },
+      "average": -5.148,
+      "median": -5.86,
+      "range": 8.4
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Only one logic name closed up",
+    "subMessage": "One-day change, 2026-07-28: AMD -8.15%, Marvell -7.77%, Intel -5.86%, Qualcomm -4.21%, Nvidia +0.25%",
+    "headline": "Only one logic name closed up",
+    "summary": "Four of the five logic names fell more than four percent in a session; one closed higher.",
+    "story": "The compute layer's chart narrowed to a single name in a session, while the physical build-out kept clearing invoices somewhere else.",
+    "keyTakeaways": [
+      "Four logic names fell between 4.21% and 8.15% in one session.",
+      "Nvidia closed up 0.25%, the only positive bar in the set.",
+      "Figures are read from the source chart (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the width of the single positive bar with the four negative ones.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, close of 2026-07-28",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#B9C0C9",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Nvidia",
+      "y": 0.25,
+      "displayText": "+0.25%"
+    },
+    "densityLevel": "focused"
+  }
+}

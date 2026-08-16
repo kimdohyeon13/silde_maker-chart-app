@@ -1,0 +1,942 @@
+{
+  "id": "nand-tlc-flash-price-spike",
+  "sourceImage": "02-dram-nand-price-trends.webp",
+  "analyzedAt": "2026-05-28T16:00:00.000+09:00",
+  "stylePreset": "editorial-card",
+  "preserveIntent": {
+    "originalMessage": "NAND spot prices stayed low for years, then surged sharply into 2026-03.",
+    "preservedElements": [
+      "Original right chart focus: NAND spot price trend",
+      "512Gb TLC Flash and 256Gb TLC Flash series",
+      "Time range from 2021-03 to 2026-03",
+      "Long trough around 2023 followed by rapid 2025-2026 spike",
+      "Bloomberg Finance L.P. source attribution"
+    ],
+    "changedElements": [
+      "Split the original two-panel image into a focused NAND card",
+      "Translated title, axis context, and legend into Korean",
+      "Applied editorial-card styling with dual-axis labels and visible spike zone",
+      "Kept the key spike instead of reproducing every monthly wiggle"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Values are approximate readings from the plotted lines in the source image, not original Bloomberg data."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "simplify-labels",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "trend-preserved",
+      "label": "2026년 급등 구조 보존",
+      "status": "pass",
+      "detail": "2023년 저점 이후 2025년 말~2026년 급등 흐름을 유지",
+      "checkedAt": "2026-05-28T16:00:00.000+09:00"
+    },
+    {
+      "id": "source-visible",
+      "label": "그래프 수치 근사 표시",
+      "status": "warning",
+      "detail": "원본 그래프 이미지에서 읽은 근사값이며 원자료 수치가 아님"
+    },
+    {
+      "id": "text-clipping",
+      "label": "축/범례/제목 잘림 확인",
+      "status": "pass",
+      "detail": "X축 날짜를 YYYY-MM 형식으로 정렬하고, 겹치던 주석을 제거해 라벨 충돌을 줄임",
+      "checkedAt": "2026-05-28T22:07:00.000+09:00"
+    },
+    {
+      "id": "source-time-spacing",
+      "label": "원본 시간 간격 보존",
+      "status": "pass",
+      "detail": "월별 균일 포인트로 보간해 2026년 초 급등이 오른쪽 끝에 집중되도록 수정",
+      "checkedAt": "2026-05-28T22:20:00.000+09:00"
+    },
+    {
+      "id": "readability-direct-labels",
+      "label": "선 끝 직접 라벨 적용",
+      "status": "pass",
+      "detail": "범례 의존도를 줄이기 위해 512Gb/256Gb 최신값을 선 끝에서 바로 읽도록 렌더러를 개선",
+      "checkedAt": "2026-05-28T22:40:00.000+09:00"
+    },
+    {
+      "id": "readability-fidelity-badge",
+      "label": "근사값 표시 명시",
+      "status": "pass",
+      "detail": "source-visible 그래프는 export 하단에 이미지 기반 근사값 문구를 표시",
+      "checkedAt": "2026-05-28T22:40:00.000+09:00"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "34px 44px 0",
+    "contentPadding": "14px 16px 16px",
+    "sourcePadding": "0 44px 22px",
+    "titleFontSize": 48,
+    "subtitleFontSize": 28,
+    "sourceFontSize": 20,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Geist\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "NAND도 2026년에 수직 상승",
+    "subtitle": "TLC Flash 현물가격, US$/512Gb 및 US$/256Gb 기준",
+    "source": "Bloomberg Finance L.P.",
+    "timeRange": "2021-03 ~ 2026-03",
+    "xAxis": {
+      "label": "월",
+      "type": "time",
+      "tickValues": [
+        "2021-03",
+        "2022-03",
+        "2023-03",
+        "2024-03",
+        "2025-03",
+        "2026-03"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "US$",
+      "type": "numeric",
+      "tickValues": [
+        "1",
+        "5",
+        "9",
+        "13",
+        "17",
+        "21",
+        "25"
+      ],
+      "unit": "$",
+      "min": 0,
+      "max": 25,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "US$/256Gb",
+      "type": "numeric",
+      "tickValues": [
+        "0.7",
+        "1.9",
+        "3.1",
+        "4.3",
+        "5.5",
+        "6.7",
+        "7.9",
+        "9.1",
+        "10.3",
+        "11.5"
+      ],
+      "unit": "$",
+      "min": 0.7,
+      "max": 11.5,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "512Gb TLC 현물가",
+        "originalColor": "#3A3A3A",
+        "remakeColor": "#00E0A4",
+        "role": "primary"
+      },
+      {
+        "name": "256Gb TLC 현물가",
+        "originalColor": "#4F6F91",
+        "remakeColor": "#4AA8FF",
+        "role": "secondary"
+      }
+    ],
+    "axisDistortionWarning": "원본처럼 512Gb는 좌축, 256Gb는 우축으로 분리했다."
+  },
+  "data": {
+    "series": [
+      {
+        "name": "512Gb TLC 현물가",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2021-03",
+            "y": 4.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-04",
+            "y": 4.63,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-05",
+            "y": 4.67,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-06",
+            "y": 4.7,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-07",
+            "y": 4.73,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-08",
+            "y": 4.77,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-09",
+            "y": 4.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-10",
+            "y": 4.68,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-11",
+            "y": 4.57,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-12",
+            "y": 4.45,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-01",
+            "y": 4.33,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-02",
+            "y": 4.22,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-03",
+            "y": 4.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-04",
+            "y": 3.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-05",
+            "y": 3.6,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-06",
+            "y": 3.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-07",
+            "y": 3.1,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-08",
+            "y": 2.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-09",
+            "y": 2.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-10",
+            "y": 2.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-11",
+            "y": 2.1,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-12",
+            "y": 1.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-01",
+            "y": 1.6,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-02",
+            "y": 1.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-03",
+            "y": 1.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-04",
+            "y": 1.08,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-05",
+            "y": 1.07,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-06",
+            "y": 1.05,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-07",
+            "y": 1.03,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-08",
+            "y": 1.02,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-09",
+            "y": 1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-10",
+            "y": 1.47,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-11",
+            "y": 1.93,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-12",
+            "y": 2.4,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-01",
+            "y": 2.87,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-02",
+            "y": 3.33,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-03",
+            "y": 3.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-04",
+            "y": 3.83,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-05",
+            "y": 3.87,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-06",
+            "y": 3.9,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-07",
+            "y": 3.67,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-08",
+            "y": 3.43,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-09",
+            "y": 3.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-10",
+            "y": 3.08,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-11",
+            "y": 2.97,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-12",
+            "y": 2.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-01",
+            "y": 2.73,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-02",
+            "y": 2.62,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-03",
+            "y": 2.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-04",
+            "y": 2.75,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-05",
+            "y": 3,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-06",
+            "y": 3.25,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-07",
+            "y": 3.5,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-08",
+            "y": 3.75,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-09",
+            "y": 4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-10",
+            "y": 4.5,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-11",
+            "y": 5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-12",
+            "y": 9,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-01",
+            "y": 17,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-02",
+            "y": 22,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-03",
+            "y": 23.5,
+            "confidence": 0.7
+          }
+        ]
+      },
+      {
+        "name": "256Gb TLC 현물가",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "2021-03",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-04",
+            "y": 2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-05",
+            "y": 2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-06",
+            "y": 2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-07",
+            "y": 2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-08",
+            "y": 2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-09",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-10",
+            "y": 1.95,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-11",
+            "y": 1.9,
+            "confidence": 0.66
+          },
+          {
+            "x": "2021-12",
+            "y": 1.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-01",
+            "y": 1.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-02",
+            "y": 1.75,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-03",
+            "y": 1.7,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-04",
+            "y": 1.6,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-05",
+            "y": 1.5,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-06",
+            "y": 1.4,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-07",
+            "y": 1.3,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-08",
+            "y": 1.2,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-09",
+            "y": 1.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-10",
+            "y": 1.05,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-11",
+            "y": 1,
+            "confidence": 0.66
+          },
+          {
+            "x": "2022-12",
+            "y": 0.95,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-01",
+            "y": 0.9,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-02",
+            "y": 0.85,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-03",
+            "y": 0.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-04",
+            "y": 0.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-05",
+            "y": 0.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-06",
+            "y": 0.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-07",
+            "y": 0.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-08",
+            "y": 0.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-09",
+            "y": 0.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-10",
+            "y": 0.97,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-11",
+            "y": 1.13,
+            "confidence": 0.66
+          },
+          {
+            "x": "2023-12",
+            "y": 1.3,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-01",
+            "y": 1.47,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-02",
+            "y": 1.63,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-03",
+            "y": 1.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-04",
+            "y": 1.83,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-05",
+            "y": 1.87,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-06",
+            "y": 1.9,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-07",
+            "y": 1.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-08",
+            "y": 1.7,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-09",
+            "y": 1.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-10",
+            "y": 1.53,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-11",
+            "y": 1.47,
+            "confidence": 0.66
+          },
+          {
+            "x": "2024-12",
+            "y": 1.4,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-01",
+            "y": 1.33,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-02",
+            "y": 1.27,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-03",
+            "y": 1.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-04",
+            "y": 1.35,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-05",
+            "y": 1.5,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-06",
+            "y": 1.65,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-07",
+            "y": 1.8,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-08",
+            "y": 1.95,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-09",
+            "y": 2.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-10",
+            "y": 2.45,
+            "confidence": 0.66
+          },
+          {
+            "x": "2025-11",
+            "y": 2.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-12",
+            "y": 4.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-01",
+            "y": 7.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-02",
+            "y": 10.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-03",
+            "y": 11.3,
+            "confidence": 0.7
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 122,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본은 숫자표가 아니라 압축된 이미지 그래프라 월별 값은 source-visible 근사값이다.",
+        "원본은 512Gb 좌축, 256Gb 우축 이중축이지만 리메이크는 방향성 비교를 위해 단일 축으로 단순화했다."
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.86,
+      "description": "2023년 저점 이후 완만한 회복을 거쳐 2025년 말부터 급등했다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "extreme",
+      "coefficient": 1.05,
+      "description": "대부분 기간은 낮은 가격대였지만 마지막 6개월 변동폭이 압도적으로 크다."
+    },
+    "changeRates": [
+      {
+        "period": "2023-03 to 2026-03",
+        "percentChange": 2036.4,
+        "absoluteChange": 22.4,
+        "from": 1.1,
+        "to": 23.5
+      }
+    ],
+    "correlations": [
+      {
+        "seriesA": "512Gb TLC 현물가",
+        "seriesB": "256Gb TLC 현물가",
+        "coefficient": 0.95,
+        "description": "두 용량 모두 같은 방향으로 급등했다."
+      }
+    ],
+    "summary": {
+      "max": {
+        "value": 23.5,
+        "at": "2026-03"
+      },
+      "min": {
+        "value": 0.8,
+        "at": "2023-03"
+      },
+      "average": 3.04,
+      "median": 2,
+      "range": 22.7
+    }
+  },
+  "patterns": {
+    "points": [
+      {
+        "type": "trough",
+        "dataPoint": {
+          "x": "2023-03",
+          "y": 1.1
+        },
+        "seriesName": "512Gb TLC 현물가",
+        "description": "장기 저점",
+        "importance": "high",
+        "reasoning": "원본 그래프에서 2023년 전후가 가장 낮은 가격 구간이다."
+      },
+      {
+        "type": "acceleration",
+        "dataPoint": {
+          "x": "2026-01",
+          "y": 17
+        },
+        "seriesName": "512Gb TLC 현물가",
+        "description": "급등 시작",
+        "importance": "critical",
+        "reasoning": "원본 그래프에서 급등은 2025년 말보다 2026년 초 오른쪽 끝에 더 집중되어 있다."
+      },
+      {
+        "type": "peak",
+        "dataPoint": {
+          "x": "2026-03",
+          "y": 23.5
+        },
+        "seriesName": "512Gb TLC 현물가",
+        "description": "최고 구간",
+        "importance": "critical",
+        "reasoning": "원본 오른쪽 끝 Mar-26이 최고 구간이다."
+      }
+    ],
+    "crossovers": [],
+    "supportResistance": [],
+    "cyclicalPattern": "장기간 침체 후 공급 부족성 급등으로 보이는 후반부 집중 상승 패턴이다."
+  },
+  "narrative": {
+    "headMessage": "NAND도 수직 상승 구간",
+    "subMessage": "2023년 저점 이후 2026년 가격 레벨이 크게 바뀌었다",
+    "headline": "NAND 현물가격은 2023년 저점 이후 2026년 들어 급격히 재평가됐다",
+    "summary": "원본 오른쪽 그래프의 핵심은 NAND 가격이 오랜 저점 구간을 지나 2025년 말부터 거의 수직으로 올랐다는 점이다. DRAM뿐 아니라 NAND에서도 메모리 가격 압력이 동시에 커지는 흐름이다.",
+    "story": "NAND 가격은 2021~2023년 사이 하락했고, 2024~2025년에도 완만한 회복에 그쳤다. 그러나 2025년 말부터 상승 속도가 빨라지며 2026년 초에는 과거 박스권을 크게 벗어났다.",
+    "keyTakeaways": [
+      "2023년 전후가 장기 저점이었다",
+      "2025년 말부터 상승 기울기가 급격히 커졌다",
+      "DRAM과 NAND가 함께 오르면 서버 원가 압력이 더 넓어진다"
+    ],
+    "questionsRaised": [
+      "NAND 급등이 SSD와 서버 저장장치 비용에 얼마나 반영될까?",
+      "가격 급등이 재고 사이클인지 구조적 수요 변화인지 구분해야 한다"
+    ],
+    "viewerAction": "메모리 업황을 볼 때 DRAM만 보지 말고 NAND 가격 재평가까지 함께 확인해야 한다.",
+    "contextualNotes": [
+      "원본 Figure 9는 512Gb를 좌축, 256Gb를 우축으로 표시한다.",
+      "리메이크는 같은 방향의 급등 메시지를 더 읽기 쉽게 한 장으로 단순화했다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "point_label",
+        "position": {
+          "x": "2026-03",
+          "y": 23.5
+        },
+        "text": "2026-03 피크",
+        "style": "emphasis",
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "2026-01",
+        "toX": "2026-03",
+        "color": "rgba(194, 65, 12, 0.10)",
+        "label": "수직 상승",
+        "description": "NAND 가격이 원본 오른쪽 끝에서 급격히 재평가된 구간"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#4AA8FF"
+      ],
+      "positive": "#FF6A5F",
+      "negative": "#4AA8FF",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-03",
+        "y": 23.5
+      },
+      "reason": "NAND 512Gb 현물가가 원본 그래프의 최고 구간에 도달",
+      "displayText": "~$23.5"
+    },
+    "densityLevel": "balanced"
+  }
+}

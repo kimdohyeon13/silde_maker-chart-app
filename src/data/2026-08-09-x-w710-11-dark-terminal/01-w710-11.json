@@ -1,0 +1,264 @@
+{
+  "id": "w710-11",
+  "mode": "faithful",
+  "sourceImage": "input/w7-10-11.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "1년 사이에 성장의 주인공이 바뀌었다",
+    "preservedElements": [
+      "4개 항목의 순서와 값: Data center FY25 44.8, Data center FY26 107.7, CATV FY25 56.0, CATV FY26 80.6",
+      "차트 종류 bar 와 0 기준축",
+      "눈금 0, 20, 40, 60, 80, 100, 120",
+      "단위 $M",
+      "원본 출처 줄의 기관·문서·날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 옮김 (X 발행본은 영어)",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 장표의 수치·순서·축을 그대로 두고 표시 문자열만 영어로 옮겼습니다. 숫자는 원본에 인쇄된 값입니다.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026"
+  },
+  "allowedTransformations": [
+    "adjust-fonts",
+    "adjust-spacing",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "bar 4개, 0 기준축, 눈금 0~120, 전 항목 값 라벨, 강조 최대값 1곳를 먼저 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 장표에 인쇄된 source-visible 수치이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "데이터 충실도에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "단일 시리즈, 4개 항목, $M 단위, 원본 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "emphasis",
+    "numberLocale": "en",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "borderColor": "#24433D",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "In one year, the growth driver changed hands",
+    "subtitle": "Data center $44.8M to $107.7M (+140%). CATV $56.0M to $80.6M",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026",
+    "timeRange": "Q2 2025 vs Q2 2026",
+    "xAxis": {
+      "label": "Business and period",
+      "type": "category",
+      "tickValues": [
+        "Data center FY25",
+        "Data center FY26",
+        "CATV FY25",
+        "CATV FY26"
+      ],
+      "displayTickValues": [
+        "Data center FY25",
+        "Data center FY26",
+        "CATV FY25",
+        "CATV FY26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "Revenue ($M)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue ($M)",
+        "data": [
+          {
+            "x": "Data center FY25",
+            "y": 44.8,
+            "confidence": 0.95
+          },
+          {
+            "x": "Data center FY26",
+            "y": 107.7,
+            "confidence": 0.95
+          },
+          {
+            "x": "CATV FY25",
+            "y": 56,
+            "confidence": 0.95
+          },
+          {
+            "x": "CATV FY26",
+            "y": 80.6,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본 그대로 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "최대 대 최소",
+        "percentChange": 140.4,
+        "absoluteChange": 62.9,
+        "from": 44.8,
+        "to": 107.7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 107.7,
+        "at": "Data center FY26"
+      },
+      "min": {
+        "value": 44.8,
+        "at": "Data center FY25"
+      },
+      "average": 72.275,
+      "median": 80.6,
+      "range": 62.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "In one year, the growth driver changed hands",
+    "subMessage": "Data center $44.8M to $107.7M (+140%). CATV $56.0M to $80.6M",
+    "headline": "In one year, the growth driver changed hands",
+    "summary": "Data center $44.8M to $107.7M (+140%). CATV $56.0M to $80.6M",
+    "story": "원본 장표의 값과 배치를 그대로 두고 표시 문자열만 영어로 옮겼습니다.",
+    "keyTakeaways": [
+      "Data center $44.8M to $107.7M (+140%). CATV $56.0M to $80.6M",
+      "Data center FY26 is the largest at 107.7",
+      "Values are source-visible readings from the original slide"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare Data center FY26 against the rest of the items.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Data center FY26",
+        "y": 107.7
+      },
+      "displayText": "107.7",
+      "reason": "Data center $44.8M to $107.7M (+140%). CATV $56.0M to $80.6M"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,849 @@
+{
+  "id": "ism-services-manufacturing-survey-table",
+  "sourceImage": "input/source-04-ism-services-detail-table.png",
+  "analyzedAt": "2026-07-08T21:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "ISM 서비스업/제조업 세부지수 비교, 2026년 6월",
+    "preservedElements": [
+      "title",
+      "source",
+      "rows",
+      "columns",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-fonts",
+      "adjust-spacing",
+      "adjust-density"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표 셀에 직접 보이는 값을 전사했습니다.",
+    "sourceAttribution": "Source: Institute for Supply Management | exact",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-exact-values",
+      "label": "표시값 직접 전사",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 28,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "16px 24px 2px",
+    "contentPadding": "4px 10px 4px",
+    "sourcePadding": "0 24px 10px",
+    "squareEdges": true
+  },
+  "structure": {
+    "title": "ISM 서비스업/제조업 세부지수 비교, 2026년 6월",
+    "subtitle": "표 셀 직접 전사값 | Percent Point Change는 p 변화",
+    "source": "Source: Institute for Supply Management | exact"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "index",
+        "label": "Index",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "s_jun",
+        "label": "Services\nJun",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "s_may",
+        "label": "Services\nMay",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "s_chg",
+        "label": "Services\np",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "direction",
+        "label": "Direction",
+        "dataType": "text",
+        "width": "11%",
+        "align": "center"
+      },
+      {
+        "key": "rate",
+        "label": "Rate",
+        "dataType": "text",
+        "width": "13%",
+        "align": "center"
+      },
+      {
+        "key": "trend",
+        "label": "Trend\nMonths",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "m_jun",
+        "label": "Mfg\nJun",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m_may",
+        "label": "Mfg\nMay",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m_chg",
+        "label": "Mfg\np",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Services PMI / Manufacturing PMI",
+            "displayValue": "Services PMI / Manufacturing PMI"
+          },
+          "s_jun": {
+            "value": 54,
+            "displayValue": "54"
+          },
+          "s_may": {
+            "value": 54.5,
+            "displayValue": "54.5"
+          },
+          "s_chg": {
+            "value": -0.5,
+            "displayValue": "-0.5",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": 53.3,
+            "displayValue": "53.3"
+          },
+          "m_may": {
+            "value": 54,
+            "displayValue": "54"
+          },
+          "m_chg": {
+            "value": -0.7,
+            "displayValue": "-0.7",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Business Activity / Production",
+            "displayValue": "Business Activity / Production"
+          },
+          "s_jun": {
+            "value": 55.4,
+            "displayValue": "55.4"
+          },
+          "s_may": {
+            "value": 57.7,
+            "displayValue": "57.7"
+          },
+          "s_chg": {
+            "value": -2.3,
+            "displayValue": "-2.3",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": 52.2,
+            "displayValue": "52.2"
+          },
+          "m_may": {
+            "value": 54.3,
+            "displayValue": "54.3"
+          },
+          "m_chg": {
+            "value": -2.1,
+            "displayValue": "-2.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "New Orders",
+            "displayValue": "New Orders"
+          },
+          "s_jun": {
+            "value": 55.1,
+            "displayValue": "55.1"
+          },
+          "s_may": {
+            "value": 57.3,
+            "displayValue": "57.3"
+          },
+          "s_chg": {
+            "value": -2.2,
+            "displayValue": "-2.2",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 13,
+            "displayValue": "13"
+          },
+          "m_jun": {
+            "value": 56,
+            "displayValue": "56"
+          },
+          "m_may": {
+            "value": 56.8,
+            "displayValue": "56.8"
+          },
+          "m_chg": {
+            "value": -0.8,
+            "displayValue": "-0.8",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Employment",
+            "displayValue": "Employment"
+          },
+          "s_jun": {
+            "value": 51.2,
+            "displayValue": "51.2"
+          },
+          "s_may": {
+            "value": 47.9,
+            "displayValue": "47.9"
+          },
+          "s_chg": {
+            "value": 3.3,
+            "displayValue": "+3.3",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "From Contracting",
+            "displayValue": "From Contracting"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 49.7,
+            "displayValue": "49.7"
+          },
+          "m_may": {
+            "value": 48.6,
+            "displayValue": "48.6"
+          },
+          "m_chg": {
+            "value": 1.1,
+            "displayValue": "+1.1",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Supplier Deliveries",
+            "displayValue": "Supplier Deliveries"
+          },
+          "s_jun": {
+            "value": 54.4,
+            "displayValue": "54.4"
+          },
+          "s_may": {
+            "value": 55.2,
+            "displayValue": "55.2"
+          },
+          "s_chg": {
+            "value": -0.8,
+            "displayValue": "-0.8",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Slowing",
+            "displayValue": "Slowing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 19,
+            "displayValue": "19"
+          },
+          "m_jun": {
+            "value": 57.4,
+            "displayValue": "57.4"
+          },
+          "m_may": {
+            "value": 60.6,
+            "displayValue": "60.6"
+          },
+          "m_chg": {
+            "value": -3.2,
+            "displayValue": "-3.2",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Inventories",
+            "displayValue": "Inventories"
+          },
+          "s_jun": {
+            "value": 51.2,
+            "displayValue": "51.2"
+          },
+          "s_may": {
+            "value": 62.5,
+            "displayValue": "62.5"
+          },
+          "s_chg": {
+            "value": -11.3,
+            "displayValue": "-11.3",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 5,
+            "displayValue": "5"
+          },
+          "m_jun": {
+            "value": 51.4,
+            "displayValue": "51.4"
+          },
+          "m_may": {
+            "value": 49.9,
+            "displayValue": "49.9"
+          },
+          "m_chg": {
+            "value": 1.5,
+            "displayValue": "+1.5",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Prices",
+            "displayValue": "Prices"
+          },
+          "s_jun": {
+            "value": 67.7,
+            "displayValue": "67.7"
+          },
+          "s_may": {
+            "value": 71.3,
+            "displayValue": "71.3"
+          },
+          "s_chg": {
+            "value": -3.6,
+            "displayValue": "-3.6",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Increasing",
+            "displayValue": "Increasing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 109,
+            "displayValue": "109"
+          },
+          "m_jun": {
+            "value": 73,
+            "displayValue": "73"
+          },
+          "m_may": {
+            "value": 82.1,
+            "displayValue": "82.1"
+          },
+          "m_chg": {
+            "value": -9.1,
+            "displayValue": "-9.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Backlog of Orders",
+            "displayValue": "Backlog of Orders"
+          },
+          "s_jun": {
+            "value": 54.9,
+            "displayValue": "54.9"
+          },
+          "s_may": {
+            "value": 51.3,
+            "displayValue": "51.3"
+          },
+          "s_chg": {
+            "value": 3.6,
+            "displayValue": "+3.6",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Faster",
+            "displayValue": "Faster"
+          },
+          "trend": {
+            "value": 5,
+            "displayValue": "5"
+          },
+          "m_jun": {
+            "value": 50.5,
+            "displayValue": "50.5"
+          },
+          "m_may": {
+            "value": 52.2,
+            "displayValue": "52.2"
+          },
+          "m_chg": {
+            "value": -1.7,
+            "displayValue": "-1.7",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "New Export Orders",
+            "displayValue": "New Export Orders"
+          },
+          "s_jun": {
+            "value": 50.4,
+            "displayValue": "50.4"
+          },
+          "s_may": {
+            "value": 50,
+            "displayValue": "50"
+          },
+          "s_chg": {
+            "value": 0.4,
+            "displayValue": "+0.4",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "From Unchanged",
+            "displayValue": "From Unchanged"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 48.5,
+            "displayValue": "48.5"
+          },
+          "m_may": {
+            "value": 50.6,
+            "displayValue": "50.6"
+          },
+          "m_chg": {
+            "value": -2.1,
+            "displayValue": "-2.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Imports",
+            "displayValue": "Imports"
+          },
+          "s_jun": {
+            "value": 49.4,
+            "displayValue": "49.4"
+          },
+          "s_may": {
+            "value": 51.1,
+            "displayValue": "51.1"
+          },
+          "s_chg": {
+            "value": -1.7,
+            "displayValue": "-1.7",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Contracting",
+            "displayValue": "Contracting"
+          },
+          "rate": {
+            "value": "From Growing",
+            "displayValue": "From Growing"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 52.9,
+            "displayValue": "52.9"
+          },
+          "m_may": {
+            "value": 53,
+            "displayValue": "53"
+          },
+          "m_chg": {
+            "value": -0.1,
+            "displayValue": "-0.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Inventory Sentiment",
+            "displayValue": "Inventory Sentiment"
+          },
+          "s_jun": {
+            "value": 52.6,
+            "displayValue": "52.6"
+          },
+          "s_may": {
+            "value": 55.2,
+            "displayValue": "55.2"
+          },
+          "s_chg": {
+            "value": -2.6,
+            "displayValue": "-2.6",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Too High",
+            "displayValue": "Too High"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 38,
+            "displayValue": "38"
+          },
+          "m_jun": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_may": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_chg": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Customers' Inventories",
+            "displayValue": "Customers' Inventories"
+          },
+          "s_jun": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "s_may": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "s_chg": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "direction": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "rate": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "trend": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_jun": {
+            "value": 42.3,
+            "displayValue": "42.3"
+          },
+          "m_may": {
+            "value": 42.7,
+            "displayValue": "42.7"
+          },
+          "m_chg": {
+            "value": -0.4,
+            "displayValue": "-0.4",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "index": {
+            "value": "OVERALL ECONOMY",
+            "displayValue": "OVERALL ECONOMY"
+          },
+          "s_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_chg": {
+            "value": "",
+            "displayValue": ""
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 73,
+            "displayValue": "73"
+          },
+          "m_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_chg": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "index": {
+            "value": "Services Sector",
+            "displayValue": "Services Sector"
+          },
+          "s_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_chg": {
+            "value": "",
+            "displayValue": ""
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "Growing"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "Slower"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_chg": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 34,
+      "cellPadding": "7px 10px",
+      "lineHeight": 1.25,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "14px",
+        "body": "14px",
+        "total": "15px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "13px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "ISM 서비스업/제조업 세부지수 비교, 2026년 6월",
+    "subMessage": "표 셀 직접 전사값 | Percent Point Change는 p 변화",
+    "headline": "ISM 서비스업/제조업 세부지수 비교, 2026년 6월",
+    "summary": "표 셀 직접 전사값 | Percent Point Change는 p 변화",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "표 셀 직접 전사값 | Percent Point Change는 p 변화"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "Source: Institute for Supply Management | exact"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "exact"
+    },
+    "densityLevel": "balanced"
+  }
+}

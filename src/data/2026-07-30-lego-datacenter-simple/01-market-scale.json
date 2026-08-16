@@ -1,0 +1,200 @@
+{
+  "id": "01-market-scale",
+  "sourceImage": "input/01-market-scale.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "추적 중인 프로젝트 규모와 2028년 말 예상 침투율",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis (2026-07-29), 각 사 공개자료"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 43,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 14,
+    "fontFamily": "\"Paperlogy\", \"Paperlogy 900\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 40px 0",
+    "contentPadding": "8px 28px 6px",
+    "sourcePadding": "0 40px 14px",
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "headerVariant": "stacked",
+    "contentBorder": false,
+    "squareEdges": true,
+    "canvasHeight": 513,
+    "chartHeight": 286,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "\"Paperlogy\", \"Paperlogy 900\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#1458D4",
+    "gridMode": "solid",
+    "barColorMode": "sign"
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "모듈형 데이터센터는 이미 큰 시장이다",
+    "subtitle": "추적 중인 프로젝트 규모와 2028년 말 예상 침투율",
+    "source": "자료: SemiAnalysis (2026-07-29), 각 사 공개자료"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "62%"
+      },
+      {
+        "key": "value",
+        "label": "값",
+        "dataType": "text",
+        "align": "right",
+        "width": "38%"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "추적 중인 프로젝트"
+          },
+          "value": {
+            "value": "61GW+"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "2028년 말 예상 침투율"
+          },
+          "value": {
+            "value": "30%+"
+          }
+        }
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "추적 사이트"
+          },
+          "value": {
+            "value": "1,000곳+"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 52,
+      "cellPadding": "12px 14px",
+      "lineHeight": 1.35,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "groupHeaderTone": "plain",
+      "columnGroupTone": "plain",
+      "columnRules": false,
+      "sectionRules": false,
+      "accentColor": "#1458D4",
+      "rowRuleColor": "#D9DEE5",
+      "fontFamily": "\"Paperlogy\", \"Paperlogy 900\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 300,
+        "numeric": 700,
+        "rowHeader": 600,
+        "header": 700,
+        "total": 700,
+        "groupHeader": 700,
+        "columnGroup": 700
+      },
+      "fontSize": {
+        "body": 19,
+        "header": 17,
+        "total": 18,
+        "badge": 12
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "모듈형 데이터센터는 이미 큰 시장이다",
+    "subMessage": "추적 중인 프로젝트 규모와 2028년 말 예상 침투율",
+    "headline": "모듈형 데이터센터는 이미 큰 시장이다",
+    "summary": "추적 중인 프로젝트 규모와 2028년 말 예상 침투율",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "추적 중인 프로젝트 규모와 2028년 말 예상 침투율",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis (2026-07-29), 각 사 공개자료"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "모듈형 데이터센터는 이미 큰 ",
+      "reason": "추적 중인 프로젝트 규모와 2028년 말 예상 침투율"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#667085"
+      ],
+      "positive": "#1458D4",
+      "negative": "#1458D4",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

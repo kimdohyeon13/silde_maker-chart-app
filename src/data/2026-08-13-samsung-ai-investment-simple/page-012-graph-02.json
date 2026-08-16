@@ -1,0 +1,102 @@
+{
+  "id": "page-012-graph-02",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/13-page_012_graph_02.png",
+  "analyzedAt": "2026-08-13T22:42:00+09:00",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: Bloomberg",
+    "mustPreserve": ["2025년부터 2027년까지 연초 예상과 실제·현재 수치 6개", "277·416·536·789·603·1076 값", "10억 달러 단위와 상향률"],
+    "changedElements": ["긴 제목을 빅테크 투자 지속 메시지로 단순화", "X축을 연도별 예상·실제로 줄임", "상향률은 현재 막대 위에만 짧게 표시"]
+  },
+  "allowedTransformations": ["adjust-title", "adjust-colors", "adjust-fonts", "adjust-spacing", "adjust-labels"],
+  "qualityChecks": [
+    { "id": "source-visible", "status": "pass", "detail": "원본 막대에 인쇄된 6개 값과 50%·47%·78% 상향률을 보존했습니다." },
+    { "id": "layout-plan", "status": "pass", "detail": "6개 막대를 유지하고 연도와 구분을 두 줄로 분리해 축 라벨 충돌을 막습니다." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "fontFamily": "Paperlogy",
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "barColorMode": "emphasis"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "빅테크 AI 투자는 2027년에도 늘어납니다",
+    "subtitle": "하이퍼스케일러 설비투자, 연초 예상과 실제·현재 비교",
+    "source": "자료: Bloomberg",
+    "xAxis": { "label": "", "type": "category", "tickValues": ["2025", "2026", "2027"], "displayTickValues": ["2025", "2026", "2027"] },
+    "yAxis": { "label": "설비투자", "type": "numeric", "tickValues": ["0", "200", "400", "600", "800", "1000", "1200"], "unit": "10억 달러", "min": 0, "max": 1200, "startsAtZero": true, "isLogScale": false },
+    "legend": [
+      { "name": "연초 예상", "originalColor": "#D6D6D6", "remakeColor": "#C7CDD4" },
+      { "name": "실제·현재", "originalColor": "#1677FF", "remakeColor": "#1677FF" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연초 예상",
+        "renderAs": "bar",
+        "seriesKind": "normal",
+        "data": [
+          { "x": "2025", "y": 277, "confidence": 0.9 },
+          { "x": "2026", "y": 536, "confidence": 0.9 },
+          { "x": "2027", "y": 603, "confidence": 0.9 }
+        ]
+      },
+      {
+        "name": "실제·현재",
+        "renderAs": "bar",
+        "seriesKind": "normal",
+        "data": [
+          { "x": "2025", "y": 416, "confidence": 0.9 },
+          { "x": "2026", "y": 789, "confidence": 0.9 },
+          { "x": "2027", "y": 1076, "confidence": 0.9 }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": { "overallConfidence": 0.9, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "excellent" }
+  },
+  "statistics": { "summary": {}, "changeRates": [] },
+  "patterns": { "trend": "연초 예상보다 실제·현재 설비투자 추정치가 매년 높아졌습니다.", "supportResistance": [] },
+  "narrative": {
+    "headMessage": "빅테크 AI 투자는 2027년에도 늘어납니다",
+    "subMessage": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "headline": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "summary": "하이퍼스케일러 설비투자 추정치는 해마다 연초 예상보다 높아졌습니다.",
+    "story": "AI 인프라 수요가 이어지면서 빅테크의 투자 규모도 계속 커지고 있습니다.",
+    "keyTakeaways": ["2027년 현재 추정치는 1조 760억 달러입니다."],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "2027", "y": 1076, "displayText": "1조 760억 달러" },
+    "annotations": [
+      { "text": "+50%", "position": { "x": "2025", "y": 500 }, "importance": "high" },
+      { "text": "+47%", "position": { "x": "2026", "y": 880 }, "importance": "high" },
+      { "text": "+78%", "position": { "x": "2027", "y": 1160 }, "importance": "high" }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1677FF", "secondary": ["#C7CDD4"], "positive": "#16A34A", "negative": "#D92D20", "accent": "#1677FF", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  }
+}

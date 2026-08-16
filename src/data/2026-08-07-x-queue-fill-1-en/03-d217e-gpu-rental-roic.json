@@ -1,0 +1,250 @@
+{
+  "id": "03-d217e-gpu-rental-roic",
+  "mode": "faithful",
+  "sourceImage": "input/dib-217-06.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "도표 2: 하이퍼스케일러 GPU 임대, 증분 마진 67%·ROIC 31%",
+    "originalMessage": "GPU 임대 사업의 매출/GW $22.9bn에서 세후 영업이익 $12.1bn, ROIC 약 31%",
+    "preservedElements": [
+      "매출/GW $22.9bn, 증분 EBIT $15.3bn, 세금 $3.2bn, NOPAT $12.1bn",
+      "증분 마진 67%와 ROIC 31% 주석",
+      "$bn/GW 단위와 0 기준 세로 막대",
+      "GB300 약 41만 개·가동률 75%·시간당 $8.50 가정",
+      "Morgan Stanley Research 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 텍스트를 영어로 번역",
+      "스택 구성 대신 핵심 4개 막대로 정리",
+      "회색 기반에 NOPAT 막대 하나만 강조",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 도표 2의 인쇄된 값만 사용했습니다.",
+    "sourceAttribution": "Source: Company data, Morgan Stanley Research estimates"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "22.9 / 15.3 / 3.2 / 12.1은 원본 도표에 인쇄된 값입니다."
+    },
+    {
+      "id": "no-datapoint-color",
+      "label": "데이터 포인트 색상 미지정",
+      "status": "pass",
+      "detail": "data.series[].data[]에는 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 확인",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "GPU rental: $22.9bn in, $12.1bn out",
+    "subtitle": "Per gigawatt, per year: 67% incremental margin, 31% ROIC",
+    "source": "Source: Company data, Morgan Stanley Research estimates · source-visible",
+    "timeRange": "Annualised, per gigawatt",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Revenue",
+        "Incremental EBIT",
+        "Tax",
+        "NOPAT"
+      ],
+      "displayTickValues": [
+        "Revenue",
+        "Incremental EBIT",
+        "Tax",
+        "NOPAT"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Per gigawatt ($bn)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 25
+    },
+    "legend": [
+      {
+        "name": "Hyperscaler GPU rental (IaaS)",
+        "role": "primary",
+        "originalColor": "#1462A6",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Hyperscaler GPU rental (IaaS)",
+        "data": [
+          {
+            "x": "Revenue",
+            "y": 22.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "Incremental EBIT",
+            "y": 15.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "Tax",
+            "y": 3.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "NOPAT",
+            "y": 12.1,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.4,
+      "description": "Revenue steps down to after-tax operating profit.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.48,
+      "description": "A four-step bridge rather than a time series."
+    },
+    "changeRates": [
+      {
+        "period": "Revenue to NOPAT",
+        "percentChange": -47.2,
+        "absoluteChange": -10.8,
+        "from": 22.9,
+        "to": 12.1
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 22.9,
+        "at": "Revenue"
+      },
+      "min": {
+        "value": 3.2,
+        "at": "Tax"
+      },
+      "average": 13.375,
+      "median": 13.7,
+      "range": 19.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "GPU rental: $22.9bn in, $12.1bn out",
+    "subMessage": "Per gigawatt, per year: 67% incremental margin, 31% ROIC",
+    "headline": "GPU rental: $22.9bn in, $12.1bn out",
+    "summary": "One gigawatt rented out as raw compute returns $12.1bn after tax, a 31% ROIC.",
+    "story": "This is the lower of the two ways an operator can run the same hardware, and it still returns 31% on the capital in the building.",
+    "keyTakeaways": [
+      "Revenue $22.9bn per gigawatt, NOPAT $12.1bn",
+      "Incremental margin 67%, ROIC 31%",
+      "Assumes about 410,000 GB300 units, 75% utilisation, $8.50 per GPU-hour"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Set the 31% return against the cost of the money that funded the building.",
+    "contextualNotes": [
+      "Source: Company data, Morgan Stanley Research estimates",
+      "Data state: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "NOPAT",
+      "y": 12.1,
+      "displayText": "12.1"
+    },
+    "densityLevel": "focused"
+  }
+}

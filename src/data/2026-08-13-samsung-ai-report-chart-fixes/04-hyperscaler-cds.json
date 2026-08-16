@@ -1,0 +1,42 @@
+{
+  "id": "hyperscaler-cds",
+  "sourceImage": "input/15-page_013_graph_02.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "line",
+    "title": "하이퍼스케일러 5년 CDS 프리미엄 추이",
+    "source": "자료: Bloomberg, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": ["2023-01", "2024-01", "2025-01", "2025-07", "2026-01", "2026-07"],
+      "displayTickValues": ["2023.01", "2024.01", "2025.01", "2025.07", "2026.01", "2026.07"]
+    },
+    "yAxis": { "label": "5년 CDS 프리미엄", "type": "numeric", "tickValues": ["0", "50", "100", "150", "200", "250"], "unit": "bp", "min": 0, "max": 250, "startsAtZero": true, "isLogScale": false },
+    "legend": [
+      { "name": "오라클", "originalColor": "#1677F0", "remakeColor": "#1677F0" },
+      { "name": "메타", "originalColor": "#F03E68", "remakeColor": "#F03E68" },
+      { "name": "알파벳", "originalColor": "#0FB4C4", "remakeColor": "#0FB4C4" },
+      { "name": "아마존", "originalColor": "#84B547", "remakeColor": "#84B547" },
+      { "name": "마이크로소프트", "originalColor": "#F6B92E", "remakeColor": "#F6B92E" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "오라클", "data": [{"x":"2023-01","y":80,"confidence":0.8},{"x":"2024-01","y":45,"confidence":0.8},{"x":"2025-01","y":35,"confidence":0.8},{"x":"2025-07","y":50,"confidence":0.8},{"x":"2026-01","y":150,"confidence":0.8},{"x":"2026-07","y":205,"confidence":0.8}] },
+      { "name": "메타", "data": [{"x":"2023-01","y":35,"confidence":0.8},{"x":"2024-01","y":28,"confidence":0.8},{"x":"2025-01","y":22,"confidence":0.8},{"x":"2025-07","y":28,"confidence":0.8},{"x":"2026-01","y":60,"confidence":0.8},{"x":"2026-07","y":90,"confidence":0.8}] },
+      { "name": "알파벳", "data": [{"x":"2023-01","y":45,"confidence":0.8},{"x":"2024-01","y":30,"confidence":0.8},{"x":"2025-01","y":25,"confidence":0.8},{"x":"2025-07","y":28,"confidence":0.8},{"x":"2026-01","y":45,"confidence":0.8},{"x":"2026-07","y":60,"confidence":0.8}] },
+      { "name": "아마존", "data": [{"x":"2023-01","y":50,"confidence":0.8},{"x":"2024-01","y":30,"confidence":0.8},{"x":"2025-01","y":25,"confidence":0.8},{"x":"2025-07","y":25,"confidence":0.8},{"x":"2026-01","y":40,"confidence":0.8},{"x":"2026-07","y":55,"confidence":0.8}] },
+      { "name": "마이크로소프트", "data": [{"x":"2023-01","y":40,"confidence":0.8},{"x":"2024-01","y":18,"confidence":0.8},{"x":"2025-01","y":17,"confidence":0.8},{"x":"2025-07","y":20,"confidence":0.8},{"x":"2026-01","y":35,"confidence":0.8},{"x":"2026-07","y":48,"confidence":0.8}] }
+    ]
+  },
+  "statistics": { "summary": { "min": 17, "max": 205, "average": 51, "latest": 205 }, "changeRates": [] },
+  "narrative": { "headMessage": "하이퍼스케일러 5년 CDS 프리미엄 추이", "subMessage": "오라클 프리미엄이 2025년 하반기부터 빠르게 상승", "headline": "하이퍼스케일러 5년 CDS 프리미엄 추이", "keyTakeaways": ["오라클 약 205bp"], "sentiment": "neutral" },
+  "emphasis": { "focusPoint": { "x": "2026-07", "y": 205, "displayText": "오라클 약 205bp" }, "annotations": [], "highlightZones": [], "trendLines": [] },
+  "patterns": { "trend": "오라클 CDS 프리미엄이 2025년 하반기 이후 급등한다.", "supportResistance": [] },
+  "preserveIntent": { "originalTitle": "하이퍼스케일러 5년 CDS 프리미엄 추이", "dataFidelity": "source-visible", "notes": "5개 기업과 실제 데이터 키에 맞는 X축 눈금을 보존했다." },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": { "titlePreserved": true, "seriesCountMatches": true, "sourcePreserved": true, "xAxisLabelsMatch": true },
+  "exportOptions": { "canvasHeight": 540, "fontFamily": "Paperlogy", "titleFontWeight": 900, "subtitleFontWeight": 300, "chartHeight": 350, "compactChartMargins": true, "showDirectLabels": false }
+}

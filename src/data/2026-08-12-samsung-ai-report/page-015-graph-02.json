@@ -1,0 +1,169 @@
+{
+  "id": "page-015-graph-02",
+  "sourceImage": "19-page_015_graph_02.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  },
+  "preserveIntent": {
+    "originalTitle": "앤스로픽 매출 총이익률 전망",
+    "dataFidelity": "source-visible",
+    "notes": "원본 표기값을 직접 전사"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "매출과 매출총이익률 두 축을 보존했다."
+    }
+  ],
+  "structure": {
+    "chartType": "combo",
+    "title": "앤스로픽 매출 총이익률 전망",
+    "source": "자료: TickerTrend, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "1H2026"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "min": 0,
+      "max": 18,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "매출총이익률",
+      "type": "numeric",
+      "tickValues": [
+        "-100",
+        "-60",
+        "-20",
+        "20",
+        "60",
+        "100"
+      ],
+      "min": -100,
+      "max": 100,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "매출액 (좌측)",
+        "originalColor": "#C8CCD6",
+        "remakeColor": "#C8CCD6"
+      },
+      {
+        "name": "매출총이익률 (우측)",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출액 (좌측)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2024",
+            "y": 0.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 4.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "1H2026",
+            "y": 15.7,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "name": "매출총이익률 (우측)",
+        "renderAs": "line",
+        "data": [
+          {
+            "x": "2024",
+            "y": -94,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 39,
+            "confidence": 0.9
+          },
+          {
+            "x": "1H2026",
+            "y": 65,
+            "confidence": 0.9
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "매출 증가와 함께 매출총이익률이 개선된다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "앤스로픽 매출 총이익률 전망",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "1H2026 매출 15.7, GPM 65%"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "id": "06-gb200-vs-gb300",
+  "mode": "faithful",
+  "sourceImage": "input/07_fable5_gb200_gb300.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "같은 모델을 GB200에서 서빙하면 MW당 7,340만 달러, GB300에서는 9,970만 달러다",
+    "preservedElements": [
+      "두 플랫폼의 값 73.4와 99.7",
+      "100만 달러 단위",
+      "상호작용성 및 첫 토큰 지연 가정",
+      "SemiAnalysis Tokenomics Model 출처"
+    ],
+    "changedElements": [
+      "포인트가 2개뿐이라 가로 비교형으로 전환",
+      "라벨 한글 병기"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본의 두 값을 그대로 유지하고 형식만 가로 비교로 바꿨습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Tokenomics Model, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "포인트가 2개라 세로 막대 대신 가로 막대 비교형을 선택했고, 우세한 쪽 1곳만 강조했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "값은 원본 화면 판독 기반 source-visible입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "칩 세대 하나에 메가와트당 매출이 36퍼센트 늘어난다",
+    "subtitle": "동일 모델을 서빙할 때 메가와트당 연 매출, 단위 100만 달러 (에이전트 트레이스 재생 기준)",
+    "source": "자료: SemiAnalysis Tokenomics Model, 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GB200 NVL72",
+        "GB300 NVL72"
+      ],
+      "displayTickValues": [
+        "GB200 NVL72",
+        "GB300 NVL72"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "25",
+        "50",
+        "75",
+        "100",
+        "125"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 125
+    },
+    "legend": [
+      {
+        "name": "MW당 연매출",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "MW당 연매출",
+        "data": [
+          {
+            "x": "GB200 NVL72",
+            "y": 73.4,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "GB300 NVL72",
+            "y": 99.7,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "값은 원본 화면 판독 기반 source-visible입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 35.8,
+        "absoluteChange": 26.3,
+        "from": 73.4,
+        "to": 99.7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 99.7,
+        "at": "GB300 NVL72"
+      },
+      "min": {
+        "value": 73.4,
+        "at": "GB200 NVL72"
+      },
+      "average": 86.55000000000001,
+      "median": 86.55000000000001,
+      "range": 26.299999999999997
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "칩 세대 하나에 메가와트당 매출이 36퍼센트 늘어난다",
+    "subMessage": "동일 모델을 서빙할 때 메가와트당 연 매출, 단위 100만 달러 (에이전트 트레이스 재생 기준)",
+    "headline": "칩 세대 하나에 메가와트당 매출이 36퍼센트 늘어난다",
+    "summary": "동일 모델을 서빙할 때 메가와트당 연 매출, 단위 100만 달러 (에이전트 트레이스 재생 기준)",
+    "story": "전력이 같아도 최신 칩이 들어가면 같은 와트에서 더 많은 돈이 나옵니다.",
+    "keyTakeaways": [
+      "GB200 NVL72는 MW당 7,340만 달러",
+      "GB300 NVL72는 MW당 9,970만 달러",
+      "차이는 약 36퍼센트입니다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "두 막대 길이 차이가 곧 칩 교체의 경제적 값이라고 읽습니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Tokenomics Model, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

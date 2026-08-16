@@ -1,0 +1,331 @@
+{
+  "id": "page-037-graph-01",
+  "sourceImage": "input/45-page_037_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Microsoft"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "각국 AI 사용률: 유럽 AI 사용률은 한국·미국보다도 높음",
+    "subtitle": "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대",
+    "source": "자료: Microsoft",
+    "timeRange": "2025년 하반기~2026년 1분기",
+    "xAxis": {
+      "label": "국가",
+      "type": "category",
+      "tickValues": [
+        "싱가포르",
+        "노르웨이",
+        "프랑스",
+        "스페인",
+        "영국",
+        "네덜란드",
+        "캐나다",
+        "한국",
+        "미국",
+        "독일"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "AI 사용률",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "2025년 하반기",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "2026년 1분기 증가분",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2025년 하반기",
+        "data": [
+          {
+            "x": "싱가포르",
+            "y": 60.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "노르웨이",
+            "y": 46.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "프랑스",
+            "y": 43.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "스페인",
+            "y": 41.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "영국",
+            "y": 38.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "네덜란드",
+            "y": 38.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "캐나다",
+            "y": 35.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "한국",
+            "y": 30.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "미국",
+            "y": 28.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "독일",
+            "y": 28.5,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "2026년 1분기 증가분",
+        "data": [
+          {
+            "x": "싱가포르",
+            "y": 2.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "노르웨이",
+            "y": 2.6,
+            "confidence": 0.72
+          },
+          {
+            "x": "프랑스",
+            "y": 4.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "스페인",
+            "y": 2.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "영국",
+            "y": 3.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "네덜란드",
+            "y": 3.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "캐나다",
+            "y": 2.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "한국",
+            "y": 6.6,
+            "confidence": 0.72
+          },
+          {
+            "x": "미국",
+            "y": 3.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "독일",
+            "y": 2.6,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 20,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.835,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -53.0,
+        "absoluteChange": -32.2,
+        "from": 60.7,
+        "to": 28.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 60.7,
+        "at": ""
+      },
+      "min": {
+        "value": 28.0,
+        "at": ""
+      },
+      "average": 39.18,
+      "median": 38.9,
+      "range": 32.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "각국 AI 사용률: 유럽 AI 사용률은 한국·미국보다도 높음",
+    "subMessage": "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대",
+    "headline": "각국 AI 사용률: 유럽 AI 사용률은 한국·미국보다도 높음",
+    "summary": "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Microsoft"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 2.6
+      },
+      "displayText": "각국 AI 사용률: 유럽 AI",
+      "reason": "15~64세 인구 중 AI 사용자 비율 (2026년 1분기 기준), 누적 막대"
+    },
+    "densityLevel": "balanced"
+  }
+}

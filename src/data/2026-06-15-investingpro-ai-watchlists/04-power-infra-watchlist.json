@@ -1,0 +1,629 @@
+{
+  "id": "power-infra-watchlist",
+  "sourceImage": "input/source-04-power-infra-watchlist.png",
+  "analyzedAt": "2026-06-15T12:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "InvestingPro 워치리스트의 AI 관련 종목 비교",
+    "preservedElements": [
+      "스크린샷에 보이는 현재가, 오늘 등락률, 1개월 수익률, 1년 수익률, 목표가, EPS 성장, Forward P/E",
+      "오늘 주가 움직임을 티커 옆 배지로 크게 표시",
+      "스크린샷 순서와 표시값 보존"
+    ],
+    "changedElements": [
+      "필터 영역, 52주 고점, 시가총액 열 제거",
+      "오늘 등락률을 별도 열이 아닌 티커 옆 신호 배지로 재배치",
+      "소수점은 화면 표시값에서 버림 처리",
+      "상단/본문/하단 여백 축소"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "값은 사용자 제공 화면 캡처에서 보이는 숫자를 기준으로 재구성했다. 네트워킹 장비주 표는 사용자 요청에 따라 NVDA와 AVGO를 제외했다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "스크린샷 표시값 기반",
+      "status": "pass",
+      "detail": "웹 시세를 새로 조회하지 않고 캡처에 보이는 값만 사용",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "compact-v3-b-signal-pill",
+      "label": "compact v3 B 신호 배지형 적용",
+      "status": "pass",
+      "detail": "오늘 등락률은 별도 열이 아니라 ticker sideValue 빨강/파랑 배지로 표시",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "no-yellow-orange",
+      "label": "노란색/주황색 텍스트 미사용",
+      "status": "pass",
+      "detail": "목표가 여력의 양수는 빨강, 음수는 파랑, 중립은 회색 계열만 사용",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    },
+    {
+      "id": "networking-exclusion",
+      "label": "네트워킹 표 제외 조건",
+      "status": "not_applicable",
+      "detail": "해당 없음",
+      "checkedAt": "2026-06-15T12:10:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI 전력 인프라",
+    "subtitle": "원전·발전·전력 장비",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 16,
+    "sourceFontSize": 12,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "20%",
+        "align": "left"
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "15%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "percent",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "percent",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "percent",
+        "width": "13%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SMR",
+            "displayValue": "SMR\n뉴스케일",
+            "sideValue": {
+              "displayValue": "3.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "소형 원전",
+            "displayValue": "소형 원전"
+          },
+          "current": {
+            "value": "9.89",
+            "displayValue": "9"
+          },
+          "m1": {
+            "value": "-11.9%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-74.5%",
+            "displayValue": "-74%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "15.36",
+            "displayValue": "15\n+55%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "76.3%",
+            "displayValue": "76%"
+          },
+          "pe": {
+            "value": "-19.9x",
+            "displayValue": "-19x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VST",
+            "displayValue": "VST\n비스트라",
+            "sideValue": {
+              "displayValue": "1.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력 발전",
+            "displayValue": "전력 발전"
+          },
+          "current": {
+            "value": "148.02",
+            "displayValue": "148"
+          },
+          "m1": {
+            "value": "6.0%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "-14.4%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "225.29",
+            "displayValue": "225\n+52%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "80.3%",
+            "displayValue": "80%"
+          },
+          "pe": {
+            "value": "17.4x",
+            "displayValue": "17x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CEG",
+            "displayValue": "CEG\n콘스텔레이션",
+            "sideValue": {
+              "displayValue": "2.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "원전 발전",
+            "displayValue": "원전 발전"
+          },
+          "current": {
+            "value": "253.76",
+            "displayValue": "253"
+          },
+          "m1": {
+            "value": "-5.0%",
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-14.1%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "368.43",
+            "displayValue": "368\n+45%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "25.1%",
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": "21.5x",
+            "displayValue": "21x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "OKLO",
+            "displayValue": "OKLO\n오클로",
+            "sideValue": {
+              "displayValue": "0.6%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "차세대 원전",
+            "displayValue": "차세대 원전"
+          },
+          "current": {
+            "value": "57.49",
+            "displayValue": "57"
+          },
+          "m1": {
+            "value": "-7.6%",
+            "displayValue": "-7%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-9.7%",
+            "displayValue": "-9%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "88.63",
+            "displayValue": "88\n+54%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "2.7%",
+            "displayValue": "2%"
+          },
+          "pe": {
+            "value": "-85.5x",
+            "displayValue": "-85x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ETN",
+            "displayValue": "ETN\n이튼",
+            "sideValue": {
+              "displayValue": "0.6%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력 장비",
+            "displayValue": "전력 장비"
+          },
+          "current": {
+            "value": "391.39",
+            "displayValue": "391"
+          },
+          "m1": {
+            "value": "-2.0%",
+            "displayValue": "-2%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "22.3%",
+            "displayValue": "22%"
+          },
+          "target": {
+            "value": "451.73",
+            "displayValue": "451\n+15%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "10.5%",
+            "displayValue": "10%"
+          },
+          "pe": {
+            "value": "29.3x",
+            "displayValue": "29x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GEV",
+            "displayValue": "GEV\nGE 버노바",
+            "sideValue": {
+              "displayValue": "3.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력 설비",
+            "displayValue": "전력 설비"
+          },
+          "current": {
+            "value": "940.66",
+            "displayValue": "940"
+          },
+          "m1": {
+            "value": "-10.3%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "97.0%",
+            "displayValue": "97%"
+          },
+          "target": {
+            "value": "1,212",
+            "displayValue": "1,212\n+28%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-8.6%",
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "64.0x",
+            "displayValue": "64x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PWR",
+            "displayValue": "PWR\n콴타 서비스",
+            "sideValue": {
+              "displayValue": "3.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력망 시공",
+            "displayValue": "전력망 시공"
+          },
+          "current": {
+            "value": "707.74",
+            "displayValue": "707"
+          },
+          "m1": {
+            "value": "-8.1%",
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "97.7%",
+            "displayValue": "97%"
+          },
+          "target": {
+            "value": "761.35",
+            "displayValue": "761\n+7%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "30.5%",
+            "displayValue": "30%"
+          },
+          "pe": {
+            "value": "49.6x",
+            "displayValue": "49x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VRT",
+            "displayValue": "VRT\n버티브",
+            "sideValue": {
+              "displayValue": "1.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "데이터센터 전력",
+            "displayValue": "데이터센터 전력"
+          },
+          "current": {
+            "value": "302.87",
+            "displayValue": "302"
+          },
+          "m1": {
+            "value": "-18.4%",
+            "displayValue": "-18%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "173.3%",
+            "displayValue": "173%"
+          },
+          "target": {
+            "value": "378.31",
+            "displayValue": "378\n+24%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "54.5%",
+            "displayValue": "54%"
+          },
+          "pe": {
+            "value": "46.3x",
+            "displayValue": "46x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "BE",
+            "displayValue": "BE\n블룸에너지",
+            "sideValue": {
+              "displayValue": "4.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "연료전지",
+            "displayValue": "연료전지"
+          },
+          "current": {
+            "value": "260.22",
+            "displayValue": "260"
+          },
+          "m1": {
+            "value": "-5.7%",
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "1,085.5%",
+            "displayValue": "1,085%"
+          },
+          "target": {
+            "value": "263.13",
+            "displayValue": "263\n+1%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "179.8%",
+            "displayValue": "179%"
+          },
+          "pe": {
+            "value": "109.0x",
+            "displayValue": "109x"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 38,
+      "cellPadding": "0 4px",
+      "lineHeight": 0.96,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "14px",
+        "body": "15px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "15px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 전력 인프라",
+    "subMessage": "원전·발전·전력 장비",
+    "headline": "AI 전력 인프라",
+    "summary": "B 신호 배지형 기본값을 적용해 오늘 등락 방향을 티커 옆에서 바로 읽게 만든 표다.",
+    "story": "원본 화면은 상단 필터와 보조 열이 많아 종목 간 비교가 느리다. 이번 표는 현재가, 기간 수익률, 목표가 여력, EPS 성장, Forward P/E만 남겨 빠르게 스캔하도록 재구성했다.",
+    "keyTakeaways": [
+      "오늘 등락률은 티커 옆 빨강/파랑 배지로 표시했다.",
+      "52주 고점과 시가총액은 이번 깔끔한 버전에서 제외했다.",
+      "수치는 캡처에 보이는 값만 사용했다."
+    ],
+    "viewerAction": "오늘 등락 배지와 목표가 여력을 같이 보며 과매도인지 밸류에이션 부담인지 구분한다.",
+    "contextualNotes": [
+      "최신 시세 검증용 표가 아니라 화면 캡처를 발표용으로 정리한 결과다.",
+      "소수점은 표시값에서 버림 처리했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "SMR +55% / OKLO +54% / VST +52%",
+      "reason": "오늘 시장 움직임과 목표가 여력을 빠르게 읽기 위한 핵심 신호"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": []
+  }
+}

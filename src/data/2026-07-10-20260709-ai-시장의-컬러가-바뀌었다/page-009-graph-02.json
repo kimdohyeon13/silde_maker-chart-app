@@ -1,0 +1,287 @@
+{
+  "id": "page-009-graph-02",
+  "sourceImage": "input/page_009_img_02.jpeg",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "딥 에이전트 평가(135개 테스트)에서 NVIDIA Ultra 3는 Opus 4.8 대비 정확도 약 -1%p 수준이지만 1회 실행 비용은 약 1/10",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Deep Agents Evals"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형(산점도)과 5개 포인트 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 포인트 수, 상대 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "딥 에이전트 평가: 1회 실행 비용 대비 정확도",
+    "subtitle": "135개 테스트 기준. NVIDIA Ultra 3는 Opus 4.8 대비 정확도 약 -1%p, 1회 비용은 약 1/10",
+    "source": "자료: Deep Agents Evals",
+    "timeRange": "모델별 1회 실행 비용 vs 정확도 (135개 테스트)",
+    "xAxis": {
+      "label": "1회 실행 총비용",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "$",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "yAxis": {
+      "label": "정확도(%)",
+      "type": "value",
+      "tickValues": [
+        "75",
+        "80",
+        "85",
+        "90"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 75,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "NVIDIA Ultra 3",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "GLM 5.2",
+        "role": "secondary",
+        "originalColor": "#F5DF4D",
+        "remakeColor": "#F5DF4D"
+      },
+      {
+        "name": "Kimi K2.6",
+        "role": "secondary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      },
+      {
+        "name": "DeepSeek V4 Pro",
+        "role": "secondary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "Opus 4.8",
+        "role": "secondary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "모델별 1회 실행 비용 vs 정확도",
+        "data": [
+          {
+            "x": 4.5,
+            "y": 85.9,
+            "confidence": 0.75,
+            "label": "NVIDIA Ultra 3",
+            "color": "#FF6F61",
+            "labelPosition": "top",
+            "showLabel": true
+          },
+          {
+            "x": 10.4,
+            "y": 85.2,
+            "confidence": 0.75,
+            "label": "GLM 5.2",
+            "color": "#F5DF4D",
+            "labelPosition": "left",
+            "showLabel": true
+          },
+          {
+            "x": 11.5,
+            "y": 80.0,
+            "confidence": 0.75,
+            "label": "Kimi K2.6",
+            "color": "#939597",
+            "labelPosition": "bottom",
+            "showLabel": true
+          },
+          {
+            "x": 14.0,
+            "y": 85.2,
+            "confidence": 0.75,
+            "label": "DeepSeek V4 Pro",
+            "color": "#6667AB",
+            "labelPosition": "right",
+            "showLabel": true
+          },
+          {
+            "x": 43.0,
+            "y": 86.8,
+            "confidence": 0.75,
+            "label": "Opus 4.8",
+            "color": "#0F4C81",
+            "labelPosition": "top",
+            "showLabel": true
+          }
+        ],
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "포인트 좌표는 원본 산점도의 눈금 대비 상대 위치로 읽은 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.3,
+      "description": "비용이 10배 늘어도 정확도는 1%p 안팎만 차이 나는 분포입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.028,
+      "description": "Kimi K2.6(80%)을 제외하면 정확도가 85~87% 구간에 밀집합니다."
+    },
+    "changeRates": [
+      {
+        "period": "최저비용 모델 대비 최고비용 모델",
+        "percentChange": 1.0,
+        "absoluteChange": 0.9,
+        "from": 85.9,
+        "to": 86.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 86.8,
+        "at": "Opus 4.8"
+      },
+      "min": {
+        "value": 80.0,
+        "at": "Kimi K2.6"
+      },
+      "average": 84.62,
+      "median": 85.2,
+      "range": 6.8
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "딥 에이전트 평가: 1회 실행 비용 대비 정확도",
+    "subMessage": "135개 테스트 기준. NVIDIA Ultra 3는 Opus 4.8 대비 정확도 약 -1%p, 1회 비용은 약 1/10",
+    "headline": "딥 에이전트 평가: 1회 실행 비용 대비 정확도",
+    "summary": "NVIDIA Ultra 3(약 $4.5, 85.9%)는 Opus 4.8(약 $43, 86.8%) 대비 정확도 약 -1%p 수준에 1회 실행 비용은 약 1/10입니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "NVIDIA Ultra 3는 Opus 4.8 대비 정확도 약 -1%p 수준인데 1회 실행 비용은 약 1/10",
+      "GLM 5.2, DeepSeek V4 Pro도 $10~14 비용대에서 85% 수준의 정확도를 확보",
+      "Kimi K2.6(80%)을 제외하면 저비용 모델과 최고가 모델의 정확도 격차가 크지 않음"
+    ],
+    "questionsRaised": [
+      "에이전트 워크로드에서 비용 효율이 모델 선택 기준을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 포인트 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Deep Agents Evals"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#FF6F61",
+        "#6667AB",
+        "#F5DF4D",
+        "#939597"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 4.5,
+        "y": 85.9
+      },
+      "displayText": "NVIDIA Ultra 3: 비용 1/10, 정확도 -1%p",
+      "reason": "NVIDIA Ultra 3가 Opus 4.8 대비 정확도 약 -1%p 수준에 비용은 약 1/10이라는 핵심 메시지"
+    },
+    "densityLevel": "balanced"
+  }
+}

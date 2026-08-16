@@ -1,0 +1,233 @@
+{
+  "id": "cashflow",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "현금흐름 막대의 추세 보존 근사. 정확 수치 아님.",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "현금흐름 막대의 추세 보존 근사. 정확 수치 아님.",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=source-visible."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "영업현금흐름 및 잉여현금흐름 추이",
+    "subtitle": "FY27F부터 현금창출 급증 전망 (눈으로 읽은 근사치)",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "xAxis": {
+      "label": "회계연도",
+      "type": "category",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "tickValues": [
+        "FY22",
+        "FY23",
+        "FY24",
+        "FY25",
+        "FY26",
+        "FY27F",
+        "FY28F"
+      ]
+    },
+    "yAxis": {
+      "label": "현금흐름",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "백만달러",
+      "tickValues": [
+        "0",
+        "1200",
+        "2400",
+        "3600",
+        "4800"
+      ],
+      "min": 0,
+      "max": 4800
+    },
+    "axisDistortionWarning": "원본에 수치 표가 없어 막대를 눈으로 읽은 근사치(source-visible).",
+    "legend": [
+      {
+        "name": "영업현금흐름",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      },
+      {
+        "name": "잉여현금흐름",
+        "role": "primary",
+        "originalColor": "#14B8A6",
+        "remakeColor": "#14B8A6"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "현금흐름 막대의 추세 보존 근사. 정확 수치 아님.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "영업현금흐름 및 잉여현금흐름 추이",
+    "summary": "FY27F부터 현금창출 급증 전망 (눈으로 읽은 근사치)",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FY27F부터 현금창출 급증 전망 (눈으로 읽은 근사치)"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "영업현금흐름",
+        "data": [
+          {
+            "x": "FY22",
+            "y": 1000,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY23",
+            "y": 950,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY24",
+            "y": 1150,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY25",
+            "y": 1400,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY26",
+            "y": 1700,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY27F",
+            "y": 3000,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY28F",
+            "y": 4200,
+            "confidence": 0.5
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "잉여현금흐름",
+        "data": [
+          {
+            "x": "FY22",
+            "y": 800,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY23",
+            "y": 750,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY24",
+            "y": 950,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY25",
+            "y": 1250,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY26",
+            "y": 1500,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY27F",
+            "y": 2600,
+            "confidence": 0.5
+          },
+          {
+            "x": "FY28F",
+            "y": 3700,
+            "confidence": 0.5
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 14,
+    "quality": {
+      "overallConfidence": 0.5,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

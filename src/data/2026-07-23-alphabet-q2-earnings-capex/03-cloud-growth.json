@@ -1,0 +1,255 @@
+{
+  "id": "03-cloud-growth",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Cloud 성장률은 10개 분기 만에 81.8%로 가속했다",
+    "preservedElements": [
+      "공식 수치",
+      "기간 순서",
+      "단위",
+      "출처"
+    ],
+    "changedElements": [
+      "주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "강조색"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "공식 공시 원단위를 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈와 10개 데이터 포인트를 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 3
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Cloud 성장률은 10개 분기 만에 81.8%로 가속했다",
+    "subtitle": "Google Cloud 매출 성장률 · 전년 대비 % · 1Q24~2Q26",
+    "source": "자료: Alphabet 2Q26 실적 발표, waltechman 계산",
+    "timeRange": "1Q24~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q24",
+        "2Q24",
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "1Q24",
+        "",
+        "",
+        "",
+        "1Q25",
+        "",
+        "",
+        "",
+        "",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "unit": "%",
+      "min": 25,
+      "max": 90,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Cloud",
+        "role": "primary",
+        "originalColor": "#4285F4",
+        "remakeColor": "#4285F4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Cloud",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#4285F4",
+        "data": [
+          {
+            "x": "1Q24",
+            "y": 28.4,
+            "confidence": 1
+          },
+          {
+            "x": "2Q24",
+            "y": 28.8,
+            "confidence": 1
+          },
+          {
+            "x": "3Q24",
+            "y": 35,
+            "confidence": 1
+          },
+          {
+            "x": "4Q24",
+            "y": 30.1,
+            "confidence": 1
+          },
+          {
+            "x": "1Q25",
+            "y": 28.1,
+            "confidence": 1
+          },
+          {
+            "x": "2Q25",
+            "y": 31.7,
+            "confidence": 1
+          },
+          {
+            "x": "3Q25",
+            "y": 33.5,
+            "confidence": 1
+          },
+          {
+            "x": "4Q25",
+            "y": 47.8,
+            "confidence": 1
+          },
+          {
+            "x": "1Q26",
+            "y": 63.4,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26",
+            "y": 81.8,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 28.1,
+      "max": 81.8,
+      "average": 40.86,
+      "latest": 81.8
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Cloud 성장률은 4Q25부터 세 분기 연속 가속했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Cloud 성장률은 10개 분기 만에 81.8%로 가속했다",
+    "subMessage": "Google Cloud 매출 성장률 · 전년 대비 % · 1Q24~2Q26",
+    "headline": "Cloud 성장률은 4Q25부터 세 분기 연속 가속했습니다.",
+    "summary": "Cloud 성장률은 4Q25부터 세 분기 연속 가속했습니다.",
+    "keyTakeaways": [
+      "2Q26 매출은 24.768B달러였습니다.",
+      "AI 인프라와 기업용 AI 수요가 성장을 이끌었습니다.",
+      "투자비 회수 가능성을 보여주는 가장 강한 실적 항목입니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 81.8
+      },
+      "displayText": "81.8%",
+      "reason": "10개 분기 최고 성장률"
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

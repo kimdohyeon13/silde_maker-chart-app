@@ -1,0 +1,218 @@
+{
+  "id": "page-035-graph-02",
+  "sourceImage": "projects/2026-08-12-samsung-ai-report/input/page-035-graph-02.png",
+  "stylePreset": "toss-clean",
+  "mode": "faithful",
+  "preserveIntent": {
+    "originalTitle": "HBM: 용량당 가격 추이",
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 제목",
+      "모든 시리즈 또는 항목",
+      "축 단위",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 서체",
+      "여백",
+      "색상 정리"
+    ],
+    "notes": "원본 이미지와 OCR에서 읽은 값이다. 선형 차트의 중간 점은 화면상 앵커를 따라 복원했다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "HBM: 용량당 가격 추이",
+    "source": "자료: 엔비디아, World Tech Research 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "H100 2022",
+        "H200 2023",
+        "GB200 2024",
+        "GB300 2025",
+        "VR200 2026",
+        "VR300 2027"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "unit": "GB",
+      "min": 0,
+      "max": 350
+    },
+    "legend": [
+      {
+        "name": "HBM content per package (GB, 좌측)",
+        "color": "#B8BDC7",
+        "originalColor": "#B8BDC7"
+      },
+      {
+        "name": "Price per Gb ($/Gb, 우측)",
+        "color": "#1677FF",
+        "originalColor": "#1677FF"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "",
+      "unit": "USD/Gb",
+      "min": 0,
+      "max": 5
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "HBM content per package (GB, 좌측)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "H100 2022",
+            "y": 80,
+            "confidence": 0.72
+          },
+          {
+            "x": "H200 2023",
+            "y": 144,
+            "confidence": 0.72
+          },
+          {
+            "x": "GB200 2024",
+            "y": 192,
+            "confidence": 0.72
+          },
+          {
+            "x": "GB300 2025",
+            "y": 288,
+            "confidence": 0.72
+          },
+          {
+            "x": "VR200 2026",
+            "y": 192,
+            "confidence": 0.72
+          },
+          {
+            "x": "VR300 2027",
+            "y": 256,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#B8BDC7",
+        "remakeColor": "#B8BDC7"
+      },
+      {
+        "name": "Price per Gb ($/Gb, 우측)",
+        "renderAs": "line",
+        "data": [
+          {
+            "x": "H100 2022",
+            "y": 1.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "H200 2023",
+            "y": 1.35,
+            "confidence": 0.72
+          },
+          {
+            "x": "GB200 2024",
+            "y": 1.55,
+            "confidence": 0.72
+          },
+          {
+            "x": "GB300 2025",
+            "y": 1.25,
+            "confidence": 0.72
+          },
+          {
+            "x": "VR200 2026",
+            "y": 2.6,
+            "confidence": 0.72
+          },
+          {
+            "x": "VR300 2027",
+            "y": 4.5,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#1677FF",
+        "remakeColor": "#1677FF",
+        "yAxis": "secondary"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "HBM: 용량당 가격 추이",
+    "subMessage": "자료: 엔비디아, World Tech Research 추정",
+    "headline": "HBM: 용량당 가격 추이",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Price up by 80% (3Q26)"
+    },
+    "annotations": [
+      {
+        "text": "Price down by 15% (Jul 25)",
+        "position": {
+          "x": "GB300 2025",
+          "y": 1
+        },
+        "importance": "high"
+      },
+      {
+        "text": "Price up by 80% (3Q26)",
+        "position": {
+          "x": "VR200 2026",
+          "y": 3.6
+        },
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "원본 이미지에서 읽은 추세",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "qualityChecks": [
+    {
+      "id": "faithful-title",
+      "status": "pass",
+      "detail": "원본 제목 보존"
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "이미지 기반 앵커값과 한계를 기록"
+    },
+    {
+      "id": "series-source",
+      "status": "pass",
+      "detail": "원본 시리즈와 출처 보존"
+    }
+  ]
+}

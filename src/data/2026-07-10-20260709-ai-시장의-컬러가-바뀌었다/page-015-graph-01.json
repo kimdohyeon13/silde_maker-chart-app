@@ -1,0 +1,290 @@
+{
+  "id": "page-015-graph-01",
+  "sourceImage": "input/15-page_015_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "개방성 지수 18점 만점에서 UAE의 K2 Think V2가 1위(16점), 상업 모델 중에서는 Nemotron 3 Ultra가 최상위(15점)",
+    "preservedElements": [
+      "원본 차트 유형(막대)",
+      "모델 순위와 격차",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "스택 구성 항목을 모델별 합계 단일 막대로 환산"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 Model Availability와 Transparency 3종을 쌓은 스택 막대입니다. 리메이크에서는 스택 미지원 제약에 따라 원본 막대 상단에 표기된 합계 점수를 단일 막대로 그렸습니다.",
+    "sourceAttribution": "자료: Artificial Analysis"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 막대 차트 유형과 모델 순위를 먼저 맞춘 뒤 스타일을 바꿨습니다. 스택 구성만 합계 단일 막대로 환산했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop의 막대 상단 합계 라벨(16.0, 15.0, 9.0 등)을 그대로 읽어 사용했습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 모델 순서, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "AI 모델 개방성 지수: 상업 모델 중에서는 네모트론 3 울트라가 최상위",
+    "subtitle": "Artificial Analysis 개방성 지수 합계(18점 만점), 원본 스택 구성 점수를 모델별 합계로 표시",
+    "source": "자료: Artificial Analysis",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "K2 Think V2",
+        "Nemotron 3 Ultra",
+        "DeepSeek V4 Pro",
+        "DeepSeek V4 Flash",
+        "GLM-5.2",
+        "MiMo-V2.5-Pro",
+        "Qwen3.5 397B A17B",
+        "gpt-oss-20b",
+        "Gemma 4 31B",
+        "gpt-oss-120b",
+        "Kimi K2.6",
+        "MiniMax-M3",
+        "Mistral Medium 3.5",
+        "Claude 4.5 Haiku"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "개방성 지수",
+      "type": "value",
+      "tickValues": [],
+      "unit": "점",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 18
+    },
+    "legend": [
+      {
+        "name": "개방성 지수 합계(18점 만점)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "개방성 지수 합계(18점 만점)",
+        "data": [
+          {
+            "x": "K2 Think V2",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "Nemotron 3 Ultra",
+            "y": 15,
+            "confidence": 0.9
+          },
+          {
+            "x": "DeepSeek V4 Pro",
+            "y": 9,
+            "confidence": 0.9
+          },
+          {
+            "x": "DeepSeek V4 Flash",
+            "y": 9,
+            "confidence": 0.9
+          },
+          {
+            "x": "GLM-5.2",
+            "y": 8,
+            "confidence": 0.9
+          },
+          {
+            "x": "MiMo-V2.5-Pro",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "Qwen3.5 397B A17B",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "gpt-oss-20b",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "Gemma 4 31B",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "gpt-oss-120b",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kimi K2.6",
+            "y": 6,
+            "confidence": 0.9
+          },
+          {
+            "x": "MiniMax-M3",
+            "y": 6,
+            "confidence": 0.9
+          },
+          {
+            "x": "Mistral Medium 3.5",
+            "y": 6,
+            "confidence": 0.9
+          },
+          {
+            "x": "Claude 4.5 Haiku",
+            "y": 2,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 14,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 스택 내부 구성 항목별 세부 점수는 합계로 환산해 표시했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "개방성 점수 내림차순 정렬로, 상위 2개 모델과 나머지의 격차가 큽니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 14.0,
+      "description": "원본 화면에서 보이는 모델 간 점수 격차를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "1위 대비 최하위",
+        "percentChange": -87.5,
+        "absoluteChange": -14.0,
+        "from": 16.0,
+        "to": 2.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 16.0,
+        "at": "K2 Think V2"
+      },
+      "min": {
+        "value": 2.0,
+        "at": "Claude 4.5 Haiku"
+      },
+      "average": 8.0,
+      "median": 7.0,
+      "range": 14.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 모델 개방성 지수: 상업 모델 중에서는 네모트론 3 울트라가 최상위",
+    "subMessage": "Artificial Analysis 개방성 지수 합계(18점 만점), 원본 스택 구성 점수를 모델별 합계로 표시",
+    "headline": "AI 모델 개방성 지수: 상업 모델 중에서는 네모트론 3 울트라가 최상위",
+    "summary": "18점 만점 개방성 지수에서 UAE의 K2 Think V2가 16점으로 1위, 상업 모델 중에서는 Nemotron 3 Ultra가 15점으로 최상위",
+    "story": "원본의 모델 순위와 점수 격차를 유지하되, 스택 구성 항목은 합계 단일 막대로 환산해 보고서 삽입용으로 정리했습니다.",
+    "keyTakeaways": [
+      "UAE의 K2 Think V2가 16점으로 개방성 지수 1위",
+      "상업 모델 중에서는 Nemotron 3 Ultra가 15점으로 최상위",
+      "3위권 이하(9점 이하)와 상위 2개 모델의 격차가 큼"
+    ],
+    "questionsRaised": [
+      "개방성 상위 모델이 기업용 도입과 생태계 주도권을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 모델 순서, 합계 점수, 상위권 격차를 확인합니다.",
+    "contextualNotes": [
+      "자료: Artificial Analysis"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#F5DF4D",
+        "#FF6F61",
+        "#6667AB"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Nemotron 3 Ultra",
+        "y": 15.0
+      },
+      "displayText": "상업 모델 1위 15점",
+      "reason": "Nemotron 3 Ultra가 상업 모델 중 최상위 개방성(15/18)"
+    },
+    "densityLevel": "balanced"
+  }
+}

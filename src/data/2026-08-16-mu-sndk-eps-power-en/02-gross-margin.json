@@ -1,0 +1,295 @@
+{
+  "id": "02-gross-margin",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Using SNDK-like assumptions (+15% sales CAGR, 80%+ GM, 50%+ FCF margin), MU EPS power could be $230+, growing at a 34% CAGR FY26-30",
+    "preservedElements": [
+      "FY26E-FY30E fiscal year order",
+      "Both series: consensus path and SNDK-like path",
+      "Every printed table cell value",
+      "FY26E and FY27E shared by both scenarios",
+      "BofA Global Research, Bloomberg and Visible Alpha attribution"
+    ],
+    "changedElements": [
+      "Layout: one row of the source table isolated into a single chart",
+      "Labels: direct line-end labels instead of a legend round trip",
+      "Color: two colors only, blue for consensus and red for the SNDK-like path"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Exhibit 1 is a printed table, so every value is copied verbatim from its cell. Nothing was estimated or re-rounded."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan came first",
+      "status": "pass",
+      "detail": "Format, density, scale, labels, color emphasis and QA risks were fixed before writing JSON."
+    },
+    {
+      "id": "exact-cell-values",
+      "label": "Printed cell values preserved",
+      "status": "pass",
+      "detail": "Values are copied from the printed table; no decimals were dropped."
+    },
+    {
+      "id": "source-preserved",
+      "label": "Attribution preserved",
+      "status": "pass",
+      "detail": "BofA Global Research estimates, Bloomberg and Visible Alpha are retained."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "headMessage uses Paperlogy 900 and subMessage uses Paperlogy 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "accentColor": "#D92D20",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 150
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "The Whole Debate Sits in One Margin Line",
+    "subtitle": "Micron gross margin. Consensus cuts to 73.5%; SNDK-like holds 80.0%",
+    "source": "Source: BofA Global Research estimates, Bloomberg, Visible Alpha",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026",
+        "2027",
+        "2028",
+        "2029",
+        "2030"
+      ],
+      "displayTickValues": [
+        "FY26E",
+        "FY27E",
+        "FY28E",
+        "FY29E",
+        "FY30E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "70",
+        "74",
+        "78",
+        "82",
+        "86"
+      ],
+      "unit": "%",
+      "min": 70,
+      "max": 86,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Consensus",
+        "role": "primary",
+        "originalColor": "#175CD3",
+        "remakeColor": "#175CD3"
+      },
+      {
+        "name": "SNDK-like",
+        "role": "secondary",
+        "originalColor": "#D92D20",
+        "remakeColor": "#D92D20"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Consensus",
+        "data": [
+          {
+            "x": "2026",
+            "y": 80.6,
+            "confidence": 1
+          },
+          {
+            "x": "2027",
+            "y": 84.5,
+            "confidence": 1
+          },
+          {
+            "x": "2028",
+            "y": 78.1,
+            "confidence": 1
+          },
+          {
+            "x": "2029",
+            "y": 73.5,
+            "confidence": 1
+          },
+          {
+            "x": "2030",
+            "y": 78,
+            "confidence": 1
+          }
+        ],
+        "role": "primary",
+        "color": "#175CD3"
+      },
+      {
+        "name": "SNDK-like",
+        "data": [
+          {
+            "x": "2026",
+            "y": 80.6,
+            "confidence": 1
+          },
+          {
+            "x": "2027",
+            "y": 84.5,
+            "confidence": 1
+          },
+          {
+            "x": "2028",
+            "y": 80,
+            "confidence": 1
+          },
+          {
+            "x": "2029",
+            "y": 80,
+            "confidence": 1
+          },
+          {
+            "x": "2030",
+            "y": 80,
+            "confidence": 1
+          }
+        ],
+        "role": "secondary",
+        "color": "#D92D20"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": ""
+    },
+    "changeRates": [
+      {
+        "period": "FY26E → FY30E",
+        "percentChange": -0.7,
+        "absoluteChange": -0.6,
+        "from": 80.6,
+        "to": 80
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 80,
+        "at": "FY30E"
+      },
+      "min": {
+        "value": 80.6,
+        "at": "FY26E"
+      },
+      "average": 0,
+      "median": 0,
+      "range": -0.5999999999999943
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The Whole Debate Sits in One Margin Line",
+    "subMessage": "Micron gross margin. Consensus cuts to 73.5%; SNDK-like holds 80.0%",
+    "headline": "The Whole Debate Sits in One Margin Line",
+    "summary": "Micron gross margin. Consensus cuts to 73.5%; SNDK-like holds 80.0%",
+    "story": "Micron gross margin. Consensus cuts to 73.5%; SNDK-like holds 80.0%",
+    "keyTakeaways": [
+      "Consensus falls 11.0 points, from 84.5% in FY27 to 73.5% in FY29",
+      "The SNDK-like path pins gross margin at 80.0% from FY28",
+      "That single margin assumption is worth about $100 of EPS"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Micron gross margin. Consensus cuts to 73.5%; SNDK-like holds 80.0%",
+    "contextualNotes": [
+      "Source: BofA Global Research estimates, Bloomberg, Visible Alpha"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D20",
+      "secondary": [
+        "#175CD3"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "2029",
+      "y": 73.5,
+      "displayText": "73.5%"
+    },
+    "densityLevel": "focused"
+  }
+}

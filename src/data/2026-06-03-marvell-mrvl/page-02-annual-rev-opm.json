@@ -1,0 +1,219 @@
+{
+  "id": "annual-rev-opm",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "신한 리포트 연간 재무 표(FY25 실적~FY29F 전망, Non-GAAP).",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "exact",
+    "notes": "신한 리포트 연간 재무 표(FY25 실적~FY29F 전망, Non-GAAP).",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=exact."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "연간 매출액 및 영업이익률 추이",
+    "subtitle": "FY26 매출 +42%, FY29F까지 연 30%+ 고성장 전망 (10월 결산)",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "xAxis": {
+      "label": "회계연도",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출액",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "백만달러",
+      "tickValues": [
+        "0",
+        "5000",
+        "10000",
+        "15000",
+        "20000"
+      ],
+      "min": 0,
+      "max": 20000
+    },
+    "secondaryYAxis": {
+      "label": "영업이익률",
+      "type": "numeric",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "26",
+        "30",
+        "34",
+        "38",
+        "42"
+      ],
+      "min": 26,
+      "max": 42
+    },
+    "legend": [
+      {
+        "name": "매출액 (좌)",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      },
+      {
+        "name": "영업이익률 (우)",
+        "role": "primary",
+        "originalColor": "#F59E0B",
+        "remakeColor": "#F59E0B"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "신한 리포트 연간 재무 표(FY25 실적~FY29F 전망, Non-GAAP).",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "연간 매출액 및 영업이익률 추이",
+    "summary": "FY26 매출 +42%, FY29F까지 연 30%+ 고성장 전망 (10월 결산)",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FY26 매출 +42%, FY29F까지 연 30%+ 고성장 전망 (10월 결산)"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "매출액",
+        "data": [
+          {
+            "x": "FY25",
+            "y": 5767,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY26",
+            "y": 8195,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY27F",
+            "y": 10948,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY28F",
+            "y": 15169,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY29F",
+            "y": 19786,
+            "confidence": 0.97
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "영업이익률",
+        "data": [
+          {
+            "x": "FY25",
+            "y": 28.9,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY26",
+            "y": 35.3,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY27F",
+            "y": 36.3,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY28F",
+            "y": 37.6,
+            "confidence": 0.97
+          },
+          {
+            "x": "FY29F",
+            "y": 39.7,
+            "confidence": 0.97
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.97,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

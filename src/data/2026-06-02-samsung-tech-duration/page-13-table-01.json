@@ -1,0 +1,443 @@
+{
+  "id": "page-13-table-01",
+  "sourceImage": "input/13-page_13_table_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "테슬라 영업이익 vs 자금 조달 타임라인",
+    "subtitle": "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다",
+    "source": "자료: Bloomberg",
+    "timeRange": "1Q15~1Q26",
+    "xAxis": {
+      "label": "분기",
+      "type": "category",
+      "tickValues": [
+        "1Q15",
+        "1Q16",
+        "1Q17",
+        "1Q18",
+        "1Q19",
+        "1Q20",
+        "1Q21",
+        "1Q22",
+        "1Q23",
+        "1Q24",
+        "1Q25",
+        "1Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "영업이익",
+      "type": "value",
+      "tickValues": [],
+      "unit": "백만달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -1000,
+      "max": 5000
+    },
+    "legend": [
+      {
+        "name": "영업이익",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "영업이익",
+        "data": [
+          {
+            "x": "1Q15",
+            "y": -90,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q15",
+            "y": -160,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q15",
+            "y": -180,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q15",
+            "y": -250,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q16",
+            "y": -250,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q16",
+            "y": -230,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q16",
+            "y": 50,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q16",
+            "y": -250,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q17",
+            "y": -250,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q17",
+            "y": -250,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q17",
+            "y": -520,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q17",
+            "y": -590,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q18",
+            "y": -590,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q18",
+            "y": -610,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q18",
+            "y": 380,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q18",
+            "y": 380,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q19",
+            "y": -520,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q19",
+            "y": -160,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q19",
+            "y": 230,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q19",
+            "y": 320,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q20",
+            "y": 250,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q20",
+            "y": 290,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q20",
+            "y": 790,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q20",
+            "y": 570,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q21",
+            "y": 570,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q21",
+            "y": 1290,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q21",
+            "y": 1990,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q21",
+            "y": 2580,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q22",
+            "y": 3570,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q22",
+            "y": 2420,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q22",
+            "y": 3640,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q22",
+            "y": 3850,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q23",
+            "y": 2620,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q23",
+            "y": 2350,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q23",
+            "y": 1720,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q23",
+            "y": 2010,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q24",
+            "y": 1150,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q24",
+            "y": 1580,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q24",
+            "y": 2690,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q24",
+            "y": 1560,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q25",
+            "y": 380,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q25",
+            "y": 880,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q25",
+            "y": 1580,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q25",
+            "y": 1380,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q26",
+            "y": 930,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 45,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 5.133,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1133.3,
+        "absoluteChange": 1020.0,
+        "from": -90.0,
+        "to": 930.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3850.0,
+        "at": ""
+      },
+      "min": {
+        "value": -610.0,
+        "at": ""
+      },
+      "average": 868.8888888888889,
+      "median": 380.0,
+      "range": 4460.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "테슬라 영업이익 vs 자금 조달 타임라인",
+    "subMessage": "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다",
+    "headline": "테슬라 영업이익 vs 자금 조달 타임라인",
+    "summary": "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 930.0
+      },
+      "displayText": "테슬라 영업이익 vs 자금 조",
+      "reason": "테슬라는 적자 구간(2015~2019)에도 주가 상승을 발판으로 유상증자·CB·회사채로 자금을 조달했고, 영업이익이 흑자로 전환되며 분기 최대 약 38억 달러까지 확대됐다"
+    },
+    "densityLevel": "balanced"
+  }
+}

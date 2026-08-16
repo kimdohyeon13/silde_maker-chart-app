@@ -1,0 +1,168 @@
+{
+  "id": "page-041-graph-02",
+  "sourceImage": "projects/2026-08-12-samsung-ai-report/input/page-041-graph-02.png",
+  "stylePreset": "toss-clean",
+  "mode": "faithful",
+  "preserveIntent": {
+    "originalTitle": "응용처별 디램 장기 수요 전망",
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 제목",
+      "모든 시리즈 또는 항목",
+      "축 단위",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 서체",
+      "여백",
+      "색상 정리"
+    ],
+    "notes": "원본 이미지와 OCR에서 읽은 값이다. 선형 차트의 중간 점은 화면상 앵커를 따라 복원했다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "응용처별 디램 장기 수요 전망",
+    "source": "자료: World Tech Research 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "HBM",
+        "서버",
+        "PC",
+        "모바일",
+        "기타",
+        "합계 (HBM 합계 포함)",
+        "합계 (HBM 제외)"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "unit": "%",
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "수요 전망",
+        "color": "#1677FF",
+        "originalColor": "#1677FF"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "수요 전망",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 40,
+            "confidence": 0.72
+          },
+          {
+            "x": "서버",
+            "y": 25,
+            "confidence": 0.72
+          },
+          {
+            "x": "PC",
+            "y": 12,
+            "confidence": 0.72
+          },
+          {
+            "x": "모바일",
+            "y": 9,
+            "confidence": 0.72
+          },
+          {
+            "x": "기타",
+            "y": 5,
+            "confidence": 0.72
+          },
+          {
+            "x": "합계 (HBM 합계 포함)",
+            "y": 22.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "합계 (HBM 제외)",
+            "y": 19.1,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#1677FF",
+        "remakeColor": "#1677FF"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "응용처별 디램 장기 수요 전망",
+    "subMessage": "자료: World Tech Research 추정",
+    "headline": "응용처별 디램 장기 수요 전망",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": ""
+    },
+    "colorStrategy": {
+      "primary": "#1677FF",
+      "secondary": [
+        "#B8BDC7"
+      ],
+      "positive": "#1677FF",
+      "negative": "#EF3D69",
+      "accent": "#12AFC1",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "high",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "원본 이미지에서 읽은 추세",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "qualityChecks": [
+    {
+      "id": "faithful-title",
+      "status": "pass",
+      "detail": "원본 제목 보존"
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "이미지 기반 앵커값과 한계를 기록"
+    },
+    {
+      "id": "series-source",
+      "status": "pass",
+      "detail": "원본 시리즈와 출처 보존"
+    }
+  ]
+}

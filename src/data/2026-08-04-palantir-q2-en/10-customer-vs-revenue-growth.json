@@ -1,0 +1,234 @@
+{
+  "id": "10-customer-vs-revenue-growth",
+  "sourceImage": "input/10-customer-vs-revenue-growth.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Existing customers are spending more; net dollar retention is 157%",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Palantir Q2 2026 Business Update (2026-08-03)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Customers Grew 24%, Revenue Grew 93%",
+    "subtitle": "Existing customers are spending more; net dollar retention is 157%",
+    "source": "Source: Palantir Q2 2026 Business Update (2026-08-03)",
+    "timeRange": "2Q26",
+    "xAxis": {
+      "label": "Customer growth vs. revenue growth",
+      "type": "category",
+      "tickValues": [
+        "All cust.",
+        "Comm. cust.",
+        "US comm.",
+        "Total rev.",
+        "US comm. rev."
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Year-over-year growth",
+        "role": "primary",
+        "originalColor": "#F5DF4D",
+        "remakeColor": "#F5DF4D"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Year-over-year growth",
+        "data": [
+          {
+            "x": "All cust.",
+            "y": 24,
+            "confidence": 0.74
+          },
+          {
+            "x": "Comm. cust.",
+            "y": 26,
+            "confidence": 0.74
+          },
+          {
+            "x": "US comm.",
+            "y": 35,
+            "confidence": 0.74
+          },
+          {
+            "x": "Total rev.",
+            "y": 93,
+            "confidence": 0.74
+          },
+          {
+            "x": "US comm. rev.",
+            "y": 149,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#F5DF4D"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.911,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 520.8,
+        "absoluteChange": 125.0,
+        "from": 24.0,
+        "to": 149.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 149.0,
+        "at": ""
+      },
+      "min": {
+        "value": 24.0,
+        "at": ""
+      },
+      "average": 65.4,
+      "median": 35.0,
+      "range": 125.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Customers Grew 24%, Revenue Grew 93%",
+    "subMessage": "Existing customers are spending more; net dollar retention is 157%",
+    "headline": "Customers Grew 24%, Revenue Grew 93%",
+    "summary": "Existing customers are spending more; net dollar retention is 157%",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "Existing customers are spending more; net dollar retention is 157%",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Palantir Q2 2026 Business Update (2026-08-03)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 149.0
+      },
+      "displayText": "24% vs. 93%",
+      "reason": "Existing customers are spending more; net dollar retention is 157%"
+    },
+    "densityLevel": "balanced"
+  }
+}

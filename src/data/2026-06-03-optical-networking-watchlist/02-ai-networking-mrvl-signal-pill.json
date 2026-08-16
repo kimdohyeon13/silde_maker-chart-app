@@ -1,0 +1,766 @@
+{
+  "id": "02-ai-networking-mrvl-signal-pill",
+  "sourceImage": "input/source-01-optical-networking-watchlist.png",
+  "analyzedAt": "2026-06-03T09:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "InvestingPro 워치리스트의 AI 네트워킹·광통신 관련 종목 비교",
+    "preservedElements": [
+      "스크린샷에 보이는 현재가, 오늘 등락률, 1개월 수익률, 1년 수익률, 목표가, EPS 성장, Forward P/E",
+      "스크린샷에 보이는 오늘 주가 움직임을 티커 옆에 크게 표시",
+      "사용자 지시대로 KEYS 행 제외",
+      "사용자 지시대로 MRVL 행만 음영 강조"
+    ],
+    "changedElements": [
+      "B 신호 배지형 레이아웃으로 가시성과 시인성을 비교",
+      "오늘 등락은 별도 열이 아니라 티커 옆 큰 보조 라벨로 재배치",
+      "52주 고점, 시가총액 열은 가독성을 위해 제외",
+      "소수점은 기간 수익률/목표가 여력 표시값에서 버림 처리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "값은 사용자 제공 화면 캡처에서 보이는 숫자를 기준으로 재구성했다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "스크린샷 표시값 기반",
+      "status": "pass",
+      "detail": "웹 시세를 새로 조회하지 않고 캡처에 보이는 값만 사용",
+      "checkedAt": "2026-06-03T09:10:00+09:00"
+    },
+    {
+      "id": "keys-removed",
+      "label": "KEYS 제외",
+      "status": "pass",
+      "detail": "키사이트 테크놀로지 행은 출력 데이터에서 제거",
+      "checkedAt": "2026-06-03T09:10:00+09:00"
+    },
+    {
+      "id": "mrvl-only-highlight",
+      "label": "MRVL 단독 음영",
+      "status": "pass",
+      "detail": "MRVL 행에만 row highlight 적용",
+      "checkedAt": "2026-06-03T09:10:00+09:00"
+    },
+    {
+      "id": "daily-move-side-value",
+      "label": "오늘 등락률 티커 옆 표시",
+      "status": "pass",
+      "detail": "B 신호 배지형: 각 티커 셀의 sideValue에 캡처 기준 오늘 등락률 표시",
+      "checkedAt": "2026-06-03T09:10:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "B. 오늘 등락을 배지로 분리",
+    "subtitle": "빨강·파랑 배지로 상승/하락 방향을 즉시 구분",
+    "source": "사용자 제공 InvestingPro 화면 캡처, 2026-06-03 기준 화면 재구성"
+  },
+  "exportOptions": {
+    "headerPadding": "24px 34px 0",
+    "contentPadding": "8px 8px 8px",
+    "sourcePadding": "0 34px 16px",
+    "titleFontSize": 40,
+    "subtitleFontSize": 26,
+    "sourceFontSize": 20,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "18%",
+        "align": "left"
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "16%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월",
+        "dataType": "percent",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년",
+        "dataType": "percent",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "16%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "percent",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NVDA",
+            "displayValue": "NVDA\n엔비디아",
+            "sideValue": {
+              "displayValue": "0.7%↓",
+              "color": "#FFFFFF",
+              "background": "#1D4ED8",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "222.81",
+            "displayValue": "$222"
+          },
+          "m1": {
+            "value": "12.3%",
+            "displayValue": "12%"
+          },
+          "y1": {
+            "value": "62.2%",
+            "displayValue": "62%"
+          },
+          "target": {
+            "value": "296.81",
+            "displayValue": "$296\n+33%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "87.5%",
+            "displayValue": "87%"
+          },
+          "pe": {
+            "value": "25.1x",
+            "displayValue": "25x"
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AVGO",
+            "displayValue": "AVGO\n브로드컴",
+            "sideValue": {
+              "displayValue": "4.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "481.57",
+            "displayValue": "$481"
+          },
+          "m1": {
+            "value": "14.3%",
+            "displayValue": "14%"
+          },
+          "y1": {
+            "value": "95.2%",
+            "displayValue": "95%"
+          },
+          "target": {
+            "value": "486.85",
+            "displayValue": "$486\n+1%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "66.5%",
+            "displayValue": "66%"
+          },
+          "pe": {
+            "value": "38.8x",
+            "displayValue": "38x"
+          },
+          "keyword": {
+            "value": "AI ASIC",
+            "displayValue": "AI ASIC"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ANET",
+            "displayValue": "ANET\n아리스타 네트웍스",
+            "sideValue": {
+              "displayValue": "2.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "175.33",
+            "displayValue": "$175"
+          },
+          "m1": {
+            "value": "1.5%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "95.3%",
+            "displayValue": "95%"
+          },
+          "target": {
+            "value": "188.20",
+            "displayValue": "$188\n+7%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "21.8%",
+            "displayValue": "21%"
+          },
+          "pe": {
+            "value": "46.6x",
+            "displayValue": "46x"
+          },
+          "keyword": {
+            "value": "AI 스위치",
+            "displayValue": "AI 스위치"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FN",
+            "displayValue": "FN\n패브리넷",
+            "sideValue": {
+              "displayValue": "12.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "701.11",
+            "displayValue": "$701"
+          },
+          "m1": {
+            "value": "-0.8%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "200.4%",
+            "displayValue": "200%"
+          },
+          "target": {
+            "value": "749.11",
+            "displayValue": "$749\n+6%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "35.8%",
+            "displayValue": "35%"
+          },
+          "pe": {
+            "value": "44.6x",
+            "displayValue": "44x"
+          },
+          "keyword": {
+            "value": "광모듈 제조",
+            "displayValue": "광모듈 제조"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRDO",
+            "displayValue": "CRDO\n크레도 테크",
+            "sideValue": {
+              "displayValue": "1.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "229.19",
+            "displayValue": "$229"
+          },
+          "m1": {
+            "value": "24.2%",
+            "displayValue": "24%"
+          },
+          "y1": {
+            "value": "265.5%",
+            "displayValue": "265%"
+          },
+          "target": {
+            "value": "250.91",
+            "displayValue": "$250\n+9%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "75.1%",
+            "displayValue": "75%"
+          },
+          "pe": {
+            "value": "65.5x",
+            "displayValue": "65x"
+          },
+          "keyword": {
+            "value": "고속 연결칩",
+            "displayValue": "고속 연결칩"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ALAB",
+            "displayValue": "ALAB\n아스테라 랩스",
+            "sideValue": {
+              "displayValue": "11.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "355.78",
+            "displayValue": "$355"
+          },
+          "m1": {
+            "value": "75.5%",
+            "displayValue": "75%"
+          },
+          "y1": {
+            "value": "282.9%",
+            "displayValue": "282%"
+          },
+          "target": {
+            "value": "244.97",
+            "displayValue": "$244\n-31%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "63.2%",
+            "displayValue": "63%"
+          },
+          "pe": {
+            "value": "99.8x",
+            "displayValue": "99x"
+          },
+          "keyword": {
+            "value": "AI 연결칩",
+            "displayValue": "AI 연결칩"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#EFF6FF",
+        "cells": {
+          "ticker": {
+            "value": "MRVL",
+            "displayValue": "MRVL\n마벨",
+            "sideValue": {
+              "displayValue": "32.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "290.96",
+            "displayValue": "$290"
+          },
+          "m1": {
+            "value": "76.3%",
+            "displayValue": "76%"
+          },
+          "y1": {
+            "value": "374.3%",
+            "displayValue": "374%"
+          },
+          "target": {
+            "value": "227.99",
+            "displayValue": "$227\n-21%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "41.9%",
+            "displayValue": "41%"
+          },
+          "pe": {
+            "value": "52.4x",
+            "displayValue": "52x"
+          },
+          "keyword": {
+            "value": "AI 네트워크 반도체",
+            "displayValue": "AI 네트워크 반도체"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "COHR",
+            "displayValue": "COHR\n코히런트",
+            "sideValue": {
+              "displayValue": "17.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "426.89",
+            "displayValue": "$426"
+          },
+          "m1": {
+            "value": "29.6%",
+            "displayValue": "29%"
+          },
+          "y1": {
+            "value": "456.0%",
+            "displayValue": "456%"
+          },
+          "target": {
+            "value": "380.62",
+            "displayValue": "$380\n-10%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "54.5%",
+            "displayValue": "54%"
+          },
+          "pe": {
+            "value": "66.6x",
+            "displayValue": "66x"
+          },
+          "keyword": {
+            "value": "광통신 부품",
+            "displayValue": "광통신 부품"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VIAV",
+            "displayValue": "VIAV\n비아비",
+            "sideValue": {
+              "displayValue": "11.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "52.88",
+            "displayValue": "$52"
+          },
+          "m1": {
+            "value": "-4.4%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "477.9%",
+            "displayValue": "477%"
+          },
+          "target": {
+            "value": "64.43",
+            "displayValue": "$64\n+21%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "99.4%",
+            "displayValue": "99%"
+          },
+          "pe": {
+            "value": "50.8x",
+            "displayValue": "50x"
+          },
+          "keyword": {
+            "value": "계측·테스트",
+            "displayValue": "계측·테스트"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CIEN",
+            "displayValue": "CIEN\n시에나",
+            "sideValue": {
+              "displayValue": "10.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "627",
+            "displayValue": "$627"
+          },
+          "m1": {
+            "value": "17.1%",
+            "displayValue": "17%"
+          },
+          "y1": {
+            "value": "667.0%",
+            "displayValue": "667%"
+          },
+          "target": {
+            "value": "477.01",
+            "displayValue": "$477\n-23%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "136.4%",
+            "displayValue": "136%"
+          },
+          "pe": {
+            "value": "90.1x",
+            "displayValue": "90x"
+          },
+          "keyword": {
+            "value": "광전송 장비",
+            "displayValue": "광전송 장비"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AAOI",
+            "displayValue": "AAOI\n어플라이드 옵토",
+            "sideValue": {
+              "displayValue": "9.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "202.37",
+            "displayValue": "$202"
+          },
+          "m1": {
+            "value": "10.3%",
+            "displayValue": "10%"
+          },
+          "y1": {
+            "value": "1,204.4%",
+            "displayValue": "1,204%"
+          },
+          "target": {
+            "value": "151.30",
+            "displayValue": "$151\n-25%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "441.7%",
+            "displayValue": "441%"
+          },
+          "pe": {
+            "value": "168.5x",
+            "displayValue": "168x"
+          },
+          "keyword": {
+            "value": "광모듈 부품",
+            "displayValue": "광모듈 부품"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LITE",
+            "displayValue": "LITE\n루멘텀",
+            "sideValue": {
+              "displayValue": "13.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "3px 8px",
+              "borderRadius": "999px",
+              "fontSize": "17px",
+              "fontWeight": 900
+            }
+          },
+          "current": {
+            "value": "1,029",
+            "displayValue": "$1,029"
+          },
+          "m1": {
+            "value": "8.3%",
+            "displayValue": "8%"
+          },
+          "y1": {
+            "value": "1,256.6%",
+            "displayValue": "1,256%"
+          },
+          "target": {
+            "value": "1,105",
+            "displayValue": "$1,105\n+7%",
+            "highlight": "warning"
+          },
+          "eps": {
+            "value": "300.7%",
+            "displayValue": "300%"
+          },
+          "pe": {
+            "value": "93.0x",
+            "displayValue": "93x"
+          },
+          "keyword": {
+            "value": "광통신 부품",
+            "displayValue": "광통신 부품"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 54,
+      "cellPadding": "5px 7px",
+      "lineHeight": 1.1,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "17px",
+        "body": "18px",
+        "total": "20px",
+        "badge": "14px",
+        "unit": "14px",
+        "groupHeader": "16px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "B. 오늘 등락을 배지로 분리",
+    "subMessage": "빨강·파랑 배지로 상승/하락 방향을 즉시 구분",
+    "headline": "B. 오늘 등락을 배지로 분리",
+    "summary": "B 신호 배지형 시안. 원본 워치리스트에서 비교에 필요한 핵심 열만 남겨 MRVL을 중심으로 읽기 쉽게 재배치했다.",
+    "story": "원본 화면은 필터 영역과 여러 보조 열 때문에 행 비교가 어렵다. 이번 표는 현재가, 기간 수익률, 목표가 여력, EPS 성장, Forward P/E만 남겨 종목별 가격 부담과 성장 기대를 같이 보도록 만들었다.",
+    "keyTakeaways": [
+      "KEYS는 사용자 지시대로 제외했다.",
+      "MRVL만 행 음영을 적용했다.",
+      "오늘 등락률은 티커 옆에 큰 보조 라벨로 붙였다."
+    ],
+    "questionsRaised": [
+      "1년 수익률이 큰 종목의 목표가 하락 여력은 이미 과열을 반영하는가?",
+      "EPS 성장률 대비 Forward P/E가 합리적인가?"
+    ],
+    "viewerAction": "수익률이 큰 종목일수록 목표가 여력과 EPS 성장률을 함께 확인한다.",
+    "contextualNotes": [
+      "수치는 스크린샷에 보이는 범위 기준이다.",
+      "최신 시세 검증용 표가 아니라 화면 캡처를 발표용으로 정리한 결과다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "MRVL 32.6%↑ / 1년 +374% / 목표가 -21%",
+      "reason": "사용자가 강조를 요청한 마벨의 오늘 주가 움직임, 1년 수익률, 목표가 괴리"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": []
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "id": "04-memory-supply",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "모건스탠리 NAND 공급부족률 전망(2027~2028년)",
+    "preservedElements": [
+      "축 라벨/단위/기간 축",
+      "계열 구성",
+      "핵심 추세와 대소 관계"
+    ],
+    "changedElements": [
+      "팬톤 2026 팔레트로 색 통일",
+      "제목/부제 한국어 재작성",
+      "격자·여백 정리"
+    ],
+    "dataFidelity": "source-cited",
+    "notes": "공급부족률은 모건스탠리 2026-07-02 NAND 전망치를 사용."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visual-similarity-90",
+      "label": "소스 차트 구조 보존",
+      "status": "pass",
+      "detail": "모건스탠리 NAND 전망의 공급부족률을 막대로 대비.",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "palette-pantone-2026",
+      "label": "팬톤 2026 팔레트",
+      "status": "pass",
+      "detail": "Classic Blue/Living Coral/Very Peri/Illuminating/Ultimate Gray만 사용",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "2028년 AI 수요가 붙어도 NAND는 여전히 모자란다",
+    "subtitle": "AI향 NAND 수요 +60% 시에도 공급부족률 -5% 유지 전망",
+    "source": "자료: 모건스탠리 NAND 전망 (2026-07-02)",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "공급부족률 전망",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "-6",
+        "-4",
+        "-2",
+        "0"
+      ],
+      "min": -6,
+      "max": 0
+    },
+    "legend": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "AI향 NAND 수요 +60% 시에도 공급부족률 -5% 유지 전망",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "2028년 AI 수요가 붙어도 NAND는 여전히 모자란다",
+    "summary": "AI향 NAND 수요 +60% 시에도 공급부족률 -5% 유지 전망",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2027~2028년 공급부족 -5% 유지"
+    },
+    "colorStrategy": {
+      "primary": "#FF6F61",
+      "secondary": [
+        "#939597"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#F5DF4D",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-07-04T16:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "NAND 공급부족률 전망",
+        "data": [
+          {
+            "x": "2027년",
+            "y": -5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028년(AI 수요 +60%)",
+            "y": -5,
+            "confidence": 0.85
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      }
+    ],
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

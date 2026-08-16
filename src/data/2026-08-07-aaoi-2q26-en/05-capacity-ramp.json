@@ -1,0 +1,228 @@
+{
+  "id": "08-capacity-ramp-en",
+  "sourceImage": "input/08-capacity-ramp.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The plan is to triple capacity by year-end",
+    "subtitle": "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026",
+    "timeRange": "March 2026 - year-end 2026",
+    "xAxis": {
+      "label": "Period and basis",
+      "type": "category",
+      "tickValues": [
+        "March target",
+        "Current total",
+        "Year-end 800G/1.6T"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "March target",
+        "Current total",
+        "Year-end 800G/1.6T"
+      ]
+    },
+    "yAxis": {
+      "label": "Thousand units",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 800.0
+    },
+    "legend": [
+      {
+        "name": "Monthly capacity",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Monthly capacity",
+        "data": [
+          {
+            "x": "March target",
+            "y": 150,
+            "confidence": 0.74
+          },
+          {
+            "x": "Current total",
+            "y": 200,
+            "confidence": 0.74
+          },
+          {
+            "x": "Year-end 800G/1.6T",
+            "y": 650,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.5,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 333.3,
+        "absoluteChange": 500.0,
+        "from": 150.0,
+        "to": 650.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 650.0,
+        "at": ""
+      },
+      "min": {
+        "value": 150.0,
+        "at": ""
+      },
+      "average": 333.3333333333333,
+      "median": 200.0,
+      "range": 500.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The plan is to triple capacity by year-end",
+    "subMessage": "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only",
+    "headline": "The plan is to triple capacity by year-end",
+    "summary": "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 650.0
+      },
+      "displayText": "The plan is to triple capa",
+      "reason": "Capacity nears 200k a month and the 650k target counts 800G and 1.6T only"
+    },
+    "densityLevel": "balanced"
+  }
+}

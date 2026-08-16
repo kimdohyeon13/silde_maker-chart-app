@@ -1,0 +1,123 @@
+{
+  "id": "vision-banana-depth-normal",
+  "sourceImage": "input/09-vision-banana-depth-normal.png",
+  "analyzedAt": "2026-05-13T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "깊이와 표면 법선도 이미지 생성 문제로 흡수된다",
+    "subtitle": "절대 깊이와 표면 법선은 월드 모델 입력으로 이어지는 핵심 비전 태스크",
+    "source": "원문 PDF 기반 재구성"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "항목",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "20%"
+      },
+      {
+        "key": "value",
+        "label": "핵심 숫자",
+        "dataType": "text",
+        "width": "24%"
+      },
+      {
+        "key": "meaning",
+        "label": "해석",
+        "dataType": "text"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "item": {
+            "value": "절대 깊이",
+            "displayValue": "절대 깊이"
+          },
+          "value": {
+            "value": "Vision Banana 0.882",
+            "displayValue": "Vision Banana 0.882",
+            "highlight": "positive"
+          },
+          "meaning": {
+            "value": "Depth Pro 0.823, MoGe-2 0.70대보다 우위",
+            "displayValue": "Depth Pro 0.823, MoGe-2 0.70대보다 우위"
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "표면 법선",
+            "displayValue": "표면 법선"
+          },
+          "value": {
+            "value": "Vision Banana 19.6",
+            "displayValue": "Vision Banana 19.6"
+          },
+          "meaning": {
+            "value": "Marigold, StableNormal, DSINE 대비 경쟁력",
+            "displayValue": "Marigold, StableNormal, DSINE 대비 경쟁력"
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "핵심 해석",
+            "displayValue": "핵심 해석"
+          },
+          "value": {
+            "value": "RGB 출력 통합",
+            "displayValue": "RGB 출력 통합",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "분할, 깊이, 법선을 하나의 생성 인터페이스로 묶음",
+            "displayValue": "분할, 깊이, 법선을 하나의 생성 인터페이스로 묶음"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "비전 태스크가 하나의 출력 언어로 모인다",
+    "subMessage": "절대 깊이와 표면 법선은 월드 모델 입력으로 이어지는 핵심 비전 태스크",
+    "headline": "비전 태스크가 하나의 출력 언어로 모인다",
+    "summary": "Vision Banana의 포인트는 SOTA 하나가 아니라 컴퓨터 비전 문제를 생성 모델 문법으로 바꾼 데 있습니다.",
+    "story": "Vision Banana의 포인트는 SOTA 하나가 아니라 컴퓨터 비전 문제를 생성 모델 문법으로 바꾼 데 있습니다.",
+    "keyTakeaways": [
+      "절대 깊이",
+      "표면 법선",
+      "핵심 해석"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "본문의 해설과 함께 확인합니다.",
+    "contextualNotes": [
+      "원문 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "비전 태스크가 하나의 출력 언어로 모인다",
+      "reason": "Vision Banana의 포인트는 SOTA 하나가 아니라 컴퓨터 비전 문제를 생성 모델 문법으로 바꾼 데 있습니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed"
+  }
+}

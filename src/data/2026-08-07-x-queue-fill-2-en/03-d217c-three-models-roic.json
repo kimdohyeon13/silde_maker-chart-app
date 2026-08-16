@@ -1,0 +1,243 @@
+{
+  "id": "03-d217c-three-models-roic",
+  "mode": "faithful",
+  "sourceImage": "input/dib-217-08.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "도표 1: AI 추론 시대의 3대 사업모델, 모두 25%+ ROIC 가능",
+    "originalMessage": "GPU 임대 31%, 자체 인프라 모델 API 46%, 제3자 임대 인프라 모델 API 25% ROIC",
+    "preservedElements": [
+      "세 사업모델의 ROIC 31% / 46% / 25%",
+      "세 모델 모두 25% 이상이라는 원본 메시지",
+      "$bn/GW 기준과 연간 기준 표기",
+      "제3자 인프라는 컴퓨팅 임대료 차감 후 세율 21% 적용 주석",
+      "Morgan Stanley Research 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 텍스트를 영어로 번역",
+      "매출·비용·NOPAT 3단 묶음 대신 각 모델의 ROIC만 비교",
+      "회색 기반에 최고값 막대 하나만 강조",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 도표 1에 점선 박스로 인쇄된 세 ROIC 값만 사용했습니다.",
+    "sourceAttribution": "Source: Company data, Morgan Stanley Research estimates"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "31 / 46 / 25는 원본 도표에 인쇄된 ROIC 값입니다."
+    },
+    {
+      "id": "no-datapoint-color",
+      "label": "데이터 포인트 색상 미지정",
+      "status": "pass",
+      "detail": "data.series[].data[]에는 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 확인",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 그대로 표기했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Three AI models, all clear 25% ROIC",
+    "subtitle": "Return on a gigawatt: 31% renting GPUs, 46% on own infrastructure, 25% renting someone else's",
+    "source": "Source: Company data, Morgan Stanley Research estimates · source-visible",
+    "timeRange": "Annualised, per gigawatt",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GPU rental (IaaS)",
+        "Model API, own infra",
+        "Model API, rented infra"
+      ],
+      "displayTickValues": [
+        "GPU rental (IaaS)",
+        "Model API, own infra",
+        "Model API, rented infra"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "ROIC per gigawatt",
+        "role": "primary",
+        "originalColor": "#1462A6",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "ROIC per gigawatt",
+        "data": [
+          {
+            "x": "GPU rental (IaaS)",
+            "y": 31,
+            "confidence": 0.9
+          },
+          {
+            "x": "Model API, own infra",
+            "y": 46,
+            "confidence": 0.9
+          },
+          {
+            "x": "Model API, rented infra",
+            "y": 25,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.2,
+      "description": "Three business models compared on the same gigawatt.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.29,
+      "description": "The spread between the three models is 21 percentage points."
+    },
+    "changeRates": [
+      {
+        "period": "Rented infra to own infra",
+        "percentChange": 84,
+        "absoluteChange": 21,
+        "from": 25,
+        "to": 46
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 46,
+        "at": "Model API, own infra"
+      },
+      "min": {
+        "value": 25,
+        "at": "Model API, rented infra"
+      },
+      "average": 34,
+      "median": 31,
+      "range": 21
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Three AI models, all clear 25% ROIC",
+    "subMessage": "Return on a gigawatt: 31% renting GPUs, 46% on own infrastructure, 25% renting someone else's",
+    "headline": "Three AI models, all clear 25% ROIC",
+    "summary": "The same gigawatt returns 25% to 46% depending only on who captures the token revenue.",
+    "story": "Three ways to sell the same physical gigawatt. The gap between the best and the worst is 21 percentage points, and none of the three falls below 25%.",
+    "keyTakeaways": [
+      "GPU rental 31% ROIC",
+      "Model API on own infrastructure 46% ROIC",
+      "Model API on rented infrastructure 25% ROIC, after compute rent and a 21% tax rate"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the spread between the three bars as a question of who books the token revenue.",
+    "contextualNotes": [
+      "Source: Company data, Morgan Stanley Research estimates",
+      "Data state: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Model API, own infra",
+      "y": 46,
+      "displayText": "46%"
+    },
+    "densityLevel": "focused"
+  }
+}

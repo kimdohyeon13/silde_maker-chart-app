@@ -1,0 +1,239 @@
+{
+  "id": "w76slot-dark-terminal",
+  "mode": "faithful",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/w7-6/images/w7-6-10.png",
+  "preserveIntent": {
+    "originalMessage": "가스터빈 3사의 2029년까지 소진된 생산 슬롯",
+    "preservedElements": [
+      "행 3개(GE Vernova · Siemens Energy · Mitsubishi)와 열 4개(OEM · 수주잔고/약정 · 데이터센터 비중 · 리드타임/가용성)",
+      "인쇄된 값 전부: 100 GW(44 GW + 56 GW), ~20 GW(20%), ~3년·2029~2030년 ~10 GW, 80 GW·€60B·2.83배, 22 GW(27.5%), €146B·~70%·FY27, ¥5T·75기",
+      "원본 하단의 요지: 데이터센터 주문이 급증해도 2001·2018년 과잉공급 경험 때문에 증설이 제한된다"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용",
+      "하단 메모 블록을 부제 한 줄로 줄임"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "값은 X 저장소의 작업지시 JSON `slide_maker/requests/w76-10-en.json` 의 reading 에서만 가져왔습니다. 원본 이미지를 다시 판독하지 않았습니다.",
+    "sourceAttribution": "Source: GE Vernova, Siemens Energy, and Mitsubishi Heavy Industries disclosures"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "4열 × 3행 비교표. 첫 열은 행 헤더, 나머지는 왼쪽 정렬 텍스트. 표 종류를 바꾸지 않았습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "세 회사의 공시만 적었습니다. 셀사이드 이름도, 우리 발행물 이름(W7팔로업·월텍남)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "table",
+    "title": "Gas turbine slots are sold out through 2029",
+    "subtitle": "2028-2029 slots are spoken for and capacity additions stay cautious",
+    "source": "Source: GE Vernova, Siemens Energy, and Mitsubishi Heavy Industries disclosures"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "oem",
+        "label": "OEM",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "backlog",
+        "label": "Backlog / commitments",
+        "dataType": "text",
+        "width": "32%",
+        "align": "left"
+      },
+      {
+        "key": "datacenter",
+        "label": "Data-center share",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left"
+      },
+      {
+        "key": "leadtime",
+        "label": "Lead time / availability",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "oem": {
+            "value": "GE Vernova (NYSE: GEV)"
+          },
+          "backlog": {
+            "value": "100 GW (44 GW booked + 56 GW slot reservations)"
+          },
+          "datacenter": {
+            "value": "~20 GW (20%)"
+          },
+          "leadtime": {
+            "value": "~3 years; ~10 GW left across 2029-2030"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "oem": {
+            "value": "Siemens Energy (ETR: ENR)"
+          },
+          "backlog": {
+            "value": "80 GW committed; Gas Services backlog EUR 60B; book-to-bill 2.83x"
+          },
+          "datacenter": {
+            "value": "22 GW (27.5%)"
+          },
+          "leadtime": {
+            "value": "~70% of the EUR 146B backlog converts to revenue after FY27"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "oem": {
+            "value": "Mitsubishi (TYO: 7011)"
+          },
+          "backlog": {
+            "value": "GTCC backlog JPY 5T; 75 units"
+          },
+          "datacenter": {
+            "value": "\"High... especially data centers\""
+          },
+          "leadtime": {
+            "value": "Adding capacity through lean operations"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 29,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 28,
+      "maxRowHeight": 96,
+      "cellPadding": "6px 10px",
+      "lineHeight": 1.35,
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "13px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Gas turbine slots are sold out through 2029",
+    "subMessage": "2028-2029 slots are spoken for and capacity additions stay cautious",
+    "headline": "Gas turbine slots are sold out through 2029",
+    "summary": "2028-2029 slots are spoken for and capacity additions stay cautious",
+    "story": "Three OEMs hold the supply, and their slots run out through 2029.",
+    "keyTakeaways": [
+      "A narrow supplier base: GE Vernova, Siemens Energy, and Mitsubishi",
+      "Turbine slots are spoken for through 2028-2029",
+      "Capacity additions stay cautious after the past overbuild losses"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: GE Vernova, Siemens Energy, and Mitsubishi Heavy Industries disclosures"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

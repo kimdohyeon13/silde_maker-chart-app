@@ -1,0 +1,166 @@
+{
+  "id": "chart-08",
+  "sourceImage": "",
+  "analyzedAt": "2026-07-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "젠슨 황은 GTC 2026 키노트에서 최근 2년간 AI 사용량 100배, 워크로드당 추론 컴퓨트 10,000배, 그 곱으로 총 컴퓨팅 수요가 100만 배 늘었다고 주장했다.",
+    "dataFidelity": "source-derived",
+    "sourceAttribution": "출처: NVIDIA (blogs.nvidia.com)"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "2년간 컴퓨팅 수요 100만 배 (젠슨 황 키노트)",
+    "subtitle": "사용량 100배 × 추론 컴퓨트 1만배 = 총 수요 100만배 — 막대 높이는 0의 개수(log10)",
+    "source": "출처: NVIDIA (blogs.nvidia.com)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "사용량 100배",
+        "컴퓨트 1만배",
+        "수요 100만배"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 7
+    },
+    "legend": [
+      {
+        "name": "0의 개수(log10)",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "0의 개수(log10)",
+        "data": [
+          {
+            "x": "사용량 100배",
+            "y": 2,
+            "confidence": 0.82
+          },
+          {
+            "x": "컴퓨트 1만배",
+            "y": 4,
+            "confidence": 0.82
+          },
+          {
+            "x": "수요 100만배",
+            "y": 6,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본 자료에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 2,
+        "to": 6,
+        "absoluteChange": 4,
+        "percentChange": 200.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6,
+        "at": ""
+      },
+      "min": {
+        "value": 2,
+        "at": ""
+      },
+      "average": 4,
+      "median": 4,
+      "range": 4
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "추론 변곡점의 산수",
+    "subMessage": "사용량 100배 × 추론 컴퓨트 1만배 = 총 수요 100만배 — 막대 높이는 0의 개수(log10)",
+    "headline": "추론 변곡점의 산수",
+    "summary": "젠슨 황은 GTC 2026 키노트에서 최근 2년간 AI 사용량 100배, 워크로드당 추론 컴퓨트 10,000배, 그 곱으로 총 컴퓨팅 수요가 100만 배 늘었다고 주장했다.",
+    "story": "젠슨 황은 GTC 2026 키노트에서 최근 2년간 AI 사용량 100배, 워크로드당 추론 컴퓨트 10,000배, 그 곱으로 총 컴퓨팅 수요가 100만 배 늘었다고 주장했다.",
+    "keyTakeaways": [
+      "젠슨 황은 GTC 2026 키노트에서 최근 2년간 AI 사용량 100배, 워크로드당 추론 컴퓨트 10,000배, 그 곱으로 총 컴퓨팅 수요가 100만 배 늘었다고 주장했다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본 맥락과 함께 방향·축·시리즈를 확인하세요.",
+    "contextualNotes": [
+      "막대 높이는 log10 값(2=100배, 4=1만배, 6=100만배)",
+      "키노트 주장 수치 — NVIDIA 블로그·Atlan 리캡 교차 확인",
+      "출처: NVIDIA (blogs.nvidia.com)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "수요 100만배",
+        "y": 6
+      },
+      "reason": "젠슨 황은 GTC 2026 키노트에서 최근 2년간 AI 사용량 100배, 워크로드당 추론 컴퓨트 10,000배, 그 곱으로 총 컴퓨팅 수요가 100만 배 늘었다고 주장했다.",
+      "displayText": "추론 변곡점의 산수"
+    },
+    "densityLevel": "balanced"
+  }
+}

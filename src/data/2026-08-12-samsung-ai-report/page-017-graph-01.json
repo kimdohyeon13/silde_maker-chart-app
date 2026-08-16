@@ -1,0 +1,230 @@
+{
+  "id": "page-017-graph-01",
+  "sourceImage": "input/22-page_017_graph_01.png",
+  "analyzedAt": "2026-08-12T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "originalTitle": "미국, 중국 프론티어급 모델 작업당 비용 비교",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "참고: 괄호 안의 숫자는 AAIIndex 기준 지능 점수 / 자료: Artificialanalysis, World Tech Research",
+    "mustPreserve": [
+      "원문 제목",
+      "원문 수치",
+      "시리즈 수",
+      "축·범례·출처"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "label": "원본 화면 수치",
+      "status": "pass",
+      "detail": "PDF 크롭에서 직접 읽은 값입니다. 원자료가 없는 지점은 시각적 위치를 보존하는 근사값으로 기록했습니다."
+    },
+    {
+      "id": "faithful-structure",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본 제목, 시리즈, 축, 범례, 출처를 보존합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "미국, 중국 프론티어급 모델 작업당 비용 비교",
+    "source": "참고: 괄호 안의 숫자는 AAIIndex 기준 지능 점수 / 자료: Artificialanalysis, World Tech Research",
+    "xAxis": {
+      "label": "모델",
+      "type": "category",
+      "tickValues": [
+        "Claude Opus 5(60.7)",
+        "GPT-5.6 Sol(58.9)",
+        "Gemini 3.6 Flash(50.1)",
+        "Muse Spark 1.2(54)",
+        "Grok 4.5(53.8)",
+        "Kimi K3(57.1)",
+        "GLM-5.2(51.1)",
+        "DeepSeek V4 Flash(49.9)"
+      ],
+      "displayTickValues": [
+        "Claude Opus 5(60.7)",
+        "GPT-5.6 Sol(58.9)",
+        "Gemini 3.6 Flash(50.1)",
+        "Muse Spark 1.2(54)",
+        "Grok 4.5(53.8)",
+        "Kimi K3(57.1)",
+        "GLM-5.2(51.1)",
+        "DeepSeek V4 Flash(49.9)"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 2.5,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "달러",
+      "type": "category",
+      "tickValues": [],
+      "displayTickValues": [],
+      "unit": "$",
+      "min": 0,
+      "max": 2.5,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "미국 모델",
+        "originalColor": "#1479F2"
+      },
+      {
+        "name": "중국 모델",
+        "originalColor": "#F04473"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "미국 모델",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1479F2",
+        "data": [
+          {
+            "x": "Claude Opus 5(60.7)",
+            "y": 2.34,
+            "confidence": 0.85
+          },
+          {
+            "x": "GPT-5.6 Sol(58.9)",
+            "y": 2.03,
+            "confidence": 0.85
+          },
+          {
+            "x": "Gemini 3.6 Flash(50.1)",
+            "y": 0.56,
+            "confidence": 0.85
+          },
+          {
+            "x": "Muse Spark 1.2(54)",
+            "y": 0.4,
+            "confidence": 0.85
+          },
+          {
+            "x": "Grok 4.5(53.8)",
+            "y": 0.36,
+            "confidence": 0.85
+          }
+        ]
+      },
+      {
+        "name": "중국 모델",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#F04473",
+        "data": [
+          {
+            "x": "Kimi K3(57.1)",
+            "y": 0.84,
+            "confidence": 0.85
+          },
+          {
+            "x": "GLM-5.2(51.1)",
+            "y": 0.31,
+            "confidence": 0.85
+          },
+          {
+            "x": "DeepSeek V4 Flash(49.9)",
+            "y": 0.03,
+            "confidence": 0.85
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.78,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.65,
+      "description": "원본 화면에서 읽은 추세입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "이미지 기반 판정입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {}
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미국, 중국 프론티어급 모델 작업당 비용 비교",
+    "subMessage": "중국 모델이 작업당 비용에서 높은 경쟁력을 보입니다",
+    "headline": "미국, 중국 프론티어급 모델 작업당 비용 비교",
+    "summary": "중국 모델이 작업당 비용에서 높은 경쟁력을 보입니다",
+    "story": "중국 모델이 작업당 비용에서 높은 경쟁력을 보입니다",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "참고: 괄호 안의 숫자는 AAIIndex 기준 지능 점수 / 자료: Artificialanalysis, World Tech Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0969DA",
+      "secondary": [
+        "#F04473",
+        "#12B8C4",
+        "#98A2B3"
+      ],
+      "positive": "#16A34A",
+      "negative": "#D92D20",
+      "accent": "#0969DA",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

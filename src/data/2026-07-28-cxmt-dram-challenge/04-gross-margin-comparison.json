@@ -1,0 +1,248 @@
+{
+  "id": "04-gross-margin-comparison",
+  "sourceImage": "input/04-gross-margin-comparison-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "회사별 회계범위가 달라 단순 동급 비교는 주의",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한국어 제목",
+      "Paperlogy 타이포",
+      "핵심 비교 강조",
+      "16:9 여백",
+      "라벨 밀도"
+    ],
+    "dataFidelity": "exact",
+    "notes": "사용자가 직관적 비교를 요청해 기사 속 수치와 비교 관계를 유지한 채 연간 비교·핵심 표·판정표로 재구성했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)",
+    "mode": "redesign"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "aggregate-stated-values"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "paperlogy-typography",
+      "label": "Paperlogy 900/300",
+      "status": "pass",
+      "detail": "headMessage 900, subMessage 300 계약으로 렌더합니다."
+    },
+    {
+      "id": "article-estimate-labelled",
+      "label": "기사 추정치 구분",
+      "status": "pass",
+      "detail": "2026년 이후 전망과 HBM 수율은 SemiAnalysis 모델로 구분합니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "headerPadding": "25px 38px 2px",
+    "contentPadding": "8px 18px 6px",
+    "sourcePadding": "0 38px 15px",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "subtitleFontWeight": 300,
+    "titleLetterSpacing": -1.2,
+    "canvasHeight": 513,
+    "chartHeight": 292,
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "기사 모델상 총마진은 38% 수준까지 접근",
+    "subtitle": "회사별 회계범위가 달라 단순 동급 비교는 주의",
+    "source": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "회사",
+      "type": "category",
+      "tickValues": [
+        "SK하이닉스",
+        "마이크론",
+        "삼성전자",
+        "CXMT"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "총마진",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "2025년 총마진",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2025년 총마진",
+        "data": [
+          {
+            "x": "SK하이닉스",
+            "y": 60.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "마이크론",
+            "y": 39.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "삼성전자",
+            "y": 39.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "CXMT",
+            "y": 37.8,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.51,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -37.4,
+        "absoluteChange": -22.6,
+        "from": 60.4,
+        "to": 37.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 60.4,
+        "at": ""
+      },
+      "min": {
+        "value": 37.8,
+        "at": ""
+      },
+      "average": 44.349999999999994,
+      "median": 39.599999999999994,
+      "range": 22.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "기사 모델상 총마진은 38% 수준까지 접근",
+    "subMessage": "회사별 회계범위가 달라 단순 동급 비교는 주의",
+    "headline": "기사 모델상 총마진은 38% 수준까지 접근",
+    "summary": "회사별 회계범위가 달라 단순 동급 비교는 주의",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "회사별 회계범위가 달라 단순 동급 비교는 주의",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 37.8
+      },
+      "displayText": "기사 모델상 총마진은 38% ",
+      "reason": "회사별 회계범위가 달라 단순 동급 비교는 주의"
+    },
+    "densityLevel": "balanced"
+  }
+}

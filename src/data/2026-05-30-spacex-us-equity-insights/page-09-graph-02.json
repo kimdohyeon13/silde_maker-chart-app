@@ -1,0 +1,101 @@
+{
+  "id": "page-09-graph-02",
+  "sourceImage": "input/10-page-09-graph-02.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Factset, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "반도체 이익, GFC 이후 최고 속도 성장",
+    "subtitle": "반도체 이익 성장률(전년비 %), 12m fwd 기준, 이미지 기반 근사값",
+    "source": "Factset, 삼성증권",
+    "timeRange": "",
+    "xAxis": { "label": "연도", "type": "category", "tickValues": ["2018","2019","2020","2021","2022","2023","2024","2025","2026"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "이익 성장률", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": false, "isLogScale": false, "max": 160 },
+    "legend": [
+      { "name": "반도체 EPS", "role": "primary", "originalColor": "#4C8BF5", "remakeColor": "#1458D4" },
+      { "name": "반도체 ex.엔비디아 EPS", "role": "secondary", "originalColor": "#E05A8A", "remakeColor": "#E45B5B" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "반도체 EPS", "renderAs": "line", "role": "primary",
+        "data": [
+          {"x": "2018", "y": 40, "confidence": 0.8},
+          {"x": "2019", "y": -12, "confidence": 0.8},
+          {"x": "2020", "y": 28, "confidence": 0.8},
+          {"x": "2021", "y": 62, "confidence": 0.8},
+          {"x": "2022", "y": 18, "confidence": 0.8},
+          {"x": "2023", "y": -22, "confidence": 0.8},
+          {"x": "2024", "y": 45, "confidence": 0.8},
+          {"x": "2025", "y": 95, "confidence": 0.8},
+          {"x": "2026", "y": 145, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      },
+      {
+        "name": "반도체 ex.엔비디아 EPS", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "2018", "y": 38, "confidence": 0.8},
+          {"x": "2019", "y": -15, "confidence": 0.8},
+          {"x": "2020", "y": 22, "confidence": 0.8},
+          {"x": "2021", "y": 55, "confidence": 0.8},
+          {"x": "2022", "y": 12, "confidence": 0.8},
+          {"x": "2023", "y": -28, "confidence": 0.8},
+          {"x": "2024", "y": 32, "confidence": 0.8},
+          {"x": "2025", "y": 72, "confidence": 0.8},
+          {"x": "2026", "y": 120, "confidence": 0.8}
+        ],
+        "color": "#E45B5B"
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "up", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "accelerating_up" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 145, "at": ""}, "min": {"value": -28, "at": ""}, "average": 39, "median": 32, "range": 173 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "이익이 밸류를 정당화한다",
+    "subMessage": "엔비디아를 빼도 성장세는 가파르다",
+    "headline": "반도체 이익 성장률이 글로벌 금융위기 이후 가장 빠른 속도로 가속되며 높아진 밸류에이션을 실적이 뒷받침하고 있습니다.",
+    "summary": "반도체 이익이 글로벌 금융위기 이후 가장 빠른 속도로 늘고 있어, 높아진 밸류에이션을 실적이 뒷받침합니다.",
+    "story": "반도체 이익이 글로벌 금융위기 이후 가장 빠른 속도로 늘고 있어, 높아진 밸류에이션을 실적이 뒷받침합니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Factset, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"+145% 급증","position":{"x":"2026"},"importance":"critical","style":"positive"},
+      {"text":"저점 통과","position":{"x":"2023"},"importance":"high","style":"neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"2026","y":145}, "displayText": "이익이 밸류를 정당화한다", "reason": "반도체 이익이 글로벌 금융위기 이후 가장 빠른 속도로 늘고 있어, 높아진 밸류에이션을 실적이 뒷받침합니다." },
+    "densityLevel": "balanced"
+  }
+}

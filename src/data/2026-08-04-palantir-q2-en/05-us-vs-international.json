@@ -1,0 +1,228 @@
+{
+  "id": "05-us-vs-international",
+  "sourceImage": "input/05-us-vs-international.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "US +115% vs. international +35%; international fell to 19% of revenue",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Calculated from Palantir Q2 2026 Business Update (total revenue less US revenue)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Growth Came Almost Entirely From the US",
+    "subtitle": "US +115% vs. international +35%; international fell to 19% of revenue",
+    "source": "Source: Calculated from Palantir Q2 2026 Business Update (total revenue less US revenue)",
+    "timeRange": "2Q25 vs. 2Q26",
+    "xAxis": {
+      "label": "Region and quarter",
+      "type": "category",
+      "tickValues": [
+        "US 2Q25",
+        "US 2Q26",
+        "Intl. 2Q25",
+        "Intl. 2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Revenue by region",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue by region",
+        "data": [
+          {
+            "x": "US 2Q25",
+            "y": 733,
+            "confidence": 0.74
+          },
+          {
+            "x": "US 2Q26",
+            "y": 1570,
+            "confidence": 0.74
+          },
+          {
+            "x": "Intl. 2Q25",
+            "y": 271,
+            "confidence": 0.74
+          },
+          {
+            "x": "Intl. 2Q26",
+            "y": 365,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.768,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": -50.2,
+        "absoluteChange": -368.0,
+        "from": 733.0,
+        "to": 365.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1570.0,
+        "at": ""
+      },
+      "min": {
+        "value": 271.0,
+        "at": ""
+      },
+      "average": 734.75,
+      "median": 549.0,
+      "range": 1299.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Growth Came Almost Entirely From the US",
+    "subMessage": "US +115% vs. international +35%; international fell to 19% of revenue",
+    "headline": "Growth Came Almost Entirely From the US",
+    "summary": "US +115% vs. international +35%; international fell to 19% of revenue",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "US +115% vs. international +35%; international fell to 19% of revenue",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Calculated from Palantir Q2 2026 Business Update (total revenue less US revenue)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 365.0
+      },
+      "displayText": "Growth is a US story",
+      "reason": "US +115% vs. international +35%; international fell to 19% of revenue"
+    },
+    "densityLevel": "balanced"
+  }
+}

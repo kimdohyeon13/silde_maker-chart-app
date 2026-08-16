@@ -1,0 +1,272 @@
+{
+  "id": "r104-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/report-1/images/report-1-04.png",
+  "preserveIntent": {
+    "originalMessage": "미국 기업 AI 채택률 23.7%, 6개월 전망 20.6%",
+    "preservedElements": [
+      "2개 계열(현재 채택률·6개월 전망)과 3개 시점 2024~2026",
+      "인쇄된 끝값 23.7% / 20.6%",
+      "y축 눈금 0%, 5%, 10%, 15%, 20%, 25%"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용",
+      "보이는 글자를 영어로 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "끝값 2개만 원본에 인쇄돼 있습니다. 2024·2025 네 점은 y축 눈금(0~25%) 기준으로 원본 화면에서 읽은 source-visible 값입니다.",
+    "sourceAttribution": "Source: Market Report World"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "원본의 차트 종류·계열·행 순서를 그대로 두고 색과 프레임만 다크 터미널로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "끝값 2개만 원본에 인쇄돼 있습니다. 2024·2025 네 점은 y축 눈금(0~25%) 기준으로 원본 화면에서 읽은 source-visible 값입니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "원본에 인쇄된 자료 출처를 그대로 옮겼습니다. 셀사이드 이름도, 우리 발행물 이름(알파테크리포트·데일리이슈브리프·W7팔로업)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "compactChartMargins": false,
+    "chartHeight": 380,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 330,
+    "metricValue": "23.7%",
+    "metricLabel": "Current adoption",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "US enterprise AI adoption is climbing fast",
+    "subtitle": "Current adoption 23.7%, six-month outlook 20.6%",
+    "source": "Source: Market Report World",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "displayTickValues": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 25
+    },
+    "legend": [
+      {
+        "name": "Current adoption",
+        "role": "primary",
+        "originalColor": "#00E0A4",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Six-month outlook",
+        "role": "secondary",
+        "originalColor": "#FF5FC4",
+        "remakeColor": "#FF5FC4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Current adoption",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "2024",
+            "y": 6.0,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 9.0,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 23.7,
+            "confidence": 0.78
+          }
+        ]
+      },
+      {
+        "name": "Six-month outlook",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF5FC4",
+        "data": [
+          {
+            "x": "2024",
+            "y": 4.0,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 7.0,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 20.6,
+            "confidence": 0.78
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.78,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "끝값 2개만 원본에 인쇄돼 있습니다. 2024·2025 네 점은 y축 눈금(0~25%) 기준으로 원본 화면에서 읽은 source-visible 값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 방향을 그대로 옮겼습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본의 변동폭을 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 23.7,
+        "at": "2026"
+      },
+      "min": {
+        "value": 6.0,
+        "at": "2024"
+      },
+      "average": 12.9,
+      "median": 0,
+      "range": 17.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "US enterprise AI adoption is climbing fast",
+    "subMessage": "Current adoption 23.7%, six-month outlook 20.6%",
+    "headline": "US enterprise AI adoption is climbing fast",
+    "summary": "Current adoption 23.7%, six-month outlook 20.6%",
+    "story": "Current adoption 23.7%, six-month outlook 20.6%",
+    "keyTakeaways": [
+      "Current adoption 23.7%, six-month outlook 20.6%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Market Report World"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026",
+        "y": 23.7
+      },
+      "displayText": "23.7",
+      "reason": "Current adoption 23.7%, six-month outlook 20.6%"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "id": "07-nasdaq-pe-yield",
+  "mode": "faithful",
+  "sourceImage": "input/07-nasdaq-pe-yield.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "미 국채 10년물 4.5% 이상 구간에서 기술주 밸류 부담 부각",
+    "originalMessage": "미 국채 10년물 4.5% 이상 구간에서 기술주 밸류 부담 부각",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 52개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "미 국채 10년물 4.5% 이상 구간에서 기술주 밸류 부담 부각",
+    "subtitle": "좌축 NASDAQ100 12개월 선행 P/E · 우축 미 국채 10년물 금리",
+    "source": "참고: 12개월 선행 P/E 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2023-Q1",
+        "2024-Q1",
+        "2025-Q1",
+        "2026-Q1",
+        "2027-Q1",
+        "2028-Q1",
+        "2029-Q1"
+      ],
+      "displayTickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028",
+        "2029"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "unit": "x",
+      "min": 18,
+      "max": 30,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8",
+        "4.9",
+        "5"
+      ],
+      "unit": "%",
+      "min": 4.5,
+      "max": 5,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "NASDAQ100 P/E",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "미 국채 10년물 금리",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "NASDAQ100 P/E",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2023-Q1",
+            "y": 20,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 22,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 23,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 24,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 26,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 27,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 23,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 24,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 26,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 24,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 27,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q3",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q4",
+            "y": 26,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q1",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q2",
+            "y": 27,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q3",
+            "y": 26,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q4",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q1",
+            "y": 26,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q2",
+            "y": 24,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q3",
+            "y": 23,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q4",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2029-Q1",
+            "y": 24,
+            "confidence": 0.76
+          },
+          {
+            "x": "2029-Q2",
+            "y": 23,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "미 국채 10년물 금리",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "axis": "right",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2023-Q1",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 4.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 4.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 4.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 4.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 4.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q3",
+            "y": 4.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q4",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q1",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q2",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q3",
+            "y": 4.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2027-Q4",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q1",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q2",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q3",
+            "y": 4.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2028-Q4",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2029-Q1",
+            "y": 4.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2029-Q2",
+            "y": 4.6,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 52,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 4.3,
+      "max": 27,
+      "average": 0,
+      "latest": 23
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미 국채 10년물 4.5% 이상 구간에서 기술주 밸류 부담 부각",
+    "subMessage": "좌축 NASDAQ100 12개월 선행 P/E · 우축 미 국채 10년물 금리",
+    "headline": "미 국채 10년물 4.5% 이상 구간에서 기술주 밸류 부담 부각",
+    "summary": "좌축 NASDAQ100 12개월 선행 P/E · 우축 미 국채 10년물 금리",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2029-Q2",
+        "y": 23
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

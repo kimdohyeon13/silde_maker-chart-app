@@ -1,0 +1,252 @@
+{
+  "id": "04-a58b-datacenter-delay-recontracted",
+  "mode": "faithful",
+  "sourceImage": "input/alpha-58-03.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "취소·지연 헤드라인 vs 실제로 벌어진 일",
+    "originalMessage": "크루소 1.8GW가 취소로 밀렸으나 메타가 곧바로 약 1.6GW를 재계약했고, 별도 4.5GW 오라클·오픈AI 계약은 유효",
+    "preservedElements": [
+      "취소로 밀린 1.8GW",
+      "메타가 두 부지에서 재계약한 약 1.6GW",
+      "유효하게 남은 4.5GW 오라클·오픈AI 계약",
+      "GW 단위",
+      "표에 적힌 세 건의 관계",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "표를 세 개 막대의 비교 차트로 정리",
+      "영문 표기로 번역",
+      "회색 막대와 재계약 물량 한 개 강조",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 표에 인쇄된 1.8GW·약 1.6GW·4.5GW를 그대로 사용했습니다. 100 미만 값이라 소수점을 유지했습니다.",
+    "sourceAttribution": "Source: announced site contracts as reported, July 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "1.8GW, 약 1.6GW, 4.5GW는 원본 표에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 그대로 유지했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "제목·부제·축·범례·출처·내러티브를 모두 영문으로 작성했습니다."
+    },
+    {
+      "id": "no-point-color-key",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The delayed gigawatts got re-contracted",
+    "subtitle": "1.8GW pushed out by one cancellation, about 1.6GW re-signed at two sites, and a separate 4.5GW contract still standing",
+    "source": "Source: announced site contracts as reported, July 2026 · source-visible",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Pushed out by cancellation",
+        "Re-signed at two sites",
+        "Contract still standing"
+      ],
+      "displayTickValues": [
+        "Pushed out by cancellation",
+        "Re-signed at two sites",
+        "Contract still standing"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Gigawatts (GW)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "Contracted capacity",
+        "role": "primary",
+        "originalColor": "#4A4A4A",
+        "remakeColor": "#B9C0C9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Contracted capacity",
+        "data": [
+          {
+            "x": "Pushed out by cancellation",
+            "y": 1.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "Re-signed at two sites",
+            "y": 1.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "Contract still standing",
+            "y": 4.5,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C0C9"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.79,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "The re-signed figure is printed as an approximate total across two sites."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.3,
+      "description": "The cancelled block and the re-signed block are almost the same size.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.52,
+      "description": "The standing contract is larger than either of the two disputed blocks."
+    },
+    "changeRates": [
+      {
+        "period": "Cancelled to re-signed",
+        "percentChange": -11.1,
+        "absoluteChange": -0.2,
+        "from": 1.8,
+        "to": 1.6
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.5,
+        "at": "Contract still standing"
+      },
+      "min": {
+        "value": 1.6,
+        "at": "Re-signed at two sites"
+      },
+      "average": 2.6333,
+      "median": 1.8,
+      "range": 2.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The delayed gigawatts got re-contracted",
+    "subMessage": "1.8GW pushed out by one cancellation, about 1.6GW re-signed at two sites, and a separate 4.5GW contract still standing",
+    "headline": "The delayed gigawatts got re-contracted",
+    "summary": "Nearly all of the capacity behind the delay headline was re-signed at other sites within the same window.",
+    "story": "A cancelled lease moves where a site gets built. It is not the same event as demand disappearing, and the contract that carried the largest block never moved at all.",
+    "keyTakeaways": [
+      "One cancellation pushed out 1.8GW.",
+      "About 1.6GW was re-signed at two other sites.",
+      "A separate 4.5GW contract stayed in force.",
+      "Figures are read from the source table (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the cancelled bar with the re-signed bar before reading a stall into the headline.",
+    "contextualNotes": [
+      "Source: announced site contracts as reported, July 2026",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#B9C0C9",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Re-signed at two sites",
+      "y": 1.6,
+      "displayText": "1.6GW"
+    },
+    "densityLevel": "focused"
+  }
+}

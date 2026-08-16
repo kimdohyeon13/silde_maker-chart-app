@@ -1,0 +1,157 @@
+{
+  "id": "page-011-graph-01",
+  "sourceImage": "11-page_011_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32
+  },
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러 FCF 흑자 전환 시점 및 이후 절대값 레벨 상향",
+    "dataFidelity": "source-visible",
+    "notes": "연도별 막대의 화면 판독값"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "적자 구간과 2030년 이후 상승 구간을 보존했다."
+    }
+  ],
+  "structure": {
+    "chartType": "bar",
+    "title": "하이퍼스케일러 FCF 흑자 전환 시점 및 이후 절대값 레벨 상향",
+    "source": "자료: Bloomberg, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028",
+        "2029",
+        "2030"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "numeric",
+      "tickValues": [
+        "-35",
+        "0",
+        "35",
+        "70",
+        "105",
+        "140",
+        "175"
+      ],
+      "min": -35,
+      "max": 175,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "FCF",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "FCF",
+        "data": [
+          {
+            "x": "2024",
+            "y": 105,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 80,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027",
+            "y": -35,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": -10,
+            "confidence": 0.8
+          },
+          {
+            "x": "2029",
+            "y": 90,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 150,
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "2026년 3분기부터 2028년 1분기까지 적자를 거친 뒤 FCF가 확대된다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "하이퍼스케일러 FCF 흑자 전환 시점 및 이후 절대값 레벨 상향",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FCF 절대값 레벨 증가"
+    },
+    "annotations": [
+      {
+        "text": "3Q26~1Q28 적자 전망",
+        "position": {
+          "x": "2027",
+          "y": -25
+        },
+        "importance": "critical"
+      }
+    ],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

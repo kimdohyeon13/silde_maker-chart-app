@@ -1,0 +1,339 @@
+{
+  "id": "page-005-graph-02",
+  "sourceImage": "input/02-page_005_graph_02.png",
+  "analyzedAt": "2026-08-12T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "originalTitle": "모델 토큰 가격 추이",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: SilliconData, World Tech Research",
+    "mustPreserve": [
+      "원문 제목",
+      "원문 수치",
+      "시리즈 수",
+      "축·범례·출처"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "label": "원본 화면 수치",
+      "status": "pass",
+      "detail": "PDF 크롭에서 직접 읽은 값입니다. 원자료가 없는 지점은 시각적 위치를 보존하는 근사값으로 기록했습니다."
+    },
+    {
+      "id": "faithful-structure",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본 제목, 시리즈, 축, 범례, 출처를 보존합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "모델 토큰 가격 추이",
+    "source": "자료: SilliconData, World Tech Research",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ],
+      "displayTickValues": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 5,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "달러",
+      "type": "category",
+      "tickValues": [],
+      "displayTickValues": [],
+      "unit": "$",
+      "min": 0,
+      "max": 5,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "평균 토큰 가격",
+        "originalColor": "#1479F2"
+      },
+      {
+        "name": "폐쇄형 모델 토큰 가격",
+        "originalColor": "#F04473"
+      },
+      {
+        "name": "오픈 모델 토큰 가격",
+        "originalColor": "#12B8C4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "평균 토큰 가격",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#1479F2",
+        "data": [
+          {
+            "x": "2025-12",
+            "y": 1,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-01",
+            "y": 1.2,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-02",
+            "y": 1.4,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-03",
+            "y": 1.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-04",
+            "y": 1.6,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-05",
+            "y": 1.9,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-06",
+            "y": 1.7,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-07",
+            "y": 1.6,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-08",
+            "y": 1.2,
+            "confidence": 0.75
+          }
+        ]
+      },
+      {
+        "name": "폐쇄형 모델 토큰 가격",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#F04473",
+        "data": [
+          {
+            "x": "2025-12",
+            "y": 1.2,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-01",
+            "y": 1.6,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-02",
+            "y": 2.3,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-03",
+            "y": 2.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-04",
+            "y": 2,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-05",
+            "y": 3,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-06",
+            "y": 3.7,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-07",
+            "y": 4,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-08",
+            "y": 3,
+            "confidence": 0.75
+          }
+        ]
+      },
+      {
+        "name": "오픈 모델 토큰 가격",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#12B8C4",
+        "data": [
+          {
+            "x": "2025-12",
+            "y": 0.25,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-01",
+            "y": 0.27,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-02",
+            "y": 0.32,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-03",
+            "y": 0.36,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-04",
+            "y": 0.42,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-05",
+            "y": 0.55,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-06",
+            "y": 0.48,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-07",
+            "y": 0.43,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026-08",
+            "y": 0.5,
+            "confidence": 0.75
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 27,
+    "quality": {
+      "overallConfidence": 0.78,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.65,
+      "description": "원본 화면에서 읽은 추세입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "이미지 기반 판정입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {}
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "모델 토큰 가격 추이",
+    "subMessage": "모델 토큰 가격 하락이 AI 서비스 원가를 낮추고 있습니다",
+    "headline": "모델 토큰 가격 추이",
+    "summary": "모델 토큰 가격 하락이 AI 서비스 원가를 낮추고 있습니다",
+    "story": "모델 토큰 가격 하락이 AI 서비스 원가를 낮추고 있습니다",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: SilliconData, World Tech Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0969DA",
+      "secondary": [
+        "#F04473",
+        "#12B8C4",
+        "#98A2B3"
+      ],
+      "positive": "#16A34A",
+      "negative": "#D92D20",
+      "accent": "#0969DA",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

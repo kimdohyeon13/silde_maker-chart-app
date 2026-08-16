@@ -1,0 +1,295 @@
+{
+  "id": "08-capacity-ramp",
+  "mode": "faithful",
+  "sourceImage": "input/12_sites_map.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "스페이스X 데이터센터 용량은 1Q25 0.40기가와트에서 4Q27 10.0기가와트로 늘어나며 2026년 말 이후 기울기가 급해진다",
+    "preservedElements": [
+      "1Q25~4Q27 12개 분기 순서와 값",
+      "기가와트 단위",
+      "0.40에서 10.0으로 가는 곡선 형태",
+      "SemiAnalysis Datacenter Industry Model 출처"
+    ],
+    "changedElements": [
+      "어두운 배경을 밝은 배경으로 전환",
+      "축 라벨 한글화",
+      "면 채색을 걷어내고 선과 끝점 강조만 남김"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 읽은 12개 분기 값을 유지했습니다. 중간 분기는 화면 판독 근사값입니다.",
+    "sourceAttribution": "자료: SemiAnalysis Datacenter Industry Model, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "원본이 꺾은선이라 형식을 유지했고, 12개 분기 전량 표시에 0~12 축, 마지막 점 1곳만 강조로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "값은 원본 화면 판독 기반 source-visible이며 2027년 구간은 전망입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle",
+    "showDirectLabels": false
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "곡선이 꺾이는 지점은 2026년 말이다",
+    "subtitle": "스페이스X 데이터센터 용량 추이와 전망, 단위 기가와트",
+    "source": "자료: SemiAnalysis Datacenter Industry Model, 재구성",
+    "timeRange": "1Q25~4Q27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q27",
+        "2Q27",
+        "3Q27",
+        "4Q27"
+      ],
+      "displayTickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q27",
+        "2Q27",
+        "3Q27",
+        "4Q27"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 12
+    },
+    "legend": [
+      {
+        "name": "",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 0.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 0.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 0.58,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 0.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 1,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 1.3,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26",
+            "y": 1.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26",
+            "y": 2,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q27",
+            "y": 2.75,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q27",
+            "y": 4.3,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q27",
+            "y": 6.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q27",
+            "y": 10,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "값은 원본 화면 판독 기반 source-visible이며 2027년 구간은 전망입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 2400,
+        "absoluteChange": 9.6,
+        "from": 0.4,
+        "to": 10
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 10,
+        "at": "4Q27"
+      },
+      "min": {
+        "value": 0.4,
+        "at": "1Q25"
+      },
+      "average": 2.679166666666667,
+      "median": 1.55,
+      "range": 9.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "곡선이 꺾이는 지점은 2026년 말이다",
+    "subMessage": "스페이스X 데이터센터 용량 추이와 전망, 단위 기가와트",
+    "headline": "곡선이 꺾이는 지점은 2026년 말이다",
+    "summary": "스페이스X 데이터센터 용량 추이와 전망, 단위 기가와트",
+    "story": "완만하던 곡선이 2026년 말부터 수직에 가깝게 섭니다.",
+    "keyTakeaways": [
+      "1Q25 0.40기가와트에서 4Q26 2.0기가와트",
+      "이후 1년 만에 10.0기가와트",
+      "전체 증가분의 대부분이 마지막 네 분기에 몰려 있습니다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "2026년 말 이후 곡선의 기울기가 어떻게 바뀌는지 봅니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Datacenter Industry Model, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

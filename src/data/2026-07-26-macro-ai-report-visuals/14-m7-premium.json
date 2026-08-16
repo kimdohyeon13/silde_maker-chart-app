@@ -1,0 +1,440 @@
+{
+  "id": "14-m7-premium",
+  "mode": "faithful",
+  "sourceImage": "input/14-m7-premium.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "S&P500 대비 M7 그룹 밸류에이션 프리미엄",
+    "originalMessage": "S&P500 대비 M7 그룹 밸류에이션 프리미엄",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈, 42개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "S&P500 대비 M7 그룹 밸류에이션 프리미엄",
+    "subtitle": "12개월 선행 P/E 기준 % · 장기 평균 약 47%",
+    "source": "참고: 12개월 선행 P/E 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2018-Q1",
+        "2020-Q1",
+        "2022-Q1",
+        "2024-Q1",
+        "2026-Q1"
+      ],
+      "displayTickValues": [
+        "2018",
+        "2020",
+        "2022",
+        "2024",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 90,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "M7 프리미엄",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "M7 프리미엄",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2016-Q1",
+            "y": 34,
+            "confidence": 0.76
+          },
+          {
+            "x": "2016-Q2",
+            "y": 45,
+            "confidence": 0.76
+          },
+          {
+            "x": "2016-Q3",
+            "y": 38,
+            "confidence": 0.76
+          },
+          {
+            "x": "2016-Q4",
+            "y": 42,
+            "confidence": 0.76
+          },
+          {
+            "x": "2017-Q1",
+            "y": 48,
+            "confidence": 0.76
+          },
+          {
+            "x": "2017-Q2",
+            "y": 60,
+            "confidence": 0.76
+          },
+          {
+            "x": "2017-Q3",
+            "y": 82,
+            "confidence": 0.76
+          },
+          {
+            "x": "2017-Q4",
+            "y": 58,
+            "confidence": 0.76
+          },
+          {
+            "x": "2018-Q1",
+            "y": 65,
+            "confidence": 0.76
+          },
+          {
+            "x": "2018-Q2",
+            "y": 78,
+            "confidence": 0.76
+          },
+          {
+            "x": "2018-Q3",
+            "y": 62,
+            "confidence": 0.76
+          },
+          {
+            "x": "2018-Q4",
+            "y": 70,
+            "confidence": 0.76
+          },
+          {
+            "x": "2019-Q1",
+            "y": 55,
+            "confidence": 0.76
+          },
+          {
+            "x": "2019-Q2",
+            "y": 38,
+            "confidence": 0.76
+          },
+          {
+            "x": "2019-Q3",
+            "y": 42,
+            "confidence": 0.76
+          },
+          {
+            "x": "2019-Q4",
+            "y": 50,
+            "confidence": 0.76
+          },
+          {
+            "x": "2020-Q1",
+            "y": 60,
+            "confidence": 0.76
+          },
+          {
+            "x": "2020-Q2",
+            "y": 72,
+            "confidence": 0.76
+          },
+          {
+            "x": "2020-Q3",
+            "y": 66,
+            "confidence": 0.76
+          },
+          {
+            "x": "2020-Q4",
+            "y": 82,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q1",
+            "y": 58,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q2",
+            "y": 70,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q3",
+            "y": 62,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q4",
+            "y": 68,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q1",
+            "y": 45,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q2",
+            "y": 38,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q3",
+            "y": 55,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q4",
+            "y": 82,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q1",
+            "y": 50,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 35,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 42,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 58,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 40,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 35,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 55,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 38,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 33,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 28,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 40,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 25,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 18,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 30,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 42,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 18,
+      "max": 82,
+      "average": 0,
+      "latest": 30
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P500 대비 M7 그룹 밸류에이션 프리미엄",
+    "subMessage": "12개월 선행 P/E 기준 % · 장기 평균 약 47%",
+    "headline": "S&P500 대비 M7 그룹 밸류에이션 프리미엄",
+    "summary": "12개월 선행 P/E 기준 % · 장기 평균 약 47%",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "2016-Q1",
+          "y": 47
+        },
+        "to": {
+          "x": "2026-Q2",
+          "y": 47
+        },
+        "style": "dashed",
+        "color": "#667085",
+        "label": ""
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-Q2",
+        "y": 30
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

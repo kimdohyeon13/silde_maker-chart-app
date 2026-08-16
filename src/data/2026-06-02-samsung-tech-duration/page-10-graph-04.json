@@ -1,0 +1,305 @@
+{
+  "id": "page-10-graph-04",
+  "sourceImage": "input/07-page_10_graph_04.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "하이퍼스케일러의 Capex/EBITDA 추이",
+    "subtitle": "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고",
+    "source": "자료: Bloomberg",
+    "timeRange": "2009-2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2009",
+        "2011",
+        "2013",
+        "2015",
+        "2017",
+        "2019",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Capex/EBITDA",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 100
+    },
+    "legend": [
+      {
+        "name": "Capex/EBITDA",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Capex/EBITDA",
+        "data": [
+          {
+            "x": "2009",
+            "y": 12,
+            "confidence": 0.78
+          },
+          {
+            "x": "2010",
+            "y": 25,
+            "confidence": 0.78
+          },
+          {
+            "x": "2011",
+            "y": 35,
+            "confidence": 0.78
+          },
+          {
+            "x": "2012",
+            "y": 67,
+            "confidence": 0.78
+          },
+          {
+            "x": "2013",
+            "y": 47,
+            "confidence": 0.78
+          },
+          {
+            "x": "2014",
+            "y": 45,
+            "confidence": 0.78
+          },
+          {
+            "x": "2015",
+            "y": 40,
+            "confidence": 0.78
+          },
+          {
+            "x": "2016",
+            "y": 42,
+            "confidence": 0.78
+          },
+          {
+            "x": "2017",
+            "y": 45,
+            "confidence": 0.78
+          },
+          {
+            "x": "2018",
+            "y": 48,
+            "confidence": 0.78
+          },
+          {
+            "x": "2019",
+            "y": 43,
+            "confidence": 0.78
+          },
+          {
+            "x": "2020",
+            "y": 45,
+            "confidence": 0.78
+          },
+          {
+            "x": "2021",
+            "y": 53,
+            "confidence": 0.78
+          },
+          {
+            "x": "2022",
+            "y": 58,
+            "confidence": 0.78
+          },
+          {
+            "x": "2023",
+            "y": 45,
+            "confidence": 0.78
+          },
+          {
+            "x": "2024",
+            "y": 40,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 55,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 92,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.72,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 666.7,
+        "absoluteChange": 80.0,
+        "from": 12.0,
+        "to": 92.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 92.0,
+        "at": ""
+      },
+      "min": {
+        "value": 12.0,
+        "at": ""
+      },
+      "average": 46.5,
+      "median": 45.0,
+      "range": 80.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "하이퍼스케일러의 Capex/EBITDA 추이",
+    "subMessage": "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고",
+    "headline": "하이퍼스케일러의 Capex/EBITDA 추이",
+    "summary": "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 92.0
+      },
+      "displayText": "하이퍼스케일러의 Capex/E",
+      "reason": "장기간 40~50% 박스권에 머물던 Capex/EBITDA 비율이 2024년 이후 90%대로 급등하며 투자 강도 사상 최고"
+    },
+    "densityLevel": "balanced"
+  }
+}

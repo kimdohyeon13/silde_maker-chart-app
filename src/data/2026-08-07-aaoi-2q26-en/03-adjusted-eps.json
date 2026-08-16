@@ -1,0 +1,229 @@
+{
+  "id": "03-adjusted-eps-en",
+  "sourceImage": "input/03-adjusted-eps.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "From loss to profit in just two quarters",
+    "subtitle": "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026",
+    "timeRange": "Jun 2025 quarter - Jun 2026 quarter",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26"
+      ]
+    },
+    "yAxis": {
+      "label": "Cents",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -24.0,
+      "max": 12.0
+    },
+    "legend": [
+      {
+        "name": "Adjusted EPS",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adjusted EPS",
+        "data": [
+          {
+            "x": "Jun '25",
+            "y": -16,
+            "confidence": 0.74
+          },
+          {
+            "x": "Mar '26",
+            "y": -7,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun '26",
+            "y": 6,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.882,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 137.5,
+        "absoluteChange": 22.0,
+        "from": -16.0,
+        "to": 6.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6.0,
+        "at": ""
+      },
+      "min": {
+        "value": -16.0,
+        "at": ""
+      },
+      "average": -5.666666666666667,
+      "median": -7.0,
+      "range": 22.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "From loss to profit in just two quarters",
+    "subMessage": "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents",
+    "headline": "From loss to profit in just two quarters",
+    "summary": "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 6.0
+      },
+      "displayText": "From loss to profit in jus",
+      "reason": "Adjusted EPS went from -16 cents to -7 cents and then to +6 cents"
+    },
+    "densityLevel": "balanced"
+  }
+}

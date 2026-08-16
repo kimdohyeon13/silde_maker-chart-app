@@ -1,0 +1,248 @@
+{
+  "id": "03-d219b-memory-hdd-split",
+  "mode": "faithful",
+  "sourceImage": "input/dib-219-11.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "05. 마이크론·샌디스크·시게이트·웨스턴디지털, 갈라진 메모리와 HDD",
+    "originalMessage": "2026-07-29 장에서 메모리와 HDD가 갈라졌다: 마이크론 -9.94%, 샌디스크 -7.32%, 웨스턴디지털 -0.32%, 시게이트 +2.29%",
+    "preservedElements": [
+      "네 종목의 당일 등락률 -9.94% / -7.32% / -0.32% / +2.29%",
+      "기준일 2026-07-29 종가",
+      "메모리와 HDD가 갈라졌다는 원본 메시지",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 텍스트를 영어로 번역",
+      "지수화 선형 차트 대신 당일 등락률 막대로 재구성",
+      "회색 기반에 최대 하락 종목 하나만 강조",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 차트 우측 범례에 인쇄된 당일 등락률 네 값을 그대로 사용했습니다. 선 자체의 중간 지점은 읽지 않았습니다.",
+    "sourceAttribution": "Source: Yahoo Finance, close of 2026-07-29"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "-9.94 / -7.32 / -0.32 / +2.29는 원본 차트 범례에 인쇄된 당일 등락률입니다."
+    },
+    {
+      "id": "no-datapoint-color",
+      "label": "데이터 포인트 색상 미지정",
+      "status": "pass",
+      "detail": "data.series[].data[]에는 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 확인",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다. 종목별 가격 등락 사실만 표시했습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Memory broke, hard drives did not",
+    "subtitle": "One session, 2026-07-29: Micron -9.94% and SanDisk -7.32%, against Seagate +2.29%",
+    "source": "Source: Yahoo Finance, close of 2026-07-29 · source-visible",
+    "timeRange": "Session of 2026-07-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Micron",
+        "SanDisk",
+        "Western Digital",
+        "Seagate"
+      ],
+      "displayTickValues": [
+        "Micron",
+        "SanDisk",
+        "Western Digital",
+        "Seagate"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-12",
+        "-8",
+        "-4",
+        "0",
+        "4"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -12,
+      "max": 4
+    },
+    "legend": [
+      {
+        "name": "Change on the session",
+        "role": "primary",
+        "originalColor": "#1F7A5A",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Change on the session",
+        "data": [
+          {
+            "x": "Micron",
+            "y": -9.94,
+            "confidence": 0.92
+          },
+          {
+            "x": "SanDisk",
+            "y": -7.32,
+            "confidence": 0.92
+          },
+          {
+            "x": "Western Digital",
+            "y": -0.32,
+            "confidence": 0.92
+          },
+          {
+            "x": "Seagate",
+            "y": 2.29,
+            "confidence": 0.92
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.55,
+      "description": "Two memory names fell hard while the two hard-drive names held.",
+      "recentDirection": "down"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 1.14,
+      "description": "A 12.23 point spread between the weakest and the strongest name on one session."
+    },
+    "changeRates": [
+      {
+        "period": "Micron against Seagate",
+        "percentChange": 0,
+        "absoluteChange": -12.23,
+        "from": 2.29,
+        "to": -9.94
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.29,
+        "at": "Seagate"
+      },
+      "min": {
+        "value": -9.94,
+        "at": "Micron"
+      },
+      "average": -3.8225,
+      "median": -3.82,
+      "range": 12.23
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Memory broke, hard drives did not",
+    "subMessage": "One session, 2026-07-29: Micron -9.94% and SanDisk -7.32%, against Seagate +2.29%",
+    "headline": "Memory broke, hard drives did not",
+    "summary": "Four storage names, one session: the memory pair fell, the hard-drive pair did not.",
+    "story": "Memory and hard drives had traded as a single AI-storage trade for months. On 2026-07-29 they separated on the same tape, with 12.23 points between the weakest and the strongest name.",
+    "keyTakeaways": [
+      "Micron -9.94%, SanDisk -7.32% on the session",
+      "Western Digital -0.32%, Seagate +2.29% on the same session",
+      "Two ways to store a bit, only one of them repriced"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the two memory bars against the two hard-drive bars on the same day.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, close of 2026-07-29",
+      "Data state: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Micron",
+      "y": -9.94,
+      "displayText": "-9.94%"
+    },
+    "densityLevel": "focused"
+  }
+}

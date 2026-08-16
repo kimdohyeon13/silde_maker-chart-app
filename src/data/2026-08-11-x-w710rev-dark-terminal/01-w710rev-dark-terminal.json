@@ -1,0 +1,244 @@
+{
+  "id": "w710rev-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "분기 매출이 1년 만에 1.9배가 됐다",
+    "preservedElements": [
+      "4개 분기의 순서와 값: 103 / 151.1 / 191.9 / 272.5",
+      "마지막 막대가 가이던스라는 표시",
+      "원본 출처 줄(어플라이드 옵토일렉트로닉스 2026년 2분기 실적 보도자료)"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 막대 4개의 값과 순서를 그대로 유지했습니다.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 4개, 값 라벨 전부 표시, 최대값(가이던스)만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "1차 자료(회사 실적 보도자료)만 적었다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Quarterly revenue is 1.9x a year ago",
+    "subtitle": "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026",
+    "timeRange": "2025-2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Jun 2025",
+        "Mar 2026",
+        "Jun 2026",
+        "Sep 2026 guidance"
+      ],
+      "displayTickValues": [
+        "Jun 2025",
+        "Mar 2026",
+        "Jun 2026",
+        "Sep 2026 guidance"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250",
+        "300"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 300
+    },
+    "legend": [
+      {
+        "name": "Revenue ($M)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue ($M)",
+        "data": [
+          {
+            "x": "Jun 2025",
+            "y": 103,
+            "confidence": 0.99
+          },
+          {
+            "x": "Mar 2026",
+            "y": 151.1,
+            "confidence": 0.99
+          },
+          {
+            "x": "Jun 2026",
+            "y": 191.9,
+            "confidence": 0.99
+          },
+          {
+            "x": "Sep 2026 guidance",
+            "y": 272.5,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 272.5,
+        "at": "Sep 2026 guidance"
+      },
+      "min": {
+        "value": 103,
+        "at": "Jun 2025"
+      },
+      "average": 179.625,
+      "median": 0,
+      "range": 169.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Quarterly revenue is 1.9x a year ago",
+    "subMessage": "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M",
+    "headline": "Quarterly revenue is 1.9x a year ago",
+    "summary": "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M",
+    "story": "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M",
+    "keyTakeaways": [
+      "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, Aug 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Sep 2026 guidance",
+        "y": 272.5
+      },
+      "displayText": "272.5",
+      "reason": "Jun 2026 revenue $191.9M, up 86% YoY; Sep guidance midpoint $272.5M"
+    },
+    "densityLevel": "focused"
+  }
+}

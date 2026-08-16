@@ -1,0 +1,785 @@
+{
+  "id": "08-multipanel-eia-liquids",
+  "sourceImage": "input/08-source-04-eia-liquid-fuels.png",
+  "analyzedAt": "2026-07-13T20:30:00+09:00",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "세계 액체연료 생산·소비 균형",
+    "preservedElements": [
+      "title",
+      "source",
+      "axis",
+      "series",
+      "order",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-colors",
+      "adjust-fonts",
+      "adjust-spacing",
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 검수팩 여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원자료 CSV 없이 이미지에서 읽은 값은 근사값입니다. 형식 검수를 위한 복제본이며 원본 데이터 payload는 변경하지 않았습니다.",
+    "sourceAttribution": "Data source: U.S. Energy Information Administration, Short-Term Energy Outlook, June 2026 | source-visible",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-visible-values",
+      "label": "이미지 표시값 기반",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-fidelity-note",
+      "label": "근사값 고지",
+      "status": "pass",
+      "detail": "원자료 CSV가 없어 source-visible/directional 값을 QA 문서에 별도 표시했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "paperlogy-format-review",
+      "label": "Paperlogy 900·300 형식 검수",
+      "status": "pass",
+      "detail": "다중 패널의 Paperlogy 900·300, 16:9, 겹침·오버플로·콘텐츠 개수를 DOM에서 확인했습니다.",
+      "checkedAt": "2026-07-17"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 26,
+    "subtitleFontSize": 13,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 365,
+    "gridMode": "solid",
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "lineStrokeWidth": 2,
+    "panelTitleFontSize": 14,
+    "compactChartMargins": true,
+    "barColorMode": "sign",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "액체연료 생산과 소비의 균형, 재고 흐름으로 함께 본다",
+    "subtitle": "상단: 세계 생산·소비 · 하단: 재고 증감",
+    "source": "자료: U.S. EIA, Short-Term Energy Outlook, 2026년 6월 | 원본 화면 판독값",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2021-Q2",
+        "2023-Q2",
+        "2025-Q2",
+        "2027-Q2"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2021",
+        "2023",
+        "2025",
+        "2027"
+      ]
+    },
+    "yAxis": {
+      "label": "백만 배럴/일",
+      "type": "numeric",
+      "tickValues": [
+        "90",
+        "95",
+        "100",
+        "105",
+        "110",
+        "115"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 115
+    },
+    "panels": [
+      {
+        "title": "세계 생산·소비 (백만 배럴/일)",
+        "chartType": "line",
+        "xAxis": {
+          "label": "",
+          "type": "category",
+          "tickValues": [
+            "2021-Q2",
+            "2023-Q2",
+            "2025-Q2",
+            "2027-Q2"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false,
+          "displayTickValues": [
+            "2021",
+            "2023",
+            "2025",
+            "2027"
+          ]
+        },
+        "yAxis": {
+          "label": "",
+          "type": "numeric",
+          "tickValues": [
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false,
+          "min": 90,
+          "max": 115
+        },
+        "seriesNames": [
+          "세계 생산",
+          "세계 소비"
+        ],
+        "highlightZones": [
+          {
+            "fromX": "2026-Q1",
+            "toX": "2027-Q4",
+            "color": "#E5E7EB",
+            "label": "전망",
+            "description": "원본 forecast 점선 이후 구간"
+          }
+        ]
+      },
+      {
+        "title": "재고 증감",
+        "chartType": "bar",
+        "xAxis": {
+          "label": "",
+          "type": "category",
+          "tickValues": [
+            "2021-Q2",
+            "2023-Q2",
+            "2025-Q2",
+            "2027-Q2"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false,
+          "displayTickValues": [
+            "2021",
+            "2023",
+            "2025",
+            "2027"
+          ]
+        },
+        "yAxis": {
+          "label": "",
+          "type": "numeric",
+          "tickValues": [
+            "-9",
+            "-6",
+            "-3",
+            "0",
+            "3",
+            "6"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false,
+          "min": -9,
+          "max": 6
+        },
+        "seriesNames": [
+          "재고 증감"
+        ],
+        "highlightZones": [
+          {
+            "fromX": "2026-Q1",
+            "toX": "2027-Q4",
+            "color": "#E5E7EB",
+            "label": "전망",
+            "description": "원본 forecast 점선 이후 구간"
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "name": "세계 생산",
+        "originalColor": "#0096D6",
+        "remakeColor": "#175CD3",
+        "role": "primary"
+      },
+      {
+        "name": "세계 소비",
+        "originalColor": "#6B5300",
+        "remakeColor": "#344054",
+        "role": "primary"
+      },
+      {
+        "name": "재고 증감",
+        "originalColor": "#C99A00",
+        "remakeColor": "#F79009",
+        "role": "secondary"
+      }
+    ]
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본 시각 요소를 보존하는 faithful 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 통계보다 원본 형태와 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "액체연료 생산과 소비의 균형, 재고 흐름으로 함께 본다",
+    "subMessage": "상단: 세계 생산·소비 · 하단: 재고 증감",
+    "headline": "액체연료 생산과 소비의 균형, 재고 흐름으로 함께 본다",
+    "summary": "상단: 세계 생산·소비 · 하단: 재고 증감",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "World liquid fuels production and consumption balance | million barrels per day"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "자료: U.S. EIA, Short-Term Energy Outlook, 2026년 6월 | 원본 화면 판독값"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0096D6",
+      "secondary": [
+        "#6B5300",
+        "#C99A00"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "source-visible"
+    },
+    "densityLevel": "balanced"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "세계 생산",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": 92.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q2",
+            "y": 95.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q3",
+            "y": 96.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q4",
+            "y": 98.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q1",
+            "y": 99,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q2",
+            "y": 99.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q3",
+            "y": 101.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q4",
+            "y": 101.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q1",
+            "y": 101.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q2",
+            "y": 102.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q3",
+            "y": 102.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q4",
+            "y": 103.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q1",
+            "y": 102.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q2",
+            "y": 103,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q3",
+            "y": 103.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q4",
+            "y": 103.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q1",
+            "y": 104.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q2",
+            "y": 107.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q3",
+            "y": 108,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q4",
+            "y": 108.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q1",
+            "y": 94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q2",
+            "y": 96,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q3",
+            "y": 103.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q4",
+            "y": 107.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q1",
+            "y": 108.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q2",
+            "y": 109.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q3",
+            "y": 110.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q4",
+            "y": 110.8,
+            "confidence": 0.8
+          }
+        ],
+        "confidence": 0.8
+      },
+      {
+        "name": "세계 소비",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": 94.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q2",
+            "y": 96.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q3",
+            "y": 98.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q4",
+            "y": 99.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q1",
+            "y": 98.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q2",
+            "y": 99.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q3",
+            "y": 100.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q4",
+            "y": 100.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q1",
+            "y": 100.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q2",
+            "y": 101.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q3",
+            "y": 102,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q4",
+            "y": 102.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q1",
+            "y": 100.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q2",
+            "y": 102.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q3",
+            "y": 103.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q4",
+            "y": 103.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q1",
+            "y": 102.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q2",
+            "y": 104,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q3",
+            "y": 104.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q4",
+            "y": 104.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q1",
+            "y": 100.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q2",
+            "y": 103.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q3",
+            "y": 104.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q4",
+            "y": 105.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q1",
+            "y": 104.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q2",
+            "y": 105.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q3",
+            "y": 106.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q4",
+            "y": 105.9,
+            "confidence": 0.8
+          }
+        ],
+        "confidence": 0.8
+      },
+      {
+        "name": "재고 증감",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": -1.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q2",
+            "y": -1.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q3",
+            "y": -1.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021-Q4",
+            "y": -0.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q1",
+            "y": 0.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q2",
+            "y": 0.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q3",
+            "y": 1.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022-Q4",
+            "y": 1.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q1",
+            "y": 0.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q2",
+            "y": 0.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q3",
+            "y": 1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023-Q4",
+            "y": 1.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q1",
+            "y": -0.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q2",
+            "y": 0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q3",
+            "y": 0.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024-Q4",
+            "y": 0.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q1",
+            "y": 2.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q2",
+            "y": 3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q3",
+            "y": 0.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025-Q4",
+            "y": 0.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q1",
+            "y": -6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q2",
+            "y": -7.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q3",
+            "y": -2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026-Q4",
+            "y": 0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q1",
+            "y": 3.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q2",
+            "y": 3.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q3",
+            "y": 3.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027-Q4",
+            "y": 4.8,
+            "confidence": 0.8
+          }
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "totalDataPoints": 84,
+    "quality": {
+      "overallConfidence": 0.84,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 CSV 없이 PNG에서 읽은 근사값 포함"
+      ],
+      "readabilityScore": "good"
+    }
+  }
+}

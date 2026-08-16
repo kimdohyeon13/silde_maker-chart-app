@@ -1,0 +1,332 @@
+{
+  "id": "trendforce-may-memory-forecast",
+  "sourceImage": "input/source-02-trendforce-may-memory-forecast.png",
+  "analyzedAt": "2026-07-08T21:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "DRAM·NAND Flash 매출 전망(2023~2027)",
+    "preservedElements": [
+      "title",
+      "source",
+      "axis",
+      "series",
+      "order",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-colors",
+      "adjust-fonts",
+      "adjust-spacing"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원자료 CSV 없이 이미지에서 읽은 값은 근사값입니다.",
+    "sourceAttribution": "Source: TrendForce, May 2026 | source-visible",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-visible-values",
+      "label": "이미지 표시값 기반",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-fidelity-note",
+      "label": "근사값 고지",
+      "status": "pass",
+      "detail": "원자료 CSV가 없어 source-visible/directional 값을 QA 문서에 별도 표시했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 32,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 13,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 34px 16px",
+    "squareEdges": true,
+    "chartHeight": 450
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "DRAM·NAND Flash 매출 전망(2023~2027)",
+    "subtitle": "단위: 십억 달러 | 2026F YoY 296% 피크",
+    "source": "Source: TrendForce, May 2026 | source-visible",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "2026F",
+        "2027F"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "2026F",
+        "2027F"
+      ]
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "500",
+        "1000",
+        "1500"
+      ],
+      "unit": "십억달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1500
+    },
+    "secondaryYAxis": {
+      "label": "YoY",
+      "type": "numeric",
+      "tickValues": [
+        "-50",
+        "50",
+        "150",
+        "250",
+        "320"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -50,
+      "max": 320
+    },
+    "legend": [
+      {
+        "name": "DRAM",
+        "originalColor": "#85D400",
+        "remakeColor": "#83D20D",
+        "role": "primary"
+      },
+      {
+        "name": "NAND Flash",
+        "originalColor": "#477E09",
+        "remakeColor": "#477E09",
+        "role": "primary"
+      },
+      {
+        "name": "YoY",
+        "originalColor": "#E85C6B",
+        "remakeColor": "#E85C6B",
+        "role": "primary"
+      }
+    ]
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본 시각 요소를 보존하는 faithful 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 통계보다 원본 형태와 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "DRAM·NAND Flash 매출 전망(2023~2027)",
+    "subMessage": "단위: 십억 달러 | 2026F YoY 296% 피크",
+    "headline": "DRAM·NAND Flash 매출 전망(2023~2027)",
+    "summary": "단위: 십억 달러 | 2026F YoY 296% 피크",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "단위: 십억 달러 | 2026F YoY 296% 피크"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "Source: TrendForce, May 2026 | source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#83D20D",
+      "secondary": [
+        "#477E09",
+        "#E85C6B"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "source-visible"
+    },
+    "densityLevel": "balanced"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "DRAM",
+        "data": [
+          {
+            "x": "2023",
+            "y": 51.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 95.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 153.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026F",
+            "y": 618.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027F",
+            "y": 903.3,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "axis": "left",
+        "stackId": "memory",
+        "confidence": 0.9
+      },
+      {
+        "name": "NAND Flash",
+        "data": [
+          {
+            "x": "2023",
+            "y": 38,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 65.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 71.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026F",
+            "y": 270.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027F",
+            "y": 379.4,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "axis": "left",
+        "stackId": "memory",
+        "confidence": 0.9
+      },
+      {
+        "name": "YoY",
+        "data": [
+          {
+            "x": "2023",
+            "y": -36,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 80,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 39,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026F",
+            "y": 296,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027F",
+            "y": 44,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "axis": "right",
+        "confidence": 0.9
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.84,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 CSV 없이 PNG에서 읽은 근사값 포함"
+      ],
+      "readabilityScore": "good"
+    }
+  }
+}

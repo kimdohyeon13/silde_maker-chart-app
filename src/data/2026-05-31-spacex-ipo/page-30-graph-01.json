@@ -1,0 +1,558 @@
+{
+  "id": "page-10-graph-01",
+  "sourceImage": "output/spacex_ipo_20260531/crops_pdf2/page-10-graph-01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "Factset"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "S&P500 P/E 21배, 평균 크게 상회",
+    "subtitle": "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다",
+    "source": "Factset",
+    "timeRange": "",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2010",
+        "2012",
+        "2014",
+        "2016",
+        "2018",
+        "2020",
+        "2022",
+        "2024",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "12개월 선행 P/E(배)",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "S&P500 12m fwd P/E",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "+2SD",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "+1SD",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "AVG",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      },
+      {
+        "name": "-1SD",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "-2SD",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P500 12m fwd P/E",
+        "data": [
+          {
+            "x": "2010",
+            "y": 14,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 11.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 15.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 16.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 17,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 20,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 17.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 21.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 19.5,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "allowSparseTail": true
+      },
+      {
+        "name": "+2SD",
+        "data": [
+          {
+            "x": "2010",
+            "y": 19.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 18,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 17.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 19,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 20.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 21,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 21,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 23,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 24,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "allowSparseTail": true
+      },
+      {
+        "name": "+1SD",
+        "data": [
+          {
+            "x": "2010",
+            "y": 16.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 15.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 17.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 18.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 18.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 18.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 20.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 22,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#6667AB",
+        "allowSparseTail": true
+      },
+      {
+        "name": "AVG",
+        "data": [
+          {
+            "x": "2010",
+            "y": 14,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 13,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 14,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 15.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 16.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 18,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 20,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#939597",
+        "allowSparseTail": true
+      },
+      {
+        "name": "-1SD",
+        "data": [
+          {
+            "x": "2010",
+            "y": 12,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 11.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 12,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 13.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 14,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 13.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 14,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 15.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 18,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#6667AB",
+        "allowSparseTail": true
+      },
+      {
+        "name": "-2SD",
+        "data": [
+          {
+            "x": "2010",
+            "y": 10,
+            "confidence": 0.9
+          },
+          {
+            "x": "2012",
+            "y": 10,
+            "confidence": 0.9
+          },
+          {
+            "x": "2014",
+            "y": 10.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2016",
+            "y": 11.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2018",
+            "y": 11.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2020",
+            "y": 11,
+            "confidence": 0.9
+          },
+          {
+            "x": "2022",
+            "y": 11.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2024",
+            "y": 13.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 16,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "allowSparseTail": true
+      }
+    ],
+    "totalDataPoints": 54,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.866,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 14.3,
+        "absoluteChange": 2.0,
+        "from": 14.0,
+        "to": 16.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 24.0,
+        "at": ""
+      },
+      "min": {
+        "value": 10.0,
+        "at": ""
+      },
+      "average": 16.16111111111111,
+      "median": 16.0,
+      "range": 14.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P500 P/E 21배, 평균 크게 상회",
+    "subMessage": "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다",
+    "headline": "S&P500 P/E 21배, 평균 크게 상회",
+    "summary": "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "Factset"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 16.0
+      },
+      "displayText": "S&P500 P/E 21배, ",
+      "reason": "현재 P/E가 10년 평균(AVG)을 웃돌고 +1SD 부근에 위치한다"
+    },
+    "densityLevel": "balanced"
+  }
+}

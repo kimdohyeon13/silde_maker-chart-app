@@ -1,0 +1,429 @@
+{
+  "id": "page-16-graph-01",
+  "sourceImage": "input/14-page_16_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Omdia"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "웨이퍼당 평균 bit 생산량과 증가율",
+    "subtitle": "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다",
+    "source": "자료: Omdia",
+    "timeRange": "2010~2027",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "웨이퍼당 평균 bit 생산량",
+      "type": "value",
+      "tickValues": [],
+      "unit": "Gb per wafer",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 20000
+    },
+    "legend": [
+      {
+        "name": "웨이퍼당 평균 bit 생산량",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "Growth",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "생산량 증가율(전년대비)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -10,
+      "max": 50
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "웨이퍼당 평균 bit 생산량",
+        "data": [
+          {
+            "x": "2010",
+            "y": 1500,
+            "confidence": 0.78
+          },
+          {
+            "x": "2011",
+            "y": 2200,
+            "confidence": 0.78
+          },
+          {
+            "x": "2012",
+            "y": 2900,
+            "confidence": 0.78
+          },
+          {
+            "x": "2013",
+            "y": 3600,
+            "confidence": 0.78
+          },
+          {
+            "x": "2014",
+            "y": 4500,
+            "confidence": 0.78
+          },
+          {
+            "x": "2015",
+            "y": 5500,
+            "confidence": 0.78
+          },
+          {
+            "x": "2016",
+            "y": 6200,
+            "confidence": 0.78
+          },
+          {
+            "x": "2017",
+            "y": 6900,
+            "confidence": 0.78
+          },
+          {
+            "x": "2018",
+            "y": 8000,
+            "confidence": 0.78
+          },
+          {
+            "x": "2019",
+            "y": 8500,
+            "confidence": 0.78
+          },
+          {
+            "x": "2020",
+            "y": 9700,
+            "confidence": 0.78
+          },
+          {
+            "x": "2021",
+            "y": 10700,
+            "confidence": 0.78
+          },
+          {
+            "x": "2022",
+            "y": 11200,
+            "confidence": 0.78
+          },
+          {
+            "x": "2023",
+            "y": 11800,
+            "confidence": 0.78
+          },
+          {
+            "x": "2024",
+            "y": 13000,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 13800,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 15600,
+            "confidence": 0.78
+          },
+          {
+            "x": "2027",
+            "y": 18200,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "Growth",
+        "data": [
+          {
+            "x": "2010",
+            "y": 44,
+            "confidence": 0.78
+          },
+          {
+            "x": "2011",
+            "y": 41,
+            "confidence": 0.78
+          },
+          {
+            "x": "2012",
+            "y": 35,
+            "confidence": 0.78
+          },
+          {
+            "x": "2013",
+            "y": 33,
+            "confidence": 0.78
+          },
+          {
+            "x": "2014",
+            "y": 38,
+            "confidence": 0.78
+          },
+          {
+            "x": "2015",
+            "y": 30,
+            "confidence": 0.78
+          },
+          {
+            "x": "2016",
+            "y": 17,
+            "confidence": 0.78
+          },
+          {
+            "x": "2017",
+            "y": 14,
+            "confidence": 0.78
+          },
+          {
+            "x": "2018",
+            "y": 23,
+            "confidence": 0.78
+          },
+          {
+            "x": "2019",
+            "y": 8,
+            "confidence": 0.78
+          },
+          {
+            "x": "2020",
+            "y": 22,
+            "confidence": 0.78
+          },
+          {
+            "x": "2021",
+            "y": 15,
+            "confidence": 0.78
+          },
+          {
+            "x": "2022",
+            "y": 7,
+            "confidence": 0.78
+          },
+          {
+            "x": "2023",
+            "y": 9,
+            "confidence": 0.78
+          },
+          {
+            "x": "2024",
+            "y": 14,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 9,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 13,
+            "confidence": 0.78
+          },
+          {
+            "x": "2027",
+            "y": 15,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 36,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 4.248,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -99.0,
+        "absoluteChange": -1485.0,
+        "from": 1500.0,
+        "to": 15.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 18200.0,
+        "at": ""
+      },
+      "min": {
+        "value": 7.0,
+        "at": ""
+      },
+      "average": 4282.972222222223,
+      "median": 772.0,
+      "range": 18193.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "웨이퍼당 평균 bit 생산량과 증가율",
+    "subMessage": "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다",
+    "headline": "웨이퍼당 평균 bit 생산량과 증가율",
+    "summary": "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Omdia"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 15.0
+      },
+      "displayText": "웨이퍼당 평균 bit 생산량과",
+      "reason": "웨이퍼당 평균 bit 생산량은 꾸준히 증가하지만 그 성장률은 점차 둔화되고 있다"
+    },
+    "densityLevel": "balanced"
+  }
+}

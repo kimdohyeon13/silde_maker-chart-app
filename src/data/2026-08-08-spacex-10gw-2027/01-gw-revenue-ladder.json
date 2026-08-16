@@ -1,0 +1,249 @@
+{
+  "id": "01-gw-revenue-ladder",
+  "mode": "faithful",
+  "sourceImage": "input/01_tokenomics_rev_per_gw.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "GB300 클러스터에서 기가와트당 연 매출은 계층에 따라 120억 달러에서 1,000억 달러까지 벌어진다",
+    "preservedElements": [
+      "5개 계층의 순서와 값",
+      "10억 달러 단위",
+      "0 기준 세로 막대",
+      "SemiAnalysis Tokenomics Model 출처"
+    ],
+    "changedElements": [
+      "카테고리 라벨 한글화 및 축약",
+      "배수 라벨 제거, 값 라벨만 유지",
+      "중립 회색 기반에 최상단 계층 1곳만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 읽은 5개 값을 유지하고 라벨만 한글로 정리했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Tokenomics Model, Inference Simulator, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 5개, 0 기준축, 카테고리 라벨 전량 표시, 최상단 막대 1곳만 레드 강조로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "값은 원본 화면 판독 기반 source-visible입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "같은 1기가와트, 층이 올라갈수록 매출은 8배",
+    "subtitle": "AI 스택 계층별 기가와트당 연 매출, 단위 10억 달러 (GB300 클러스터 기준)",
+    "source": "자료: SemiAnalysis Tokenomics Model, Inference Simulator, 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "네오클라우드 임대",
+        "B300 온디맨드",
+        "스페이스X·앤스로픽",
+        "스페이스X·구글",
+        "추론 API 판매"
+      ],
+      "displayTickValues": [
+        "네오클라우드 임대",
+        "B300 온디맨드",
+        "스페이스X·앤스로픽",
+        "스페이스X·구글",
+        "추론 API 판매"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "25",
+        "50",
+        "75",
+        "100",
+        "125"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 125
+    },
+    "legend": [
+      {
+        "name": "GW당 연매출",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "GW당 연매출",
+        "data": [
+          {
+            "x": "네오클라우드 임대",
+            "y": 12,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "B300 온디맨드",
+            "y": 29,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "스페이스X·앤스로픽",
+            "y": 31,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "스페이스X·구글",
+            "y": 48,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "추론 API 판매",
+            "y": 100,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "값은 원본 화면 판독 기반 source-visible입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 733.3,
+        "absoluteChange": 88,
+        "from": 12,
+        "to": 100
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 100,
+        "at": "추론 API 판매"
+      },
+      "min": {
+        "value": 12,
+        "at": "네오클라우드 임대"
+      },
+      "average": 44,
+      "median": 31,
+      "range": 88
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "같은 1기가와트, 층이 올라갈수록 매출은 8배",
+    "subMessage": "AI 스택 계층별 기가와트당 연 매출, 단위 10억 달러 (GB300 클러스터 기준)",
+    "headline": "같은 1기가와트, 층이 올라갈수록 매출은 8배",
+    "summary": "AI 스택 계층별 기가와트당 연 매출, 단위 10억 달러 (GB300 클러스터 기준)",
+    "story": "같은 전력을 어느 계층에서 파느냐에 따라 매출이 8배 넘게 갈립니다.",
+    "keyTakeaways": [
+      "네오클라우드 임대는 GW당 120억 달러",
+      "추론 API 판매는 GW당 1,000억 달러",
+      "스페이스X의 계약 단가는 그 중간 구간에 있습니다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "맨 왼쪽 임대가와 맨 오른쪽 토큰 매출의 간격을 봅니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Tokenomics Model, Inference Simulator, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "05-contracted-bits",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "샌디스크는 FY2027 출하 비트의 약 50%, FY2028의 약 67%가 새 사업 모델 계약으로 커버된다고 밝혔다",
+    "preservedElements": [
+      "FY27 약 50%, FY28 약 67%라는 두 수치",
+      "샌디스크 2026 Investor Day 출처"
+    ],
+    "changedElements": [
+      "보도자료 문장을 누적 막대 두 개로 시각화",
+      "계약분을 빨강, 미계약분을 회색으로 구분"
+    ],
+    "dataFidelity": "exact",
+    "notes": "발표문의 약 50%·약 67%를 그대로 썼다. 나머지 비중은 100에서 뺀 값이며 회사가 따로 밝힌 수치가 아니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "disclosed-values-only",
+      "label": "발표 수치만 사용",
+      "status": "pass",
+      "detail": "보도자료의 약 50%·약 67%만 썼고 나머지는 100에서 뺀 값임을 QA에 기록했다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#D92D20",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "FY27 물량의 절반은 이미 계약으로 묶였습니다",
+    "subtitle": "샌디스크가 새 사업 모델 계약으로 확보했다고 밝힌 출하 비트 비중. 단위 %",
+    "source": "자료: 샌디스크 2026 Investor Day 발표 (2026-08-13)",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2027",
+        "2028"
+      ],
+      "displayTickValues": [
+        "FY27",
+        "FY28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 100,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "계약으로 묶인 출하 비트",
+        "originalColor": "#D92D20",
+        "remakeColor": "#D92D20"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "계약으로 묶인 출하 비트",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2027",
+            "y": 50,
+            "confidence": 1
+          },
+          {
+            "x": "2028",
+            "y": 67,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.1,
+      "description": ""
+    },
+    "changeRates": [
+      {
+        "period": "FY27 → FY28",
+        "percentChange": 34.0,
+        "absoluteChange": 17,
+        "from": 50,
+        "to": 67
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 67,
+        "at": "FY28"
+      },
+      "min": {
+        "value": 50,
+        "at": "FY27"
+      },
+      "average": 58.5,
+      "median": 58.5,
+      "range": 17
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "FY27 물량의 절반은 이미 계약으로 묶였습니다",
+    "subMessage": "샌디스크가 새 사업 모델 계약으로 확보했다고 밝힌 출하 비트 비중. 단위 %",
+    "headline": "FY27 물량의 절반은 이미 계약으로 묶였습니다",
+    "summary": "샌디스크가 새 사업 모델 계약으로 확보했다고 밝힌 출하 비트 비중. 단위 %",
+    "story": "샌디스크가 새 사업 모델 계약으로 확보했다고 밝힌 출하 비트 비중. 단위 %",
+    "keyTakeaways": [
+      "FY27 출하 비트의 약 50%가 계약으로 커버된다",
+      "FY28에는 약 67%로 올라간다",
+      "계약 물량은 스팟 가격으로 정산되지 않는다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "샌디스크가 새 사업 모델 계약으로 확보했다고 밝힌 출하 비트 비중. 단위 %",
+    "contextualNotes": [
+      "자료: 샌디스크 2026 Investor Day 발표 (2026-08-13)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D20",
+      "secondary": [
+        "#C7CDD4"
+      ],
+      "positive": "#D92D20",
+      "negative": "#C7CDD4",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "id": "11-memory-momentum",
+  "mode": "faithful",
+  "sourceImage": "input/11-memory-momentum.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "메모리 업체 주가와 기술주 모멘텀 전략 지수 추이",
+    "originalMessage": "메모리 업체 주가와 기술주 모멘텀 전략 지수 추이",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 28개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "메모리 업체 주가와 기술주 모멘텀 전략 지수 추이",
+    "subtitle": "좌축 메모리 업체 지수 · 우축 기술주 모멘텀 전략 지수",
+    "source": "참고: GS TMT Memory Exposed Index, GS TMT US Momentum Long Index 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025-10",
+        "2026-01",
+        "2026-04",
+        "2026-07"
+      ],
+      "displayTickValues": [
+        "25.10",
+        "26.01",
+        "26.04",
+        "26.07"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "500",
+        "1000",
+        "1500",
+        "2000",
+        "2500",
+        "3000"
+      ],
+      "unit": "pt",
+      "min": 0,
+      "max": 3000,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "900",
+        "1000"
+      ],
+      "unit": "pt",
+      "min": 300,
+      "max": 1000,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "메모리 업체",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "기술주 모멘텀 전략 지수",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "메모리 업체",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "axis": "left",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2025-07",
+            "y": 400,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 380,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 450,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 500,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 620,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 700,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 650,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 720,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 820,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 1000,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 1200,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 1800,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 2400,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-08",
+            "y": 2100,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "기술주 모멘텀 전략 지수",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "axis": "right",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2025-07",
+            "y": 320,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-08",
+            "y": 350,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-09",
+            "y": 480,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-10",
+            "y": 530,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-11",
+            "y": 450,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-12",
+            "y": 500,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-01",
+            "y": 490,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-02",
+            "y": 450,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-03",
+            "y": 500,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-04",
+            "y": 520,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-05",
+            "y": 650,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-06",
+            "y": 850,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07",
+            "y": 900,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-08",
+            "y": 760,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 28,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 320,
+      "max": 2400,
+      "average": 0,
+      "latest": 2100
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "메모리 업체 주가와 기술주 모멘텀 전략 지수 추이",
+    "subMessage": "좌축 메모리 업체 지수 · 우축 기술주 모멘텀 전략 지수",
+    "headline": "메모리 업체 주가와 기술주 모멘텀 전략 지수 추이",
+    "summary": "좌축 메모리 업체 지수 · 우축 기술주 모멘텀 전략 지수",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-08",
+        "y": 2100
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

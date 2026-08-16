@@ -1,0 +1,228 @@
+{
+  "id": "04-us-segment-revenue",
+  "sourceImage": "input/04-us-segment-revenue.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "US commercial +149%, US government +90%. Both accelerated together.",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Palantir Q2 2026 Business Update (2026-08-03)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "US Commercial Is Outgrowing US Government",
+    "subtitle": "US commercial +149%, US government +90%. Both accelerated together.",
+    "source": "Source: Palantir Q2 2026 Business Update (2026-08-03)",
+    "timeRange": "2Q25 vs. 2Q26",
+    "xAxis": {
+      "label": "Segment and quarter",
+      "type": "category",
+      "tickValues": [
+        "US Comm. 2Q25",
+        "US Comm. 2Q26",
+        "US Gov. 2Q25",
+        "US Gov. 2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Segment revenue",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Segment revenue",
+        "data": [
+          {
+            "x": "US Comm. 2Q25",
+            "y": 306,
+            "confidence": 0.74
+          },
+          {
+            "x": "US Comm. 2Q26",
+            "y": 764,
+            "confidence": 0.74
+          },
+          {
+            "x": "US Gov. 2Q25",
+            "y": 426,
+            "confidence": 0.74
+          },
+          {
+            "x": "US Gov. 2Q26",
+            "y": 809,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.873,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 164.4,
+        "absoluteChange": 503.0,
+        "from": 306.0,
+        "to": 809.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 809.0,
+        "at": ""
+      },
+      "min": {
+        "value": 306.0,
+        "at": ""
+      },
+      "average": 576.25,
+      "median": 595.0,
+      "range": 503.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "US Commercial Is Outgrowing US Government",
+    "subMessage": "US commercial +149%, US government +90%. Both accelerated together.",
+    "headline": "US Commercial Is Outgrowing US Government",
+    "summary": "US commercial +149%, US government +90%. Both accelerated together.",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "US commercial +149%, US government +90%. Both accelerated together.",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Palantir Q2 2026 Business Update (2026-08-03)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 809.0
+      },
+      "displayText": "US commercial closing the gap",
+      "reason": "US commercial +149%, US government +90%. Both accelerated together."
+    },
+    "densityLevel": "balanced"
+  }
+}

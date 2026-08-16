@@ -1,0 +1,234 @@
+{
+  "id": "02-datacenter-vs-catv-en",
+  "sourceImage": "input/02-datacenter-vs-catv.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Data center revenue rose 140% to $107.7M while CATV reached $80.6M",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The growth engine changed hands in a year",
+    "subtitle": "Data center revenue rose 140% to $107.7M while CATV reached $80.6M",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026",
+    "timeRange": "Jun 2025 quarter vs. Jun 2026 quarter",
+    "xAxis": {
+      "label": "Segment and period",
+      "type": "category",
+      "tickValues": [
+        "Data center '25",
+        "Data center '26",
+        "CATV '25",
+        "CATV '26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Data center '25",
+        "Data center '26",
+        "CATV '25",
+        "CATV '26"
+      ]
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Quarterly revenue by segment",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Quarterly revenue by segment",
+        "data": [
+          {
+            "x": "Data center '25",
+            "y": 44.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "Data center '26",
+            "y": 107.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "CATV '25",
+            "y": 56.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "CATV '26",
+            "y": 80.6,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.87,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 79.9,
+        "absoluteChange": 35.8,
+        "from": 44.8,
+        "to": 80.6
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 107.7,
+        "at": ""
+      },
+      "min": {
+        "value": 44.8,
+        "at": ""
+      },
+      "average": 72.275,
+      "median": 68.3,
+      "range": 62.900000000000006
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The growth engine changed hands in a year",
+    "subMessage": "Data center revenue rose 140% to $107.7M while CATV reached $80.6M",
+    "headline": "The growth engine changed hands in a year",
+    "summary": "Data center revenue rose 140% to $107.7M while CATV reached $80.6M",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "Data center revenue rose 140% to $107.7M while CATV reached $80.6M",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 80.6
+      },
+      "displayText": "The growth engine changed ",
+      "reason": "Data center revenue rose 140% to $107.7M while CATV reached $80.6M"
+    },
+    "densityLevel": "balanced"
+  }
+}

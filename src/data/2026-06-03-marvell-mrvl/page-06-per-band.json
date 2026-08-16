@@ -1,0 +1,177 @@
+{
+  "id": "per-band",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "PER 밴드 차트의 추세 보존 근사. 밴드 라벨 15/23/31/39/47배는 원본 exact.",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "PER 밴드 차트의 추세 보존 근사. 밴드 라벨 15/23/31/39/47배는 원본 exact.",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=source-visible."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "12개월 선행 PER 추이",
+    "subtitle": "역사적 밴드 15~47배 · 현재 약 43배로 밴드 상단 근접 = 고평가 영역",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "tickValues": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026F"
+      ]
+    },
+    "yAxis": {
+      "label": "PER",
+      "type": "numeric",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "unit": "배",
+      "tickValues": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "min": 10,
+      "max": 50
+    },
+    "axisDistortionWarning": "PER 값은 밴드 차트에서 눈으로 읽은 근사치(source-visible). 밴드 라벨(15~47배)만 원본 수치.",
+    "legend": [
+      {
+        "name": "12MF PER",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "PER 밴드 차트의 추세 보존 근사. 밴드 라벨 15/23/31/39/47배는 원본 exact.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "12개월 선행 PER 추이",
+    "summary": "역사적 밴드 15~47배 · 현재 약 43배로 밴드 상단 근접 = 고평가 영역",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "역사적 밴드 15~47배 · 현재 약 43배로 밴드 상단 근접 = 고평가 영역"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "12MF PER",
+        "data": [
+          {
+            "x": "2021",
+            "y": 33,
+            "confidence": 0.5
+          },
+          {
+            "x": "2022",
+            "y": 22,
+            "confidence": 0.5
+          },
+          {
+            "x": "2023",
+            "y": 28,
+            "confidence": 0.5
+          },
+          {
+            "x": "2024",
+            "y": 30,
+            "confidence": 0.5
+          },
+          {
+            "x": "2025",
+            "y": 38,
+            "confidence": 0.5
+          },
+          {
+            "x": "2026F",
+            "y": 43,
+            "confidence": 0.5
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.5,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

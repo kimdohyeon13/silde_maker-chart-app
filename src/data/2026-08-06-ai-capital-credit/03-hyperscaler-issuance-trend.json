@@ -1,0 +1,252 @@
+{
+  "id": "03-hyperscaler-issuance-trend",
+  "sourceImage": "input/03-hyperscaler-issuance-trend.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "반년 발행액이 2년 전 한 해치의 열 배가 됐다",
+    "subtitle": "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계",
+    "source": "자료: Bloomberg, 2026년 8월",
+    "timeRange": "2019~2026년",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026 상반기"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "십억 달러",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "5대 하이퍼스케일러 발행액",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "5대 하이퍼스케일러 발행액",
+        "data": [
+          {
+            "x": "2019",
+            "y": 2,
+            "confidence": 0.74
+          },
+          {
+            "x": "2020",
+            "y": 50,
+            "confidence": 0.74
+          },
+          {
+            "x": "2021",
+            "y": 42,
+            "confidence": 0.74
+          },
+          {
+            "x": "2022",
+            "y": 48,
+            "confidence": 0.74
+          },
+          {
+            "x": "2023",
+            "y": 17,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024",
+            "y": 20,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025",
+            "y": 108,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026 상반기",
+            "y": 200,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.253,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 9900.0,
+        "absoluteChange": 198.0,
+        "from": 2.0,
+        "to": 200.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 200.0,
+        "at": ""
+      },
+      "min": {
+        "value": 2.0,
+        "at": ""
+      },
+      "average": 60.875,
+      "median": 45.0,
+      "range": 198.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "반년 발행액이 2년 전 한 해치의 열 배가 됐다",
+    "subMessage": "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계",
+    "headline": "반년 발행액이 2년 전 한 해치의 열 배가 됐다",
+    "summary": "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Bloomberg, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 200.0
+      },
+      "displayText": "반년 발행액이 2년 전 한 해",
+      "reason": "단위 십억 달러. 아마존·마이크로소프트·알파벳·메타·오라클 합산 발행액. 2026년은 상반기까지의 누계"
+    },
+    "densityLevel": "balanced"
+  }
+}

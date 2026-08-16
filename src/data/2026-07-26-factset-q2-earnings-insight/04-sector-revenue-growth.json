@@ -1,0 +1,350 @@
+{
+  "id": "04-sector-revenue-growth",
+  "mode": "faithful",
+  "sourceImage": "input/04-sector-revenue-growth.png",
+  "analyzedAt": "2026-07-26T19:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "S&P500 모든 주요 업종에서 매출 성장",
+    "originalMessage": "S&P500 모든 주요 업종에서 매출 성장",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간·범주 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 표기",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 표에 명시된 값을 그대로 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 24개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "pass",
+      "detail": "원본에 명시된 값을 사용했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 350,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.8,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "S&P500 모든 주요 업종에서 매출 성장",
+    "subtitle": "전년 대비 매출 증가율 % · 남색 현재 · 회색 6월 30일",
+    "source": "자료: FactSet Earnings Insight, 2026-07-24",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "IT",
+        "EN",
+        "CM",
+        "SPX",
+        "FI",
+        "RE",
+        "CD",
+        "IN",
+        "CS",
+        "MA",
+        "UT",
+        "HC"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 40,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "현재",
+        "role": "primary",
+        "originalColor": "#173B6D",
+        "remakeColor": "#173B6D",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "6월 30일",
+        "role": "primary",
+        "originalColor": "#D0D5DD",
+        "remakeColor": "#D0D5DD",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현재",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#173B6D",
+        "data": [
+          {
+            "x": "IT",
+            "y": 34.7,
+            "confidence": 1
+          },
+          {
+            "x": "EN",
+            "y": 28.1,
+            "confidence": 1
+          },
+          {
+            "x": "CM",
+            "y": 15,
+            "confidence": 1
+          },
+          {
+            "x": "SPX",
+            "y": 13.2,
+            "confidence": 1
+          },
+          {
+            "x": "FI",
+            "y": 12.6,
+            "confidence": 1
+          },
+          {
+            "x": "RE",
+            "y": 9.9,
+            "confidence": 1
+          },
+          {
+            "x": "CD",
+            "y": 8.2,
+            "confidence": 1
+          },
+          {
+            "x": "IN",
+            "y": 7.9,
+            "confidence": 1
+          },
+          {
+            "x": "CS",
+            "y": 7.7,
+            "confidence": 1
+          },
+          {
+            "x": "MA",
+            "y": 7.5,
+            "confidence": 1
+          },
+          {
+            "x": "UT",
+            "y": 7,
+            "confidence": 1
+          },
+          {
+            "x": "HC",
+            "y": 5.1,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "6월 30일",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#D0D5DD",
+        "data": [
+          {
+            "x": "IT",
+            "y": 34.2,
+            "confidence": 1
+          },
+          {
+            "x": "EN",
+            "y": 27.6,
+            "confidence": 1
+          },
+          {
+            "x": "CM",
+            "y": 13.9,
+            "confidence": 1
+          },
+          {
+            "x": "SPX",
+            "y": 12.3,
+            "confidence": 1
+          },
+          {
+            "x": "FI",
+            "y": 8.9,
+            "confidence": 1
+          },
+          {
+            "x": "RE",
+            "y": 9.4,
+            "confidence": 1
+          },
+          {
+            "x": "CD",
+            "y": 7.1,
+            "confidence": 1
+          },
+          {
+            "x": "IN",
+            "y": 7.4,
+            "confidence": 1
+          },
+          {
+            "x": "CS",
+            "y": 7.6,
+            "confidence": 1
+          },
+          {
+            "x": "MA",
+            "y": 6.9,
+            "confidence": 1
+          },
+          {
+            "x": "UT",
+            "y": 8.3,
+            "confidence": 1
+          },
+          {
+            "x": "HC",
+            "y": 4.6,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 비교 관계를 보존했습니다.",
+      "recentDirection": "rising"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 경로와 범주 차이를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 4.6,
+      "max": 34.7,
+      "average": 0,
+      "latest": 5.1
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P500 모든 주요 업종에서 매출 성장",
+    "subMessage": "전년 대비 매출 증가율 % · 남색 현재 · 회색 6월 30일",
+    "headline": "S&P500 모든 주요 업종에서 매출 성장",
+    "summary": "전년 대비 매출 증가율 % · 남색 현재 · 회색 6월 30일",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B6D",
+      "secondary": [
+        "#D0D5DD",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#173B6D",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "HC",
+        "y": 5.1
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

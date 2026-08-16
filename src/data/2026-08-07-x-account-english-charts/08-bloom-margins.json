@@ -1,0 +1,278 @@
+{
+  "id": "08-bloom-margins",
+  "mode": "faithful",
+  "sourceImage": "input/w76-07.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "규모와 이익이 함께 커졌다",
+    "originalMessage": "비GAAP 총이익률 34.3%, 영업이익률 22.5%",
+    "preservedElements": [
+      "가로 막대 4개와 원본 순서(2Q25 총이익률, 2Q26 총이익률, 2Q25 영업이익률, 2Q26 영업이익률)",
+      "총이익률과 영업이익률이 서로 다른 지표라는 표기",
+      "비GAAP 기준 명시",
+      "퍼센트 단위와 0 기준축, 상단 35% 축",
+      "규모와 이익이 함께 커졌다는 원본 주장",
+      "Bloom Energy 분기 실적 발표 3건 출처와 날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 표시 텍스트를 영어로 번역(영문 전용 X 계정용)",
+      "값 축 단위를 % 기호 한 곳으로만 표기",
+      "Paperlogy 900/300 제목 계층과 16:9 캔버스 높이 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "막대 4개는 두 개의 서로 다른 지표(총이익률·영업이익률)를 분기별로 보여줍니다. 카테고리 라벨에 지표명과 분기를 모두 적어 같은 시리즈처럼 읽히지 않게 했습니다. 렌더러는 단일 시리즈 가로 막대를 한 가지 색으로 칠하므로 원본의 단색 파랑을 그대로 유지했습니다.",
+    "sourceAttribution": "Source: Bloom Energy quarterly earnings releases, 2025-07-31 · 2026-04-28 · 2026-07-28"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "original-title-preserved",
+      "label": "제목 원문 보존",
+      "status": "pass",
+      "detail": "원본 제목 '규모와 이익이 함께 커졌다'를 originalTitle에 남기고, 규모와 이익이 함께 커졌다는 주장을 그대로 영어로 옮겼습니다."
+    },
+    {
+      "id": "metric-labels-distinct",
+      "label": "지표 구분 표기",
+      "status": "pass",
+      "detail": "총이익률 막대와 영업이익률 막대에 각각 지표명과 분기를 붙여 서로 다른 지표임을 명시했습니다."
+    },
+    {
+      "id": "series-count-match",
+      "label": "시리즈 수 일치",
+      "status": "pass",
+      "detail": "원본과 동일하게 가로 막대 4개를 모두 유지했습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 완전 보존",
+      "status": "pass",
+      "detail": "분기 실적 발표 3건의 날짜(2025-07-31·2026-04-28·2026-07-28)를 모두 유지했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "제목, 부제, 축, 범례, 카테고리, 출처, 내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#1458D4",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Scale and profit grew together",
+    "subtitle": "Non-GAAP gross margin 34.3%, operating margin 22.5%",
+    "source": "Source: Bloom Energy quarterly earnings releases, 2025-07-31 · 2026-04-28 · 2026-07-28 · source-visible",
+    "timeRange": "2Q25-2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2Q25 gross margin",
+        "2Q26 gross margin",
+        "2Q25 operating margin",
+        "2Q26 operating margin"
+      ],
+      "displayTickValues": [
+        "2Q25 gross margin",
+        "2Q26 gross margin",
+        "2Q25 operating margin",
+        "2Q26 operating margin"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "Non-GAAP margin",
+        "role": "primary",
+        "originalColor": "#1458D4",
+        "remakeColor": "#1458D4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Non-GAAP margin",
+        "data": [
+          {
+            "x": "2Q25 gross margin",
+            "y": 28.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "2Q26 gross margin",
+            "y": 34.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "2Q25 operating margin",
+            "y": 7.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "2Q26 operating margin",
+            "y": 22.5,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "두 지표(총이익률·영업이익률)가 한 축에 있으므로 라벨로만 구분됩니다."
+      ],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.95,
+      "description": "Both profitability measures improved year over year.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.45,
+      "description": "The operating margin improved by far the most."
+    },
+    "changeRates": [
+      {
+        "period": "Gross margin, year over year",
+        "percentChange": 21.6,
+        "absoluteChange": 6.1,
+        "from": 28.2,
+        "to": 34.3
+      },
+      {
+        "period": "Operating margin, year over year",
+        "percentChange": 216.9,
+        "absoluteChange": 15.4,
+        "from": 7.1,
+        "to": 22.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 34.3,
+        "at": "2Q26 gross margin"
+      },
+      "min": {
+        "value": 7.1,
+        "at": "2Q25 operating margin"
+      },
+      "average": 23.025,
+      "median": 25.35,
+      "range": 27.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Scale and profit grew together",
+    "subMessage": "Revenue growth turned into operating leverage.",
+    "headline": "The non-GAAP operating margin went from 7.1% a year ago to 22.5%.",
+    "summary": "Gross margin and operating margin improved at the same time, so the larger shipment volume showed up in profit.",
+    "story": "The four bars are two different measures, gross margin and operating margin, each shown for 2Q25 and 2Q26.",
+    "keyTakeaways": [
+      "Non-GAAP gross margin: 28.2% to 34.3%",
+      "Non-GAAP operating margin: 7.1% to 22.5%",
+      "Values are source-visible readings from the original slide"
+    ],
+    "questionsRaised": [
+      "Do these margins hold if the product share of revenue falls?"
+    ],
+    "viewerAction": "Check how durable the product and service margins are.",
+    "contextualNotes": [
+      "Source: Bloom Energy quarterly earnings releases, 2025-07-31 · 2026-04-28 · 2026-07-28",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#A8B0BC"
+      ],
+      "positive": "#D62839",
+      "negative": "#8B95A1",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26 operating margin",
+        "y": 22.5
+      },
+      "displayText": "22.5%",
+      "reason": "The operating margin is where the revenue growth shows up as profit."
+    },
+    "densityLevel": "balanced"
+  }
+}

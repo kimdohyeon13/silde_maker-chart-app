@@ -1,0 +1,119 @@
+{
+  "id": "08-google-full-stack",
+  "contentType": "infographic",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Google full-stack AI business",
+    "preservedElements": [
+      "TPU",
+      "데이터센터·네트워크",
+      "Gemini",
+      "검색·YouTube·Cloud",
+      "수익화"
+    ],
+    "changedElements": [
+      "4단계 프로세스 플로우",
+      "현재 2Q26 사용량 반영"
+    ],
+    "dataFidelity": "redrawn",
+    "mode": "redesign",
+    "notes": "볼트의 기존 설명 구조를 현재 분기 맥락에 맞춰 다시 그렸습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "구글의 AI 가치사슬을 4단계로 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 27,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828"
+  },
+  "structure": {
+    "title": "구글은 칩부터 수익화까지 한 시스템으로 연결한다",
+    "subtitle": "TPU·인프라·Gemini·서비스·매출이 이어지는 풀스택 구조",
+    "source": "자료: Alphabet, 월텍남 알파테크 016·048화"
+  },
+  "infographicData": {
+    "subType": "process_flow",
+    "direction": "horizontal",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "칩·인프라",
+        "description": "TPU·데이터센터·네트워크",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 2,
+        "title": "모델",
+        "description": "Gemini 훈련·추론",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 3,
+        "title": "서비스 배포",
+        "description": "검색·YouTube·Workspace",
+        "status": "completed"
+      },
+      {
+        "stepNumber": 4,
+        "title": "수익화",
+        "description": "광고·구독·Cloud API",
+        "status": "in_progress"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "칩부터 사용자 접점까지 직접 연결",
+    "subMessage": "한 단계의 효율 개선이 전체 서비스 원가와 매출에 함께 반영됩니다.",
+    "headline": "구글은 자체 칩과 인프라로 Gemini를 운영하고, 검색과 Cloud에서 동시에 수익화할 수 있습니다.",
+    "keyTakeaways": [
+      "Gemini API 처리량은 분당 220억 토큰입니다.",
+      "Gemini 앱 MAU는 9.5억명입니다.",
+      "포춘 100의 약 90%가 Gemini Enterprise를 사용합니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "칩→서비스→매출",
+      "reason": "수직계열화의 핵심"
+    },
+    "densityLevel": "balanced"
+  }
+}

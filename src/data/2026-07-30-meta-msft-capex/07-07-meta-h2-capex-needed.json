@@ -1,0 +1,211 @@
+{
+  "id": "07-meta-h2-capex-needed",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-30T17:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "메타는 하반기에 최소 791억달러를 더 써야 한다",
+    "preservedElements": [
+      "공식 수치",
+      "회사 순서",
+      "단위",
+      "출처",
+      "CapEx 정의"
+    ],
+    "changedElements": [
+      "쉬운 주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "최댓값 강조"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "2026년 CapEx 가이드 130~145B달러에서 상반기 실제 50.918B달러를 차감했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 3개와 직접 값 라벨 3개로 설계했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "최종 export와 DOM QA에서 1,824×1,026px, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "source-exact",
+      "label": "공식 수치 일치",
+      "status": "pass",
+      "detail": "Microsoft FY26 Q4와 Meta Q2 2026 공식 실적 발표의 원단위를 사용했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "메타는 하반기에 최소 791억달러를 더 써야 한다",
+    "subtitle": "연간 가이드 1,300억~1,450억달러에서 상반기 509억달러 차감",
+    "source": "자료: Meta Q2 2026 실적 발표, waltechman 계산",
+    "timeRange": "2026년",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "H1 actual",
+        "H2 minimum",
+        "H2 maximum"
+      ],
+      "displayTickValues": [
+        "상반기 실제",
+        "하반기 최소",
+        "하반기 최대"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 110,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "비교값",
+        "role": "primary",
+        "originalColor": "#667085",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "비교값",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "H1 actual",
+            "y": 50.918,
+            "confidence": 1
+          },
+          {
+            "x": "H2 minimum",
+            "y": 79.082,
+            "confidence": 1
+          },
+          {
+            "x": "H2 maximum",
+            "y": 94.082,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 50.918,
+      "max": 94.082,
+      "average": 74.694,
+      "latest": 94.082
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "연간 가이드를 맞추려면 하반기 투자액이 상반기보다 55~85% 더 커져야 합니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "메타는 하반기에 최소 791억달러를 더 써야 한다",
+    "subMessage": "연간 가이드 1,300억~1,450억달러에서 상반기 509억달러 차감",
+    "headline": "연간 가이드를 맞추려면 하반기 투자액이 상반기보다 55~85% 더 커져야 합니다.",
+    "summary": "연간 가이드를 맞추려면 하반기 투자액이 상반기보다 55~85% 더 커져야 합니다.",
+    "keyTakeaways": [
+      "Meta의 2026년 상반기 CapEx는 50.918B달러였습니다.",
+      "연간 130B달러 하단을 맞추려면 하반기에 79.082B달러가 더 필요합니다.",
+      "145B달러 상단 기준으로는 하반기 필요액이 94.082B달러입니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "H2 maximum",
+        "y": 94.082
+      },
+      "displayText": "94.1",
+      "reason": "연간 가이드를 맞추려면 하반기 투자액이 상반기보다 55~85% 더 커져야 합니다."
+    },
+    "colorStrategy": {
+      "primary": "#D92D3A",
+      "secondary": [
+        "#667085"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "sparse",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

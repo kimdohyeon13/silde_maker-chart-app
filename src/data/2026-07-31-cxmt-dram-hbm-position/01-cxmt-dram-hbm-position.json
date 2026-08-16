@@ -1,0 +1,194 @@
+{
+  "id": "01-cxmt-dram-hbm-position",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-07-31-cxmt-dram-hbm-position/input/source-01-cxmt-dram-hbm-position.png",
+  "sourceImages": [
+    "projects/2026-07-31-cxmt-dram-hbm-position/input/source-01-cxmt-dram-hbm-position.png"
+  ],
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "originalMessage": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "preservedElements": [
+      "제목과 부제의 판단 구조",
+      "3개 열과 5개 판정 행",
+      "원본에 표시된 수치와 문구",
+      "범용 DRAM과 HBM의 대비",
+      "출처·추정치 맥락"
+    ],
+    "changedElements": [
+      "16:9 캔버스의 여백",
+      "Paperlogy 타이포와 표 간격",
+      "강조 셀의 색 농도"
+    ],
+    "dataFidelity": "exact",
+    "notes": "사용자 제공 원본 표의 제목, 행·열, 셀 문구와 숫자를 그대로 전사하고 가독성만 정리했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-spacing",
+    "apply-paperlogy-typography"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 3열·5행 비교표, 제목·부제와 출처 구조를 유지했습니다."
+    },
+    {
+      "id": "source-visible-values-exact",
+      "label": "화면 표시값 전사",
+      "status": "pass",
+      "detail": "원본 화면의 모든 셀 문구, 수치, 단위를 동일하게 옮겼습니다."
+    },
+    {
+      "id": "estimate-labelled",
+      "label": "외부 추정치 구분",
+      "status": "pass",
+      "detail": "SemiAnalysis Memory Model 추정과 CXMT 공시라는 출처 문구를 표 하단에 유지했습니다."
+    },
+    {
+      "id": "paperlogy-typography",
+      "label": "Paperlogy 900/300",
+      "status": "pass",
+      "detail": "제목은 Paperlogy 900, 부제는 300 계약으로 렌더합니다."
+    }
+  ],
+  "structure": {
+    "title": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "subtitle": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "source": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": true,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "25px 38px 2px",
+    "contentPadding": "8px 18px 6px",
+    "sourcePadding": "0 38px 15px",
+    "titleFontSize": 44,
+    "subtitleFontSize": 23,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 16,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#101828"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "판정 항목",
+        "dataType": "text",
+        "width": "30%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "status",
+        "label": "CXMT 위치",
+        "dataType": "text",
+        "width": "25%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "evidence",
+        "label": "핵심 근거",
+        "dataType": "text",
+        "width": "45%",
+        "align": "left",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {"value": "범용 DRAM 가격", "displayValue": "범용 DRAM 가격"},
+          "status": {"value": "거의 추격", "displayValue": "거의 추격", "highlight": "positive"},
+          "evidence": {"value": "빅3보다 5~10% 낮음", "displayValue": "빅3보다 5~10% 낮음"}
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {"value": "웨이퍼 생산능력", "displayValue": "웨이퍼 생산능력"},
+          "status": {"value": "마이크론 근접", "displayValue": "마이크론 근접", "highlight": "positive"},
+          "evidence": {"value": "350k vs 385k WSPM", "displayValue": "350k vs 385k WSPM"}
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {"value": "DDR5 원가", "displayValue": "DDR5 원가"},
+          "status": {"value": "격차 큼", "displayValue": "격차 큼", "highlight": "negative"},
+          "evidence": {"value": "비트당 원가 30% 이상 높음", "displayValue": "비트당 원가 30% 이상 높음"}
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {"value": "공정 세대", "displayValue": "공정 세대"},
+          "status": {"value": "1z 안정화 단계", "displayValue": "1z 안정화 단계"},
+          "evidence": {"value": "G4 주력, G5(1a급) 도전", "displayValue": "G4 주력, G5(1a급) 도전"}
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {"value": "HBM 수율·적층", "displayValue": "HBM 수율·적층"},
+          "status": {"value": "초기 단계", "displayValue": "초기 단계", "highlight": "negative"},
+          "evidence": {"value": "HBM3 8단 총수율 약 25% 모델", "displayValue": "HBM3 8단 총수율 약 25% 모델"}
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "comfortable",
+      "zebraStripe": true,
+      "highlightMode": "cell"
+    }
+  },
+  "narrative": {
+    "headMessage": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "subMessage": "무엇을 기준으로 보느냐에 따라 ‘따라잡았다’의 답이 달라짐",
+    "headline": "한 줄 판정: 범용 DRAM은 추격권, HBM은 아직 멀다",
+    "summary": "범용 DRAM의 가격·생산능력과 HBM의 원가·수율·적층 역량을 분리해 비교합니다.",
+    "story": "원본의 데이터 관계를 유지한 비교표입니다.",
+    "keyTakeaways": [
+      "범용 DRAM과 HBM은 같은 속도로 따라잡히지 않습니다.",
+      "표의 일부 수치는 외부 모델 추정입니다."
+    ],
+    "questionsRaised": [
+      "HBM 수율 개선 속도가 메모리 공급 병목을 얼마나 완화할 수 있는가?"
+    ],
+    "viewerAction": "범용 DRAM과 HBM의 격차를 같은 기준으로 읽습니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "범용 DRAM은 추격권, HBM은 아직 멀다",
+      "reason": "범용 DRAM과 HBM의 기술·수율 병목이 다릅니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#F2B705", "#FF8A3D", "#16A34A"],
+      "positive": "#16A34A",
+      "negative": "#2563EB",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

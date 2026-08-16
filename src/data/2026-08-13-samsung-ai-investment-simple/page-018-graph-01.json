@@ -1,0 +1,83 @@
+{
+  "id": "page-018-graph-01",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/23-page_018_graph_01.png",
+  "analyzedAt": "2026-08-13T22:42:00+09:00",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "미국 기업 AI 채택률 추이 및 향후 6개월 전망",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "출처: Market Report World",
+    "mustPreserve": ["2024년부터 2026년까지의 2개 시리즈", "23.7%와 20.6%의 마지막 값", "퍼센트 단위와 출처"],
+    "changedElements": ["제목을 기업 AI 사용 증가로 단순화", "원본의 SaaS 침투율 보조 문구는 제거", "마지막 값을 직접 라벨로 표시"]
+  },
+  "allowedTransformations": ["adjust-title", "adjust-colors", "adjust-fonts", "adjust-spacing", "adjust-labels"],
+  "qualityChecks": [
+    { "id": "source-visible", "status": "pass", "detail": "원본 그래프에서 읽은 두 시리즈의 연도별 앵커값을 사용했습니다." },
+    { "id": "layout-plan", "status": "pass", "detail": "2개 선과 3개 연도만 표시해 직접 라벨이 겹치지 않게 설계했습니다." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "fontFamily": "Paperlogy",
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 130,
+    "lineStrokeWidth": 3
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "미국 기업의 AI 사용이 빠르게 늘고 있다",
+    "subtitle": "미국 기업 AI 채택률과 향후 6개월 전망",
+    "source": "출처: Market Report World",
+    "xAxis": { "label": "", "type": "time", "tickValues": ["2024", "2025", "2026"], "displayTickValues": ["2024", "2025", "2026"], "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "AI 채택률", "type": "numeric", "tickValues": ["0", "5", "10", "15", "20", "25"], "unit": "%", "min": 0, "max": 25, "startsAtZero": true, "isLogScale": false },
+    "legend": [
+      { "name": "현재 채택률", "originalColor": "#1677F0", "remakeColor": "#1677F0" },
+      { "name": "6개월 전망", "originalColor": "#F03E68", "remakeColor": "#F03E68" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "현재 채택률", "renderAs": "line", "seriesKind": "normal", "data": [{ "x": "2024", "y": 6, "confidence": 0.8 }, { "x": "2025", "y": 9, "confidence": 0.8 }, { "x": "2026", "y": 23.7, "confidence": 0.9 }] },
+      { "name": "6개월 전망", "renderAs": "line", "seriesKind": "forecast", "data": [{ "x": "2024", "y": 4, "confidence": 0.8 }, { "x": "2025", "y": 7, "confidence": 0.8 }, { "x": "2026", "y": 20.6, "confidence": 0.9 }] }
+    ],
+    "totalDataPoints": 6,
+    "quality": { "overallConfidence": 0.85, "missingPoints": 0, "hardToReadAreas": ["세부 월별 값은 원본에서 판독할 수 없어 포함하지 않았습니다."], "readabilityScore": "good" }
+  },
+  "statistics": { "summary": {}, "changeRates": [] },
+  "patterns": { "trend": "두 시리즈 모두 2026년에 크게 상승합니다.", "supportResistance": [] },
+  "narrative": {
+    "headMessage": "미국 기업의 AI 사용이 빠르게 늘고 있다",
+    "subMessage": "현재 채택률 23.7%, 6개월 전망 20.6%",
+    "headline": "미국 기업 AI 채택률 추이 및 향후 6개월 전망",
+    "summary": "기업 AI 채택률은 2024년 6%에서 2026년 23.7%로 높아졌습니다.",
+    "story": "기업이 AI를 실제 업무에 쓰기 시작하면서 채택률이 빠르게 높아지고 있습니다.",
+    "keyTakeaways": ["2026년 현재 채택률은 23.7%입니다."],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "2026", "y": 23.7, "displayText": "현재 23.7%" },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1677F0", "secondary": ["#F03E68"], "positive": "#16A34A", "negative": "#D92D20", "accent": "#0969DA", "backgroundTone": "light" },
+    "densityLevel": "sparse"
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "id": "chart-24",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-09T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "로직·HBM·DRAM 세 칩 천장을 로그 축에 겹쳐 보면, 2032~2034년경까지는 가장 낮은 선(주로 HBM·DRAM)이 진짜 병목이고 2050년엔 세 선이 1,000~1,300M로 나란히 모이는 게 보이실 거예요.",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "칩 공급 천장 — 로직·HBM·DRAM",
+    "subtitle": "2026년 40M대에서 출발해 2050년 1,000~1,300M로 수렴",
+    "source": "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2026",
+        "2028",
+        "2030",
+        "2032",
+        "2034",
+        "2036",
+        "2038",
+        "2040",
+        "2042",
+        "2044",
+        "2046",
+        "2048",
+        "2050"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "연간 레티클 크기 다이",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "백만 개/년",
+      "startsAtZero": false,
+      "isLogScale": true
+    },
+    "legend": [
+      {
+        "name": "로직 제약",
+        "role": "primary"
+      },
+      {
+        "name": "HBM 제약",
+        "role": "primary"
+      },
+      {
+        "name": "DRAM 제약(AI 점유 한도)",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "로직 제약",
+        "data": [
+          {
+            "x": "2026",
+            "y": 43.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 80.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 250.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 320.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 380.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 430.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 500.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 600.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 720.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 850.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 1000.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 1150.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 1300.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "HBM 제약",
+        "data": [
+          {
+            "x": "2026",
+            "y": 43.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 80.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 130.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 180.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 250.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 320.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 400.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 510.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 650.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 800.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 950.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 1050.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 1120.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#E0A500",
+        "axis": "left"
+      },
+      {
+        "name": "DRAM 제약(AI 점유 한도)",
+        "data": [
+          {
+            "x": "2026",
+            "y": 230.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 160.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 150.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 155.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 175.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 230.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 320.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 440.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 600.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 800.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 1000.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 1180.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 1300.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#16A34A",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 39,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 43.0,
+        "to": 1300.0,
+        "absoluteChange": 1257.0,
+        "percentChange": 2923.3
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1300.0,
+        "at": ""
+      },
+      "min": {
+        "value": 43.0,
+        "at": ""
+      },
+      "average": 586.3846153846154,
+      "median": 500.0,
+      "range": 1257.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "셋 중 최저가 진짜 병목",
+    "subMessage": "2026년 40M대에서 출발해 2050년 1,000~1,300M로 수렴",
+    "headline": "셋 중 최저가 진짜 병목",
+    "summary": "로직·HBM·DRAM 세 칩 천장을 로그 축에 겹쳐 보면, 2032~2034년경까지는 가장 낮은 선(주로 HBM·DRAM)이 진짜 병목이고 2050년엔 세 선이 1,000~1,300M로 나란히 모이는 게 보이실 거예요.",
+    "story": "로직·HBM·DRAM 세 칩 천장을 로그 축에 겹쳐 보면, 2032~2034년경까지는 가장 낮은 선(주로 HBM·DRAM)이 진짜 병목이고 2050년엔 세 선이 1,000~1,300M로 나란히 모이는 게 보이실 거예요.",
+    "keyTakeaways": [
+      "로직·HBM·DRAM 세 칩 천장을 로그 축에 겹쳐 보면, 2032~2034년경까지는 가장 낮은 선(주로 HBM·DRAM)이 진짜 병목이고 2050년엔 세 선이 1,000~1,300M로 나란히 모이는 게 보이실 거예요."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 방향·축·시리즈 구성을 확인하세요.",
+    "contextualNotes": [
+      "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2050",
+        "y": 1300.0
+      },
+      "reason": "로직·HBM·DRAM 세 칩 천장을 로그 축에 겹쳐 보면, 2032~2034년경까지는 가장 낮은 선(주로 HBM·DRAM)이 진짜 병목이고 2050년엔 세 선이 1,000~1,300M로 나란히 모이는 게 보이실 거예요.",
+      "displayText": "셋 중 최저가 진짜 병목"
+    },
+    "densityLevel": "balanced"
+  }
+}

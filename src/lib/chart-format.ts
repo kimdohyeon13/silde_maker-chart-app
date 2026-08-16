@@ -35,6 +35,90 @@ const INDEX_BASELINE_UNIT_RE = /=100$|기준|지수|index/i;
  */
 const TICK_UNIT_WHITELIST_RE = /^(%|\$|US\$|₩|[€¥£]|p|x|배|pt|bp|bps)$/;
 
+const BILLION_DOLLAR_RE = /^(?:\$?bn|십억\s*달러|10억\s*달러)$/i;
+
+function normalizeHumanAxisText(value = ""): string {
+  return value.trim().replace(/십억\s*달러/gi, "10억 달러");
+}
+
+/** 축 제목과 단위를 한 번만, 사람이 바로 읽을 수 있는 말로 합친다. */
+export function formatAxisLabel(label = "", unit = ""): string {
+  const normalizedLabel = normalizeHumanAxisText(label);
+  const normalizedUnit = BILLION_DOLLAR_RE.test(unit)
+    ? "10억 달러"
+    : normalizeHumanAxisText(unit);
+
+  if (!normalizedLabel || normalizedLabel === "값") return normalizedUnit;
+  if (!normalizedUnit) return normalizedLabel;
+  if (
+    normalizedLabel === normalizedUnit ||
+    normalizedLabel.includes(normalizedUnit) ||
+    (BILLION_DOLLAR_RE.test(label) && BILLION_DOLLAR_RE.test(unit))
+  ) {
+    return normalizedLabel;
+  }
+
+  return `${normalizedLabel} (${normalizedUnit})`;
+}
+
+/** 긴 범주 라벨을 단어와 괄호 경계에서 최대 3줄로 나눈다. */
+export function wrapCategoryLabel(label: string, maxChars = 14, maxLines = 3): string[] {
+  const rawTokens = label
+    .replace(/\s*\(/g, " (")
+    .replace(/,\s*/g, ", ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  const tokens = rawTokens.flatMap((token) => {
+    if (token.length <= maxChars) return [token];
+
+    const pieces = token.match(/[^/\-]+[/\-]?|[/\-]/g) ?? [token];
+    const chunks: string[] = [];
+    for (const piece of pieces) {
+      const current = chunks[chunks.length - 1];
+      if (current && current.length + piece.length <= maxChars) {
+        chunks[chunks.length - 1] = current + piece;
+        continue;
+      }
+      if (piece.length <= maxChars) {
+        chunks.push(piece);
+        continue;
+      }
+      for (let index = 0; index < piece.length; index += maxChars) {
+        chunks.push(piece.slice(index, index + maxChars));
+      }
+    }
+    return chunks;
+  });
+  const lines: string[] = [];
+
+  for (const token of tokens) {
+    const current = lines[lines.length - 1];
+    if (!current || current.length + 1 + token.length > maxChars) {
+      lines.push(token);
+    } else {
+      lines[lines.length - 1] = `${current} ${token}`;
+    }
+  }
+
+  if (lines.length <= maxLines) return lines;
+
+  // 마지막 줄 하나에 남은 내용을 몰아넣으면 다시 겹친다. 원문은 보존하면서
+  // 최대 줄 수 안에서 길이가 비슷하도록 다시 나눈다.
+  const compact = lines.join(" ");
+  const targetLength = Math.ceil(compact.length / maxLines);
+  const balanced: string[] = [];
+  for (const token of tokens) {
+    const current = balanced[balanced.length - 1];
+    if (!current || (balanced.length < maxLines && current.length >= targetLength)) {
+      balanced.push(token);
+    } else {
+      balanced[balanced.length - 1] = `${current} ${token}`;
+    }
+  }
+  return balanced;
+}
+
 /**
  * X축 눈금에 표시할 텍스트를 만든다 — "소수 leak" 통합 제거판.
  *
@@ -48,11 +132,16 @@ const TICK_UNIT_WHITELIST_RE = /^(%|\$|US\$|₩|[€¥£]|p|x|배|pt|bp|bps)$/;
  * 2. "24.06.2"           → "24.06 중"  (반기/중순 표기)
  * 3. "FY1Q26E"           → "1Q26E"     (회계분기)
  * 4. "26F.00","26F.04"   → "26F"       (접미사 붙은 연도 + 후행 소수)   ← 신규(leak 차단)
- * 5. "2024.00","24.00","96.00","-15.0" → "2024","24","96","-15" (정수 + 후행 소수) ← 2자리도 처리
+ * 5. "2024.00","24.00","96.00","-15.0" → "2024","24","96","-15" (정수 + 0만 있는 후행 소수)
+ *    실제 월·소수 값인 "2023.07", "4.48"은 그대로 보존한다.
  * 그 외에는 원본 문자열을 그대로 둔다.
  */
 export function formatAxisTickLabel(value: string | number): string {
   const raw = String(value).trim();
+
+  // 0) 일별 "YYYY-MM-DD" → "M/D"
+  const fullDate = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (fullDate) return `${Number(fullDate[2])}/${Number(fullDate[3])}`;
 
   // 1) 월별 "YYYY-MM" → "YYYY.MM"
   const month = raw.match(/^(\d{4})-(\d{2})$/);
@@ -70,8 +159,8 @@ export function formatAxisTickLabel(value: string | number): string {
   const suffixYear = raw.match(/^(\d{1,4}[A-Za-z]+)\.\d+$/);
   if (suffixYear) return suffixYear[1];
 
-  // 5) 정수에 후행 소수: "2024.00"/"24.00"/"96.00"/"-15.0" → 정수부만
-  const decimalNum = raw.match(/^(-?\d+)\.\d+$/);
+  // 5) 정수에 0만 붙은 후행 소수: "2024.00"/"24.00"/"-15.0" → 정수부만
+  const decimalNum = raw.match(/^(-?\d+)\.0+$/);
   if (decimalNum) return decimalNum[1];
 
   return raw;
@@ -83,9 +172,11 @@ export function formatAxisTickLabel(value: string | number): string {
  */
 export function normalizeXKey(value: string | number): string {
   const raw = String(value).trim();
-  const decimalYear = raw.match(/^(\d{4})\.\d{1,2}$/);
-  if (decimalYear) return decimalYear[1];
-  return raw.replace(/\.\d+$/, "");
+  const suffixYear = raw.match(/^(\d{1,4}[A-Za-z]+)\.\d+$/);
+  if (suffixYear) return suffixYear[1];
+
+  const integerWithZeroDecimals = raw.match(/^(-?\d+)\.0+$/);
+  return integerWithZeroDecimals ? integerWithZeroDecimals[1] : raw;
 }
 
 /**
@@ -241,4 +332,43 @@ export function generateNiceTicks(
     }
   }
   return ticks;
+}
+
+/**
+ * 출처(source) 문자열에서 최종 장표에 필요 없는 내부 메타데이터를 제거한다.
+ *
+ * 최종 장표에는 원문 근거만 보여준다. `source-visible`, `directional`,
+ * 저장소 재사용, 데이터 상태 같은 내부 판정은 JSON과 QA 문서에만 남긴다.
+ * 데이터 제공처와 원문 날짜는 보존한다.
+ *
+ * 예)
+ *   "자료: LSEG, 신한투자증권" → 그대로 보존
+ *   "Bloomberg, 신한투자증권"  → 그대로 보존
+ *   "자료: TSMC IR · source-visible" → "자료: TSMC IR"
+ *   "자료: TSMC IR · 저장소 기존 검증 데이터 재사용" → "자료: TSMC IR"
+ */
+export function cleanSourceText(raw?: string): string {
+  if (!raw) return "";
+  const s = raw
+    // 최종 이미지에 내부 fidelity 상태와 제작 이력을 노출하지 않는다.
+    .replace(
+      /\s*(?:[·•|]\s*)?(?:데이터\s+상태|data\s+(?:state|status))\s*[:：]?\s*(?:source-visible|directional|redrawn)(?:\s*에서\s*(?:유도|derived))?/gi,
+      "",
+    )
+    .replace(
+      /\s*(?:[·•|]\s*)?\(?(?:source-visible|directional|redrawn)(?:\s+(?:data|데이터)\s+(?:status|상태))?(?:\s*에서\s*(?:유도|derived))?\)?/gi,
+      "",
+    )
+    .replace(
+      /\s*(?:[·•|]\s*)?(?:저장소\s+)?기존\s+검증\s+데이터\s+재사용/gi,
+      "",
+    )
+    // 남은 찌꺼기 정리: 앞뒤 구분자·중복 공백
+    .replace(/^(?:\s*[·•|]\s*)+/, "")
+    .replace(/[\s,/·]+$/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  // "자료:" / "출처:" 라벨만 덩그러니 남으면 빈 출처로 처리(상위에서 숨김)
+  if (/^(자료|출처|source)\s*[:：]?\s*$/i.test(s)) return "";
+  return s;
 }

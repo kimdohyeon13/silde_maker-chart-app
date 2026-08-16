@@ -1,0 +1,335 @@
+{
+  "id": "02-quarterly-earnings-growth",
+  "mode": "faithful",
+  "sourceImage": "input/02-quarterly-earnings-growth.png",
+  "analyzedAt": "2026-07-26T19:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "S&P500 이익 증가율, 2021년 3분기 이후 최고 수준",
+    "originalMessage": "S&P500 이익 증가율, 2021년 3분기 이후 최고 수준",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간·범주 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 표기",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 표에 명시된 값을 그대로 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈, 20개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "pass",
+      "detail": "원본에 명시된 값을 사용했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.8,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "S&P500 이익 증가율, 2021년 3분기 이후 최고 수준",
+    "subtitle": "분기별 전년 대비 이익 증가율 %",
+    "source": "자료: FactSet Earnings Insight, 2026-07-24",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "3Q21",
+        "4Q21",
+        "1Q22",
+        "2Q22",
+        "3Q22",
+        "4Q22",
+        "1Q23",
+        "2Q23",
+        "3Q23",
+        "4Q23",
+        "1Q24",
+        "2Q24",
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "3Q21",
+        "1Q22",
+        "3Q22",
+        "1Q23",
+        "3Q23",
+        "1Q24",
+        "3Q24",
+        "1Q25",
+        "3Q25",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "min": -10,
+      "max": 45,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "이익 증가율",
+        "role": "primary",
+        "originalColor": "#173B6D",
+        "remakeColor": "#173B6D",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "이익 증가율",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#173B6D",
+        "data": [
+          {
+            "x": "3Q21",
+            "y": 40.3,
+            "confidence": 1
+          },
+          {
+            "x": "4Q21",
+            "y": 32,
+            "confidence": 1
+          },
+          {
+            "x": "1Q22",
+            "y": 9.4,
+            "confidence": 1
+          },
+          {
+            "x": "2Q22",
+            "y": 5.8,
+            "confidence": 1
+          },
+          {
+            "x": "3Q22",
+            "y": 2.4,
+            "confidence": 1
+          },
+          {
+            "x": "4Q22",
+            "y": -5,
+            "confidence": 1
+          },
+          {
+            "x": "1Q23",
+            "y": -1.6,
+            "confidence": 1
+          },
+          {
+            "x": "2Q23",
+            "y": -4.1,
+            "confidence": 1
+          },
+          {
+            "x": "3Q23",
+            "y": 4.9,
+            "confidence": 1
+          },
+          {
+            "x": "4Q23",
+            "y": 4,
+            "confidence": 1
+          },
+          {
+            "x": "1Q24",
+            "y": 5.7,
+            "confidence": 1
+          },
+          {
+            "x": "2Q24",
+            "y": 11.1,
+            "confidence": 1
+          },
+          {
+            "x": "3Q24",
+            "y": 7.8,
+            "confidence": 1
+          },
+          {
+            "x": "4Q24",
+            "y": 18.3,
+            "confidence": 1
+          },
+          {
+            "x": "1Q25",
+            "y": 13.3,
+            "confidence": 1
+          },
+          {
+            "x": "2Q25",
+            "y": 12,
+            "confidence": 1
+          },
+          {
+            "x": "3Q25",
+            "y": 13.6,
+            "confidence": 1
+          },
+          {
+            "x": "4Q25",
+            "y": 13.9,
+            "confidence": 1
+          },
+          {
+            "x": "1Q26",
+            "y": 28.8,
+            "confidence": 1
+          },
+          {
+            "x": "2Q26",
+            "y": 37.9,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 20,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 비교 관계를 보존했습니다.",
+      "recentDirection": "rising"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 경로와 범주 차이를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": -5,
+      "max": 40.3,
+      "average": 0,
+      "latest": 37.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P500 이익 증가율, 2021년 3분기 이후 최고 수준",
+    "subMessage": "분기별 전년 대비 이익 증가율 %",
+    "headline": "S&P500 이익 증가율, 2021년 3분기 이후 최고 수준",
+    "summary": "분기별 전년 대비 이익 증가율 %",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B6D",
+      "secondary": [
+        "#D0D5DD",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#173B6D",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 37.9
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

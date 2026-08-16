@@ -1,0 +1,189 @@
+{
+  "id": "page-057-graph-01",
+  "sourceImage": "79-page_057_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  },
+  "preserveIntent": {
+    "originalTitle": "AWS 영업이익 및 영업이익률 추이",
+    "dataFidelity": "source-visible"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "분기별 영업이익 막대와 영업이익률 선"
+    }
+  ],
+  "structure": {
+    "chartType": "combo",
+    "title": "AWS 영업이익 및 영업이익률 추이",
+    "source": "자료: Amazon, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "3",
+        "6",
+        "9",
+        "12",
+        "15",
+        "18"
+      ],
+      "min": 0,
+      "max": 18,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "전년 대비, %",
+      "type": "numeric",
+      "tickValues": [
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45"
+      ],
+      "min": 15,
+      "max": 45,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "AWS 영업이익 (좌측)",
+        "originalColor": "#C8CCD6",
+        "remakeColor": "#C8CCD6"
+      },
+      {
+        "name": "영업이익률 (우측)",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "AWS 영업이익 (좌측)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2022",
+            "y": 6.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 5.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 9.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 11.5,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026",
+            "y": 16,
+            "confidence": 0.75
+          }
+        ]
+      },
+      {
+        "name": "영업이익률 (우측)",
+        "renderAs": "line",
+        "data": [
+          {
+            "x": "2022",
+            "y": 35,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 25,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 38,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 33,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026",
+            "y": 40,
+            "confidence": 0.75
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "분기값을 연도 앵커로 정리"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "AWS 영업이익과 수익성이 2026년 확대.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "AWS 영업이익 및 영업이익률 추이",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "39.4%, 37.7%"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

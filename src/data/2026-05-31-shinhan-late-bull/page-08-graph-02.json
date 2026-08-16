@@ -1,0 +1,800 @@
+{
+  "id": "page-08-graph-02",
+  "sourceImage": "input/07-page_08_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "IPO 확대",
+    "subtitle": "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2001",
+        "2001.26",
+        "2001.52",
+        "2001.78",
+        "2002",
+        "2002.3",
+        "2002.56",
+        "2002.82",
+        "2003.08",
+        "2003.34",
+        "2003.6",
+        "2003.86",
+        "2004.12",
+        "2004.39",
+        "2004.65",
+        "2004.91",
+        "2005.17",
+        "2005.43",
+        "2005.69",
+        "2005.95",
+        "2006.21",
+        "2006.47",
+        "2006.73",
+        "2007",
+        "2007.25",
+        "2007.51",
+        "2007.77",
+        "2008",
+        "2008.29",
+        "2008.55",
+        "2008.81",
+        "2009.07",
+        "2009.33",
+        "2009.59",
+        "2009.85",
+        "2010.11",
+        "2010.38",
+        "2010.64",
+        "2010.9",
+        "2011.16",
+        "2011.42",
+        "2011.68",
+        "2011.94",
+        "2012.2",
+        "2012.46",
+        "2012.72",
+        "2013",
+        "2013.24",
+        "2013.5",
+        "2013.76",
+        "2014",
+        "2014.28",
+        "2014.54",
+        "2014.8",
+        "2015.06",
+        "2015.32",
+        "2015.58",
+        "2015.84",
+        "2016.1",
+        "2016.36",
+        "2016.62",
+        "2016.89",
+        "2017.15",
+        "2017.41",
+        "2017.67",
+        "2017.93",
+        "2018.19",
+        "2018.45",
+        "2018.71",
+        "2019",
+        "2019.23",
+        "2019.49",
+        "2019.75",
+        "2020",
+        "2020.27",
+        "2020.53",
+        "2020.79",
+        "2021.05",
+        "2021.31",
+        "2021.57",
+        "2021.83",
+        "2022.09",
+        "2022.35",
+        "2022.61",
+        "2022.88",
+        "2023.14",
+        "2023.4",
+        "2023.66",
+        "2023.92",
+        "2024.18",
+        "2024.44",
+        "2024.7",
+        "2025",
+        "2025.22",
+        "2025.48",
+        "2025.74",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2001",
+        "2007",
+        "2025",
+        "2026"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "70",
+        "100",
+        "130",
+        "160",
+        "190",
+        "500"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 70.0,
+      "max": 500.0
+    },
+    "legend": [
+      {
+        "name": "IPO 확대",
+        "role": "primary",
+        "originalColor": "#435388",
+        "remakeColor": "#435388"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "IPO 확대",
+        "data": [
+          {
+            "x": "2001",
+            "y": 100.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.26",
+            "y": 113,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.52",
+            "y": 113,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.78",
+            "y": 87.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002",
+            "y": 78.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.3",
+            "y": 87.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.56",
+            "y": 91.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.82",
+            "y": 87.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.08",
+            "y": 78.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.34",
+            "y": 104.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.6",
+            "y": 108.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.86",
+            "y": 143.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.12",
+            "y": 151.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.39",
+            "y": 164.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.65",
+            "y": 203.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.91",
+            "y": 211.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.17",
+            "y": 181.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.43",
+            "y": 143.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.69",
+            "y": 160.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.95",
+            "y": 168.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.21",
+            "y": 138.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.47",
+            "y": 143.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.73",
+            "y": 130.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007",
+            "y": 130.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.25",
+            "y": 164.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.51",
+            "y": 186.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.77",
+            "y": 216.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008",
+            "y": 246.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.29",
+            "y": 224.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.55",
+            "y": 203.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.81",
+            "y": 203.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.07",
+            "y": 233.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.33",
+            "y": 259.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.59",
+            "y": 280.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.85",
+            "y": 302.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.11",
+            "y": 315.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.38",
+            "y": 285,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.64",
+            "y": 246.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.9",
+            "y": 263.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.16",
+            "y": 280.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.42",
+            "y": 289.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.68",
+            "y": 289.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.94",
+            "y": 289.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.2",
+            "y": 310.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.46",
+            "y": 319.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.72",
+            "y": 259.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013",
+            "y": 259.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.24",
+            "y": 319.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.5",
+            "y": 310.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.76",
+            "y": 328,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014",
+            "y": 336.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.28",
+            "y": 353.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.54",
+            "y": 371,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.8",
+            "y": 388.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.06",
+            "y": 392.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.32",
+            "y": 405.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.58",
+            "y": 396.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.84",
+            "y": 379.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.1",
+            "y": 375.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.36",
+            "y": 388.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.62",
+            "y": 405.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.89",
+            "y": 409.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.15",
+            "y": 353.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.41",
+            "y": 276.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.67",
+            "y": 276.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.93",
+            "y": 220.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.19",
+            "y": 211.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.45",
+            "y": 254.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.71",
+            "y": 315.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019",
+            "y": 353.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.23",
+            "y": 353.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.49",
+            "y": 358.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.75",
+            "y": 371,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020",
+            "y": 375.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.27",
+            "y": 392.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.53",
+            "y": 422.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.79",
+            "y": 461.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.05",
+            "y": 457,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.31",
+            "y": 474.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.57",
+            "y": 478.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.83",
+            "y": 474.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.09",
+            "y": 461.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.35",
+            "y": 448.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.61",
+            "y": 409.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.88",
+            "y": 362.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.14",
+            "y": 409.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.4",
+            "y": 414,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.66",
+            "y": 409.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.92",
+            "y": 426.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.18",
+            "y": 418.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.44",
+            "y": 371,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.7",
+            "y": 362.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 362.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.22",
+            "y": 349.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.48",
+            "y": 328,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.74",
+            "y": 345.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 401.1,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#435388"
+      }
+    ],
+    "totalDataPoints": 97,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.397,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 300.7,
+        "absoluteChange": 301.0,
+        "from": 100.1,
+        "to": 401.1
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 478.5,
+        "at": ""
+      },
+      "min": {
+        "value": 78.6,
+        "at": ""
+      },
+      "average": 286.28556701030925,
+      "median": 302.2,
+      "range": 399.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "IPO 확대",
+    "subMessage": "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다.",
+    "headline": "IPO 확대",
+    "summary": "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 401.1
+      },
+      "displayText": "IPO 확대",
+      "reason": "신규 상장은 늘고 있으나 초과 성과 부재가 과도한 발행을 제어합니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

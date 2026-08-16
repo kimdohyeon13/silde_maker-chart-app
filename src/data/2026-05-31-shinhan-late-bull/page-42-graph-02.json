@@ -1,0 +1,886 @@
+{
+  "id": "page-42-graph-02",
+  "sourceImage": "input/67-page_42_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "닷컴버블 당시 스타일 성과",
+    "subtitle": "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1995",
+        "1995.11",
+        "1995.23",
+        "1995.34",
+        "1995.46",
+        "1995.57",
+        "1995.69",
+        "1995.8",
+        "1995.92",
+        "1996",
+        "1996.15",
+        "1996.26",
+        "1996.38",
+        "1996.49",
+        "1996.6",
+        "1996.72",
+        "1996.83",
+        "1996.95",
+        "1997.06",
+        "1997.18",
+        "1997.29",
+        "1997.41",
+        "1997.52",
+        "1997.64",
+        "1997.75",
+        "1997.86",
+        "1998",
+        "1998.09",
+        "1998.21",
+        "1998.32",
+        "1998.44",
+        "1998.55",
+        "1998.67",
+        "1998.78",
+        "1998.9",
+        "1999",
+        "1999.12",
+        "1999.24",
+        "1999.35",
+        "1999.47",
+        "1999.58",
+        "1999.7",
+        "1999.81",
+        "1999.93",
+        "2000",
+        "2000.16",
+        "2000.27",
+        "2000.39",
+        "2000.5",
+        "2000.61",
+        "2000.73",
+        "2000.84",
+        "2001",
+        "2001.07",
+        "2001.19",
+        "2001.3",
+        "2001.42",
+        "2001.53",
+        "2001.65",
+        "2001.76",
+        "2001.88",
+        "2002",
+        "2002.1",
+        "2002.22",
+        "2002.33",
+        "2002.45",
+        "2002.56",
+        "2002.68",
+        "2002.79",
+        "2002.91",
+        "2003",
+        "2003.14",
+        "2003.25",
+        "2003.36",
+        "2003.48",
+        "2003.59",
+        "2003.71",
+        "2003.82",
+        "2003.94",
+        "2004.05",
+        "2004.17",
+        "2004.28",
+        "2004.4",
+        "2004.51",
+        "2004.62",
+        "2004.74",
+        "2004.85",
+        "2005",
+        "2005.08",
+        "2005.2",
+        "2005.31",
+        "2005.43",
+        "2005.54",
+        "2005.66",
+        "2005.77",
+        "2005.89",
+        "2006"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "1995",
+        "1996",
+        "1998",
+        "1999",
+        "2000",
+        "2001",
+        "2003",
+        "2005",
+        "2006"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "200",
+        "400",
+        "521"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0.0,
+      "max": 521.0
+    },
+    "legend": [
+      {
+        "name": "닷컴버블 당시 스타일  값",
+        "role": "primary",
+        "originalColor": "#C7C7C7",
+        "remakeColor": "#C7C7C7"
+      },
+      {
+        "name": "닷컴버블 당시 스타일  추세",
+        "role": "primary",
+        "originalColor": "#4A598C",
+        "remakeColor": "#4A598C"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 0.0,
+      "max": 521.0
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "닷컴버블 당시 스타일  값",
+        "data": [
+          {
+            "x": "1995",
+            "y": 521,
+            "confidence": 0.68
+          },
+          {
+            "x": "1996",
+            "y": 462.65,
+            "confidence": 0.68
+          },
+          {
+            "x": "1997",
+            "y": 404.3,
+            "confidence": 0.68
+          },
+          {
+            "x": "1998",
+            "y": 345.94,
+            "confidence": 0.68
+          },
+          {
+            "x": "1999",
+            "y": 287.59,
+            "confidence": 0.68
+          },
+          {
+            "x": "2000",
+            "y": 229.24,
+            "confidence": 0.68
+          },
+          {
+            "x": "2001",
+            "y": 251.12,
+            "confidence": 0.68
+          },
+          {
+            "x": "2003",
+            "y": 273,
+            "confidence": 0.68
+          },
+          {
+            "x": "2004",
+            "y": 294.89,
+            "confidence": 0.68
+          },
+          {
+            "x": "2005",
+            "y": 316.77,
+            "confidence": 0.68
+          },
+          {
+            "x": "2006",
+            "y": 338.65,
+            "confidence": 0.68
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C7C7C7",
+        "axis": "left"
+      },
+      {
+        "name": "닷컴버블 당시 스타일  추세",
+        "data": [
+          {
+            "x": "1995",
+            "y": 291.76,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.11",
+            "y": 291.76,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.23",
+            "y": 265.71,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.34",
+            "y": 15.63,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.46",
+            "y": 20.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.57",
+            "y": 20.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.69",
+            "y": 10.42,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.8",
+            "y": 31.26,
+            "confidence": 0.8
+          },
+          {
+            "x": "1995.92",
+            "y": 36.47,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996",
+            "y": 62.52,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.15",
+            "y": 52.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.26",
+            "y": 36.47,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.38",
+            "y": 57.31,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.49",
+            "y": 72.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.6",
+            "y": 83.36,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.72",
+            "y": 93.78,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.83",
+            "y": 83.36,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.95",
+            "y": 78.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.06",
+            "y": 109.41,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.18",
+            "y": 145.88,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.29",
+            "y": 151.09,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.41",
+            "y": 156.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.52",
+            "y": 140.67,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.64",
+            "y": 140.67,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.75",
+            "y": 161.51,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.86",
+            "y": 182.35,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998",
+            "y": 182.35,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.09",
+            "y": 187.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.21",
+            "y": 151.09,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.32",
+            "y": 125,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.44",
+            "y": 203.19,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.55",
+            "y": 244.87,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.67",
+            "y": 255.29,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.78",
+            "y": 265.71,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.9",
+            "y": 276.13,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999",
+            "y": 286.55,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.12",
+            "y": 297,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.24",
+            "y": 307.39,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.35",
+            "y": 323,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.47",
+            "y": 385.54,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.58",
+            "y": 422,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.7",
+            "y": 453.27,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.81",
+            "y": 401.17,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.93",
+            "y": 385.54,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000",
+            "y": 406.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.16",
+            "y": 401.17,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.27",
+            "y": 359.49,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.39",
+            "y": 317.81,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.5",
+            "y": 297,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.61",
+            "y": 265.71,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.73",
+            "y": 192.77,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.84",
+            "y": 224,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001",
+            "y": 213.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.07",
+            "y": 187.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.19",
+            "y": 156.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.3",
+            "y": 182.35,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.42",
+            "y": 203.19,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.53",
+            "y": 187.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.65",
+            "y": 182.35,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.76",
+            "y": 156.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.88",
+            "y": 114.62,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002",
+            "y": 88.57,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.1",
+            "y": 72.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.22",
+            "y": 78.15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.33",
+            "y": 104.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.45",
+            "y": 93.78,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.56",
+            "y": 88.57,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.68",
+            "y": 109.41,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.79",
+            "y": 145.88,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.91",
+            "y": 161.51,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003",
+            "y": 177.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.14",
+            "y": 192.77,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.25",
+            "y": 198,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.36",
+            "y": 213.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.48",
+            "y": 213.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.59",
+            "y": 208.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.71",
+            "y": 203.19,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.82",
+            "y": 203.19,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.94",
+            "y": 187.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.05",
+            "y": 192.77,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.17",
+            "y": 213.61,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.28",
+            "y": 224,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.4",
+            "y": 218.82,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.51",
+            "y": 208.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.62",
+            "y": 208.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.74",
+            "y": 218.82,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.85",
+            "y": 229.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005",
+            "y": 229.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.08",
+            "y": 229.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.2",
+            "y": 239.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.31",
+            "y": 244.87,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.43",
+            "y": 250.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.54",
+            "y": 250.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.66",
+            "y": 234.45,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.77",
+            "y": 224,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.89",
+            "y": 229.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006",
+            "y": 244.87,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#4A598C",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 108,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.445,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -53.0,
+        "absoluteChange": -276.13,
+        "from": 521.0,
+        "to": 244.87
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 521.0,
+        "at": ""
+      },
+      "min": {
+        "value": 10.42,
+        "at": ""
+      },
+      "average": 208.78518518518518,
+      "median": 208.4,
+      "range": 510.58
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "닷컴버블 당시 스타일 성과",
+    "subMessage": "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다.",
+    "headline": "닷컴버블 당시 스타일 성과",
+    "summary": "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 244.87
+      },
+      "displayText": "닷컴버블 당시 스타일 성과",
+      "reason": "사이클이 꺾이기 전까지는 모멘텀이 밸류보다 강할 수 있습니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

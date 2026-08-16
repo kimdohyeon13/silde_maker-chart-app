@@ -1,0 +1,231 @@
+{
+  "id": "nebius-gpu-pricing",
+  "mode": "faithful",
+  "sourceImage": "input/11-nebius-gpu-pricing-table.png",
+  "analyzedAt": "2026-07-13T12:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "표 1. 네비우스 주요 엔비디아 GPU 요금 변화",
+    "originalMessage": "GPU 1개의 시간당 과금 기준",
+    "preservedElements": [
+      "H100·H200·B200·B300 NVLink 4개 행과 원본 순서",
+      "기존 요금·변경 요금·인상액·인상률 20개 셀 값",
+      "인상률 열의 빨강·파랑 교차 강조",
+      "자료: Nebius Group, KB증권",
+      "주: GPU 1개의 시간당 과금 기준"
+    ],
+    "changedElements": [
+      "색상·글꼴·간격을 toss-clean 규칙으로 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 표의 4개 행과 5개 열을 직접 전사했습니다. 소수점 자릿수와 퍼센트 표기도 원본 표시를 유지했습니다.",
+    "sourceAttribution": "자료: Nebius Group, KB증권",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "GPU·기존 요금·변경 요금·인상액·인상률 5열과 4개 GPU 행을 먼저 고정했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "visible-cell-values",
+      "label": "표시 셀 직접값 보존",
+      "status": "pass",
+      "detail": "4개 GPU의 기존 요금·변경 요금·인상액·인상률을 원본 그대로 전사했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "number-format-preserved",
+      "label": "숫자 표시 형식 보존",
+      "status": "pass",
+      "detail": "2.95·3.5·0.9·1 및 30.50% 등 원본 소수점 자릿수를 displayValue로 유지했습니다.",
+      "checkedAt": "2026-07-13"
+    },
+    {
+      "id": "source-note-preserved",
+      "label": "출처·주석 보존",
+      "status": "pass",
+      "detail": "Nebius Group·KB증권 출처와 GPU 1개 시간당 과금 기준 주석을 그대로 보존했습니다.",
+      "checkedAt": "2026-07-13"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 560,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "18px 32px 2px",
+    "contentPadding": "12px 30px 4px",
+    "sourcePadding": "0 32px 12px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "title": "표 1. 네비우스 주요 엔비디아 GPU 요금 변화",
+    "subtitle": "주: GPU 1개의 시간당 과금 기준",
+    "source": "자료: Nebius Group, KB증권"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "gpu",
+        "label": "GPU",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "oldPrice",
+        "label": "기존 요금 (달러)",
+        "dataType": "currency",
+        "width": "21%",
+        "align": "right"
+      },
+      {
+        "key": "newPrice",
+        "label": "변경 요금 (달러)",
+        "dataType": "currency",
+        "width": "21%",
+        "align": "right"
+      },
+      {
+        "key": "increase",
+        "label": "인상액 (달러)",
+        "dataType": "currency",
+        "width": "18%",
+        "align": "right"
+      },
+      {
+        "key": "increaseRate",
+        "label": "인상률",
+        "dataType": "percentage",
+        "width": "18%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "gpu": { "value": "H100 NVLink", "displayValue": "H100 NVLink" },
+          "oldPrice": { "value": 2.95, "displayValue": "2.95" },
+          "newPrice": { "value": 3.85, "displayValue": "3.85" },
+          "increase": { "value": 0.9, "displayValue": "0.9" },
+          "increaseRate": { "value": 30.5, "displayValue": "30.50%", "highlightBg": "#FFD0D0" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "gpu": { "value": "H200 NVLink", "displayValue": "H200 NVLink" },
+          "oldPrice": { "value": 3.5, "displayValue": "3.5" },
+          "newPrice": { "value": 4.5, "displayValue": "4.5" },
+          "increase": { "value": 1, "displayValue": "1" },
+          "increaseRate": { "value": 28.6, "displayValue": "28.60%", "highlightBg": "#CFE5FF" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "gpu": { "value": "B200 NVLink", "displayValue": "B200 NVLink" },
+          "oldPrice": { "value": 5.5, "displayValue": "5.5" },
+          "newPrice": { "value": 7.15, "displayValue": "7.15" },
+          "increase": { "value": 1.65, "displayValue": "1.65" },
+          "increaseRate": { "value": 30, "displayValue": "30.00%", "highlightBg": "#FFD0D0" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "gpu": { "value": "B300 NVLink", "displayValue": "B300 NVLink" },
+          "oldPrice": { "value": 6.1, "displayValue": "6.1" },
+          "newPrice": { "value": 7.85, "displayValue": "7.85" },
+          "increase": { "value": 1.75, "displayValue": "1.75" },
+          "increaseRate": { "value": 28.7, "displayValue": "28.70%", "highlightBg": "#CFE5FF" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 58,
+      "cellPadding": "10px 12px",
+      "lineHeight": 1.25,
+      "zebraStripe": false,
+      "highlightMode": "cell",
+      "headerTone": "soft",
+      "rowRules": "dotted",
+      "accentColor": "#3182CE",
+      "fontWeight": {
+        "body": 520,
+        "numeric": 680,
+        "rowHeader": 650,
+        "header": 760,
+        "total": 820
+      },
+      "fontSize": {
+        "header": "14px",
+        "body": "16px",
+        "total": "16px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "12px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "네비우스 GPU 요금 변화",
+    "subMessage": "주요 엔비디아 GPU 시간당 요금 28.60~30.50% 인상",
+    "headline": "표 1. 네비우스 주요 엔비디아 GPU 요금 변화",
+    "summary": "원본 표의 4개 GPU 요금과 인상률을 정확히 보존했습니다.",
+    "story": "H100·H200·B200·B300 NVLink의 시간당 요금이 모두 약 29~31% 인상된 것으로 표시됩니다.",
+    "keyTakeaways": [
+      "H100 NVLink: 2.95 → 3.85달러, 30.50%",
+      "H200 NVLink: 3.5 → 4.5달러, 28.60%",
+      "B200 NVLink: 5.5 → 7.15달러, 30.00%",
+      "B300 NVLink: 6.1 → 7.85달러, 28.70%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "GPU별 기존 요금·변경 요금·인상액·인상률을 원본 순서로 비교합니다.",
+    "contextualNotes": [
+      "자료: Nebius Group, KB증권",
+      "주: GPU 1개의 시간당 과금 기준"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "exact",
+      "reason": "원본 표 셀 직접 전사값"
+    },
+    "colorStrategy": {
+      "primary": "#3182CE",
+      "secondary": ["#FFD0D0", "#CFE5FF"],
+      "positive": "#D94C4C",
+      "negative": "#2B6CB0",
+      "accent": "#3182CE",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 0, "col": "increaseRate", "reason": "원본 빨강 강조" },
+      { "row": 1, "col": "increaseRate", "reason": "원본 파랑 강조" },
+      { "row": 2, "col": "increaseRate", "reason": "원본 빨강 강조" },
+      { "row": 3, "col": "increaseRate", "reason": "원본 파랑 강조" }
+    ]
+  }
+}

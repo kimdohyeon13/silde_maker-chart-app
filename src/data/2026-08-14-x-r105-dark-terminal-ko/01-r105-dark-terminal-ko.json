@@ -1,0 +1,269 @@
+{
+  "id": "r105-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/report-1/images/report-1-05.png",
+  "preserveIntent": {
+    "originalMessage": "2027년 하이퍼스케일러 설비투자 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "preservedElements": [
+      "2개 계열(실제·현재, 연초 예상)과 3개 연도 2025~2027",
+      "부제에 인쇄된 2027년 1,076 (1조 760억 달러)과 연초 대비 78%",
+      "y축 눈금 0~1,200 (200 단위)"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "2027 실제 1,076 은 원본 부제에, 2026 실제 790 은 노션 원문에 인쇄돼 있습니다. 2027 연초 예상 604 는 1,076/1.78 로 나옵니다. 나머지 세 막대는 y축 눈금 기준 source-visible 판독값입니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "원본의 차트 종류·계열·행 순서를 그대로 두고 색과 프레임만 다크 터미널로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "2027 실제 1,076 은 원본 부제에, 2026 실제 790 은 노션 원문에 인쇄돼 있습니다. 2027 연초 예상 604 는 1,076/1.78 로 나옵니다. 나머지 세 막대는 y축 눈금 기준 source-visible 판독값입니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "원본에 인쇄된 자료 출처를 그대로 옮겼습니다. 셀사이드 이름도, 우리 발행물 이름(알파테크리포트·데일리이슈브리프·W7팔로업)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "compactChartMargins": true,
+    "chartHeight": 390,
+    "showAreaFill": false,
+    "barColorMode": "series",
+    "metricValue": "1,076",
+    "metricLabel": "2027년 설비투자 추정 · 10억 달러"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "빅테크 AI 투자는 2027년에도 늘어납니다",
+    "subtitle": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "source": "자료: Bloomberg",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "displayTickValues": [
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "설비투자 (10억 달러)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1200
+    },
+    "legend": [
+      {
+        "name": "실제·현재",
+        "role": "primary",
+        "originalColor": "#00E0A4",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "연초 예상",
+        "role": "secondary",
+        "originalColor": "#C7CDD4",
+        "remakeColor": "#C7CDD4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "실제·현재",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "2025",
+            "y": 415,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 790,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027",
+            "y": 1076,
+            "confidence": 0.8
+          }
+        ]
+      },
+      {
+        "name": "연초 예상",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#C7CDD4",
+        "data": [
+          {
+            "x": "2025",
+            "y": 275,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 535,
+            "confidence": 0.8
+          },
+          {
+            "x": "2027",
+            "y": 604,
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "2027 실제 1,076 은 원본 부제에, 2026 실제 790 은 노션 원문에 인쇄돼 있습니다. 2027 연초 예상 604 는 1,076/1.78 로 나옵니다. 나머지 세 막대는 y축 눈금 기준 source-visible 판독값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 방향을 그대로 옮겼습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본의 변동폭을 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1076,
+        "at": "2027"
+      },
+      "min": {
+        "value": 415,
+        "at": "2025"
+      },
+      "average": 760.333,
+      "median": 0,
+      "range": 661
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "빅테크 AI 투자는 2027년에도 늘어납니다",
+    "subMessage": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "headline": "빅테크 AI 투자는 2027년에도 늘어납니다",
+    "summary": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "story": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음",
+    "keyTakeaways": [
+      "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2027",
+        "y": 1076
+      },
+      "displayText": "1076",
+      "reason": "2027년 현재 추정치 1조 760억 달러, 연초보다 78% 높음"
+    },
+    "densityLevel": "focused"
+  }
+}

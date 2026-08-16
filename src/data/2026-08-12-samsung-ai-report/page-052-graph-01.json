@@ -1,0 +1,210 @@
+{
+  "id": "page-052-graph-01",
+  "sourceImage": "71-page_052_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  },
+  "preserveIntent": {
+    "originalTitle": "알파벳 백로그 추이",
+    "dataFidelity": "source-visible"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "백로그·앤스로픽 TPU·성장률 3개 시리즈"
+    }
+  ],
+  "structure": {
+    "chartType": "combo",
+    "title": "알파벳 백로그 추이",
+    "source": "자료: Alphabet, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600"
+      ],
+      "min": 0,
+      "max": 600,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "YoY, %",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500"
+      ],
+      "min": 0,
+      "max": 500,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "알파벳 백로그 (좌측)",
+        "originalColor": "#C8CCD6",
+        "remakeColor": "#C8CCD6"
+      },
+      {
+        "name": "앤스로픽 TPU (좌측)",
+        "originalColor": "#F03E68",
+        "remakeColor": "#F03E68"
+      },
+      {
+        "name": "성장률 (우측)",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "알파벳 백로그 (좌측)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2021",
+            "y": 30,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022",
+            "y": 50,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023",
+            "y": 60,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 80,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 110,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 500,
+            "confidence": 0.8
+          }
+        ]
+      },
+      {
+        "name": "앤스로픽 TPU (좌측)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2026",
+            "y": 500,
+            "confidence": 0.8
+          }
+        ]
+      },
+      {
+        "name": "성장률 (우측)",
+        "renderAs": "line",
+        "data": [
+          {
+            "x": "2022",
+            "y": 70,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023",
+            "y": 20,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 40,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 50,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 400,
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "분기 중간값 근사"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "2026년 백로그가 급증.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "알파벳 백로그 추이",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "앤스로픽 TPU 프로젝트 전체 계약규모 2,000억 달러"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "id": "optical-component-pricing-supply-demand",
+  "mode": "faithful",
+  "sourceImage": "input/02-component-pricing-supply-demand.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "matrix",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "June 2026 Update",
+    "originalMessage": "Component/Material Price Change and Supply/Demand Balance",
+    "preservedElements": [
+      "Optical Cables·Optical Connectors·Optical Devices·InP Substrate 행",
+      "2026·2027 Like-for-Like와 ASP(Incl. Mix) 범위",
+      "Very tight·Tight 수급 구분",
+      "4월판 이후 주요 변경은 빨간 박스로 표시했다는 각주",
+      "Goldman Sachs Global Investment Research 출처"
+    ],
+    "changedElements": [
+      "전체 부품·소재 표에서 광통신 직접 연관 4개 행을 선택",
+      "표 헤더와 수급 상태를 한국어로 번역",
+      "가격 범위·공란·대시는 원문 그대로 유지"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 전체 표 가운데 광통신 직접 연관 4개 행을 선택했습니다. 셀 값은 화면 직접 전사값입니다.",
+    "sourceAttribution": "Source: Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "광통신 4행을 2026·2027 가격/수급 열로 묶었습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "visible-cell-values",
+      "label": "표시 셀 직접값 보존",
+      "status": "pass",
+      "detail": "가격 범위와 수급 상태를 원본 셀에서 직접 전사했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "selected-scope",
+      "label": "선택 범위 공개",
+      "status": "pass",
+      "detail": "전체 부품표 중 Optical Cables, Optical Connectors, Optical Devices, InP Substrate만 사용했습니다.",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 513,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "20px 32px 2px",
+    "contentPadding": "10px 28px 4px",
+    "sourcePadding": "0 32px 12px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "title": "2026년 6월 업데이트",
+    "subtitle": "광부품 가격 변화와 수급 균형 | 빨간 박스는 4월판 이후 주요 변경",
+    "source": "Source: Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "component",
+        "label": "부품·소재",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "p26_lfl",
+        "label": "Like-for-Like",
+        "dataType": "percent",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "p26_asp",
+        "label": "ASP (Incl. Mix)",
+        "dataType": "percent",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "s26",
+        "label": "수급",
+        "dataType": "badge",
+        "width": "12%",
+        "align": "center"
+      },
+      {
+        "key": "p27_lfl",
+        "label": "Like-for-Like",
+        "dataType": "percent",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "p27_asp",
+        "label": "ASP (Incl. Mix)",
+        "dataType": "percent",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "s27",
+        "label": "수급",
+        "dataType": "badge",
+        "width": "14%",
+        "align": "center"
+      }
+    ],
+    "columnGroups": [
+      { "label": "", "keys": ["component"] },
+      { "label": "2026", "keys": ["p26_lfl", "p26_asp", "s26"] },
+      { "label": "2027", "keys": ["p27_lfl", "p27_asp", "s27"] }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Optical Cables", "displayValue": "광케이블" },
+          "p26_lfl": { "value": "15-20%", "displayValue": "15-20%" },
+          "p26_asp": { "value": "20-25%", "displayValue": "20-25%" },
+          "s26": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" },
+          "p27_lfl": { "value": "15-20%", "displayValue": "15-20%" },
+          "p27_asp": { "value": "20-25%", "displayValue": "20-25%" },
+          "s27": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Optical Connectors", "displayValue": "광커넥터" },
+          "p26_lfl": { "value": "0-5%", "displayValue": "0-5%" },
+          "p26_asp": { "value": "10-15%", "displayValue": "10-15%" },
+          "s26": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" },
+          "p27_lfl": { "value": "0-5%", "displayValue": "0-5%" },
+          "p27_asp": { "value": "10-15%", "displayValue": "10-15%" },
+          "s27": { "value": "Tight", "displayValue": "타이트", "badge": "TIGHT" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Optical Devices", "displayValue": "광소자" },
+          "p26_lfl": { "value": "10-15%", "displayValue": "10-15%" },
+          "p26_asp": { "value": "15-20%", "displayValue": "15-20%" },
+          "s26": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" },
+          "p27_lfl": { "value": "10-15%", "displayValue": "10-15%" },
+          "p27_asp": { "value": "15-20%", "displayValue": "15-20%" },
+          "s27": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "InP Substrate", "displayValue": "InP 기판" },
+          "p26_lfl": { "value": "15-20%", "displayValue": "15-20%", "badge": "APR UPDATE" },
+          "p26_asp": { "value": "-", "displayValue": "-" },
+          "s26": { "value": "Very tight", "displayValue": "매우 타이트", "badge": "VERY TIGHT" },
+          "p27_lfl": { "value": "15-20%", "displayValue": "15-20%" },
+          "p27_asp": { "value": "-", "displayValue": "-" },
+          "s27": { "value": "Tight", "displayValue": "타이트", "badge": "TIGHT" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 56,
+      "cellPadding": "9px 9px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnGroupTone": "tinted",
+      "columnRules": true,
+      "accentColor": "#123E73",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 700,
+        "header": 750,
+        "columnGroup": 800
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "13px",
+        "total": "14px",
+        "badge": "9px",
+        "unit": "10px",
+        "groupHeader": "12px",
+        "columnGroup": "13px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "2026년 6월 업데이트",
+    "subMessage": "광부품 가격 변화와 2026~2027년 수급 균형",
+    "headline": "2026년 6월 업데이트",
+    "summary": "원본 전체 표에서 광통신 직접 연관 4개 행을 보존했습니다.",
+    "story": "가격 범위와 수급 상태를 원본 셀에서 직접 옮겼습니다.",
+    "keyTakeaways": [
+      "빨간 박스는 4월판 이후 주요 변경을 뜻합니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "2026과 2027의 가격·수급 열을 비교합니다.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "exact",
+      "reason": "표 셀 직접 전사값"
+    },
+    "colorStrategy": {
+      "primary": "#123E73",
+      "secondary": ["#F39A7A", "#F4DF72"],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F39A7A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      { "row": 3, "col": "p26_lfl", "reason": "4월판 이후 주요 업데이트" }
+    ]
+  }
+}

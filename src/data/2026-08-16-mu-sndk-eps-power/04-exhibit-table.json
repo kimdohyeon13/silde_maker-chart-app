@@ -1,0 +1,544 @@
+{
+  "id": "04-exhibit-table",
+  "mode": "faithful",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "샌디스크 유사 가정(매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상)을 적용하면 마이크론 주당순이익은 230달러를 넘고 FY26-30 연평균 34% 성장한다",
+    "preservedElements": [
+      "행 순서와 열 순서",
+      "인쇄된 모든 셀 값과 소수 자릿수",
+      "샌디스크 유사 가정 열의 빨간 글씨 강조",
+      "주당순이익 행의 배경 강조",
+      "자사주 매입·배당·주주환원율의 빈칸",
+      "BofA Global Research·Bloomberg·Visible Alpha 출처"
+    ],
+    "changedElements": [
+      "표시 언어를 한국어로 옮기고 단위를 10억 달러로 통일",
+      "원본의 Cons(FY27E) 칸과 Consensus 그룹을 하나의 컨센서스 2단 헤더로 묶음"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 Exhibit 1의 인쇄된 셀을 그대로 옮겼습니다. 원본이 비워 둔 칸은 추정하지 않고 비워 두었습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식, 밀도, 스케일, 라벨, 색 강조, QA 리스크를 JSON 작성 전에 확정했습니다."
+    },
+    {
+      "id": "exact-cell-values",
+      "label": "인쇄 셀 값 보존",
+      "status": "pass",
+      "detail": "원본 표에 인쇄된 숫자를 그대로 사용했고 소수점을 임의로 줄이지 않았습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "BofA Global Research 추정, Bloomberg, Visible Alpha 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 33,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "16px 30px 2px",
+    "contentPadding": "4px 20px 2px",
+    "sourcePadding": "0 30px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "accentColor": "#D92D20",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "table",
+    "title": "샌디스크식 가정이면 주당순이익 230달러 위",
+    "subtitle": "매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상을 가정하면 FY26-30 연평균 34% 증익이 된다",
+    "source": "자료: BofA Global Research 추정, Bloomberg, Visible Alpha"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "항목",
+        "dataType": "text",
+        "width": "20%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "fy26",
+        "label": "FY26E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy27",
+        "label": "FY27E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy28c",
+        "label": "FY28E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right",
+        "sectionStart": true
+      },
+      {
+        "key": "fy29c",
+        "label": "FY29E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy30c",
+        "label": "FY30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "cagrc",
+        "label": "FY26-30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy28s",
+        "label": "FY28E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right",
+        "sectionStart": true
+      },
+      {
+        "key": "fy29s",
+        "label": "FY29E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy30s",
+        "label": "FY30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "cagrs",
+        "label": "FY26-30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "columnGroups": [
+      {
+        "label": "BofA",
+        "keys": [
+          "fy26"
+        ]
+      },
+      {
+        "label": "컨센서스",
+        "keys": [
+          "fy27",
+          "fy28c",
+          "fy29c",
+          "fy30c",
+          "cagrc"
+        ]
+      },
+      {
+        "label": "샌디스크(SNDK) 유사 가정",
+        "keys": [
+          "fy28s",
+          "fy29s",
+          "fy30s",
+          "cagrs"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "매출 (10억 달러)"
+          },
+          "fy26": {
+            "value": "129.3"
+          },
+          "fy27": {
+            "value": "248.1"
+          },
+          "fy28c": {
+            "value": "280.0"
+          },
+          "fy29c": {
+            "value": "297.9"
+          },
+          "fy30c": {
+            "value": "280.5"
+          },
+          "cagrc": {
+            "value": "21.4%"
+          },
+          "fy28s": {
+            "value": "285.3",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "328.1",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "377.3",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "30.7%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "매출총이익률"
+          },
+          "fy26": {
+            "value": "80.6%"
+          },
+          "fy27": {
+            "value": "84.5%"
+          },
+          "fy28c": {
+            "value": "78.1%"
+          },
+          "fy29c": {
+            "value": "73.5%"
+          },
+          "fy30c": {
+            "value": "78.0%"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "주당순이익 (달러)"
+          },
+          "fy26": {
+            "value": "73.12"
+          },
+          "fy27": {
+            "value": "151.37"
+          },
+          "fy28c": {
+            "value": "168.91"
+          },
+          "fy29c": {
+            "value": "168.94"
+          },
+          "fy30c": {
+            "value": "136.24"
+          },
+          "cagrc": {
+            "value": "16.8%"
+          },
+          "fy28s": {
+            "value": "168.80",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "199.53",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "236.16",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "34.1%",
+            "highlight": "positive"
+          }
+        },
+        "highlight": true,
+        "highlightBg": "#E8F3EA"
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "잉여현금흐름 (10억 달러)"
+          },
+          "fy26": {
+            "value": "55.7"
+          },
+          "fy27": {
+            "value": "131.1"
+          },
+          "fy28c": {
+            "value": "160.3"
+          },
+          "fy29c": {
+            "value": "170.8"
+          },
+          "fy30c": {
+            "value": "190.8"
+          },
+          "cagrc": {
+            "value": "36.1%"
+          },
+          "fy28s": {
+            "value": "142.6",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "164.0",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "188.6",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "35.7%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "　자사주 매입"
+          },
+          "fy26": {
+            "value": "1.6"
+          },
+          "fy27": {
+            "value": "41.0"
+          },
+          "fy28c": {
+            "value": "77.3"
+          },
+          "fy29c": {
+            "value": "117.1"
+          },
+          "fy30c": {
+            "value": "61.7"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "　배당"
+          },
+          "fy26": {
+            "value": "0.6"
+          },
+          "fy27": {
+            "value": "2.0"
+          },
+          "fy28c": {
+            "value": "2.5"
+          },
+          "fy29c": {
+            "value": "1.0"
+          },
+          "fy30c": {
+            "value": "0.6"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "item": {
+            "value": "주주환원율"
+          },
+          "fy26": {
+            "value": "4.0%"
+          },
+          "fy27": {
+            "value": "32.7%"
+          },
+          "fy28c": {
+            "value": "49.8%"
+          },
+          "fy29c": {
+            "value": "69.1%"
+          },
+          "fy30c": {
+            "value": "32.7%"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 34,
+      "maxRowHeight": 44,
+      "cellPadding": "8px 5px",
+      "zebraStripe": false,
+      "rowRules": "soft",
+      "headerTone": "tinted",
+      "columnGroupTone": "tinted",
+      "columnRules": true,
+      "sectionRules": true,
+      "highlightMode": "text",
+      "accentColor": "#D92D20",
+      "fontSize": {
+        "header": "12.5px",
+        "body": "14px",
+        "total": "14px",
+        "columnGroup": "12.5px"
+      },
+      "fontWeight": {
+        "body": 500,
+        "numeric": 500,
+        "rowHeader": 700,
+        "header": 700,
+        "total": 700,
+        "columnGroup": 700
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "샌디스크식 가정이면 주당순이익 230달러 위",
+    "subMessage": "매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상을 가정하면 FY26-30 연평균 34% 증익이 된다",
+    "headline": "샌디스크식 가정이면 주당순이익 230달러 위",
+    "summary": "매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상을 가정하면 FY26-30 연평균 34% 증익이 된다",
+    "story": "매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상을 가정하면 FY26-30 연평균 34% 증익이 된다",
+    "keyTakeaways": [
+      "FY28 주당순이익은 두 시나리오가 사실상 같다",
+      "차이는 FY29와 FY30에서만 벌어진다",
+      "잉여현금흐름은 두 시나리오가 비슷하고 이익만 갈린다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "매출 연 15% 성장, 매출총이익률 80% 이상, 잉여현금흐름 마진 50% 이상을 가정하면 FY26-30 연평균 34% 증익이 된다",
+    "contextualNotes": [
+      "자료: BofA Global Research 추정, Bloomberg, Visible Alpha"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D20",
+      "secondary": [
+        "#175CD3"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed"
+  }
+}

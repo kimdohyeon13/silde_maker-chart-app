@@ -1,0 +1,376 @@
+{
+  "id": "page-06-graph-01",
+  "sourceImage": "input/08-page_06_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "PCE 물가지수",
+    "subtitle": "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다.",
+    "source": "자료: Bloomberg",
+    "timeRange": "2024.01 - 2026.05",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "'24.01",
+        "'24.07",
+        "'25.01",
+        "'25.07",
+        "'26.01"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "YoY,%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "legend": [
+      {
+        "name": "헤드라인 PCE 물가",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "코어 PCE 물가",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "헤드라인 PCE 물가",
+        "data": [
+          {
+            "x": "'24.01",
+            "y": 2.75,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.03",
+            "y": 2.85,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.05",
+            "y": 2.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.07",
+            "y": 2.3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.09",
+            "y": 2.55,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.11",
+            "y": 2.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.01",
+            "y": 2.3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.03",
+            "y": 2.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.05",
+            "y": 2.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.07",
+            "y": 2.8,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.09",
+            "y": 2.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.11",
+            "y": 2.85,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.01",
+            "y": 2.9,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.03",
+            "y": 3.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.05",
+            "y": 3.8,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "코어 PCE 물가",
+        "data": [
+          {
+            "x": "'24.01",
+            "y": 3.15,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.03",
+            "y": 3.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.05",
+            "y": 2.75,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.07",
+            "y": 2.85,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.09",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'24.11",
+            "y": 2.8,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.01",
+            "y": 2.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.03",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.05",
+            "y": 2.75,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.07",
+            "y": 2.9,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.09",
+            "y": 2.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "'25.11",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.01",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.03",
+            "y": 3.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "'26.05",
+            "y": 3.3,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 30,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.526,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 20.0,
+        "absoluteChange": 0.55,
+        "from": 2.75,
+        "to": 3.3
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3.8,
+        "at": ""
+      },
+      "min": {
+        "value": 2.3,
+        "at": ""
+      },
+      "average": 2.8533333333333335,
+      "median": 2.825,
+      "range": 1.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "PCE 물가지수",
+    "subMessage": "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다.",
+    "headline": "PCE 물가지수",
+    "summary": "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Bloomberg"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 3.3
+      },
+      "displayText": "PCE 물가지수",
+      "reason": "최근 헤드라인 PCE가 3.8%로 급등하며 코어 PCE(3.3%)와 함께 다시 상승세로 전환됐다."
+    },
+    "densityLevel": "balanced"
+  }
+}

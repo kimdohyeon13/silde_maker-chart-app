@@ -1,0 +1,277 @@
+{
+  "id": "page-005-graph-01",
+  "sourceImage": "input/page_005_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Anthropic 모델별 API 매출 추정: 2026년 들어 최상위 모델 중심으로 기하급수적 증가, 4Q26 약 12.5만 백만 달러",
+    "preservedElements": [
+      "분기 축 구조 (1Q24~4Q26)",
+      "매출 총액의 수준과 급증 곡선",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "스택 막대 4계열을 분기 합계 단일 막대로 통합",
+      "라벨 밀도",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 모델 4계열 스택 막대. 렌더러가 다계열 막대를 지원하지 않아 분기별 합계를 단일 막대로 통합하고, 구성 메시지(4Q26의 약 83%가 Opus 계열)는 부제와 요약에 담았습니다. 값은 원본 이미지의 축 눈금 대비 픽셀 위치를 기준으로 읽었습니다.",
+    "sourceAttribution": "자료: SemiAnalysis"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "분기 축과 매출 총액 수준은 보존했고, 스택 구성만 렌더 제약으로 합계 단일 계열로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop의 축 라벨(0~140,000)과 막대 상단 픽셀 위치를 기준으로 값을 읽었습니다. 1Q24~2Q24는 화면상 0에 수렴합니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "막대 높이의 상대 비율과 4Q26 정점(약 125,700)을 원본과 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Anthropic API 매출, 2026년 들어 분기마다 배로 뛴다",
+    "subtitle": "모델 전체 합산 분기별 API 매출 추정 (단위: 백만 달러) — 4Q26의 약 83%는 Opus 계열",
+    "source": "자료: SemiAnalysis",
+    "timeRange": "1Q24 ~ 4Q26 (분기)",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q24",
+        "2Q24",
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26"
+      ],
+      "unit": "분기",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "백만 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 140000
+    },
+    "legend": [
+      {
+        "name": "API 매출 합계(전 모델 합산)",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "API 매출 합계(전 모델 합산)",
+        "data": [
+          {
+            "x": "1Q24",
+            "y": 0,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q24",
+            "y": 0,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q24",
+            "y": 200,
+            "confidence": 0.72
+          },
+          {
+            "x": "4Q24",
+            "y": 400,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q25",
+            "y": 1100,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q25",
+            "y": 2300,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q25",
+            "y": 4500,
+            "confidence": 0.72
+          },
+          {
+            "x": "4Q25",
+            "y": 6600,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q26",
+            "y": 23600,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q26",
+            "y": 51700,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q26",
+            "y": 85200,
+            "confidence": 0.72
+          },
+          {
+            "x": "4Q26",
+            "y": 125700,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "1Q24~2Q24 막대는 화면상 식별 불가 수준(0 처리)이며, 3Q24~4Q24는 축 근처의 미세한 막대를 근사치로 읽었습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.95,
+      "description": "2025년까지 완만하다가 2026년 들어 분기마다 배 가까이 뛰는 기하급수적 급증입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 1.55,
+      "description": "후반 분기에 값이 몰리는 급증형 분포로, 원본의 격차를 그대로 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "1Q25 대비 4Q26",
+        "percentChange": 11327.3,
+        "absoluteChange": 124600.0,
+        "from": 1100.0,
+        "to": 125700.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 125700.0,
+        "at": "4Q26"
+      },
+      "min": {
+        "value": 0.0,
+        "at": "1Q24"
+      },
+      "average": 25108.3,
+      "median": 3400.0,
+      "range": 125700.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Anthropic API 매출, 2026년 들어 분기마다 배로 뛴다",
+    "subMessage": "모델 전체 합산 분기별 API 매출 추정 (단위: 백만 달러)",
+    "headline": "Anthropic API 매출, 2026년 들어 분기마다 배로 뛴다",
+    "summary": "1Q26 약 23,600에서 4Q26 약 125,700백만 달러로 1년 새 5배 이상 커지는 급증 곡선입니다.",
+    "story": "원본은 Opus 고속 모드, Opus 4.6·4.5, Opus 4.1·4·3, Sonnet 계열의 4단 스택 막대입니다. 렌더 제약으로 분기 합계 단일 막대로 통합했고, 4Q26 매출의 약 83%가 Opus 계열이라는 구성 메시지는 부제로 옮겼습니다.",
+    "keyTakeaways": [
+      "2024~2025년은 분기 1만 백만 달러 미만의 완만한 구간",
+      "2026년 들어 분기마다 두 배 안팎으로 뛰며 4Q26 약 125,700백만 달러 도달",
+      "4Q26 매출의 약 83%는 Opus 최상위 계열(고속 모드 포함), Sonnet은 약 21,000 수준"
+    ],
+    "questionsRaised": [
+      "최상위 모델 중심 매출 구조가 컴퓨트 수요와 가격 정책에 어떤 영향을 주는가?"
+    ],
+    "viewerAction": "원본과 함께 분기 축, 총액 수준, 급증 시점을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis",
+      "원본의 모델별 스택 구성은 합계로 통합해 표현했습니다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#F5DF4D",
+        "#FF6F61",
+        "#6667AB"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "4Q26",
+        "y": 125700.0
+      },
+      "displayText": "4Q26 약 125,700백만 달러",
+      "reason": "최상위 모델 중심 매출이 2026년 말 정점에 도달하는 지점"
+    },
+    "densityLevel": "balanced"
+  }
+}

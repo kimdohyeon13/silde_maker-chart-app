@@ -1,0 +1,89 @@
+{
+  "id": "page-08-graph-01",
+  "sourceImage": "input/07-page-08-graph-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "8주 연속 상승은 100년간 단 13번",
+    "subtitle": "S&P500 연속 상승 주차별 횟수, 1927년 이후",
+    "source": "Bloomberg, 삼성증권",
+    "timeRange": "",
+    "xAxis": { "label": "연속 상승 주차", "type": "category", "tickValues": ["1주","2주","3주","4주","5주","6주","7주","8주","9주","10주","11주","12주","13주"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "발생 횟수", "type": "numeric", "tickValues": [], "unit": "회", "startsAtZero": true, "isLogScale": false, "max": 600 },
+    "legend": [
+      { "name": "발생 횟수", "role": "primary", "originalColor": "#4C8BF5", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "발생 횟수", "renderAs": "bar", "role": "primary",
+        "data": [
+          {"x": "1주", "y": 567, "confidence": 0.8},
+          {"x": "2주", "y": 311, "confidence": 0.8},
+          {"x": "3주", "y": 165, "confidence": 0.8},
+          {"x": "4주", "y": 95, "confidence": 0.8},
+          {"x": "5주", "y": 52, "confidence": 0.8},
+          {"x": "6주", "y": 33, "confidence": 0.8},
+          {"x": "7주", "y": 20, "confidence": 0.8},
+          {"x": "8주", "y": 13, "confidence": 0.8},
+          {"x": "9주", "y": 8, "confidence": 0.8},
+          {"x": "10주", "y": 5, "confidence": 0.8},
+          {"x": "11주", "y": 3, "confidence": 0.8},
+          {"x": "12주", "y": 2, "confidence": 0.8},
+          {"x": "13주", "y": 1, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 13,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "down", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "down" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 567, "at": "1주"}, "min": {"value": 1, "at": "13주"}, "average": 90.4, "median": 20, "range": 566 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "8주 연속은 드문 강세장",
+    "subMessage": "1927년 이후 8주 연속 상승은 단 13번뿐",
+    "headline": "1927년 이후 S&P500이 8주 연속 오른 사례는 단 13번에 불과해 현재 흐름이 매우 이례적입니다.",
+    "summary": "주식시장이 8주 연속 오른 사례는 1927년 이후 단 13번에 불과할 만큼 드문 강세 흐름입니다.",
+    "story": "주식시장이 8주 연속 오른 사례는 1927년 이후 단 13번에 불과할 만큼 드문 강세 흐름입니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"8주 연속 13회","position":{"x":"8주"},"importance":"critical","style":"negative"},
+      {"text":"1주 567회","position":{"x":"1주"},"importance":"high","style":"neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"8주","y":13}, "displayText": "8주 연속은 드문 강세장", "reason": "주식시장이 8주 연속 오른 사례는 1927년 이후 단 13번에 불과할 만큼 드문 강세 흐름입니다." },
+    "densityLevel": "balanced"
+  }
+}

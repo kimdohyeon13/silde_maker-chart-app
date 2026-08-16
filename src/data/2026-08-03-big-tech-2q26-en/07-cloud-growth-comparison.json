@@ -1,0 +1,372 @@
+{
+  "id": "07-cloud-growth-comparison",
+  "mode": "faithful",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Google Cloud·AWS·Azure 성장률 추이",
+    "originalMessage": "세 서비스의 2024년 1분기~2026년 2분기 전년 대비 성장률 비교",
+    "preservedElements": [
+      "2024 Q1~2026 Q2의 10개 동일 달력분기",
+      "Google Cloud·AWS·Azure 및 기타 클라우드 서비스의 세 시리즈",
+      "전년 대비 성장률 단위",
+      "Azure의 상수환율(CC) 정의",
+      "각사 공식 분기 실적 발표 출처"
+    ],
+    "changedElements": [
+      "세 회사의 시계열을 하나의 단일축 꺾은선으로 병치",
+      "Paperlogy 타이포와 16:9 레이아웃",
+      "우측 직접 라벨과 축 라벨 축소"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Google Cloud와 AWS는 각사 보고 매출에서 계산한 전년 대비 성장률이며, Azure 및 기타 클라우드 서비스는 Microsoft 공시의 상수환율(CC) 전년 대비 성장률입니다. Microsoft FY24 Q3~FY26 Q4는 달력 2024 Q1~2026 Q2에 대응합니다.",
+    "sourceAttribution": "자료: Alphabet·Amazon·Microsoft 분기 실적 발표",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "3개 시리즈·각 10개 점·단일 % 축·우측 직접 라벨을 렌더 전 계획했습니다.",
+      "checkedAt": "2026-07-31"
+    },
+    {
+      "id": "export-and-dom-qa",
+      "label": "PNG·DOM 검수",
+      "status": "pass",
+      "detail": "1,824×1,026 PNG, 30개 점, 세 종점 직접 라벨, Paperlogy 900·300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-31"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 132,
+    "lineStrokeWidth": 3
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Google Cloud, AWS, and Azure Growth Trends",
+    "subtitle": "2024 Q1–2026 Q2 · YoY % · Azure and other cloud services in constant currency",
+    "source": "Source: Alphabet, Amazon, and Microsoft quarterly results · Azure in constant currency",
+    "timeRange": "2024 Q1~2026 Q2",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-Q1",
+        "2025-Q1",
+        "2026-Q2"
+      ],
+      "displayTickValues": [
+        "2024 Q1",
+        "2025 Q1",
+        "2026 Q2"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "unit": "%",
+      "min": 10,
+      "max": 90,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Google",
+        "role": "primary",
+        "originalColor": "#4285F4",
+        "remakeColor": "#4285F4",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "AWS",
+        "role": "secondary",
+        "originalColor": "#FF9900",
+        "remakeColor": "#F79009",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "Azure (CC)",
+        "role": "secondary",
+        "originalColor": "#0078D4",
+        "remakeColor": "#0078D4",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Google",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#4285F4",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 28.4,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q2",
+            "y": 28.8,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q3",
+            "y": 35.0,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q4",
+            "y": 30.1,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q1",
+            "y": 28.1,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q2",
+            "y": 31.7,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q3",
+            "y": 33.5,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q4",
+            "y": 47.8,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q1",
+            "y": 63.4,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q2",
+            "y": 81.8,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "AWS",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F79009",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 17.2,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q2",
+            "y": 18.7,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q3",
+            "y": 19.1,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q4",
+            "y": 18.9,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q1",
+            "y": 16.9,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q2",
+            "y": 17.5,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q3",
+            "y": 20.2,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q4",
+            "y": 23.6,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q1",
+            "y": 28.4,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q2",
+            "y": 36.8,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "Azure (CC)",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#0078D4",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 31.0,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q2",
+            "y": 30.0,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q3",
+            "y": 34.0,
+            "confidence": 1
+          },
+          {
+            "x": "2024-Q4",
+            "y": 31.0,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q1",
+            "y": 35.0,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q2",
+            "y": 39.0,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q3",
+            "y": 39.0,
+            "confidence": 1
+          },
+          {
+            "x": "2025-Q4",
+            "y": 38.0,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q1",
+            "y": 39.0,
+            "confidence": 1
+          },
+          {
+            "x": "2026-Q2",
+            "y": 43.0,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 30,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 16.9,
+      "max": 81.8,
+      "average": 32.83,
+      "latest": 81.8
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "세 서비스 모두 최신 실적에서 직전 분기보다 성장률이 높아졌습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Google Cloud, AWS, and Azure Growth Trends",
+    "subMessage": "2024 Q1–2026 Q2 · YoY % · Azure and other cloud services in constant currency",
+    "headline": "세 서비스 모두 최신 실적에서 직전 분기보다 성장률이 높아졌습니다.",
+    "summary": "Google Cloud는 81.8%, Azure는 CC 기준 43.0%, AWS는 36.8%로 최신 분기를 마감했습니다.",
+    "keyTakeaways": [
+      "Google Cloud는 최근 세 분기 연속 가속했습니다.",
+      "AWS는 2025년 저점 뒤 네 분기 연속 가속했습니다.",
+      "Azure 및 기타 클라우드 서비스는 CC 기준으로 비교했습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2026-Q2",
+        "y": 81.8
+      },
+      "displayText": "Latest quarter",
+      "reason": "세 서비스 모두 직전 분기보다 성장률이 높아졌습니다."
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#F79009",
+        "#0078D4",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#4285F4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

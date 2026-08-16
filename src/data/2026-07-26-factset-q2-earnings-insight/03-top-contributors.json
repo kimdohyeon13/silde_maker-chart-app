@@ -1,0 +1,274 @@
+{
+  "id": "03-top-contributors",
+  "mode": "faithful",
+  "sourceImage": "input/03-top-contributors.png",
+  "analyzedAt": "2026-07-26T19:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "2분기 이익 성장을 이끈 상위 5개 기업",
+    "originalMessage": "2분기 이익 성장을 이끈 상위 5개 기업",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간·범주 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 표기",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본 표에 명시된 값을 그대로 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 10개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "pass",
+      "detail": "원본에 명시된 값을 사용했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.8,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "2분기 이익 성장을 이끈 상위 5개 기업",
+    "subtitle": "주당순이익(EPS) 달러 · 남색 Q2 2026 · 회색 Q2 2025",
+    "source": "자료: FactSet Earnings Insight, 2026-07-24",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Micron",
+        "Alphabet",
+        "Chevron",
+        "Exxon Mobil",
+        "NVIDIA"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "unit": "$",
+      "min": 0,
+      "max": 28,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Q2 2026",
+        "role": "primary",
+        "originalColor": "#173B6D",
+        "remakeColor": "#173B6D",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "Q2 2025",
+        "role": "primary",
+        "originalColor": "#D0D5DD",
+        "remakeColor": "#D0D5DD",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Q2 2026",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#173B6D",
+        "data": [
+          {
+            "x": "Micron",
+            "y": 25.11,
+            "confidence": 1
+          },
+          {
+            "x": "Alphabet",
+            "y": 9.11,
+            "confidence": 1
+          },
+          {
+            "x": "Chevron",
+            "y": 5.53,
+            "confidence": 1
+          },
+          {
+            "x": "Exxon Mobil",
+            "y": 3.61,
+            "confidence": 1
+          },
+          {
+            "x": "NVIDIA",
+            "y": 2.08,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "Q2 2025",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#D0D5DD",
+        "data": [
+          {
+            "x": "Micron",
+            "y": 1.91,
+            "confidence": 1
+          },
+          {
+            "x": "Alphabet",
+            "y": 2.31,
+            "confidence": 1
+          },
+          {
+            "x": "Chevron",
+            "y": 1.77,
+            "confidence": 1
+          },
+          {
+            "x": "Exxon Mobil",
+            "y": 1.64,
+            "confidence": 1
+          },
+          {
+            "x": "NVIDIA",
+            "y": 1.05,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 비교 관계를 보존했습니다.",
+      "recentDirection": "rising"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 경로와 범주 차이를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 1.05,
+      "max": 25.11,
+      "average": 0,
+      "latest": 2.08
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2분기 이익 성장을 이끈 상위 5개 기업",
+    "subMessage": "주당순이익(EPS) 달러 · 남색 Q2 2026 · 회색 Q2 2025",
+    "headline": "2분기 이익 성장을 이끈 상위 5개 기업",
+    "summary": "주당순이익(EPS) 달러 · 남색 Q2 2026 · 회색 Q2 2025",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B6D",
+      "secondary": [
+        "#D0D5DD",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#173B6D",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "NVIDIA",
+        "y": 2.08
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

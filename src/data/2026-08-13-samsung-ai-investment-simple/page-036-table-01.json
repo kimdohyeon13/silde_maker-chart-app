@@ -1,0 +1,134 @@
+{
+  "id": "page-036-table-01",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/46-page_036_table_01.png",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "엔비디아의 '27년 준비: 콘텐츠를 줄여서 물량을 확보",
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "현재 192GB·96GB·64GB의 합계 190억 Gb",
+      "공급 부족 시 192GB 220억 Gb",
+      "이전 수요 192GB 270억 Gb",
+      "용량 39% 감소, 출하량 11% 증가라는 비교 관계",
+      "자료: 산업 추정"
+    ],
+    "changedElements": [
+      "복잡한 화살표와 범례 상자를 제거하고 3개 누적 막대로 비교",
+      "각 막대의 총량과 핵심 구성만 남겨 읽는 순서를 단순화",
+      "사각 막대와 짧은 한글 라벨 적용"
+    ]
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan",
+      "status": "pass",
+      "detail": "3개 비교값은 누적 세로 막대로 유지한다. 총량 라벨은 막대 위에만 두고, 단위는 10억 Gb로 표시한다."
+    },
+    {
+      "id": "readability-risk",
+      "status": "pass",
+      "detail": "긴 주석과 화살표를 제거해 제목·축·라벨 겹침을 막고, 막대 모서리는 사각형으로 설정한다."
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "원본 이미지에서 읽은 구성값이며, 원자료 확보 전까지 화면 표시값으로 관리한다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 28px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#1479F2",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "용량을 낮춰도 AI용 메모리 물량은 더 필요",
+    "subtitle": "2027년 전체 메모리 물량 비교, 단위: 10억 Gb",
+    "source": "자료: 산업 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["현재", "공급 부족", "이전 수요"],
+      "displayTickValues": ["현재", "공급 부족", "이전 수요"]
+    },
+    "yAxis": {
+      "label": "전체 메모리 물량",
+      "unit": "10억 Gb",
+      "min": 0,
+      "max": 30
+    },
+    "legend": [
+      { "name": "192GB", "color": "#1479F2", "originalColor": "#1479F2" },
+      { "name": "96GB", "color": "#D0D5DD", "originalColor": "#D0D5DD" },
+      { "name": "64GB", "color": "#12B8C4", "originalColor": "#12B8C4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "192GB",
+        "renderAs": "bar",
+        "color": "#1479F2",
+        "data": [{ "x": "현재", "y": 3.5 }, { "x": "공급 부족", "y": 22 }, { "x": "이전 수요", "y": 27 }]
+      },
+      {
+        "name": "96GB",
+        "renderAs": "bar",
+        "color": "#D0D5DD",
+        "data": [{ "x": "현재", "y": 12.5 }, { "x": "공급 부족", "y": 0 }, { "x": "이전 수요", "y": 0 }]
+      },
+      {
+        "name": "64GB",
+        "renderAs": "bar",
+        "color": "#12B8C4",
+        "data": [{ "x": "현재", "y": 3 }, { "x": "공급 부족", "y": 0 }, { "x": "이전 수요", "y": 0 }]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": { "currentTotal": 19, "shortageCase": 22, "priorDemand": 27 },
+    "changeRates": [{ "period": "이전 수요 대비 현재 용량", "percentChange": -29.6 }]
+  },
+  "narrative": {
+    "headMessage": "AI용 메모리 확보 경쟁은 계속된다",
+    "subMessage": "제품당 용량을 낮춰서라도 공급 물량을 늘리는 흐름이다.",
+    "headline": "용량을 낮춰 AI용 메모리 물량을 확보",
+    "keyTakeaways": ["전체 물량은 270억 Gb에서 190억 Gb로 조정된다.", "192GB 구성은 공급 부족 시 220억 Gb가 필요하다."],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "공급 부족", "y": 22, "displayText": "192GB 220억 Gb" },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1479F2", "secondary": ["#D0D5DD", "#12B8C4"], "accent": "#1479F2", "backgroundTone": "light" },
+    "densityLevel": "low"
+  },
+  "patterns": { "trend": "고용량 구성 비중을 높여 제한된 공급을 AI 제품에 배분", "supportResistance": [] }
+}

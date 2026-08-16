@@ -1,0 +1,131 @@
+{
+  "id": "common-points",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "네 회사의 AI 인프라 투자 공통점과 비교 시 주의할 차이를 정리",
+    "preservedElements": [
+      "Cloud +81.8%, AWS +36.8%, Azure CC +43%의 수요 신호",
+      "Alphabet $195–205B, Amazon 약 $220B, Microsoft 약 $175B, Meta $130–145B의 연간 투자 범위",
+      "Microsoft의 리스·재분류와 Meta의 서버 유연화 차이",
+      "CapEx만이 아니라 성장·가이던스·마진을 함께 봐야 한다는 판독"
+    ],
+    "changedElements": [
+      "근거와 판독의 중복 열을 제거하고 2열로 축약",
+      "수요·투자·정의·판독의 네 관찰만 유지",
+      "출처 푸터를 화면에서 숨김"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Microsoft 약 $175B는 CY26 재분류 문맥의 규모이며, 네 회사의 CapEx 정의는 동일하지 않다."
+  },
+  "allowedTransformations": ["simplify-labels", "adjust-layout", "adjust-density", "adjust-colors"],
+  "qualityChecks": [
+    {
+      "id": "minimal-layout",
+      "label": "미니멀 표 구조",
+      "status": "pass",
+      "detail": "4열을 2열로 축소하고 수요·투자·정의·판독만 남겼다."
+    }
+  ],
+  "structure": {
+    "title": "같은 CapEx, 다른 해석",
+    "source": "자료: 각사 2Q26 IR·SEC 공시 | Microsoft 수치는 재분류 문맥 포함"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "28px 36px 0",
+    "contentPadding": "14px 36px 0",
+    "titleFontSize": 27,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      { "key": "point", "label": "관찰", "dataType": "text", "isRowHeader": true, "width": "25%" },
+      { "key": "value", "label": "핵심", "dataType": "text", "align": "right", "width": "75%" }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "point": { "value": "수요" },
+          "value": { "value": "Cloud +81.8% · AWS +36.8% · Azure +43%", "displayValue": "Cloud +81.8% · AWS +36.8% · Azure +43%", "highlight": "accent" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "point": { "value": "투자" },
+          "value": { "value": "연간 CapEx $130–220B", "displayValue": "연간 CapEx $130–220B", "highlight": "accent" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "point": { "value": "정의" },
+          "value": { "value": "MSFT 리스·재분류 / META 서버 유연화", "displayValue": "MSFT 리스·재분류 / META 서버 유연화", "highlight": "muted" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "point": { "value": "판독" },
+          "value": { "value": "CapEx보다 성장·가이던스·마진", "displayValue": "CapEx보다 성장·가이던스·마진" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 59,
+      "cellPadding": "8px 12px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": { "body": 600, "numeric": 700, "rowHeader": 800, "header": 700 },
+      "fontSize": { "body": 16, "header": 12, "total": 16, "badge": 10 }
+    }
+  },
+  "narrative": {
+    "headMessage": "같은 CapEx, 다른 해석",
+    "subMessage": "같은 CapEx, 다른 해석",
+    "headline": "네 회사는 모두 투자하지만, 비교 기준은 서로 다르다.",
+    "summary": "수요 가속과 대형 투자 계획은 공통점이지만 CapEx의 정의와 시장 판독은 다르다.",
+    "story": "네 가지 관찰만 남겨 투자 규모보다 수요의 지속성과 회수 경로를 우선 보게 한다.",
+    "keyTakeaways": ["클라우드·AWS·Azure의 수요 신호가 동시에 가속했다.", "CapEx는 성장·가이던스·마진과 함께 해석해야 한다."],
+    "questionsRaised": ["투자 회수 속도가 어느 회사에서 먼저 나타나는가?"],
+    "viewerAction": "CapEx 숫자를 비교하기 전에 정의와 회수 경로를 맞춘다.",
+    "contextualNotes": ["Microsoft 약 $175B는 재분류 문맥의 규모."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "수요와 회수", "reason": "투자 해석의 우선순위" },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": ["#667085", "#D0D5DD"],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      { "row": 0, "col": "value", "reason": "수요 신호" },
+      { "row": 1, "col": "value", "reason": "연간 투자 범위" }
+    ]
+  }
+}

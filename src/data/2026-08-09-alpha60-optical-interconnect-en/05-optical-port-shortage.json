@@ -1,0 +1,249 @@
+{
+  "id": "chart-06",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-16T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Demand exceeds supply by 28% in 2026 and 24% in 2027. Port shortages are an early signal of a shortage of InP light sources.",
+    "dataFidelity": "source-derived",
+    "sourceAttribution": "Source: Reconstructed from supply-demand data from LightCounting, Dell'Oro, and others"
+  },
+  "exportOptions": {
+    "canvasHeight": 540
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "800G and 1.6T Transceivers: Supply Still Trails Demand",
+    "subtitle": "Port shortages point to a shortage of the light sources (lasers) installed inside them",
+    "source": "Source: Reconstructed from supply-demand data from LightCounting, Dell'Oro, and others",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Million ports/year",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 84.96
+    },
+    "legend": [
+      {
+        "name": "Demand",
+        "role": "primary"
+      },
+      {
+        "name": "Supply",
+        "role": "secondary"
+      },
+      {
+        "name": "Shortage rate",
+        "role": "secondary"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "Shortage rate",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35.38
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Demand",
+        "data": [
+          {
+            "x": "2024",
+            "y": 12.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2025",
+            "y": 24.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026",
+            "y": 46.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "2027",
+            "y": 72.0,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "Supply",
+        "data": [
+          {
+            "x": "2024",
+            "y": 11.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "2025",
+            "y": 19.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026",
+            "y": 33.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "2027",
+            "y": 55.0,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#939597",
+        "axis": "left"
+      },
+      {
+        "name": "Shortage rate",
+        "data": [
+          {
+            "x": "2024",
+            "y": 12.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "2025",
+            "y": 18.8,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026",
+            "y": 28.3,
+            "confidence": 0.82
+          },
+          {
+            "x": "2027",
+            "y": 23.6,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "Overall direction read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "For directional reference."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "from": 12.5,
+        "to": 72.0,
+        "absoluteChange": 59.5,
+        "percentChange": 476.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 72.0,
+        "at": ""
+      },
+      "min": {
+        "value": 12.5,
+        "at": ""
+      },
+      "average": 38.625,
+      "median": 35.0,
+      "range": 59.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Supply Still Trails Demand",
+    "subMessage": "Port shortages point to a shortage of the light sources (lasers) installed inside them",
+    "headline": "Supply Still Trails Demand",
+    "summary": "Demand exceeds supply by 28% in 2026 and 24% in 2027. Port shortages are an early signal of a shortage of InP light sources.",
+    "story": "Demand exceeds supply by 28% in 2026 and 24% in 2027. Port shortages are an early signal of a shortage of InP light sources.",
+    "keyTakeaways": [
+      "Demand exceeds supply by 28% in 2026 and 24% in 2027. Port shortages are an early signal of a shortage of InP light sources."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Review the direction, axes, and series alongside the original context.",
+    "contextualNotes": [
+      "Source: Reconstructed from supply-demand data from LightCounting, Dell'Oro, and others"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2027",
+        "y": 72.0
+      },
+      "reason": "Demand exceeds supply by 28% in 2026 and 24% in 2027. Port shortages are an early signal of a shortage of InP light sources.",
+      "displayText": "A market that remains undersupplied despite increased supply"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "chart-10",
+  "sourceImage": "",
+  "analyzedAt": "2026-07-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Vera Rubin은 Blackwell 대비 와트당 추론 처리량 10배, 토큰당 비용 1/10, Groq 3 LPX 결합 시 MW당 추론 처리량 최대 35배를 공식 주장한다 — '토큰=매출' 공식의 하드웨어 버전.",
+    "dataFidelity": "source-derived",
+    "sourceAttribution": "출처: NVIDIA (nvidianews.nvidia.com)"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Vera Rubin의 토큰 경제학 — 공식 배수 (vs Blackwell)",
+    "subtitle": "개선 배수 기준 — '토큰당 비용 1/10'은 10배 절감, 'MoE 훈련 GPU 1/4'은 4배 절감으로 표기",
+    "source": "출처: NVIDIA (nvidianews.nvidia.com)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "처리량/와트",
+        "비용 절감",
+        "GPU 절감",
+        "MW당 Groq",
+        "매출 기회"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 40.25
+    },
+    "legend": [
+      {
+        "name": "개선 배수 (Blackwell=1)",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "개선 배수 (Blackwell=1)",
+        "data": [
+          {
+            "x": "처리량/와트",
+            "y": 10,
+            "confidence": 0.82
+          },
+          {
+            "x": "비용 절감",
+            "y": 10,
+            "confidence": 0.82
+          },
+          {
+            "x": "GPU 절감",
+            "y": 4,
+            "confidence": 0.82
+          },
+          {
+            "x": "MW당 Groq",
+            "y": 35,
+            "confidence": 0.82
+          },
+          {
+            "x": "매출 기회",
+            "y": 10,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.8,
+      "description": "원본 자료에서 읽은 전체 방향입니다.",
+      "recentDirection": "steady"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 10,
+        "to": 10,
+        "absoluteChange": 0,
+        "percentChange": 0.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 35,
+        "at": ""
+      },
+      "min": {
+        "value": 4,
+        "at": ""
+      },
+      "average": 13.8,
+      "median": 10,
+      "range": 31
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "와트당 토큰이 곧 매출",
+    "subMessage": "개선 배수 기준 — '토큰당 비용 1/10'은 10배 절감, 'MoE 훈련 GPU 1/4'은 4배 절감으로 표기",
+    "headline": "와트당 토큰이 곧 매출",
+    "summary": "Vera Rubin은 Blackwell 대비 와트당 추론 처리량 10배, 토큰당 비용 1/10, Groq 3 LPX 결합 시 MW당 추론 처리량 최대 35배를 공식 주장한다 — '토큰=매출' 공식의 하드웨어 버전.",
+    "story": "Vera Rubin은 Blackwell 대비 와트당 추론 처리량 10배, 토큰당 비용 1/10, Groq 3 LPX 결합 시 MW당 추론 처리량 최대 35배를 공식 주장한다 — '토큰=매출' 공식의 하드웨어 버전.",
+    "keyTakeaways": [
+      "Vera Rubin은 Blackwell 대비 와트당 추론 처리량 10배, 토큰당 비용 1/10, Groq 3 LPX 결합 시 MW당 추론 처리량 최대 35배를 공식 주장한다 — '토큰=매출' 공식의 하드웨어 버전."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본 맥락과 함께 방향·축·시리즈를 확인하세요.",
+    "contextualNotes": [
+      "원문 표기: 토큰당 비용 1/10, MoE 훈련 GPU 수 1/4 — 차트는 절감 배수로 환산 표기",
+      "출처: NVIDIA (nvidianews.nvidia.com)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "MW당 Groq",
+        "y": 35
+      },
+      "reason": "Vera Rubin은 Blackwell 대비 와트당 추론 처리량 10배, 토큰당 비용 1/10, Groq 3 LPX 결합 시 MW당 추론 처리량 최대 35배를 공식 주장한다 — '토큰=매출' 공식의 하드웨어 버전.",
+      "displayText": "와트당 토큰이 곧 매출"
+    },
+    "densityLevel": "balanced"
+  }
+}

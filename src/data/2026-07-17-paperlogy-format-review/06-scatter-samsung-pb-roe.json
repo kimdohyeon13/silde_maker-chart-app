@@ -1,0 +1,308 @@
+{
+  "id": "06-scatter-samsung-pb-roe",
+  "sourceImage": "input/06-62-page_57_graph_03.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현",
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 검수팩 여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다. 형식 검수를 위한 복제본이며 원본 데이터 payload는 변경하지 않았습니다.",
+    "sourceAttribution": "자료: Quantiwise"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "paperlogy-format-review",
+      "label": "Paperlogy 900·300 형식 검수",
+      "status": "pass",
+      "detail": "산점도의 Paperlogy 900·300, 16:9, 겹침·오버플로·콘텐츠 개수를 DOM에서 확인했습니다.",
+      "checkedAt": "2026-07-17"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 30,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "accentColor": "#101828",
+    "chartHeight": 350
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "삼성전자: 12m fwd P/B vs ROE",
+    "subtitle": "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)",
+    "source": "자료: Quantiwise",
+    "timeRange": "2020 ~ 2028F",
+    "xAxis": {
+      "label": "ROE(%)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "P/B (배)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 4
+    },
+    "legend": [
+      {
+        "name": "연도별 실적",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "목표주가/하방 (P/B)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연도별 실적",
+        "data": [
+          {
+            "x": 4,
+            "y": 1.5,
+            "confidence": 0.78,
+            "label": "2023"
+          },
+          {
+            "x": 9,
+            "y": 0.95,
+            "confidence": 0.78,
+            "label": "2024"
+          },
+          {
+            "x": 10,
+            "y": 2,
+            "confidence": 0.78,
+            "label": "2020"
+          },
+          {
+            "x": 11,
+            "y": 1.85,
+            "confidence": 0.78,
+            "label": "2025"
+          },
+          {
+            "x": 14,
+            "y": 1.8,
+            "confidence": 0.78,
+            "label": "2021"
+          },
+          {
+            "x": 17,
+            "y": 1.1,
+            "confidence": 0.78,
+            "label": "2022"
+          },
+          {
+            "x": 47,
+            "y": 3.35,
+            "confidence": 0.78,
+            "label": "2026"
+          },
+          {
+            "x": 47,
+            "y": 2.1,
+            "confidence": 0.78,
+            "label": "2027"
+          }
+        ],
+        "renderAs": "scatter",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "목표주가/하방 (P/B)",
+        "data": [
+          {
+            "x": 33,
+            "y": 2.2,
+            "confidence": 0.78,
+            "label": "목표주가"
+          },
+          {
+            "x": 33,
+            "y": 1.5,
+            "confidence": 0.78,
+            "label": "2028"
+          }
+        ],
+        "renderAs": "scatter",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.308,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 0,
+        "absoluteChange": 0,
+        "from": 1.5,
+        "to": 1.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3.35,
+        "at": ""
+      },
+      "min": {
+        "value": 0.95,
+        "at": ""
+      },
+      "average": 1.835,
+      "median": 1.8250000000000002,
+      "range": 2.4000000000000004
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "삼성전자: 12m fwd P/B vs ROE",
+    "subMessage": "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)",
+    "headline": "삼성전자: 12m fwd P/B vs ROE",
+    "summary": "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Quantiwise"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 1.5
+      },
+      "displayText": "삼성전자: 12m fwd P/",
+      "reason": "ROE-P/B 회귀선상 ROE 33%에 목표주가 P/B 2.2배 매핑 (y=0.0277x+1.2224, R²=0.4232)"
+    },
+    "densityLevel": "balanced"
+  }
+}

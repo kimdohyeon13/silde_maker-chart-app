@@ -1,0 +1,239 @@
+{
+  "id": "01-d220a-storage-three-makers",
+  "mode": "faithful",
+  "sourceImage": "input/dib-220-23.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "스토리지 3사 동반 급등",
+    "originalMessage": "샌디스크 +25.99%, 웨스턴디지털 +15.37%, 시게이트 +11.41% (2026-07-30 종가)",
+    "preservedElements": [
+      "3개 스토리지 종목의 당일 등락률",
+      "샌디스크·웨스턴디지털·시게이트 순서와 값",
+      "2026-07-30 종가 기준일",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "지수화 라인차트를 당일 등락률 막대로 정리",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 최대 상승 종목만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 라인차트 우측에 인쇄된 3사 당일 등락률만 그대로 옮겼습니다.",
+    "sourceAttribution": "Yahoo Finance · 30 July 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "25.99, 15.37, 11.41은 원본 이미지에 인쇄된 값 그대로입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "제목·부제·축·범례·출처·내러티브를 모두 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Three storage makers, one direction",
+    "subtitle": "One session: Sandisk +25.99%, Western Digital +15.37%, Seagate +11.41%",
+    "source": "Source: Yahoo Finance · 30 July 2026 close · source-visible",
+    "timeRange": "30 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Sandisk",
+        "Western Digital",
+        "Seagate"
+      ],
+      "displayTickValues": [
+        "Sandisk",
+        "Western Digital",
+        "Seagate"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 30
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#1F6F5C",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "Sandisk",
+            "y": 25.99,
+            "confidence": 0.9
+          },
+          {
+            "x": "Western Digital",
+            "y": 15.37,
+            "confidence": 0.9
+          },
+          {
+            "x": "Seagate",
+            "y": 11.41,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "All three names closed higher in the same session.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "The spread between the three moves is wide but the sign is identical."
+    },
+    "changeRates": [
+      {
+        "period": "Largest vs smallest move",
+        "percentChange": 127.8,
+        "absoluteChange": 14.58,
+        "from": 11.41,
+        "to": 25.99
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 25.99,
+        "at": "Sandisk"
+      },
+      "min": {
+        "value": 11.41,
+        "at": "Seagate"
+      },
+      "average": 17.59,
+      "median": 15.37,
+      "range": 14.58
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Three storage makers, one direction",
+    "subMessage": "One session: Sandisk +25.99%, Western Digital +15.37%, Seagate +11.41%",
+    "headline": "Three storage makers, one direction",
+    "summary": "Three different storage products re-priced together on 30 July 2026.",
+    "story": "NAND and hard drives moved in the same session and the same direction, which is what a whole tier re-pricing looks like rather than one company's result.",
+    "keyTakeaways": [
+      "Sandisk +25.99% was the largest of the three.",
+      "Western Digital +15.37% and Seagate +11.41% moved the same way.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the three moves as one tier rather than three separate results.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, 30 July 2026 close",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Sandisk",
+      "y": 25.99,
+      "displayText": "25.99%"
+    },
+    "densityLevel": "focused"
+  }
+}

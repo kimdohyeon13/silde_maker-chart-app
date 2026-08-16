@@ -1,0 +1,85 @@
+{
+  "id": "page-009-graph-02",
+  "sourceImage": "08-page_009_graph_02.png",
+  "mode": "redesign",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "line",
+    "title": "클라우드 매출이 늘어 AI 투자 여력이 커집니다",
+    "subtitle": "연도별 대표값, 전년 대비 성장률",
+    "source": "자료: 각사",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": ["2024", "2025", "2026"],
+      "displayTickValues": ["2024", "2025", "2026"]
+    },
+    "yAxis": {
+      "label": "성장률",
+      "unit": "%",
+      "min": 0,
+      "max": 90,
+      "tickValues": ["0", "20", "40", "60", "80"]
+    },
+    "legend": [
+      {"name": "아마존", "color": "#0969DA", "originalColor": "#1478F2"},
+      {"name": "알파벳", "color": "#D92D20", "originalColor": "#F0446B"},
+      {"name": "마이크로소프트", "color": "#0E9384", "originalColor": "#11B5C9"}
+    ]
+  },
+  "data": {
+    "series": [
+      {"name": "아마존", "data": [{"x": "2024", "y": 17}, {"x": "2025", "y": 16}, {"x": "2026", "y": 36.8}]},
+      {"name": "알파벳", "data": [{"x": "2024", "y": 28}, {"x": "2025", "y": 27}, {"x": "2026", "y": 81.8}]},
+      {"name": "마이크로소프트", "data": [{"x": "2024", "y": 35}, {"x": "2025", "y": 38}, {"x": "2026", "y": 43}]}
+    ]
+  },
+  "statistics": {
+    "summary": {"min": 16, "max": 81.8, "average": 35, "latest": 81.8},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "클라우드 매출이 늘어 AI 투자 여력이 커집니다",
+    "subMessage": "최신 대표값은 알파벳 81.8%, 마이크로소프트 43.0%, 아마존 36.8%입니다.",
+    "headline": "클라우드 매출이 늘어 AI 투자 여력이 커집니다",
+    "keyTakeaways": ["세 기업 모두 2026년 대표값에서 성장률이 높아집니다."],
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": {"x": "2026", "y": 81.8, "displayText": "알파벳 81.8%"},
+    "annotations": [],
+    "highlightZones": [{"fromX": "2026", "toX": "2026", "color": "#FFF1F0", "label": "최근 확대"}],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "클라우드 Big3의 성장률이 최근 구간에서 다시 높아집니다.",
+    "supportResistance": []
+  },
+  "preserveIntent": {
+    "originalTitle": "클라우드 Big3의 분기별 성장률 추이",
+    "dataFidelity": "source-visible",
+    "changedElements": "분기별 꺾은선의 대표 앵커만 남기고, 세 기업의 최근 성장률 차이가 겹치지 않게 읽히도록 정리했다.",
+    "comparisonPreserved": "세 기업의 원본 색상 계열, 상대 순위와 최신 대표값을 보존했다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-color-emphasis"],
+  "qualityChecks": {
+    "titleMeaningPreserved": true,
+    "seriesCountMatches": true,
+    "sourcePreserved": true,
+    "xAxisLabelsReadable": true,
+    "dataFidelityNote": "source-visible"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32,
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 28px 8px"
+  }
+}

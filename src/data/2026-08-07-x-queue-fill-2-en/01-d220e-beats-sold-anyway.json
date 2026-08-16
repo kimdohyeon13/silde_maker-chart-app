@@ -1,0 +1,287 @@
+{
+  "id": "01-d220e-beats-sold-anyway",
+  "mode": "faithful",
+  "sourceImage": "input/dib-220-06.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "FORM·AXTI, 실적 뒤 가장 크게 반응",
+    "originalMessage": "2026년 2분기 EPS 서프라이즈와 발표일 다음 거래일 주가 변동 (2026-07-30 ET)",
+    "preservedElements": [
+      "BE·TER·VRT·FORM의 EPS 서프라이즈 값",
+      "발표일에서 익일까지의 주가 변동률",
+      "Q2 2026 기준과 정규장 종가 기준 고지",
+      "회사 IR·SEC, MarketBeat·Benzinga, Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "표를 두 계열 막대차트로 정리",
+      "모든 문자열을 영어로 번역",
+      "장후 반응만 표기된 AXTI 행은 기준이 달라 제외",
+      "중립 회색 막대에 발표 후 주가 변동만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 표에 인쇄된 EPS 서프라이즈와 익일 주가 변동만 사용했습니다. 기준이 다른 장후 수익률 행(AXTI)은 제외했습니다.",
+    "sourceAttribution": "Company IR·SEC, MarketBeat·Benzinga, Yahoo Finance · 30 July 2026 ET"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "100.0, 18.2, 6.3, 34.4와 -1.85, -0.39, 2.00, 26.28은 원본 표에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "100.0은 10 단위 내림 결과가 100으로 동일하고, 나머지는 모두 100 미만입니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "원본 표에 목표주가 열이 없고, 투자의견·밸류에이션 의견·보유·수익률 표현도 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "모든 노출 문자열을 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Big beats, sold the next day",
+    "subtitle": "Bloom Energy beat by 100% and still finished -1.85%; Teradyne beat by 18.2% and finished -0.39%",
+    "source": "Source: Company IR·SEC, MarketBeat·Benzinga, Yahoo Finance · 30 July 2026 ET · source-visible",
+    "timeRange": "Q2 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Bloom Energy",
+        "Teradyne",
+        "Vertiv",
+        "FormFactor"
+      ],
+      "displayTickValues": [
+        "Bloom Energy",
+        "Teradyne",
+        "Vertiv",
+        "FormFactor"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -20,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "EPS surprise",
+        "role": "secondary",
+        "originalColor": "#C43D3D",
+        "remakeColor": "#B9C2CC"
+      },
+      {
+        "name": "Next-day price change",
+        "role": "primary",
+        "originalColor": "#0B63CE",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "EPS surprise",
+        "data": [
+          {
+            "x": "Bloom Energy",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "Teradyne",
+            "y": 18.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "Vertiv",
+            "y": 6.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "FormFactor",
+            "y": 34.4,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#B9C2CC"
+      },
+      {
+        "name": "Next-day price change",
+        "data": [
+          {
+            "x": "Bloom Energy",
+            "y": -1.85,
+            "confidence": 0.9
+          },
+          {
+            "x": "Teradyne",
+            "y": -0.39,
+            "confidence": 0.9
+          },
+          {
+            "x": "Vertiv",
+            "y": 2.0,
+            "confidence": 0.9
+          },
+          {
+            "x": "FormFactor",
+            "y": 26.28,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.88,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "장후 반응만 표기된 AXTI 행은 기준이 달라 제외했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.2,
+      "description": "The size of the beat does not order the size of the price move.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.94,
+      "description": "The largest beat produced a negative price move; a smaller beat produced the largest one."
+    },
+    "changeRates": [
+      {
+        "period": "Largest beat vs its price move",
+        "percentChange": 0,
+        "absoluteChange": 101.85,
+        "from": 100,
+        "to": -1.85
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 100,
+        "at": "Bloom Energy"
+      },
+      "min": {
+        "value": -1.85,
+        "at": "Bloom Energy"
+      },
+      "average": 23.1175,
+      "median": 12.25,
+      "range": 101.85
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Big beats, sold the next day",
+    "subMessage": "Bloom Energy beat by 100% and still finished -1.85%; Teradyne beat by 18.2% and finished -0.39%",
+    "headline": "Big beats, sold the next day",
+    "summary": "The size of the earnings beat did not set the direction of the next session.",
+    "story": "Two names beat their comparison figures and still finished lower the next day, while a smaller beat at FormFactor produced the largest price move of the group.",
+    "keyTakeaways": [
+      "Bloom Energy beat by 100% and its next-day change was -1.85%.",
+      "Teradyne beat by 18.2% and its next-day change was -0.39%.",
+      "FormFactor beat by 34.4% and its next-day change was +26.28%.",
+      "Values are read from the source table (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare each beat against the price move sitting next to it.",
+    "contextualNotes": [
+      "Source: Company IR·SEC, MarketBeat·Benzinga, Yahoo Finance, 30 July 2026 ET",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Bloom Energy",
+      "y": -1.85,
+      "displayText": "-1.85%"
+    },
+    "densityLevel": "focused"
+  }
+}

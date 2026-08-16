@@ -1,0 +1,783 @@
+{
+  "id": "12-memory-eps",
+  "mode": "faithful",
+  "sourceImage": "input/12-memory-eps.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "7월 이후 주요 메모리 업체 EPS 변화 추이",
+    "originalMessage": "7월 이후 주요 메모리 업체 EPS 변화 추이",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "6개 시리즈, 96개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 350,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "7월 이후 주요 메모리 업체 EPS 변화 추이",
+    "subtitle": "12개월 선행 EPS · 2026-07-01=100",
+    "source": "참고: 12개월 선행 EPS 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-07-03",
+        "2026-07-05",
+        "2026-07-07",
+        "2026-07-09",
+        "2026-07-11",
+        "2026-07-13",
+        "2026-07-15"
+      ],
+      "displayTickValues": [
+        "07/03",
+        "07/05",
+        "07/07",
+        "07/09",
+        "07/11",
+        "07/13",
+        "07/15"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107"
+      ],
+      "unit": "",
+      "min": 100,
+      "max": 107,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "마이크론",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "SK하이닉스",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "삼성전자",
+        "role": "primary",
+        "originalColor": "#08AFC3",
+        "remakeColor": "#08AFC3",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "웨스턴디지털",
+        "role": "primary",
+        "originalColor": "#82BF22",
+        "remakeColor": "#82BF22",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "씨게이트",
+        "role": "primary",
+        "originalColor": "#F5A623",
+        "remakeColor": "#F5A623",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "키옥시아",
+        "role": "primary",
+        "originalColor": "#F97316",
+        "remakeColor": "#F97316",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "마이크론",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 100.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 101,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 101.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 101.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 101.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 101.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 101.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 102,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 102.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 102.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 102.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 102.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 102.9,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "SK하이닉스",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 100.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 100.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 100.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 101.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 101.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 101.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 101.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 101.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 101.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 101.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 102,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 102.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 102.1,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "삼성전자",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#08AFC3",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 100.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 101.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 101.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 103.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 104.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 104.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 104.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 104.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 105,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 105.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 105.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 105.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 105.5,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "웨스턴디지털",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#82BF22",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 100.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 100.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 100.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 100.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 101.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 101.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 102.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 103,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 103.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 104.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 105,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 105.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 106,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "씨게이트",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F5A623",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 100.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 100.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 100.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 101,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 101.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 101.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 102.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 102.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 102.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 102.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 102.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 103.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 103.8,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "키옥시아",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F97316",
+        "data": [
+          {
+            "x": "2026-07-01",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-03",
+            "y": 100.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-04",
+            "y": 101.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-05",
+            "y": 101.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-06",
+            "y": 101.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-07",
+            "y": 101.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-08",
+            "y": 102,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-09",
+            "y": 102.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-10",
+            "y": 102.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-11",
+            "y": 102.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-12",
+            "y": 102.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-13",
+            "y": 102.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 102.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-15",
+            "y": 102.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 103,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 96,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 100,
+      "max": 106,
+      "average": 0,
+      "latest": 102.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "7월 이후 주요 메모리 업체 EPS 변화 추이",
+    "subMessage": "12개월 선행 EPS · 2026-07-01=100",
+    "headline": "7월 이후 주요 메모리 업체 EPS 변화 추이",
+    "summary": "12개월 선행 EPS · 2026-07-01=100",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-07-16",
+        "y": 102.9
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "global-cowos-demand",
+  "mode": "faithful",
+  "sourceImage": "input/04-global-cowos-demand.png",
+  "analyzedAt": "2026-07-11T23:20:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 4: Global CoWoS demand breakdown: 2026e vs. 2027e",
+    "originalMessage": "Global CoWoS capacity demand by key customer",
+    "preservedElements": [
+      "9개 고객과 표시 순서",
+      "2026e(new)·2027e(new) 값 18개",
+      "단위 kwafers",
+      "캡처의 출처 미표기 상태"
+    ],
+    "changedElements": [
+      "멀티시리즈 막대 렌더러가 한 시리즈를 누락해 같은 값을 비교표로 표시",
+      "증가율 열은 두 표시값의 계산 결과"
+    ],
+    "dataFidelity": "exact",
+    "notes": "막대 위에 직접 적힌 18개 값을 전사했습니다. 캡처 안에는 출처 문구가 없습니다.",
+    "sourceAttribution": "Source: 캡처에 미표기",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "군집 막대의 두 시리즈 누락을 막기 위해 9행 비교표를 선택했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "visible-values",
+      "label": "표시값 18개 보존",
+      "status": "pass",
+      "detail": "2026e와 2027e의 모든 고객 값을 보존했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "source-line",
+      "label": "출처 미표기 상태 보존",
+      "status": "warning",
+      "detail": "기관명을 추정해 추가하지 않았습니다.",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 560,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "18px 32px 0",
+    "contentPadding": "4px 22px 2px",
+    "sourcePadding": "0 32px 10px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 16,
+    "sourceFontSize": 10
+  },
+  "structure": {
+    "title": "글로벌 CoWoS 수요 구성: 2026e vs. 2027e",
+    "subtitle": "주요 고객별 글로벌 CoWoS 용량 수요 | 천 웨이퍼(kwafers)",
+    "source": "Source: 캡처에 미표기"
+  },
+  "tableData": {
+    "columns": [
+      {"key": "customer", "label": "고객", "dataType": "text", "isRowHeader": true, "width": "34%", "align": "left"},
+      {"key": "y2026", "label": "2026e (new)", "dataType": "number", "width": "20%", "align": "right"},
+      {"key": "y2027", "label": "2027e (new)", "dataType": "number", "width": "20%", "align": "right"},
+      {"key": "growth", "label": "증가율", "dataType": "percent", "width": "26%", "align": "right"}
+    ],
+    "rows": [
+      {"rowType": "data", "cells": {"customer": {"value": "NVIDIA"}, "y2026": {"value": 780, "displayValue": "780"}, "y2027": {"value": 1222, "displayValue": "1,222"}, "growth": {"value": 56.7, "displayValue": "+57%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "Broadcom"}, "y2026": {"value": 300, "displayValue": "300"}, "y2027": {"value": 484, "displayValue": "484"}, "growth": {"value": 61.3, "displayValue": "+61%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "AMD"}, "y2026": {"value": 130, "displayValue": "130"}, "y2027": {"value": 530, "displayValue": "530"}, "growth": {"value": 307.7, "displayValue": "+308%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "Xilinx"}, "y2026": {"value": 10, "displayValue": "10"}, "y2027": {"value": 10, "displayValue": "10"}, "growth": {"value": 0, "displayValue": "0%"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "MediaTek"}, "y2026": {"value": 40, "displayValue": "40"}, "y2027": {"value": 180, "displayValue": "180"}, "growth": {"value": 350, "displayValue": "+350%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "AWS/Annapurna"}, "y2026": {"value": 62, "displayValue": "62"}, "y2027": {"value": 90, "displayValue": "90"}, "growth": {"value": 45.2, "displayValue": "+45%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "AWS/Alchip"}, "y2026": {"value": 26, "displayValue": "26"}, "y2027": {"value": 36, "displayValue": "36"}, "growth": {"value": 38.5, "displayValue": "+38%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "Marvell"}, "y2026": {"value": 17, "displayValue": "17"}, "y2027": {"value": 64, "displayValue": "64"}, "growth": {"value": 276.5, "displayValue": "+276%", "highlight": "positive"}}},
+      {"rowType": "data", "cells": {"customer": {"value": "GUC"}, "y2026": {"value": 14, "displayValue": "14"}, "y2027": {"value": 60, "displayValue": "60"}, "growth": {"value": 328.6, "displayValue": "+329%", "highlight": "positive"}}},
+      {"rowType": "total", "cells": {"customer": {"value": "표시 합계", "displayValue": "표시 합계"}, "y2026": {"value": 1379, "displayValue": "1,379"}, "y2027": {"value": 2676, "displayValue": "2,676"}, "growth": {"value": 94.1, "displayValue": "+94%", "highlight": "positive"}}}
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 37,
+      "cellPadding": "7px 12px",
+      "lineHeight": 1.15,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "accentColor": "#1F5A94",
+      "fontWeight": {"body": 500, "numeric": 680, "rowHeader": 650, "header": 760, "total": 820},
+      "fontSize": {"header": "14px", "body": "14px", "total": "14px", "badge": "11px", "unit": "11px"}
+    }
+  },
+  "narrative": {
+    "headMessage": "글로벌 CoWoS 수요 구성: 2026e vs. 2027e",
+    "subMessage": "9개 고객 표시 합계 1,379에서 2,676으로 증가",
+    "headline": "글로벌 CoWoS 수요 구성: 2026e vs. 2027e",
+    "summary": "두 연도의 표시값을 같은 행에서 비교합니다.",
+    "story": "캡처에 표시된 고객 순서와 숫자를 보존했습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "고객별 절대 증가분과 증가율을 함께 확인합니다.",
+    "contextualNotes": ["Source: 캡처에 미표기"]
+  },
+  "emphasis": {
+    "focusPoint": {"displayText": "exact", "reason": "막대 위 표시값 18개 직접 전사"},
+    "colorStrategy": {"primary": "#1F5A94", "secondary": ["#D9E7F4"], "positive": "#D92D3A", "negative": "#2563EB", "accent": "#D92D3A", "backgroundTone": "light"},
+    "densityLevel": "balanced",
+    "highlightCells": [
+      {"row": 2, "col": "growth", "reason": "AMD 증가"},
+      {"row": 4, "col": "growth", "reason": "MediaTek 증가"},
+      {"row": 7, "col": "growth", "reason": "Marvell 증가"},
+      {"row": 8, "col": "growth", "reason": "GUC 증가"}
+    ]
+  }
+}

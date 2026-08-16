@@ -1,0 +1,201 @@
+{
+  "id": "page-057-graph-02",
+  "mode": "faithful",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "line",
+    "title": "AWS 성장률 추이",
+    "subtitle": "YoY, %",
+    "source": "자료: Amazon, Factset, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2023-Q1",
+        "2024-Q1",
+        "2025-Q1",
+        "2025-Q4",
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "displayTickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ]
+    },
+    "yAxis": {
+      "label": "성장률",
+      "unit": "%",
+      "min": 0,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "AWS 성장률",
+        "color": "#1478F2",
+        "originalColor": "#1478F2"
+      },
+      {
+        "name": "Factset 컨센서스",
+        "color": "#FF4778",
+        "originalColor": "#FF4778"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "AWS 성장률",
+        "data": [
+          {
+            "x": "2023-Q1",
+            "y": 16
+          },
+          {
+            "x": "2023-Q2",
+            "y": 12
+          },
+          {
+            "x": "2023-Q3",
+            "y": 12
+          },
+          {
+            "x": "2023-Q4",
+            "y": 13
+          },
+          {
+            "x": "2024-Q1",
+            "y": 17
+          },
+          {
+            "x": "2024-Q2",
+            "y": 18.5
+          },
+          {
+            "x": "2024-Q3",
+            "y": 19
+          },
+          {
+            "x": "2024-Q4",
+            "y": 19
+          },
+          {
+            "x": "2025-Q1",
+            "y": 16.5
+          },
+          {
+            "x": "2025-Q2",
+            "y": 17
+          },
+          {
+            "x": "2025-Q3",
+            "y": 20.2
+          },
+          {
+            "x": "2025-Q4",
+            "y": 23.6
+          },
+          {
+            "x": "2026-Q1",
+            "y": 28.4
+          },
+          {
+            "x": "2026-Q2",
+            "y": 36.8
+          }
+        ]
+      },
+      {
+        "name": "Factset 컨센서스",
+        "data": [
+          {
+            "x": "2025-Q3",
+            "y": 18.3
+          },
+          {
+            "x": "2025-Q4",
+            "y": 21.2
+          },
+          {
+            "x": "2026-Q1",
+            "y": 25.1
+          },
+          {
+            "x": "2026-Q2",
+            "y": 31.3
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 12,
+      "max": 36.8,
+      "average": 20,
+      "latest": 36.8
+    },
+    "changeRates": [
+      {
+        "period": "2025-Q4~2026-Q2",
+        "percentChange": 55.9
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "AWS 성장률 추이",
+    "subMessage": "시장 예상치와 AWS 성장률의 회복 속도를 비교",
+    "headline": "AWS 성장률 추이",
+    "keyTakeaways": [
+      "2Q26 AWS 36.8%, 컨센서스 31.3%"
+    ],
+    "sentiment": "neutral",
+    "summary": "시장 예상치와 AWS 성장률의 회복 속도를 비교",
+    "story": "시장 예상치와 AWS 성장률의 회복 속도를 비교"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2026-Q2",
+      "y": 36.8,
+      "displayText": "36.8"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "2025년 이후 AWS 성장률 가속",
+    "supportResistance": []
+  },
+  "preserveIntent": {
+    "originalTitle": "AWS 성장률 추이",
+    "changedElements": [
+      "Paperlogy 글꼴과 1920x1080 카드 레이아웃만 적용"
+    ],
+    "qaNote": "2025년 이후 값은 원본의 인쇄 라벨을 우선 사용했고, 그 이전 선은 화면 굴곡을 읽은 source-visible 앵커값이다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": {
+    "titlePreserved": true,
+    "seriesCountMatches": true,
+    "sourcePreserved": true,
+    "xAxisLabelsMatch": true,
+    "dataFidelityNote": "source-visible QA: 두 선과 2025~2026 인쇄값을 원본과 대조"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  }
+}

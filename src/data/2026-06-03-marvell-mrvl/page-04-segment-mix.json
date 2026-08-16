@@ -1,0 +1,174 @@
+{
+  "id": "segment-mix",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "신한 리포트 부문별 매출 비중 파이(FY1Q27).",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "exact",
+    "notes": "신한 리포트 부문별 매출 비중 파이(FY1Q27).",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=exact."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "donut",
+    "title": "부문별 매출 비중",
+    "subtitle": "FY1Q27 기준 — 데이터센터 한 부문이 매출의 76%",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "timeRange": "FY1Q27",
+    "xAxis": {
+      "label": "부문",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "비중",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "%",
+      "min": 0,
+      "max": 100
+    },
+    "legend": [
+      {
+        "name": "데이터센터",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      },
+      {
+        "name": "네트워크",
+        "role": "primary",
+        "originalColor": "#14B8A6",
+        "remakeColor": "#14B8A6"
+      },
+      {
+        "name": "인프라",
+        "role": "primary",
+        "originalColor": "#F59E0B",
+        "remakeColor": "#F59E0B"
+      },
+      {
+        "name": "소비자용",
+        "role": "primary",
+        "originalColor": "#94A3B8",
+        "remakeColor": "#94A3B8"
+      },
+      {
+        "name": "전장/산업용",
+        "role": "primary",
+        "originalColor": "#A855F7",
+        "remakeColor": "#A855F7"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "신한 리포트 부문별 매출 비중 파이(FY1Q27).",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "부문별 매출 비중",
+    "summary": "FY1Q27 기준 — 데이터센터 한 부문이 매출의 76%",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FY1Q27 기준 — 데이터센터 한 부문이 매출의 76%"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "부문 비중",
+        "data": [
+          {
+            "x": "데이터센터",
+            "y": 76
+          },
+          {
+            "x": "네트워크",
+            "y": 11
+          },
+          {
+            "x": "인프라",
+            "y": 9
+          },
+          {
+            "x": "소비자용",
+            "y": 3
+          },
+          {
+            "x": "전장/산업용",
+            "y": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.97,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  }
+}

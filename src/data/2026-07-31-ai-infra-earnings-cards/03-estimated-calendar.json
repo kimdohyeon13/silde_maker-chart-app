@@ -1,0 +1,37 @@
+{
+  "id": "03-estimated-calendar",
+  "mode": "redesign",
+  "sourceImages": ["input/source-01-market-view.png", "input/source-02-second-watch.png"],
+  "contentType": "table",
+  "tableSubType": "schedule",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰 / 2nd watch",
+    "originalMessage": "AI 인프라 워치리스트의 다음 실적 일정",
+    "preservedElements": ["8개 미확정 추정 실적일", "티커", "장전·장후 추정", "ET 기준"],
+    "changedElements": ["월별 3단 구성", "필터 UI 제거", "추정 일정만 분리"],
+    "dataFidelity": "exact",
+    "notes": "회사가 아직 확정 공지하지 않은 시장 추정일이다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-colors"],
+  "qualityChecks": [{"id": "estimate-labels", "label": "추정 표기", "status": "pass", "detail": "카드 3의 모든 일정에 추정임을 표시했다."}],
+  "structure": {"title": "AI 인프라 실적 일정 · 3/3", "subtitle": "공식·시장 추정 혼합 | 2026년 8월 24일~10월 28일 · ET", "source": "자료: 각 사 IR, MarketBeat·Wall Street Horizon·MarketChameleon | 추정은 회사 미확정"},
+  "exportOptions": {"canvasHeight": 513, "backgroundColor": "#FFFFFF", "frameStyle": "none", "contentBorder": false, "headerVariant": "stacked", "squareEdges": true, "headerPadding": "14px 28px 0", "contentPadding": "8px 18px 0", "sourcePadding": "0 28px 10px", "titleFontSize": 31, "subtitleFontSize": 15, "subtitleFontWeight": 300, "sourceFontSize": 11, "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif", "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif", "accentColor": "#101828"},
+  "tableData": {
+    "columns": [
+      {"key": "aug", "label": "8월", "dataType": "text", "isRowHeader": true, "width": "34%"},
+      {"key": "sep", "label": "9월", "dataType": "text", "width": "33%"},
+      {"key": "oct", "label": "10월", "dataType": "text", "width": "33%"}
+    ],
+    "rows": [
+      {"cells": {"aug": {"value": "SMTC · 8/24 장후\n추정"}, "sep": {"value": "CRDO · 9/2 장후\n추정"}, "oct": {"value": "AEHR · 10/5~12\n추정"}}},
+      {"cells": {"aug": {"value": "NVDA · 8/26 장후\n공식"}, "sep": {"value": "MU · 9/23 장후\n추정"}, "oct": {"value": "TSM · 10/15 장전\n추정"}}},
+      {"cells": {"aug": {"value": "IREN · 8/27 장후\n추정"}, "sep": {"value": ""}, "oct": {"value": "GEV · 10/28 장전\n공식"}}},
+      {"cells": {"aug": {"value": "MRVL · 8/27~31\n추정"}, "sep": {"value": ""}, "oct": {"value": ""}}}
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {"rowHeight": 68, "cellPadding": "13px 18px", "lineHeight": 1.25, "zebraStripe": false, "highlightMode": "text", "headerTone": "underline", "rowRules": "soft", "columnRules": true, "sectionRules": false, "fontWeight": {"body": 600, "numeric": 700, "rowHeader": 900, "header": 700}, "fontSize": {"body": 18, "header": 16, "total": 18, "badge": 10}}
+  },
+  "narrative": {"headMessage": "8월 말~10월 실적 일정", "subMessage": "NVDA·GEV는 공식, 나머지는 시장 추정으로 분리", "headline": "8월 말~10월 실적 일정", "summary": "8월 말~10월 AI 인프라 실적 캘린더", "story": "추정 일정은 공식 발표와 같은 무게로 해석하지 않도록 구분했다.", "keyTakeaways": ["시장 추정 6개", "공식 확정 2개"], "questionsRaised": [], "viewerAction": "발표 전 회사 IR 확정 공지를 다시 확인한다.", "contextualNotes": ["모든 시간은 ET"]},
+  "emphasis": {"focusPoint": {"displayText": "추정 일정 6개", "reason": "회사 미확정"}, "colorStrategy": {"primary": "#101828", "secondary": ["#667085"], "positive": "#D92D20", "negative": "#2563EB", "accent": "#101828", "backgroundTone": "light"}, "densityLevel": "balanced"}
+}

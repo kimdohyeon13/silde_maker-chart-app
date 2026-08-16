@@ -1,0 +1,165 @@
+{
+  "id": "page-13-graph-02",
+  "sourceImage": "input/08-page_13_graph_02.png",
+  "analyzedAt": "2026-05-19T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "연간 비용의 최종 보스는 전력비가 아니라 서버다",
+    "subtitle": "1GW 모델에서 서버 연간 비용은 50억 달러, 전력은 약 6억 달러 수준",
+    "source": "제공 PDF 기반 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "서버",
+        "시설",
+        "네트워크",
+        "전력",
+        "기타 OpEx"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "연간 비용",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "B$",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "연간 비용",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연간 비용",
+        "role": "primary",
+        "data": [
+          {
+            "x": "서버",
+            "y": 5.0,
+            "confidence": 0.9
+          },
+          {
+            "x": "시설",
+            "y": 1.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "네트워크",
+            "y": 1.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "전력",
+            "y": 0.625,
+            "confidence": 0.9
+          },
+          {
+            "x": "기타 OpEx",
+            "y": 0.275,
+            "confidence": 0.9
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.88,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "복잡한 원문 시각물을 메시지 중심으로 재구성했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.75,
+      "description": "원문 숫자와 본문 설명을 리포트용으로 단순화했습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "핵심 방향성과 상대 비교가 중요합니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": -94.5,
+        "absoluteChange": -4.725,
+        "from": 5.0,
+        "to": 0.275
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5.0,
+        "at": ""
+      },
+      "min": {
+        "value": 0.275,
+        "at": ""
+      },
+      "average": 1.7,
+      "median": 1.2,
+      "range": 4.725
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "서버 $5B",
+    "subMessage": "1GW 모델에서 서버 연간 비용은 50억 달러, 전력은 약 6억 달러 수준",
+    "headline": "서버 $5B",
+    "summary": "전력은 문을 여는 조건이고, 손익은 서버 감가상각과 이용률이 좌우합니다.",
+    "story": "전력은 문을 여는 조건이고, 손익은 서버 감가상각과 이용률이 좌우합니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문 해설과 함께 숫자의 의미를 확인합니다.",
+    "contextualNotes": [
+      "제공 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "서버 $5B",
+      "reason": "전력은 문을 여는 조건이고, 손익은 서버 감가상각과 이용률이 좌우합니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

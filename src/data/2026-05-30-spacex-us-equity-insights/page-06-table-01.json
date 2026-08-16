@@ -1,0 +1,98 @@
+{
+  "id": "page-06-table-01",
+  "sourceImage": "input/05-page-06-table-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "contentType": "table",
+  "tableSubType": "ranking",
+  "structure": {
+    "title": "스페이스X 편입 시 단숨에 시총 7위권",
+    "subtitle": "나스닥100 상위 시총 30위, 5월 26일 기준, 단위 십억 달러",
+    "source": "Bloomberg, 삼성증권"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "rank", "label": "순위", "dataType": "number", "width": "10%", "isRowHeader": true, "align": "center" },
+      { "key": "name", "label": "기업명", "dataType": "text", "width": "42%", "align": "left" },
+      { "key": "mcap", "label": "유동 시가총액", "dataType": "number", "width": "26%", "align": "right" },
+      { "key": "weight", "label": "비중", "dataType": "number", "width": "22%", "align": "right" }
+    ],
+    "rows": [
+      { "cells": { "rank": {"value": 1, "displayValue": "1"}, "name": {"value": "엔비디아"}, "mcap": {"value": 5200, "displayValue": "5,200"}, "weight": {"value": 13.22, "displayValue": "13.22%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 2, "displayValue": "2"}, "name": {"value": "알파벳"}, "mcap": {"value": 4688, "displayValue": "4,688"}, "weight": {"value": 11.92, "displayValue": "11.92%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 3, "displayValue": "3"}, "name": {"value": "애플"}, "mcap": {"value": 4529, "displayValue": "4,529"}, "weight": {"value": 11.51, "displayValue": "11.51%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 4, "displayValue": "4"}, "name": {"value": "마이크로소프트"}, "mcap": {"value": 3090, "displayValue": "3,090"}, "weight": {"value": 7.86, "displayValue": "7.86%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 5, "displayValue": "5"}, "name": {"value": "아마존"}, "mcap": {"value": 2854, "displayValue": "2,854"}, "weight": {"value": 7.25, "displayValue": "7.25%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 6, "displayValue": "6"}, "name": {"value": "브로드컴"}, "mcap": {"value": 1998, "displayValue": "1,998"}, "weight": {"value": 5.08, "displayValue": "5.08%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 7, "displayValue": "7"}, "name": {"value": "테슬라", "badge": "현재 7위"}, "mcap": {"value": 1628, "displayValue": "1,628", "highlight": "accent"}, "weight": {"value": 4.14, "displayValue": "4.14%", "highlight": "accent"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 8, "displayValue": "8"}, "name": {"value": "메타 플랫폼스"}, "mcap": {"value": 1554, "displayValue": "1,554"}, "weight": {"value": 3.95, "displayValue": "3.95%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 9, "displayValue": "9"}, "name": {"value": "마이크론"}, "mcap": {"value": 1010, "displayValue": "1,010"}, "weight": {"value": 2.57, "displayValue": "2.57%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 10, "displayValue": "10"}, "name": {"value": "월마트"}, "mcap": {"value": 945, "displayValue": "945"}, "weight": {"value": 2.40, "displayValue": "2.40%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 11, "displayValue": "11"}, "name": {"value": "AMD"}, "mcap": {"value": 822, "displayValue": "822"}, "weight": {"value": 2.09, "displayValue": "2.09%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 12, "displayValue": "12"}, "name": {"value": "ASML"}, "mcap": {"value": 633, "displayValue": "633"}, "weight": {"value": 1.61, "displayValue": "1.61%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 13, "displayValue": "13"}, "name": {"value": "인텔"}, "mcap": {"value": 621, "displayValue": "621"}, "weight": {"value": 1.58, "displayValue": "1.58%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 14, "displayValue": "14"}, "name": {"value": "시스코"}, "mcap": {"value": 466, "displayValue": "466"}, "weight": {"value": 1.19, "displayValue": "1.19%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 15, "displayValue": "15"}, "name": {"value": "코스트코"}, "mcap": {"value": 445, "displayValue": "445"}, "weight": {"value": 1.13, "displayValue": "1.13%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 16, "displayValue": "16"}, "name": {"value": "램리서치"}, "mcap": {"value": 404, "displayValue": "404"}, "weight": {"value": 1.03, "displayValue": "1.03%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 17, "displayValue": "17"}, "name": {"value": "넷플릭스"}, "mcap": {"value": 369, "displayValue": "369"}, "weight": {"value": 0.94, "displayValue": "0.94%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 18, "displayValue": "18"}, "name": {"value": "어플라이드 머티어리얼즈"}, "mcap": {"value": 361, "displayValue": "361"}, "weight": {"value": 0.92, "displayValue": "0.92%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 19, "displayValue": "19"}, "name": {"value": "ARM"}, "mcap": {"value": 343, "displayValue": "343"}, "weight": {"value": 0.87, "displayValue": "0.87%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 20, "displayValue": "20"}, "name": {"value": "팔란티어"}, "mcap": {"value": 327, "displayValue": "327"}, "weight": {"value": 0.83, "displayValue": "0.83%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 21, "displayValue": "21"}, "name": {"value": "텍사스 인스트루먼트"}, "mcap": {"value": 296, "displayValue": "296"}, "weight": {"value": 0.75, "displayValue": "0.75%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 22, "displayValue": "22"}, "name": {"value": "KLA"}, "mcap": {"value": 263, "displayValue": "263"}, "weight": {"value": 0.67, "displayValue": "0.67%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 23, "displayValue": "23"}, "name": {"value": "퀄컴"}, "mcap": {"value": 262, "displayValue": "262"}, "weight": {"value": 0.67, "displayValue": "0.67%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 24, "displayValue": "24"}, "name": {"value": "린데"}, "mcap": {"value": 238, "displayValue": "238"}, "weight": {"value": 0.61, "displayValue": "0.61%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 25, "displayValue": "25"}, "name": {"value": "샌디스크"}, "mcap": {"value": 235, "displayValue": "235"}, "weight": {"value": 0.60, "displayValue": "0.60%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 26, "displayValue": "26"}, "name": {"value": "팔로 알토 네트웍스", "badge": "스페이스X 초기 편입"}, "mcap": {"value": 210, "displayValue": "210", "highlight": "positive"}, "weight": {"value": 0.53, "displayValue": "0.53%", "highlight": "positive"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 27, "displayValue": "27"}, "name": {"value": "T-모바일"}, "mcap": {"value": 207, "displayValue": "207"}, "weight": {"value": 0.53, "displayValue": "0.53%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 28, "displayValue": "28"}, "name": {"value": "애널로그 디바이시스"}, "mcap": {"value": 205, "displayValue": "205"}, "weight": {"value": 0.52, "displayValue": "0.52%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 29, "displayValue": "29"}, "name": {"value": "펩시코"}, "mcap": {"value": 199, "displayValue": "199"}, "weight": {"value": 0.51, "displayValue": "0.51%"} }, "rowType": "data" },
+      { "cells": { "rank": {"value": 30, "displayValue": "30"}, "name": {"value": "씨게이트"}, "mcap": {"value": 190, "displayValue": "190"}, "weight": {"value": 0.48, "displayValue": "0.48%"} }, "rowType": "data" }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": { "rowHeight": 42, "cellPadding": "9px 11px", "zebraStripe": true, "fontSize": {"header": "13px", "body": "13px", "total": "13px"} }
+  },
+  "narrative": {
+    "headMessage": "편입되면 곧장 7위권",
+    "subMessage": "테슬라를 제치고 초기엔 26위, 안착 시 7위로",
+    "headline": "스페이스X가 목표 시총에 도달하면 나스닥100에서 단숨에 상위 7위권 종목으로 자리 잡을 수 있습니다.",
+    "summary": "스페이스X가 목표 시총을 달성하면 테슬라를 제치고 나스닥100 시총 7위에 오르며, 초기 편입 시엔 26위권에서 출발합니다.",
+    "story": "스페이스X가 목표 시총을 달성하면 테슬라를 제치고 나스닥100 시총 7위에 오르며, 초기 편입 시엔 26위권에서 출발합니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {"x": "", "y": 0},
+      "displayText": "편입되면 곧장 7위권",
+      "reason": "스페이스X가 목표 시총을 달성하면 테슬라를 제치고 나스닥100 시총 7위에 오르며, 초기 편입 시엔 26위권에서 출발합니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

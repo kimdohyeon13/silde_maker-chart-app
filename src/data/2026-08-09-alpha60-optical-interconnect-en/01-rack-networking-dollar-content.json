@@ -1,0 +1,1403 @@
+{
+  "id": "rack-networking-dollar-content",
+  "mode": "faithful",
+  "sourceImage": "input/07-rack-networking-dollar-content.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 6: Dollar content per rack: GB300, Vera Rubin and Rubin Ultra",
+    "preservedElements": [
+      "Five system scenarios",
+      "Shipment timing, scale-up, and scale-out assumptions",
+      "GPU, NV Switch ASIC, and NIC counts",
+      "Networking cost per rack",
+      "Scale-up and scale-out component dollar content, volume, and ASP",
+      "Source"
+    ],
+    "changedElements": [
+      "Translated item labels into English",
+      "Grouped rows into assumptions, Scale-up, and Scale-out sections",
+      "Cleaned up typography and spacing"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The Exhibit 6 table cells were transcribed directly. The Exhibit 7 CPO switch specification comparison at the bottom of the same image is outside this deliverable's scope.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI layout plan completed first",
+      "status": "pass",
+      "detail": "Planned the five scenarios and three row sections first.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "visible-cell-values",
+      "label": "Preserved displayed cell values",
+      "status": "pass",
+      "detail": "Transcribed the displayed system assumptions, totals, components, volume, and ASP values from Exhibit 6.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "tall-table",
+      "label": "Long-table readability",
+      "status": "pending",
+      "detail": "After export, check for orphaned groups, cell wrapping, and source clipping.",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 540,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerPadding": "18px 24px 2px",
+    "contentPadding": "5px 18px 2px",
+    "sourcePadding": "0 24px 12px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 13,
+    "sourceFontSize": 9
+  },
+  "structure": {
+    "title": "Dollar content per rack: GB300, Vera Rubin, and Rubin Ultra",
+    "subtitle": "Volume assumptions: spec table (Exhibit 5) | ASP assumptions: spec table and industry checks | US$k unless noted",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "Dollar content",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "30%",
+        "align": "left"
+      },
+      {
+        "key": "gb300",
+        "label": "GB300 NVL72",
+        "dataType": "text",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "vr_a",
+        "label": "Vera Rubin Spec A\nNVL72",
+        "dataType": "text",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "vr_b",
+        "label": "Vera Rubin Spec B\nNVL72 · 25% CPO",
+        "dataType": "text",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "ru_a",
+        "label": "Rubin Ultra Spec A\nNVL144 · 29% CPO",
+        "dataType": "text",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "ru_b",
+        "label": "Rubin Ultra Spec B\nNVL576 · 29% CPO",
+        "dataType": "text",
+        "width": "14%",
+        "align": "right"
+      }
+    ],
+    "columnGroups": [
+      {
+        "label": "",
+        "keys": [
+          "item"
+        ]
+      },
+      {
+        "label": "GB300",
+        "keys": [
+          "gb300"
+        ]
+      },
+      {
+        "label": "Vera Rubin",
+        "keys": [
+          "vr_a",
+          "vr_b"
+        ]
+      },
+      {
+        "label": "Rubin Ultra",
+        "keys": [
+          "ru_a",
+          "ru_b"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Shipment period",
+            "displayValue": "Shipment period"
+          },
+          "gb300": {
+            "value": "2H25-2026"
+          },
+          "vr_a": {
+            "value": "2H26-2027"
+          },
+          "vr_b": {
+            "value": "2H26-2027"
+          },
+          "ru_a": {
+            "value": "2H27-2028"
+          },
+          "ru_b": {
+            "value": "2H27-2028"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Scale up"
+          },
+          "gb300": {
+            "value": "Copper cable",
+            "displayValue": "Copper cable"
+          },
+          "vr_a": {
+            "value": "Copper cable",
+            "displayValue": "Copper cable"
+          },
+          "vr_b": {
+            "value": "Copper cable",
+            "displayValue": "Copper cable"
+          },
+          "ru_a": {
+            "value": "PCB Midplane"
+          },
+          "ru_b": {
+            "value": "Copper cable + CPO",
+            "displayValue": "Copper cable + CPO"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Scale out"
+          },
+          "gb300": {
+            "value": "Optical modules (1.6T)",
+            "displayValue": "Optical modules (1.6T)"
+          },
+          "vr_a": {
+            "value": "Optical modules (1.6T)",
+            "displayValue": "Optical modules (1.6T)"
+          },
+          "vr_b": {
+            "value": "CPO TOR Switch (1.6T) + Optical module (1.6T)",
+            "displayValue": "CPO TOR (1.6T) + optical module (1.6T)"
+          },
+          "ru_a": {
+            "value": "CPO TOR Switch (3.2T) + Optical module (3.2T)",
+            "displayValue": "CPO TOR (3.2T) + optical module (3.2T)"
+          },
+          "ru_b": {
+            "value": "CPO TOR Switch (3.2T) + Optical module (3.2T)",
+            "displayValue": "CPO TOR (3.2T) + optical module (3.2T)"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "# of GPU package",
+            "displayValue": "GPU package count"
+          },
+          "gb300": {
+            "value": 72
+          },
+          "vr_a": {
+            "value": 72
+          },
+          "vr_b": {
+            "value": 72
+          },
+          "ru_a": {
+            "value": 144
+          },
+          "ru_b": {
+            "value": 72
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "# of NV Switch ASIC",
+            "displayValue": "NV Switch ASIC count"
+          },
+          "gb300": {
+            "value": 18
+          },
+          "vr_a": {
+            "value": 36
+          },
+          "vr_b": {
+            "value": 36
+          },
+          "ru_a": {
+            "value": 430
+          },
+          "ru_b": {
+            "value": 430
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "# of NIC",
+            "displayValue": "NIC count"
+          },
+          "gb300": {
+            "value": 72
+          },
+          "vr_a": {
+            "value": 144
+          },
+          "vr_b": {
+            "value": 144
+          },
+          "ru_a": {
+            "value": 288
+          },
+          "ru_b": {
+            "value": 144
+          }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "item": {
+            "value": "Networking costs per rack (US$ k)",
+            "displayValue": "Networking cost per rack (US$k)"
+          },
+          "gb300": {
+            "value": 315,
+            "displayValue": "315"
+          },
+          "vr_a": {
+            "value": 489,
+            "displayValue": "489"
+          },
+          "vr_b": {
+            "value": 504,
+            "displayValue": "504"
+          },
+          "ru_a": {
+            "value": 1113,
+            "displayValue": "1,113"
+          },
+          "ru_b": {
+            "value": 1169,
+            "displayValue": "1,169"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "item": {
+            "value": "Scale-up"
+          },
+          "gb300": {
+            "value": 140
+          },
+          "vr_a": {
+            "value": 140
+          },
+          "vr_b": {
+            "value": 140
+          },
+          "ru_a": {
+            "value": 381
+          },
+          "ru_b": {
+            "value": 803
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "item": {
+            "value": "Scale-out"
+          },
+          "gb300": {
+            "value": 175
+          },
+          "vr_a": {
+            "value": 349
+          },
+          "vr_b": {
+            "value": 364
+          },
+          "ru_a": {
+            "value": 732
+          },
+          "ru_b": {
+            "value": 366
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "item": {
+            "value": "Scale up dollar content per rack (US$ k)",
+            "displayValue": "Scale-up dollar content per rack (US$k)"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "item": {
+            "value": "Scale up dollar content per rack (US$ k)",
+            "displayValue": "Scale-up total"
+          },
+          "gb300": {
+            "value": 140
+          },
+          "vr_a": {
+            "value": 140
+          },
+          "vr_b": {
+            "value": 140
+          },
+          "ru_a": {
+            "value": 381
+          },
+          "ru_b": {
+            "value": 803
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Copper cable - backplane (US$ k)",
+            "displayValue": "Copper cable - backplane"
+          },
+          "gb300": {
+            "value": 93
+          },
+          "vr_a": {
+            "value": 93
+          },
+          "vr_b": {
+            "value": 93
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 156
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "vr_a": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "vr_b": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 5184,
+            "displayValue": "5,184"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": 18
+          },
+          "vr_a": {
+            "value": 18
+          },
+          "vr_b": {
+            "value": 18
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 30
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Copper cable - flyover in switch tray (US$ k)",
+            "displayValue": "Copper cable - flyover in switch tray"
+          },
+          "gb300": {
+            "value": 47
+          },
+          "vr_a": {
+            "value": 47
+          },
+          "vr_b": {
+            "value": 47
+          },
+          "ru_a": {
+            "value": 156
+          },
+          "ru_b": {
+            "value": 78
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "vr_a": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "vr_b": {
+            "value": 5184,
+            "displayValue": "5,184"
+          },
+          "ru_a": {
+            "value": 10368,
+            "displayValue": "10,368"
+          },
+          "ru_b": {
+            "value": 5184,
+            "displayValue": "5,184"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": 9
+          },
+          "vr_a": {
+            "value": 9
+          },
+          "vr_b": {
+            "value": 9
+          },
+          "ru_a": {
+            "value": 15
+          },
+          "ru_b": {
+            "value": 15
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "PCB midplane (US$ k)",
+            "displayValue": "PCB midplane"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": 225
+          },
+          "ru_b": {
+            "value": "-"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": 2
+          },
+          "ru_b": {
+            "value": "-"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": 112500,
+            "displayValue": "112,500"
+          },
+          "ru_b": {
+            "value": "-"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Optical engine & FAU (CPO/NPO, US$ k)",
+            "displayValue": "Optical engine & FAU (CPO/NPO)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 324
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 324
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 1000,
+            "displayValue": "1,000"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ELS (CPO/NPO, US$ k)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 65
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 162
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 400
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Fiber cable and MPO (CPO/NPO, US$ k)",
+            "displayValue": "Fiber cable & MPO (CPO/NPO)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 156
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 5184,
+            "displayValue": "5,184"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 30
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Shufflebox (US$ k)",
+            "displayValue": "Shufflebox"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 25
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 36
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": "-"
+          },
+          "ru_a": {
+            "value": "-"
+          },
+          "ru_b": {
+            "value": 700
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "item": {
+            "value": "Scale out dollar content per rack (US$ k)",
+            "displayValue": "Scale-out dollar content per rack (US$k)"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "item": {
+            "value": "Scale out dollar content per rack (US$ k)",
+            "displayValue": "Scale-out total"
+          },
+          "gb300": {
+            "value": 175
+          },
+          "vr_a": {
+            "value": 349
+          },
+          "vr_b": {
+            "value": 364
+          },
+          "ru_a": {
+            "value": 732
+          },
+          "ru_b": {
+            "value": 366
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Optical module (US$ k)",
+            "displayValue": "Optical module"
+          },
+          "gb300": {
+            "value": 173
+          },
+          "vr_a": {
+            "value": 346
+          },
+          "vr_b": {
+            "value": 259
+          },
+          "ru_a": {
+            "value": 491
+          },
+          "ru_b": {
+            "value": 245
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": 216
+          },
+          "vr_a": {
+            "value": 432
+          },
+          "vr_b": {
+            "value": 324
+          },
+          "ru_a": {
+            "value": 307
+          },
+          "ru_b": {
+            "value": 153
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": 800
+          },
+          "vr_a": {
+            "value": 800
+          },
+          "vr_b": {
+            "value": 800
+          },
+          "ru_a": {
+            "value": 1600,
+            "displayValue": "1,600"
+          },
+          "ru_b": {
+            "value": 1600,
+            "displayValue": "1,600"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Optical engine & FAU (CPO/NPO, US$ k)",
+            "displayValue": "Optical engine & FAU (CPO/NPO)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 86
+          },
+          "ru_a": {
+            "value": 200
+          },
+          "ru_b": {
+            "value": 100
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 108
+          },
+          "ru_a": {
+            "value": 125
+          },
+          "ru_b": {
+            "value": 63
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 800
+          },
+          "ru_a": {
+            "value": 1600,
+            "displayValue": "1,600"
+          },
+          "ru_b": {
+            "value": 1600,
+            "displayValue": "1,600"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ELS (CPO/NPO, US$ k)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 11
+          },
+          "ru_a": {
+            "value": 25
+          },
+          "ru_b": {
+            "value": 13
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 27
+          },
+          "ru_a": {
+            "value": 63
+          },
+          "ru_b": {
+            "value": 31
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 400
+          },
+          "ru_a": {
+            "value": 400
+          },
+          "ru_b": {
+            "value": 400
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Fiber cable and MPO (CPO/NPO, US$ k)",
+            "displayValue": "Fiber cable & MPO (CPO/NPO)"
+          },
+          "gb300": {
+            "value": 2
+          },
+          "vr_a": {
+            "value": 4
+          },
+          "vr_b": {
+            "value": 4
+          },
+          "ru_a": {
+            "value": 6
+          },
+          "ru_b": {
+            "value": 3
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": 108
+          },
+          "vr_a": {
+            "value": 216
+          },
+          "vr_b": {
+            "value": 216
+          },
+          "ru_a": {
+            "value": 216
+          },
+          "ru_b": {
+            "value": 108
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": 18
+          },
+          "vr_a": {
+            "value": 18
+          },
+          "vr_b": {
+            "value": 18
+          },
+          "ru_a": {
+            "value": 30
+          },
+          "ru_b": {
+            "value": 30
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Shufflebox (US$ k)",
+            "displayValue": "Shufflebox"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 4
+          },
+          "ru_a": {
+            "value": 10
+          },
+          "ru_b": {
+            "value": 5
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Volume (unit)",
+            "displayValue": "↳ Volume (unit)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 6
+          },
+          "ru_a": {
+            "value": 14
+          },
+          "ru_b": {
+            "value": 7
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ASP (US$)",
+            "displayValue": "↳ ASP (US$)"
+          },
+          "gb300": {
+            "value": "-"
+          },
+          "vr_a": {
+            "value": "-"
+          },
+          "vr_b": {
+            "value": 700
+          },
+          "ru_a": {
+            "value": 700
+          },
+          "ru_b": {
+            "value": 700
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 27,
+      "cellPadding": "4px 6px",
+      "lineHeight": 1.08,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "columnGroupTone": "tinted",
+      "columnRules": true,
+      "accentColor": "#123E73",
+      "fontWeight": {
+        "body": 480,
+        "numeric": 620,
+        "rowHeader": 600,
+        "header": 720,
+        "total": 800,
+        "groupHeader": 760,
+        "columnGroup": 760
+      },
+      "fontSize": {
+        "header": "10px",
+        "body": "10px",
+        "total": "11px",
+        "badge": "8px",
+        "unit": "8px",
+        "groupHeader": "10px",
+        "columnGroup": "10px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Dollar content per rack: GB300, Vera Rubin, and Rubin Ultra",
+    "subMessage": "System assumptions, Scale-up and Scale-out BoM | US$k",
+    "headline": "Dollar content per rack: GB300, Vera Rubin, and Rubin Ultra",
+    "summary": "Preserved Exhibit 6's displayed cells in a detailed table.",
+    "story": "Networking costs and component-level composition across five scenarios.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "Compare rack totals and Scale-up/Scale-out details by scenario.",
+    "contextualNotes": [
+      "Source: Company data, Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "exact",
+      "reason": "Directly transcribed table-cell values"
+    },
+    "colorStrategy": {
+      "primary": "#123E73",
+      "secondary": [
+        "#D8E8F5"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#5E93BC",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      {
+        "row": 6,
+        "col": "ru_a",
+        "reason": "Rubin Ultra Spec A networking cost per rack"
+      },
+      {
+        "row": 6,
+        "col": "ru_b",
+        "reason": "Rubin Ultra Spec B networking cost per rack"
+      },
+      {
+        "row": 33,
+        "col": "ru_a",
+        "reason": "Scale-out total"
+      }
+    ]
+  }
+}
+

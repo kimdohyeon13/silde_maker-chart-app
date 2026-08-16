@@ -1,0 +1,120 @@
+{
+  "id": "01-q2-results-reaction",
+  "mode": "redesign",
+  "sourceImages": [
+    "input/source-01-market-view.png",
+    "input/source-02-second-watch.png"
+  ],
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰 / 2nd watch",
+    "originalMessage": "AI 인프라 워치리스트 중 최근 실적 발표 종목의 비교",
+    "preservedElements": [
+      "BE·TER·VRT·FORM·AXTI 5개 티커",
+      "실제 EPS와 컨센서스 비교",
+      "실제 매출과 컨센서스 비교",
+      "EPS 서프라이즈와 발표 후 주가 반응",
+      "달러와 퍼센트 단위"
+    ],
+    "changedElements": [
+      "워치리스트 필터 UI 제거",
+      "실적 기준 비교표로 재구성",
+      "AXTI 장후 반응을 별도 표기",
+      "수치 가독성을 위한 줄바꿈"
+    ],
+    "dataFidelity": "exact",
+    "notes": "실제치는 회사 IR/SEC, 컨센서스는 MarketBeat와 Benzinga, 정규장 종가는 Yahoo Finance 일별 종가를 대조했다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "translate-text"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "qa/layout-plan.md의 5행·6열 비교표 계획을 적용했다."
+    },
+    {
+      "id": "axti-after-hours-labelled",
+      "label": "AXTI 장후 반응 구분",
+      "status": "pass",
+      "detail": "AXTI +25%는 7/30 장후 기준이며 익일 정규장 종가가 아님을 표에 명시했다."
+    }
+  ],
+  "structure": {
+    "title": "AI 인프라 실적 반응 · 1/3",
+    "subtitle": "Q2 2026 | 실제치 / 시장 예상 · 주가는 정규장 종가 기준 (ET)",
+    "source": "자료: 회사 IR·SEC, MarketBeat·Benzinga, Yahoo Finance | 2026-07-30 ET"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "14px 28px 0",
+    "contentPadding": "6px 18px 0",
+    "sourcePadding": "0 28px 8px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#101828"
+  },
+  "tableData": {
+    "columns": [
+      {"key": "ticker", "label": "티커", "dataType": "text", "isRowHeader": true, "width": "10%"},
+      {"key": "eps", "label": "EPS\n실제 / 예상", "dataType": "text", "align": "right", "width": "16%"},
+      {"key": "revenue", "label": "매출\n실제 / 예상", "dataType": "text", "align": "right", "width": "20%"},
+      {"key": "epsSurprise", "label": "EPS\n서프라이즈", "dataType": "text", "align": "right", "width": "15%"},
+      {"key": "price", "label": "발표일 → 익일\n주가 변동", "dataType": "text", "align": "right", "width": "24%"},
+      {"key": "timing", "label": "발표", "dataType": "text", "align": "right", "width": "15%"}
+    ],
+    "rows": [
+      {"cells": {"ticker": {"value": "BE"}, "eps": {"value": "$0.78\n/ $0.39"}, "revenue": {"value": "$1.065B\n/ $0.826B"}, "epsSurprise": {"value": "+100.0%", "highlight": "positive"}, "price": {"value": "$166.84 → $163.75\n-1.85%", "highlight": "negative"}, "timing": {"value": "7/28\n장후"}}},
+      {"cells": {"ticker": {"value": "TER"}, "eps": {"value": "$2.47\n/ $2.09"}, "revenue": {"value": "$1.329B\n/ $1.220B"}, "epsSurprise": {"value": "+18.2%", "highlight": "positive"}, "price": {"value": "$320.65 → $319.41\n-0.39%", "highlight": "negative"}, "timing": {"value": "7/28\n장후"}}},
+      {"cells": {"ticker": {"value": "VRT"}, "eps": {"value": "$1.52\n/ $1.43"}, "revenue": {"value": "$3.274B\n/ $3.380B"}, "epsSurprise": {"value": "+6.3%", "highlight": "positive"}, "price": {"value": "$223.04 → $227.50\n+2.00%", "highlight": "positive"}, "timing": {"value": "7/29\n장전"}}},
+      {"cells": {"ticker": {"value": "FORM"}, "eps": {"value": "$0.82\n/ $0.61"}, "revenue": {"value": "$258.24M\n/ $240.00M"}, "epsSurprise": {"value": "+34.4%", "highlight": "positive"}, "price": {"value": "$83.45 → $105.38\n+26.28%", "highlight": "positive"}, "timing": {"value": "7/29\n장후"}}},
+      {"cells": {"ticker": {"value": "AXTI"}, "eps": {"value": "$0.19\n/ $0.07"}, "revenue": {"value": "$47.59M\n/ $34.09M"}, "epsSurprise": {"value": "+171.4%", "highlight": "positive"}, "price": {"value": "장후 +25%\n(7/30 종가 기준)", "highlight": "positive"}, "timing": {"value": "7/30\n장후"}}}
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 57,
+      "cellPadding": "8px 10px",
+      "lineHeight": 1.18,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontWeight": {"body": 500, "numeric": 700, "rowHeader": 900, "header": 700},
+      "fontSize": {"body": 15, "header": 13, "total": 15, "badge": 10}
+    }
+  },
+  "narrative": {
+    "headMessage": "FORM·AXTI, 실적 뒤 가장 크게 반응",
+    "subMessage": "AXTI +25%는 장후 반응이며 익일 정규장 수익률과 구분",
+    "headline": "AI 인프라 실적 반응",
+    "summary": "최근 발표 5개 종목의 실적과 주가 반응 비교",
+    "story": "실제 실적과 컨센서스를 같은 행에 두고 발표 시점별 주가 반응을 구분했다.",
+    "keyTakeaways": ["실제 EPS·매출과 예상치를 보존", "AXTI 장후 반응 +25% 명시"],
+    "questionsRaised": [],
+    "viewerAction": "발표 시간과 주가 기준일을 함께 확인한다.",
+    "contextualNotes": ["모든 시간은 ET"]
+  },
+  "emphasis": {
+    "focusPoint": {"displayText": "AXTI 장후 +25%", "reason": "7/30 장후 반응"},
+    "colorStrategy": {"primary": "#D92D20", "secondary": ["#667085"], "positive": "#D92D20", "negative": "#2563EB", "accent": "#D92D20", "backgroundTone": "light"},
+    "densityLevel": "dense"
+  }
+}

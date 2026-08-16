@@ -1,0 +1,234 @@
+{
+  "id": "06-adjusted-operating-income",
+  "sourceImage": "input/06-adjusted-operating-income.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "$1.194 billion in Q2 2026, a 62% margin",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Adjusted Operating Income Up 2.6x in 5 Quarters",
+    "subtitle": "$1.194 billion in Q2 2026, a 62% margin",
+    "source": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Adjusted operating income",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adjusted operating income",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 464,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 601,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 798,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 984,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 1194,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.903,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 157.3,
+        "absoluteChange": 730.0,
+        "from": 464.0,
+        "to": 1194.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1194.0,
+        "at": ""
+      },
+      "min": {
+        "value": 464.0,
+        "at": ""
+      },
+      "average": 808.2,
+      "median": 798.0,
+      "range": 730.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Adjusted Operating Income Up 2.6x in 5 Quarters",
+    "subMessage": "$1.194 billion in Q2 2026, a 62% margin",
+    "headline": "Adjusted Operating Income Up 2.6x in 5 Quarters",
+    "summary": "$1.194 billion in Q2 2026, a 62% margin",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "$1.194 billion in Q2 2026, a 62% margin",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 1194.0
+      },
+      "displayText": "Up 2.6x in five quarters",
+      "reason": "$1.194 billion in Q2 2026, a 62% margin"
+    },
+    "densityLevel": "balanced"
+  }
+}

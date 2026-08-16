@@ -1,0 +1,920 @@
+{
+  "id": "05-table-ism-comparison",
+  "sourceImage": "input/05-source-02-ism-survey-table.png",
+  "analyzedAt": "2026-07-13T20:30:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "ISM 서비스업/제조업 세부지수 비교, 2026년 6월",
+    "preservedElements": [
+      "title",
+      "source",
+      "rows",
+      "columns",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-fonts",
+      "adjust-spacing",
+      "adjust-density",
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 검수팩 여백"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표 셀에 직접 보이는 값을 전사했습니다. 형식 검수를 위한 복제본이며 원본 데이터 payload는 변경하지 않았습니다.",
+    "sourceAttribution": "Source: Institute for Supply Management | exact",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-density",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-exact-values",
+      "label": "표시값 직접 전사",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "paperlogy-format-review",
+      "label": "Paperlogy 900·300 형식 검수",
+      "status": "pass",
+      "detail": "비교표의 Paperlogy 900·300, 16:9, 겹침·오버플로·콘텐츠 개수를 DOM에서 확인했습니다.",
+      "checkedAt": "2026-07-17"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "1px 8px 1px",
+    "sourcePadding": "0 24px 7px",
+    "accentColor": "#101828",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  },
+  "structure": {
+    "title": "ISM 세부 지표는 확장을 유지했지만 속도는 대체로 둔화",
+    "subtitle": "서비스업과 제조업의 6월·5월 비교",
+    "source": "자료: ISM | 원문 수치·N/A 보존"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "index",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "23%",
+        "align": "left"
+      },
+      {
+        "key": "s_jun",
+        "label": "6월",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "s_may",
+        "label": "5월",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "s_chg",
+        "label": "변화",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right",
+        "sectionStart": false
+      },
+      {
+        "key": "direction",
+        "label": "방향",
+        "dataType": "text",
+        "width": "10%",
+        "align": "center",
+        "sectionStart": true
+      },
+      {
+        "key": "rate",
+        "label": "속도",
+        "dataType": "text",
+        "width": "12%",
+        "align": "center"
+      },
+      {
+        "key": "trend",
+        "label": "지속\n(개월)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m_jun",
+        "label": "6월",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right",
+        "sectionStart": true
+      },
+      {
+        "key": "m_may",
+        "label": "5월",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m_chg",
+        "label": "변화",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Services PMI / Manufacturing PMI",
+            "displayValue": "서비스업 PMI / 제조업 PMI"
+          },
+          "s_jun": {
+            "value": 54,
+            "displayValue": "54"
+          },
+          "s_may": {
+            "value": 54.5,
+            "displayValue": "54.5"
+          },
+          "s_chg": {
+            "value": -0.5,
+            "displayValue": "-0.5",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": 53.3,
+            "displayValue": "53.3"
+          },
+          "m_may": {
+            "value": 54,
+            "displayValue": "54"
+          },
+          "m_chg": {
+            "value": -0.7,
+            "displayValue": "-0.7",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Business Activity / Production",
+            "displayValue": "사업활동 / 생산"
+          },
+          "s_jun": {
+            "value": 55.4,
+            "displayValue": "55.4"
+          },
+          "s_may": {
+            "value": 57.7,
+            "displayValue": "57.7"
+          },
+          "s_chg": {
+            "value": -2.3,
+            "displayValue": "-2.3",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": 52.2,
+            "displayValue": "52.2"
+          },
+          "m_may": {
+            "value": 54.3,
+            "displayValue": "54.3"
+          },
+          "m_chg": {
+            "value": -2.1,
+            "displayValue": "-2.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "New Orders",
+            "displayValue": "신규주문"
+          },
+          "s_jun": {
+            "value": 55.1,
+            "displayValue": "55.1"
+          },
+          "s_may": {
+            "value": 57.3,
+            "displayValue": "57.3"
+          },
+          "s_chg": {
+            "value": -2.2,
+            "displayValue": "-2.2",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 13,
+            "displayValue": "13"
+          },
+          "m_jun": {
+            "value": 56,
+            "displayValue": "56"
+          },
+          "m_may": {
+            "value": 56.8,
+            "displayValue": "56.8"
+          },
+          "m_chg": {
+            "value": -0.8,
+            "displayValue": "-0.8",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Employment",
+            "displayValue": "고용"
+          },
+          "s_jun": {
+            "value": 51.2,
+            "displayValue": "51.2"
+          },
+          "s_may": {
+            "value": 47.9,
+            "displayValue": "47.9"
+          },
+          "s_chg": {
+            "value": 3.3,
+            "displayValue": "+3.3",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "From Contracting",
+            "displayValue": "위축→확장"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 49.7,
+            "displayValue": "49.7"
+          },
+          "m_may": {
+            "value": 48.6,
+            "displayValue": "48.6"
+          },
+          "m_chg": {
+            "value": 1.1,
+            "displayValue": "+1.1",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Supplier Deliveries",
+            "displayValue": "공급자 납기"
+          },
+          "s_jun": {
+            "value": 54.4,
+            "displayValue": "54.4"
+          },
+          "s_may": {
+            "value": 55.2,
+            "displayValue": "55.2"
+          },
+          "s_chg": {
+            "value": -0.8,
+            "displayValue": "-0.8",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Slowing",
+            "displayValue": "둔화"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 19,
+            "displayValue": "19"
+          },
+          "m_jun": {
+            "value": 57.4,
+            "displayValue": "57.4"
+          },
+          "m_may": {
+            "value": 60.6,
+            "displayValue": "60.6"
+          },
+          "m_chg": {
+            "value": -3.2,
+            "displayValue": "-3.2",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Inventories",
+            "displayValue": "재고"
+          },
+          "s_jun": {
+            "value": 51.2,
+            "displayValue": "51.2"
+          },
+          "s_may": {
+            "value": 62.5,
+            "displayValue": "62.5"
+          },
+          "s_chg": {
+            "value": -11.3,
+            "displayValue": "-11.3",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 5,
+            "displayValue": "5"
+          },
+          "m_jun": {
+            "value": 51.4,
+            "displayValue": "51.4"
+          },
+          "m_may": {
+            "value": 49.9,
+            "displayValue": "49.9"
+          },
+          "m_chg": {
+            "value": 1.5,
+            "displayValue": "+1.5",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Prices",
+            "displayValue": "가격"
+          },
+          "s_jun": {
+            "value": 67.7,
+            "displayValue": "67.7"
+          },
+          "s_may": {
+            "value": 71.3,
+            "displayValue": "71.3"
+          },
+          "s_chg": {
+            "value": -3.6,
+            "displayValue": "-3.6",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Increasing",
+            "displayValue": "상승"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 109,
+            "displayValue": "109"
+          },
+          "m_jun": {
+            "value": 73,
+            "displayValue": "73"
+          },
+          "m_may": {
+            "value": 82.1,
+            "displayValue": "82.1"
+          },
+          "m_chg": {
+            "value": -9.1,
+            "displayValue": "-9.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Backlog of Orders",
+            "displayValue": "주문잔고"
+          },
+          "s_jun": {
+            "value": 54.9,
+            "displayValue": "54.9"
+          },
+          "s_may": {
+            "value": 51.3,
+            "displayValue": "51.3"
+          },
+          "s_chg": {
+            "value": 3.6,
+            "displayValue": "+3.6",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Faster",
+            "displayValue": "가속"
+          },
+          "trend": {
+            "value": 5,
+            "displayValue": "5"
+          },
+          "m_jun": {
+            "value": 50.5,
+            "displayValue": "50.5"
+          },
+          "m_may": {
+            "value": 52.2,
+            "displayValue": "52.2"
+          },
+          "m_chg": {
+            "value": -1.7,
+            "displayValue": "-1.7",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "New Export Orders",
+            "displayValue": "신규 수출주문"
+          },
+          "s_jun": {
+            "value": 50.4,
+            "displayValue": "50.4"
+          },
+          "s_may": {
+            "value": 50,
+            "displayValue": "50"
+          },
+          "s_chg": {
+            "value": 0.4,
+            "displayValue": "+0.4",
+            "highlight": "positive"
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "From Unchanged",
+            "displayValue": "보합→확장"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 48.5,
+            "displayValue": "48.5"
+          },
+          "m_may": {
+            "value": 50.6,
+            "displayValue": "50.6"
+          },
+          "m_chg": {
+            "value": -2.1,
+            "displayValue": "-2.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Imports",
+            "displayValue": "수입"
+          },
+          "s_jun": {
+            "value": 49.4,
+            "displayValue": "49.4"
+          },
+          "s_may": {
+            "value": 51.1,
+            "displayValue": "51.1"
+          },
+          "s_chg": {
+            "value": -1.7,
+            "displayValue": "-1.7",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Contracting",
+            "displayValue": "위축"
+          },
+          "rate": {
+            "value": "From Growing",
+            "displayValue": "확장→위축"
+          },
+          "trend": {
+            "value": 1,
+            "displayValue": "1"
+          },
+          "m_jun": {
+            "value": 52.9,
+            "displayValue": "52.9"
+          },
+          "m_may": {
+            "value": 53,
+            "displayValue": "53"
+          },
+          "m_chg": {
+            "value": -0.1,
+            "displayValue": "-0.1",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Inventory Sentiment",
+            "displayValue": "재고 심리"
+          },
+          "s_jun": {
+            "value": 52.6,
+            "displayValue": "52.6"
+          },
+          "s_may": {
+            "value": 55.2,
+            "displayValue": "55.2"
+          },
+          "s_chg": {
+            "value": -2.6,
+            "displayValue": "-2.6",
+            "highlight": "negative"
+          },
+          "direction": {
+            "value": "Too High",
+            "displayValue": "과다"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 38,
+            "displayValue": "38"
+          },
+          "m_jun": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_may": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_chg": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "index": {
+            "value": "Customers' Inventories",
+            "displayValue": "고객 재고"
+          },
+          "s_jun": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "s_may": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "s_chg": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "direction": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "rate": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "trend": {
+            "value": "N/A",
+            "displayValue": "N/A"
+          },
+          "m_jun": {
+            "value": 42.3,
+            "displayValue": "42.3"
+          },
+          "m_may": {
+            "value": 42.7,
+            "displayValue": "42.7"
+          },
+          "m_chg": {
+            "value": -0.4,
+            "displayValue": "-0.4",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "index": {
+            "value": "OVERALL ECONOMY",
+            "displayValue": "전체 경제"
+          },
+          "s_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_chg": {
+            "value": "",
+            "displayValue": ""
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 73,
+            "displayValue": "73"
+          },
+          "m_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_chg": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "index": {
+            "value": "Services Sector",
+            "displayValue": "서비스업"
+          },
+          "s_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "s_chg": {
+            "value": "",
+            "displayValue": ""
+          },
+          "direction": {
+            "value": "Growing",
+            "displayValue": "확장"
+          },
+          "rate": {
+            "value": "Slower",
+            "displayValue": "둔화"
+          },
+          "trend": {
+            "value": 24,
+            "displayValue": "24"
+          },
+          "m_jun": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_may": {
+            "value": "",
+            "displayValue": ""
+          },
+          "m_chg": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 24,
+      "cellPadding": "2px 5px",
+      "lineHeight": 1.05,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "groupHeaderTone": "plain",
+      "columnGroupTone": "tinted",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#344054",
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 450,
+        "numeric": 550,
+        "rowHeader": 600,
+        "header": 650,
+        "total": 650,
+        "groupHeader": 650,
+        "columnGroup": 650
+      },
+      "fontSize": {
+        "header": "11px",
+        "body": "11.5px",
+        "total": "12px",
+        "badge": "9px",
+        "unit": "9px",
+        "groupHeader": "11px",
+        "columnGroup": "10px"
+      }
+    },
+    "columnGroups": [
+      {
+        "label": "",
+        "keys": [
+          "index"
+        ]
+      },
+      {
+        "label": "서비스업",
+        "keys": [
+          "s_jun",
+          "s_may",
+          "s_chg"
+        ]
+      },
+      {
+        "label": "경기 방향",
+        "keys": [
+          "direction",
+          "rate",
+          "trend"
+        ]
+      },
+      {
+        "label": "제조업",
+        "keys": [
+          "m_jun",
+          "m_may",
+          "m_chg"
+        ]
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "ISM 세부 지표는 확장을 유지했지만 속도는 대체로 둔화",
+    "subMessage": "서비스업과 제조업의 6월·5월 비교",
+    "headline": "ISM 세부 지표는 확장을 유지했지만 속도는 대체로 둔화",
+    "summary": "서비스업과 제조업의 6월·5월 비교",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "표 셀 직접 전사값 | Percent Point Change는 p 변화"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "자료: ISM | 원문 수치·N/A 보존"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "exact"
+    },
+    "densityLevel": "balanced"
+  }
+}

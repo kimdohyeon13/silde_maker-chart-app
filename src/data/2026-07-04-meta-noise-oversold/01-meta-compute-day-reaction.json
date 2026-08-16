@@ -1,0 +1,148 @@
+{
+  "id": "01-meta-compute-day-reaction",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "메타 클라우드 진출 보도 당일 종목별 주가 반응",
+    "preservedElements": [
+      "축 라벨/단위/기간 축",
+      "계열 구성",
+      "핵심 추세와 대소 관계"
+    ],
+    "changedElements": [
+      "팬톤 2026 팔레트로 색 통일",
+      "제목/부제 한국어 재작성",
+      "격자·여백 정리"
+    ],
+    "dataFidelity": "source-cited",
+    "notes": "등락률은 CNBC·The Motley Fool 보도 수치를 그대로 사용."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visual-similarity-90",
+      "label": "소스 차트 구조 보존",
+      "status": "pass",
+      "detail": "보도 매체에 명시된 당일 등락률 수치를 그대로 표기.",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "palette-pantone-2026",
+      "label": "팬톤 2026 팔레트",
+      "status": "pass",
+      "detail": "Classic Blue/Living Coral/Very Peri/Illuminating/Ultimate Gray만 사용",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Meta Compute 보도 당일, 주가는 이렇게 갈렸다",
+    "subtitle": "메타는 오르고 네오클라우드만 급락 — 노이즈 한 건이 만든 낙폭",
+    "source": "자료: CNBC, The Motley Fool (2026-07-01~02)",
+    "xAxis": {
+      "label": "종목",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "보도 당일 등락률",
+      "type": "numeric",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "-20",
+        "-10",
+        "0",
+        "10"
+      ],
+      "min": -20,
+      "max": 12
+    },
+    "legend": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "메타는 오르고 네오클라우드만 급락 — 노이즈 한 건이 만든 낙폭",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "Meta Compute 보도 당일, 주가는 이렇게 갈렸다",
+    "summary": "메타는 오르고 네오클라우드만 급락 — 노이즈 한 건이 만든 낙폭",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "네오클라우드 -14~-17%, 메타 +9.5%"
+    },
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#FF6F61"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#F5DF4D",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-07-04T16:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "보도 당일 등락률",
+        "data": [
+          {
+            "x": "메타",
+            "y": 9.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "코어위브",
+            "y": -13.9,
+            "confidence": 0.95
+          },
+          {
+            "x": "네비우스",
+            "y": -17.0,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      }
+    ],
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

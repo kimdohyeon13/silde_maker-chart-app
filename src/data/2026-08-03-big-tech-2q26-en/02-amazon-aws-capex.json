@@ -1,0 +1,213 @@
+{
+  "id": "amazon-aws-capex",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Amazon AWS 성장과 cash CapEx를 실제치와 시장 예상으로 비교",
+    "preservedElements": [
+      "AWS 매출 $42.232B와 성장률 +36.8%",
+      "사용자 제공 컨센서스 $40.540B",
+      "Q2 cash CapEx $53.076B와 사용자 제공 컨센서스 $49.350B",
+      "FY26 cash CapEx 약 $220B, 기존 약 $200B"
+    ],
+    "changedElements": [
+      "컨센서스 전용 열과 빈 셀을 제거하고 관련 숫자 안에 병기",
+      "반복된 보조 문구·출처 푸터를 화면에서 숨김",
+      "4열 비교표를 3행·3열 표로 축소"
+    ],
+    "dataFidelity": "exact",
+    "notes": "실제치·전망은 Amazon 공개 IR/SEC·실적 콜, 컨센서스는 사용자 제공 시장 컨센서스로 구분했다. cash CapEx 정의를 유지한다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "minimal-layout",
+      "label": "미니멀 표 구조",
+      "status": "pass",
+      "detail": "제목 1줄, 3행·3열, cash CapEx 정의와 비교값을 유지했다."
+    }
+  ],
+  "structure": {
+    "title": "Amazon: AWS and CapEx Rise Together",
+    "source": "자료: Amazon IR·SEC·실적 콜 | 컨센서스: 사용자 제공 시장 컨센서스"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "28px 36px 0",
+    "contentPadding": "16px 36px 0",
+    "titleFontSize": 27,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "29%"
+      },
+      {
+        "key": "value",
+        "label": "Results & Guidance",
+        "dataType": "text",
+        "align": "right",
+        "width": "46%"
+      },
+      {
+        "key": "read",
+        "label": "Takeaway",
+        "dataType": "text",
+        "align": "right",
+        "width": "25%"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "AWS Revenue",
+            "displayValue": "AWS Revenue"
+          },
+          "value": {
+            "value": "$42.232B · +36.8% / vs. consensus $40.540B",
+            "displayValue": "$42.232B · +36.8%\nvs. consensus $40.540B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Demand accelerates",
+            "highlight": "positive",
+            "displayValue": "Demand accelerates"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Q2 Cash CapEx",
+            "displayValue": "Q2 Cash CapEx"
+          },
+          "value": {
+            "value": "$53.076B / vs. consensus $49.350B",
+            "displayValue": "$53.076B\nvs. consensus $49.350B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Front-loaded investment",
+            "displayValue": "Front-loaded investment"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY26 Cash CapEx",
+            "displayValue": "FY26 Cash CapEx"
+          },
+          "value": {
+            "value": "About $220B / (previously about $200B)",
+            "displayValue": "About $220B\n(previously about $200B)",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Guidance raised",
+            "displayValue": "Guidance raised"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 70,
+      "cellPadding": "10px 12px",
+      "lineHeight": 1.24,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 700,
+        "rowHeader": 800,
+        "header": 700
+      },
+      "fontSize": {
+        "body": 16,
+        "header": 12,
+        "total": 16,
+        "badge": 10
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Amazon: AWS and CapEx Rise Together",
+    "subMessage": "Amazon: AWS and CapEx Rise Together",
+    "headline": "AWS 수요와 cash CapEx 확대를 한 화면에 둔다.",
+    "summary": "AWS 매출은 $42.232B, 성장률은 +36.8%이며 FY26 cash CapEx 전망은 약 $220B다.",
+    "story": "AWS 성장과 투자 확대의 핵심 숫자만 남기고, 비교값은 필요한 행 안에 병기한다.",
+    "keyTakeaways": [
+      "AWS 매출은 사용자 제공 컨센서스를 상회했다.",
+      "FY26 cash CapEx 전망은 약 $220B다."
+    ],
+    "questionsRaised": [
+      "cash CapEx 증가가 현금흐름에 어떻게 연결되는가?"
+    ],
+    "viewerAction": "AWS 수요와 cash CapEx 정의를 함께 본다.",
+    "contextualNotes": [
+      "금액은 USD billions."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "AWS +36.8%",
+      "reason": "분기 수요 가속"
+    },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "value",
+        "reason": "AWS 실제치와 성장률"
+      },
+      {
+        "row": 2,
+        "col": "value",
+        "reason": "FY26 cash CapEx 전망"
+      }
+    ]
+  }
+}

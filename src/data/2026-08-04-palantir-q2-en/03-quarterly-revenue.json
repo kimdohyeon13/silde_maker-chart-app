@@ -1,0 +1,234 @@
+{
+  "id": "03-quarterly-revenue",
+  "sourceImage": "input/03-quarterly-revenue.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Q2 2026 revenue of $1.935 billion, up 93% year over year",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Quarterly Revenue Up 1.9x in Five Quarters",
+    "subtitle": "Q2 2026 revenue of $1.935 billion, up 93% year over year",
+    "source": "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Quarterly revenue",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Quarterly revenue",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 1004,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 1181,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 1407,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 1633,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 1935,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.65,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 92.7,
+        "absoluteChange": 931.0,
+        "from": 1004.0,
+        "to": 1935.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1935.0,
+        "at": ""
+      },
+      "min": {
+        "value": 1004.0,
+        "at": ""
+      },
+      "average": 1432.0,
+      "median": 1407.0,
+      "range": 931.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Quarterly Revenue Up 1.9x in Five Quarters",
+    "subMessage": "Q2 2026 revenue of $1.935 billion, up 93% year over year",
+    "headline": "Quarterly Revenue Up 1.9x in Five Quarters",
+    "summary": "Q2 2026 revenue of $1.935 billion, up 93% year over year",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "Q2 2026 revenue of $1.935 billion, up 93% year over year",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Palantir Q2 2026 Business Update, appendix reconciliation (2026-08-03)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 1935.0
+      },
+      "displayText": "Revenue up 1.9x",
+      "reason": "Q2 2026 revenue of $1.935 billion, up 93% year over year"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "02-operating-profit",
+  "sourceImage": "input/02-operating-profit.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Operating Profit 6.6x Higher YoY",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "Source: SK hynix IR 2Q26 earnings release (2026-07-29)"
+  },
+  "allowedTransformations": [
+    "translate-text"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Operating Profit 6.6x Higher YoY",
+    "subtitle": "2Q26 operating profit reached KRW 60.5tn, up 61% QoQ",
+    "source": "Source: SK hynix IR 2Q26 earnings release (2026-07-29)",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {
+      "label": "Category",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "KRW tn",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Operating Profit",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Operating Profit",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 9.21,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 37.61,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 60.54,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.434,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 557.3,
+        "absoluteChange": 51.33,
+        "from": 9.21,
+        "to": 60.54
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 60.54,
+        "at": ""
+      },
+      "min": {
+        "value": 9.21,
+        "at": ""
+      },
+      "average": 35.78666666666667,
+      "median": 37.61,
+      "range": 51.33
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Operating Profit 6.6x Higher YoY",
+    "subMessage": "2Q26 operating profit reached KRW 60.5tn, up 61% QoQ",
+    "headline": "Operating Profit 6.6x Higher YoY",
+    "summary": "2Q26 operating profit reached KRW 60.5tn, up 61% QoQ",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "2Q26 operating profit reached KRW 60.5tn.",
+      "Profit increased 61% from the previous quarter.",
+      "The comparison shows the scale of the memory upcycle."
+    ],
+    "questionsRaised": [
+      "Can HBM4 ramp-up sustain this rate of operating leverage?"
+    ],
+    "viewerAction": "Read the 2Q26 bar together with the HBM4 yield and shipment discussion.",
+    "contextualNotes": [
+      "Source: SK hynix IR 2Q26 earnings release (2026-07-29)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 60.54
+      },
+      "displayText": "Operating Profit 6.6x Higher YoY",
+      "reason": "Operating profit rose from KRW 9.21tn in 2Q25 to KRW 60.54tn in 2Q26."
+    },
+    "densityLevel": "balanced"
+  }
+}

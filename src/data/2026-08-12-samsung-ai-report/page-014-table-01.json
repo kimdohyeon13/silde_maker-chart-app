@@ -1,0 +1,206 @@
+{
+  "id": "page-014-table-01",
+  "sourceImage": "projects/2026-08-12-samsung-ai-report/input/page-014-table-01.png",
+  "stylePreset": "toss-clean",
+  "mode": "faithful",
+  "preserveIntent": {
+    "originalTitle": "앤스로픽의 1Q26 및 2Q26 재무 전망",
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 제목",
+      "모든 시리즈 또는 항목",
+      "축 단위",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 서체",
+      "여백",
+      "색상 정리"
+    ],
+    "notes": "원본 이미지와 OCR에서 읽은 값이다. 선형 차트의 중간 점은 화면상 앵커를 따라 복원했다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "앤스로픽의 1Q26 및 2Q26 재무 전망",
+    "source": "자료: 언론 보도 종합, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q26",
+        "2Q26 (전망치)"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "unit": "십억 달러",
+      "min": -10,
+      "max": 10
+    },
+    "legend": [
+      {
+        "name": "매출액",
+        "color": "#1677FF",
+        "originalColor": "#1677FF"
+      },
+      {
+        "name": "컴퓨트 인프라 비용",
+        "color": "#B8BDC7",
+        "originalColor": "#B8BDC7"
+      },
+      {
+        "name": "판매 촉진비 및 파트너십 비용",
+        "color": "#12AFC1",
+        "originalColor": "#12AFC1"
+      },
+      {
+        "name": "기타 영업비용",
+        "color": "#94C11F",
+        "originalColor": "#94C11F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출액",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 4.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q26 (전망치)",
+            "y": 9.5,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#1677FF",
+        "remakeColor": "#1677FF"
+      },
+      {
+        "name": "컴퓨트 인프라 비용",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": -3.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q26 (전망치)",
+            "y": -6.2,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#B8BDC7",
+        "remakeColor": "#B8BDC7"
+      },
+      {
+        "name": "판매 촉진비 및 파트너십 비용",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": -1,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q26 (전망치)",
+            "y": -2.8,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#12AFC1",
+        "remakeColor": "#12AFC1"
+      },
+      {
+        "name": "기타 영업비용",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": -0.8,
+            "confidence": 0.72
+          },
+          {
+            "x": "2Q26 (전망치)",
+            "y": -1.2,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#94C11F",
+        "remakeColor": "#94C11F"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "앤스로픽의 1Q26 및 2Q26 재무 전망",
+    "subMessage": "자료: 언론 보도 종합, World Tech Research",
+    "headline": "앤스로픽의 1Q26 및 2Q26 재무 전망",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "영업이익 흑자 전환선"
+    },
+    "annotations": [
+      {
+        "text": "영업이익",
+        "position": {
+          "x": "2Q26 (전망치)",
+          "y": 0
+        },
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "원본 이미지에서 읽은 추세",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "qualityChecks": [
+    {
+      "id": "faithful-title",
+      "status": "pass",
+      "detail": "원본 제목 보존"
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "이미지 기반 앵커값과 한계를 기록"
+    },
+    {
+      "id": "series-source",
+      "status": "pass",
+      "detail": "원본 시리즈와 출처 보존"
+    }
+  ],
+  "qaNote": "원본이 누적 막대만 제공해 비용 항목은 화면상 막대 높이에서 읽은 source-visible 앵커."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "02-confirmed-calendar",
+  "mode": "redesign",
+  "sourceImages": ["input/source-01-market-view.png", "input/source-02-second-watch.png"],
+  "contentType": "table",
+  "tableSubType": "schedule",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰 / 2nd watch",
+    "originalMessage": "AI 인프라 워치리스트의 다음 실적 일정",
+    "preservedElements": ["11개 공식 확정 실적발표일", "티커", "장전·장후 구분", "ET 기준"],
+    "changedElements": ["날짜별 4단 구성", "필터 UI 제거", "공식 일정만 분리"],
+    "dataFidelity": "exact",
+    "notes": "기업 IR에서 공지한 날짜만 포함했다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-colors"],
+  "qualityChecks": [{"id": "schedule-count", "label": "공식 일정 11개", "status": "pass", "detail": "카드 2의 4단 표에 11개 공식 일정을 모두 배치했다."}],
+  "structure": {"title": "AI 인프라 실적 일정 · 2/3", "subtitle": "공식 확정 일정 | 2026년 8월 4일~12일 · ET", "source": "자료: 각 사 IR | 2026-07-30 ET 기준"},
+  "exportOptions": {"canvasHeight": 513, "backgroundColor": "#FFFFFF", "frameStyle": "none", "contentBorder": false, "headerVariant": "stacked", "squareEdges": true, "headerPadding": "14px 28px 0", "contentPadding": "8px 18px 0", "sourcePadding": "0 28px 10px", "titleFontSize": 31, "subtitleFontSize": 15, "subtitleFontWeight": 300, "sourceFontSize": 11, "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif", "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif", "accentColor": "#101828"},
+  "tableData": {
+    "columns": [
+      {"key": "d1", "label": "8/4 (월)", "dataType": "text", "isRowHeader": true, "width": "25%"},
+      {"key": "d2", "label": "8/5 (화)", "dataType": "text", "width": "25%"},
+      {"key": "d3", "label": "8/6 (수)", "dataType": "text", "width": "25%"},
+      {"key": "d4", "label": "8/11~12", "dataType": "text", "width": "25%"}
+    ],
+    "rows": [
+      {"cells": {"d1": {"value": "AMD\n장후 · 공식"}, "d2": {"value": "VIAV\n장후 · 공식"}, "d3": {"value": "AAOI\n장후 · 공식"}, "d4": {"value": "CRWV · 8/11\n장후 · 공식"}}},
+      {"cells": {"d1": {"value": "TSEM\n공식"}, "d2": {"value": "MKSI\n장후 · 공식"}, "d3": {"value": ""}, "d4": {"value": "LITE · 8/11\n장후 · 공식"}}},
+      {"cells": {"d1": {"value": "ALAB\n장후 · 공식"}, "d2": {"value": "SNDK\n장후 · 공식"}, "d3": {"value": ""}, "d4": {"value": "COHR · 8/12 장후\nNBIS · 8/12 장전\n모두 공식"}}}
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {"rowHeight": 77, "cellPadding": "11px 16px", "lineHeight": 1.18, "zebraStripe": false, "highlightMode": "text", "headerTone": "underline", "rowRules": "soft", "columnRules": true, "sectionRules": false, "fontWeight": {"body": 600, "numeric": 700, "rowHeader": 900, "header": 700}, "fontSize": {"body": 17, "header": 15, "total": 17, "badge": 10}}
+  },
+  "narrative": {"headMessage": "8월 둘째 주까지 공식 일정 11개", "subMessage": "장전·장후를 같은 칸에 표시해 촉매 시점을 빠르게 확인", "headline": "공식 확정 실적 일정", "summary": "8월 초 AI 인프라 실적 캘린더", "story": "공식적으로 공지된 일정만 별도로 배치했다.", "keyTakeaways": ["11개 공식 일정", "모든 시간은 ET"], "questionsRaised": [], "viewerAction": "발표 전후 거래 시간을 확인한다.", "contextualNotes": ["각 사 IR 기준"]},
+  "emphasis": {"focusPoint": {"displayText": "공식 일정 11개", "reason": "8월 4일~12일"}, "colorStrategy": {"primary": "#101828", "secondary": ["#667085"], "positive": "#D92D20", "negative": "#2563EB", "accent": "#101828", "backgroundTone": "light"}, "densityLevel": "balanced"}
+}

@@ -1,0 +1,163 @@
+{
+  "id": "page-17-graph-01",
+  "sourceImage": "input/10-page_17_graph_01.png",
+  "analyzedAt": "2026-05-19T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "GPU-hour 회수기간은 단가와 가동률에 민감하다",
+    "subtitle": "Base case는 약 3.1년, 단가와 이용률이 밀리면 6년 이상으로 늘어날 수 있음",
+    "source": "제공 PDF 기반 재구성"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "case",
+        "label": "시나리오",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%"
+      },
+      {
+        "key": "price",
+        "label": "GPU-hour",
+        "dataType": "text",
+        "width": "18%"
+      },
+      {
+        "key": "util",
+        "label": "가동률",
+        "dataType": "text",
+        "width": "16%"
+      },
+      {
+        "key": "payback",
+        "label": "회수기간",
+        "dataType": "text",
+        "width": "18%"
+      },
+      {
+        "key": "meaning",
+        "label": "해석",
+        "dataType": "text"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "case": {
+            "value": "Bull",
+            "displayValue": "Bull"
+          },
+          "price": {
+            "value": "$4.0",
+            "displayValue": "$4.0"
+          },
+          "util": {
+            "value": "85%",
+            "displayValue": "85%"
+          },
+          "payback": {
+            "value": "약 2년",
+            "displayValue": "약 2년"
+          },
+          "meaning": {
+            "value": "수요와 가격이 모두 받쳐주는 황금알",
+            "displayValue": "수요와 가격이 모두 받쳐주는 황금알"
+          }
+        }
+      },
+      {
+        "cells": {
+          "case": {
+            "value": "Base",
+            "displayValue": "Base"
+          },
+          "price": {
+            "value": "$3.0",
+            "displayValue": "$3.0"
+          },
+          "util": {
+            "value": "75%",
+            "displayValue": "75%"
+          },
+          "payback": {
+            "value": "약 3.1년",
+            "displayValue": "약 3.1년",
+            "highlight": "positive"
+          },
+          "meaning": {
+            "value": "PDF의 중심 가정, 경제성은 성립",
+            "displayValue": "PDF의 중심 가정, 경제성은 성립"
+          }
+        }
+      },
+      {
+        "cells": {
+          "case": {
+            "value": "Bear",
+            "displayValue": "Bear"
+          },
+          "price": {
+            "value": "$2.0",
+            "displayValue": "$2.0"
+          },
+          "util": {
+            "value": "60%",
+            "displayValue": "60%"
+          },
+          "payback": {
+            "value": "6년+",
+            "displayValue": "6년+",
+            "highlight": "warning"
+          },
+          "meaning": {
+            "value": "서버 세대교체 전에 회수가 어려워짐",
+            "displayValue": "서버 세대교체 전에 회수가 어려워짐"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Base 약 3.1년",
+    "subMessage": "Base case는 약 3.1년, 단가와 이용률이 밀리면 6년 이상으로 늘어날 수 있음",
+    "headline": "Base 약 3.1년",
+    "summary": "AI DC는 전기료보다 단가와 가동률의 곱이 더 중요합니다.",
+    "story": "AI DC는 전기료보다 단가와 가동률의 곱이 더 중요합니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문 해설과 함께 숫자의 의미를 확인합니다.",
+    "contextualNotes": [
+      "제공 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "Base 약 3.1년",
+      "reason": "AI DC는 전기료보다 단가와 가동률의 곱이 더 중요합니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

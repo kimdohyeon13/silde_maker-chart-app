@@ -1,0 +1,379 @@
+{
+  "id": "ai-cloud-datacenter-watchlist",
+  "sourceImage": "input/source-02-ai-cloud-watchlist.png",
+  "analyzedAt": "2026-06-04T09:20:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "InvestingPro 워치리스트의 AI 인프라 관련 종목 비교",
+    "preservedElements": [
+      "스크린샷에 보이는 현재가, 오늘 등락률, 1개월 수익률, 1년 수익률, 목표가, EPS 성장, Forward P/E",
+      "오늘 주가 움직임을 티커 옆 배지로 크게 표시",
+      "스크린샷 순서와 표시값 보존"
+    ],
+    "changedElements": [
+      "필터 영역, 52주 고점, 시가총액 열 제거",
+      "오늘 등락률을 별도 열이 아닌 티커 옆 신호 배지로 재배치",
+      "소수점은 화면 표시값에서 버림 처리",
+      "상단/본문/하단 여백 축소"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "값은 사용자 제공 화면 캡처에서 보이는 숫자를 기준으로 재구성했다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "스크린샷 표시값 기반",
+      "status": "pass",
+      "detail": "웹 시세를 새로 조회하지 않고 캡처에 보이는 값만 사용",
+      "checkedAt": "2026-06-04T09:20:00+09:00"
+    },
+    {
+      "id": "b-signal-pill-default",
+      "label": "B 신호 배지형 적용",
+      "status": "pass",
+      "detail": "오늘 등락률은 별도 열이 아니라 ticker sideValue 빨강/파랑 배지로 표시",
+      "checkedAt": "2026-06-04T09:20:00+09:00"
+    },
+    {
+      "id": "tight-spacing",
+      "label": "타이트 여백 적용",
+      "status": "pass",
+      "detail": "AI 클라우드·데이터센터: 상단/본문/출처 패딩과 셀 여백을 축소",
+      "checkedAt": "2026-06-04T09:20:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI 클라우드·데이터센터",
+    "subtitle": "4개 종목 압축 비교",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 30,
+    "subtitleFontSize": 16,
+    "sourceFontSize": 12,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "20%",
+        "align": "left"
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "15%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "percent",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "percent",
+        "width": "10%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "percent",
+        "width": "13%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRWV",
+            "displayValue": "CRWV\n코어위브",
+            "sideValue": {
+              "displayValue": "7.0%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "GPU 클라우드",
+            "displayValue": "GPU 클라우드"
+          },
+          "current": {
+            "value": "110.93",
+            "displayValue": "110"
+          },
+          "m1": {
+            "value": "-11.6%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-32.0%",
+            "displayValue": "-32%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "140.18",
+            "displayValue": "140\n+26%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-136.5%",
+            "displayValue": "-136%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "-39.3x",
+            "displayValue": "-39x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ORCL",
+            "displayValue": "ORCL\n오라클",
+            "sideValue": {
+              "displayValue": "5.8%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "클라우드 DB",
+            "displayValue": "클라우드 DB"
+          },
+          "current": {
+            "value": "230.33",
+            "displayValue": "230"
+          },
+          "m1": {
+            "value": "27.8%",
+            "displayValue": "27%"
+          },
+          "y1": {
+            "value": "38.4%",
+            "displayValue": "38%"
+          },
+          "target": {
+            "value": "248.77",
+            "displayValue": "248\n+8%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "23.6%",
+            "displayValue": "23%"
+          },
+          "pe": {
+            "value": "32.2x",
+            "displayValue": "32x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NBIS",
+            "displayValue": "NBIS\n네비우스",
+            "sideValue": {
+              "displayValue": "3.5%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 클라우드",
+            "displayValue": "AI 클라우드"
+          },
+          "current": {
+            "value": "251.54",
+            "displayValue": "251"
+          },
+          "m1": {
+            "value": "42.7%",
+            "displayValue": "42%"
+          },
+          "y1": {
+            "value": "538.9%",
+            "displayValue": "538%"
+          },
+          "target": {
+            "value": "238.86",
+            "displayValue": "238\n-5%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "-140.9x",
+            "displayValue": "-140x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "IREN",
+            "displayValue": "IREN\n아이렌",
+            "sideValue": {
+              "displayValue": "1.7%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "14px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 데이터센터",
+            "displayValue": "AI 데이터센터"
+          },
+          "current": {
+            "value": "65.48",
+            "displayValue": "65"
+          },
+          "m1": {
+            "value": "32.3%",
+            "displayValue": "32%"
+          },
+          "y1": {
+            "value": "594.4%",
+            "displayValue": "594%"
+          },
+          "target": {
+            "value": "80.49",
+            "displayValue": "80\n+22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-670.0%",
+            "displayValue": "-670%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "87.0x",
+            "displayValue": "87x"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 42,
+      "cellPadding": "0 4px",
+      "lineHeight": 0.96,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Noto Sans\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "15px",
+        "body": "17px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "15px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 클라우드·데이터센터",
+    "subMessage": "4개 종목 압축 비교",
+    "headline": "AI 클라우드·데이터센터",
+    "summary": "B 신호 배지형 기본값을 적용해 오늘 등락 방향을 티커 옆에서 바로 읽게 만든 표다.",
+    "story": "원본 화면은 상단 필터와 보조 열이 많아 종목 간 비교가 느리다. 이번 표는 현재가, 기간 수익률, 목표가 여력, EPS 성장, Forward P/E만 남겨 빠르게 스캔하도록 재구성했다.",
+    "keyTakeaways": [
+      "오늘 등락률은 티커 옆 빨강/파랑 배지로 표시했다.",
+      "52주 고점과 시가총액은 이번 깔끔한 버전에서 제외했다.",
+      "수치는 캡처에 보이는 값만 사용했다."
+    ],
+    "viewerAction": "오늘 하락 배지와 목표가 여력을 같이 보며 과매도인지 밸류에이션 부담인지 구분한다.",
+    "contextualNotes": [
+      "최신 시세 검증용 표가 아니라 화면 캡처를 발표용으로 정리한 결과다.",
+      "소수점은 표시값에서 버림 처리했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "CRWV 7.0%↓ / ORCL 5.8%↓ / NBIS 3.5%↓",
+      "reason": "오늘 시장 움직임을 빠르게 읽기 위한 핵심 신호"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": []
+  }
+}

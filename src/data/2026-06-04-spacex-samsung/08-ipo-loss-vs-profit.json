@@ -1,0 +1,193 @@
+{
+  "id": "08-ipo-loss-vs-profit",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "bar",
+    "title": "첫날은 적자 기업이, 3년 뒤엔 흑자 기업이 이긴다",
+    "subtitle": "흑자 기업의 3년 평균 수익률은 +33.6%, 적자 기업은 -0.5%",
+    "source": "삼성증권 SpaceX 리포트, 2026-06-04",
+    "timeRange": "",
+    "xAxis": {
+      "label": "기업 유형",
+      "type": "category",
+      "tickValues": [
+        "적자 기업",
+        "흑자 기업"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "수익률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 39.647999999999996
+    },
+    "legend": [
+      {
+        "name": "상장 첫날 수익률",
+        "role": "primary"
+      },
+      {
+        "name": "3년 평균 수익률",
+        "role": "secondary"
+      },
+      {
+        "name": "시장 대비(상대)",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상장 첫날 수익률",
+        "data": [
+          {
+            "x": "적자 기업",
+            "y": 26.5,
+            "confidence": 0.95
+          },
+          {
+            "x": "흑자 기업",
+            "y": 13.3,
+            "confidence": 0.95
+          }
+        ],
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#939597"
+      },
+      {
+        "name": "3년 평균 수익률",
+        "data": [
+          {
+            "x": "적자 기업",
+            "y": -0.5,
+            "confidence": 0.95
+          },
+          {
+            "x": "흑자 기업",
+            "y": 33.6,
+            "confidence": 0.95
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "시장 대비(상대)",
+        "data": [
+          {
+            "x": "적자 기업",
+            "y": -30.7,
+            "confidence": 0.95
+          },
+          {
+            "x": "흑자 기업",
+            "y": -13.0,
+            "confidence": 0.95
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.8,
+      "description": "원문 수치를 그대로 옮겨 읽기 쉽게 재배치했습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "from": 26.5,
+        "to": 13.3,
+        "absoluteChange": -13.2,
+        "percentChange": -49.81132075471698
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 26.5,
+        "at": ""
+      },
+      "min": {
+        "value": 13.3,
+        "at": ""
+      },
+      "average": 19.9,
+      "median": 19.9,
+      "range": 13.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "장기 성과는 펀더멘털이 가른다",
+    "subMessage": "흑자 기업의 3년 평균 수익률은 +33.6%, 적자 기업은 -0.5%",
+    "headline": "장기 성과는 펀더멘털이 가른다",
+    "summary": "적자 기업은 상장 첫날엔 강하지만 3년 뒤에는 흑자 기업이 크게 앞섭니다.",
+    "story": "적자 기업은 상장 첫날엔 강하지만 3년 뒤에는 흑자 기업이 크게 앞섭니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원문 crop과 숫자를 대조해 보세요.",
+    "contextualNotes": [
+      "삼성증권 SpaceX 리포트, 2026-06-04"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#F5DF4D"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "흑자 기업",
+        "y": 13.3
+      },
+      "reason": "적자 기업은 상장 첫날엔 강하지만 3년 뒤에는 흑자 기업이 크게 앞섭니다.",
+      "displayText": "장기 성과는 펀더멘털이 가른다"
+    },
+    "densityLevel": "balanced"
+  }
+}

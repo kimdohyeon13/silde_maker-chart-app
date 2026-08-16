@@ -1,0 +1,481 @@
+{
+  "id": "f-action-matrix-table",
+  "mode": "redesign",
+  "sourceImage": "input/source-01-market-view-top.png",
+  "sourceImages": [
+    "input/source-01-market-view-top.png"
+  ],
+  "analyzedAt": "2026-07-10T19:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "AI 인프라 7종목의 가격·모멘텀·성장·밸류 비교",
+    "preservedElements": [
+      "원본 7개 티커와 회사명",
+      "선택한 열의 화면 표시값과 상승 빨강·하락 파랑 의미",
+      "investing pro 출처"
+    ],
+    "changedElements": [
+      "F안 포트폴리오 액션 매트릭스의 질문에 맞춰 열을 선택·결합하고 행을 재정렬",
+      "순백 16:9 캔버스와 무프레임·각진 스타일 적용"
+    ],
+    "dataFidelity": "exact",
+    "notes": "2026-07-10 화면 표시값을 재사용한 디자인 시안이며 최신 시세 검증값은 아닙니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "group-rows",
+    "reorder-emphasis",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "qa/layout-plan.md에서 F안 포트폴리오 액션 매트릭스의 질문·열 수·헤더 구조를 선행 설계",
+      "checkedAt": "2026-07-10T19:10:00+09:00"
+    },
+    {
+      "id": "exact-as-displayed-values",
+      "label": "표시값 보존",
+      "status": "pass",
+      "detail": "검독된 7종목 화면 표시값을 재사용하고 복합 셀은 같은 값을 묶어서 표시",
+      "checkedAt": "2026-07-10T19:10:00+09:00"
+    },
+    {
+      "id": "visual-16x9-white",
+      "label": "순백 16:9와 각진 표현",
+      "status": "pending",
+      "detail": "1,824×1,026px, 흰 배경, 무그림자, 무라운딩을 PNG에서 확인 예정",
+      "checkedAt": "2026-07-10T19:10:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "보유·전술·관찰로 나누면 선택이 선명해진다",
+    "subtitle": "모멘텀과 목표가, 성장·밸류를 행동 단계별로 묶음",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "headerPadding": "21px 34px 0",
+    "contentPadding": "7px 28px 0",
+    "sourcePadding": "0 34px 12px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 513,
+    "squareEdges": true,
+    "contentBorder": false,
+    "frameStyle": "hairline",
+    "borderColor": "#D6DEE8",
+    "headerVariant": "split-metric",
+    "headerLabel": "PORTFOLIO ACTION",
+    "accentColor": "#2457D6",
+    "metricValue": "3단계",
+    "metricLabel": "CORE · TACTICAL · WATCH",
+    "metricFontSize": 38
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "role",
+        "label": "역할",
+        "dataType": "text",
+        "width": "16%",
+        "align": "left"
+      },
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "22%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "price",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "momentum",
+        "label": "모멘텀",
+        "dataType": "text",
+        "width": "17%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가 · 여력",
+        "dataType": "number",
+        "width": "19%",
+        "align": "right"
+      },
+      {
+        "key": "quality",
+        "label": "성장 · 밸류",
+        "dataType": "text",
+        "width": "15%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "CORE · 장기 핵심",
+            "displayValue": "CORE · 장기 핵심"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "성장·밸류",
+            "displayValue": "성장·밸류"
+          },
+          "ticker": {
+            "value": "MU",
+            "displayValue": "MU\n마이크론",
+            "sideValue": {
+              "displayValue": "4.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "991.64",
+            "displayValue": "991"
+          },
+          "momentum": {
+            "value": "1M 11% | 1Y 706%",
+            "displayValue": "1M 11%\n1Y 706%"
+          },
+          "target": {
+            "value": "1,486",
+            "displayValue": "1,486\n+49%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS 784% | P/E 12x",
+            "displayValue": "EPS 784%\nP/E 12x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "구조적 주도",
+            "displayValue": "구조적 주도"
+          },
+          "ticker": {
+            "value": "NVDA",
+            "displayValue": "NVDA\n엔비디아",
+            "sideValue": {
+              "displayValue": "0.7%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "202.78",
+            "displayValue": "202"
+          },
+          "momentum": {
+            "value": "1M 1% | 1Y 23%",
+            "displayValue": "1M 1%\n1Y 23%"
+          },
+          "target": {
+            "value": "301.62",
+            "displayValue": "301\n+48%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS 88% | P/E 22x",
+            "displayValue": "EPS 88%\nP/E 22x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "공급망 핵심",
+            "displayValue": "공급망 핵심"
+          },
+          "ticker": {
+            "value": "TSM",
+            "displayValue": "TSM\nTSMC"
+          },
+          "price": {
+            "value": "436.96",
+            "displayValue": "436"
+          },
+          "momentum": {
+            "value": "1M 7% | 1Y 91%",
+            "displayValue": "1M 7%\n1Y 91%"
+          },
+          "target": {
+            "value": "490.34",
+            "displayValue": "490\n+12%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS 50% | P/E 24x",
+            "displayValue": "EPS 50%\nP/E 24x"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "TACTICAL · 전술 비중",
+            "displayValue": "TACTICAL · 전술 비중"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "광통신 베타",
+            "displayValue": "광통신 베타"
+          },
+          "ticker": {
+            "value": "LITE",
+            "displayValue": "LITE\n루멘텀",
+            "sideValue": {
+              "displayValue": "11.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "785.77",
+            "displayValue": "785"
+          },
+          "momentum": {
+            "value": "1M -7% | 1Y 748%",
+            "displayValue": "1M -7%\n1Y 748%"
+          },
+          "target": {
+            "value": "1,111",
+            "displayValue": "1,111\n+41%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS 299% | P/E 72x",
+            "displayValue": "EPS 299%\nP/E 72x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "전력 베타",
+            "displayValue": "전력 베타"
+          },
+          "ticker": {
+            "value": "BE",
+            "displayValue": "BE\n블룸에너지",
+            "sideValue": {
+              "displayValue": "1.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "257.02",
+            "displayValue": "257"
+          },
+          "momentum": {
+            "value": "1M 9% | 1Y 894%",
+            "displayValue": "1M 9%\n1Y 894%"
+          },
+          "target": {
+            "value": "282.49",
+            "displayValue": "282\n+9%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS 184% | P/E 104x",
+            "displayValue": "EPS 184%\nP/E 104x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "반등 옵션",
+            "displayValue": "반등 옵션"
+          },
+          "ticker": {
+            "value": "CRWV",
+            "displayValue": "CRWV\n코어위브",
+            "sideValue": {
+              "displayValue": "0.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "89.70",
+            "displayValue": "89"
+          },
+          "momentum": {
+            "value": "1M -6% | 1Y -35%",
+            "displayValue": "1M -6%\n1Y -35%",
+            "highlight": "negative"
+          },
+          "target": {
+            "value": "142.29",
+            "displayValue": "142\n+58%",
+            "highlight": "positive"
+          },
+          "quality": {
+            "value": "EPS -148% | P/E -26x",
+            "displayValue": "EPS -148%\nP/E -26x"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "WATCH · 가격 확인",
+            "displayValue": "WATCH · 가격 확인"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "role": {
+            "value": "가격 확인",
+            "displayValue": "가격 확인"
+          },
+          "ticker": {
+            "value": "AMD",
+            "displayValue": "AMD\nAMD",
+            "sideValue": {
+              "displayValue": "5.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": 0,
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "price": {
+            "value": "546.72",
+            "displayValue": "546"
+          },
+          "momentum": {
+            "value": "1M 20% | 1Y 279%",
+            "displayValue": "1M 20%\n1Y 279%"
+          },
+          "target": {
+            "value": "512.27",
+            "displayValue": "512\n-6%",
+            "highlight": "negative"
+          },
+          "quality": {
+            "value": "EPS 77% | P/E 69x",
+            "displayValue": "EPS 77%\nP/E 69x"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 31,
+      "cellPadding": "1px 8px",
+      "lineHeight": 0.94,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "14px",
+        "total": "17px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "12px"
+      },
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "accentColor": "#0B1F3A",
+      "rowRuleColor": "#D6DEE8"
+    }
+  },
+  "narrative": {
+    "headMessage": "보유·전술·관찰로 나누면 선택이 선명해진다",
+    "subMessage": "모멘텀과 목표가, 성장·밸류를 행동 단계별로 묶음",
+    "headline": "보유·전술·관찰로 나누면 선택이 선명해진다",
+    "summary": "모멘텀과 목표가, 성장·밸류를 행동 단계별로 묶음",
+    "story": "F안 포트폴리오 액션 매트릭스으로 같은 7종목을 다시 질문한 비교 시안입니다.",
+    "keyTakeaways": [
+      "모멘텀과 목표가, 성장·밸류를 행동 단계별로 묶음"
+    ],
+    "viewerAction": "섹터별로 목표가 여력, EPS 성장, Fwd P/E와 시가총액을 함께 비교한다.",
+    "contextualNotes": [
+      "최신 시세 검증용 표가 아니라 사용자 제공 캡처를 발표용으로 정리한 결과다.",
+      "소수점은 표시값에서 버리고 원문 값은 JSON과 CSV에 보존했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "시총 포함, 40의 규칙 CSV 보존",
+      "reason": "compact v3 기본 열 구성"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#F04452",
+      "negative": "#3182F6",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  }
+}

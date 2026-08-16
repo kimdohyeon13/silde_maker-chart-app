@@ -1,0 +1,103 @@
+{
+  "id": "page-03-graph-01",
+  "sourceImage": "input/01-page-03-graph-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "역대 최대 IPO, 아람코의 2배 이상",
+    "subtitle": "IPO 자금조달 규모 비교, 단위 십억 달러",
+    "source": "Bloomberg, 삼성증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "기업",
+      "type": "category",
+      "tickValues": ["스페이스X", "사우디 아람코", "알리바바", "소프트뱅크", "AIA 그룹", "비자", "제너럴 모터스", "메타 플랫폼스", "리비안", "우버"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "자금조달",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "$B",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 88
+    },
+    "legend": [
+      { "name": "자금조달 규모", "role": "primary", "originalColor": "#1458D4", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "자금조달 규모",
+        "renderAs": "bar",
+        "role": "primary",
+        "data": [
+          {"x": "스페이스X", "y": 77.5, "confidence": 0.8},
+          {"x": "사우디 아람코", "y": 29.4, "confidence": 0.8},
+          {"x": "알리바바", "y": 25, "confidence": 0.8},
+          {"x": "소프트뱅크", "y": 21.1, "confidence": 0.8},
+          {"x": "AIA 그룹", "y": 20.4, "confidence": 0.8},
+          {"x": "비자", "y": 19.7, "confidence": 0.8},
+          {"x": "제너럴 모터스", "y": 18.1, "confidence": 0.8},
+          {"x": "메타 플랫폼스", "y": 16, "confidence": 0.8},
+          {"x": "리비안", "y": 13.7, "confidence": 0.8},
+          {"x": "우버", "y": 8.1, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "down", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "stable" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 77.5, "at": "스페이스X"}, "min": {"value": 8.1, "at": "우버"}, "average": 24.9, "median": 19.95, "range": 69.4 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "역대 최대어가 온다",
+    "subMessage": "조달 규모가 2위 아람코의 두 배를 넘어선다",
+    "headline": "스페이스X는 약 750~800억 달러를 조달해 기존 1위 아람코를 두 배 이상 앞선 역대 최대 IPO 후보다",
+    "summary": "스페이스X는 약 750~800억 달러를 조달해 역대 최대 IPO였던 사우디 아람코를 두 배 이상 뛰어넘습니다.",
+    "story": "스페이스X는 약 750~800억 달러를 조달해 역대 최대 IPO였던 사우디 아람코를 두 배 이상 뛰어넘습니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text": "75~80", "position": {"x": "스페이스X"}, "importance": "critical", "style": "positive"},
+      {"text": "역대2위 29.4", "position": {"x": "사우디 아람코"}, "importance": "high", "style": "neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x": "스페이스X", "y": 77.5}, "displayText": "역대 최대어가 온다", "reason": "스페이스X는 약 750~800억 달러를 조달해 역대 최대 IPO였던 사우디 아람코를 두 배 이상 뛰어넘습니다." },
+    "densityLevel": "balanced"
+  }
+}

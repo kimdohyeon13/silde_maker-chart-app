@@ -1,0 +1,380 @@
+{
+  "id": "chart-04",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-09T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "머스크 시나리오에서 총수요(회색 점선)는 지수적으로 치솟는데 지상 용량(블루 영역)은 약 1,150GW에서 멈추기 때문에, 그 차이만큼인 내재 우주 수요(코랄)가 2050년 약 4,300GW까지 넘쳐난다는 걸 보여드려요.",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "지상이 막히면 수요는 우주로 넘칩니다",
+    "subtitle": "지상 약 1,150GW 포화, 2050년 우주 내재 수요 약 4,300GW",
+    "source": "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "2026",
+        "2028",
+        "2030",
+        "2032",
+        "2034",
+        "2036",
+        "2038",
+        "2040",
+        "2042",
+        "2044",
+        "2046",
+        "2048",
+        "2050"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "용량 / 수요",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "GW",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 6000
+    },
+    "legend": [
+      {
+        "name": "지상 DC 용량",
+        "role": "primary"
+      },
+      {
+        "name": "실리콘 제약 하 총수요",
+        "role": "primary"
+      },
+      {
+        "name": "내재 우주 DC 수요",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "지상 DC 용량",
+        "data": [
+          {
+            "x": "2026",
+            "y": 80.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 150.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 230.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 320.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 420.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 540.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 660.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 780.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 880.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 970.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 1050.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 1110.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 1150.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "area",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "실리콘 제약 하 총수요",
+        "data": [
+          {
+            "x": "2026",
+            "y": 90.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 230.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 420.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 680.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 1020.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 1450.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 1980.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 2600.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 3300.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 3950.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 4600.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 5100.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 5550.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#939597",
+        "axis": "left"
+      },
+      {
+        "name": "내재 우주 DC 수요",
+        "data": [
+          {
+            "x": "2026",
+            "y": 10.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2028",
+            "y": 80.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2030",
+            "y": 190.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2032",
+            "y": 360.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2034",
+            "y": 600.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2036",
+            "y": 910.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2038",
+            "y": 1320.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2040",
+            "y": 1820.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2042",
+            "y": 2420.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2044",
+            "y": 2980.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2046",
+            "y": 3550.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2048",
+            "y": 3990.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2050",
+            "y": 4300.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 39,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 80.0,
+        "to": 1150.0,
+        "absoluteChange": 1070.0,
+        "percentChange": 1337.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1150.0,
+        "at": ""
+      },
+      "min": {
+        "value": 80.0,
+        "at": ""
+      },
+      "average": 641.5384615384615,
+      "median": 660.0,
+      "range": 1070.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2050년 우주 수요 4,300GW",
+    "subMessage": "지상 약 1,150GW 포화, 2050년 우주 내재 수요 약 4,300GW",
+    "headline": "2050년 우주 수요 4,300GW",
+    "summary": "머스크 시나리오에서 총수요(회색 점선)는 지수적으로 치솟는데 지상 용량(블루 영역)은 약 1,150GW에서 멈추기 때문에, 그 차이만큼인 내재 우주 수요(코랄)가 2050년 약 4,300GW까지 넘쳐난다는 걸 보여드려요.",
+    "story": "머스크 시나리오에서 총수요(회색 점선)는 지수적으로 치솟는데 지상 용량(블루 영역)은 약 1,150GW에서 멈추기 때문에, 그 차이만큼인 내재 우주 수요(코랄)가 2050년 약 4,300GW까지 넘쳐난다는 걸 보여드려요.",
+    "keyTakeaways": [
+      "머스크 시나리오에서 총수요(회색 점선)는 지수적으로 치솟는데 지상 용량(블루 영역)은 약 1,150GW에서 멈추기 때문에, 그 차이만큼인 내재 우주 수요(코랄)가 2050년 약 4,300GW까지 넘쳐난다는 걸 보여드려요."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 방향·축·시리즈 구성을 확인하세요.",
+    "contextualNotes": [
+      "자료: SemiAnalysis AI Space Datacenter TCO Model (2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2050",
+        "y": 1150.0
+      },
+      "reason": "머스크 시나리오에서 총수요(회색 점선)는 지수적으로 치솟는데 지상 용량(블루 영역)은 약 1,150GW에서 멈추기 때문에, 그 차이만큼인 내재 우주 수요(코랄)가 2050년 약 4,300GW까지 넘쳐난다는 걸 보여드려요.",
+      "displayText": "2050년 우주 수요 4,30"
+    },
+    "densityLevel": "balanced"
+  }
+}

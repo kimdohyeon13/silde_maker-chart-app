@@ -21,7 +21,11 @@
  */
 
 import { readdir, mkdir, readFile, stat, writeFile } from "fs/promises";
-import { join, resolve } from "path";
+import { join } from "path";
+import {
+  resolveExistingPathWithin,
+  resolvePathWithin,
+} from "@/lib/path-safety";
 import type {
   CreateProjectResult,
   ProjectInfo,
@@ -128,25 +132,23 @@ function slugify(text: string): string {
 }
 
 function buildProjectPaths(slug: string) {
-  const root = join(PROJECTS_ROOT, slug);
+  const root = resolvePathWithin(PROJECTS_ROOT, slug);
+  const data = resolvePathWithin(DATA_ROOT, slug);
+  if (!root || !data) {
+    throw new Error("잘못된 프로젝트 경로입니다.");
+  }
+
   return {
     root,
     input: join(root, "input"),
-    data: join(DATA_ROOT, slug),
+    data,
     exports: join(root, "output"),
     meta: join(root, PROJECT_META_FILE),
   };
 }
 
 function resolveProjectDataDir(slug: string): string | null {
-  const dataRoot = resolve(DATA_ROOT);
-  const dataDir = resolve(dataRoot, slug);
-
-  if (!dataDir.startsWith(dataRoot)) {
-    return null;
-  }
-
-  return dataDir;
+  return resolvePathWithin(DATA_ROOT, slug);
 }
 
 function resolveProjectJsonPath(slug: string, fileName: string): string | null {
@@ -159,12 +161,7 @@ function resolveProjectJsonPath(slug: string, fileName: string): string | null {
     return null;
   }
 
-  const filePath = resolve(dataDir, fileName);
-  if (!filePath.startsWith(dataDir)) {
-    return null;
-  }
-
-  return filePath;
+  return resolvePathWithin(dataDir, fileName);
 }
 
 function splitProjectSlug(slug: string): { date: string; topic: string } {
@@ -182,7 +179,12 @@ function isImageFile(fileName: string): boolean {
 
 async function readProjectMetadata(slug: string): Promise<ProjectMetadata | null> {
   try {
-    const { meta } = buildProjectPaths(slug);
+    const { root } = buildProjectPaths(slug);
+    const meta = await resolveExistingPathWithin(root, PROJECT_META_FILE);
+    if (!meta) {
+      return null;
+    }
+
     const content = await readFile(meta, "utf-8");
     return JSON.parse(content) as ProjectMetadata;
   } catch {
@@ -365,7 +367,12 @@ export async function getProjectAnalyses(slug: string): Promise<VisualAnalysis[]
     // 모든 JSON 파일을 병렬로 읽기
     const analyses = await Promise.all(
       jsonFiles.map(async (file) => {
-        const content = await readFile(join(projectDataDir, file), "utf-8");
+        const filePath = await resolveExistingPathWithin(projectDataDir, file);
+        if (!filePath) {
+          throw new Error(`프로젝트 밖을 가리키는 JSON 파일입니다: ${file}`);
+        }
+
+        const content = await readFile(filePath, "utf-8");
         return JSON.parse(content);
       })
     );
@@ -390,7 +397,10 @@ export async function getProjectAnalysisFiles(
 
     return Promise.all(
       jsonFiles.map(async (fileName) => {
-        const filePath = resolveProjectJsonPath(slug, fileName);
+        const candidatePath = resolveProjectJsonPath(slug, fileName);
+        const filePath = candidatePath
+          ? await resolveExistingPathWithin(projectDataDir, candidatePath)
+          : null;
         if (!filePath) {
           throw new Error(`잘못된 JSON 파일명: ${fileName}`);
         }
@@ -418,7 +428,12 @@ export async function saveProjectAnalysisFile(
   analysis: VisualAnalysis,
   baseMtimeMs?: number
 ): Promise<ProjectAnalysisFileItem> {
-  const filePath = resolveProjectJsonPath(slug, fileName);
+  const projectDataDir = resolveProjectDataDir(slug);
+  const candidatePath = resolveProjectJsonPath(slug, fileName);
+  const filePath =
+    projectDataDir && candidatePath
+      ? await resolveExistingPathWithin(projectDataDir, candidatePath)
+      : null;
   if (!filePath) {
     throw new Error("잘못된 JSON 파일 경로입니다.");
   }

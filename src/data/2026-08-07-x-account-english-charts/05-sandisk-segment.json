@@ -1,0 +1,304 @@
+{
+  "id": "05-sandisk-segment",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-08-07-x-account-english-charts/input/w78-10.png",
+  "sourceImages": [
+    "projects/2026-08-07-x-account-english-charts/input/w78-10.png"
+  ],
+  "contentType": "chart",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "회계연도로 보면 데이터센터가 다섯 배가 됐다",
+    "originalMessage": "FY25 9억 6,000만 달러에서 FY26 51억 5,300만 달러로. 전사 매출은 175% 증가한 202억 4,800만 달러",
+    "preservedElements": [
+      "세로 막대 차트와 0 기준축",
+      "엣지·데이터센터·소비자 3개 세그먼트의 FY25/FY26 6개 막대",
+      "41.3 / 121.6 / 9.6 / 51.5 / 22.7 / 29.4 억 달러의 실제 값",
+      "세그먼트와 회계연도라는 x축 구성",
+      "제목과 부제의 사실 관계",
+      "샌디스크 FY2026 4분기 실적 보도자료 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 표기 문자열을 영문으로 번역 (@WorldTechRsrch 영문 전용 계정)",
+      "억 달러 단위를 영문 독자용 $bn으로 환산 (41.3억 달러 = $4.13bn, 소수 둘째 자리까지 유지해 원본 정밀도 보존)",
+      "레드 강조를 제목이 말하는 데이터센터 FY26 막대로 이동",
+      "Paperlogy 900/300 제목 계층과 16:9 캔버스 여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "차트 타입과 6개 막대, 값의 상대 관계를 그대로 두고 문자열만 영문화했습니다. 억 달러는 $bn으로 1:0.01 환산이라 인쇄된 유효숫자가 그대로 보존됩니다. 원본은 엣지 FY26을 강조했지만 제목이 말하는 대상은 데이터센터이므로 강조 막대를 DC FY26으로 옮겼습니다.",
+    "sourceAttribution": "Source: SanDisk FY2026 Q4 earnings release (SEC 8-K exhibit), Aug 5, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 문자열",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브 등 화면에 보이는 모든 문자열을 영문으로 작성했습니다."
+    },
+    {
+      "id": "unit-conversion-honest",
+      "label": "단위 환산 정직성",
+      "status": "pass",
+      "detail": "억 달러 → $bn은 0.01배 환산이므로 41.3 → 4.13처럼 인쇄 자릿수가 그대로 보존됩니다. 축 라벨에 $bn을 명시했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "세로 막대 6개, 세그먼트×회계연도 축, 0 기준축, 샌디스크 실적 보도자료 출처를 유지했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "6개 값은 원본 화면에서 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "axis-unit-single-place",
+      "label": "축 단위 중복 금지",
+      "status": "pass",
+      "detail": "$bn은 y축 label에만 두고 unit은 비워 중복 표기를 피했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#E12B3C",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Data center grew fivefold",
+    "subtitle": "From $0.96bn in FY25 to $5.15bn in FY26. Company-wide revenue rose 175% to $20.25bn",
+    "source": "Source: SanDisk FY2026 Q4 earnings release (SEC 8-K exhibit), Aug 5, 2026 · source-visible",
+    "timeRange": "FY25 vs FY26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Edge FY25",
+        "Edge FY26",
+        "Data center FY25",
+        "Data center FY26",
+        "Consumer FY25",
+        "Consumer FY26"
+      ],
+      "displayTickValues": [
+        "Edge FY25",
+        "Edge FY26",
+        "Data center FY25",
+        "Data center FY26",
+        "Consumer FY25",
+        "Consumer FY26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Revenue ($bn)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 14
+    },
+    "legend": [
+      {
+        "name": "Segment revenue",
+        "role": "primary",
+        "originalColor": "#C4CAD4",
+        "remakeColor": "#C4CAD4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Segment revenue",
+        "data": [
+          {
+            "x": "Edge FY25",
+            "y": 4.13,
+            "confidence": 0.9
+          },
+          {
+            "x": "Edge FY26",
+            "y": 12.16,
+            "confidence": 0.9
+          },
+          {
+            "x": "Data center FY25",
+            "y": 0.96,
+            "confidence": 0.9
+          },
+          {
+            "x": "Data center FY26",
+            "y": 5.15,
+            "confidence": 0.9
+          },
+          {
+            "x": "Consumer FY25",
+            "y": 2.27,
+            "confidence": 0.9
+          },
+          {
+            "x": "Consumer FY26",
+            "y": 2.94,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C4CAD4"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.88,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에 값 라벨이 인쇄되어 있어 판독 난이도는 낮습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.82,
+      "description": "Every segment grew year over year, but data center grew the fastest.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.789,
+      "description": "Segment sizes are far apart, from $0.96bn to $12.16bn."
+    },
+    "changeRates": [
+      {
+        "period": "Data center FY25 to FY26",
+        "percentChange": 436.5,
+        "absoluteChange": 4.19,
+        "from": 0.96,
+        "to": 5.15
+      },
+      {
+        "period": "Edge FY25 to FY26",
+        "percentChange": 194.4,
+        "absoluteChange": 8.03,
+        "from": 4.13,
+        "to": 12.16
+      },
+      {
+        "period": "Consumer FY25 to FY26",
+        "percentChange": 29.5,
+        "absoluteChange": 0.67,
+        "from": 2.27,
+        "to": 2.94
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 12.16,
+        "at": "Edge FY26"
+      },
+      "min": {
+        "value": 0.96,
+        "at": "Data center FY25"
+      },
+      "average": 4.6017,
+      "median": 3.535,
+      "range": 11.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "On a fiscal-year basis, data center grew fivefold",
+    "subMessage": "From $0.96bn in FY25 to $5.15bn in FY26. Company-wide revenue rose 175% to $20.25bn",
+    "headline": "On a fiscal-year basis, data center grew fivefold",
+    "summary": "Data center revenue went from $0.96bn to $5.15bn in one fiscal year while edge and consumer also grew.",
+    "story": "The chart keeps the original six-bar segment comparison and only changes the language, the unit expression and the colour emphasis for an English-reading audience.",
+    "keyTakeaways": [
+      "Data center: $0.96bn in FY25 to $5.15bn in FY26",
+      "Edge: $4.13bn to $12.16bn",
+      "Consumer: $2.27bn to $2.94bn",
+      "Company-wide revenue rose 175% to $20.25bn",
+      "Values are source-visible, read off the published chart"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare each segment's FY25 bar with its FY26 bar and note that data center multiplied the most.",
+    "contextualNotes": [
+      "Source: SanDisk FY2026 Q4 earnings release (SEC 8-K exhibit), Aug 5, 2026",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#C4CAD4",
+      "secondary": [
+        "#E3E6EC"
+      ],
+      "positive": "#E12B3C",
+      "negative": "#4B5563",
+      "accent": "#E12B3C",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Data center FY26",
+        "y": 5.15
+      },
+      "displayText": "5.15",
+      "reason": "Data center FY26 revenue of $5.15bn is what the title is about."
+    },
+    "densityLevel": "focused"
+  }
+}

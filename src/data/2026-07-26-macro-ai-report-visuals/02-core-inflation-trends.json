@@ -1,0 +1,593 @@
+{
+  "id": "02-core-inflation-trends",
+  "mode": "faithful",
+  "sourceImage": "input/02-core-inflation-trends.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "고변동성 항목을 제외한 주요 물가 지표 - 역시 하향세",
+    "originalMessage": "고변동성 항목을 제외한 주요 물가 지표 - 역시 하향세",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "3개 시리즈, 69개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "고변동성 항목을 제외한 주요 물가 지표 - 역시 하향세",
+    "subtitle": "전년 대비 % · 2021~2026",
+    "source": "참고: Cleveland 16% Trimmed-Mean CPI, Atlanta Fed Core Flexible CPI 기준 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2022-Q1",
+        "2023-Q1",
+        "2024-Q1",
+        "2025-Q1",
+        "2026-Q1"
+      ],
+      "displayTickValues": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 8,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Trimmed CPI",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "Core Flexible CPI",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "Super Core CPI",
+        "role": "primary",
+        "originalColor": "#08AFC3",
+        "remakeColor": "#08AFC3",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Trimmed CPI",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": 1.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q2",
+            "y": 2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q3",
+            "y": 2.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q4",
+            "y": 3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q1",
+            "y": 4.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q2",
+            "y": 5.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q3",
+            "y": 6.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q4",
+            "y": 6.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q1",
+            "y": 6.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 6.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 5.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 4.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 4.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 3.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 3.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 3.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 3.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 3.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 3.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 3.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 2.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q3",
+            "y": 3,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "Core Flexible CPI",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": 1.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q2",
+            "y": 2.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q3",
+            "y": 2.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q4",
+            "y": 2.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q1",
+            "y": 2.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q2",
+            "y": 3.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q3",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q4",
+            "y": 5.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q1",
+            "y": 6.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 6.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 6.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 6.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 5.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 4.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 4.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 3.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 3.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 3.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 3.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 2.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q3",
+            "y": 3.3,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "Super Core CPI",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#08AFC3",
+        "data": [
+          {
+            "x": "2021-Q1",
+            "y": 0.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q2",
+            "y": 1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q3",
+            "y": 3.8,
+            "confidence": 0.76
+          },
+          {
+            "x": "2021-Q4",
+            "y": 3.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q1",
+            "y": 3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q2",
+            "y": 3.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q3",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2022-Q4",
+            "y": 5.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q1",
+            "y": 6.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q2",
+            "y": 6.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q3",
+            "y": 6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2023-Q4",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q1",
+            "y": 3.7,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q2",
+            "y": 4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q3",
+            "y": 5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2024-Q4",
+            "y": 4.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q1",
+            "y": 4.5,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q2",
+            "y": 4.6,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q3",
+            "y": 4.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "2025-Q4",
+            "y": 3.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q1",
+            "y": 3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q2",
+            "y": 3.3,
+            "confidence": 0.76
+          },
+          {
+            "x": "2026-Q3",
+            "y": 2.9,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 69,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 0.8,
+      "max": 6.7,
+      "average": 0,
+      "latest": 3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "고변동성 항목을 제외한 주요 물가 지표 - 역시 하향세",
+    "subMessage": "전년 대비 % · 2021~2026",
+    "headline": "고변동성 항목을 제외한 주요 물가 지표 - 역시 하향세",
+    "summary": "전년 대비 % · 2021~2026",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-Q3",
+        "y": 3
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

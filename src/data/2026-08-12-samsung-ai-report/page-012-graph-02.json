@@ -1,0 +1,177 @@
+{
+  "id": "page-012-graph-02",
+  "sourceImage": "projects/2026-08-12-samsung-ai-report/input/page-012-graph-02.png",
+  "stylePreset": "toss-clean",
+  "mode": "faithful",
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 제목",
+      "모든 시리즈 또는 항목",
+      "축 단위",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 서체",
+      "여백",
+      "색상 정리"
+    ],
+    "notes": "원본 이미지와 OCR에서 읽은 값이다. 선형 차트의 중간 점은 화면상 앵커를 따라 복원했다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 32
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "source": "자료: Bloomberg, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025 연초",
+        "2025 실제",
+        "2026 연초",
+        "2026 현재",
+        "2027 연초",
+        "2027 현재"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "unit": "십억 달러",
+      "min": 0,
+      "max": 1400
+    },
+    "legend": [
+      {
+        "name": "CapEx",
+        "color": "#1677FF",
+        "originalColor": "#1677FF"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CapEx",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2025 연초",
+            "y": 277,
+            "confidence": 0.72
+          },
+          {
+            "x": "2025 실제",
+            "y": 416,
+            "confidence": 0.72
+          },
+          {
+            "x": "2026 연초",
+            "y": 536,
+            "confidence": 0.72
+          },
+          {
+            "x": "2026 현재",
+            "y": 789,
+            "confidence": 0.72
+          },
+          {
+            "x": "2027 연초",
+            "y": 603,
+            "confidence": 0.72
+          },
+          {
+            "x": "2027 현재",
+            "y": 1076,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#1677FF",
+        "remakeColor": "#1677FF"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "subMessage": "자료: Bloomberg, World Tech Research",
+    "headline": "하이퍼스케일러 CapEx 컨센서스 변화: 연초 예상치 vs 현재",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2027년 현재 1,076십억 달러"
+    },
+    "annotations": [
+      {
+        "text": "50% 상향",
+        "position": {
+          "x": "2025 실제",
+          "y": 1250
+        },
+        "importance": "high"
+      },
+      {
+        "text": "47% 상향",
+        "position": {
+          "x": "2026 현재",
+          "y": 1250
+        },
+        "importance": "high"
+      },
+      {
+        "text": "78% 상향",
+        "position": {
+          "x": "2027 현재",
+          "y": 1250
+        },
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "원본 이미지에서 읽은 추세",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "qualityChecks": [
+    {
+      "id": "faithful-title",
+      "status": "pass",
+      "detail": "원본 제목 보존"
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "이미지 기반 앵커값과 한계를 기록"
+    },
+    {
+      "id": "series-source",
+      "status": "pass",
+      "detail": "원본 시리즈와 출처 보존"
+    }
+  ]
+}

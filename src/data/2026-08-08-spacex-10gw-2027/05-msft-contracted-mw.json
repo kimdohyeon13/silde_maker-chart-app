@@ -1,0 +1,254 @@
+{
+  "id": "05-msft-contracted-mw",
+  "mode": "faithful",
+  "sourceImage": "input/06_msft_contracted_gw.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "마이크로소프트의 분기별 계약 용량이 2026년 들어 급증해 연초 이후 누적 10기가와트를 넘었다",
+    "preservedElements": [
+      "1Q25~2Q26 6개 분기 순서",
+      "메가와트 단위와 체결 분기 기준",
+      "SemiAnalysis Datacenter Model 출처"
+    ],
+    "changedElements": [
+      "4개 계약 유형 누적 막대를 분기 총계 단일 시리즈로 단순화",
+      "2026년 두 분기만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 자체 건설 착공, 제3자 선임대, 네오클라우드 오프테이크, 전력 직접 계약 네 유형의 누적입니다. 이 장표는 분기 총계만 남겼습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Datacenter Model, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 6개, 0~7,800 축, 전 분기 라벨, 최종 분기 1곳 레드 강조로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "분기 총계는 원본 누적 막대 높이를 화면에서 읽은 source-visible 근사값입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "subtitle": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "source": "자료: SemiAnalysis Datacenter Model, 재구성",
+    "timeRange": "1Q25~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2000",
+        "4000",
+        "6000",
+        "8000"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 7800
+    },
+    "legend": [
+      {
+        "name": "신규 계약 용량",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "신규 계약 용량",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 750,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "2Q25",
+            "y": 600,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "3Q25",
+            "y": 950,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "4Q25",
+            "y": 1000,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          },
+          {
+            "x": "1Q26",
+            "y": 2400,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "2Q26",
+            "y": 6950,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "분기 총계는 원본 누적 막대 높이를 화면에서 읽은 source-visible 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 826.7,
+        "absoluteChange": 6200,
+        "from": 750,
+        "to": 6950
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6950,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 600,
+        "at": "2Q25"
+      },
+      "average": 2108.3333333333335,
+      "median": 975,
+      "range": 6350
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "subMessage": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "headline": "멈췄던 마이크로소프트가 한 분기에 7기가와트를 잠갔다",
+    "summary": "마이크로소프트 분기별 신규 계약 용량, 단위 메가와트 (체결 분기 기준)",
+    "story": "2024년 12월의 리스 중단이 2026년에 정반대로 뒤집혔습니다.",
+    "keyTakeaways": [
+      "2025년 네 분기는 분기당 1기가와트 미만",
+      "2026년 2분기 한 분기에만 약 7기가와트",
+      "연초 이후 누적 10기가와트, 계약금액 약 3,000억 달러"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "2025년 막대 네 개의 합과 2026년 2분기 막대 하나를 비교합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Datacenter Model, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

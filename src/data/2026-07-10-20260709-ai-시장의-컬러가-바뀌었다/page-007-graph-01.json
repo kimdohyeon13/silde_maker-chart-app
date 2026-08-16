@@ -1,0 +1,493 @@
+{
+  "id": "page-007-graph-01",
+  "sourceImage": "input/page_007_img_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "반복적 업무 가치는 낮은 지능에서 이미 포화되고, 최고 지능의 추가 효용은 엣지케이스·고난도 업무에만 남는다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다. 개념 곡선이므로 곡선 형태(조기 포화 vs 완만한 증가)를 우선 보존했습니다.",
+    "sourceAttribution": "자료: 개념 도식"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형(2계열 line)과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축(x 0~10, y 0~100), 곡선 형태, 교차 없는 격차를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "포화 곡선과 완만한 증가 곡선의 형태, x=4 부근 라우팅 임계점 위치를 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "지능의 한계효용 비대칭: 반복 업무 가치는 일찍 포화된다",
+    "subtitle": "라우팅 임계점 이후 추가 지능의 효용은 엣지케이스·고난도 업무에 집중",
+    "source": "자료: 개념 도식",
+    "timeRange": "모델 지능/비용 0~10 (개념 축)",
+    "xAxis": {
+      "label": "모델 지능 / 비용",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "0.5",
+        "1",
+        "1.5",
+        "2",
+        "2.5",
+        "3",
+        "3.5",
+        "4",
+        "4.5",
+        "5",
+        "5.5",
+        "6",
+        "6.5",
+        "7",
+        "7.5",
+        "8",
+        "8.5",
+        "9",
+        "9.5",
+        "10"
+      ],
+      "displayTickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "창출 가능한 업무 가치",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 105
+    },
+    "legend": [
+      {
+        "name": "반복 업무",
+        "role": "primary",
+        "originalColor": "#1f77b4",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "고난도 업무",
+        "role": "secondary",
+        "originalColor": "#ff7f0e",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "반복 업무",
+        "data": [
+          {
+            "x": "0",
+            "y": 0.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "0.5",
+            "y": 36.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "1",
+            "y": 59.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "1.5",
+            "y": 74.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2",
+            "y": 83.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2.5",
+            "y": 89.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "3",
+            "y": 93.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "3.5",
+            "y": 95.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "4",
+            "y": 97.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "4.5",
+            "y": 98.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "5",
+            "y": 98.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "5.5",
+            "y": 99.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "6",
+            "y": 99.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "6.5",
+            "y": 99.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "7",
+            "y": 99.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "7.5",
+            "y": 99.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "8",
+            "y": 99.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "8.5",
+            "y": 100.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "9",
+            "y": 100.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "9.5",
+            "y": 100.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "10",
+            "y": 100.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "고난도 업무",
+        "data": [
+          {
+            "x": "0",
+            "y": 0.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "0.5",
+            "y": 7.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "1",
+            "y": 13.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "1.5",
+            "y": 19.6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2",
+            "y": 25.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "2.5",
+            "y": 30.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "3",
+            "y": 35.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "3.5",
+            "y": 40.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "4",
+            "y": 45.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "4.5",
+            "y": 50.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "5",
+            "y": 54.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "5.5",
+            "y": 59.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "6",
+            "y": 64.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "6.5",
+            "y": 68.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "7",
+            "y": 73.0,
+            "confidence": 0.8
+          },
+          {
+            "x": "7.5",
+            "y": 77.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "8",
+            "y": 81.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "8.5",
+            "y": 86.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "9",
+            "y": 90.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "9.5",
+            "y": 94.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "10",
+            "y": 99.0,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 42,
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "개념 곡선이므로 절대값보다 곡선 형태와 임계점 위치가 판독 기준입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.85,
+      "description": "두 계열 모두 우상향하되, 반복 업무는 x=4 이전에 사실상 포화됩니다.",
+      "recentDirection": "decelerating_up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.55,
+      "description": "개념 곡선으로 노이즈 없이 매끈한 형태를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막 (반복 업무)",
+        "percentChange": 100.0,
+        "absoluteChange": 100.0,
+        "from": 0.0,
+        "to": 100.0
+      },
+      {
+        "period": "처음 대비 마지막 (고난도 업무)",
+        "percentChange": 99.0,
+        "absoluteChange": 99.0,
+        "from": 0.0,
+        "to": 99.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 100.0,
+        "at": "10"
+      },
+      "min": {
+        "value": 0.0,
+        "at": "0"
+      },
+      "average": 70.02,
+      "median": 83.5,
+      "range": 100.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "지능의 한계효용 비대칭: 반복 업무 가치는 일찍 포화된다",
+    "subMessage": "라우팅 임계점 이후 추가 지능의 효용은 엣지케이스·고난도 업무에 집중",
+    "headline": "지능의 한계효용 비대칭: 반복 업무 가치는 일찍 포화된다",
+    "summary": "반복적·상한선 있는 업무는 모델 지능 4 수준에서 가치의 97%에 도달하는 반면, 엣지케이스·고난도 업무는 지능이 오를수록 가치가 계속 늘어난다.",
+    "story": "원본의 두 곡선 형태(조기 포화 vs 완만한 증가)와 라우팅 임계점 위치를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "반복 업무는 중간 수준 지능에서 이미 가치가 포화된다",
+      "최고 지능의 추가 효용은 엣지케이스·고난도 업무에만 남는다",
+      "라우팅 임계점(x=4 부근)이 모델 선택의 분기점이다"
+    ],
+    "questionsRaised": [
+      "이 임계점이 모델 라우팅과 비용 구조를 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 곡선 형태, 축, 임계점 위치를 확인합니다.",
+    "contextualNotes": [
+      "자료: 개념 도식"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "text": "라우팅 임계점",
+        "position": {
+          "x": "4",
+          "y": 47.2
+        },
+        "importance": "critical",
+        "style": "neutral"
+      },
+      {
+        "text": "가치 97% 도달, 포화",
+        "position": {
+          "x": "4",
+          "y": 97.3
+        },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#FF6F61",
+        "#6667AB",
+        "#F5DF4D",
+        "#939597"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "4",
+        "y": 47.2
+      },
+      "displayText": "라우팅 임계점",
+      "reason": "x=4 부근에서 반복 업무는 포화, 고난도 업무는 절반 수준이라 모델 라우팅의 분기점이 된다"
+    },
+    "densityLevel": "balanced"
+  }
+}

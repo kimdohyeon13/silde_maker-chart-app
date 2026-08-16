@@ -1,0 +1,178 @@
+{
+  "id": "page-009-graph-01",
+  "sourceImage": "07-page_009_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32
+  },
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러의 RPO 증분과 분기별 CapEx 금액 추이",
+    "dataFidelity": "source-visible",
+    "notes": "막대 높이는 화면에서 읽은 근사값"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "분기별 CapEx와 RPO 증분의 두 시리즈를 보존했다."
+    }
+  ],
+  "structure": {
+    "chartType": "combo",
+    "title": "하이퍼스케일러의 RPO 증분과 분기별 CapEx 금액 추이",
+    "source": "자료: 각사, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250",
+        "300",
+        "350",
+        "400",
+        "450"
+      ],
+      "min": 0,
+      "max": 450,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "분기별 CapEx 금액",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      },
+      {
+        "name": "RPO 증분(QoQ)",
+        "originalColor": "#D9D9D9",
+        "remakeColor": "#D9D9D9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "분기별 CapEx 금액",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2022",
+            "y": 30,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023",
+            "y": 35,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 55,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 75,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 145,
+            "confidence": 0.8
+          }
+        ]
+      },
+      {
+        "name": "RPO 증분(QoQ)",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "2022",
+            "y": 55,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023",
+            "y": 38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 60,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 80,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 370,
+            "confidence": 0.8
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "분기별 화면 막대를 연도별 대표 앵커로 정리"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "2025년 이후 RPO 증분과 CapEx가 함께 확대된다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "하이퍼스케일러의 RPO 증분과 분기별 CapEx 금액 추이",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Gap 확대"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

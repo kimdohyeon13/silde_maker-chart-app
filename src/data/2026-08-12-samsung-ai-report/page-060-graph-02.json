@@ -1,0 +1,232 @@
+{
+  "id": "page-060-graph-02",
+  "sourceImage": "projects/2026-08-12-samsung-ai-report/input/page-060-graph-02.png",
+  "stylePreset": "toss-clean",
+  "mode": "faithful",
+  "preserveIntent": {
+    "originalTitle": "분기별 OCF와 CapEx 추이 및 컨센서스",
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 제목",
+      "모든 시리즈 또는 항목",
+      "축 단위",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 서체",
+      "여백",
+      "색상 정리"
+    ],
+    "notes": "원본 이미지와 OCR에서 읽은 값이다. 선형 차트의 중간 점은 화면상 앵커를 따라 복원했다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "분기별 OCF와 CapEx 추이 및 컨센서스",
+    "source": "자료: Bloomberg, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q24",
+        "3Q24",
+        "1Q25",
+        "3Q25",
+        "1Q26",
+        "3Q26",
+        "1Q27",
+        "3Q27"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "unit": "십억 달러",
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "영업활동현금흐름",
+        "color": "#1677FF",
+        "originalColor": "#1677FF"
+      },
+      {
+        "name": "CapEx",
+        "color": "#D9D9D9",
+        "originalColor": "#D9D9D9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "영업활동현금흐름",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q24",
+            "y": 19,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q24",
+            "y": 24,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q25",
+            "y": 24,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q25",
+            "y": 30,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q26",
+            "y": 32,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q26",
+            "y": 33,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q27",
+            "y": 39,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q27",
+            "y": 43,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#1677FF",
+        "remakeColor": "#1677FF"
+      },
+      {
+        "name": "CapEx",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "1Q24",
+            "y": 6,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q24",
+            "y": 8,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q25",
+            "y": 13,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q25",
+            "y": 18,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q26",
+            "y": 20,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q26",
+            "y": 40,
+            "confidence": 0.72
+          },
+          {
+            "x": "1Q27",
+            "y": 49,
+            "confidence": 0.72
+          },
+          {
+            "x": "3Q27",
+            "y": 57,
+            "confidence": 0.72
+          }
+        ],
+        "originalColor": "#D9D9D9",
+        "remakeColor": "#D9D9D9"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "분기별 OCF와 CapEx 추이 및 컨센서스",
+    "subMessage": "자료: Bloomberg, World Tech Research",
+    "headline": "분기별 OCF와 CapEx 추이 및 컨센서스",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "3Q26부터 적자 전환"
+    },
+    "annotations": [
+      {
+        "text": "3Q26부터 적자 전환",
+        "position": {
+          "x": "3Q26",
+          "y": 62
+        },
+        "importance": "critical"
+      }
+    ],
+    "highlightZones": [
+      {
+        "fromX": "3Q26",
+        "toX": "3Q27",
+        "color": "#FDE7EE",
+        "label": ""
+      }
+    ],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "원본 이미지에서 읽은 추세",
+    "supportResistance": []
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "qualityChecks": [
+    {
+      "id": "faithful-title",
+      "status": "pass",
+      "detail": "원본 제목 보존"
+    },
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "이미지 기반 앵커값과 한계를 기록"
+    },
+    {
+      "id": "series-source",
+      "status": "pass",
+      "detail": "원본 시리즈와 출처 보존"
+    }
+  ]
+}

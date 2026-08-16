@@ -1,0 +1,368 @@
+{
+  "id": "page-14-graph-01",
+  "sourceImage": "input/16-page_14_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Dataguide ('26.05.28 기준)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "5파 이후(5/20일) 업종별 수익률",
+    "subtitle": "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스",
+    "source": "자료: Dataguide ('26.05.28 기준)",
+    "timeRange": "2026.05.28 기준",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "IT하드웨어",
+        "IT가전",
+        "반도체",
+        "자동차",
+        "코스피",
+        "디스플레이",
+        "에너지",
+        "상사,자본재",
+        "소프트웨어",
+        "화학",
+        "보험",
+        "조선",
+        "건강관리",
+        "운송",
+        "유틸리티",
+        "비철,목재등",
+        "건설",
+        "기계",
+        "철강",
+        "증권",
+        "유통",
+        "화장품,의류",
+        "은행",
+        "필수소비재",
+        "호텔",
+        "미디어,교육",
+        "통신"
+      ],
+      "unit": "업종",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -10,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "업종별 수익률",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "업종별 수익률",
+        "data": [
+          {
+            "x": "IT하드웨어",
+            "y": 56,
+            "confidence": 0.78
+          },
+          {
+            "x": "IT가전",
+            "y": 19.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "반도체",
+            "y": 18,
+            "confidence": 0.78
+          },
+          {
+            "x": "자동차",
+            "y": 15.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "코스피",
+            "y": 13,
+            "confidence": 0.78
+          },
+          {
+            "x": "디스플레이",
+            "y": 13,
+            "confidence": 0.78
+          },
+          {
+            "x": "에너지",
+            "y": 11,
+            "confidence": 0.78
+          },
+          {
+            "x": "상사,자본재",
+            "y": 9.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "소프트웨어",
+            "y": 9,
+            "confidence": 0.78
+          },
+          {
+            "x": "화학",
+            "y": 6.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "보험",
+            "y": 5.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "조선",
+            "y": 5.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "건강관리",
+            "y": 5,
+            "confidence": 0.78
+          },
+          {
+            "x": "운송",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "유틸리티",
+            "y": 3,
+            "confidence": 0.78
+          },
+          {
+            "x": "비철,목재등",
+            "y": 2.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "건설",
+            "y": 2,
+            "confidence": 0.78
+          },
+          {
+            "x": "기계",
+            "y": 1,
+            "confidence": 0.78
+          },
+          {
+            "x": "철강",
+            "y": 1,
+            "confidence": 0.78
+          },
+          {
+            "x": "증권",
+            "y": 0.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "유통",
+            "y": 0.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "화장품,의류",
+            "y": -0.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "은행",
+            "y": -0.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "필수소비재",
+            "y": -1,
+            "confidence": 0.78
+          },
+          {
+            "x": "호텔",
+            "y": -1.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "미디어,교육",
+            "y": -2,
+            "confidence": 0.78
+          },
+          {
+            "x": "통신",
+            "y": -3,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 27,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 8.297,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -105.4,
+        "absoluteChange": -59.0,
+        "from": 56.0,
+        "to": -3.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 56.0,
+        "at": ""
+      },
+      "min": {
+        "value": -3.0,
+        "at": ""
+      },
+      "average": 7.111111111111111,
+      "median": 3.0,
+      "range": 59.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "5파 이후(5/20일) 업종별 수익률",
+    "subMessage": "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스",
+    "headline": "5파 이후(5/20일) 업종별 수익률",
+    "summary": "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Dataguide ('26.05.28 기준)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": -3.0
+      },
+      "displayText": "5파 이후(5/20일) 업종별",
+      "reason": "IT하드웨어(+56%)가 압도적 1위, 코스피 평균(+13%) 상회 업종은 IT가전·반도체·자동차에 집중, 통신은 마이너스"
+    },
+    "densityLevel": "balanced"
+  }
+}

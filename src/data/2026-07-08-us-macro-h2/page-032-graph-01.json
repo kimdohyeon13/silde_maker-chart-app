@@ -1,0 +1,396 @@
+{
+  "id": "page-032-graph-01",
+  "sourceImage": "input/35-page_032_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Eurostat, S&P Global"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "유로존 GDP vs PMI: 2Q 일시적 둔화 가능성",
+    "subtitle": "",
+    "source": "자료: Eurostat, S&P Global",
+    "timeRange": "2005년 1분기~2026년 2분기 (분기별)",
+    "xAxis": {
+      "label": "분기",
+      "type": "time",
+      "tickValues": [
+        "'05.03",
+        "'10.03",
+        "'15.03",
+        "'20.03",
+        "'25.03"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "전기대비",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -3,
+      "max": 4
+    },
+    "legend": [
+      {
+        "name": "GDP (좌측)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "유로존 종합 PMI (우측)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "지수",
+      "type": "value",
+      "tickValues": [],
+      "unit": "pt",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 35,
+      "max": 70
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "GDP (좌측)",
+        "data": [
+          {
+            "x": "'05.03",
+            "y": 0.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "'06.06",
+            "y": 1.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "'08.09",
+            "y": -0.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "'09.03",
+            "y": -2.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "'10.06",
+            "y": 1.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'12.12",
+            "y": -0.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'14.06",
+            "y": 0.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "'17.12",
+            "y": 0.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "'19.12",
+            "y": 0.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "'20.06",
+            "y": -3.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'20.09",
+            "y": 4.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'21.06",
+            "y": 2.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "'22.12",
+            "y": 0.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'23.12",
+            "y": 0.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "'24.12",
+            "y": 0.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "'26.03",
+            "y": -0.2,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "유로존 종합 PMI (우측)",
+        "data": [
+          {
+            "x": "'05.03",
+            "y": 53.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'06.06",
+            "y": 58.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'08.09",
+            "y": 47.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'09.03",
+            "y": 38.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'10.06",
+            "y": 56.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'12.12",
+            "y": 46.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'14.06",
+            "y": 53.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'17.12",
+            "y": 58.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'19.12",
+            "y": 50.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "'20.06",
+            "y": 35.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'20.09",
+            "y": 52.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "'21.06",
+            "y": 58.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'22.12",
+            "y": 48.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'23.12",
+            "y": 47.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'24.12",
+            "y": 49.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'26.03",
+            "y": 49.2,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 32,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 7.0,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -166.7,
+        "absoluteChange": -0.5,
+        "from": 0.3,
+        "to": -0.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.0,
+        "at": ""
+      },
+      "min": {
+        "value": -3.0,
+        "at": ""
+      },
+      "average": 0.19375,
+      "median": 0.15000000000000002,
+      "range": 7.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "유로존 GDP vs PMI: 2Q 일시적 둔화 가능성",
+    "subMessage": "",
+    "headline": "유로존 GDP vs PMI: 2Q 일시적 둔화 가능성",
+    "summary": "",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Eurostat, S&P Global"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 49.2
+      },
+      "displayText": "유로존 GDP vs PMI: ",
+      "reason": ""
+    },
+    "densityLevel": "balanced"
+  }
+}

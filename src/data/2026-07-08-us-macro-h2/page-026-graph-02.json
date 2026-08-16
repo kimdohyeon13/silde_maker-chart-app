@@ -1,0 +1,606 @@
+{
+  "id": "page-026-graph-02",
+  "sourceImage": "input/25-page_026_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: UNCTAD, Global Trade Alert"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "정책 지원 수준이 높을수록 수출 증가가 큰 경향",
+    "subtitle": "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)",
+    "source": "자료: UNCTAD, Global Trade Alert",
+    "timeRange": "'15~'24년",
+    "xAxis": {
+      "label": "산업별 정책 개수 ('16~24년)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "250",
+        "500",
+        "750",
+        "1,000"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "'15년 대비 '24년 수출 증가율",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -100,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "산업별 수출 증가율(관측치)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "추세선",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "산업별 수출 증가율(관측치)",
+        "data": [
+          {
+            "x": "96",
+            "y": 39,
+            "confidence": 0.72
+          },
+          {
+            "x": "104",
+            "y": -44,
+            "confidence": 0.72
+          },
+          {
+            "x": "126",
+            "y": 46,
+            "confidence": 0.72
+          },
+          {
+            "x": "148",
+            "y": 58,
+            "confidence": 0.72
+          },
+          {
+            "x": "150",
+            "y": 29,
+            "confidence": 0.72
+          },
+          {
+            "x": "157",
+            "y": 70,
+            "confidence": 0.72
+          },
+          {
+            "x": "164",
+            "y": -27,
+            "confidence": 0.72
+          },
+          {
+            "x": "181",
+            "y": 50,
+            "confidence": 0.72
+          },
+          {
+            "x": "214",
+            "y": 79,
+            "confidence": 0.72
+          },
+          {
+            "x": "220",
+            "y": -26,
+            "confidence": 0.72
+          },
+          {
+            "x": "225",
+            "y": 131,
+            "confidence": 0.72
+          },
+          {
+            "x": "238",
+            "y": -23,
+            "confidence": 0.72
+          },
+          {
+            "x": "248",
+            "y": 110,
+            "confidence": 0.72
+          },
+          {
+            "x": "270",
+            "y": 16,
+            "confidence": 0.72
+          },
+          {
+            "x": "300",
+            "y": 99,
+            "confidence": 0.72
+          },
+          {
+            "x": "391",
+            "y": -77,
+            "confidence": 0.72
+          },
+          {
+            "x": "482",
+            "y": -65,
+            "confidence": 0.72
+          },
+          {
+            "x": "505",
+            "y": -7,
+            "confidence": 0.72
+          },
+          {
+            "x": "523",
+            "y": 57,
+            "confidence": 0.72
+          },
+          {
+            "x": "537",
+            "y": 80,
+            "confidence": 0.72
+          },
+          {
+            "x": "548",
+            "y": 73,
+            "confidence": 0.72
+          },
+          {
+            "x": "618",
+            "y": 64,
+            "confidence": 0.72
+          },
+          {
+            "x": "620",
+            "y": 106,
+            "confidence": 0.72
+          },
+          {
+            "x": "639",
+            "y": 106,
+            "confidence": 0.72
+          },
+          {
+            "x": "661",
+            "y": 108,
+            "confidence": 0.72
+          },
+          {
+            "x": "675",
+            "y": 116,
+            "confidence": 0.72
+          },
+          {
+            "x": "682",
+            "y": 97,
+            "confidence": 0.72
+          },
+          {
+            "x": "731",
+            "y": 89,
+            "confidence": 0.72
+          },
+          {
+            "x": "739",
+            "y": 56,
+            "confidence": 0.72
+          },
+          {
+            "x": "777",
+            "y": 37,
+            "confidence": 0.72
+          },
+          {
+            "x": "799",
+            "y": 45,
+            "confidence": 0.72
+          },
+          {
+            "x": "815",
+            "y": 128,
+            "confidence": 0.72
+          },
+          {
+            "x": "838",
+            "y": 91,
+            "confidence": 0.72
+          },
+          {
+            "x": "853",
+            "y": 166,
+            "confidence": 0.72
+          },
+          {
+            "x": "875",
+            "y": 64,
+            "confidence": 0.72
+          },
+          {
+            "x": "898",
+            "y": 162,
+            "confidence": 0.72
+          },
+          {
+            "x": "909",
+            "y": 103,
+            "confidence": 0.72
+          },
+          {
+            "x": "996",
+            "y": 33,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "추세선",
+        "data": [
+          {
+            "x": "96",
+            "y": 25,
+            "confidence": 0.72
+          },
+          {
+            "x": "104",
+            "y": 25,
+            "confidence": 0.72
+          },
+          {
+            "x": "126",
+            "y": 27,
+            "confidence": 0.72
+          },
+          {
+            "x": "148",
+            "y": 29,
+            "confidence": 0.72
+          },
+          {
+            "x": "150",
+            "y": 29,
+            "confidence": 0.72
+          },
+          {
+            "x": "157",
+            "y": 30,
+            "confidence": 0.72
+          },
+          {
+            "x": "164",
+            "y": 30,
+            "confidence": 0.72
+          },
+          {
+            "x": "181",
+            "y": 32,
+            "confidence": 0.72
+          },
+          {
+            "x": "214",
+            "y": 35,
+            "confidence": 0.72
+          },
+          {
+            "x": "220",
+            "y": 35,
+            "confidence": 0.72
+          },
+          {
+            "x": "225",
+            "y": 35,
+            "confidence": 0.72
+          },
+          {
+            "x": "238",
+            "y": 37,
+            "confidence": 0.72
+          },
+          {
+            "x": "248",
+            "y": 37,
+            "confidence": 0.72
+          },
+          {
+            "x": "270",
+            "y": 39,
+            "confidence": 0.72
+          },
+          {
+            "x": "300",
+            "y": 42,
+            "confidence": 0.72
+          },
+          {
+            "x": "391",
+            "y": 49,
+            "confidence": 0.72
+          },
+          {
+            "x": "482",
+            "y": 57,
+            "confidence": 0.72
+          },
+          {
+            "x": "505",
+            "y": 59,
+            "confidence": 0.72
+          },
+          {
+            "x": "523",
+            "y": 60,
+            "confidence": 0.72
+          },
+          {
+            "x": "537",
+            "y": 62,
+            "confidence": 0.72
+          },
+          {
+            "x": "548",
+            "y": 62,
+            "confidence": 0.72
+          },
+          {
+            "x": "618",
+            "y": 68,
+            "confidence": 0.72
+          },
+          {
+            "x": "620",
+            "y": 68,
+            "confidence": 0.72
+          },
+          {
+            "x": "639",
+            "y": 70,
+            "confidence": 0.72
+          },
+          {
+            "x": "661",
+            "y": 72,
+            "confidence": 0.72
+          },
+          {
+            "x": "675",
+            "y": 73,
+            "confidence": 0.72
+          },
+          {
+            "x": "682",
+            "y": 74,
+            "confidence": 0.72
+          },
+          {
+            "x": "731",
+            "y": 78,
+            "confidence": 0.72
+          },
+          {
+            "x": "739",
+            "y": 78,
+            "confidence": 0.72
+          },
+          {
+            "x": "777",
+            "y": 82,
+            "confidence": 0.72
+          },
+          {
+            "x": "799",
+            "y": 84,
+            "confidence": 0.72
+          },
+          {
+            "x": "815",
+            "y": 85,
+            "confidence": 0.72
+          },
+          {
+            "x": "838",
+            "y": 87,
+            "confidence": 0.72
+          },
+          {
+            "x": "853",
+            "y": 88,
+            "confidence": 0.72
+          },
+          {
+            "x": "875",
+            "y": 90,
+            "confidence": 0.72
+          },
+          {
+            "x": "898",
+            "y": 92,
+            "confidence": 0.72
+          },
+          {
+            "x": "909",
+            "y": 93,
+            "confidence": 0.72
+          },
+          {
+            "x": "996",
+            "y": 100,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 76,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 4.124,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -15.4,
+        "absoluteChange": -6.0,
+        "from": 39.0,
+        "to": 33.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 166.0,
+        "at": ""
+      },
+      "min": {
+        "value": -77.0,
+        "at": ""
+      },
+      "average": 58.921052631578945,
+      "median": 64.0,
+      "range": 243.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "정책 지원 수준이 높을수록 수출 증가가 큰 경향",
+    "subMessage": "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)",
+    "headline": "정책 지원 수준이 높을수록 수출 증가가 큰 경향",
+    "summary": "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: UNCTAD, Global Trade Alert"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 100.0
+      },
+      "displayText": "정책 지원 수준이 높을수록 수",
+      "reason": "x축: '16~24년 산업별 정책 개수(개), y축: '15년 대비 '24년 수출 증가율(%)"
+    },
+    "densityLevel": "balanced"
+  }
+}

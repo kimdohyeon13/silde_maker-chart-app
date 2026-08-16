@@ -1,0 +1,257 @@
+{
+  "id": "memory-mix-stacked",
+  "mode": "redesign",
+  "analyzedAt": "2026-08-02T11:20:00+09:00",
+  "sourceImage": "input/01-ubs-hyperscaler-memory-spend.png",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalTitle": "Figure 28: Hyperscaler memory spend",
+    "originalMessage": "Figure 28: Hyperscaler memory spend",
+    "preservedElements": [
+      "2025·2026E·2027E",
+      "원표 총계",
+      "구성 관계",
+      "자료: UBS"
+    ],
+    "changedElements": [
+      "차트 형식 전환",
+      "US$m→십억달러 단위 환산",
+      "Paperlogy 타이포",
+      "핵심 시리즈 강조"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "sourceAttribution": "자료: UBS, Figure 28",
+    "notes": "표 셀에 직접 보이는 숫자는 exact-as-displayed입니다. ASP는 표시 자릿수로 반올림돼 있습니다. 2026E 표시 구성합은 335.656십억달러, 원표 총계는 335.657십억달러로 0.001십억달러 차이가 있습니다. 원표 총계를 정답으로 유지합니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis",
+    "convert-display-unit",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "stacked_bar 형식으로 시리즈·연도·단위를 먼저 고정했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "visible-values-transcribed",
+      "label": "원표 표시값 전사",
+      "status": "pass",
+      "detail": "UBS Figure 28의 화면 셀 숫자·행 순서·2026E/2027E 표기·Gb/GB 대소문자를 대조했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "1,824×1,026 PNG, 제목 900, 서브메시지 300, overflow 0을 최종 DOM QA에서 확인합니다.",
+      "checkedAt": "2026-08-02"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 29,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "chartHeight": 382
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "2027E 메모리 지출의 59%는 DDR",
+    "subtitle": "HBM·DDR·NAND 합계 · 십억달러",
+    "source": "자료: UBS, Figure 28 | US$m을 십억달러로 환산",
+    "timeRange": "2025~2027E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025",
+        "2026E",
+        "2027E"
+      ],
+      "displayTickValues": [
+        "2025",
+        "2026E",
+        "2027E"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 800
+    },
+    "legend": [
+      {
+        "name": "HBM",
+        "role": "secondary",
+        "originalColor": "#666666",
+        "remakeColor": "#8B95A1"
+      },
+      {
+        "name": "DDR",
+        "role": "primary",
+        "originalColor": "#333333",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "NAND",
+        "role": "secondary",
+        "originalColor": "#999999",
+        "remakeColor": "#8EB7D8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "HBM",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#8B95A1",
+        "data": [
+          {
+            "x": "2025",
+            "y": 23.98
+          },
+          {
+            "x": "2026E",
+            "y": 50.997
+          },
+          {
+            "x": "2027E",
+            "y": 144.384
+          }
+        ]
+      },
+      {
+        "name": "DDR",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {
+            "x": "2025",
+            "y": 30.158
+          },
+          {
+            "x": "2026E",
+            "y": 190.615
+          },
+          {
+            "x": "2027E",
+            "y": 448.862
+          }
+        ]
+      },
+      {
+        "name": "NAND",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#8EB7D8",
+        "data": [
+          {
+            "x": "2025",
+            "y": 18.662
+          },
+          {
+            "x": "2026E",
+            "y": 94.044
+          },
+          {
+            "x": "2027E",
+            "y": 168.071
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 9,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "ASP 표시값은 반올림"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 0,
+      "max": 448.862,
+      "average": 0,
+      "latest": 144.384
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "HBM·DDR·NAND 합계 · 십억달러",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2027E 메모리 지출의 59%는 DDR",
+    "subMessage": "HBM·DDR·NAND 합계 · 십억달러",
+    "headline": "2027E 메모리 지출의 59%는 DDR. HBM·DDR·NAND 합계 · 십억달러",
+    "summary": "HBM·DDR·NAND 합계 · 십억달러",
+    "story": "2027E 메모리 지출의 59%는 DDR. HBM·DDR·NAND 합계 · 십억달러",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원표 숫자와 단위를 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: UBS, Figure 28",
+      "ASP는 원표 표시값 기준"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "DDR 448.862",
+      "reason": "2027E 메모리 지출의 58.96%"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#8EB7D8",
+        "#D1D6DB",
+        "#F59E0B"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

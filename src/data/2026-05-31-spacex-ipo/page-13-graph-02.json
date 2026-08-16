@@ -1,0 +1,305 @@
+{
+  "id": "page-13-graph-02",
+  "sourceImage": "output/spacex_ipo_20260531/crops/page_13_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "스페이스X S-1·Artificial Analysis 자료"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Grok은 토큰 가격이 낮다",
+    "subtitle": "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사",
+    "source": "스페이스X S-1·Artificial Analysis 자료",
+    "timeRange": "",
+    "xAxis": {
+      "label": "모델",
+      "type": "category",
+      "tickValues": [
+        "Grok 4.3",
+        "GPT 5.4 mini",
+        "Kimi K2.6",
+        "MiMo V2.5 Pro",
+        "DeepSeek V4 Pro",
+        "Haiku 4.5",
+        "GLM 5.1",
+        "Qwen 3.5",
+        "Gemini 3.5 Flash",
+        "Qwen 3.7",
+        "Nova 2.0 Pro",
+        "Gemini 3.1 Pro",
+        "Mistral 3.5",
+        "GPT 5.4",
+        "Sonnet 4.6",
+        "Opus 4.7",
+        "GPT 5.5"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "달러",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "달러",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "백만 토큰당 가격",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "백만 토큰당 가격",
+        "data": [
+          {
+            "x": "Grok 4.3",
+            "y": 0.64,
+            "confidence": 0.9
+          },
+          {
+            "x": "GPT 5.4 mini",
+            "y": 0.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kimi K2.6",
+            "y": 0.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "MiMo V2.5 Pro",
+            "y": 0.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "DeepSeek V4 Pro",
+            "y": 0.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "Haiku 4.5",
+            "y": 0.65,
+            "confidence": 0.9
+          },
+          {
+            "x": "GLM 5.1",
+            "y": 0.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "Qwen 3.5",
+            "y": 1,
+            "confidence": 0.9
+          },
+          {
+            "x": "Gemini 3.5 Flash",
+            "y": 1.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "Qwen 3.7",
+            "y": 1.35,
+            "confidence": 0.9
+          },
+          {
+            "x": "Nova 2.0 Pro",
+            "y": 1.45,
+            "confidence": 0.9
+          },
+          {
+            "x": "Gemini 3.1 Pro",
+            "y": 1.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "Mistral 3.5",
+            "y": 2.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "GPT 5.4",
+            "y": 2.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "Sonnet 4.6",
+            "y": 2.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "Opus 4.7",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "GPT 5.5",
+            "y": 4.35,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597"
+      }
+    ],
+    "totalDataPoints": 17,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.42,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 579.7,
+        "absoluteChange": 3.71,
+        "from": 0.64,
+        "to": 4.35
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.35,
+        "at": ""
+      },
+      "min": {
+        "value": 0.6,
+        "at": ""
+      },
+      "average": 1.5494117647058823,
+      "median": 1.2,
+      "range": 3.7499999999999996
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Grok은 토큰 가격이 낮다",
+    "subMessage": "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사",
+    "headline": "Grok은 토큰 가격이 낮다",
+    "summary": "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "스페이스X S-1·Artificial Analysis 자료"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 4.35
+      },
+      "displayText": "Grok은 토큰 가격이 낮다",
+      "reason": "백만 토큰당 가격, 양 끝값만 원문 표기(Grok 0.64, GPT 5.5 4.35), 나머지는 막대 높이 근사"
+    },
+    "densityLevel": "balanced"
+  }
+}

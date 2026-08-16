@@ -1,0 +1,597 @@
+{
+  "id": "01-line-speed-roadmap",
+  "mode": "faithful",
+  "sourceImage": "input/01-08-ai-server-optics-roadmap.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 17: Roadmap of data center connection speed",
+    "originalMessage": "(6) Optics: speed upgrade continues",
+    "preservedElements": [
+      "2024 Q1~2028 Q4 분기축",
+      "400G·800G·1.6T·3.2T 표시 수치",
+      "결측 구간",
+      "침투율 합계가 100%가 아닌 이유",
+      "출처"
+    ],
+    "changedElements": [
+      "원본 로드맵 셀의 분기별 숫자를 4개 라인으로 표시",
+      "연도별 축 라벨로 축약",
+      "폰트·색·간격 정리",
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 검수팩 여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "표시 수치는 원본 로드맵 셀에서 읽었지만 차트 산출물이므로 source-visible로 분류합니다. 숫자가 없는 분기는 0으로 채우지 않고 생략했습니다. 6.4T는 요청 대상 시리즈에 포함되지 않아 제외했습니다. 형식 검수를 위한 복제본이며 원본 데이터 payload는 변경하지 않았습니다.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "20개 분기 키와 4개 속도 시리즈를 먼저 설계했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "source-visible-values",
+      "label": "이미지 표시값 기반",
+      "status": "pass",
+      "detail": "원본 로드맵 셀의 분기별 수치를 직접 전사했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "quarter-keys",
+      "label": "분기 키·표시 라벨 분리",
+      "status": "pass",
+      "detail": "실제 키는 YYYY-QN, 표시 라벨은 연도만 사용합니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "missing-not-zero",
+      "label": "결측 구간 보존",
+      "status": "pass",
+      "detail": "원본 공란을 0으로 변환하지 않았습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "paperlogy-format-review",
+      "label": "Paperlogy 900·300 형식 검수",
+      "status": "pass",
+      "detail": "꺾은선의 Paperlogy 900·300, 16:9, 겹침·오버플로·콘텐츠 개수를 DOM에서 확인했습니다.",
+      "checkedAt": "2026-07-17"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 513,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 10,
+    "chartHeight": 370,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "lineStrokeWidth": 2.5,
+    "endLabelRightMargin": 120,
+    "headerVariant": "stacked",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "compactChartMargins": false
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "데이터센터 연결 속도 로드맵",
+    "subtitle": "광학: 속도 업그레이드 지속 | 침투율은 400G 미만 모듈 때문에 합계 100%가 아님",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research",
+    "timeRange": "2024-Q1 ~ 2028-Q4",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-Q2",
+        "2025-Q2",
+        "2026-Q2",
+        "2027-Q2",
+        "2028-Q2"
+      ],
+      "displayTickValues": [
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "침투율",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "400G",
+        "originalColor": "#9A9EA3",
+        "remakeColor": "#9A9EA3",
+        "role": "primary",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "800G",
+        "originalColor": "#174A7E",
+        "remakeColor": "#174A7E",
+        "role": "primary",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "1.6T",
+        "originalColor": "#4F83B6",
+        "remakeColor": "#4F83B6",
+        "role": "primary",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "3.2T",
+        "originalColor": "#8EB7D8",
+        "remakeColor": "#8EB7D8",
+        "role": "primary",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "400G",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 20,
+            "confidence": 0.99
+          },
+          {
+            "x": "2024-Q2",
+            "y": 22,
+            "confidence": 0.99
+          },
+          {
+            "x": "2024-Q3",
+            "y": 25,
+            "confidence": 0.99
+          },
+          {
+            "x": "2024-Q4",
+            "y": 30,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q1",
+            "y": 27,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q2",
+            "y": 16,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q3",
+            "y": 15,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q4",
+            "y": 9,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q1",
+            "y": 5,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q2",
+            "y": 5,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q3",
+            "y": 8,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q4",
+            "y": 6,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q1",
+            "y": 4,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q2",
+            "y": 4,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q3",
+            "y": 3,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q4",
+            "y": 1,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q1",
+            "y": 1,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q2",
+            "y": 1,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q3",
+            "y": 2,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q4",
+            "y": 1,
+            "confidence": 0.99
+          }
+        ]
+      },
+      {
+        "name": "800G",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2024-Q2",
+            "y": 1,
+            "confidence": 0.99
+          },
+          {
+            "x": "2024-Q3",
+            "y": 3,
+            "confidence": 0.99
+          },
+          {
+            "x": "2024-Q4",
+            "y": 4,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q1",
+            "y": 4,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q2",
+            "y": 17,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q3",
+            "y": 24,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q4",
+            "y": 41,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q1",
+            "y": 20,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q2",
+            "y": 21,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q3",
+            "y": 29,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q4",
+            "y": 26,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q1",
+            "y": 19,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q2",
+            "y": 23,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q3",
+            "y": 36,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q4",
+            "y": 27,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q1",
+            "y": 20,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q2",
+            "y": 18,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q3",
+            "y": 30,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q4",
+            "y": 23,
+            "confidence": 0.99
+          }
+        ]
+      },
+      {
+        "name": "1.6T",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2025-Q2",
+            "y": 2,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q3",
+            "y": 6,
+            "confidence": 0.99
+          },
+          {
+            "x": "2025-Q4",
+            "y": 11,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q1",
+            "y": 12,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q2",
+            "y": 12,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q3",
+            "y": 19,
+            "confidence": 0.99
+          },
+          {
+            "x": "2026-Q4",
+            "y": 28,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q1",
+            "y": 27,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q2",
+            "y": 26,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q3",
+            "y": 24,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q4",
+            "y": 27,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q1",
+            "y": 23,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q2",
+            "y": 25,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q3",
+            "y": 35,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q4",
+            "y": 26,
+            "confidence": 0.99
+          }
+        ]
+      },
+      {
+        "name": "3.2T",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2027-Q2",
+            "y": 6,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q3",
+            "y": 10,
+            "confidence": 0.99
+          },
+          {
+            "x": "2027-Q4",
+            "y": 16,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q1",
+            "y": 15,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q2",
+            "y": 16,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q3",
+            "y": 15,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028-Q4",
+            "y": 11,
+            "confidence": 0.99
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 61,
+    "quality": {
+      "overallConfidence": 0.98,
+      "missingPoints": 19,
+      "hardToReadAreas": [
+        "원자료 CSV 없음",
+        "공란은 결측으로 보존"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.6,
+      "description": "속도 세대별 분기 침투율 로드맵",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0,
+      "description": "세대별 침투율 변동"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 41,
+        "at": "800G 2025-Q4"
+      },
+      "min": {
+        "value": 1,
+        "at": "여러 분기"
+      },
+      "average": 0,
+      "median": 0,
+      "range": 40
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "데이터센터 연결 속도 로드맵",
+    "subMessage": "광학: 속도 업그레이드 지속",
+    "headline": "데이터센터 연결 속도 로드맵",
+    "summary": "원본 로드맵의 분기별 숫자를 4개 라인으로 옮겼습니다.",
+    "story": "공란은 0이 아닌 결측으로 보존했습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "400G·800G·1.6T·3.2T의 분기별 침투율을 비교합니다.",
+    "contextualNotes": [
+      "Penetration rates do not sum up to 100%, as there are modules below 400G",
+      "Source: Company data, Goldman Sachs Global Investment Research",
+      "source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#174A7E",
+      "secondary": [
+        "#9A9EA3",
+        "#4F83B6",
+        "#8EB7D8"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#4F83B6",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2025-Q4",
+        "y": 41
+      },
+      "reason": "원본 표시값 중 최대",
+      "displayText": "source-visible"
+    },
+    "densityLevel": "detailed"
+  }
+}

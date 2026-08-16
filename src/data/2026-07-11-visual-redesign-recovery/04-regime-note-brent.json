@@ -1,0 +1,518 @@
+{
+  "id": "regime-note-brent",
+  "sourceImage": "input/source-02-brent-crude.png",
+  "analyzedAt": "2026-07-10T19:10:00+09:00",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalTitle": "배럴당 71.99달러 하락 안정",
+    "originalMessage": "원본 제목은 71.99달러, 같은 이미지의 선 끝 표시는 72.23달러",
+    "preservedElements": [
+      "2026년 1~7월 source-visible 58포인트와 시간 순서",
+      "118.50달러 고점과 72.23달러 선 끝값",
+      "60~120달러 Y축과 1·3·5·7월 X축",
+      "Yahoo Finance 출처"
+    ],
+    "changedElements": [
+      "순백 16:9에서 제목과 plot의 위계를 재조정",
+      "두 번째 고점 이후 조정 구간을 옅은 배경 한 번으로만 표시",
+      "고점과 현재값 외 장식·중복 수치·면 채움을 제거"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원문 제목과 선 끝값이 달라 차트에 직접 표시된 72.23을 사용합니다. 58개 값은 원자료 CSV가 아닌 이미지 기반 앵커·보간값입니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-fidelity",
+      "label": "source-visible 근사와 원문 값 불일치 공개",
+      "status": "pass",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "chart-data",
+      "label": "58포인트·축·날짜 키 원본 복제",
+      "status": "pass",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "chart-labels",
+      "label": "118.50 고점은 부제, 72.23 현재값은 선 끝에 한 번씩 표시",
+      "status": "pass",
+      "detail": "PNG와 브라우저 DOM에서 중복·겹침 없이 확인",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 513,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "18px 34px 0",
+    "contentPadding": "0 8px",
+    "sourcePadding": "0 34px 11px",
+    "titleFontSize": 30,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 378,
+    "showAreaFill": false,
+    "gridMode": "none",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 2,
+    "lineStrokeWidth": 4.2,
+    "endLabelRightMargin": 68,
+    "showLatestGuide": false
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "브렌트유, 5월 고점 이후 조정 지속",
+    "subtitle": "118.50달러 고점 대비 39% 하락 · 2026년 1~7월",
+    "source": "Yahoo Finance · 이미지 기반 근사값",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-01-05",
+        "2026-03-01",
+        "2026-05-01",
+        "2026-07-06"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "1월",
+        "3월",
+        "5월",
+        "7월"
+      ]
+    },
+    "yAxis": {
+      "label": "브렌트유",
+      "type": "numeric",
+      "tickValues": [
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "달러",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 57,
+      "max": 122
+    },
+    "legend": [
+      {
+        "name": "BRENT",
+        "originalColor": "#1F7664",
+        "remakeColor": "#173F5F",
+        "role": "primary"
+      }
+    ]
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본 시각 요소를 보존하는 faithful 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 통계보다 원본 형태와 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "브렌트유, 5월 고점 이후 조정 지속",
+    "subMessage": "118.50달러 고점 대비 39% 하락 · 2026년 1~7월",
+    "headline": "브렌트유, 5월 고점 이후 조정 지속",
+    "summary": "118.50달러 고점 대비 39% 하락 · 2026년 1~7월",
+    "story": "같은 58포인트에서 두 번째 고점 이후 조정 구간만 한 번 표시한 리서치 노트형 시계열입니다.",
+    "keyTakeaways": [
+      "2026-01-05—2026-07-06 · HIGH 118.50 · LAST 72.23 USD"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "Source: Yahoo Finance | title exact; line source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [
+      {
+        "fromX": "2026-05-07",
+        "toX": "2026-07-06",
+        "color": "#DCE5EC",
+        "label": "고점 이후 조정",
+        "description": "두 번째 118.50달러 고점 이후 72.23달러까지 하락"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F766E",
+      "secondary": [],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#0F766E",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-07-06",
+        "y": 72.23
+      },
+      "reason": "최신 표시값",
+      "displayText": "72.23달러"
+    },
+    "densityLevel": "balanced"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "BRENT",
+        "data": [
+          {
+            "x": "2026-01-05",
+            "y": 60.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-09",
+            "y": 63.4,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-13",
+            "y": 63.95,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-17",
+            "y": 64.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-21",
+            "y": 64.95,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-25",
+            "y": 65.4,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-29",
+            "y": 66.3,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-02",
+            "y": 67.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-06",
+            "y": 69.33,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-10",
+            "y": 68.4,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-14",
+            "y": 67.1,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-18",
+            "y": 68.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-22",
+            "y": 68.85,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-26",
+            "y": 69.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-01",
+            "y": 78,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-04",
+            "y": 81.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-07",
+            "y": 92.8,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-10",
+            "y": 99,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-13",
+            "y": 87.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-16",
+            "y": 102.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-19",
+            "y": 100,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-22",
+            "y": 103,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-25",
+            "y": 112,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-28",
+            "y": 108.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-31",
+            "y": 118.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-03",
+            "y": 101,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-06",
+            "y": 108.8,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-09",
+            "y": 109.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-12",
+            "y": 110,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-15",
+            "y": 94.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-18",
+            "y": 98.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-21",
+            "y": 95,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-24",
+            "y": 99.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-27",
+            "y": 90,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-30",
+            "y": 99,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-01",
+            "y": 105.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-04",
+            "y": 108,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-07",
+            "y": 118.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-10",
+            "y": 108,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-13",
+            "y": 114.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-16",
+            "y": 100,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-19",
+            "y": 103,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-22",
+            "y": 106,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-25",
+            "y": 111,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-28",
+            "y": 102,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-31",
+            "y": 103,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-03",
+            "y": 100,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-06",
+            "y": 93.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-09",
+            "y": 92,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-12",
+            "y": 95,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-15",
+            "y": 98,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-18",
+            "y": 92.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-21",
+            "y": 94,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-24",
+            "y": 93,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-27",
+            "y": 92,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-30",
+            "y": 87,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-07-03",
+            "y": 73,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-07-06",
+            "y": 72.23,
+            "confidence": 0.82
+          }
+        ],
+        "confidence": 0.82,
+        "color": "#0F766E"
+      }
+    ],
+    "totalDataPoints": 58,
+    "quality": {
+      "overallConfidence": 0.84,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 CSV 없이 PNG에서 읽은 근사값 포함"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "mode": "redesign",
+  "sourceImages": [
+    "input/source-02-brent-crude.png"
+  ]
+}

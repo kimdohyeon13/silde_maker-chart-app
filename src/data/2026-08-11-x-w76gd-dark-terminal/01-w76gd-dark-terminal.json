@@ -1,0 +1,238 @@
+{
+  "id": "w76gd-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "매출보다 이익 전망이 더 올랐다",
+    "preservedElements": [
+      "3개 항목의 순서와 값: 매출 12.5 / 비GAAP 영업이익 25.9 / 비GAAP EPS 31.7",
+      "가로축 눈금 0, 5, 10, 15, 20, 25, 30, 35",
+      "원본 출처 줄(블룸에너지 2026년 1·2분기 실적 발표, 중간값 기준)"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 막대 3개의 값, 순서, 축 범위를 그대로 유지했습니다.",
+    "sourceAttribution": "Source: Bloom Energy Q1 and Q2 2026 results, midpoints"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 3개, 값 라벨 전부 표시, 최대값(EPS)만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "1차 자료(회사 실적 발표)만 적었다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Profit guidance rose faster than revenue",
+    "subtitle": "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release",
+    "source": "Source: Bloom Energy Q1 and Q2 2026 results, midpoints",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Revenue",
+        "Non-GAAP operating income",
+        "Non-GAAP EPS"
+      ],
+      "displayTickValues": [
+        "Revenue",
+        "Non-GAAP operating income",
+        "Non-GAAP EPS"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "Change in midpoint (%)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Change in midpoint (%)",
+        "data": [
+          {
+            "x": "Revenue",
+            "y": 12.5,
+            "confidence": 0.99
+          },
+          {
+            "x": "Non-GAAP operating income",
+            "y": 25.9,
+            "confidence": 0.99
+          },
+          {
+            "x": "Non-GAAP EPS",
+            "y": 31.7,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 31.7,
+        "at": "Non-GAAP EPS"
+      },
+      "min": {
+        "value": 12.5,
+        "at": "Revenue"
+      },
+      "average": 23.366666666666664,
+      "median": 0,
+      "range": 19.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Profit guidance rose faster than revenue",
+    "subMessage": "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release",
+    "headline": "Profit guidance rose faster than revenue",
+    "summary": "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release",
+    "story": "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release",
+    "keyTakeaways": [
+      "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Bloom Energy Q1 and Q2 2026 results, midpoints"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Non-GAAP EPS",
+        "y": 31.7
+      },
+      "displayText": "31.7",
+      "reason": "Change in 2026 full-year guidance midpoints from the Q1 to the Q2 release"
+    },
+    "densityLevel": "focused"
+  }
+}

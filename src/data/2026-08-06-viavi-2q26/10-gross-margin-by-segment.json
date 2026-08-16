@@ -1,0 +1,230 @@
+{
+  "id": "10-gross-margin-by-segment",
+  "sourceImage": "input/10-gross-margin-by-segment.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 비아비 솔루션스 FY2026 4분기 실적 보도자료, 2026년 8월 5일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "비싼 쪽이 빨리 크고 있다",
+    "subtitle": "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조",
+    "source": "자료: 비아비 솔루션스 FY2026 4분기 실적 보도자료, 2026년 8월 5일",
+    "timeRange": "2026년 6월 분기",
+    "xAxis": {
+      "label": "구분",
+      "type": "category",
+      "tickValues": [
+        "NSE",
+        "전사 조정 기준",
+        "전사 회계 기준",
+        "OSP"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 50,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "총이익률",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "총이익률",
+        "data": [
+          {
+            "x": "NSE",
+            "y": 64.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "전사 조정 기준",
+            "y": 62.3,
+            "confidence": 0.74
+          },
+          {
+            "x": "전사 회계 기준",
+            "y": 59.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "OSP",
+            "y": 55.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.148,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -13.9,
+        "absoluteChange": -8.9,
+        "from": 64.1,
+        "to": 55.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 64.1,
+        "at": ""
+      },
+      "min": {
+        "value": 55.2,
+        "at": ""
+      },
+      "average": 60.175,
+      "median": 60.7,
+      "range": 8.899999999999991
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "비싼 쪽이 빨리 크고 있다",
+    "subMessage": "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조",
+    "headline": "비싼 쪽이 빨리 크고 있다",
+    "summary": "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 비아비 솔루션스 FY2026 4분기 실적 보도자료, 2026년 8월 5일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 55.2
+      },
+      "displayText": "비싼 쪽이 빨리 크고 있다",
+      "reason": "NSE 총이익률 64.1%가 OSP 55.2%보다 높다. NSE 비중이 커질수록 전사 총이익률이 올라가는 구조"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "01-post-earnings-reaction",
+  "mode": "redesign",
+  "sourceImages": ["input/source-earnings-reaction-reference.png"],
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "FORM·AXTI, 실적 뒤 가장 크게 반응",
+    "originalMessage": "AI 인프라 워치리스트 중 2026년 7월 28일 이후 실적 발표 종목의 주가 반응",
+    "preservedElements": ["실제 EPS와 컨센서스 비교", "실제 매출과 컨센서스 비교", "EPS 서프라이즈", "발표일·익일·다음날 정규장 종가", "장전·장후 발표 시점"],
+    "changedElements": ["발표일→익일 주가 열과 익일→다음날 주가 열을 분리", "AXTI 장후 반응 대신 익일·다음날 정규장 종가를 추가", "실적 발표 완료 종목만 포함"],
+    "dataFidelity": "exact",
+    "notes": "실적 발표일과 실적 수치는 기존 회사 IR·SEC 기반 원표를 유지하고, 정규장 종가는 Investing.com 일별 historical data에서 2026-07-28~2026-08-03 구간을 확인했다. 장후·장전 호가는 정규장 종가와 섞지 않았다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-colors"],
+  "qualityChecks": [
+    {"id": "layout-plan-first", "label": "레이아웃 계획 선행", "status": "pass", "detail": "5행·7열 표로 발표일→익일과 익일→다음날을 분리했다."},
+    {"id": "two-session-reaction", "label": "익일·다음날 주가 반응", "status": "pass", "detail": "각 행에 연속 두 거래일의 종가 변화율을 표시했다."},
+    {"id": "regular-close-only", "label": "정규장 종가 구분", "status": "pass", "detail": "장후·장전 호가가 아닌 정규장 종가만 가격열에 사용했다."}
+  ],
+  "structure": {
+    "title": "실적 발표 후, 익일·다음날까지 주가 반응",
+    "subtitle": "Q2 2026 | 발표일 종가 → 익일 종가 → 다음날 종가 · 주가는 정규장 종가 기준 (ET)",
+    "source": "자료: 회사 IR·SEC, Investing.com historical | 2026-08-03 ET 기준"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "14px 28px 0",
+    "contentPadding": "6px 18px 0",
+    "sourcePadding": "0 28px 8px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#101828"
+  },
+  "tableData": {
+    "columns": [
+      {"key": "ticker", "label": "티커", "dataType": "text", "isRowHeader": true, "width": "9%"},
+      {"key": "eps", "label": "EPS\n실제 / 예상", "dataType": "text", "align": "right", "width": "15%"},
+      {"key": "revenue", "label": "매출\n실제 / 예상", "dataType": "text", "align": "right", "width": "19%"},
+      {"key": "epsSurprise", "label": "EPS\n서프라이즈", "dataType": "text", "align": "right", "width": "13%"},
+      {"key": "reaction1", "label": "발표일 → 익일\n주가 변동", "dataType": "text", "align": "right", "width": "18%"},
+      {"key": "reaction2", "label": "익일 → 다음날\n주가 변동", "dataType": "text", "align": "right", "width": "18%"},
+      {"key": "timing", "label": "발표", "dataType": "text", "align": "right", "width": "8%"}
+    ],
+    "rows": [
+      {"cells": {"ticker": {"value": "BE"}, "eps": {"value": "$0.78\n/ $0.39"}, "revenue": {"value": "$1.065B\n/ $0.826B"}, "epsSurprise": {"value": "+100.0%", "highlight": "positive"}, "reaction1": {"value": "$166.84 → $163.75\n-1.85%", "highlight": "negative"}, "reaction2": {"value": "$163.75 → $207.12\n+26.49%", "highlight": "positive"}, "timing": {"value": "7/28\n장후"}}},
+      {"cells": {"ticker": {"value": "TER"}, "eps": {"value": "$2.47\n/ $2.09"}, "revenue": {"value": "$1.329B\n/ $1.220B"}, "epsSurprise": {"value": "+18.2%", "highlight": "positive"}, "reaction1": {"value": "$320.65 → $319.41\n-0.39%", "highlight": "negative"}, "reaction2": {"value": "$319.41 → $365.49\n+14.43%", "highlight": "positive"}, "timing": {"value": "7/28\n장후"}}},
+      {"cells": {"ticker": {"value": "VRT"}, "eps": {"value": "$1.52\n/ $1.43"}, "revenue": {"value": "$3.274B\n/ $3.380B"}, "epsSurprise": {"value": "+6.3%", "highlight": "positive"}, "reaction1": {"value": "$223.04 → $227.50\n+2.00%", "highlight": "positive"}, "reaction2": {"value": "$227.50 → $241.57\n+6.18%", "highlight": "positive"}, "timing": {"value": "7/29\n장전"}}},
+      {"cells": {"ticker": {"value": "FORM"}, "eps": {"value": "$0.82\n/ $0.61"}, "revenue": {"value": "$258.24M\n/ $240.00M"}, "epsSurprise": {"value": "+34.4%", "highlight": "positive"}, "reaction1": {"value": "$83.45 → $105.38\n+26.28%", "highlight": "positive"}, "reaction2": {"value": "$105.38 → $106.20\n+0.78%", "highlight": "positive"}, "timing": {"value": "7/29\n장후"}}},
+      {"cells": {"ticker": {"value": "AXTI"}, "eps": {"value": "$0.19\n/ $0.07"}, "revenue": {"value": "$47.59M\n/ $34.09M"}, "epsSurprise": {"value": "+171.4%", "highlight": "positive"}, "reaction1": {"value": "$46.94 → $60.43\n+28.74%", "highlight": "positive"}, "reaction2": {"value": "$60.43 → $68.69\n+13.67%", "highlight": "positive"}, "timing": {"value": "7/30\n장후"}}}
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 57,
+      "cellPadding": "8px 8px",
+      "lineHeight": 1.18,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontWeight": {"body": 500, "numeric": 700, "rowHeader": 900, "header": 700},
+      "fontSize": {"body": 14, "header": 12, "total": 15, "badge": 10}
+    }
+  },
+  "narrative": {
+    "headMessage": "실적 발표 후, 익일·다음날까지 주가 반응",
+    "subMessage": "장후·장전 호가가 아닌 정규장 종가로 연속 두 거래일을 추적",
+    "headline": "AI 인프라 실적 반응",
+    "summary": "7월 28일 이후 발표가 끝난 5개 종목의 실적과 두 거래일 주가 반응 비교",
+    "story": "실적 발표일 종가에서 익일, 다음날까지의 정규장 종가 흐름을 분리해 확인한다.",
+    "keyTakeaways": ["BE·TER는 장후 발표, VRT는 장전 발표", "발표일→익일과 익일→다음날 수익률을 분리", "AXTI 장후 호가 대신 7/31·8/3 정규장 종가 반영"],
+    "questionsRaised": [],
+    "viewerAction": "실적 서프라이즈와 발표 후 두 거래일의 주가 지속성을 함께 비교한다.",
+    "contextualNotes": ["모든 시간은 ET", "정규장 종가 기준"]
+  },
+  "emphasis": {
+    "focusPoint": {"displayText": "익일·다음날까지", "reason": "발표 직후 반응의 지속성 확인"},
+    "colorStrategy": {"primary": "#D92D20", "secondary": ["#667085"], "positive": "#D92D20", "negative": "#2563EB", "accent": "#D92D20", "backgroundTone": "light"},
+    "densityLevel": "dense"
+  }
+}

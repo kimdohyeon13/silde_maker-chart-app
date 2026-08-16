@@ -1,0 +1,252 @@
+{
+  "id": "21-net-loss-trend",
+  "sourceImage": "input/21-net-loss-trend.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "squareEdges": true,
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "chartHeight": 370,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "적자도 직전 분기보다는 줄었다",
+    "subtitle": "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다",
+    "source": "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월",
+    "timeRange": "2025년 6월 분기~2026년 6월 분기",
+    "xAxis": {
+      "label": "분기",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "백만 달러",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -900,
+      "max": 0
+    },
+    "legend": [
+      {
+        "name": "회계 기준 순손실",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "회계 기준 순손실",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": -290,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": -110,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": -452,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": -740,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": -626,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.42,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -115.9,
+        "absoluteChange": -336,
+        "from": -290,
+        "to": -626
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": -110,
+        "at": ""
+      },
+      "min": {
+        "value": -740,
+        "at": ""
+      },
+      "average": -443.6,
+      "median": -452,
+      "range": 630
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "적자도 직전 분기보다는 줄었다",
+    "subMessage": "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다",
+    "headline": "적자도 직전 분기보다는 줄었다",
+    "summary": "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": -626
+      },
+      "displayText": "적자도 직전 분기보다는 줄었다",
+      "reason": "회계 기준 순손실이 3월 분기 7억 4,000만 달러에서 6억 2,600만 달러로. 매출 대비로는 36퍼센트에서 24퍼센트로 낮아졌다"
+    },
+    "densityLevel": "balanced"
+  }
+}

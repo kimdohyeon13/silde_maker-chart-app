@@ -1,0 +1,211 @@
+{
+  "id": "01-demo-quarterly-revenue",
+  "mode": "redesign",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "예시용 가상 기업의 분기 매출이 8개 분기 연속 우상향한다는 것을 보여주는 학습용 샘플",
+    "preservedElements": [
+      "1Q25~4Q26의 8개 분기 순서와 값",
+      "단일 분기 매출 시리즈",
+      "세로 막대 차트와 0 기준축",
+      "매출 단위인 억 원",
+      "가상 데이터라는 고지"
+    ],
+    "changedElements": [
+      "레이아웃 계획: 8개 분기를 한눈에 비교하는 세로 막대(승인 9종 중 세로 막대)",
+      "데이터 밀도 계획: 막대 8개, 직접 라벨은 마지막 분기 1개만",
+      "스케일 계획: 0 기준 단일 y축, max 1400으로 상단 여백 최소화",
+      "라벨 계획: 분기명 8개 전부 표시, X축 제목은 빈 문자열로 하단 여백 축소",
+      "색상 계획: 네이비 단색 + 마지막 막대만 강조",
+      "QA 계획: 출처·단위·8개 값·겹침·여백 점검"
+    ],
+    "dataFidelity": "directional",
+    "notes": "이 파일은 파이프라인 설명용 예시입니다. 수치는 실제 기업 실적이 아니라 임의로 만든 가상 값입니다."
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식(세로 막대)·밀도(8포인트)·스케일(0~1400)·라벨(전 분기 표시, 직접 라벨 1개)·색 강조(마지막 막대)를 JSON 작성 전에 확정했습니다."
+    },
+    {
+      "id": "demo-data-disclosure",
+      "label": "가상 데이터 고지",
+      "status": "pass",
+      "detail": "제목·출처·notes 세 곳에 예시용 가상 데이터임을 명시했습니다. 실제 기업 실적으로 사용하면 안 됩니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    },
+    {
+      "id": "overflow-check",
+      "label": "겹침·오버플로 점검",
+      "status": "pending",
+      "detail": "export 후 PNG 육안 검수에서 확정합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 380,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "예시 데이터 — 분기 매출 8분기 연속 증가",
+    "subtitle": "파이프라인 동작 확인용 가상 수치입니다. 실제 기업 실적이 아닙니다.",
+    "source": "자료: 예시용 가상 데이터 (silde_maker 파이프라인 데모)",
+    "timeRange": "1Q25~4Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["1Q25", "2Q25", "3Q25", "4Q25", "1Q26", "2Q26", "3Q26", "4Q26"],
+      "displayTickValues": ["1Q25", "2Q25", "3Q25", "4Q25", "1Q26", "2Q26", "3Q26", "4Q26"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출(억 원)",
+      "type": "value",
+      "tickValues": ["0", "350", "700", "1050", "1400"],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1400
+    },
+    "legend": [
+      {
+        "name": "분기 매출",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "분기 매출",
+        "data": [
+          { "x": "1Q25", "y": 620, "confidence": 1 },
+          { "x": "2Q25", "y": 685, "confidence": 1 },
+          { "x": "3Q25", "y": 742, "confidence": 1 },
+          { "x": "4Q25", "y": 810, "confidence": 1 },
+          { "x": "1Q26", "y": 905, "confidence": 1 },
+          { "x": "2Q26", "y": 1010, "confidence": 1 },
+          { "x": "3Q26", "y": 1128, "confidence": 1 },
+          { "x": "4Q26", "y": 1240, "confidence": 1 }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.99,
+      "description": "8개 분기 모두 직전 분기보다 높습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.24,
+      "description": "추세가 단조 증가라 분기별 변동은 작습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 100,
+        "absoluteChange": 620,
+        "from": 620,
+        "to": 1240
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 1240, "at": "4Q26" },
+      "min": { "value": 620, "at": "1Q25" },
+      "average": 892.5,
+      "median": 857.5,
+      "range": 620
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "예시 데이터 — 분기 매출 8분기 연속 증가",
+    "subMessage": "파이프라인 동작 확인용 가상 수치입니다. 실제 기업 실적이 아닙니다.",
+    "headline": "예시 데이터 — 분기 매출 8분기 연속 증가",
+    "summary": "1Q25 620억 원에서 4Q26 1,240억 원으로 2년 만에 2배가 되는 가상 시나리오입니다.",
+    "story": "JSON 한 개가 어떻게 렌더러를 거쳐 16:9 PNG가 되는지 보여주기 위한 최소 예시입니다.",
+    "keyTakeaways": [
+      "이 숫자는 전부 예시용 가상 값입니다.",
+      "막대 8개·단일 시리즈·0 기준축이라는 계획대로 렌더링됩니다.",
+      "직접 라벨은 마지막 분기 1개만 사용합니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "이 카드를 템플릿 삼아 실제 원본 이미지의 값으로 교체하면 됩니다.",
+    "contextualNotes": [
+      "자료: 예시용 가상 데이터 (silde_maker 파이프라인 데모)",
+      "데이터 상태: directional (가상)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": ["#D7DEE8"],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#0B63CE",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "4Q26", "y": 1240 },
+      "displayText": "1,240",
+      "reason": "가상 시나리오의 마지막 분기 최고값"
+    },
+    "densityLevel": "focused"
+  }
+}

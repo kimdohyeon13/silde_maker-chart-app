@@ -1,0 +1,142 @@
+{
+  "id": "page-32-table-01",
+  "sourceImage": "input/15-page_32_table_01.png",
+  "analyzedAt": "2026-05-19T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "챗봇과 에이전트의 차이는 기억을 유지하느냐에 있다",
+    "subtitle": "Stateless 대 Stateful 구조 차이가 메모리 계층화 수요를 만든다",
+    "source": "제공 PDF 기반 재구성"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "구분",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "20%"
+      },
+      {
+        "key": "chatbot",
+        "label": "챗봇",
+        "dataType": "text",
+        "width": "32%"
+      },
+      {
+        "key": "agent",
+        "label": "에이전트",
+        "dataType": "text"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "item": {
+            "value": "상태",
+            "displayValue": "상태"
+          },
+          "chatbot": {
+            "value": "대화가 끝나면 맥락이 사라짐",
+            "displayValue": "대화가 끝나면 맥락이 사라짐"
+          },
+          "agent": {
+            "value": "목표, 파일, 오류, 과거 작업을 계속 들고 감",
+            "displayValue": "목표, 파일, 오류, 과거 작업을 계속 들고 감"
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "수요",
+            "displayValue": "수요"
+          },
+          "chatbot": {
+            "value": "짧은 질문·답변 중심",
+            "displayValue": "짧은 질문·답변 중심"
+          },
+          "agent": {
+            "value": "장문 컨텍스트, 도구 호출, 검증 루프",
+            "displayValue": "장문 컨텍스트, 도구 호출, 검증 루프"
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "메모리",
+            "displayValue": "메모리"
+          },
+          "chatbot": {
+            "value": "HBM 중심으로 버틸 수 있음",
+            "displayValue": "HBM 중심으로 버틸 수 있음"
+          },
+          "agent": {
+            "value": "HBM, LPDDR5X, DDR5, SSD 계층 필요",
+            "displayValue": "HBM, LPDDR5X, DDR5, SSD 계층 필요"
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "인프라 의미",
+            "displayValue": "인프라 의미"
+          },
+          "chatbot": {
+            "value": "피크 대응이 중요",
+            "displayValue": "피크 대응이 중요"
+          },
+          "agent": {
+            "value": "상시 실행과 캐시 유지가 중요",
+            "displayValue": "상시 실행과 캐시 유지가 중요",
+            "highlight": "accent"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false
+  },
+  "narrative": {
+    "headMessage": "Stateful이 메모리를 먹는다",
+    "subMessage": "Stateless 대 Stateful 구조 차이가 메모리 계층화 수요를 만든다",
+    "headline": "Stateful이 메모리를 먹는다",
+    "summary": "에이전트는 토큰만 소비하는 것이 아니라 상태를 저장하고 다시 불러오기 위해 인프라 전체를 점유합니다.",
+    "story": "에이전트는 토큰만 소비하는 것이 아니라 상태를 저장하고 다시 불러오기 위해 인프라 전체를 점유합니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문 해설과 함께 숫자의 의미를 확인합니다.",
+    "contextualNotes": [
+      "제공 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "Stateful이 메모리를 먹는다",
+      "reason": "에이전트는 토큰만 소비하는 것이 아니라 상태를 저장하고 다시 불러오기 위해 인프라 전체를 점유합니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

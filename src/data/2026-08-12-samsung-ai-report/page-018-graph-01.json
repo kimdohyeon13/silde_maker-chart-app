@@ -1,0 +1,150 @@
+{
+  "id": "page-018-graph-01",
+  "sourceImage": "23-page_018_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32
+  },
+  "preserveIntent": {
+    "originalTitle": "미국 기업 AI 채택률 추이 및 향후 6개월 전망",
+    "dataFidelity": "source-visible",
+    "notes": "두 시계열의 화면 판독 앵커"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "실제와 향후 6개월 전망의 두 시리즈를 보존했다."
+    }
+  ],
+  "structure": {
+    "chartType": "line",
+    "title": "미국 기업 AI 채택률 추이 및 향후 6개월 전망",
+    "source": "출처: Market Report World",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "min": 0,
+      "max": 25,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "현재 채택률",
+        "originalColor": "#1677F0",
+        "remakeColor": "#1677F0"
+      },
+      {
+        "name": "향후 6개월 전망",
+        "originalColor": "#F03E68",
+        "remakeColor": "#F03E68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현재 채택률",
+        "data": [
+          {
+            "x": "2024",
+            "y": 6,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 23.7,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "name": "향후 6개월 전망",
+        "data": [
+          {
+            "x": "2024",
+            "y": 4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 20.6,
+            "confidence": 0.9
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "세부 주간 값은 화면 기반"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "미국 기업의 AI 채택률이 가파르게 상승한다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "미국 기업 AI 채택률 추이 및 향후 6개월 전망",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "23.7%, 20.6%"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

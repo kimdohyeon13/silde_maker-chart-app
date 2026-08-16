@@ -1,0 +1,86 @@
+{
+  "id": "02-margin-expansion",
+  "analyzedAt": "2026-07-29T11:10:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "exact",
+    "preservedElements": ["비GAAP 기준", "분기 순서", "마진 단위", "출처"],
+    "sourceAttribution": "Bloom Energy earnings releases"
+  },
+  "allowedTransformations": ["rewrite-title", "adjust-colors", "adjust-layout", "adjust-density"],
+  "qualityChecks": [
+    {"id": "non-gaap-labeled", "label": "비GAAP 구분", "status": "pass", "detail": "총이익률과 영업이익률 모두 비GAAP 기준으로 통일했습니다."},
+    {"id": "official-values", "label": "공식 수치", "status": "pass", "detail": "분기별 공식 실적 발표 수치를 사용했습니다."},
+    {"id": "readability", "label": "리포트 가독성", "status": "pass", "detail": "두 마진을 같은 퍼센트 축에서 비교했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 25,
+    "sourceFontSize": 18,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "26px 40px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 40px 18px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "매출 성장보다 더 중요한 마진 상승",
+    "subtitle": "비GAAP 총이익률 34.3%, 영업이익률 22.5%",
+    "source": "자료: Bloom Energy 분기 실적 발표, 2025-07-31·2026-04-28·2026-07-28",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {"label": "비GAAP 이익률", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": true, "isLogScale": false, "max": 40},
+    "yAxis": {"label": "", "type": "category", "tickValues": ["2Q25 총이익률", "2Q26 총이익률", "2Q25 영업이익률", "2Q26 영업이익률"], "unit": "", "startsAtZero": false, "isLogScale": false},
+    "legend": [
+      {"name": "비GAAP 이익률", "role": "primary", "originalColor": "#1458D4", "remakeColor": "#1458D4"}
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "비GAAP 이익률",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {"x": "2Q25 총이익률", "y": 28.2, "confidence": 1.0},
+          {"x": "2Q26 총이익률", "y": 34.3, "confidence": 1.0},
+          {"x": "2Q25 영업이익률", "y": 7.1, "confidence": 1.0},
+          {"x": "2Q26 영업이익률", "y": 22.5, "confidence": 1.0}
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {"overallConfidence": 1.0, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "excellent"}
+  },
+  "statistics": {
+    "trend": {"direction": "strong_up", "strength": 0.95, "description": "두 수익성 지표가 함께 상승했습니다.", "recentDirection": "accelerating_up"},
+    "volatility": {"level": "moderate", "coefficient": 0.45, "description": "영업이익률의 개선 폭이 특히 큽니다."},
+    "changeRates": [
+      {"period": "총이익률 전년 대비", "percentChange": 21.6, "absoluteChange": 6.1, "from": 28.2, "to": 34.3},
+      {"period": "영업이익률 전년 대비", "percentChange": 216.9, "absoluteChange": 15.4, "from": 7.1, "to": 22.5}
+    ],
+    "correlations": [],
+    "summary": {"max": {"value": 34.3, "at": "2Q26 총이익률"}, "min": {"value": 7.1, "at": "2Q25 영업이익률"}, "average": 23.03, "median": 25.35, "range": 27.2}
+  },
+  "patterns": {"points": [], "crossovers": [], "supportResistance": []},
+  "narrative": {
+    "headMessage": "규모와 이익이 함께 커졌다",
+    "subMessage": "매출 증가가 영업 레버리지로 이어졌습니다.",
+    "headline": "비GAAP 영업이익률은 1년 전 7.1%에서 22.5%로 상승했습니다.",
+    "summary": "총이익률과 영업이익률이 동시에 개선되며 대규모 출하의 이익 효과가 확인됐습니다.",
+    "story": "이번 분기의 핵심은 매출 10억달러가 아니라 그 매출이 높은 이익률로 연결됐다는 점입니다.",
+    "keyTakeaways": ["비GAAP 총이익률 34.3%", "비GAAP 영업이익률 22.5%"],
+    "questionsRaised": ["제품 비중이 낮아져도 이 마진이 유지되는가?"],
+    "viewerAction": "제품 마진과 서비스 마진의 지속성을 확인합니다.",
+    "contextualNotes": ["Bloom Energy 분기 실적 발표"]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {"primary": "#1458D4", "secondary": ["#16A34A"], "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"},
+    "focusPoint": {"position": {"x": "2Q26 영업이익률", "y": 22.5}, "displayText": "영업이익률 22.5%", "reason": "매출 증가가 실제 이익 확대로 이어졌습니다."},
+    "densityLevel": "balanced"
+  }
+}

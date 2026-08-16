@@ -1,0 +1,212 @@
+{
+  "id": "alphabet-cloud-capex",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Alphabet의 Google Cloud 성장과 Q2·FY26 CapEx를 실제치와 시장 예상으로 비교",
+    "preservedElements": [
+      "Google Cloud 매출 $24.768B와 성장률 +81.8%",
+      "사용자 제공 컨센서스 $22.260B",
+      "Q2 CapEx $44.924B와 사용자 제공 컨센서스 $44.990B",
+      "FY26 CapEx 가이던스 $195–205B와 2027년 상당한 증가 방향"
+    ],
+    "changedElements": [
+      "컨센서스 전용 열과 빈 셀을 제거하고 관련 숫자 안에 병기",
+      "반복된 보조 문구·출처 푸터를 화면에서 숨김",
+      "4열 비교표를 3행·3열 표로 축소"
+    ],
+    "dataFidelity": "exact",
+    "notes": "실제치·가이던스는 Alphabet 공개 IR/SEC, 컨센서스는 사용자 제공 시장 컨센서스로 구분했다. 출처는 보고서 캡션과 이 원장에 보존한다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "minimal-layout",
+      "label": "미니멀 표 구조",
+      "status": "pass",
+      "detail": "제목 1줄, 3행·3열, 컨센서스는 비교가 필요한 행 안에만 유지했다."
+    }
+  ],
+  "structure": {
+    "title": "Alphabet: Cloud Leads the Way",
+    "source": "자료: Alphabet IR·SEC | 컨센서스: 사용자 제공 시장 컨센서스"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "28px 36px 0",
+    "contentPadding": "16px 36px 0",
+    "titleFontSize": 27,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "29%"
+      },
+      {
+        "key": "value",
+        "label": "Results & Guidance",
+        "dataType": "text",
+        "align": "right",
+        "width": "46%"
+      },
+      {
+        "key": "read",
+        "label": "Takeaway",
+        "dataType": "text",
+        "align": "right",
+        "width": "25%"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Cloud Revenue",
+            "displayValue": "Cloud Revenue"
+          },
+          "value": {
+            "value": "$24.768B · +81.8% / vs. consensus $22.260B",
+            "displayValue": "$24.768B · +81.8%\nvs. consensus $22.260B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Above consensus",
+            "highlight": "positive",
+            "displayValue": "Above consensus"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Q2 CapEx",
+            "displayValue": "Q2 CapEx"
+          },
+          "value": {
+            "value": "$44.924B / vs. consensus $44.990B",
+            "displayValue": "$44.924B\nvs. consensus $44.990B"
+          },
+          "read": {
+            "value": "Broadly in line",
+            "displayValue": "Broadly in line"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY26 CapEx",
+            "displayValue": "FY26 CapEx"
+          },
+          "value": {
+            "value": "$195–205B",
+            "displayValue": "$195–205B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Further increase in 2027",
+            "displayValue": "Further increase in 2027"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 70,
+      "cellPadding": "10px 12px",
+      "lineHeight": 1.24,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 700,
+        "rowHeader": 800,
+        "header": 700
+      },
+      "fontSize": {
+        "body": 16,
+        "header": 12,
+        "total": 16,
+        "badge": 10
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Alphabet: Cloud Leads the Way",
+    "subMessage": "Alphabet: Cloud Leads the Way",
+    "headline": "Google Cloud의 고성장과 대형 CapEx 가이던스를 한 화면에 둔다.",
+    "summary": "Cloud 매출은 $24.768B, 성장률은 +81.8%이며 FY26 CapEx 가이던스는 $195–205B다.",
+    "story": "컨센서스와 직접 비교가 필요한 숫자만 같은 셀에 둬서 Cloud 수요와 투자 확대를 빠르게 읽는다.",
+    "keyTakeaways": [
+      "Cloud 매출은 사용자 제공 컨센서스보다 높다.",
+      "FY26 CapEx 가이던스는 $195–205B다."
+    ],
+    "questionsRaised": [
+      "투자 확대가 현금흐름과 마진에 언제 반영되는가?"
+    ],
+    "viewerAction": "Cloud 성장과 투자 확대의 속도를 함께 확인한다.",
+    "contextualNotes": [
+      "금액은 USD billions."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Cloud +81.8%",
+      "reason": "분기 수요 신호"
+    },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "value",
+        "reason": "Cloud 실제치와 성장률"
+      },
+      {
+        "row": 2,
+        "col": "value",
+        "reason": "FY26 CapEx 가이던스"
+      }
+    ]
+  }
+}

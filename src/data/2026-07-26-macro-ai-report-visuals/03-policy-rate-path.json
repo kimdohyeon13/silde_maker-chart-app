@@ -1,0 +1,321 @@
+{
+  "id": "03-policy-rate-path",
+  "mode": "faithful",
+  "sourceImage": "input/03-policy-rate-path.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "CPI 발표 전후 금리선물시장에 반영된 기준 금리 전망치 변화",
+    "originalMessage": "CPI 발표 전후 금리선물시장에 반영된 기준 금리 전망치 변화",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본에 명시된 값을 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 12개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "pass",
+      "detail": "원본에 표시된 값을 사용했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 150,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "CPI 발표 전후 금리선물시장에 반영된 기준 금리 전망치 변화",
+    "subtitle": "시장 반영 기준금리 % · 동결 3.625% · 1회 인상 3.875%",
+    "source": "자료: Bloomberg",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-07",
+        "2026-09",
+        "2026-10",
+        "2026-12",
+        "2027-01",
+        "2027-03"
+      ],
+      "displayTickValues": [
+        "26.07",
+        "26.09",
+        "26.10",
+        "26.12",
+        "27.01",
+        "27.03"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "3.6",
+        "3.7",
+        "3.8",
+        "3.9",
+        "4",
+        "4.1",
+        "4.2"
+      ],
+      "unit": "%",
+      "min": 3.58,
+      "max": 4.2,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "CPI 발표 전(7/13)",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "현재(7/16)",
+        "role": "primary",
+        "originalColor": "#F43F68",
+        "remakeColor": "#F43F68",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CPI 발표 전(7/13)",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "2026-07",
+            "y": 3.73,
+            "confidence": 1
+          },
+          {
+            "x": "2026-09",
+            "y": 3.88,
+            "confidence": 1
+          },
+          {
+            "x": "2026-10",
+            "y": 3.94,
+            "confidence": 1
+          },
+          {
+            "x": "2026-12",
+            "y": 4.04,
+            "confidence": 1
+          },
+          {
+            "x": "2027-01",
+            "y": 4.1,
+            "confidence": 1
+          },
+          {
+            "x": "2027-03",
+            "y": 4.14,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "현재(7/16)",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#F43F68",
+        "data": [
+          {
+            "x": "2026-07",
+            "y": 3.65,
+            "confidence": 1
+          },
+          {
+            "x": "2026-09",
+            "y": 3.77,
+            "confidence": 1
+          },
+          {
+            "x": "2026-10",
+            "y": 3.81,
+            "confidence": 1
+          },
+          {
+            "x": "2026-12",
+            "y": 3.89,
+            "confidence": 1
+          },
+          {
+            "x": "2027-01",
+            "y": 3.93,
+            "confidence": 1
+          },
+          {
+            "x": "2027-03",
+            "y": 3.98,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 3.65,
+      "max": 4.14,
+      "average": 0,
+      "latest": 4.14
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CPI 발표 전후 금리선물시장에 반영된 기준 금리 전망치 변화",
+    "subMessage": "시장 반영 기준금리 % · 동결 3.625% · 1회 인상 3.875%",
+    "headline": "CPI 발표 전후 금리선물시장에 반영된 기준 금리 전망치 변화",
+    "summary": "시장 반영 기준금리 % · 동결 3.625% · 1회 인상 3.875%",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "2026-07",
+          "y": 3.875
+        },
+        "to": {
+          "x": "2027-03",
+          "y": 3.875
+        },
+        "style": "dashed",
+        "color": "#667085",
+        "label": ""
+      },
+      {
+        "from": {
+          "x": "2026-07",
+          "y": 3.625
+        },
+        "to": {
+          "x": "2027-03",
+          "y": 3.625
+        },
+        "style": "dashed",
+        "color": "#667085",
+        "label": ""
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#1677F2",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#1677F2",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2027-03",
+        "y": 4.14
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

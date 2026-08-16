@@ -1,0 +1,244 @@
+{
+  "id": "05-w6b-in-service-date",
+  "mode": "faithful",
+  "sourceImage": "input/w7-6-05.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "가동 날짜를 기준으로 다시 배열한 전력원",
+    "originalMessage": "전력망 7년, 터빈 3년, 연료전지 90일",
+    "preservedElements": [
+      "전력망 7년",
+      "터빈 3년",
+      "연료전지 90일",
+      "세 전력원을 가동 날짜 기준으로 나열한 순서",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "세 개의 시간축 도식을 하나의 막대 비교로 정리",
+      "연·일 표기를 월 단위로 환산해 한 축에 올림",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 가장 긴 리드타임만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 도식에 인쇄된 7년·3년·90일 세 값만 사용했고, 비교를 위해 같은 시간 단위(개월)로만 환산했습니다.",
+    "sourceAttribution": "Concept diagram · 29 July 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "7년·3년·90일은 원본 도식에 인쇄된 값이며, 개월 환산(84·36·3) 외에 어떤 수치도 만들지 않았습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 내림 규칙 적용 대상이 없습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 금지 항목 없음",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 언급이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "표시 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브를 모두 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Ranked by the date power arrives",
+    "subtitle": "Grid 7 years, turbine 3 years, fuel cell 90 days",
+    "source": "Source: concept diagram · 29 July 2026 · source-visible",
+    "timeRange": "29 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Grid interconnect",
+        "On-site turbine",
+        "Fuel cell"
+      ],
+      "displayTickValues": [
+        "Grid interconnect",
+        "On-site turbine",
+        "Fuel cell"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Lead time to in-service (months)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "24",
+        "48",
+        "72",
+        "96"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 96
+    },
+    "legend": [
+      {
+        "name": "Lead time to in-service",
+        "role": "primary",
+        "originalColor": "#2B2B2B",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Lead time to in-service",
+        "data": [
+          {
+            "x": "Grid interconnect",
+            "y": 84,
+            "confidence": 0.85
+          },
+          {
+            "x": "On-site turbine",
+            "y": 36,
+            "confidence": 0.85
+          },
+          {
+            "x": "Fuel cell",
+            "y": 3,
+            "confidence": 0.85
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본은 개념 도식이라 리드타임이 단일 대표값으로만 인쇄되어 있습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.75,
+      "description": "Lead time falls sharply as the power source moves inside the site.",
+      "recentDirection": "down"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.82,
+      "description": "The three routes differ by an order of magnitude, not by a margin."
+    },
+    "changeRates": [
+      {
+        "period": "Grid vs fuel cell",
+        "percentChange": -96.4,
+        "absoluteChange": -81,
+        "from": 84,
+        "to": 3
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 84,
+        "at": "Grid interconnect"
+      },
+      "min": {
+        "value": 3,
+        "at": "Fuel cell"
+      },
+      "average": 41,
+      "median": 36,
+      "range": 81
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Ranked by the date power arrives",
+    "subMessage": "Grid 7 years, turbine 3 years, fuel cell 90 days",
+    "headline": "Ranked by the date power arrives",
+    "summary": "Put the three power routes on a calendar axis and the ordering is grid last, turbine second, fuel cell first.",
+    "story": "A turbine ordered today lands after the buildout it was meant to power, and an interconnect lands later still. Ordering the same three options by in-service date rather than by cost changes which one a 2027 site can actually use.",
+    "keyTakeaways": [
+      "Grid interconnect is drawn at 7 years in the source diagram.",
+      "An on-site turbine is drawn at 3 years, a fuel cell at 90 days.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the three routes by delivery date before comparing them on anything else.",
+    "contextualNotes": [
+      "Source: concept diagram, 29 July 2026",
+      "Years and days converted to months so all three routes sit on one axis",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Grid interconnect",
+      "y": 84,
+      "displayText": "84 months"
+    },
+    "densityLevel": "focused"
+  }
+}

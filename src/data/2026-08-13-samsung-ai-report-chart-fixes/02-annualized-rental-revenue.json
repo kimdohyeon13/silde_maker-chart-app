@@ -1,0 +1,54 @@
+{
+  "id": "annualized-rental-revenue",
+  "sourceImage": "input/26-page_020_graph_02.png",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "bar",
+    "title": "1GW 컴퓨트 기준 임대 사업 연 환산 매출 비교",
+    "source": "자료: SemiAnalysis, World Tech Research",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["5년 계약 (B300)", "온디맨드 (B300)", "스페이스X-앤스로픽 (H100/H200/GB200)", "스페이스X-앤스로픽 (GB300 추정)"],
+      "displayTickValues": ["5년 계약 (B300)", "온디맨드 (B300)", "스페이스X-앤스로픽 (H100/H200/GB200)", "스페이스X-앤스로픽 (GB300 추정)"]
+    },
+    "yAxis": {
+      "label": "연 환산 매출",
+      "type": "numeric",
+      "tickValues": ["0", "10", "20", "30", "40", "50", "60"],
+      "unit": "$bn",
+      "min": 0,
+      "max": 60,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [{ "name": "연 환산 매출", "originalColor": "#1479F2", "remakeColor": "#1479F2" }]
+  },
+  "data": {
+    "series": [{
+      "name": "연 환산 매출",
+      "renderAs": "bar",
+      "data": [
+        { "x": "5년 계약 (B300)", "y": 12, "confidence": 0.85 },
+        { "x": "온디맨드 (B300)", "y": 29, "confidence": 0.85 },
+        { "x": "스페이스X-앤스로픽 (H100/H200/GB200)", "y": 31, "confidence": 0.85 },
+        { "x": "스페이스X-앤스로픽 (GB300 추정)", "y": 48, "confidence": 0.85 }
+      ]
+    }]
+  },
+  "statistics": { "summary": { "min": 12, "max": 48, "average": 30, "latest": 48 }, "changeRates": [] },
+  "narrative": {
+    "headMessage": "1GW 컴퓨트 기준 임대 사업 연 환산 매출 비교",
+    "subMessage": "계약 방식과 GPU 세대에 따라 연 매출이 120억~480억 달러로 달라집니다",
+    "headline": "1GW 컴퓨트 기준 임대 사업 연 환산 매출 비교",
+    "keyTakeaways": ["GB300 추정치 48"],
+    "sentiment": "neutral"
+  },
+  "emphasis": { "focusPoint": { "x": "스페이스X-앤스로픽 (GB300 추정)", "y": 48, "displayText": "48" }, "annotations": [], "highlightZones": [], "trendLines": [] },
+  "patterns": { "trend": "계약 구조와 GPU 세대에 따라 매출 차이가 확대된다.", "supportResistance": [] },
+  "preserveIntent": { "originalTitle": "1GW 컴퓨트 기준 임대 사업 연 환산 매출 비교", "dataFidelity": "source-visible", "notes": "네 수치와 비교 순서를 보존하고 긴 항목명만 축약했다." },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing", "adjust-labels"],
+  "qualityChecks": { "titlePreserved": true, "seriesCountMatches": true, "sourcePreserved": true, "xAxisLabelsMatch": true },
+  "exportOptions": { "canvasHeight": 540, "fontFamily": "Paperlogy", "titleFontWeight": 900, "subtitleFontWeight": 300, "chartHeight": 350, "compactChartMargins": true }
+}

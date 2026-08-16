@@ -1,10 +1,20 @@
-import type { StylePresetId, VisualAnalysis } from "@/lib/analysis/schema";
+import type {
+  ExportOptions,
+  StylePresetId,
+  TableVisualOptions,
+  VisualAnalysis,
+} from "./analysis/schema.ts";
 import {
   getRechartsStyle,
   getTheme,
   type ThemeMode,
   type TossTheme,
-} from "@/lib/theme/toss-theme";
+} from "./theme/toss-theme.ts";
+import {
+  DEFAULT_HEAD_MESSAGE_WEIGHT,
+  DEFAULT_SUB_MESSAGE_WEIGHT,
+  PAPERLOGY_FONT_STACK,
+} from "./slide-typography.ts";
 
 type PresetMode = "inherit" | ThemeMode;
 type ThemeColors = TossTheme["colors"];
@@ -14,6 +24,8 @@ export interface RemakeStylePreset {
   name: string;
   shortName: string;
   description: string;
+  /** 기존 JSON 호환용으로만 남기고 새 선택 UI에서는 숨길 때 사용 */
+  deprecated?: boolean;
   mode: PresetMode;
   colors: {
     light: Partial<ThemeColors>;
@@ -45,6 +57,9 @@ export interface RemakeStylePreset {
     highlightMode?: "background" | "text";
     headerTransform?: "none" | "uppercase";
   };
+  /** 콘텐츠와 무관한 안전한 기본값. 분석 JSON의 개별 옵션이 항상 우선한다. */
+  exportDefaults?: Partial<ExportOptions>;
+  tableDefaults?: Partial<TableVisualOptions>;
 }
 
 export const DEFAULT_STYLE_PRESET: StylePresetId = "toss-clean";
@@ -73,9 +88,10 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
       dark: {},
     },
     typography: {
-      titleWeight: 900,
-      subtitleWeight: 700,
+      titleWeight: DEFAULT_HEAD_MESSAGE_WEIGHT,
+      subtitleWeight: DEFAULT_SUB_MESSAGE_WEIGHT,
       titleLetterSpacing: 0,
+      fontFamily: PAPERLOGY_FONT_STACK,
     },
     card: {
       borderRadius: 9,
@@ -84,15 +100,40 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
     },
     export: {
       borderRadius: "9px 9px 0 0",
-      headerPadding: "30px 42px 0",
-      contentPadding: "12px 14px 14px",
-      sourcePadding: "0 42px 18px",
-      titleFontSize: 56,
-      subtitleFontSize: 38,
-      sourceFontSize: 26,
+      headerPadding: "18px 34px 2px",
+      contentPadding: "0 24px",
+      sourcePadding: "0 34px 10px",
+      titleFontSize: 36,
+      subtitleFontSize: 17,
+      sourceFontSize: 11,
     },
     table: {
       rowHeightDelta: 0,
+    },
+    exportDefaults: {
+      backgroundColor: "#FFFFFF",
+      frameStyle: "hairline",
+      headerVariant: "centered",
+      contentBorder: false,
+      squareEdges: false,
+      showAreaFill: false,
+      gridMode: "dashed",
+      lineStrokeWidth: 2.8,
+      showLatestGuide: false,
+      accentColor: "#0969DA",
+      borderColor: "#D7DEE5",
+    },
+    tableDefaults: {
+      zebraStripe: false,
+      highlightMode: "text",
+      headerTone: "underline",
+      rowRules: "soft",
+      groupHeaderTone: "plain",
+      columnRules: false,
+      sectionRules: true,
+      accentColor: "#0969DA",
+      rowRuleColor: "#D7DEE5",
+      sectionRuleColor: "#D7DEE5",
     },
   },
   "consulting-slide": {
@@ -129,10 +170,10 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
       dark: {},
     },
     typography: {
-      titleWeight: 900,
-      subtitleWeight: 700,
+      titleWeight: DEFAULT_HEAD_MESSAGE_WEIGHT,
+      subtitleWeight: DEFAULT_SUB_MESSAGE_WEIGHT,
       titleLetterSpacing: 0,
-      fontFamily: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
+      fontFamily: PAPERLOGY_FONT_STACK,
     },
     card: {
       borderRadius: 4,
@@ -172,9 +213,11 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
         border: "#24433D",
         borderSubtle: "#17332E",
         divider: "#17332E",
-        textPrimary: "#E9FFF8",
-        textSecondary: "#9DD9C8",
-        textTertiary: "#6FA897",
+        // 다크 배경에서도 제목·보조 라벨·출처가 한 번에 읽히도록
+        // 기존 초록빛 회색을 부드러운 백색 민트 계열로 올린다.
+        textPrimary: "#F5FFFC",
+        textSecondary: "#D9F2EB",
+        textTertiary: "#B6D8CF",
         accent: "#00E0A4",
         accentSubtle: "rgba(0, 224, 164, 0.13)",
         accentMuted: "#35C99B",
@@ -186,17 +229,17 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
         warningSubtle: "rgba(255, 209, 102, 0.13)",
         gridLine: "rgba(80, 148, 132, 0.23)",
         axisLine: "#24433D",
-        axisLabel: "#75B8A7",
+        axisLabel: "#C2E5DC",
         tooltipBg: "#10201D",
         tooltipBorder: "#24433D",
         series: ["#00E0A4", "#FF6A5F", "#4AA8FF", "#FFD166", "#A78BFA", "#F472B6"],
       },
     },
     typography: {
-      titleWeight: 900,
-      subtitleWeight: 700,
+      titleWeight: DEFAULT_HEAD_MESSAGE_WEIGHT,
+      subtitleWeight: DEFAULT_SUB_MESSAGE_WEIGHT,
       titleLetterSpacing: 0,
-      fontFamily: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
+      fontFamily: PAPERLOGY_FONT_STACK,
     },
     card: {
       borderRadius: 2,
@@ -253,10 +296,10 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
       dark: {},
     },
     typography: {
-      titleWeight: 900,
-      subtitleWeight: 700,
+      titleWeight: DEFAULT_HEAD_MESSAGE_WEIGHT,
+      subtitleWeight: DEFAULT_SUB_MESSAGE_WEIGHT,
       titleLetterSpacing: 0,
-      fontFamily: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
+      fontFamily: PAPERLOGY_FONT_STACK,
     },
     card: {
       borderRadius: 8,
@@ -279,10 +322,96 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
       headerTransform: "none",
     },
   },
+  "signal-editorial": {
+    id: "signal-editorial",
+    name: "Signal Editorial",
+    shortName: "Signal",
+    description: "상단 신호선, 핵심 수치, 의미 블록 구분을 결합한 기관투자자용 에디토리얼 스타일",
+    deprecated: true,
+    mode: "light",
+    colors: {
+      light: {
+        background: "#FFFFFF",
+        surface: "#FFFFFF",
+        elevated: "#FFFFFF",
+        border: "#C9D6D1",
+        borderSubtle: "#E2EAE7",
+        textPrimary: "#14201D",
+        textSecondary: "#4D5F59",
+        textTertiary: "#72827D",
+        accent: "#0E6B5C",
+        accentSubtle: "rgba(14, 107, 92, 0.08)",
+        positive: "#D92D20",
+        positiveSubtle: "rgba(217, 45, 32, 0.08)",
+        negative: "#2563EB",
+        negativeSubtle: "rgba(37, 99, 235, 0.08)",
+        warning: "#9A6700",
+        warningSubtle: "rgba(154, 103, 0, 0.08)",
+        gridLine: "rgba(20, 32, 29, 0.12)",
+        axisLine: "#AABAB5",
+        axisLabel: "#60736D",
+        tooltipBg: "#FFFFFF",
+        tooltipBorder: "#C9D6D1",
+        series: ["#0E6B5C", "#D92D20", "#2563EB", "#A36C16", "#6E56CF", "#B5476F"],
+      },
+      dark: {},
+    },
+    typography: {
+      titleWeight: 900,
+      subtitleWeight: 650,
+      titleLetterSpacing: -0.02,
+      fontFamily: 'var(--font-noto-sans-kr), "Noto Sans KR", "Apple SD Gothic Neo", ui-sans-serif, system-ui, sans-serif',
+    },
+    card: {
+      borderRadius: 0,
+      borderWidth: 1,
+      shadow: "none",
+    },
+    export: {
+      borderRadius: "0",
+      headerPadding: "30px 40px 0",
+      contentPadding: "10px 24px 14px",
+      sourcePadding: "0 40px 18px",
+      titleFontSize: 50,
+      subtitleFontSize: 28,
+      sourceFontSize: 20,
+    },
+    table: {
+      rowHeightDelta: 1,
+      zebraStripe: false,
+      highlightMode: "text",
+      headerTransform: "none",
+    },
+    exportDefaults: {
+      backgroundColor: "#FFFFFF",
+      frameStyle: "none",
+      headerVariant: "signal-editorial",
+      contentBorder: false,
+      squareEdges: true,
+      showAreaFill: false,
+      gridMode: "solid",
+      lineStrokeWidth: 4,
+      showLatestGuide: true,
+      latestGuideOpacity: 0.24,
+      accentColor: "#0E6B5C",
+      titleFontFamily: '"AppleMyungjo", "Noto Serif KR", Georgia, serif',
+    },
+    tableDefaults: {
+      zebraStripe: false,
+      highlightMode: "text",
+      headerTone: "underline",
+      rowRules: "soft",
+      groupHeaderTone: "accent-rule",
+      sectionRules: true,
+      accentColor: "#0E6B5C",
+      rowRuleColor: "#E2EAE7",
+      sectionRuleColor: "#C9D6D1",
+    },
+  },
 };
 
 export function getStylePresetOptions() {
-  return Object.values(STYLE_PRESETS);
+  return Object.values(STYLE_PRESETS).filter((preset) => !preset.deprecated);
 }
 
 export function getStylePreset(id?: string): RemakeStylePreset {

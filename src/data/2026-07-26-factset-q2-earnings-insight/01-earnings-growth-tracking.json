@@ -1,0 +1,322 @@
+{
+  "id": "01-earnings-growth-tracking",
+  "mode": "faithful",
+  "sourceImage": "input/01-earnings-growth-tracking.png",
+  "analyzedAt": "2026-07-26T19:30:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "S&P500 2분기 이익 증가율 전망, 37.9%까지 상승",
+    "originalMessage": "S&P500 2분기 이익 증가율 전망, 37.9%까지 상승",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간·범주 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 표기",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 시계열이 없어 원본 이미지에서 읽은 중간값을 source-visible로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "1개 시리즈, 18개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 140,
+    "lineStrokeWidth": 2.8,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "S&P500 2분기 이익 증가율 전망, 37.9%까지 상승",
+    "subtitle": "2026년 2분기 전년 대비 blended earnings growth %",
+    "source": "자료: FactSet Earnings Insight, 2026-07-24 | 일부 주간 값은 도표 판독",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-03-27",
+        "2026-04-03",
+        "2026-04-10",
+        "2026-04-17",
+        "2026-04-24",
+        "2026-05-01",
+        "2026-05-08",
+        "2026-05-15",
+        "2026-05-22",
+        "2026-05-29",
+        "2026-06-05",
+        "2026-06-12",
+        "2026-06-19",
+        "2026-06-26",
+        "2026-07-03",
+        "2026-07-10",
+        "2026-07-17",
+        "2026-07-24"
+      ],
+      "displayTickValues": [
+        "2026-04-17",
+        "2026-05-08",
+        "2026-05-29",
+        "2026-06-19",
+        "2026-07-10",
+        "2026-07-24"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "18",
+        "22",
+        "26",
+        "30",
+        "34",
+        "38",
+        "40"
+      ],
+      "unit": "%",
+      "min": 18,
+      "max": 40,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Q2 2026 이익 증가율",
+        "role": "primary",
+        "originalColor": "#173B6D",
+        "remakeColor": "#173B6D",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Q2 2026 이익 증가율",
+        "renderAs": "line",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#173B6D",
+        "data": [
+          {
+            "x": "2026-03-27",
+            "y": 18.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-04-03",
+            "y": 19.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-04-10",
+            "y": 19.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-04-17",
+            "y": 20.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-04-24",
+            "y": 20.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-05-01",
+            "y": 21.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-05-08",
+            "y": 20.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-05-15",
+            "y": 20.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-05-22",
+            "y": 21.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-05-29",
+            "y": 21.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-06-05",
+            "y": 21.8,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-06-12",
+            "y": 22,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-06-19",
+            "y": 22.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-06-26",
+            "y": 23.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-07-03",
+            "y": 23.4,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-07-10",
+            "y": 23.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-07-17",
+            "y": 24.8,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026-07-24",
+            "y": 37.9,
+            "confidence": 0.78
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": {
+      "overallConfidence": 0.78,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "중간값은 원본 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 비교 관계를 보존했습니다.",
+      "recentDirection": "rising"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 경로와 범주 차이를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 18.6,
+      "max": 37.9,
+      "average": 0,
+      "latest": 37.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P500 2분기 이익 증가율 전망, 37.9%까지 상승",
+    "subMessage": "2026년 2분기 전년 대비 blended earnings growth %",
+    "headline": "S&P500 2분기 이익 증가율 전망, 37.9%까지 상승",
+    "summary": "2026년 2분기 전년 대비 blended earnings growth %",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B6D",
+      "secondary": [
+        "#D0D5DD",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#173B6D",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-07-24",
+        "y": 37.9
+      },
+      "displayText": "37.9%",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

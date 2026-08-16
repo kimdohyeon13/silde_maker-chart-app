@@ -1,0 +1,243 @@
+{
+  "id": "09-gross-margin-path-en",
+  "sourceImage": "input/09-gross-margin-path.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Adjusted gross margin dipped to 29.2% then recovered to 29.8%",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Gross margin still hovers at the 30% line",
+    "subtitle": "Adjusted gross margin dipped to 29.2% then recovered to 29.8%",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026",
+    "timeRange": "Jun 2025 quarter - Sep 2026 quarter guidance",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26",
+        "Sep low",
+        "Sep high"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26",
+        "Sep low",
+        "Sep high"
+      ]
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 27.0,
+      "max": 32.0
+    },
+    "legend": [
+      {
+        "name": "Adjusted gross margin",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adjusted gross margin",
+        "data": [
+          {
+            "x": "Jun '25",
+            "y": 30.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "Mar '26",
+            "y": 29.2,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun '26",
+            "y": 29.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep low",
+            "y": 29.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep high",
+            "y": 30.5,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.05,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 0.3,
+        "absoluteChange": 0.1,
+        "from": 30.4,
+        "to": 30.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 30.5,
+        "at": ""
+      },
+      "min": {
+        "value": 29.0,
+        "at": ""
+      },
+      "average": 29.78,
+      "median": 29.8,
+      "range": 1.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Gross margin still hovers at the 30% line",
+    "subMessage": "Adjusted gross margin dipped to 29.2% then recovered to 29.8%",
+    "headline": "Gross margin still hovers at the 30% line",
+    "summary": "Adjusted gross margin dipped to 29.2% then recovered to 29.8%",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "Adjusted gross margin dipped to 29.2% then recovered to 29.8%",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 30.5
+      },
+      "displayText": "Gross margin still hovers ",
+      "reason": "Adjusted gross margin dipped to 29.2% then recovered to 29.8%"
+    },
+    "densityLevel": "balanced"
+  }
+}

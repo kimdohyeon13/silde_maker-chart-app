@@ -1,0 +1,252 @@
+{
+  "id": "alpha63-05",
+  "mode": "faithful",
+  "sourceImage": "input/alpha-63-05.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "성장률만 보면 순위가 완전히 뒤집힙니다",
+    "preservedElements": [
+      "3개 항목의 순서와 값: Space 29, Communications 66, AI 247",
+      "차트 종류 bar_horizontal 와 0 기준축",
+      "눈금 0, 50, 100, 150, 200, 250",
+      "단위 %",
+      "원본 출처 줄의 기관·문서·날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 옮김 (X 발행본은 영어)",
+      "원본의 주황 막대를 하우스 네이비 단색으로 바꿨습니다. 원본도 세 막대가 같은 색이었고, 값·순서·축은 그대로입니다."
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 장표의 수치·순서·축을 그대로 두고 표시 문자열만 영어로 옮겼습니다. 숫자는 원본에 인쇄된 값입니다.",
+    "sourceAttribution": "Source: SpaceX Q2 2026 results and conference call, August 2026"
+  },
+  "allowedTransformations": [
+    "adjust-fonts",
+    "adjust-spacing",
+    "simplify-labels",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "bar_horizontal 3개, 0 기준축, 눈금 0~250, 전 항목 값 라벨, 강조 없음(단색)를 먼저 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 장표에 인쇄된 source-visible 수치이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "데이터 충실도에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "단일 시리즈, 3개 항목, % 단위, 원본 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#D92D20",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle",
+    "barColorMode": "sign",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Rank by growth and the order flips completely",
+    "subtitle": "Year-over-year revenue growth by segment, Q2 2026 (%)",
+    "source": "Source: SpaceX Q2 2026 results and conference call, August 2026",
+    "timeRange": "Q2 2026",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 250
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Space",
+        "Communications",
+        "AI"
+      ],
+      "displayTickValues": [
+        "Space",
+        "Communications",
+        "AI"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Revenue growth (%)",
+        "role": "primary",
+        "originalColor": "#1B4E7E",
+        "remakeColor": "#1B4E7E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue growth (%)",
+        "data": [
+          {
+            "x": "Space",
+            "y": 29,
+            "confidence": 0.95
+          },
+          {
+            "x": "Communications",
+            "y": 66,
+            "confidence": 0.95
+          },
+          {
+            "x": "AI",
+            "y": 247,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1B4E7E"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본 그대로 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "최대 대 최소",
+        "percentChange": 751.7,
+        "absoluteChange": 218,
+        "from": 29,
+        "to": 247
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 247,
+        "at": "AI"
+      },
+      "min": {
+        "value": 29,
+        "at": "Space"
+      },
+      "average": 114.0,
+      "median": 66,
+      "range": 218
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Rank by growth and the order flips completely",
+    "subMessage": "Year-over-year revenue growth by segment, Q2 2026 (%)",
+    "headline": "Rank by growth and the order flips completely",
+    "summary": "Year-over-year revenue growth by segment, Q2 2026 (%)",
+    "story": "원본 장표의 값과 배치를 그대로 두고 표시 문자열만 영어로 옮겼습니다.",
+    "keyTakeaways": [
+      "Year-over-year revenue growth by segment, Q2 2026 (%)",
+      "AI is the largest at 247%",
+      "Values are source-visible readings from the original slide"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare AI against the rest of the items.",
+    "contextualNotes": [
+      "Source: SpaceX Q2 2026 results and conference call, August 2026",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1B4E7E",
+      "secondary": [
+        "#C9D3DE",
+        "#DDE3EA"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "AI",
+        "y": 247
+      },
+      "displayText": "247",
+      "reason": "Year-over-year revenue growth by segment, Q2 2026 (%)"
+    },
+    "densityLevel": "focused"
+  }
+}

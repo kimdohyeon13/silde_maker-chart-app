@@ -1,0 +1,259 @@
+{
+  "id": "07-incremental-wafer-adds",
+  "sourceImage": "input/07-incremental-wafer-adds-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "연간 신규 DRAM 웨이퍼 생산능력, 천장/월",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "한국어 제목",
+      "Paperlogy 타이포",
+      "핵심 비교 강조",
+      "16:9 여백",
+      "라벨 밀도"
+    ],
+    "dataFidelity": "exact",
+    "notes": "사용자가 직관적 비교를 요청해 기사 속 수치와 비교 관계를 유지한 채 연간 비교·핵심 표·판정표로 재구성했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)",
+    "mode": "redesign"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "aggregate-stated-values"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    },
+    {
+      "id": "paperlogy-typography",
+      "label": "Paperlogy 900/300",
+      "status": "pass",
+      "detail": "headMessage 900, subMessage 300 계약으로 렌더합니다."
+    },
+    {
+      "id": "article-estimate-labelled",
+      "label": "기사 추정치 구분",
+      "status": "pass",
+      "detail": "2026년 이후 전망과 HBM 수율은 SemiAnalysis 모델로 구분합니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "headerPadding": "25px 38px 2px",
+    "contentPadding": "8px 18px 6px",
+    "sourcePadding": "0 38px 15px",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), sans-serif",
+    "subtitleFontWeight": 300,
+    "titleLetterSpacing": -1.2,
+    "canvasHeight": 513,
+    "chartHeight": 292,
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "CXMT 증설 속도는 이미 빅3급",
+    "subtitle": "연간 신규 DRAM 웨이퍼 생산능력, 천장/월",
+    "source": "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "company",
+        "label": "회사",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "y2026",
+        "label": "2026",
+        "dataType": "text",
+        "width": "24%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "y2027",
+        "label": "2027",
+        "dataType": "text",
+        "width": "24%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "y2028",
+        "label": "2028",
+        "dataType": "text",
+        "width": "24%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "company": {
+            "value": "삼성전자",
+            "displayValue": "삼성전자"
+          },
+          "y2026": {
+            "value": "15K",
+            "displayValue": "15K"
+          },
+          "y2027": {
+            "value": "50K",
+            "displayValue": "50K"
+          },
+          "y2028": {
+            "value": "110K",
+            "displayValue": "110K"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": {
+            "value": "SK하이닉스",
+            "displayValue": "SK하이닉스"
+          },
+          "y2026": {
+            "value": "60K",
+            "displayValue": "60K"
+          },
+          "y2027": {
+            "value": "60K",
+            "displayValue": "60K"
+          },
+          "y2028": {
+            "value": "90K",
+            "displayValue": "90K"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": {
+            "value": "마이크론",
+            "displayValue": "마이크론"
+          },
+          "y2026": {
+            "value": "30K",
+            "displayValue": "30K"
+          },
+          "y2027": {
+            "value": "90K",
+            "displayValue": "90K"
+          },
+          "y2028": {
+            "value": "115K",
+            "displayValue": "115K"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "company": {
+            "value": "CXMT",
+            "displayValue": "CXMT"
+          },
+          "y2026": {
+            "value": "85K",
+            "displayValue": "85K",
+            "highlight": "negative"
+          },
+          "y2027": {
+            "value": "70K",
+            "displayValue": "70K",
+            "highlight": "negative"
+          },
+          "y2028": {
+            "value": "80K",
+            "displayValue": "80K",
+            "highlight": "negative"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "comfortable",
+      "zebraStripe": true,
+      "highlightMode": "cell"
+    }
+  },
+  "narrative": {
+    "headMessage": "CXMT 증설 속도는 이미 빅3급",
+    "subMessage": "연간 신규 DRAM 웨이퍼 생산능력, 천장/월",
+    "headline": "CXMT 증설 속도는 이미 빅3급",
+    "summary": "연간 신규 DRAM 웨이퍼 생산능력, 천장/월",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "연간 신규 DRAM 웨이퍼 생산능력, 천장/월",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Memory Model 추정·CXMT 공시 (2026-06-23 기사 기준)"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "CXMT 증설 속도는 이미 빅",
+      "reason": "연간 신규 DRAM 웨이퍼 생산능력, 천장/월"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

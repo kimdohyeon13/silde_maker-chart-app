@@ -1,0 +1,247 @@
+{
+  "id": "03-d217b-own-infra-roic",
+  "mode": "faithful",
+  "sourceImage": "input/dib-217-07.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "도표 4: 자체 인프라 모델 API, 증분 마진 75%·ROIC 46%",
+    "originalMessage": "자체 인프라로 모델 API를 팔 때 증분 마진 75%, ROIC 46%",
+    "preservedElements": [
+      "매출/GW $30.4bn, 증분 EBIT $22.7bn, 세금 $4.8bn, NOPAT $17.9bn",
+      "증분 마진 75%와 ROIC 46% 주석",
+      "$bn/GW 단위와 0 기준 세로 막대",
+      "Morgan Stanley Research 출처",
+      "추론 용량 65%·2,750 토큰/초/GPU·100만 토큰당 $1.75 가정",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 텍스트를 영어로 번역",
+      "회색 기반에 NOPAT 막대 하나만 강조하는 색 배분",
+      "Paperlogy 900/300 제목 계층과 여백 조정"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 도표 4의 인쇄된 값만 사용했고, 스택 구성 대신 핵심 4개 막대로 정리했습니다.",
+    "sourceAttribution": "Source: Company data, Morgan Stanley Research estimates"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "30.4 / 22.7 / 4.8 / 17.9는 원본 도표에 인쇄된 값입니다."
+    },
+    {
+      "id": "no-datapoint-color",
+      "label": "데이터 포인트 색상 미지정",
+      "status": "pass",
+      "detail": "data.series[].data[]에는 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 확인",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 그대로 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Own-infra API: $30.4bn in, $17.9bn out",
+    "subtitle": "Per gigawatt, per year: 75% incremental margin, 46% ROIC",
+    "source": "Source: Company data, Morgan Stanley Research estimates · source-visible",
+    "timeRange": "Annualised, per gigawatt",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Revenue",
+        "Incremental EBIT",
+        "Tax",
+        "NOPAT"
+      ],
+      "displayTickValues": [
+        "Revenue",
+        "Incremental EBIT",
+        "Tax",
+        "NOPAT"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Per gigawatt ($bn)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 34
+    },
+    "legend": [
+      {
+        "name": "Model API on own infrastructure",
+        "role": "primary",
+        "originalColor": "#1462A6",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Model API on own infrastructure",
+        "data": [
+          {
+            "x": "Revenue",
+            "y": 30.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "Incremental EBIT",
+            "y": 22.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "Tax",
+            "y": 4.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "NOPAT",
+            "y": 17.9,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.4,
+      "description": "Revenue steps down to after-tax operating profit.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.45,
+      "description": "A four-step bridge rather than a time series."
+    },
+    "changeRates": [
+      {
+        "period": "Revenue to NOPAT",
+        "percentChange": -41.1,
+        "absoluteChange": -12.5,
+        "from": 30.4,
+        "to": 17.9
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 30.4,
+        "at": "Revenue"
+      },
+      "min": {
+        "value": 4.8,
+        "at": "Tax"
+      },
+      "average": 18.95,
+      "median": 20.3,
+      "range": 25.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Own-infra API: $30.4bn in, $17.9bn out",
+    "subMessage": "Per gigawatt, per year: 75% incremental margin, 46% ROIC",
+    "headline": "Own-infra API: $30.4bn in, $17.9bn out",
+    "summary": "One gigawatt of capacity turns $30.4bn of revenue into $17.9bn after tax.",
+    "story": "Serving your own model on your own capacity leaves $22.7bn of incremental EBIT per gigawatt, a 75% incremental margin and a 46% return on the capital in the building.",
+    "keyTakeaways": [
+      "Revenue $30.4bn per gigawatt, NOPAT $17.9bn",
+      "Incremental margin 75%, ROIC 46%",
+      "Assumes 65% inference utilisation, 2,750 tokens/sec per GPU, $1.75 per million tokens"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the revenue bar with the after-tax bar on the same gigawatt.",
+    "contextualNotes": [
+      "Source: Company data, Morgan Stanley Research estimates",
+      "Data state: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "NOPAT",
+      "y": 17.9,
+      "displayText": "17.9"
+    },
+    "densityLevel": "focused"
+  }
+}

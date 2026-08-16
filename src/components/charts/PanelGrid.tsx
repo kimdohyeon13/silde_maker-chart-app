@@ -335,7 +335,9 @@ export default function PanelGrid({
             <div
               style={{
                 color: colors.textSecondary,
-                fontSize: themeObj.typography.fontSize.chartSubtitle,
+                fontSize:
+                  analysis.exportOptions?.panelTitleFontSize ??
+                  themeObj.typography.fontSize.chartSubtitle,
                 fontWeight: 800,
                 lineHeight: 1.2,
                 marginBottom: 6,

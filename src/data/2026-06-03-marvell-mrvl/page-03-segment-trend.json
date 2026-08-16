@@ -1,0 +1,400 @@
+{
+  "id": "segment-trend",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "신한 리포트 제품별 매출 표(분기, 백만달러).",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "exact",
+    "notes": "신한 리포트 제품별 매출 표(분기, 백만달러).",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=exact."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "부문별 실적 추이",
+    "subtitle": "데이터센터만 폭주, 나머지 부문은 횡보 (분기 매출, 백만달러)",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "xAxis": {
+      "label": "분기",
+      "type": "category",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "tickValues": [
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q27",
+        "2Q27F",
+        "3Q27F",
+        "4Q27F"
+      ]
+    },
+    "yAxis": {
+      "label": "매출액",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "백만달러",
+      "tickValues": [
+        "0",
+        "700",
+        "1400",
+        "2100",
+        "2800"
+      ],
+      "min": 0,
+      "max": 2800
+    },
+    "legend": [
+      {
+        "name": "데이터센터",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      },
+      {
+        "name": "네트워크",
+        "role": "secondary",
+        "originalColor": "#14B8A6",
+        "remakeColor": "#14B8A6"
+      },
+      {
+        "name": "인프라",
+        "role": "secondary",
+        "originalColor": "#F59E0B",
+        "remakeColor": "#F59E0B"
+      },
+      {
+        "name": "전장/산업용",
+        "role": "secondary",
+        "originalColor": "#A855F7",
+        "remakeColor": "#A855F7"
+      },
+      {
+        "name": "소비자용",
+        "role": "secondary",
+        "originalColor": "#94A3B8",
+        "remakeColor": "#94A3B8"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "신한 리포트 제품별 매출 표(분기, 백만달러).",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "부문별 실적 추이",
+    "summary": "데이터센터만 폭주, 나머지 부문은 횡보 (분기 매출, 백만달러)",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "데이터센터만 폭주, 나머지 부문은 횡보 (분기 매출, 백만달러)"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "데이터센터",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 1441,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q26",
+            "y": 1491,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q26",
+            "y": 1518,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q26",
+            "y": 1651,
+            "confidence": 0.95
+          },
+          {
+            "x": "1Q27",
+            "y": 1833,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q27F",
+            "y": 1976,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q27F",
+            "y": 2217,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q27F",
+            "y": 2511,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary"
+      },
+      {
+        "name": "네트워크",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 178,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q26",
+            "y": 194,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q26",
+            "y": 237,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q26",
+            "y": 260,
+            "confidence": 0.95
+          },
+          {
+            "x": "1Q27",
+            "y": 268,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q27F",
+            "y": 271,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q27F",
+            "y": 277,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q27F",
+            "y": 282,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      },
+      {
+        "name": "인프라",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 138,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q26",
+            "y": 130,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q26",
+            "y": 168,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q26",
+            "y": 207,
+            "confidence": 0.95
+          },
+          {
+            "x": "1Q27",
+            "y": 214,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q27F",
+            "y": 214,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q27F",
+            "y": 205,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q27F",
+            "y": 209,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      },
+      {
+        "name": "전장/산업용",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 76,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q26",
+            "y": 76,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q26",
+            "y": 35,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q26",
+            "y": 30,
+            "confidence": 0.95
+          },
+          {
+            "x": "1Q27",
+            "y": 30,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q27F",
+            "y": 25,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q27F",
+            "y": 23,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q27F",
+            "y": 24,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      },
+      {
+        "name": "소비자용",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 63,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q26",
+            "y": 116,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q26",
+            "y": 117,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q26",
+            "y": 86,
+            "confidence": 0.95
+          },
+          {
+            "x": "1Q27",
+            "y": 76,
+            "confidence": 0.95
+          },
+          {
+            "x": "2Q27F",
+            "y": 87,
+            "confidence": 0.95
+          },
+          {
+            "x": "3Q27F",
+            "y": 90,
+            "confidence": 0.95
+          },
+          {
+            "x": "4Q27F",
+            "y": 71,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      }
+    ],
+    "totalDataPoints": 40,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

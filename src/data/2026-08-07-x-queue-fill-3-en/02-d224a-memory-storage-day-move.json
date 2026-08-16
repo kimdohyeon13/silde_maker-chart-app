@@ -1,0 +1,262 @@
+{
+  "id": "02-d224a-memory-storage-day-move",
+  "mode": "faithful",
+  "sourceImage": "input/dib-224-12.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "03. 메모리 스토리지, 마이크론·샌디스크 주도",
+    "originalMessage": "2026-08-04 장세 · 비교 기준: 시작일=100 · 전일 대비 등락률",
+    "preservedElements": [
+      "The four memory and storage names printed in the source legend",
+      "Each name's one-day percentage change as printed",
+      "The 2026-08-04 close as the reference date",
+      "Yahoo Finance attribution",
+      "source-visible data status"
+    ],
+    "changedElements": [
+      "Layout plan: the legend's one-day column redrawn as a ranked bar so the four moves compare directly",
+      "Label plan: every bar labelled, with the Micron bar carrying the focus",
+      "Colour plan: neutral grey bars and a single navy accent",
+      "Language plan: all visible strings translated to English"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 범례에 인쇄된 4개 종목의 전일 대비 등락률만 사용했고, 지수화 라인 형태는 막대 랭킹으로만 재배치했습니다.",
+    "sourceAttribution": "Source: Yahoo Finance, close of 2026-08-04"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-point-color",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않아 플롯 영역이 비는 렌더 실패를 방지했습니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "100 이상 값은 모두 10 단위로 내려 표기했고, 부제 문구도 내림 처리된 숫자와 일치시켰습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에 인쇄된 숫자를 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 5개 금지항목 없음",
+      "status": "pass",
+      "detail": "목표주가, 매수·매도 의견, 밸류에이션 의견, 보유 여부, 실현 수익률을 카드에 넣지 않았습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "노출 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·주석·내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "under-100-decimals",
+      "label": "100 미만 소수 유지",
+      "status": "pass",
+      "detail": "네 값 모두 100 미만이라 인쇄된 소수 두 자리를 그대로 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Memory's whole move landed in one day",
+    "subtitle": "Aug 4, 2026 close: SanDisk +10.84%, Micron +7.62%, Western Digital +4.05%, Seagate +1.72%",
+    "source": "Source: Yahoo Finance, close of 2026-08-04 · source-visible",
+    "timeRange": "2026-08-04 session",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "SanDisk",
+        "Micron",
+        "Western Digital",
+        "Seagate"
+      ],
+      "displayTickValues": [
+        "SanDisk",
+        "Micron",
+        "Western Digital",
+        "Seagate"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "One-day change",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 12
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#C3CCD8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "SanDisk",
+            "y": 10.84,
+            "confidence": 0.72
+          },
+          {
+            "x": "Micron",
+            "y": 7.62,
+            "confidence": 0.72
+          },
+          {
+            "x": "Western Digital",
+            "y": 4.05,
+            "confidence": 0.72
+          },
+          {
+            "x": "Seagate",
+            "y": 1.72,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C3CCD8"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에 인쇄된 숫자를 읽은 값이라 원자료 대조가 필요합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.6,
+      "description": "Direction read from the source image.",
+      "recentDirection": "accelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "The spread visible in the source image is preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": -84.1,
+        "absoluteChange": -9.12,
+        "from": 10.84,
+        "to": 1.72
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 10.84,
+        "at": "SanDisk"
+      },
+      "min": {
+        "value": 1.72,
+        "at": "Seagate"
+      },
+      "average": 6.058,
+      "median": 5.835,
+      "range": 9.12
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Memory's whole move landed in one day",
+    "subMessage": "Aug 4, 2026 close: SanDisk +10.84%, Micron +7.62%, Western Digital +4.05%, Seagate +1.72%",
+    "headline": "Memory's whole move landed in one day",
+    "summary": "Aug 4, 2026 close: SanDisk +10.84%, Micron +7.62%, Western Digital +4.05%, Seagate +1.72%",
+    "story": "The source chart's data relationships are kept; only the information hierarchy and language were rebuilt.",
+    "keyTakeaways": [
+      "Micron closed +7.62% on the session.",
+      "All four memory and storage names finished higher on the same day.",
+      "Values are source-visible reads of the printed legend."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the size of the one-day move against how long the supply commitments run.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, close of 2026-08-04",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C3CCD8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Micron",
+      "y": 7.62,
+      "displayText": "7.62"
+    },
+    "densityLevel": "focused"
+  }
+}

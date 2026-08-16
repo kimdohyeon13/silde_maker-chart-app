@@ -1,0 +1,131 @@
+{
+  "id": "page-09-table-01",
+  "sourceImage": "input/11-page-09-table-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "8주 랠리 1년 뒤, 상승 동인은 실적",
+    "subtitle": "8주 연속 상승 1년 후 성과 분해(%), 지수=EPS기여+PER기여",
+    "source": "Bloomberg, 삼성증권"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "date", "label": "시점", "dataType": "text", "width": "22%", "isRowHeader": true, "align": "center" },
+      { "key": "index", "label": "지수", "dataType": "number", "width": "26%", "align": "right" },
+      { "key": "eps", "label": "EPS", "dataType": "number", "width": "26%", "align": "right" },
+      { "key": "per", "label": "PER", "dataType": "number", "width": "26%", "align": "right" }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "date": { "value": "1993.09", "displayValue": "1993.09" },
+          "index": { "value": 1.4, "displayValue": "+1.4", "highlight": "positive" },
+          "eps": { "value": 10.0, "displayValue": "+10.0", "highlight": "positive" },
+          "per": { "value": -7.9, "displayValue": "-7.9", "highlight": "negative" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "1997.06", "displayValue": "1997.06" },
+          "index": { "value": 22.5, "displayValue": "+22.5", "highlight": "positive" },
+          "eps": { "value": 7.1, "displayValue": "+7.1", "highlight": "positive" },
+          "per": { "value": 14.3, "displayValue": "+14.3", "highlight": "positive" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "1998.03", "displayValue": "1998.03" },
+          "index": { "value": 18.2, "displayValue": "+18.2", "highlight": "positive" },
+          "eps": { "value": 6.3, "displayValue": "+6.3", "highlight": "positive" },
+          "per": { "value": 11.2, "displayValue": "+11.2", "highlight": "positive" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "2004.01", "displayValue": "2004.01" },
+          "index": { "value": 3.9, "displayValue": "+3.9", "highlight": "positive" },
+          "eps": { "value": 21.0, "displayValue": "+21.0", "highlight": "positive" },
+          "per": { "value": -14.1, "displayValue": "-14.1", "highlight": "negative" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "2013.11", "displayValue": "2013.11" },
+          "index": { "value": 14.5, "displayValue": "+14.5", "highlight": "positive" },
+          "eps": { "value": 6.1, "displayValue": "+6.1", "highlight": "positive" },
+          "per": { "value": 7.9, "displayValue": "+7.9", "highlight": "positive" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "2017.11", "displayValue": "2017.11" },
+          "index": { "value": 5.2, "displayValue": "+5.2", "highlight": "positive" },
+          "eps": { "value": 21.5, "displayValue": "+21.5", "highlight": "positive" },
+          "per": { "value": -13.4, "displayValue": "-13.4", "highlight": "negative" }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "date": { "value": "2023.12", "displayValue": "2023.12" },
+          "index": { "value": 24.7, "displayValue": "+24.7", "highlight": "positive" },
+          "eps": { "value": 12.3, "displayValue": "+12.3", "highlight": "positive" },
+          "per": { "value": 11.1, "displayValue": "+11.1", "highlight": "positive" }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": { "rowHeight": 42, "cellPadding": "9px 11px", "zebraStripe": true, "fontSize": {"header":"13px","body":"13px","total":"13px"} }
+  },
+  "narrative": {
+    "headMessage": "1년 뒤를 끌어올리는 건 실적",
+    "subMessage": "밸류(PER)보다 이익(EPS)이 지수를 밀어올렸다",
+    "headline": "8주 연속 상승 이후 1년 동안 지수를 끌어올린 핵심 동력은 밸류 확장이 아니라 기업 실적(EPS) 증가였습니다.",
+    "summary": "과거 8주 랠리 이후 1년 동안 지수를 끌어올린 핵심 동력은 밸류 확장이 아니라 기업 실적(EPS) 증가였습니다.",
+    "story": "과거 8주 랠리 이후 1년 동안 지수를 끌어올린 핵심 동력은 밸류 확장이 아니라 기업 실적(EPS) 증가였습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {"x":"","y":0},
+      "displayText": "1년 뒤를 끌어올리는 건 실적",
+      "reason": "과거 8주 랠리 이후 1년 동안 지수를 끌어올린 핵심 동력은 밸류 확장이 아니라 기업 실적(EPS) 증가였습니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

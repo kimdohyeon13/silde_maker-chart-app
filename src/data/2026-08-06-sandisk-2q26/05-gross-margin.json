@@ -1,0 +1,236 @@
+{
+  "id": "05-gross-margin",
+  "sourceImage": "input/05-gross-margin.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 샌디스크 FY2026 3분기·4분기 실적 보도자료의 가이던스 비교, 2026년 4월 30일과 8월 5일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "총이익률이 자기 가이던스를 3.6%포인트 넘겼다",
+    "subtitle": "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다",
+    "source": "자료: 샌디스크 FY2026 3분기·4분기 실적 보도자료의 가이던스 비교, 2026년 4월 30일과 8월 5일",
+    "timeRange": "FY2026 4분기~FY2027 1분기",
+    "xAxis": {
+      "label": "구분",
+      "type": "category",
+      "tickValues": [
+        "가이던스 하단",
+        "가이던스 상단",
+        "실적",
+        "다음 분기 하단",
+        "다음 분기 상단"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 74,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "조정 총이익률",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "조정 총이익률",
+        "data": [
+          {
+            "x": "가이던스 하단",
+            "y": 79.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "가이던스 상단",
+            "y": 81.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "실적",
+            "y": 84.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "다음 분기 하단",
+            "y": 83.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "다음 분기 상단",
+            "y": 85.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.073,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 7.6,
+        "absoluteChange": 6.0,
+        "from": 79.0,
+        "to": 85.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 85.0,
+        "at": ""
+      },
+      "min": {
+        "value": 79.0,
+        "at": ""
+      },
+      "average": 82.52,
+      "median": 83.0,
+      "range": 6.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "총이익률이 자기 가이던스를 3.6%포인트 넘겼다",
+    "subMessage": "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다",
+    "headline": "총이익률이 자기 가이던스를 3.6%포인트 넘겼다",
+    "summary": "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 샌디스크 FY2026 3분기·4분기 실적 보도자료의 가이던스 비교, 2026년 4월 30일과 8월 5일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 85.0
+      },
+      "displayText": "총이익률이 자기 가이던스를 3",
+      "reason": "석 달 전 제시한 범위는 79.0~81.0%였는데 실제는 84.6%. 다음 분기는 83.0~85.0%로 잡았다"
+    },
+    "densityLevel": "balanced"
+  }
+}

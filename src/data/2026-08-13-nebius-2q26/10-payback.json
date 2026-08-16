@@ -1,0 +1,236 @@
+{
+  "id": "10-payback",
+  "sourceImage": "input/nebius-q2-2026-financial-results.pdf",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "기존 24~36개월에서 1년 10개월로 개선",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "차트 유형",
+      "제목",
+      "색상",
+      "레이아웃",
+      "라벨"
+    ],
+    "dataFidelity": "exact",
+    "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": false,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "accentColor": "#0B2F4A",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "신규 계약의 투자금 회수기간이 22개월로 짧아졌다",
+    "subtitle": "기존 24~36개월에서 1년 10개월로 개선",
+    "source": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "timeRange": "2025년 1분기~2026년 2분기",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "기존 하단",
+        "기존 상단",
+        "2Q26 신규 계약"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "개월",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "투자금 회수기간",
+        "role": "primary",
+        "originalColor": "#C7FF2E",
+        "remakeColor": "#C7FF2E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "투자금 회수기간",
+        "data": [
+          {
+            "x": "기존 하단",
+            "y": 24,
+            "confidence": 0.74
+          },
+          {
+            "x": "기존 상단",
+            "y": 36,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26 신규 계약",
+            "y": 22,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C7FF2E"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.512,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -8.3,
+        "absoluteChange": -2.0,
+        "from": 24.0,
+        "to": 22.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 36.0,
+        "at": ""
+      },
+      "min": {
+        "value": 22.0,
+        "at": ""
+      },
+      "average": 27.333333333333332,
+      "median": 24.0,
+      "range": 14.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "신규 계약의 투자금 회수기간이 22개월로 짧아졌다",
+    "subMessage": "기존 24~36개월에서 1년 10개월로 개선",
+    "headline": "신규 계약의 투자금 회수기간이 22개월로 짧아졌다",
+    "summary": "기존 24~36개월에서 1년 10개월로 개선",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "기존 24~36개월에서 1년 10개월로 개선",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0B2F4A",
+      "secondary": [
+        "#8B95A1",
+        "#C7FF2E"
+      ],
+      "positive": "#0B2F4A",
+      "negative": "#D92D20",
+      "accent": "#0B2F4A",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 22.0
+      },
+      "displayText": "신규 계약의 투자금 회수기간이",
+      "reason": "기존 24~36개월에서 1년 10개월로 개선"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "redesign"
+}

@@ -1,0 +1,363 @@
+{
+  "id": "page-24-graph-01",
+  "sourceImage": "input/28-page_24_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LG이노텍, 추정"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "LG이노텍, 기판 소재 부문 실적 추이 및 전망",
+    "subtitle": "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속",
+    "source": "자료: LG이노텍, 추정",
+    "timeRange": "1Q25~4Q27E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26E",
+        "4Q26E",
+        "1Q27E",
+        "2Q27E",
+        "3Q27E",
+        "4Q27E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출액",
+      "type": "value",
+      "tickValues": [],
+      "unit": "십억원",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 700
+    },
+    "legend": [
+      {
+        "name": "매출액",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "YoY",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "YoY",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 0,
+      "max": 30
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출액",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 369,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q25",
+            "y": 409,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q25",
+            "y": 407,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q25",
+            "y": 482,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q26",
+            "y": 430,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q26",
+            "y": 477,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q26E",
+            "y": 491,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q26E",
+            "y": 503,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q27E",
+            "y": 505,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q27E",
+            "y": 531,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q27E",
+            "y": 571,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q27E",
+            "y": 630,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "YoY",
+        "data": [
+          {
+            "x": "1Q25",
+            "y": 14.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q25",
+            "y": 10,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q25",
+            "y": 18.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q25",
+            "y": 27.3,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q26",
+            "y": 15.8,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q26",
+            "y": 16.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q26E",
+            "y": 13.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q26E",
+            "y": 4,
+            "confidence": 0.78
+          },
+          {
+            "x": "1Q27E",
+            "y": 16.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "2Q27E",
+            "y": 11.1,
+            "confidence": 0.78
+          },
+          {
+            "x": "3Q27E",
+            "y": 16,
+            "confidence": 0.78
+          },
+          {
+            "x": "4Q27E",
+            "y": 24.6,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.507,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -93.3,
+        "absoluteChange": -344.4,
+        "from": 369.0,
+        "to": 24.6
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 630.0,
+        "at": ""
+      },
+      "min": {
+        "value": 4.0,
+        "at": ""
+      },
+      "average": 249.70416666666668,
+      "median": 198.15,
+      "range": 626.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "LG이노텍, 기판 소재 부문 실적 추이 및 전망",
+    "subMessage": "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속",
+    "headline": "LG이노텍, 기판 소재 부문 실적 추이 및 전망",
+    "summary": "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LG이노텍, 추정"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 24.6
+      },
+      "displayText": "LG이노텍, 기판 소재 부문 ",
+      "reason": "RF-SiP와 FC-BGA 모멘텀으로 2027년 상승 전환 — 매출 우상향, YoY 저점 통과 후 가속"
+    },
+    "densityLevel": "balanced"
+  }
+}

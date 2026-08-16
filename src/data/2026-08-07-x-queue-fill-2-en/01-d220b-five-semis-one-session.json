@@ -1,0 +1,253 @@
+{
+  "id": "01-d220b-five-semis-one-session",
+  "mode": "faithful",
+  "sourceImage": "input/dib-220-24.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "주요 반도체 5종, 7월 30일 일제히 상승",
+    "originalMessage": "AMD +13.00%, 인텔 +11.30%, TSMC +7.64%, 브로드컴 +4.73%, 엔비디아 +2.65% (2026-07-30 종가)",
+    "preservedElements": [
+      "5개 반도체 종목의 당일 등락률",
+      "AMD·인텔·TSMC·브로드컴·엔비디아 값",
+      "2026-07-30 종가 기준일",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "지수화 라인차트를 당일 등락률 막대로 정리",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 엔비디아만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 라인차트 우측에 인쇄된 5종의 당일 등락률만 옮겼습니다. 3개월 누적 수익률 열은 사용하지 않았습니다.",
+    "sourceAttribution": "Yahoo Finance · 30 July 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "13.00, 11.30, 7.64, 4.73, 2.65는 원본 이미지에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "모든 노출 문자열을 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Nvidia gained least of the five",
+    "subtitle": "All five closed higher on 30 July 2026, Nvidia +2.65% against AMD +13.00%",
+    "source": "Source: Yahoo Finance · 30 July 2026 close · source-visible",
+    "timeRange": "30 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AMD",
+        "Intel",
+        "TSMC",
+        "Broadcom",
+        "Nvidia"
+      ],
+      "displayTickValues": [
+        "AMD",
+        "Intel",
+        "TSMC",
+        "Broadcom",
+        "Nvidia"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 15
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#C9A227",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "AMD",
+            "y": 13.0,
+            "confidence": 0.9
+          },
+          {
+            "x": "Intel",
+            "y": 11.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "TSMC",
+            "y": 7.64,
+            "confidence": 0.9
+          },
+          {
+            "x": "Broadcom",
+            "y": 4.73,
+            "confidence": 0.9
+          },
+          {
+            "x": "Nvidia",
+            "y": 2.65,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "Every one of the five closed higher in the same session.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.52,
+      "description": "The sign is uniform, the size of the move is not."
+    },
+    "changeRates": [
+      {
+        "period": "Largest vs smallest move",
+        "percentChange": 390.6,
+        "absoluteChange": 10.35,
+        "from": 2.65,
+        "to": 13.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 13.0,
+        "at": "AMD"
+      },
+      "min": {
+        "value": 2.65,
+        "at": "Nvidia"
+      },
+      "average": 7.864,
+      "median": 7.64,
+      "range": 10.35
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Nvidia gained least of the five",
+    "subMessage": "All five closed higher on 30 July 2026, Nvidia +2.65% against AMD +13.00%",
+    "headline": "Nvidia gained least of the five",
+    "summary": "The direction was uniform across five semiconductor names; the size of the move was not.",
+    "story": "On a session when every one of the five closed higher, the accelerator vendor finished with the smallest gain of the group.",
+    "keyTakeaways": [
+      "AMD +13.00% led the five.",
+      "Nvidia +2.65% was the smallest gain of the group.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the gap between the largest and smallest gain rather than the direction alone.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, 30 July 2026 close",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Nvidia",
+      "y": 2.65,
+      "displayText": "2.65%"
+    },
+    "densityLevel": "focused"
+  }
+}

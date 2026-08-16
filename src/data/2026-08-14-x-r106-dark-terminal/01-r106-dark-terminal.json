@@ -1,0 +1,300 @@
+{
+  "id": "r106-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/report-1/images/report-1-06.png",
+  "preserveIntent": {
+    "originalMessage": "알파벳 81.8%, 마이크로소프트 43.0%, 아마존 36.8%",
+    "preservedElements": [
+      "3개 계열(알파벳·마이크로소프트·아마존)과 3개 시점 2024~2026",
+      "인쇄된 최신값 81.8% / 43.0% / 36.8%",
+      "y축 눈금 0%, 20%, 40%, 60%, 80%"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용",
+      "보이는 글자를 영어로 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "최신값 3개만 원본에 인쇄돼 있습니다. 2024·2025 여섯 점은 y축 눈금(0~80%) 기준으로 원본 화면에서 읽은 source-visible 값입니다.",
+    "sourceAttribution": "Source: company filings"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "원본의 차트 종류·계열·행 순서를 그대로 두고 색과 프레임만 다크 터미널로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "최신값 3개만 원본에 인쇄돼 있습니다. 2024·2025 여섯 점은 y축 눈금(0~80%) 기준으로 원본 화면에서 읽은 source-visible 값입니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "원본에 인쇄된 자료 출처를 그대로 옮겼습니다. 셀사이드 이름도, 우리 발행물 이름(알파테크리포트·데일리이슈브리프·W7팔로업)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "compactChartMargins": false,
+    "chartHeight": 380,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 260,
+    "metricValue": "81.8%",
+    "metricLabel": "Alphabet cloud growth",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Cloud growth is reaccelerating",
+    "subtitle": "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%",
+    "source": "Source: company filings",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "displayTickValues": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "Alphabet",
+        "role": "primary",
+        "originalColor": "#00E0A4",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Microsoft",
+        "role": "secondary",
+        "originalColor": "#4AA8FF",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "Amazon",
+        "role": "secondary",
+        "originalColor": "#FF5FC4",
+        "remakeColor": "#FF5FC4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Alphabet",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "2024",
+            "y": 28.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 27.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 81.8,
+            "confidence": 0.78
+          }
+        ]
+      },
+      {
+        "name": "Microsoft",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "data": [
+          {
+            "x": "2024",
+            "y": 35.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 38.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 43.0,
+            "confidence": 0.78
+          }
+        ]
+      },
+      {
+        "name": "Amazon",
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF5FC4",
+        "data": [
+          {
+            "x": "2024",
+            "y": 17.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 16.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 36.8,
+            "confidence": 0.78
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 9,
+    "quality": {
+      "overallConfidence": 0.78,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "최신값 3개만 원본에 인쇄돼 있습니다. 2024·2025 여섯 점은 y축 눈금(0~80%) 기준으로 원본 화면에서 읽은 source-visible 값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 방향을 그대로 옮겼습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본의 변동폭을 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 81.8,
+        "at": "2026"
+      },
+      "min": {
+        "value": 27.5,
+        "at": "2025"
+      },
+      "average": 45.933,
+      "median": 0,
+      "range": 54.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Cloud growth is reaccelerating",
+    "subMessage": "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%",
+    "headline": "Cloud growth is reaccelerating",
+    "summary": "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%",
+    "story": "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%",
+    "keyTakeaways": [
+      "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: company filings"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026",
+        "y": 81.8
+      },
+      "displayText": "81.8",
+      "reason": "Latest year-over-year growth: Alphabet 81.8%, Microsoft 43.0%, Amazon 36.8%"
+    },
+    "densityLevel": "focused"
+  }
+}

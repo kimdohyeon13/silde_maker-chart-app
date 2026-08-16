@@ -1,0 +1,326 @@
+{
+  "id": "03-neocloud-relative-price",
+  "sourceImage": "input/03-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "빅테크 대비 네오클라우드 상대주가 추이(2025.01=0)",
+    "preservedElements": [
+      "축 라벨/단위/기간 축",
+      "계열 구성",
+      "핵심 추세와 대소 관계"
+    ],
+    "changedElements": [
+      "팬톤 2026 팔레트로 색 통일",
+      "제목/부제 한국어 재작성",
+      "격자·여백 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "지수화 궤적은 신한투자증권 차트에서 읽은 분기 앵커 기준."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visual-similarity-90",
+      "label": "소스 차트 구조 보존",
+      "status": "pass",
+      "detail": "신한 리포트의 네오클라우드 상대주가 곡선을 분기 앵커로 재구성.",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "palette-pantone-2026",
+      "label": "팬톤 2026 팔레트",
+      "status": "pass",
+      "detail": "Classic Blue/Living Coral/Very Peri/Illuminating/Ultimate Gray만 사용",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "네오클라우드는 실적이 아니라 노이즈에 밀렸다",
+    "subtitle": "1년새 몇 배씩 오른 주가, Meta 보도 한 건에 최근 되돌림",
+    "source": "자료: LSEG, 신한투자증권 (2025.01 = 0)",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "상대주가",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000"
+      ],
+      "min": 0,
+      "max": 1000
+    },
+    "legend": [
+      {
+        "name": "아이렌",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "코어위브",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "네비우스",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "테라울프",
+        "role": "secondary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "1년새 몇 배씩 오른 주가, Meta 보도 한 건에 최근 되돌림",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "네오클라우드는 실적이 아니라 노이즈에 밀렸다",
+    "summary": "1년새 몇 배씩 오른 주가, Meta 보도 한 건에 최근 되돌림",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "최근 분기 일제히 되돌림"
+    },
+    "colorStrategy": {
+      "primary": "#FF6F61",
+      "secondary": [
+        "#0F4C81",
+        "#6667AB",
+        "#939597"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#F5DF4D",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-07-04T16:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "아이렌",
+        "data": [
+          {
+            "x": "25.01",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.04",
+            "y": 100,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.07",
+            "y": 210,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.10",
+            "y": 360,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.01",
+            "y": 520,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.04",
+            "y": 900,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.07",
+            "y": 760,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "코어위브",
+        "data": [
+          {
+            "x": "25.01",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.04",
+            "y": 80,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.07",
+            "y": 250,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.10",
+            "y": 400,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.01",
+            "y": 560,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.04",
+            "y": 760,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.07",
+            "y": 610,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "네비우스",
+        "data": [
+          {
+            "x": "25.01",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.04",
+            "y": 55,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.07",
+            "y": 150,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.10",
+            "y": 300,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.01",
+            "y": 450,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.04",
+            "y": 600,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.07",
+            "y": 470,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "테라울프",
+        "data": [
+          {
+            "x": "25.01",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.04",
+            "y": 30,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.07",
+            "y": 90,
+            "confidence": 0.7
+          },
+          {
+            "x": "25.10",
+            "y": 160,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.01",
+            "y": 210,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.04",
+            "y": 300,
+            "confidence": 0.7
+          },
+          {
+            "x": "26.07",
+            "y": 220,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "left"
+      }
+    ],
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

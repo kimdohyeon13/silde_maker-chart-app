@@ -1,0 +1,314 @@
+{
+  "id": "02-d222d-sox-index-giveback",
+  "mode": "faithful",
+  "sourceImage": "input/dib-222-04.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Chart 9: $53bn of inflows to semiconductor ETFs YTD",
+    "originalMessage": "Cumulative flows to semiconductor ETFs vs SOX price index (RHS)",
+    "preservedElements": [
+      "The SOX price index series and its printed 1,000 to 15,000 right-hand axis",
+      "The 2017 start and the run to 2026",
+      "BofA Global Investment Strategy, EPFR and Bloomberg attribution",
+      "source-visible data status"
+    ],
+    "changedElements": [
+      "Layout plan: the right-axis SOX line read at year-end points plus the 2026 peak and the last print",
+      "Series plan: only the SOX line is charted; the cumulative-inflow line is charted separately",
+      "Rounding plan: every level floored to the nearest ten",
+      "Colour plan: one navy line with the last point accented",
+      "Language plan: all visible strings translated to English"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 우측 축의 SOX 라인을 연말 시점과 2026년 고점·최종값으로 읽어 재구성했습니다. 좌축 유입액 라인은 별도 카드로 분리했습니다.",
+    "sourceAttribution": "Source: BofA Global Investment Strategy, EPFR, Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-point-color",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않아 플롯 영역이 비는 렌더 실패를 방지했습니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "100 이상 값은 모두 10 단위로 내려 표기했고, 부제 문구도 내림 처리된 숫자와 일치시켰습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에 인쇄된 숫자를 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 5개 금지항목 없음",
+      "status": "pass",
+      "detail": "목표주가, 매수·매도 의견, 밸류에이션 의견, 보유 여부, 실현 수익률을 카드에 넣지 않았습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "노출 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·주석·내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "approximation-disclosed",
+      "label": "근사 판독 고지",
+      "status": "pass",
+      "detail": "우측 축 라인에서 읽은 근사값임을 hardToReadAreas와 신뢰도 0.55로 표시했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "The chip index gave back a fifth",
+    "subtitle": "SOX index read at year ends: 1,200 in 2017 to a 2026 peak near 14,000, latest near 10,500",
+    "source": "Source: BofA Global Investment Strategy, EPFR, Bloomberg · source-visible",
+    "timeRange": "2017 to 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "'17",
+        "'18",
+        "'19",
+        "'20",
+        "'21",
+        "'22",
+        "'23",
+        "'24",
+        "'25",
+        "'26 peak",
+        "'26 latest"
+      ],
+      "displayTickValues": [
+        "'17",
+        "'18",
+        "'19",
+        "'20",
+        "'21",
+        "'22",
+        "'23",
+        "'24",
+        "'25",
+        "'26 peak",
+        "'26 latest"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "SOX index level",
+      "type": "value",
+      "tickValues": [
+        "1000",
+        "3000",
+        "5000",
+        "7000",
+        "9000",
+        "11000",
+        "13000",
+        "15000"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 1000,
+      "max": 15000
+    },
+    "legend": [
+      {
+        "name": "SOX index level",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "SOX index level",
+        "data": [
+          {
+            "x": "'17",
+            "y": 1200,
+            "confidence": 0.55
+          },
+          {
+            "x": "'18",
+            "y": 1200,
+            "confidence": 0.55
+          },
+          {
+            "x": "'19",
+            "y": 1800,
+            "confidence": 0.55
+          },
+          {
+            "x": "'20",
+            "y": 2600,
+            "confidence": 0.55
+          },
+          {
+            "x": "'21",
+            "y": 3900,
+            "confidence": 0.55
+          },
+          {
+            "x": "'22",
+            "y": 2400,
+            "confidence": 0.55
+          },
+          {
+            "x": "'23",
+            "y": 3900,
+            "confidence": 0.55
+          },
+          {
+            "x": "'24",
+            "y": 5000,
+            "confidence": 0.55
+          },
+          {
+            "x": "'25",
+            "y": 4400,
+            "confidence": 0.55
+          },
+          {
+            "x": "'26 peak",
+            "y": 14000,
+            "confidence": 0.55
+          },
+          {
+            "x": "'26 latest",
+            "y": 10500,
+            "confidence": 0.55
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 11,
+    "quality": {
+      "overallConfidence": 0.55,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "우측 축 라인에서 읽은 근사값이며, 원본에 개별 수치 라벨은 인쇄되어 있지 않습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.6,
+      "description": "Direction read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "The spread visible in the source image is preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": 775.0,
+        "absoluteChange": 9300,
+        "from": 1200,
+        "to": 10500
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 14000,
+        "at": "'26 peak"
+      },
+      "min": {
+        "value": 1200,
+        "at": "'17"
+      },
+      "average": 4627.273,
+      "median": 3900,
+      "range": 12800
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The chip index gave back a fifth",
+    "subMessage": "SOX index read at year ends: 1,200 in 2017 to a 2026 peak near 14,000, latest near 10,500",
+    "headline": "The chip index gave back a fifth",
+    "summary": "SOX index read at year ends: 1,200 in 2017 to a 2026 peak near 14,000, latest near 10,500",
+    "story": "The source chart's data relationships are kept; only the information hierarchy and language were rebuilt.",
+    "keyTakeaways": [
+      "The index peaks near 14,000 in 2026 and prints near 10,500 at the right edge.",
+      "The drawdown lands inside the same window the inflows arrived in.",
+      "Levels are source-visible reads of the printed right-hand axis."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Put the index give-back next to the money that came in over the same months.",
+    "contextualNotes": [
+      "Source: BofA Global Investment Strategy, EPFR, Bloomberg",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C3CCD8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "'26 latest",
+      "y": 10500,
+      "displayText": "10500"
+    },
+    "densityLevel": "focused"
+  }
+}

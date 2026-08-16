@@ -1,0 +1,218 @@
+{
+  "id": "04-capex-vs-revenue-growth",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-30T17:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "CapEx가 매출보다 3~4배 빨리 늘었다",
+    "preservedElements": [
+      "공식 수치",
+      "회사 순서",
+      "단위",
+      "출처",
+      "CapEx 정의"
+    ],
+    "changedElements": [
+      "쉬운 주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "최댓값 강조"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "Microsoft 성장률은 공식 실적과 삼성증권 계산, Meta CapEx 성장률은 31.078B/17.012B-1로 계산했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 4개와 직접 값 라벨 4개로 설계했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "최종 export와 DOM QA에서 1,824×1,026px, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "source-exact",
+      "label": "공식 수치 일치",
+      "status": "pass",
+      "detail": "Microsoft FY26 Q4와 Meta Q2 2026 공식 실적 발표의 원단위를 사용했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "CapEx가 매출보다 3~4배 빨리 늘었다",
+    "subtitle": "전년 대비 성장률 · Microsoft 18% vs 69.4% · Meta 28% vs 82.7%",
+    "source": "자료: Microsoft·Meta 실적 발표, 삼성증권, waltechman 계산",
+    "timeRange": "2026년 4~6월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "MS Revenue",
+        "MS CapEx",
+        "Meta Revenue",
+        "Meta CapEx"
+      ],
+      "displayTickValues": [
+        "MS 매출",
+        "MS CapEx",
+        "Meta 매출",
+        "Meta CapEx"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 100,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "비교값",
+        "role": "primary",
+        "originalColor": "#667085",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "비교값",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "MS Revenue",
+            "y": 18,
+            "confidence": 1
+          },
+          {
+            "x": "MS CapEx",
+            "y": 69.4,
+            "confidence": 1
+          },
+          {
+            "x": "Meta Revenue",
+            "y": 28,
+            "confidence": 1
+          },
+          {
+            "x": "Meta CapEx",
+            "y": 82.7,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 18,
+      "max": 82.7,
+      "average": 49.525,
+      "latest": 82.7
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "두 회사 모두 매출 증가보다 설비투자 증가가 훨씬 빨랐습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CapEx가 매출보다 3~4배 빨리 늘었다",
+    "subMessage": "전년 대비 성장률 · Microsoft 18% vs 69.4% · Meta 28% vs 82.7%",
+    "headline": "두 회사 모두 매출 증가보다 설비투자 증가가 훨씬 빨랐습니다.",
+    "summary": "두 회사 모두 매출 증가보다 설비투자 증가가 훨씬 빨랐습니다.",
+    "keyTakeaways": [
+      "Microsoft 매출은 18% 늘었지만 리스 포함 CapEx는 69.4% 증가했습니다.",
+      "Meta 매출은 28% 늘었지만 CapEx는 82.7% 증가했습니다.",
+      "AI 수요가 좋아도 투자 증가 속도가 더 빠르면 마진과 현금흐름 부담이 커집니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "Meta CapEx",
+        "y": 82.7
+      },
+      "displayText": "82.7",
+      "reason": "두 회사 모두 매출 증가보다 설비투자 증가가 훨씬 빨랐습니다."
+    },
+    "colorStrategy": {
+      "primary": "#D92D3A",
+      "secondary": [
+        "#667085"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "sparse",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

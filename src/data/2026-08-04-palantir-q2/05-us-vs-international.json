@@ -1,0 +1,228 @@
+{
+  "id": "05-us-vs-international",
+  "sourceImage": "input/05-us-vs-international.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 팔란티어 2026년 2분기 Business Update 기준 계산값 (전체 매출에서 미국 매출을 뺀 값)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "성장은 사실상 미국에서만 나왔다",
+    "subtitle": "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로",
+    "source": "자료: 팔란티어 2026년 2분기 Business Update 기준 계산값 (전체 매출에서 미국 매출을 뺀 값)",
+    "timeRange": "2Q25 대 2Q26",
+    "xAxis": {
+      "label": "지역과 분기",
+      "type": "category",
+      "tickValues": [
+        "미국 2Q25",
+        "미국 2Q26",
+        "해외 2Q25",
+        "해외 2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "백만 달러",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "지역별 매출",
+        "role": "primary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "지역별 매출",
+        "data": [
+          {
+            "x": "미국 2Q25",
+            "y": 733,
+            "confidence": 0.74
+          },
+          {
+            "x": "미국 2Q26",
+            "y": 1570,
+            "confidence": 0.74
+          },
+          {
+            "x": "해외 2Q25",
+            "y": 271,
+            "confidence": 0.74
+          },
+          {
+            "x": "해외 2Q26",
+            "y": 365,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.768,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -50.2,
+        "absoluteChange": -368.0,
+        "from": 733.0,
+        "to": 365.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1570.0,
+        "at": ""
+      },
+      "min": {
+        "value": 271.0,
+        "at": ""
+      },
+      "average": 734.75,
+      "median": 549.0,
+      "range": 1299.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "성장은 사실상 미국에서만 나왔다",
+    "subMessage": "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로",
+    "headline": "성장은 사실상 미국에서만 나왔다",
+    "summary": "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 팔란티어 2026년 2분기 Business Update 기준 계산값 (전체 매출에서 미국 매출을 뺀 값)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 365.0
+      },
+      "displayText": "성장은 사실상 미국에서만 나왔",
+      "reason": "미국 +115%인 사이 해외는 +35%. 전체에서 해외 비중은 27%에서 19%로"
+    },
+    "densityLevel": "balanced"
+  }
+}

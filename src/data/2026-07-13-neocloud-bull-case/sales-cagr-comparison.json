@@ -1,0 +1,206 @@
+{
+  "id": "sales-cagr-comparison",
+  "sourceImage": "input/16-valuation-growth-charts.png",
+  "analyzedAt": "2026-07-13T18:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "네오클라우드와 비교기업의 2026~2028년 매출 CAGR을 같은 축에서 비교한다.",
+    "preservedElements": [
+      "세로 막대차트",
+      "7개 비교 대상과 원본 순서",
+      "모든 성장률 수치",
+      "0~300 축 범위"
+    ],
+    "changedElements": [
+      "한글 텍스트 정리",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "그림 9. 네오클라우드 향후 3년 매출 성장률 상대비교",
+    "dataFidelity": "exact",
+    "notes": "막대값은 pdf-audit.md의 그림 9 감사값과 일치합니다. 감사 문서와 표 2의 원단위에 맞춰 CAGR을 퍼센트(%)로 명시했습니다.",
+    "sourceAttribution": "FactSet Consensus, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-seven-values",
+      "label": "7개 값 일치",
+      "status": "pass",
+      "detail": "246.1, 98.3, 122.0, 142.9, 14.1, 17.4, 7.7을 감사 문서와 대조했습니다."
+    },
+    {
+      "id": "order-preserved",
+      "label": "종목 순서 보존",
+      "status": "pass",
+      "detail": "네비우스부터 S&P500까지 원본 순서를 유지했습니다."
+    },
+    {
+      "id": "percent-unit",
+      "label": "성장률 단위 명확화",
+      "status": "pass",
+      "detail": "2026~2028년 매출 CAGR을 퍼센트(%)로 표기했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "24px 36px 2px",
+    "contentPadding": "4px 12px 2px",
+    "sourcePadding": "0 36px 16px",
+    "chartHeight": 500
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "그림 9. 네오클라우드 향후 3년 매출 성장률 상대비교",
+    "subtitle": "2026~2028년 매출 CAGR · 퍼센트(%)",
+    "source": "자료: FactSet Consensus, KB증권",
+    "timeRange": "2026~2028",
+    "xAxis": {
+      "label": "비교 대상",
+      "type": "category",
+      "tickValues": [
+        "네비우스",
+        "코어위브",
+        "아이렌",
+        "어플라이드디지털",
+        "아마존",
+        "마이크로소프트",
+        "S&P500"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출 CAGR",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250",
+        "300"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 300,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "2026~2028 매출 CAGR",
+        "role": "primary",
+        "originalColor": "#06345F",
+        "remakeColor": "#1458D4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2026~2028 매출 CAGR",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {
+            "x": "네비우스",
+            "y": 246.1,
+            "confidence": 1
+          },
+          {
+            "x": "코어위브",
+            "y": 98.3,
+            "confidence": 1
+          },
+          {
+            "x": "아이렌",
+            "y": 122,
+            "confidence": 1
+          },
+          {
+            "x": "어플라이드디지털",
+            "y": 142.9,
+            "confidence": 1
+          },
+          {
+            "x": "아마존",
+            "y": 14.1,
+            "confidence": 1
+          },
+          {
+            "x": "마이크로소프트",
+            "y": 17.4,
+            "confidence": 1
+          },
+          {
+            "x": "S&P500",
+            "y": 7.7,
+            "confidence": 1
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 7.7,
+      "max": 246.1,
+      "average": 92.6428571429,
+      "latest": 7.7
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "네비우스의 2026~2028년 매출 CAGR 246.1%가 7개 비교 대상 중 가장 높습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "네비우스의 예상 매출 성장률은 비교군에서 가장 높습니다.",
+    "summary": "2026~2028년 CAGR은 네비우스 246.1%, 어플라이드디지털 142.9%, 아이렌 122.0%, 코어위브 98.3% 순입니다.",
+    "keyTakeaways": [
+      "네비우스의 성장률 246.1%는 아마존 14.1%, 마이크로소프트 17.4%보다 훨씬 높습니다.",
+      "네오클라우드 3사의 성장률은 S&P500 7.7%를 크게 웃돕니다.",
+      "이는 전망치이므로 데이터센터 인도와 매출 전환이 지연되면 낮아질 수 있습니다."
+    ],
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "네비우스",
+        "y": 246.1
+      },
+      "displayText": "네비우스 246.1%",
+      "reason": "원시 EV/Sales 프리미엄을 성장률로 설명하는 핵심 수치입니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

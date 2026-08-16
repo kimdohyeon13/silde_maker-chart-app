@@ -1,0 +1,255 @@
+{
+  "id": "01-d220c-tool-layer-vs-qualcomm",
+  "mode": "faithful",
+  "sourceImage": "input/dib-220-25.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "장비주 강세와 퀄컴 약세로 갈린 반도체 밸류체인",
+    "originalMessage": "램리서치 +17.98%, 어플라이드머티어리얼즈 +14.97%, ARM +7.40%, KLA +5.96%, 퀄컴 -2.62% (2026-07-30 종가)",
+    "preservedElements": [
+      "장비 4종과 퀄컴의 당일 등락률",
+      "램리서치·어플라이드·ARM·KLA·퀄컴 값과 부호",
+      "2026-07-30 종가 기준일",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "지수화 라인차트를 당일 등락률 막대로 정리",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 램리서치만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 라인차트 우측에 인쇄된 5종의 당일 등락률만 옮겼습니다.",
+    "sourceAttribution": "Yahoo Finance · 30 July 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "17.98, 14.97, 7.40, 5.96, -2.62는 원본 이미지에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "모든 노출 문자열을 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The tool layer led, Qualcomm did not",
+    "subtitle": "One session: Lam Research +17.98%, Applied Materials +14.97%, Qualcomm -2.62%",
+    "source": "Source: Yahoo Finance · 30 July 2026 close · source-visible",
+    "timeRange": "30 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Lam Research",
+        "Applied Materials",
+        "ARM",
+        "KLA",
+        "Qualcomm"
+      ],
+      "displayTickValues": [
+        "Lam Research",
+        "Applied Materials",
+        "ARM",
+        "KLA",
+        "Qualcomm"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-5",
+        "0",
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -5,
+      "max": 20
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#1F6F5C",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "Lam Research",
+            "y": 17.98,
+            "confidence": 0.9
+          },
+          {
+            "x": "Applied Materials",
+            "y": 14.97,
+            "confidence": 0.9
+          },
+          {
+            "x": "ARM",
+            "y": 7.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "KLA",
+            "y": 5.96,
+            "confidence": 0.9
+          },
+          {
+            "x": "Qualcomm",
+            "y": -2.62,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.66,
+      "description": "The equipment names rose together while the finished-silicon name fell.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.86,
+      "description": "The session splits by position in the chain, not by size of company."
+    },
+    "changeRates": [
+      {
+        "period": "Largest gain vs only decline",
+        "percentChange": 0,
+        "absoluteChange": 20.6,
+        "from": -2.62,
+        "to": 17.98
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 17.98,
+        "at": "Lam Research"
+      },
+      "min": {
+        "value": -2.62,
+        "at": "Qualcomm"
+      },
+      "average": 8.738,
+      "median": 7.4,
+      "range": 20.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The tool layer led, Qualcomm did not",
+    "subMessage": "One session: Lam Research +17.98%, Applied Materials +14.97%, Qualcomm -2.62%",
+    "headline": "The tool layer led, Qualcomm did not",
+    "summary": "Companies that sell fab capacity rose together while the buyer of finished silicon fell.",
+    "story": "The four equipment and IP names closed higher in the same session, and the one name that buys finished silicon closed lower.",
+    "keyTakeaways": [
+      "Lam Research +17.98% was the largest move of the five.",
+      "Qualcomm -2.62% was the only decline.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the split by position in the chain rather than by sector label.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, 30 July 2026 close",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Lam Research",
+      "y": 17.98,
+      "displayText": "17.98%"
+    },
+    "densityLevel": "focused"
+  }
+}

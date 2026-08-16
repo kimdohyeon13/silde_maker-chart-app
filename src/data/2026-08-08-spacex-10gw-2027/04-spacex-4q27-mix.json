@@ -1,0 +1,237 @@
+{
+  "id": "04-spacex-4q27-mix",
+  "mode": "faithful",
+  "sourceImage": "input/05_spacex_arr_path.jpg",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "originalMessage": "2027년 4분기 연환산 매출 3,050억 달러 가운데 AI 컴퓨트가 2,350억 달러를 차지한다",
+    "preservedElements": [
+      "4개 세그먼트 이름과 값",
+      "10억 달러 단위",
+      "SemiAnalysis Tokenomics Model 출처"
+    ],
+    "changedElements": [
+      "누적 막대의 마지막 분기 구성만 떼어 도넛으로 표현",
+      "세그먼트 이름 한글화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 누적 막대의 4Q27 구성값을 그대로 사용했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis Tokenomics Model, 재구성"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "조각 4개 도넛, 최대 조각 1곳만 강조, 라벨은 조각 바깥 배치로 계획했습니다."
+    },
+    {
+      "id": "value-fidelity",
+      "label": "값 충실도 고지",
+      "status": "pass",
+      "detail": "값은 원본 화면 판독 기반 source-visible입니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "donut",
+    "title": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "subtitle": "2027년 4분기 연환산 매출 구성, 단위 10억 달러",
+    "source": "자료: SemiAnalysis Tokenomics Model, 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AI 컴퓨트",
+        "커넥티비티",
+        "AI 애플리케이션",
+        "우주 발사"
+      ],
+      "displayTickValues": [
+        "AI 컴퓨트",
+        "커넥티비티",
+        "AI 애플리케이션",
+        "우주 발사"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 240
+    },
+    "legend": [
+      {
+        "name": "세그먼트별 연환산 매출",
+        "role": "primary",
+        "originalColor": "#173B67",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "세그먼트별 연환산 매출",
+        "data": [
+          {
+            "x": "AI 컴퓨트",
+            "y": 235,
+            "confidence": 0.74,
+            "color": "#C43D3D"
+          },
+          {
+            "x": "커넥티비티",
+            "y": 37,
+            "confidence": 0.74,
+            "color": "#173B67"
+          },
+          {
+            "x": "AI 애플리케이션",
+            "y": 26,
+            "confidence": 0.74,
+            "color": "#8A93A0"
+          },
+          {
+            "x": "우주 발사",
+            "y": 7,
+            "confidence": 0.74,
+            "color": "#C2C9D4"
+          }
+        ],
+        "renderAs": "donut",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "값은 원본 화면 판독 기반 source-visible입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.68,
+      "description": "원본에서 읽은 전체 방향입니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -97,
+        "absoluteChange": -228,
+        "from": 235,
+        "to": 7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 235,
+        "at": "AI 컴퓨트"
+      },
+      "min": {
+        "value": 7,
+        "at": "우주 발사"
+      },
+      "average": 76.25,
+      "median": 31.5,
+      "range": 228
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "subMessage": "2027년 4분기 연환산 매출 구성, 단위 10억 달러",
+    "headline": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "summary": "2027년 4분기 연환산 매출 구성, 단위 10억 달러",
+    "story": "발사체 매출은 이제 전체의 2퍼센트대에 불과합니다.",
+    "keyTakeaways": [
+      "AI 컴퓨트 2,350억 달러",
+      "커넥티비티 370억 달러, AI 애플리케이션 260억 달러",
+      "우주 발사 70억 달러"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "가장 큰 조각과 나머지 세 조각의 합을 비교합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis Tokenomics Model, 재구성",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C2C9D4"
+      ],
+      "positive": "#C43D3D",
+      "negative": "#0B63CE",
+      "accent": "#C43D3D",
+      "backgroundTone": "light"
+    }
+  }
+}

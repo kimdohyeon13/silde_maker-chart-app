@@ -1,0 +1,209 @@
+{
+  "id": "nvidia-business-segments",
+  "sourceImage": "input/15-nvidia-business-segment.png",
+  "analyzedAt": "2026-07-13T18:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "엔비디아의 과거 5개 사업부문이 현재 데이터센터와 엣지 컴퓨팅의 2개 상위 체계로 재분류됐으며, 데이터센터 안에는 하이퍼스케일과 ACIE가 포함된다.",
+    "preservedElements": [
+      "과거 5개 사업부문",
+      "현재 데이터센터와 엣지 컴퓨팅의 2개 상위 구조",
+      "데이터센터 하위의 하이퍼스케일과 ACIE",
+      "엣지 컴퓨팅 하위의 4개 이전 사업부문",
+      "변경 방향과 설명용 도식 맥락",
+      "Gemini 생성 이미지 고지"
+    ],
+    "changedElements": [
+      "한글 텍스트 정리",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "그림 7. 엔비디아 사업부문 변경 내용",
+    "originalColor": [
+      "#0B355C",
+      "#78B800",
+      "#E9F1F5"
+    ],
+    "dataFidelity": "redrawn",
+    "notes": "원본의 수치 분석용 차트가 아니라 사업부문 변경을 설명하는 인포그래픽입니다. 원본 각주대로 AI(Gemini) 생성 이미지임을 유지하며 실적의 1차 증거로 사용하지 않습니다.",
+    "sourceAttribution": "Nvidia, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "historical-five-segments",
+      "label": "과거 5개 사업부문 보존",
+      "status": "pass",
+      "detail": "데이터센터, 프로페셔널 비주얼라이제이션, 게이밍, 자동차, OEM 및 기타를 모두 유지했습니다."
+    },
+    {
+      "id": "current-hierarchy",
+      "label": "현재 계층 구조 보존",
+      "status": "pass",
+      "detail": "데이터센터 아래 하이퍼스케일·ACIE, 엣지 컴퓨팅 아래 이전 4개 사업부문을 배치했습니다."
+    },
+    {
+      "id": "ai-image-disclosure",
+      "label": "AI 생성 이미지 고지",
+      "status": "pass",
+      "detail": "원본 주2의 AI(Gemini) 생성 이미지 고지를 설명과 각주에 남겼습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 22,
+    "sourceFontSize": 16,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "24px 36px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 36px 16px",
+    "chartHeight": 650
+  },
+  "contentType": "infographic",
+  "structure": {
+    "title": "그림 7. 엔비디아 사업부문 변경 내용",
+    "subtitle": "과거 5개 독립 사업부문 → 현재 데이터센터(하이퍼스케일·ACIE)와 엣지 컴퓨팅 체계",
+    "source": "자료: Nvidia, KB증권 · 주1: 그 외 Tegra Mobile, Other · 주2: AI(Gemini)로 생성한 이미지"
+  },
+  "infographicData": {
+    "subType": "comparison_card",
+    "comparisonAttributes": [
+      "데이터센터",
+      "하이퍼스케일",
+      "ACIE",
+      "엣지 컴퓨팅",
+      "프로페셔널 비주얼라이제이션",
+      "게이밍",
+      "자동차",
+      "OEM 및 기타"
+    ],
+    "items": [
+      {
+        "name": "[과거] 이전 사업부문",
+        "attributes": {
+          "데이터센터": {
+            "value": "독립 사업부",
+            "displayValue": "독립 사업부",
+            "highlight": "neutral"
+          },
+          "하이퍼스케일": {
+            "value": "별도 분류 없음",
+            "displayValue": "—",
+            "highlight": "neutral"
+          },
+          "ACIE": {
+            "value": "별도 분류 없음",
+            "displayValue": "—",
+            "highlight": "neutral"
+          },
+          "엣지 컴퓨팅": {
+            "value": "별도 분류 없음",
+            "displayValue": "—",
+            "highlight": "neutral"
+          },
+          "프로페셔널 비주얼라이제이션": {
+            "value": "독립 사업부",
+            "displayValue": "독립 사업부",
+            "highlight": "neutral"
+          },
+          "게이밍": {
+            "value": "독립 사업부",
+            "displayValue": "독립 사업부",
+            "highlight": "neutral"
+          },
+          "자동차": {
+            "value": "독립 사업부",
+            "displayValue": "독립 사업부",
+            "highlight": "neutral"
+          },
+          "OEM 및 기타": {
+            "value": "독립 사업부",
+            "displayValue": "독립 사업부",
+            "highlight": "neutral"
+          }
+        },
+        "isWinner": false
+      },
+      {
+        "name": "[현재] 신규 사업부문",
+        "attributes": {
+          "데이터센터": {
+            "value": "상위 사업부",
+            "displayValue": "상위 사업부",
+            "highlight": "positive"
+          },
+          "하이퍼스케일": {
+            "value": "데이터센터 하위",
+            "displayValue": "└ 데이터센터 하위",
+            "highlight": "positive"
+          },
+          "ACIE": {
+            "value": "AI 클라우드, 엔터프라이즈",
+            "displayValue": "└ AI 클라우드·엔터프라이즈",
+            "highlight": "positive"
+          },
+          "엣지 컴퓨팅": {
+            "value": "신설 상위 사업부",
+            "displayValue": "신설 상위 사업부",
+            "highlight": "positive"
+          },
+          "프로페셔널 비주얼라이제이션": {
+            "value": "엣지 컴퓨팅 하위",
+            "displayValue": "└ 엣지 컴퓨팅 하위",
+            "highlight": "neutral"
+          },
+          "게이밍": {
+            "value": "엣지 컴퓨팅 하위",
+            "displayValue": "└ 엣지 컴퓨팅 하위",
+            "highlight": "neutral"
+          },
+          "자동차": {
+            "value": "엣지 컴퓨팅 하위",
+            "displayValue": "└ 엣지 컴퓨팅 하위",
+            "highlight": "neutral"
+          },
+          "OEM 및 기타": {
+            "value": "엣지 컴퓨팅 하위",
+            "displayValue": "└ 엣지 컴퓨팅 하위",
+            "highlight": "neutral"
+          }
+        },
+        "isWinner": false
+      }
+    ]
+  },
+  "narrative": {
+    "headline": "네오클라우드는 엔비디아가 데이터센터 성장시장으로 명시한 ACIE 안에 포함됩니다.",
+    "summary": "이 도식은 엔비디아 사업부문 분류의 변경 맥락을 설명하며 실적이나 시장규모를 직접 입증하는 수치 자료는 아닙니다.",
+    "keyTakeaways": [
+      "과거 데이터센터는 독립 사업부였고, 현재는 하이퍼스케일과 ACIE를 포함하는 상위 사업부로 제시됩니다.",
+      "프로페셔널 비주얼라이제이션·게이밍·자동차·OEM 및 기타는 엣지 컴퓨팅 아래로 묶였습니다.",
+      "ACIE는 AI 클라우드와 엔터프라이즈를 뜻하며 네오클라우드의 설명상 위치를 보여줍니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "데이터센터 = 하이퍼스케일 + ACIE"
+    },
+    "colorStrategy": {
+      "primary": "#0B355C",
+      "secondary": [
+        "#8B95A1",
+        "#DCE5EA"
+      ],
+      "positive": "#5C940D",
+      "negative": "#D92D3A",
+      "accent": "#78B800",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed"
+  }
+}

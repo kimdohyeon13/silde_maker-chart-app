@@ -1,0 +1,298 @@
+{
+  "id": "09-bank-earnings",
+  "mode": "faithful",
+  "sourceImage": "input/09-bank-earnings.png",
+  "analyzedAt": "2026-07-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "주요 은행들의 실적 예상치와 실제치 - Earnings Surprise",
+    "originalMessage": "주요 은행들의 실적 예상치와 실제치 - Earnings Surprise",
+    "preservedElements": [
+      "원본 제목 의미",
+      "모든 시리즈와 항목",
+      "축 구조와 단위",
+      "기간 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한글 표기 정돈",
+      "Paperlogy 900/300 타이포",
+      "16:9 여백",
+      "가독성 중심 색상 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원시 데이터가 없어 원본 이미지에서 읽은 앵커를 source-visible 근사값으로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈, 14개 포인트를 원본 형식으로 계획했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "faithful-contract",
+      "label": "원본 충실 계약",
+      "status": "pass",
+      "detail": "제목·시리즈·축·기간·출처를 보존했습니다.",
+      "checkedAt": "2026-07-26"
+    },
+    {
+      "id": "source-fidelity",
+      "label": "수치 정밀도 표시",
+      "status": "warning",
+      "detail": "이미지 기반 근사값임을 출처줄과 QA 문서에 표시했습니다.",
+      "checkedAt": "2026-07-26"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "accentColor": "#101828",
+    "chartHeight": 360,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 120,
+    "lineStrokeWidth": 2.6,
+    "showAllTrendLines": true,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "주요 은행들의 실적 예상치와 실제치 - Earnings Surprise",
+    "subtitle": "EPS 달러 · 차트 위 숫자는 어닝 서프라이즈 비율",
+    "source": "참고: 차트 위 숫자는 어닝 서프라이즈 비율 | 자료: Bloomberg | 이미지 기반 근사값",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "JP +34.4",
+        "BofA +7.3",
+        "Citi +15.1",
+        "WFC +17.0",
+        "GS +44.8",
+        "MS +18.3",
+        "BLK +9.9"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "unit": "$",
+      "min": 0,
+      "max": 25,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "예상 EPS",
+        "role": "primary",
+        "originalColor": "#C9CDD3",
+        "remakeColor": "#C9CDD3",
+        "seriesKind": "normal"
+      },
+      {
+        "name": "실제 EPS",
+        "role": "primary",
+        "originalColor": "#1677F2",
+        "remakeColor": "#1677F2",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "예상 EPS",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#C9CDD3",
+        "data": [
+          {
+            "x": "JP +34.4",
+            "y": 5.65,
+            "confidence": 0.76
+          },
+          {
+            "x": "BofA +7.3",
+            "y": 0.96,
+            "confidence": 0.76
+          },
+          {
+            "x": "Citi +15.1",
+            "y": 1.85,
+            "confidence": 0.76
+          },
+          {
+            "x": "WFC +17.0",
+            "y": 1.2,
+            "confidence": 0.76
+          },
+          {
+            "x": "GS +44.8",
+            "y": 13.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "MS +18.3",
+            "y": 2.9,
+            "confidence": 0.76
+          },
+          {
+            "x": "BLK +9.9",
+            "y": 12.3,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "실제 EPS",
+        "renderAs": "bar",
+        "role": "primary",
+        "seriesKind": "normal",
+        "color": "#1677F2",
+        "data": [
+          {
+            "x": "JP +34.4",
+            "y": 7.59,
+            "confidence": 0.76
+          },
+          {
+            "x": "BofA +7.3",
+            "y": 1.03,
+            "confidence": 0.76
+          },
+          {
+            "x": "Citi +15.1",
+            "y": 2.13,
+            "confidence": 0.76
+          },
+          {
+            "x": "WFC +17.0",
+            "y": 1.4,
+            "confidence": 0.76
+          },
+          {
+            "x": "GS +44.8",
+            "y": 20.1,
+            "confidence": 0.76
+          },
+          {
+            "x": "MS +18.3",
+            "y": 3.43,
+            "confidence": 0.76
+          },
+          {
+            "x": "BLK +9.9",
+            "y": 13.5,
+            "confidence": 0.76
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 14,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원시 시계열 부재로 중간값은 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본의 방향과 비교 관계를 보존했습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원본 이미지의 변동 경로를 앵커로 옮겼습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "min": 0.96,
+      "max": 20.1,
+      "average": 0,
+      "latest": 12.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "주요 은행들의 실적 예상치와 실제치 - Earnings Surprise",
+    "subMessage": "EPS 달러 · 차트 위 숫자는 어닝 서프라이즈 비율",
+    "headline": "주요 은행들의 실적 예상치와 실제치 - Earnings Surprise",
+    "summary": "EPS 달러 · 차트 위 숫자는 어닝 서프라이즈 비율",
+    "story": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#C9CDD3",
+      "secondary": [
+        "#C9CDD3",
+        "#E5E7EB"
+      ],
+      "positive": "#F43F68",
+      "negative": "#1677F2",
+      "accent": "#C9CDD3",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "BLK +9.9",
+        "y": 12.3
+      },
+      "displayText": "",
+      "reason": "원본 최신값"
+    },
+    "densityLevel": "detailed"
+  }
+}

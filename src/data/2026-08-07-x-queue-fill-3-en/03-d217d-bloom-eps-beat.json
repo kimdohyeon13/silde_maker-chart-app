@@ -1,0 +1,234 @@
+{
+  "id": "03-d217d-bloom-eps-beat",
+  "mode": "faithful",
+  "sourceImage": "input/dib-217-04.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "BE 실적",
+    "originalMessage": "2026년 7월 28일 발표, 주당순이익 0.78 대 예측 0.40, 매출 1.06B 대 예측 815.6M",
+    "preservedElements": [
+      "주당순이익 실제 0.78과 예측 0.40",
+      "매출 1.06B와 예측 815.6M",
+      "발표일 2026년 7월 28일",
+      "실적과 컨센서스의 대비 구조",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 텍스트를 영어로 번역",
+      "요약 카드 형식을 두 개 막대 비교로 재구성",
+      "회색 컨센서스 막대와 강조된 실제 막대",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 실적 요약 화면에 인쇄된 EPS 두 값을 그대로 차트로 옮겼습니다.",
+    "sourceAttribution": "Source: earnings summary screen, 2026-07-28"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "0.78과 0.40은 원본 실적 카드에 인쇄된 값입니다."
+    },
+    {
+      "id": "no-datapoint-color",
+      "label": "데이터 포인트 색상 미지정",
+      "status": "pass",
+      "detail": "data.series[].data[]에는 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 확인",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10단위 내림",
+      "status": "pass",
+      "detail": "차트와 부제의 모든 값이 100 미만이라 소수점을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Bloom Energy EPS, near double the call",
+    "subtitle": "2Q26 EPS $0.78 against $0.40 expected; revenue $1.06bn against $0.82bn",
+    "source": "Source: earnings summary screen, 2026-07-28 · source-visible",
+    "timeRange": "2Q26, reported 2026-07-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Consensus",
+        "Reported"
+      ],
+      "displayTickValues": [
+        "Consensus",
+        "Reported"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Earnings per share ($)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "0.2",
+        "0.4",
+        "0.6",
+        "0.8"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 0.9
+    },
+    "legend": [
+      {
+        "name": "2Q26 EPS",
+        "role": "primary",
+        "originalColor": "#E8511A",
+        "remakeColor": "#173B67"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2Q26 EPS",
+        "data": [
+          {
+            "x": "Consensus",
+            "y": 0.4,
+            "confidence": 0.92
+          },
+          {
+            "x": "Reported",
+            "y": 0.78,
+            "confidence": 0.92
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B67"
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 0.92,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "Reported earnings came in above the consensus figure.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.32,
+      "description": "A two-value comparison rather than a series."
+    },
+    "changeRates": [
+      {
+        "period": "Consensus to reported",
+        "percentChange": 95,
+        "absoluteChange": 0.38,
+        "from": 0.4,
+        "to": 0.78
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0.78,
+        "at": "Reported"
+      },
+      "min": {
+        "value": 0.4,
+        "at": "Consensus"
+      },
+      "average": 0.59,
+      "median": 0.59,
+      "range": 0.38
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Bloom Energy EPS, near double the call",
+    "subMessage": "2Q26 EPS $0.78 against $0.40 expected; revenue $1.06bn against $0.82bn",
+    "headline": "Bloom Energy EPS, near double the call",
+    "summary": "Reported EPS of $0.78 landed 95% above the $0.40 consensus for the quarter.",
+    "story": "Power delivery got paid on the same tape that marked accelerators down. The reported figure came in at nearly twice the number the street carried.",
+    "keyTakeaways": [
+      "Reported EPS $0.78 against a $0.40 consensus",
+      "Revenue $1.06bn against $0.82bn expected",
+      "Reported after the close on 2026-07-28"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the reported bar with the consensus bar for the same quarter.",
+    "contextualNotes": [
+      "Source: earnings summary screen, 2026-07-28",
+      "Data state: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Reported",
+      "y": 0.78,
+      "displayText": "0.78"
+    },
+    "densityLevel": "focused"
+  }
+}

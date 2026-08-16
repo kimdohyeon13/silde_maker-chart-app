@@ -1,0 +1,227 @@
+{
+  "id": "11-16t-revenue-ramp-en",
+  "sourceImage": "input/11-16t-revenue-ramp.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "At least $70M to $80M in December and more than double that in March 2027",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: floor values derived from Applied Optoelectronics' Q2 2026 earnings call, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Even the company floor doubles 1.6T revenue",
+    "subtitle": "At least $70M to $80M in December and more than double that in March 2027",
+    "source": "Source: floor values derived from Applied Optoelectronics' Q2 2026 earnings call, August 6, 2026",
+    "timeRange": "Dec 2026 quarter - Mar 2027 quarter",
+    "xAxis": {
+      "label": "Period",
+      "type": "category",
+      "tickValues": [
+        "Dec floor, low",
+        "Dec floor, high",
+        "Mar '27 floor"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Dec floor, low",
+        "Dec floor, high",
+        "Mar '27 floor"
+      ]
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "1.6T quarterly revenue floor",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "1.6T quarterly revenue floor",
+        "data": [
+          {
+            "x": "Dec floor, low",
+            "y": 70,
+            "confidence": 0.74
+          },
+          {
+            "x": "Dec floor, high",
+            "y": 80,
+            "confidence": 0.74
+          },
+          {
+            "x": "Mar '27 floor",
+            "y": 140,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.724,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 100.0,
+        "absoluteChange": 70.0,
+        "from": 70.0,
+        "to": 140.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 140.0,
+        "at": ""
+      },
+      "min": {
+        "value": 70.0,
+        "at": ""
+      },
+      "average": 96.66666666666667,
+      "median": 80.0,
+      "range": 70.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Even the company floor doubles 1.6T revenue",
+    "subMessage": "At least $70M to $80M in December and more than double that in March 2027",
+    "headline": "Even the company floor doubles 1.6T revenue",
+    "summary": "At least $70M to $80M in December and more than double that in March 2027",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "At least $70M to $80M in December and more than double that in March 2027",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: floor values derived from Applied Optoelectronics' Q2 2026 earnings call, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 140.0
+      },
+      "displayText": "Even the company floor dou",
+      "reason": "At least $70M to $80M in December and more than double that in March 2027"
+    },
+    "densityLevel": "balanced"
+  }
+}

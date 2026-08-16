@@ -1,0 +1,102 @@
+{
+  "id": "page-07-graph-01",
+  "sourceImage": "input/06-page-07-graph-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Factset, Nasdaq, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "락업 풀리면 매수 자금 8배로",
+    "subtitle": "주가조건 충족 시나리오, 십억 달러, 이미지 기반 근사값",
+    "source": "Factset, Nasdaq, 삼성증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "락업 해제 시점",
+      "type": "category",
+      "tickValues": ["상장일","T+50일","T+60일","T+70일","T+90일","T+105일","T+120일","T+135일","T+180일"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "강제 매수 자금",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "$B",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 35
+    },
+    "legend": [
+      { "name": "강제 매수 자금(십억 달러)", "role": "primary", "originalColor": "#E45B5B", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "강제 매수 자금(십억 달러)",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {"x": "상장일", "y": 4.0, "confidence": 0.8},
+          {"x": "T+50일", "y": 14.1, "confidence": 0.8},
+          {"x": "T+60일", "y": 19.1, "confidence": 0.8},
+          {"x": "T+70일", "y": 22.6, "confidence": 0.8},
+          {"x": "T+90일", "y": 26.1, "confidence": 0.8},
+          {"x": "T+105일", "y": 29.7, "confidence": 0.8},
+          {"x": "T+120일", "y": 31.2, "confidence": 0.8},
+          {"x": "T+135일", "y": 31.2, "confidence": 0.8},
+          {"x": "T+180일", "y": 31.2, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 9,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "up", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "stable" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 31.2, "at": "T+120일"}, "min": {"value": 4.0, "at": "상장일"}, "average": 23.1, "median": 26.1, "range": 27.2 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "시간이 갈수록 매수압력 확대",
+    "subMessage": "초기 40억 달러가 연내 312억 달러까지 늘어난다",
+    "headline": "락업이 단계적으로 풀릴수록 나스닥100 강제 매수 자금이 누적되며 시간이 지날수록 매수 압력이 커집니다.",
+    "summary": "락업이 단계적으로 풀리면 나스닥100 강제 매수 자금이 초기 40억 달러에서 연내 약 312억 달러까지 약 8배로 불어납니다.",
+    "story": "락업이 단계적으로 풀리면 나스닥100 강제 매수 자금이 초기 40억 달러에서 연내 약 312억 달러까지 약 8배로 불어납니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Factset, Nasdaq, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"초기 40억$","position":{"x":"상장일"},"importance":"high","style":"neutral"},
+      {"text":"최대 312억$","position":{"x":"T+120일"},"importance":"critical","style":"positive"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"T+120일","y":31.2}, "displayText": "시간이 갈수록 매수압력 확대", "reason": "락업이 단계적으로 풀리면 나스닥100 강제 매수 자금이 초기 40억 달러에서 연내 약 312억 달러까지 약 8배로 불어납니다." },
+    "densityLevel": "balanced"
+  }
+}

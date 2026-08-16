@@ -6,6 +6,7 @@ import {
   CartesianGrid,
   ComposedChart,
   LabelList,
+  Legend,
   Line,
   ReferenceArea,
   ReferenceDot,
@@ -14,7 +15,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { ChartAnalysis } from "@/lib/analysis/schema";
+import type { ChartAnalysis, ExportOptions } from "@/lib/analysis/schema";
 import {
   getAnalysisStylePreset,
   getAnalysisThemeMode,
@@ -24,6 +25,7 @@ import {
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
 import {
+  formatAxisLabel,
   formatAxisTickLabel,
   matchTickToDataKey,
   getTickUnit,
@@ -32,6 +34,7 @@ import {
   getAxisFractionDigits,
   generateNiceTicks,
 } from "@/lib/chart-format";
+import { mergeOptionDefaults } from "@/lib/visual-system-options";
 
 interface TossComboChartProps {
   analysis: ChartAnalysis;
@@ -46,6 +49,7 @@ type SeriesWithRender = ChartAnalysis["data"]["series"][number] & {
   role?: string;
   axis?: "left" | "right";
   color?: string;
+  stackId?: string;
 };
 
 /**
@@ -60,13 +64,8 @@ type SeriesWithRender = ChartAnalysis["data"]["series"][number] & {
  *   - 끝라벨 단위 필터   → getInlineLabelUnit
  *   - 값+단위 표시       → formatValueWithUnit
  *   - 소수 자릿수        → getAxisFractionDigits
- * 아래 getAxisLabel/getXAxisLabel은 이 파일 고유(축 라벨 조립)이므로 그대로 둔다.
+ * X축 제목 조립만 이 파일에 남긴다.
  */
-function getAxisLabel(label = "", unit = ""): string {
-  if (!label || label === unit) return "";
-  return unit ? `${label} (${unit})` : label;
-}
-
 function getXAxisLabel(label = ""): string {
   if (!label) return "";
   return label;
@@ -86,6 +85,11 @@ export default function TossComboChart({
   const colors = getPresetColors(preset, renderThemeMode);
   const hasSecondaryYAxis = !!analysis.structure.secondaryYAxis;
   const seriesList = analysis.data.series as SeriesWithRender[];
+  const exportOptions = mergeOptionDefaults<ExportOptions>(
+    preset.exportDefaults,
+    analysis.exportOptions,
+  );
+  const squareEdges = !!exportOptions.squareEdges;
 
   // 수정1(D2 롤백): 밴드/전망(forecast) 시리즈가 하나라도 있으면 generateNiceTicks를 적용하지 않는다.
   // → 밴드(PER 상·하한)/전망선은 도메인 양 끝을 일부러 비대칭으로 잡는 경우가 많은데,
@@ -301,17 +305,25 @@ export default function TossComboChart({
     return "left";
   }
 
-  const directLineLabels = chartSettings.directLabels.enabled
-    ? seriesList
-      .map((series, index) => {
-        if (getRenderAs(series) === "bar") return null;
-        const lastPoint = [...series.data].reverse().find((point) => point.y != null);
-        if (!lastPoint) return null;
-        return { series, index, point: lastPoint, color: getSeriesColor(index) };
-      })
-      .filter((item): item is NonNullable<typeof item> => item !== null)
-      .slice(0, 2)
-    : [];
+  // 수정(이중축 끝라벨 겹침 구조적 해소): 이중축(우측 Y축 존재) 콤보 차트에서는
+  // 인라인 직접라벨(directLineLabels)을 아예 만들지 않는다(빈 배열).
+  // → 직접라벨은 선 끝(우측)에 붙는데, 우측 Y축이 있으면 그 눈금 숫자/경계와 같은 높이대에서
+  //   겹친다(A2~D1 땜질·픽셀 충돌 계산으로도 완전히 못 막았던 page-04/12/14 회귀). 데이터 단계에서
+  //   비우면 아래의 끝라벨 렌더 블록·픽셀 충돌 계산·우측 여백 가산이 전부 자동으로 no-op이 되고,
+  //   대신 하단 범례(<Legend/>)로 시리즈를 식별한다. 단일축 콤보는 기존 직접라벨 동작을 그대로 유지.
+  const showBottomLegend = hasSecondaryYAxis;
+  const directLineLabels =
+    chartSettings.directLabels.enabled && !hasSecondaryYAxis
+      ? seriesList
+        .map((series, index) => {
+          if (getRenderAs(series) === "bar") return null;
+          const lastPoint = [...series.data].reverse().find((point) => point.y != null);
+          if (!lastPoint) return null;
+          return { series, index, point: lastPoint, color: getSeriesColor(index) };
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== null)
+        .slice(0, 2)
+      : [];
 
   // A3+A2: 두 직접라벨이 우측 Y축 눈금과 겹치지 않도록 "값(point.y) 크기 순서"로
   // 위/아래를 정한다. 단순 labelIndex % 2 분산은 데이터 순서와 무관해 겹침이 잦았다.
@@ -467,7 +479,8 @@ export default function TossComboChart({
       (hasSecondaryYAxis ? chartSettings.dualAxis.extraRightMargin : 0) +
       (directLineLabels.length ? chartSettings.directLabels.extraRightMargin : 0) +
       (hasSecondaryYAxis && directLineLabels.length ? DUAL_AXIS_LABEL_EXTRA_RIGHT : 0),
-    bottom: chartSettings.margin.bottom,
+    // 이중축에서 하단 범례를 켜면 X축 라벨과 겹치지 않게 하단 여백을 추가 확보한다.
+    bottom: chartSettings.margin.bottom + (showBottomLegend ? chartSettings.legend.extraBottomMargin : 0),
     left: chartSettings.margin.left,
   };
 
@@ -479,9 +492,28 @@ export default function TossComboChart({
         <XAxis
           dataKey="x"
           {...styles.xAxis}
-          interval={visibleXTicks ? 0 : Math.ceil(chartData.length / maxVisibleXLabels)}
-          ticks={visibleXTicks}
+          // [회전] 카테고리 라벨이 7개 이상(분기·기업명 등)이면 -45도 회전해 겹침 방지.
+          //  회전 시 interval=0으로 모든 라벨을 표시(솎으면 기업/분기명이 사라지므로).
+          interval={
+            chartData.length > 6
+              ? 0
+              : visibleXTicks
+                ? 0
+                : Math.ceil(chartData.length / maxVisibleXLabels)
+          }
+          ticks={chartData.length > 6 ? undefined : visibleXTicks}
           tickFormatter={formatAxisTickLabel}
+          height={chartData.length > 6 ? 92 : undefined}
+          tickMargin={chartData.length > 6 ? 14 : undefined}
+          tick={
+            chartData.length > 6
+              ? {
+                  ...(typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}),
+                  angle: -45,
+                  textAnchor: "end",
+                }
+              : styles.xAxis.tick
+          }
           label={{
             value: getXAxisLabel(analysis.structure.xAxis.label),
             position: "insideBottomRight",
@@ -513,7 +545,7 @@ export default function TossComboChart({
             )
           }
           label={{
-            value: getAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+            value: formatAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
             position: "insideTopLeft",
             offset: 0,
             dy: -28,
@@ -551,7 +583,7 @@ export default function TossComboChart({
             ticks={rightAxisTicks}
             tickCount={rightAxisTicks ? undefined : 6}
             label={{
-              value: getAxisLabel(
+              value: formatAxisLabel(
                 analysis.structure.secondaryYAxis!.label,
                 analysis.structure.secondaryYAxis!.unit,
               ),
@@ -578,6 +610,24 @@ export default function TossComboChart({
           ]}
           labelFormatter={(label) => formatAxisTickLabel(label as string | number)}
         />
+
+        {/* 하단 범례 — 이중축(우측 Y축 존재)일 때만 켠다.
+            → 이중축에서는 인라인 끝라벨을 끄는 대신(겹침 구조적 해소) 범례로 시리즈를 식별한다.
+              스타일은 TossLineChart의 범례와 동일하게 맞춘다(하단, 폰트 16px). */}
+        {showBottomLegend && (
+          <Legend
+            wrapperStyle={{
+              fontFamily: theme.typography.fontFamily.sans,
+              fontSize: "16px",
+              fontWeight: 700,
+              color: colors.textSecondary,
+              paddingTop: 12,
+            }}
+            formatter={(value) => (
+              <span style={{ color: colors.textSecondary, fontWeight: 600 }}>{value}</span>
+            )}
+          />
+        )}
 
         {/* 하이라이트 구간(배경 밴드) — 시리즈보다 먼저 그려 뒤에 깔리게 한다.
             → 좌측 축(yAxisId="left") 도메인 전체를 덮는다. zones가 없으면 아무것도 렌더되지 않으므로
@@ -622,22 +672,29 @@ export default function TossComboChart({
               <Bar
                 key={series.name}
                 dataKey={series.name}
+                stackId={series.stackId}
                 yAxisId={getYAxisId(index)}
                 fill={color}
                 fillOpacity={series.role === "secondary" ? 0.58 : 0.92}
-                radius={[6, 6, 0, 0]}
+                radius={[0, 0, 0, 0]}
                 maxBarSize={48}
                 isAnimationActive={animated}
                 animationDuration={theme.animation.chartEntrance.duration}
               >
-                {chartData.length <= 4 && (
+                {chartData.length <= 5 && (
                   <LabelList
                     dataKey={series.name}
                     position="top"
-                    formatter={(value) => formatValueWithUnit(Number(value ?? 0), getSeriesUnit(index), 0)}
+                    formatter={(value) =>
+                      formatValueWithUnit(
+                        Number(value ?? 0),
+                        series.stackId ? "" : getSeriesUnit(index),
+                        0,
+                      )
+                    }
                     style={{
                       fill: colors.textSecondary,
-                      fontSize: 18,
+                      fontSize: series.stackId ? 14 : 18,
                       fontFamily: theme.typography.fontFamily.mono,
                       fontWeight: 800,
                     }}
@@ -656,11 +713,11 @@ export default function TossComboChart({
               stroke={color}
               strokeWidth={roleStyle.strokeWidth}
               strokeOpacity={roleStyle.opacity}
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinecap={squareEdges ? "butt" : "round"}
+              strokeLinejoin={squareEdges ? "miter" : "round"}
               // C1: dense 시계열이면 점마커를 끄고(false) 선만 그린다. 적으면 기존 dot 유지.
               dot={
-                isDense
+                squareEdges || isDense
                   ? false
                   : {
                       r: series.role === "secondary" ? 3.2 : 3.8,
@@ -670,7 +727,11 @@ export default function TossComboChart({
                       fillOpacity: roleStyle.opacity,
                     }
               }
-              activeDot={{ r: 6, stroke: colors.surface, strokeWidth: 3, fill: color }}
+              activeDot={
+                squareEdges
+                  ? false
+                  : { r: 6, stroke: colors.surface, strokeWidth: 3, fill: color }
+              }
               connectNulls
               isAnimationActive={animated}
               animationDuration={theme.animation.chartEntrance.duration + index * 50}
@@ -696,10 +757,10 @@ export default function TossComboChart({
               yAxisId={getYAxisId(item.index)}
               x={String(item.point.x)}
               y={item.point.y}
-              r={chartSettings.directLabels.dotRadius}
+              r={squareEdges ? 0 : chartSettings.directLabels.dotRadius}
               fill={item.color}
               stroke={colors.surface}
-              strokeWidth={2.5}
+              strokeWidth={squareEdges ? 0 : 2.5}
               label={{
                 value: `${item.series.name} ${formatValueWithUnit(item.point.y, inlineUnit, 0)}`,
                 position: "right",

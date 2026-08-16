@@ -2,19 +2,26 @@
   "name": "chart-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mts",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-branches=80 --test-coverage-functions=80 tests/*.test.mts",
+    "verify": "npm run lint && npm run typecheck && npm run test:coverage && npm run build",
     "export-png": "node scripts/export-png.mjs",
-    "crop-news": "node scripts/crop-news.mjs"
+    "crop-news": "node scripts/crop-news.mjs",
+    "audit-projects": "node scripts/audit-projects.mjs",
+    "backfill-meta": "node scripts/backfill-meta.mjs"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
     "html-to-image": "^1.11.13",
     "lightweight-charts": "^5.1.0",
-    "next": "16.2.1",
+    "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "recharts": "^3.8.0"
@@ -25,9 +32,14 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.1",
+    "eslint-config-next": "16.2.10",
     "playwright": "^1.58.2",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.10"
+    }
   }
 }

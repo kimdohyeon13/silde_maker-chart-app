@@ -562,6 +562,13 @@ export interface ChartAnalysis extends RemakeMetadataFields {
   narrative: NarrativeAnalysis;
   /** Layer 6: 시각 강조 계획 */
   emphasis: EmphasisPlan;
+  /** 원본이 상단 차트와 하단 표를 함께 보여줄 때 쓰는 선택형 표 데이터 */
+  tableData?: TableData;
+  /** 차트+표 결합형의 내부 높이 배분 */
+  chartTableOptions?: {
+    chartHeight?: number;
+    gap?: number;
+  };
 }
 
 // ─────────────────────────────────────────────
@@ -601,7 +608,8 @@ export type StylePresetId =
   | "toss-clean"
   | "consulting-slide"
   | "market-terminal"
-  | "editorial-card";
+  | "editorial-card"
+  | "signal-editorial";
 
 export type DataFidelityLevel =
   | "exact"
@@ -646,12 +654,71 @@ export interface ExportOptions {
   sourcePadding?: string;
   titleFontSize?: number;
   subtitleFontSize?: number;
+  /** 서브메시지 글자 굵기(100~900). 생략하면 Paperlogy Light(300), 명시하면 사용자 예외값을 사용 */
+  subtitleFontWeight?: number;
   sourceFontSize?: number;
   fontFamily?: string;
+  titleFontFamily?: string;
+  titleLetterSpacing?: number;
+  titleLineHeight?: number;
   hideHeader?: boolean;
   hideSource?: boolean;
   chartHeight?: number;
+  /** 고정 export 카드 높이(px). 912×513은 2배 export 시 1824×1026(16:9) */
+  canvasHeight?: number;
+  /** 프리셋과 무관하게 export 캔버스 배경색을 지정 */
+  backgroundColor?: string;
+  borderColor?: string;
+  headerVariant?:
+    | "stacked"
+    | "top-rule"
+    | "left-rail"
+    | "centered"
+    | "split-metric"
+    | "signal-editorial";
+  frameStyle?: "none" | "hairline" | "boxed";
+  /** ContentRouter 내부 프레임 표시 여부 */
+  contentBorder?: boolean;
+  headerLabel?: string;
+  headerLabelFontSize?: number;
+  accentColor?: string;
+  metricValue?: string;
+  metricLabel?: string;
+  metricColor?: string;
+  metricFontSize?: number;
+  metricFontFamily?: string;
   sourceReplica?: boolean;
+  /** 카드, 막대, 선 끝/꺾임의 둥근 처리를 제거해 각진 형태로 렌더링 */
+  squareEdges?: boolean;
+  /** 선 그래프 아래 면 채우기 표시 여부. 생략하면 시리즈 수에 따른 기본값을 사용 */
+  showAreaFill?: boolean;
+  /** 라인차트 격자 표현. 생략하면 기존 점선 격자 */
+  gridMode?: "none" | "solid" | "dashed";
+  /** 라인 끝 직접 라벨 표시 여부. 생략하면 기존 자동 규칙 */
+  showDirectLabels?: boolean;
+  /** 라인 끝 값의 소수 자릿수 강제값(0~6) */
+  directLabelFractionDigits?: number;
+  /** 주 시리즈 선 두께(px) */
+  lineStrokeWidth?: number;
+  /** 평균선 외의 명시적 수평 기준선도 모두 표시 */
+  showAllTrendLines?: boolean;
+  /** 첫 번째 시리즈 최신값 위치에 옅은 수평 가이드선을 표시 */
+  showLatestGuide?: boolean;
+  /** 최신값 가이드선 불투명도(0~1) */
+  latestGuideOpacity?: number;
+  /** 선 끝 직접 라벨을 위한 오른쪽 여백(px). 값이 작을수록 plot 영역이 넓어진다. */
+  endLabelRightMargin?: number;
+  /** 다중 패널 차트의 패널별 작은 제목 크기(px) */
+  panelTitleFontSize?: number;
+  /** 작은 패널 안에서 차트 내부 여백을 줄여 실제 플롯 영역을 확보 */
+  compactChartMargins?: boolean;
+  /** 막대 색을 최댓값 강조가 아니라 양수/음수 부호 기준으로 표시 */
+  barColorMode?: "emphasis" | "sign";
+  /**
+   * 값 라벨 숫자 표기 로케일. 기본값 "ko"는 기존 동작(1만 이상은 "만"·"억" 축약).
+   * "en"이면 축약 없이 영어권 자릿수 구분만 쓴다 — 영문 덱에 한글이 섞이지 않게 한다.
+   */
+  numberLocale?: "ko" | "en";
 }
 
 export interface RemakeMetadataFields {
@@ -733,6 +800,16 @@ export interface TableColumn {
   width?: number | string;
   /** 이 열이 행 식별자인지 — 첫 번째 열(회사명, 지표명 등)이 보통 해당 */
   isRowHeader?: boolean;
+  /** 여러 지표 묶음 중 새 의미 블록이 시작되는 열인지 */
+  sectionStart?: boolean;
+}
+
+/** 표 열을 가격·모멘텀, 컨센서스처럼 의미 단위로 묶는 2단 헤더 */
+export interface TableColumnGroup {
+  /** 화면에 표시할 그룹명 */
+  label: string;
+  /** 이 그룹에 속하는 TableColumn.key 목록 */
+  keys: string[];
 }
 
 /**
@@ -741,6 +818,29 @@ export interface TableColumn {
  * value는 원본 값, displayValue는 포맷된 표시용 값입니다.
  * 예: value=1234567, displayValue="1,234,567"
  */
+export type TableCellHighlight = "positive" | "negative" | "warning" | "accent" | "muted" | "none";
+
+export interface TableCellSideValue {
+  /** 셀의 주 표시값 옆에 붙일 보조 표시값 (예: 오늘 등락률) */
+  displayValue: string;
+  /** 보조 표시값 강조 색상 */
+  highlight?: TableCellHighlight;
+  /** 보조 표시값 직접 색상 (highlight보다 우선) */
+  color?: string;
+  /** 배지형 보조값에 쓸 배경색 */
+  background?: string;
+  /** 배지형 보조값 테두리 */
+  border?: string;
+  /** 배지형 보조값 안쪽 여백 */
+  padding?: string;
+  /** 배지형 보조값 둥근 모서리 */
+  borderRadius?: string | number;
+  /** 보조 표시값 폰트 크기 */
+  fontSize?: string;
+  /** 보조 표시값 굵기 */
+  fontWeight?: number;
+}
+
 export interface TableCell {
   /** 원본 값 */
   value: string | number;
@@ -755,7 +855,9 @@ export interface TableCell {
    * muted: 흐리게 (회색)
    * none: 강조 없음
    */
-  highlight?: "positive" | "negative" | "warning" | "accent" | "muted" | "none";
+  highlight?: TableCellHighlight;
+  /** 티커 옆 오늘 등락률처럼 셀 안에서 크게 보조값을 붙일 때 사용 */
+  sideValue?: TableCellSideValue;
   /** 셀 병합 — 가로로 여러 칸 차지 */
   colSpan?: number;
   /** 셀 병합 — 세로로 여러 칸 차지 */
@@ -784,16 +886,58 @@ export interface TableRow {
   rowType?: "data" | "header" | "subtotal" | "total" | "divider";
   /** 행 전체를 강조할지 여부 */
   highlight?: boolean;
+  /** 행 전체 강조 배경색. 없으면 기본 highlight 배경을 사용 */
+  highlightBg?: string;
 }
 
 export interface TableVisualOptions {
   rowHeight?: number;
+  /** 고정 캔버스의 남는 높이를 표 행에 나눠 큰 하단 공백을 줄인다 */
+  fitRowsToCanvas?: boolean;
+  /** 자동 행 높이의 하한. 생략하면 rowHeight를 쓴다 */
+  minRowHeight?: number;
+  /** 자동 행 높이의 상한. 데이터가 적어도 행이 과하게 커지지 않게 한다 */
+  maxRowHeight?: number;
   cellPadding?: string;
   lineHeight?: number;
   zebraStripe?: boolean;
   zebraOpacity?: number;
   fontFamily?: string;
   highlightMode?: "background" | "text";
+  headerTone?: "plain" | "tinted" | "inverse" | "underline";
+  rowRules?: "none" | "soft" | "strong";
+  groupHeaderTone?: "plain" | "band" | "accent-rule";
+  columnGroupTone?: "plain" | "tinted";
+  columnRules?: boolean;
+  sectionRules?: boolean;
+  accentColor?: string;
+  rowRuleColor?: string;
+  sectionRuleColor?: string;
+  /** 특정 숫자 열에만 얇은 인셀 데이터 바를 표시 */
+  dataBarColumns?: Array<{
+    key: string;
+    max?: number;
+    color?: string;
+    positiveColor?: string;
+    negativeColor?: string;
+  }>;
+  dataBarStyle?: Partial<{
+    minWidthPercent: number;
+    maxWidthPercent: number;
+    height: number;
+    opacity: number;
+    bottom: number;
+  }>;
+  /** 표의 역할별 글자 굵기 — 숫자 전체가 과하게 강조되지 않도록 분리 */
+  fontWeight?: Partial<{
+    body: number;
+    numeric: number;
+    rowHeader: number;
+    header: number;
+    total: number;
+    groupHeader: number;
+    columnGroup: number;
+  }>;
   fontSize?: Partial<{
     header: string;
     body: string;
@@ -801,6 +945,7 @@ export interface TableVisualOptions {
     badge: string;
     unit: string;
     groupHeader: string;
+    columnGroup: string;
   }>;
 }
 
@@ -813,6 +958,8 @@ export interface TableVisualOptions {
 export interface TableData {
   /** 열 정의 배열 */
   columns: TableColumn[];
+  /** 열을 의미 단위로 묶어 표시하는 선택형 2단 헤더 */
+  columnGroups?: TableColumnGroup[];
   /** 행 데이터 배열 */
   rows: TableRow[];
   /** 합계/소계 행이 있는지 */

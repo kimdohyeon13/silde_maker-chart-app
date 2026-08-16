@@ -1,0 +1,180 @@
+{
+  "id": "page-12-table-01",
+  "sourceImage": "input/19-page_12_table_01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "원문 숫자",
+      "비교 방향",
+      "투자 메시지"
+    ],
+    "sourceAttribution": "Bloom Energy, Bloomberg, FactSet"
+  },
+  "allowedTransformations": [
+    "한국어 제목 재작성",
+    "복잡한 원문 레이아웃 단순화",
+    "핵심 시리즈 강조",
+    "출처명 명시화"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "이미지 기반 근사값 표시",
+      "status": "pass",
+      "detail": "원문 PDF가 이미지형인 차트는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."
+    },
+    {
+      "id": "credible-source-line",
+      "label": "공신력 있는 출처 표시",
+      "status": "pass",
+      "detail": "Bloomberg, FactSet, SEMI, 각사 공시/IR 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."
+    },
+    {
+      "id": "readability-first",
+      "label": "Notion 삽입 가독성",
+      "status": "pass",
+      "detail": "긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 48,
+    "subtitleFontSize": 28,
+    "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px",
+    "contentPadding": "10px 14px 8px",
+    "sourcePadding": "0 42px 18px"
+  },
+  "contentType": "table",
+  "tableSubType": "summary",
+  "structure": {
+    "title": "블룸 에너지의 경쟁력은 속도와 DC 전력이다",
+    "subtitle": "전력망 연결 대기 대신 현장형 연료전지로 빠르게 가동",
+    "source": "Bloom Energy, Bloomberg, FactSet"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "edge",
+        "label": "우위",
+        "dataType": "text",
+        "isRowHeader": true
+      },
+      {
+        "key": "meaning",
+        "label": "의미",
+        "dataType": "text"
+      },
+      {
+        "key": "why",
+        "label": "투자 포인트",
+        "dataType": "text"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "edge": {
+            "value": "90일 공급",
+            "displayValue": "90일 공급",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "전력망 5년 대기보다 빠름",
+            "displayValue": "전력망 5년 대기보다 빠름"
+          },
+          "why": {
+            "value": "데이터센터 조기 가동",
+            "displayValue": "데이터센터 조기 가동"
+          }
+        }
+      },
+      {
+        "cells": {
+          "edge": {
+            "value": "모듈형 설치",
+            "displayValue": "모듈형 설치"
+          },
+          "meaning": {
+            "value": "수요 증가에 맞춰 확장",
+            "displayValue": "수요 증가에 맞춰 확장"
+          },
+          "why": {
+            "value": "용량 증설 유연성",
+            "displayValue": "용량 증설 유연성"
+          }
+        }
+      },
+      {
+        "cells": {
+          "edge": {
+            "value": "800V DC",
+            "displayValue": "800V DC",
+            "highlight": "positive"
+          },
+          "meaning": {
+            "value": "전력 변환 손실 축소",
+            "displayValue": "전력 변환 손실 축소"
+          },
+          "why": {
+            "value": "차세대 AI 서버와 호환",
+            "displayValue": "차세대 AI 서버와 호환"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 42,
+      "cellPadding": "9px 11px",
+      "zebraStripe": true,
+      "fontSize": {
+        "header": "13px",
+        "body": "13px",
+        "total": "13px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "전력 병목의 우회로",
+    "subMessage": "전력망 연결 대기 대신 현장형 연료전지로 빠르게 가동",
+    "headline": "전력 병목의 우회로",
+    "summary": "AC를 DC로 바꾸는 과정에서 생기는 10~15% 손실을 줄일 수 있다는 점이 핵심입니다.",
+    "story": "AC를 DC로 바꾸는 과정에서 생기는 10~15% 손실을 줄일 수 있다는 점이 핵심입니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": [
+      "Bloom Energy, Bloomberg, FactSet"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "전력 병목의 우회로",
+      "reason": "AC를 DC로 바꾸는 과정에서 생기는 10~15% 손실을 줄일 수 있다는 점이 핵심입니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

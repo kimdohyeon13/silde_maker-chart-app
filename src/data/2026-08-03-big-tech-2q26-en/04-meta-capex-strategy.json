@@ -1,0 +1,230 @@
+{
+  "id": "meta-capex-strategy",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Meta의 Q2 CapEx, FY26 투자 범위, 2026~2028+ 인프라 투자 방식을 비교",
+    "preservedElements": [
+      "Q2 CapEx $31.080B와 사용자 제공 컨센서스 $33.350B",
+      "FY26 CapEx 가이던스 $130–145B",
+      "2026–27년 컴퓨팅 용량 극대화",
+      "2028년 이후 DC·네트워크 기반을 먼저 확보하고 서버 지출을 유연하게 집행"
+    ],
+    "changedElements": [
+      "컨센서스 전용 열과 빈 셀을 제거하고 Q2 숫자 안에 병기",
+      "전략 설명을 각 2~4단어의 의미 열로 축약",
+      "회사·기간 키커, 긴 부제, 출처 푸터를 화면에서 숨김"
+    ],
+    "dataFidelity": "exact",
+    "notes": "실제치·가이던스는 Meta 공개 IR/SEC, 컨센서스는 사용자 제공 시장 컨센서스다. 2027년 정량 CapEx 가이던스는 없다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "minimal-layout",
+      "label": "미니멀 표 구조",
+      "status": "pass",
+      "detail": "전략 구간은 남기되 4행·3열로 축소하고 빈 컨센서스 열을 제거했다."
+    }
+  ],
+  "structure": {
+    "title": "Meta: Capacity First, Servers Later",
+    "source": "자료: Meta IR·SEC | 컨센서스: 사용자 제공 시장 컨센서스"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "28px 36px 0",
+    "contentPadding": "14px 36px 0",
+    "titleFontSize": 27,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "30%"
+      },
+      {
+        "key": "value",
+        "label": "Results & Guidance",
+        "dataType": "text",
+        "align": "right",
+        "width": "44%"
+      },
+      {
+        "key": "read",
+        "label": "Takeaway",
+        "dataType": "text",
+        "align": "right",
+        "width": "26%"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Q2 CapEx",
+            "displayValue": "Q2 CapEx"
+          },
+          "value": {
+            "value": "$31.080B / vs. consensus $33.350B",
+            "displayValue": "$31.080B\nvs. consensus $33.350B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Below estimates",
+            "highlight": "negative",
+            "displayValue": "Below estimates"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY26 CapEx",
+            "displayValue": "FY26 CapEx"
+          },
+          "value": {
+            "value": "$130–145B",
+            "displayValue": "$130–145B",
+            "highlight": "accent"
+          },
+          "read": {
+            "value": "Low end raised",
+            "displayValue": "Low end raised"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "2026–27",
+            "displayValue": "2026–27"
+          },
+          "value": {
+            "value": "Maximize compute capacity",
+            "displayValue": "Maximize compute capacity"
+          },
+          "read": {
+            "value": "Capacity first",
+            "displayValue": "Capacity first"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "2028+",
+            "displayValue": "2028+"
+          },
+          "value": {
+            "value": "Data centers & networks first",
+            "displayValue": "Data centers & networks first"
+          },
+          "read": {
+            "value": "Flexible server spend",
+            "highlight": "muted",
+            "displayValue": "Flexible server spend"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 59,
+      "cellPadding": "8px 12px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 700,
+        "rowHeader": 800,
+        "header": 700
+      },
+      "fontSize": {
+        "body": 16,
+        "header": 12,
+        "total": 16,
+        "badge": 10
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Meta: Capacity First, Servers Later",
+    "subMessage": "Meta: Capacity First, Servers Later",
+    "headline": "Meta는 2026~2027년 캐파를 먼저 확보하고, 이후 서버 투자 유연성을 높이려 한다.",
+    "summary": "Q2 CapEx는 $31.080B, FY26 가이던스는 $130–145B다.",
+    "story": "숫자와 전략 구간을 한 줄씩만 남겨 CapEx 규모와 집행 방식의 차이를 빠르게 읽는다.",
+    "keyTakeaways": [
+      "FY26 CapEx 범위는 $130–145B다.",
+      "2028년 이후 서버 지출은 유연하게 집행할 계획이다."
+    ],
+    "questionsRaised": [
+      "캐파 선점이 비용과 수익화 속도에 어떤 차이를 만드는가?"
+    ],
+    "viewerAction": "단기 CapEx와 장기 집행 방식을 분리해 본다.",
+    "contextualNotes": [
+      "금액은 USD billions."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FY26 $130–145B",
+      "reason": "연간 투자 범위"
+    },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      {
+        "row": 1,
+        "col": "value",
+        "reason": "FY26 CapEx 가이던스"
+      },
+      {
+        "row": 2,
+        "col": "read",
+        "reason": "단기 투자 우선순위"
+      }
+    ]
+  }
+}

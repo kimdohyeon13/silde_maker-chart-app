@@ -1,0 +1,194 @@
+{
+  "id": "page-24-table-02",
+  "sourceImage": "input/40-page_24_table_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Statcounter, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "contentType": "table",
+  "tableSubType": "financial",
+  "structure": {
+    "title": "AI CapEx 죄수의 딜레마",
+    "subtitle": "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다.",
+    "source": "자료: Statcounter, 신한투자증권"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "항목",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": 150
+      },
+      {
+        "key": "value",
+        "label": "값/방향",
+        "dataType": "text",
+        "width": 170
+      },
+      {
+        "key": "note",
+        "label": "해석",
+        "dataType": "text",
+        "width": 420
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "item": {
+            "value": "둘 다 절제",
+            "displayValue": "둘 다 절제",
+            "highlight": "positive"
+          },
+          "value": {
+            "value": "수익성 방어",
+            "displayValue": "수익성 방어",
+            "highlight": "positive"
+          },
+          "note": {
+            "value": "산업 전체에는 가장 좋은 균형입니다.",
+            "displayValue": "산업 전체에는 가장 좋은 균형입니다."
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "한쪽만 투자",
+            "displayValue": "한쪽만 투자",
+            "highlight": "warning"
+          },
+          "value": {
+            "value": "점유율 이동",
+            "displayValue": "점유율 이동",
+            "highlight": "warning"
+          },
+          "note": {
+            "value": "투자한 기업이 고객 접점과 생태계를 가져갑니다.",
+            "displayValue": "투자한 기업이 고객 접점과 생태계를 가져갑니다."
+          }
+        }
+      },
+      {
+        "cells": {
+          "item": {
+            "value": "둘 다 투자",
+            "displayValue": "둘 다 투자",
+            "highlight": "negative"
+          },
+          "value": {
+            "value": "수익성 압박",
+            "displayValue": "수익성 압박",
+            "highlight": "negative"
+          },
+          "note": {
+            "value": "AI CapEx 공급망만 더 강해질 수 있습니다.",
+            "displayValue": "AI CapEx 공급망만 더 강해질 수 있습니다."
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "comfortable",
+      "zebraStripe": true,
+      "highlightMode": "cell"
+    }
+  },
+  "narrative": {
+    "headMessage": "AI CapEx 죄수의 딜레마",
+    "subMessage": "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다.",
+    "headline": "AI CapEx 죄수의 딜레마",
+    "summary": "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Statcounter, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "AI CapEx 죄수의 딜레마",
+      "reason": "개별 기업에는 투자 확대가 합리적이지만 산업 전체 수익성은 낮아질 수 있습니다."
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

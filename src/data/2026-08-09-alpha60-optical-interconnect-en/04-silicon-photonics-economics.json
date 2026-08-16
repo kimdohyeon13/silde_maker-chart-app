@@ -1,0 +1,152 @@
+{
+  "id": "silicon-photonics-economics",
+  "mode": "faithful",
+  "sourceImage": "input/06-silicon-photonics-bom.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 28: 800G: SiPh has 26% BoM advantage and 15% price advantage / Exhibit 29: 1.6T: SiPh has 32% BoM advantage and 20% price advantage for 1.6T applications",
+    "preservedElements": ["All 800G and 1.6T component rows", "EML and Silicon Photonics quantities and values", "Diff", "Total BoM, ASP, GM, cost/price advantage", "Source"],
+    "changedElements": ["Merged the two original tables into one 11-column table", "Translated the title and component names", "Added column groups"],
+    "dataFidelity": "exact",
+    "notes": "All cells are direct transcriptions from the displayed source. Parenthesized differences and the original sign of GM Diff are preserved.",
+    "sourceAttribution": "Source: Company data, Data compiled by Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "AI layout plan completed first", "status": "pass", "detail": "Designed 800G and 1.6T as two-level column groups.", "checkedAt": "2026-07-11" },
+    { "id": "visible-cell-values", "label": "Displayed cell values preserved", "status": "pass", "detail": "Transcribed all 9 component rows and 5 economics rows.", "checkedAt": "2026-07-11" },
+    { "id": "dense-columns", "label": "11-column readability", "status": "pending", "detail": "Check for column clipping and font size after export", "checkedAt": "2026-07-11" }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF", "canvasHeight": 540, "frameStyle": "none", "contentBorder": false,
+    "squareEdges": true, "headerPadding": "17px 24px 2px", "contentPadding": "5px 16px 2px",
+    "sourcePadding": "0 24px 10px", "titleFontSize": 27, "subtitleFontSize": 13, "sourceFontSize": 9
+  },
+  "structure": {
+    "title": "800G SiPh: 26% BoM cost advantage and 15% price advantage / 1.6T: 32% BoM cost advantage and 20% price advantage",
+    "subtitle": "800G and 1.6T optical module BoM | US$",
+    "source": "Source: Company data, Data compiled by Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "component", "label": "Component", "dataType": "text", "isRowHeader": true, "width": "24%", "align": "left" },
+      { "key": "g8_eq", "label": "EML #", "dataType": "text", "width": "6%", "align": "center" },
+      { "key": "g8_ev", "label": "Value", "dataType": "number", "width": "8%", "align": "right" },
+      { "key": "g8_sq", "label": "SiPh #", "dataType": "text", "width": "6%", "align": "center" },
+      { "key": "g8_sv", "label": "Value", "dataType": "number", "width": "8%", "align": "right" },
+      { "key": "g8_d", "label": "Diff", "dataType": "number", "width": "10%", "align": "right" },
+      { "key": "g16_eq", "label": "EML #", "dataType": "text", "width": "6%", "align": "center" },
+      { "key": "g16_ev", "label": "Value", "dataType": "number", "width": "8%", "align": "right" },
+      { "key": "g16_sq", "label": "SiPh #", "dataType": "text", "width": "6%", "align": "center" },
+      { "key": "g16_sv", "label": "Value", "dataType": "number", "width": "8%", "align": "right" },
+      { "key": "g16_d", "label": "Diff", "dataType": "number", "width": "10%", "align": "right" }
+    ],
+    "columnGroups": [
+      { "label": "", "keys": ["component"] },
+      { "label": "800G optical module BoM", "keys": ["g8_eq", "g8_ev", "g8_sq", "g8_sv", "g8_d"] },
+      { "label": "1.6T optical module BoM", "keys": ["g16_eq", "g16_ev", "g16_sq", "g16_sv", "g16_d"] }
+    ],
+    "rows": [
+      { "rowType": "data", "cells": {
+        "component": { "value": "TOSA (excl. laser, driver)", "displayValue": "TOSA (excl. laser and driver)" },
+        "g8_eq": { "value": "1" }, "g8_ev": { "value": 15, "displayValue": "15" }, "g8_sq": { "value": "-" }, "g8_sv": { "value": "-" }, "g8_d": { "value": -15, "displayValue": "(15)" },
+        "g16_eq": { "value": "1" }, "g16_ev": { "value": 15, "displayValue": "15" }, "g16_sq": { "value": "-" }, "g16_sv": { "value": "-" }, "g16_d": { "value": -15, "displayValue": "(15)" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "Laser", "displayValue": "Laser" },
+        "g8_eq": { "value": "8 x 100G EML" }, "g8_ev": { "value": 96, "displayValue": "96" }, "g8_sq": { "value": "4 x 70mw" }, "g8_sv": { "value": 16, "displayValue": "16" }, "g8_d": { "value": -80, "displayValue": "(80)" },
+        "g16_eq": { "value": "8 x 200G EML" }, "g16_ev": { "value": 160, "displayValue": "160" }, "g16_sq": { "value": "4 x 70mw" }, "g16_sv": { "value": 16, "displayValue": "16" }, "g16_d": { "value": -144, "displayValue": "(144)" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "Driver", "displayValue": "Driver" },
+        "g8_eq": { "value": "2" }, "g8_ev": { "value": 20, "displayValue": "20" }, "g8_sq": { "value": "2" }, "g8_sv": { "value": 20, "displayValue": "20" }, "g8_d": { "value": "-" },
+        "g16_eq": { "value": "2" }, "g16_ev": { "value": 30, "displayValue": "30" }, "g16_sq": { "value": "2" }, "g16_sv": { "value": 30, "displayValue": "30" }, "g16_d": { "value": "-" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "ROSA (excl. TIA)", "displayValue": "ROSA (excl. TIA)" },
+        "g8_eq": { "value": "1" }, "g8_ev": { "value": 20, "displayValue": "20" }, "g8_sq": { "value": "-" }, "g8_sv": { "value": "-" }, "g8_d": { "value": -20, "displayValue": "(20)" },
+        "g16_eq": { "value": "1" }, "g16_ev": { "value": 60, "displayValue": "60" }, "g16_sq": { "value": "-" }, "g16_sv": { "value": "-" }, "g16_d": { "value": -60, "displayValue": "(60)" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "TIA" },
+        "g8_eq": { "value": "2" }, "g8_ev": { "value": 20, "displayValue": "20" }, "g8_sq": { "value": "2" }, "g8_sv": { "value": 20, "displayValue": "20" }, "g8_d": { "value": "-" },
+        "g16_eq": { "value": "2" }, "g16_ev": { "value": 30, "displayValue": "30" }, "g16_sq": { "value": "2" }, "g16_sv": { "value": 30, "displayValue": "30" }, "g16_d": { "value": "-" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "Silicon Photonics chip", "displayValue": "Silicon Photonics chip" },
+        "g8_eq": { "value": "-" }, "g8_ev": { "value": "-" }, "g8_sq": { "value": "2" }, "g8_sv": { "value": 40, "displayValue": "40" }, "g8_d": { "value": 40, "displayValue": "40" },
+        "g16_eq": { "value": "-" }, "g16_ev": { "value": "-" }, "g16_sq": { "value": "2" }, "g16_sv": { "value": 70, "displayValue": "70" }, "g16_d": { "value": 70, "displayValue": "70" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "DSP" },
+        "g8_eq": { "value": "1" }, "g8_ev": { "value": 80, "displayValue": "80" }, "g8_sq": { "value": "1" }, "g8_sv": { "value": 80, "displayValue": "80" }, "g8_d": { "value": "-" },
+        "g16_eq": { "value": "1" }, "g16_ev": { "value": 130, "displayValue": "130" }, "g16_sq": { "value": "1" }, "g16_sv": { "value": 130, "displayValue": "130" }, "g16_d": { "value": "-" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "PCBA" },
+        "g8_eq": { "value": "1" }, "g8_ev": { "value": 30, "displayValue": "30" }, "g8_sq": { "value": "1" }, "g8_sv": { "value": 25, "displayValue": "25" }, "g8_d": { "value": -5, "displayValue": "(5)" },
+        "g16_eq": { "value": "1" }, "g16_ev": { "value": 35, "displayValue": "35" }, "g16_sq": { "value": "1" }, "g16_sv": { "value": 25, "displayValue": "25" }, "g16_d": { "value": -10, "displayValue": "(10)" }
+      } },
+      { "rowType": "data", "cells": {
+        "component": { "value": "Others", "displayValue": "Others" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": 29, "displayValue": "29" }, "g8_sq": { "value": "" }, "g8_sv": { "value": 29, "displayValue": "29" }, "g8_d": { "value": "-" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": 40, "displayValue": "40" }, "g16_sq": { "value": "" }, "g16_sv": { "value": 40, "displayValue": "40" }, "g16_d": { "value": "-" }
+      } },
+      { "rowType": "subtotal", "cells": {
+        "component": { "value": "Total BoM" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": 310, "displayValue": "310" }, "g8_sq": { "value": "" }, "g8_sv": { "value": 230, "displayValue": "230" }, "g8_d": { "value": -80, "displayValue": "-80" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": 500, "displayValue": "500" }, "g16_sq": { "value": "" }, "g16_sv": { "value": 341, "displayValue": "341" }, "g16_d": { "value": -159, "displayValue": "-159" }
+      } },
+      { "rowType": "subtotal", "cells": {
+        "component": { "value": "Cost advantage of SiPh", "displayValue": "SiPh cost advantage" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": "" }, "g8_sq": { "value": "" }, "g8_sv": { "value": "" }, "g8_d": { "value": -26, "displayValue": "-26%" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": "" }, "g16_sq": { "value": "" }, "g16_sv": { "value": "" }, "g16_d": { "value": -32, "displayValue": "-32%" }
+      } },
+      { "rowType": "subtotal", "cells": {
+        "component": { "value": "ASP" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": 430, "displayValue": "430" }, "g8_sq": { "value": "" }, "g8_sv": { "value": 365, "displayValue": "365" }, "g8_d": { "value": -65, "displayValue": "-65" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": 1000, "displayValue": "1,000" }, "g16_sq": { "value": "" }, "g16_sv": { "value": 800, "displayValue": "800" }, "g16_d": { "value": -200, "displayValue": "-200" }
+      } },
+      { "rowType": "subtotal", "cells": {
+        "component": { "value": "GM" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": 28, "displayValue": "28%" }, "g8_sq": { "value": "" }, "g8_sv": { "value": 37, "displayValue": "37%" }, "g8_d": { "value": -23, "displayValue": "-23%" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": 50, "displayValue": "50%" }, "g16_sq": { "value": "" }, "g16_sv": { "value": 57, "displayValue": "57%" }, "g16_d": { "value": 21, "displayValue": "21%" }
+      } },
+      { "rowType": "total", "cells": {
+        "component": { "value": "Price advantage of SiPh", "displayValue": "SiPh price advantage" },
+        "g8_eq": { "value": "" }, "g8_ev": { "value": "" }, "g8_sq": { "value": "" }, "g8_sv": { "value": "" }, "g8_d": { "value": -15, "displayValue": "-15%" },
+        "g16_eq": { "value": "" }, "g16_ev": { "value": "" }, "g16_sq": { "value": "" }, "g16_sv": { "value": "" }, "g16_d": { "value": -20, "displayValue": "-20%" }
+      } }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 32, "cellPadding": "5px 4px", "lineHeight": 1.1, "zebraStripe": false,
+      "highlightMode": "text", "headerTone": "inverse", "rowRules": "soft", "columnGroupTone": "tinted",
+      "columnRules": true, "accentColor": "#123E73",
+      "fontWeight": { "body": 500, "numeric": 650, "rowHeader": 620, "header": 740, "total": 820, "columnGroup": 780 },
+      "fontSize": { "header": "10px", "body": "10px", "total": "11px", "badge": "8px", "unit": "8px", "groupHeader": "10px", "columnGroup": "11px" }
+    }
+  },
+  "narrative": {
+    "headMessage": "800G and 1.6T optical module BoM", "subMessage": "EML vs. Silicon Photonics | US$",
+    "headline": "800G SiPh: 26% BoM cost advantage and 15% price advantage / 1.6T: 32% BoM cost advantage and 20% price advantage",
+    "summary": "All displayed cells from the two original tables are consolidated.", "story": "Compares 800G and 1.6T using the same column structure.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "Compare EML, SiPh, and Diff for each speed.",
+    "contextualNotes": ["Source: Company data, Data compiled by Goldman Sachs Global Investment Research"]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "exact", "reason": "Direct transcription of displayed table cells" },
+    "colorStrategy": { "primary": "#123E73", "secondary": ["#D7E7F5", "#D9EAD3"], "positive": "#D92D3A", "negative": "#2563EB", "accent": "#6A9F58", "backgroundTone": "light" },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      { "row": 10, "col": "g8_d", "reason": "800G SiPh cost advantage" },
+      { "row": 10, "col": "g16_d", "reason": "1.6T SiPh cost advantage" },
+      { "row": 13, "col": "g8_d", "reason": "800G SiPh price advantage" },
+      { "row": 13, "col": "g16_d", "reason": "1.6T SiPh price advantage" }
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "id": "page-13-graph-01",
+  "sourceImage": "input/21-page_13_graph_01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "원문 숫자",
+      "비교 방향",
+      "투자 메시지"
+    ],
+    "sourceAttribution": "Oracle, Bloomberg, FactSet"
+  },
+  "allowedTransformations": [
+    "한국어 제목 재작성",
+    "복잡한 원문 레이아웃 단순화",
+    "핵심 시리즈 강조",
+    "출처명 명시화"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "이미지 기반 근사값 표시",
+      "status": "pass",
+      "detail": "원문 PDF가 이미지형인 차트는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."
+    },
+    {
+      "id": "credible-source-line",
+      "label": "공신력 있는 출처 표시",
+      "status": "pass",
+      "detail": "Bloomberg, FactSet, SEMI, 각사 공시/IR 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."
+    },
+    {
+      "id": "readability-first",
+      "label": "Notion 삽입 가독성",
+      "status": "pass",
+      "detail": "긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 48,
+    "subtitleFontSize": 28,
+    "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px",
+    "contentPadding": "10px 14px 8px",
+    "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "오라클 OCI 매출은 RPO를 따라 반등한다",
+    "subtitle": "FY27 이후 RPO 매출 인식이 본격화될 전망",
+    "source": "Oracle, Bloomberg, FactSet",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "FY2021",
+        "FY2022",
+        "FY2023",
+        "FY2024",
+        "FY2025",
+        "FY2026"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "값",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "$M",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 4130.0
+    },
+    "legend": [
+      {
+        "name": "클라우드 인프라",
+        "role": "primary",
+        "originalColor": "#1458D4",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "성장률",
+        "role": "secondary",
+        "originalColor": "#FF8A3D",
+        "remakeColor": "#FF8A3D"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "성장률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 96.75999999999999
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "클라우드 인프라",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "FY2021",
+            "y": 400,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2022",
+            "y": 900,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2023",
+            "y": 1300,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2024",
+            "y": 1800,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2025",
+            "y": 2500,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2026",
+            "y": 3500,
+            "confidence": 0.8
+          }
+        ],
+        "color": "#1458D4"
+      },
+      {
+        "name": "성장률",
+        "renderAs": "line",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "FY2021",
+            "y": 20,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2022",
+            "y": 45,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2023",
+            "y": 55,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2024",
+            "y": 63,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2025",
+            "y": 70,
+            "confidence": 0.8
+          },
+          {
+            "x": "FY2026",
+            "y": 82,
+            "confidence": 0.8
+          }
+        ],
+        "color": "#FF8A3D"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.82,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.72,
+      "description": "원문 이미지와 OCR에서 읽은 방향성을 리포트용으로 단순화했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": 775.0,
+        "absoluteChange": 3100.0,
+        "from": 400.0,
+        "to": 3500.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3500.0,
+        "at": ""
+      },
+      "min": {
+        "value": 400.0,
+        "at": ""
+      },
+      "average": 1733.3333333333333,
+      "median": 1550.0,
+      "range": 3100.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "컴퓨팅 병목은 계속된다",
+    "subMessage": "FY27 이후 RPO 매출 인식이 본격화될 전망",
+    "headline": "컴퓨팅 병목은 계속된다",
+    "summary": "캐파가 켜지는 속도만큼 클라우드 인프라 매출이 따라붙는 구조입니다.",
+    "story": "캐파가 켜지는 속도만큼 클라우드 인프라 매출이 따라붙는 구조입니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": [
+      "Oracle, Bloomberg, FactSet"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "컴퓨팅 병목은 계속된다",
+      "reason": "캐파가 켜지는 속도만큼 클라우드 인프라 매출이 따라붙는 구조입니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

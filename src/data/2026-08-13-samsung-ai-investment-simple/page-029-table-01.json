@@ -1,0 +1,123 @@
+{
+  "id": "page-029-table-01",
+  "sourceImage": "34-page_029_table_01.png",
+  "analyzedAt": "2026-08-13T00:00:00+09:00",
+  "contentType": "infographic",
+  "mode": "redesign",
+  "dataFidelity": "exact",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "title": "차세대 AI 서버는 메모리를 더 많이 씁니다",
+    "subtitle": "GB300 NVL72와 VR300 NVL576, 랙 전체 기준 핵심 메모리 비교",
+    "source": "자료: SemiAnalysis"
+  },
+  "infographicData": {
+    "subType": "comparison_card",
+    "comparisonAttributes": [
+      "GPU당 HBM",
+      "CPU당 LPDDR",
+      "총 GPU 수",
+      "랙 전체 HBM",
+      "랙 전체 DRAM"
+    ],
+    "items": [
+      {
+        "name": "GB300 NVL72",
+        "attributes": {
+          "GPU당 HBM": { "value": 288, "displayValue": "288GB" },
+          "CPU당 LPDDR": { "value": 512, "displayValue": "512GB" },
+          "총 GPU 수": { "value": 72, "displayValue": "72개" },
+          "랙 전체 HBM": { "value": 20.3, "displayValue": "20.3TB" },
+          "랙 전체 DRAM": { "value": 38.3, "displayValue": "38.3TB" }
+        }
+      },
+      {
+        "name": "VR300 NVL576 (Rubin)",
+        "attributes": {
+          "GPU당 HBM": { "value": 1024, "displayValue": "1,024GB", "highlight": "positive" },
+          "CPU당 LPDDR": { "value": 1536, "displayValue": "1,536GB", "highlight": "positive" },
+          "총 GPU 수": { "value": 144, "displayValue": "144개", "highlight": "positive" },
+          "랙 전체 HBM": { "value": 144, "displayValue": "144TB", "highlight": "positive" },
+          "랙 전체 DRAM": { "value": 360, "displayValue": "360TB", "highlight": "positive" }
+        }
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Rubin 증가 배수",
+        "data": [
+          { "x": "GPU당 HBM", "y": 3.6 },
+          { "x": "CPU당 메모리", "y": 3.0 },
+          { "x": "총 GPU 수", "y": 2.0 },
+          { "x": "랙 전체 HBM", "y": 7.1 },
+          { "x": "랙 전체 메모리", "y": 9.4 }
+        ]
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "차세대 AI 서버는 메모리를 더 많이 씁니다",
+    "subMessage": "랙 전체 DRAM은 38.3TB에서 360TB로 늘어납니다.",
+    "headline": "차세대 AI 서버는 메모리를 더 많이 씁니다",
+    "summary": "VR300 NVL576은 GPU와 CPU당 메모리, 랙 전체 메모리를 모두 확대합니다.",
+    "story": "VR300 NVL576은 GPU와 CPU당 메모리, 랙 전체 메모리를 모두 확대합니다.",
+    "keyTakeaways": [
+      "랙 전체 HBM: 20.3TB → 144TB",
+      "랙 전체 DRAM: 38.3TB → 360TB"
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "랙 전체 DRAM 360TB",
+      "reason": "Rubin 랙의 총 메모리 용량"
+    },
+    "colorStrategy": {
+      "primary": "#0969DA",
+      "secondary": ["#98A2B3"],
+      "positive": "#0969DA",
+      "negative": "#2F6FB3",
+      "accent": "#0969DA",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "preserveIntent": {
+    "originalTitle": "GB300 NVL72 vs VR300 NVL576(Kyber) 스펙 비교",
+    "mustPreserve": [
+      "GB300 NVL72와 VR300 NVL576의 비교",
+      "GPU당 HBM, CPU당 LPDDR, 총 GPU 수, 랙 전체 HBM, 랙 전체 DRAM의 원본 수치",
+      "자료: SemiAnalysis"
+    ],
+    "changedElements": [
+      "세부 부품 사양 표를 랙 전체 메모리 비교 카드로 압축",
+      "메모리 용량 차이가 보이는 핵심 5개 지표만 표시"
+    ],
+    "qaNote": "원본 표의 수치 중 GPU당 HBM, CPU당 LPDDR, 총 GPU 수, 전체 HBM, 전체 DRAM을 그대로 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": {
+    "sourcePreserved": true,
+    "selectedValuesMatchSource": true,
+    "labelOverlapRisk": "낮음"
+  },
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "fontFamily": "Paperlogy",
+    "titleFontSize": 32,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "squareEdges": true,
+    "headerVariant": "centered"
+  }
+}

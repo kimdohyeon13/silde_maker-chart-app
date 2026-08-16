@@ -1,0 +1,262 @@
+{
+  "id": "w79-05-ko",
+  "mode": "faithful",
+  "sourceImage": "input/w7-9-05.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "성장은 전부 네트워크 테스트 쪽에서 나왔다",
+    "preservedElements": [
+      "4개 항목의 순서와 값: NSE FY25 209.1, NSE FY26 353.9, OSP FY25 81.4, OSP FY26 89.2",
+      "차트 종류 bar 와 0 기준축",
+      "눈금 0, 100, 200, 300, 400",
+      "단위 $M",
+      "원본 출처 줄의 기관·문서·날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "보이는 글자를 한국어로 옮김 (Threads 발행본)",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 장표의 수치·순서·축을 그대로 두고 표시 문자열만 영어로 옮겼습니다. 숫자는 원본에 인쇄된 값입니다.",
+    "sourceAttribution": "Source: Viavi Solutions FY2026 Q4 press release, back-calculated from the reported growth rates, Aug 5, 2026"
+  },
+  "allowedTransformations": [
+    "adjust-fonts",
+    "adjust-spacing",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "bar 4개, 0 기준축, 눈금 0~400, 전 항목 값 라벨, 강조 최대값 1곳를 먼저 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 장표에 인쇄된 source-visible 수치이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "데이터 충실도에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "단일 시리즈, 4개 항목, $M 단위, 원본 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "emphasis",
+    "numberLocale": "en",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "borderColor": "#24433D",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "성장은 전부 네트워크 테스트에서 나왔다",
+    "subtitle": "NSE 매출 $353.9M, 69.2% 증가. OSP 매출 $89.2M, 9.6% 증가",
+    "source": "Source: Viavi Solutions FY2026 Q4 press release, back-calculated from the reported growth rates, Aug 5, 2026",
+    "timeRange": "FY2025 vs FY2026",
+    "xAxis": {
+      "label": "부문과 기간",
+      "type": "category",
+      "tickValues": [
+        "NSE FY25",
+        "NSE FY26",
+        "OSP FY25",
+        "OSP FY26"
+      ],
+      "displayTickValues": [
+        "NSE FY25",
+        "NSE FY26",
+        "OSP FY25",
+        "OSP FY26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 400
+    },
+    "legend": [
+      {
+        "name": "매출 ($M)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출 ($M)",
+        "data": [
+          {
+            "x": "NSE FY25",
+            "y": 209.1,
+            "confidence": 0.95
+          },
+          {
+            "x": "NSE FY26",
+            "y": 353.9,
+            "confidence": 0.95
+          },
+          {
+            "x": "OSP FY25",
+            "y": 81.4,
+            "confidence": 0.95
+          },
+          {
+            "x": "OSP FY26",
+            "y": 89.2,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본 그대로 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "최대 대 최소",
+        "percentChange": 334.8,
+        "absoluteChange": 272.5,
+        "from": 81.4,
+        "to": 353.9
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 353.9,
+        "at": "NSE FY26"
+      },
+      "min": {
+        "value": 81.4,
+        "at": "OSP FY25"
+      },
+      "average": 183.4,
+      "median": 209.1,
+      "range": 272.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "성장은 전부 네트워크 테스트에서 나왔다",
+    "subMessage": "NSE 매출 $353.9M, 69.2% 증가. OSP 매출 $89.2M, 9.6% 증가",
+    "headline": "성장은 전부 네트워크 테스트에서 나왔다",
+    "summary": "NSE 매출 $353.9M, 69.2% 증가. OSP 매출 $89.2M, 9.6% 증가",
+    "story": "원본 장표의 값과 배치를 그대로 두고 표시 문자열만 한국어로 옮겼습니다.",
+    "keyTakeaways": [
+      "NSE 매출 $353.9M, 69.2% 증가. OSP 매출 $89.2M, 9.6% 증가",
+      "NSE FY26이 353.9로 가장 큼",
+      "원본 장표에서 보이는 수치를 그대로 옮김"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "NSE FY26과 나머지 항목을 비교하세요.",
+    "contextualNotes": [
+      "Source: Viavi Solutions FY2026 Q4 press release, back-calculated from the reported growth rates, Aug 5, 2026",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "NSE FY26",
+        "y": 353.9
+      },
+      "displayText": "353.9",
+      "reason": "NSE 매출 $353.9M, 69.2% 증가. OSP 매출 $89.2M, 9.6% 증가"
+    },
+    "densityLevel": "focused"
+  }
+}

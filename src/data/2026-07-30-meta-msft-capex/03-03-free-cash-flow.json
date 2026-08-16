@@ -1,0 +1,204 @@
+{
+  "id": "03-free-cash-flow",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-30T17:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "투자 뒤 남은 현금은 25배 차이",
+    "preservedElements": [
+      "공식 수치",
+      "회사 순서",
+      "단위",
+      "출처",
+      "CapEx 정의"
+    ],
+    "changedElements": [
+      "쉬운 주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "최댓값 강조"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "notes": "각 회사가 공시한 분기 잉여현금흐름을 그대로 사용했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세로 막대 2개와 직접 값 라벨 2개로 설계했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "최종 export와 DOM QA에서 1,824×1,026px, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-30"
+    },
+    {
+      "id": "source-exact",
+      "label": "공식 수치 일치",
+      "status": "pass",
+      "detail": "Microsoft FY26 Q4와 Meta Q2 2026 공식 실적 발표의 원단위를 사용했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 355,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "투자 뒤 남은 현금은 25배 차이",
+    "subtitle": "잉여현금흐름 · Microsoft 196억달러 · Meta 8억달러",
+    "source": "자료: Microsoft FY26 Q4, Meta Q2 2026 실적 발표",
+    "timeRange": "2026년 4~6월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Microsoft",
+        "Meta"
+      ],
+      "displayTickValues": [
+        "마이크로소프트",
+        "메타"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 25,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "비교값",
+        "role": "primary",
+        "originalColor": "#667085",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "비교값",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "Microsoft",
+            "y": 19.6,
+            "confidence": 1
+          },
+          {
+            "x": "Meta",
+            "y": 0.784,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.784,
+      "max": 19.6,
+      "average": 10.192,
+      "latest": 0.784
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Microsoft는 투자 뒤에도 19.6B달러를 남겼지만 Meta는 0.784B달러에 그쳤습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "투자 뒤 남은 현금은 25배 차이",
+    "subMessage": "잉여현금흐름 · Microsoft 196억달러 · Meta 8억달러",
+    "headline": "Microsoft는 투자 뒤에도 19.6B달러를 남겼지만 Meta는 0.784B달러에 그쳤습니다.",
+    "summary": "Microsoft는 투자 뒤에도 19.6B달러를 남겼지만 Meta는 0.784B달러에 그쳤습니다.",
+    "keyTakeaways": [
+      "Microsoft FCF는 19.6B달러입니다.",
+      "Meta FCF는 0.784B달러입니다.",
+      "이번 실적의 차이는 지출 규모보다 투자 뒤 남은 현금에서 드러납니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "Microsoft",
+        "y": 19.6
+      },
+      "displayText": "19.6",
+      "reason": "Microsoft는 투자 뒤에도 19.6B달러를 남겼지만 Meta는 0.784B달러에 그쳤습니다."
+    },
+    "colorStrategy": {
+      "primary": "#D92D3A",
+      "secondary": [
+        "#667085"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "sparse",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

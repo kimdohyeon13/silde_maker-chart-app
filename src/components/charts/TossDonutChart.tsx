@@ -35,7 +35,7 @@ import { formatNumber } from "@/lib/analysis/insight-engine";
 interface TossDonutChartProps {
   analysis: ChartAnalysis;
   theme?: ThemeMode;
-  width?: number;
+  width?: number | `${number}%`;
   height?: number;
   animated?: boolean;
 }
@@ -43,7 +43,7 @@ interface TossDonutChartProps {
 export default function TossDonutChart({
   analysis,
   theme: themeMode = "dark",
-  width = 800,
+  width = "100%",
   height = 350,
   animated = true,
 }: TossDonutChartProps) {
@@ -66,6 +66,7 @@ export default function TossDonutChart({
 
   // 전체 합계 (중앙 표시용)
   const total = chartData.reduce((sum, d) => sum + d.value, 0);
+  const centerLabel = /[가-힣]/.test(analysis.structure.title) ? "전체" : "Total";
 
   return (
     <div style={{ width, height }}>
@@ -199,7 +200,7 @@ export default function TossDonutChart({
                     marginBottom: 2,
                   }}
                 >
-                  전체
+                  {centerLabel}
                 </div>
                 <div
                   style={{

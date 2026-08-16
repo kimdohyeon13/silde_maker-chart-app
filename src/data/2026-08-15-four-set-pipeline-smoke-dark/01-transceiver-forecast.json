@@ -1,0 +1,453 @@
+{
+  "id": "01-transceiver-forecast",
+  "sourceImage": "input/exhibit-2-transceiver-forecast.png",
+  "analyzedAt": "2026-08-15T00:00:00+09:00",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "트랜시버 시장 규모가 2022년 8억 달러에서 2028년 505억 달러로 커진다",
+    "preservedElements": [
+      "누적 막대 형식",
+      "5개 업체 구분",
+      "아래에서 위 누적 순서",
+      "연도 축",
+      "출처"
+    ],
+    "changedElements": [
+      "제목 한국어화",
+      "Lumentum 노랑을 회색으로 교체",
+      "범례를 오른쪽 세로 배치에서 정리",
+      "y축 단위 명시",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 저해상도 캡처이며 y축 단위 라벨이 없다. 세그먼트 값은 화면에서 밴드 경계를 읽은 근사값이고, 단위는 US$bn으로 표기하기로 사용자가 확정했다.",
+    "sourceAttribution": "자료: Morgan Stanley Research",
+    "sourceKey": "morgan-stanley-research-exhibit-2"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "누적 막대, 5개 시리즈, 누적 순서, 7개 연도 구간을 그대로 유지했다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "화면 판독 데이터",
+      "status": "warning",
+      "detail": "원자료가 아닌 이미지 판독값이다. 특히 2028E Eoptolink 5.0은 2027E 7.5보다 낮게 읽혔고, 판독 오차 가능성을 남겨둔다."
+    },
+    {
+      "id": "palette-discipline",
+      "label": "색 규율",
+      "status": "pass",
+      "detail": "원본의 Lumentum 노랑은 프로젝트 규칙상 사용하지 않고 중립 회색으로 바꿨다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "chartHeight": 370,
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "squareEdges": true,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "트랜시버 시장 규모 전망",
+    "subtitle": "2022년 8억 달러에서 2028년 505억 달러로. 단위 10억 달러",
+    "source": "자료: Morgan Stanley Research (Exhibit 2 화면 판독)",
+    "timeRange": "2022-2028E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2022",
+        "2023",
+        "2024",
+        "2025E",
+        "2026E",
+        "2027E",
+        "2028E"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "시장 규모",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "10억 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 55
+    },
+    "legend": [
+      {
+        "name": "기타",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Fabrinet",
+        "role": "secondary",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "Eoptolink",
+        "role": "secondary",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "Coherent",
+        "role": "secondary",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "Lumentum",
+        "role": "secondary",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "기타",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 1.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 6.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025E",
+            "y": 9,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 17,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027E",
+            "y": 16.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2028E",
+            "y": 20,
+            "confidence": 0.7
+          }
+        ],
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "Fabrinet",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 0.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 2.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025E",
+            "y": 3.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 6.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027E",
+            "y": 8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2028E",
+            "y": 14,
+            "confidence": 0.7
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#FF6A5F"
+      },
+      {
+        "name": "Eoptolink",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 0.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 0.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025E",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027E",
+            "y": 7.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2028E",
+            "y": 5,
+            "confidence": 0.7
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#4AA8FF"
+      },
+      {
+        "name": "Coherent",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 0.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 1.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025E",
+            "y": 2.8,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 5.3,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027E",
+            "y": 6.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "2028E",
+            "y": 9,
+            "confidence": 0.7
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#A78BFA"
+      },
+      {
+        "name": "Lumentum",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 0.1,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 0.6,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025E",
+            "y": 1.2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 1.5,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027E",
+            "y": 2,
+            "confidence": 0.7
+          },
+          {
+            "x": "2028E",
+            "y": 2.5,
+            "confidence": 0.7
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#F472B6"
+      }
+    ],
+    "totalDataPoints": 35,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "2022~2023 막대는 높이가 낮아 세그먼트 경계가 흐리다",
+        "2028E Eoptolink 밴드 경계"
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.95,
+      "description": "7년 동안 시장 규모가 약 63배로 커지는 구조다.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.1,
+      "description": "추세 확인용."
+    },
+    "changeRates": [
+      {
+        "period": "2022 대비 2028E",
+        "from": 0.8,
+        "to": 50.5,
+        "absoluteChange": 49.7,
+        "percentChange": 6212.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 50.5,
+        "at": "2028E"
+      },
+      "min": {
+        "value": 0.8,
+        "at": "2022"
+      },
+      "average": 22.7,
+      "median": 18.3,
+      "range": 49.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "트랜시버 시장 규모 전망",
+    "subMessage": "2022년 8억 달러에서 2028년 505억 달러로. 단위 10억 달러",
+    "headline": "트랜시버 시장 규모 전망",
+    "summary": "2022년 8억 달러에서 2028년 505억 달러로 커진다. 기타 업체가 가장 큰 몫을 차지하고, Fabrinet과 Coherent가 뒤를 잇는다.",
+    "story": "원본 Exhibit 2의 누적 구조를 유지하고 한국어 가독성만 정리했다.",
+    "keyTakeaways": [
+      "합계는 2022년 0.8에서 2028E 50.5로 늘어난다",
+      "기타 업체 몫이 2028E 20.0으로 가장 크다",
+      "값은 원본 화면 판독 근사값이다"
+    ],
+    "questionsRaised": [
+      "점유율 이동이 업체별 실적 전망을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본 Exhibit 2와 함께 누적 순서와 합계를 확인한다.",
+    "contextualNotes": [
+      "자료: Morgan Stanley Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2028E",
+        "y": 50.5
+      },
+      "displayText": "2028E 50.5",
+      "reason": "전망 구간의 최대 합계"
+    },
+    "densityLevel": "balanced"
+  }
+}

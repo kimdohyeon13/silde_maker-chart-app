@@ -1,0 +1,96 @@
+{
+  "id": "page-043-graph-02",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/57-page_043_graph_02.png",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "삼성전자 Capex 추이",
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "2024~2028년 DRAM, NAND, 인프라 및 기타, Foundry & LSI의 누적 투자",
+      "2026년 이후 DRAM 중심의 설비투자 확대",
+      "자료: 각사 추정"
+    ],
+    "changedElements": [
+      "2024년 이후만 남겨 투자 확대 시점을 쉽게 표시",
+      "성장률 선을 덜고 누적 투자 막대만 남겨 흐름을 단순화",
+      "사각 막대와 중립색 기반의 DRAM 강조 적용"
+    ]
+  },
+  "allowedTransformations": ["rewrite-title", "adjust-layout", "adjust-density", "adjust-labels", "adjust-color-emphasis", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan", "status": "pass", "detail": "2024~2028년 누적 투자 막대만 남겨 전체 흐름을 쉽게 비교한다." },
+    { "id": "axis-contract", "status": "pass", "detail": "설비투자는 조원으로 표시하고 예상 연도에는 E를 붙인다." },
+    { "id": "label-risk", "status": "pass", "detail": "막대 수치 라벨을 덜어 항목끼리 겹치지 않게 한다." },
+    { "id": "source-visible", "status": "pass", "detail": "세부 부문 값과 성장률은 원본 이미지에서 읽은 값이다." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 28px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#1479F2",
+    "borderColor": "#D7DEE5",
+    "lineStrokeWidth": 2.8
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "AI용 메모리 투자는 2026년부터 늘어납니다",
+    "subtitle": "삼성전자 설비투자 추이, 단위: 조원",
+    "source": "자료: 각사 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["2024", "2025", "2026", "2027", "2028"],
+      "displayTickValues": ["2024", "2025E", "2026E", "2027E", "2028E"]
+    },
+    "yAxis": { "label": "설비투자", "unit": "조원", "min": 0, "max": 120 },
+    "legend": [
+      { "name": "DRAM", "color": "#1479F2", "originalColor": "#B8BDC7" },
+      { "name": "NAND", "color": "#D0D5DD", "originalColor": "#D9D9D9" },
+      { "name": "인프라·기타", "color": "#98A2B3", "originalColor": "#79B8FF" },
+      { "name": "파운드리·LSI", "color": "#12B8C4", "originalColor": "#5CD6D1" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "DRAM", "renderAs": "bar", "color": "#1479F2", "data": [{ "x": "2024", "y": 4 }, { "x": "2025", "y": 15 }, { "x": "2026", "y": 28 }, { "x": "2027", "y": 35 }, { "x": "2028", "y": 48 }] },
+      { "name": "NAND", "renderAs": "bar", "color": "#D0D5DD", "data": [{ "x": "2024", "y": 7 }, { "x": "2025", "y": 18 }, { "x": "2026", "y": 9 }, { "x": "2027", "y": 10 }, { "x": "2028", "y": 11 }] },
+      { "name": "인프라·기타", "renderAs": "bar", "color": "#98A2B3", "data": [{ "x": "2024", "y": 19 }, { "x": "2025", "y": 18 }, { "x": "2026", "y": 25 }, { "x": "2027", "y": 23 }, { "x": "2028", "y": 25 }] },
+      { "name": "파운드리·LSI", "renderAs": "bar", "color": "#12B8C4", "data": [{ "x": "2024", "y": 13 }, { "x": "2025", "y": 8 }, { "x": "2026", "y": 18 }, { "x": "2027", "y": 20 }, { "x": "2028", "y": 23 }] }
+    ]
+  },
+  "statistics": {
+    "summary": { "dram2028": 48 },
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "AI용 메모리 투자는 2026년부터 늘어납니다",
+    "subMessage": "2026년부터 투자가 커지고, 이후에는 DRAM 비중이 높아집니다.",
+    "headline": "DRAM이 설비투자 확대를 이끈다",
+    "keyTakeaways": ["DRAM 설비투자는 2028년 48조원까지 늘어납니다."],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "2028", "y": 48, "displayText": "DRAM 48조원" },
+    "annotations": [],
+    "highlightZones": [{ "fromX": "2026", "toX": "2028", "color": "#EAF2FF", "label": "메모리 투자 확대" }],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1479F2", "secondary": ["#D0D5DD", "#98A2B3", "#12B8C4"], "accent": "#175CD3", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  },
+  "patterns": { "trend": "DRAM 설비투자가 2026년부터 전체 투자 확대를 주도", "supportResistance": [] }
+}

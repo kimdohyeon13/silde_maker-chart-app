@@ -1,0 +1,87 @@
+{
+  "id": "page-11-graph-01",
+  "sourceImage": "input/15-page-11-graph-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Factset, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "업종별 밸류 차별화, 경기소비재 최고",
+    "subtitle": "S&P500 업종별 현재 P/E(배), 5월 28일 기준",
+    "source": "Factset, 삼성증권",
+    "timeRange": "",
+    "xAxis": { "label": "업종", "type": "category", "tickValues": ["경기소비재","산업재","IT","필수소비재","커뮤니케이션","부동산","소재","유틸리티","건강관리","금융","에너지"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "P/E", "type": "numeric", "tickValues": [], "unit": "배", "startsAtZero": true, "isLogScale": false, "max": 32 },
+    "legend": [
+      { "name": "현재 P/E", "role": "primary", "originalColor": "#E45B5B", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현재 P/E", "renderAs": "bar", "role": "primary",
+        "data": [
+          {"x": "경기소비재", "y": 29.1, "confidence": 0.8},
+          {"x": "산업재", "y": 25.0, "confidence": 0.8},
+          {"x": "IT", "y": 25.1, "confidence": 0.8},
+          {"x": "필수소비재", "y": 23.3, "confidence": 0.8},
+          {"x": "커뮤니케이션", "y": 21.4, "confidence": 0.8},
+          {"x": "부동산", "y": 18.6, "confidence": 0.8},
+          {"x": "소재", "y": 17.7, "confidence": 0.8},
+          {"x": "유틸리티", "y": 18.1, "confidence": 0.8},
+          {"x": "건강관리", "y": 17.5, "confidence": 0.8},
+          {"x": "금융", "y": 14.4, "confidence": 0.8},
+          {"x": "에너지", "y": 13.3, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 11,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "down", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "stable" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 29.1, "at": "경기소비재"}, "min": {"value": 13.3, "at": "에너지"}, "average": 20.3, "median": 18.6, "range": 15.8 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "업종 간 밸류 차이 뚜렷",
+    "subMessage": "경기소비재·IT는 비싸고 에너지·금융은 싸다",
+    "headline": "S&P500 업종별 P/E가 13배에서 29배까지 벌어지며 밸류에이션 차별화가 뚜렷합니다.",
+    "summary": "업종별 밸류에이션 차이가 뚜렷해 경기소비재와 IT는 P/E가 높은 반면 에너지와 금융은 상대적으로 저평가돼 있습니다.",
+    "story": "업종별 밸류에이션 차이가 뚜렷해 경기소비재와 IT는 P/E가 높은 반면 에너지와 금융은 상대적으로 저평가돼 있습니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Factset, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"최고 29.1배","position":{"x":"경기소비재"},"importance":"critical","style":"negative"},
+      {"text":"최저 13.3배","position":{"x":"에너지"},"importance":"high","style":"positive"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"경기소비재","y":29.1}, "displayText": "업종 간 밸류 차이 뚜렷", "reason": "업종별 밸류에이션 차이가 뚜렷해 경기소비재와 IT는 P/E가 높은 반면 에너지와 금융은 상대적으로 저평가돼 있습니다." },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "id": "08-circular-loop-scale",
+  "sourceImage": "input/08-circular-loop-scale.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: RIA Advisors, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "같은 돈이 세 회사 사이를 8,000억 달러 넘게 돌았다",
+    "subtitle": "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모",
+    "source": "자료: RIA Advisors, 2026년 8월",
+    "timeRange": "2026년 8월 기준",
+    "xAxis": {
+      "label": "구분",
+      "type": "category",
+      "tickValues": [
+        "순환 거래 총액",
+        "오픈AI의 컴퓨팅 지불",
+        "엔비디아의 오픈AI 투자"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "십억 달러",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "순환 거래 규모",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "순환 거래 규모",
+        "data": [
+          {
+            "x": "순환 거래 총액",
+            "y": 800,
+            "confidence": 0.74
+          },
+          {
+            "x": "오픈AI의 컴퓨팅 지불",
+            "y": 300,
+            "confidence": 0.74
+          },
+          {
+            "x": "엔비디아의 오픈AI 투자",
+            "y": 100,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.75,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -87.5,
+        "absoluteChange": -700.0,
+        "from": 800.0,
+        "to": 100.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 800.0,
+        "at": ""
+      },
+      "min": {
+        "value": 100.0,
+        "at": ""
+      },
+      "average": 400.0,
+      "median": 300.0,
+      "range": 700.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "같은 돈이 세 회사 사이를 8,000억 달러 넘게 돌았다",
+    "subMessage": "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모",
+    "headline": "같은 돈이 세 회사 사이를 8,000억 달러 넘게 돌았다",
+    "summary": "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: RIA Advisors, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 100.0
+      },
+      "displayText": "같은 돈이 세 회사 사이를 8",
+      "reason": "단위 십억 달러. 엔비디아·오픈AI·클라우드 사업자 사이를 오간 것으로 집계된 최소 거래 규모"
+    },
+    "densityLevel": "balanced"
+  }
+}

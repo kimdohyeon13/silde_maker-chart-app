@@ -1,0 +1,545 @@
+{
+  "id": "04-exhibit-table",
+  "mode": "faithful",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Using SNDK-like assumptions (+15% sales CAGR, 80%+ GM, 50%+ FCF margin), MU EPS power could be $230+, growing at a 34% CAGR FY26-30",
+    "preservedElements": [
+      "Row order and column order",
+      "Every printed cell value and its decimals",
+      "Red type on the SNDK-like columns",
+      "The highlighted EPS row",
+      "Blank cells for buybacks, dividends and return %",
+      "BofA Global Research, Bloomberg and Visible Alpha attribution"
+    ],
+    "changedElements": [
+      "Display language and $bn unit labels",
+      "The source's separate Cons (FY27E) header merged into one Consensus column group"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Copied verbatim from the printed Exhibit 1. Cells the source left blank stay blank; nothing was estimated."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan came first",
+      "status": "pass",
+      "detail": "Format, density, scale, labels, color emphasis and QA risks were fixed before writing JSON."
+    },
+    {
+      "id": "exact-cell-values",
+      "label": "Printed cell values preserved",
+      "status": "pass",
+      "detail": "Values are copied from the printed table; no decimals were dropped."
+    },
+    {
+      "id": "source-preserved",
+      "label": "Attribution preserved",
+      "status": "pass",
+      "detail": "BofA Global Research estimates, Bloomberg and Visible Alpha are retained."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "headMessage uses Paperlogy 900 and subMessage uses Paperlogy 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 33,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "16px 30px 2px",
+    "contentPadding": "4px 20px 2px",
+    "sourcePadding": "0 30px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "accentColor": "#D92D20",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "table",
+    "title": "SNDK-Like Assumptions Put MU EPS Above $230",
+    "subtitle": "+15% sales CAGR, 80%+ GM and 50%+ FCF margin imply a 34% EPS CAGR",
+    "source": "Source: BofA Global Research estimates, Bloomberg, Visible Alpha"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "Metric",
+        "dataType": "text",
+        "width": "20%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "fy26",
+        "label": "FY26E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy27",
+        "label": "FY27E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy28c",
+        "label": "FY28E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right",
+        "sectionStart": true
+      },
+      {
+        "key": "fy29c",
+        "label": "FY29E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy30c",
+        "label": "FY30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "cagrc",
+        "label": "FY26-30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy28s",
+        "label": "FY28E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right",
+        "sectionStart": true
+      },
+      {
+        "key": "fy29s",
+        "label": "FY29E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "fy30s",
+        "label": "FY30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "cagrs",
+        "label": "FY26-30E",
+        "dataType": "text",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "columnGroups": [
+      {
+        "label": "BofA",
+        "keys": [
+          "fy26"
+        ]
+      },
+      {
+        "label": "Consensus",
+        "keys": [
+          "fy27",
+          "fy28c",
+          "fy29c",
+          "fy30c",
+          "cagrc"
+        ]
+      },
+      {
+        "label": "SNDK-like assumptions",
+        "keys": [
+          "fy28s",
+          "fy29s",
+          "fy30s",
+          "cagrs"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Sales ($bn)"
+          },
+          "fy26": {
+            "value": "129.3"
+          },
+          "fy27": {
+            "value": "248.1"
+          },
+          "fy28c": {
+            "value": "280.0"
+          },
+          "fy29c": {
+            "value": "297.9"
+          },
+          "fy30c": {
+            "value": "280.5"
+          },
+          "cagrc": {
+            "value": "21.4%"
+          },
+          "fy28s": {
+            "value": "285.3",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "328.1",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "377.3",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "30.7%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Gross margin"
+          },
+          "fy26": {
+            "value": "80.6%"
+          },
+          "fy27": {
+            "value": "84.5%"
+          },
+          "fy28c": {
+            "value": "78.1%"
+          },
+          "fy29c": {
+            "value": "73.5%"
+          },
+          "fy30c": {
+            "value": "78.0%"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "80.0%",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "EPS ($)"
+          },
+          "fy26": {
+            "value": "73.12"
+          },
+          "fy27": {
+            "value": "151.37"
+          },
+          "fy28c": {
+            "value": "168.91"
+          },
+          "fy29c": {
+            "value": "168.94"
+          },
+          "fy30c": {
+            "value": "136.24"
+          },
+          "cagrc": {
+            "value": "16.8%"
+          },
+          "fy28s": {
+            "value": "168.80",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "199.53",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "236.16",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "34.1%",
+            "highlight": "positive"
+          }
+        },
+        "highlight": true,
+        "highlightBg": "#E8F3EA"
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Free cash flow ($bn)"
+          },
+          "fy26": {
+            "value": "55.7"
+          },
+          "fy27": {
+            "value": "131.1"
+          },
+          "fy28c": {
+            "value": "160.3"
+          },
+          "fy29c": {
+            "value": "170.8"
+          },
+          "fy30c": {
+            "value": "190.8"
+          },
+          "cagrc": {
+            "value": "36.1%"
+          },
+          "fy28s": {
+            "value": "142.6",
+            "highlight": "positive"
+          },
+          "fy29s": {
+            "value": "164.0",
+            "highlight": "positive"
+          },
+          "fy30s": {
+            "value": "188.6",
+            "highlight": "positive"
+          },
+          "cagrs": {
+            "value": "35.7%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "　Buybacks"
+          },
+          "fy26": {
+            "value": "1.6"
+          },
+          "fy27": {
+            "value": "41.0"
+          },
+          "fy28c": {
+            "value": "77.3"
+          },
+          "fy29c": {
+            "value": "117.1"
+          },
+          "fy30c": {
+            "value": "61.7"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "　Dividends"
+          },
+          "fy26": {
+            "value": "0.6"
+          },
+          "fy27": {
+            "value": "2.0"
+          },
+          "fy28c": {
+            "value": "2.5"
+          },
+          "fy29c": {
+            "value": "1.0"
+          },
+          "fy30c": {
+            "value": "0.6"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "item": {
+            "value": "Return %"
+          },
+          "fy26": {
+            "value": "4.0%"
+          },
+          "fy27": {
+            "value": "32.7%"
+          },
+          "fy28c": {
+            "value": "49.8%"
+          },
+          "fy29c": {
+            "value": "69.1%"
+          },
+          "fy30c": {
+            "value": "32.7%"
+          },
+          "cagrc": {
+            "value": ""
+          },
+          "fy28s": {
+            "value": ""
+          },
+          "fy29s": {
+            "value": ""
+          },
+          "fy30s": {
+            "value": ""
+          },
+          "cagrs": {
+            "value": ""
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 34,
+      "maxRowHeight": 44,
+      "cellPadding": "8px 5px",
+      "zebraStripe": false,
+      "rowRules": "soft",
+      "headerTone": "tinted",
+      "columnGroupTone": "tinted",
+      "columnRules": true,
+      "sectionRules": true,
+      "highlightMode": "text",
+      "accentColor": "#D92D20",
+      "fontSize": {
+        "header": "12.5px",
+        "body": "14px",
+        "total": "14px",
+        "columnGroup": "12.5px"
+      },
+      "fontWeight": {
+        "body": 500,
+        "numeric": 500,
+        "rowHeader": 700,
+        "header": 700,
+        "total": 700,
+        "columnGroup": 700
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "SNDK-Like Assumptions Put MU EPS Above $230",
+    "subMessage": "+15% sales CAGR, 80%+ GM and 50%+ FCF margin imply a 34% EPS CAGR",
+    "headline": "SNDK-Like Assumptions Put MU EPS Above $230",
+    "summary": "+15% sales CAGR, 80%+ GM and 50%+ FCF margin imply a 34% EPS CAGR",
+    "story": "+15% sales CAGR, 80%+ GM and 50%+ FCF margin imply a 34% EPS CAGR",
+    "keyTakeaways": [
+      "FY28 EPS is effectively the same in both scenarios",
+      "The gap opens only in FY29 and FY30",
+      "Free cash flow lands in a similar place; earnings are what diverge"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "+15% sales CAGR, 80%+ GM and 50%+ FCF margin imply a 34% EPS CAGR",
+    "contextualNotes": [
+      "Source: BofA Global Research estimates, Bloomberg, Visible Alpha"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D20",
+      "secondary": [
+        "#175CD3"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#D92D20",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed"
+  }
+}

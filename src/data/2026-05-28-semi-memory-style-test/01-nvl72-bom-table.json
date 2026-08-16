@@ -1,0 +1,462 @@
+{
+  "id": "nvl72-bom-cost-stack",
+  "sourceImage": "01-nvl72-bom-table.png",
+  "analyzedAt": "2026-05-28T16:00:00.000+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "editorial-card",
+  "preserveIntent": {
+    "originalMessage": "Morgan Stanley estimates a VR200 NVL72 rack costs about US$7.8M, roughly 95% higher than GB300.",
+    "preservedElements": [
+      "GB300 total cost $3,994,551 and VR200 total cost $7,803,148",
+      "Total difference of 95%",
+      "Component-level comparison between GB300 and VR200",
+      "Memory is the largest percentage increase at 435%",
+      "GPU remains the largest dollar component in both systems"
+    ],
+    "changedElements": [
+      "Original dense analyst-table styling converted into a consulting slide table",
+      "English labels translated into Korean",
+      "Highest-impact rows are highlighted with text color instead of cell fills"
+    ],
+    "dataFidelity": "exact",
+    "notes": "All table values are copied from the visible source image. Styling changes are presentation-only."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "data-total",
+      "label": "원본 총액 보존",
+      "status": "pass",
+      "detail": "GB300 $3,994,551, VR200 $7,803,148, Diff. 95% 유지",
+      "checkedAt": "2026-05-28T16:00:00.000+09:00"
+    },
+    {
+      "id": "style-preset",
+      "label": "Consulting Slide 프리셋 적용",
+      "status": "pass",
+      "detail": "PNG export 후 흰 배경, 굵은 제목, 컨설팅 표 밀도 적용 확인",
+      "checkedAt": "2026-05-28T22:07:00.000+09:00"
+    },
+    {
+      "id": "text-clipping",
+      "label": "표 텍스트 잘림 확인",
+      "status": "pass",
+      "detail": "긴 항목명, 금액 열, 합계 행이 잘리지 않음",
+      "checkedAt": "2026-05-28T22:07:00.000+09:00"
+    },
+    {
+      "id": "source-shape-fidelity",
+      "label": "표 원본 구조 보존",
+      "status": "pass",
+      "detail": "원본 표의 구성품 순서, GB300/VR200/Diff. 비교 구조와 합계 행을 유지",
+      "checkedAt": "2026-05-28T22:20:00.000+09:00"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "34px 44px 0",
+    "contentPadding": "14px 16px 16px",
+    "sourcePadding": "0 44px 22px",
+    "titleFontSize": 54,
+    "subtitleFontSize": 31,
+    "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Geist\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "title": "VR200 랙 원가, GB300 대비 95% 높다",
+    "subtitle": "Nvidia NVL72 Bill of Materials, 단일 랙 기준 추정 원가",
+    "source": "Morgan Stanley Research estimates"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "component",
+        "label": "구성품",
+        "dataType": "text",
+        "align": "left",
+        "width": "39%",
+        "isRowHeader": true
+      },
+      {
+        "key": "gb300",
+        "label": "GB300",
+        "dataType": "currency",
+        "align": "right",
+        "width": "22%"
+      },
+      {
+        "key": "vr200",
+        "label": "VR200",
+        "dataType": "currency",
+        "align": "right",
+        "width": "22%"
+      },
+      {
+        "key": "diff",
+        "label": "차이",
+        "dataType": "percent",
+        "align": "right",
+        "width": "17%"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "component": {
+            "value": "GPU",
+            "displayValue": "GPU"
+          },
+          "gb300": {
+            "value": 2520000,
+            "displayValue": "$2,520,000"
+          },
+          "vr200": {
+            "value": 3960000,
+            "displayValue": "$3,960,000",
+            "highlight": "accent"
+          },
+          "diff": {
+            "value": 57,
+            "displayValue": "57%"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "CPU",
+            "displayValue": "CPU"
+          },
+          "gb300": {
+            "value": 180000,
+            "displayValue": "$180,000"
+          },
+          "vr200": {
+            "value": 180000,
+            "displayValue": "$180,000"
+          },
+          "diff": {
+            "value": 0,
+            "displayValue": "0%",
+            "highlight": "muted"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "NVLink Switch chip",
+            "displayValue": "NVLink 스위치 칩"
+          },
+          "gb300": {
+            "value": 64800,
+            "displayValue": "$64,800"
+          },
+          "vr200": {
+            "value": 144000,
+            "displayValue": "$144,000"
+          },
+          "diff": {
+            "value": 122,
+            "displayValue": "122%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Other networking chips",
+            "displayValue": "기타 네트워킹 칩"
+          },
+          "gb300": {
+            "value": 261000,
+            "displayValue": "$261,000"
+          },
+          "vr200": {
+            "value": 576000,
+            "displayValue": "$576,000"
+          },
+          "diff": {
+            "value": 121,
+            "displayValue": "121%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Memory",
+            "displayValue": "메모리",
+            "highlight": "accent"
+          },
+          "gb300": {
+            "value": 373939,
+            "displayValue": "$373,939"
+          },
+          "vr200": {
+            "value": 2001600,
+            "displayValue": "$2,001,600",
+            "highlight": "accent"
+          },
+          "diff": {
+            "value": 435,
+            "displayValue": "435%",
+            "highlight": "positive",
+            "badge": "최대 상승"
+          }
+        },
+        "highlight": true
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Cooling",
+            "displayValue": "쿨링"
+          },
+          "gb300": {
+            "value": 64610,
+            "displayValue": "$64,610"
+          },
+          "vr200": {
+            "value": 72080,
+            "displayValue": "$72,080"
+          },
+          "diff": {
+            "value": 12,
+            "displayValue": "12%"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Power supply",
+            "displayValue": "전원공급장치"
+          },
+          "gb300": {
+            "value": 57600,
+            "displayValue": "$57,600"
+          },
+          "vr200": {
+            "value": 76000,
+            "displayValue": "$76,000"
+          },
+          "diff": {
+            "value": 32,
+            "displayValue": "32%"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "PCB",
+            "displayValue": "PCB"
+          },
+          "gb300": {
+            "value": 35100,
+            "displayValue": "$35,100"
+          },
+          "vr200": {
+            "value": 116730,
+            "displayValue": "$116,730"
+          },
+          "diff": {
+            "value": 233,
+            "displayValue": "233%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "ABF Substrate",
+            "displayValue": "ABF 기판"
+          },
+          "gb300": {
+            "value": 11160,
+            "displayValue": "$11,160"
+          },
+          "vr200": {
+            "value": 20340,
+            "displayValue": "$20,340"
+          },
+          "diff": {
+            "value": 82,
+            "displayValue": "82%"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "MLCC",
+            "displayValue": "MLCC"
+          },
+          "gb300": {
+            "value": 1530,
+            "displayValue": "$1,530"
+          },
+          "vr200": {
+            "value": 4320,
+            "displayValue": "$4,320"
+          },
+          "diff": {
+            "value": 182,
+            "displayValue": "182%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Others",
+            "displayValue": "기타"
+          },
+          "gb300": {
+            "value": 402412,
+            "displayValue": "$402,412"
+          },
+          "vr200": {
+            "value": 623278,
+            "displayValue": "$623,278"
+          },
+          "diff": {
+            "value": 55,
+            "displayValue": "55%"
+          }
+        }
+      },
+      {
+        "cells": {
+          "component": {
+            "value": "Rack assembly value add",
+            "displayValue": "랙 조립 부가가치"
+          },
+          "gb300": {
+            "value": 22400,
+            "displayValue": "$22,400"
+          },
+          "vr200": {
+            "value": 28800,
+            "displayValue": "$28,800"
+          },
+          "diff": {
+            "value": 29,
+            "displayValue": "29%"
+          }
+        }
+      },
+      {
+        "rowType": "total",
+        "highlight": true,
+        "cells": {
+          "component": {
+            "value": "Total",
+            "displayValue": "합계",
+            "highlight": "accent"
+          },
+          "gb300": {
+            "value": 3994551,
+            "displayValue": "$3,994,551",
+            "highlight": "accent"
+          },
+          "vr200": {
+            "value": 7803148,
+            "displayValue": "$7,803,148",
+            "highlight": "accent"
+          },
+          "diff": {
+            "value": 95,
+            "displayValue": "95%",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "8px 12px",
+      "lineHeight": 1.18,
+      "zebraStripe": false,
+      "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Geist\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "22px",
+        "body": "22px",
+        "total": "24px",
+        "badge": "15px",
+        "unit": "15px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "VR200 원가가 2배 뛴다",
+    "subMessage": "메모리와 네트워킹 부품이 비용 상승을 이끈다",
+    "headline": "VR200 NVL72 랙 원가는 약 780만 달러로 GB300 대비 95% 높다",
+    "summary": "원본 표의 핵심은 VR200 랙의 총 원가가 GB300 대비 거의 두 배로 높아진다는 점이다. 특히 메모리 비용은 435% 증가하며 비용 상승의 가장 강한 신호로 보인다.",
+    "story": "GPU가 여전히 가장 큰 절대 비용 항목이지만, 변화율 기준으로는 메모리, PCB, MLCC, NVLink 스위치가 더 크게 튄다. 따라서 VR200 세대에서는 단순 GPU 가격보다 랙 전체 부품 생태계의 비용 압력이 중요해진다.",
+    "keyTakeaways": [
+      "VR200 총 원가는 $7.8M로 GB300의 $4.0M 대비 95% 높다",
+      "메모리 비용은 $0.37M에서 $2.00M로 435% 증가한다",
+      "네트워킹 칩과 PCB도 세 자릿수 증가율을 보인다"
+    ],
+    "questionsRaised": [
+      "메모리 공급 부족이 랙 가격과 마진을 얼마나 흔들까?",
+      "VR200 세대에서 네트워킹 부품 공급망 병목이 커질까?"
+    ],
+    "viewerAction": "AI 서버 원가를 볼 때 GPU뿐 아니라 메모리와 네트워킹 부품까지 함께 추적해야 한다.",
+    "contextualNotes": [
+      "원본 이미지는 Morgan Stanley Research estimates 기반의 BoM 표다.",
+      "Diff.는 GB300 대비 VR200 증가율로 해석했다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "$7.8M",
+      "reason": "VR200 NVL72 단일 랙 추정 원가"
+    },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": [
+        "#B42318",
+        "#475467"
+      ],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      {
+        "row": 4,
+        "col": "diff",
+        "reason": "메모리 비용 증가율 최대"
+      },
+      {
+        "row": 12,
+        "col": "vr200",
+        "reason": "VR200 총 원가"
+      },
+      {
+        "row": 12,
+        "col": "diff",
+        "reason": "전체 원가 증가율"
+      }
+    ]
+  }
+}

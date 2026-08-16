@@ -1,0 +1,163 @@
+{
+  "id": "vision-banana-segmentation-bench",
+  "sourceImage": "input/08-vision-banana-segmentation-bench.png",
+  "analyzedAt": "2026-05-13T00:00:00+09:00",
+  "structure": {
+    "chartType": "bar",
+    "title": "분할 벤치마크에서도 범용 모델의 침투가 시작됐다",
+    "subtitle": "Cityscapes와 SA-Co/Gold는 기존 세그멘테이션 모델의 영역이었다",
+    "source": "원문 PDF 기반 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "Vision Banana",
+        "SAM3",
+        "DINO-X",
+        "Gemini 2.5",
+        "OWLv2"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "값",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "점수",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "점수",
+        "data": [
+          {
+            "x": "Vision Banana",
+            "y": 0.699,
+            "confidence": 0.86
+          },
+          {
+            "x": "SAM3",
+            "y": 0.54,
+            "confidence": 0.86
+          },
+          {
+            "x": "DINO-X",
+            "y": 0.552,
+            "confidence": 0.86
+          },
+          {
+            "x": "Gemini 2.5",
+            "y": 0.652,
+            "confidence": 0.86
+          },
+          {
+            "x": "OWLv2",
+            "y": 0.52,
+            "confidence": 0.86
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.86,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "일부 원문 OCR 숫자는 사람이 읽어 보정했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.7,
+      "description": "핵심 방향성만 간명하게 보여주기 위한 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "원문 수치를 읽기 쉽게 재배치했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": -25.60801144492131,
+        "absoluteChange": -0.17899999999999994,
+        "from": 0.699,
+        "to": 0.52
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0.699,
+        "at": ""
+      },
+      "min": {
+        "value": 0.52,
+        "at": ""
+      },
+      "average": 0.5926,
+      "median": 0.552,
+      "range": 0.17899999999999994
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "0.699",
+    "subMessage": "Cityscapes와 SA-Co/Gold는 기존 세그멘테이션 모델의 영역이었다",
+    "headline": "0.699",
+    "summary": "출력을 RGB 이미지로 통일하면 전문 태스크도 생성 모델의 하위 문제로 바뀔 수 있습니다.",
+    "story": "출력을 RGB 이미지로 통일하면 전문 태스크도 생성 모델의 하위 문제로 바뀔 수 있습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 해설과 함께 확인합니다.",
+    "contextualNotes": [
+      "원문 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "OWLv2",
+        "y": 0.52
+      },
+      "reason": "출력을 RGB 이미지로 통일하면 전문 태스크도 생성 모델의 하위 문제로 바뀔 수 있습니다.",
+      "displayText": "0.699"
+    },
+    "densityLevel": "balanced"
+  }
+}

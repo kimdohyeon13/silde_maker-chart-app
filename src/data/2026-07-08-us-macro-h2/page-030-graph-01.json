@@ -1,0 +1,300 @@
+{
+  "id": "page-030-graph-01",
+  "sourceImage": "input/33-page_030_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Trendforce"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "중국 주요 반도체 기업 Capex 추정치",
+    "subtitle": "",
+    "source": "자료: Trendforce",
+    "timeRange": "'23년~'26년",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": [
+        "'23년",
+        "'24년",
+        "'25년",
+        "'26년"
+      ],
+      "unit": "년",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Capex",
+      "type": "value",
+      "tickValues": [],
+      "unit": "십억달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 12
+    },
+    "legend": [
+      {
+        "name": "CXMT",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "YMTC",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "SMIC",
+        "role": "secondary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CXMT",
+        "data": [
+          {
+            "x": "'23년",
+            "y": 2.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "'24년",
+            "y": 3.7,
+            "confidence": 0.72
+          },
+          {
+            "x": "'25년",
+            "y": 6.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "'26년",
+            "y": 10.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "YMTC",
+        "data": [
+          {
+            "x": "'23년",
+            "y": 1.3,
+            "confidence": 0.72
+          },
+          {
+            "x": "'24년",
+            "y": 3.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'25년",
+            "y": 3.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "'26년",
+            "y": 4.5,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      },
+      {
+        "name": "SMIC",
+        "data": [
+          {
+            "x": "'23년",
+            "y": 7.4,
+            "confidence": 0.72
+          },
+          {
+            "x": "'24년",
+            "y": 7.2,
+            "confidence": 0.72
+          },
+          {
+            "x": "'25년",
+            "y": 8.0,
+            "confidence": 0.72
+          },
+          {
+            "x": "'26년",
+            "y": 8.0,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#6667AB",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 12,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.417,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 376.2,
+        "absoluteChange": 7.9,
+        "from": 2.1,
+        "to": 10.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 10.0,
+        "at": ""
+      },
+      "min": {
+        "value": 2.1,
+        "at": ""
+      },
+      "average": 5.575,
+      "median": 5.1,
+      "range": 7.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "중국 주요 반도체 기업 Capex 추정치",
+    "subMessage": "",
+    "headline": "중국 주요 반도체 기업 Capex 추정치",
+    "summary": "",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Trendforce"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 8.0
+      },
+      "displayText": "중국 주요 반도체 기업 Cap",
+      "reason": ""
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,799 @@
+{
+  "id": "page-31-graph-01",
+  "sourceImage": "input/50-page_31_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "고용 지출 억제",
+    "subtitle": "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1996",
+        "1996.29",
+        "1996.58",
+        "1996.88",
+        "1997.17",
+        "1997.46",
+        "1997.75",
+        "1998",
+        "1998.33",
+        "1998.62",
+        "1998.92",
+        "1999.21",
+        "1999.5",
+        "1999.79",
+        "2000.08",
+        "2000.38",
+        "2000.67",
+        "2001",
+        "2001.25",
+        "2001.54",
+        "2001.83",
+        "2002.12",
+        "2002.42",
+        "2002.71",
+        "2003",
+        "2003.29",
+        "2003.58",
+        "2003.88",
+        "2004.17",
+        "2004.46",
+        "2004.75",
+        "2005",
+        "2005.33",
+        "2005.62",
+        "2005.92",
+        "2006.21",
+        "2006.5",
+        "2006.79",
+        "2007.08",
+        "2007.38",
+        "2007.67",
+        "2008",
+        "2008.25",
+        "2008.54",
+        "2008.83",
+        "2009.12",
+        "2009.42",
+        "2009.71",
+        "2010",
+        "2010.29",
+        "2010.58",
+        "2010.88",
+        "2011.17",
+        "2011.46",
+        "2011.75",
+        "2012",
+        "2012.33",
+        "2012.62",
+        "2012.92",
+        "2013.21",
+        "2013.5",
+        "2013.79",
+        "2014.08",
+        "2014.38",
+        "2014.67",
+        "2015",
+        "2015.25",
+        "2015.54",
+        "2015.83",
+        "2016.12",
+        "2016.42",
+        "2016.71",
+        "2017",
+        "2017.29",
+        "2017.58",
+        "2017.88",
+        "2018.17",
+        "2018.46",
+        "2018.75",
+        "2019",
+        "2019.33",
+        "2019.62",
+        "2019.92",
+        "2020.21",
+        "2020.5",
+        "2020.79",
+        "2021.08",
+        "2021.38",
+        "2021.67",
+        "2022",
+        "2022.25",
+        "2022.54",
+        "2022.83",
+        "2023.12",
+        "2023.42",
+        "2023.71",
+        "2024"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "1996",
+        "2008",
+        "2012",
+        "2024"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "4",
+        "56",
+        "58",
+        "60",
+        "62"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 4.0,
+      "max": 62.0
+    },
+    "legend": [
+      {
+        "name": "고용 지출 억제",
+        "role": "primary",
+        "originalColor": "#445389",
+        "remakeColor": "#445389"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "고용 지출 억제",
+        "data": [
+          {
+            "x": "1996",
+            "y": 42.86,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.29",
+            "y": 42.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.58",
+            "y": 42.86,
+            "confidence": 0.8
+          },
+          {
+            "x": "1996.88",
+            "y": 46.92,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.17",
+            "y": 51,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.46",
+            "y": 52.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "1997.75",
+            "y": 53.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998",
+            "y": 53.88,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.33",
+            "y": 55,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.62",
+            "y": 57.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "1998.92",
+            "y": 60.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.21",
+            "y": 61.42,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.5",
+            "y": 62,
+            "confidence": 0.8
+          },
+          {
+            "x": "1999.79",
+            "y": 61.42,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.08",
+            "y": 61.42,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.38",
+            "y": 61.42,
+            "confidence": 0.8
+          },
+          {
+            "x": "2000.67",
+            "y": 60.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001",
+            "y": 59.68,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.25",
+            "y": 55.62,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.54",
+            "y": 52.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2001.83",
+            "y": 48.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.12",
+            "y": 48.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.42",
+            "y": 46.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2002.71",
+            "y": 45.18,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003",
+            "y": 38.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.29",
+            "y": 37.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.58",
+            "y": 35.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2003.88",
+            "y": 31.84,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.17",
+            "y": 27.78,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.46",
+            "y": 26,
+            "confidence": 0.8
+          },
+          {
+            "x": "2004.75",
+            "y": 22.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005",
+            "y": 22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.33",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.62",
+            "y": 20.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2005.92",
+            "y": 24.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.21",
+            "y": 25.46,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.5",
+            "y": 26.62,
+            "confidence": 0.8
+          },
+          {
+            "x": "2006.79",
+            "y": 28.36,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.08",
+            "y": 24.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.38",
+            "y": 22.56,
+            "confidence": 0.8
+          },
+          {
+            "x": "2007.67",
+            "y": 24.88,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008",
+            "y": 26,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.25",
+            "y": 26,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.54",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2008.83",
+            "y": 13.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.12",
+            "y": 9.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.42",
+            "y": 8.64,
+            "confidence": 0.8
+          },
+          {
+            "x": "2009.71",
+            "y": 13.86,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010",
+            "y": 12.12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.29",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.58",
+            "y": 5.74,
+            "confidence": 0.8
+          },
+          {
+            "x": "2010.88",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.17",
+            "y": 8.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.46",
+            "y": 8.64,
+            "confidence": 0.8
+          },
+          {
+            "x": "2011.75",
+            "y": 6.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.33",
+            "y": 8.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.62",
+            "y": 11.54,
+            "confidence": 0.8
+          },
+          {
+            "x": "2012.92",
+            "y": 9.8,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.21",
+            "y": 5.74,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.5",
+            "y": 8.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2013.79",
+            "y": 10.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.08",
+            "y": 12.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.38",
+            "y": 13.86,
+            "confidence": 0.8
+          },
+          {
+            "x": "2014.67",
+            "y": 15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015",
+            "y": 17.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.25",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.54",
+            "y": 19.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2015.83",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.12",
+            "y": 19.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.42",
+            "y": 20.82,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.71",
+            "y": 20.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017",
+            "y": 18.5,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.29",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.58",
+            "y": 20.82,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.88",
+            "y": 20.82,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.17",
+            "y": 19.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.46",
+            "y": 22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.75",
+            "y": 42.86,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019",
+            "y": 34.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.33",
+            "y": 24.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.62",
+            "y": 20.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.92",
+            "y": 15,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.21",
+            "y": 14.44,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.5",
+            "y": 10.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.79",
+            "y": 6.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.08",
+            "y": 4.58,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.38",
+            "y": 5.74,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.67",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022",
+            "y": 6.9,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.25",
+            "y": 5.74,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.54",
+            "y": 8.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.83",
+            "y": 8.64,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.12",
+            "y": 8.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.42",
+            "y": 9.22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.71",
+            "y": 8.64,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 6.9,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#445389"
+      }
+    ],
+    "totalDataPoints": 97,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.213,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -83.9,
+        "absoluteChange": -35.96,
+        "from": 42.86,
+        "to": 6.9
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 62.0,
+        "at": ""
+      },
+      "min": {
+        "value": 4.58,
+        "at": ""
+      },
+      "average": 25.948865979381445,
+      "median": 20.24,
+      "range": 57.42
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "고용 지출 억제",
+    "subMessage": "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다.",
+    "headline": "고용 지출 억제",
+    "summary": "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 6.9
+      },
+      "displayText": "고용 지출 억제",
+      "reason": "높은 마진과 낮은 고용 지출은 AI 투자 재원을 만들어 줍니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

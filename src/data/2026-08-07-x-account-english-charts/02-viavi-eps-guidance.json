@@ -1,0 +1,256 @@
+{
+  "id": "02-viavi-eps-guidance",
+  "mode": "faithful",
+  "sourceImage": "input/w79-10.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "주당순이익 가이던스는 컨센서스보다 절반 이상 높다",
+    "originalMessage": "9월 분기 조정 주당순이익 가이던스 0.40~0.42달러 대 컨센서스 0.27달러",
+    "preservedElements": [
+      "원본 차트 종류",
+      "막대 개수와 순서",
+      "축 구조와 0 기준선",
+      "원본에 인쇄된 실제 수치",
+      "비교 방향과 핵심 메시지",
+      "출처 맥락",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 노출 문자열의 영어 번역",
+      "색상 조정",
+      "글꼴 조정",
+      "여백 조정"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본의 세 개 막대와 센트 단위를 그대로 두고 문자열만 영어로 옮겼습니다.",
+    "sourceAttribution": "Source: Viavi Solutions fiscal Q4 2026 results release and TheFly/MarketBeat consensus, 5 August 2026 - source-visible"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "faithful-mode-preserved",
+      "label": "원본 충실 모드 유지",
+      "status": "pass",
+      "detail": "원본의 차트 종류, 막대 개수, 시리즈 구성, 실제 수치를 그대로 유지하고 텍스트만 영어로 옮겼습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에서 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "dataFidelity와 출처 줄에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 문자열",
+      "status": "pass",
+      "detail": "@WorldTechRsrch 영문 계정용이므로 화면에 렌더되는 모든 문자열을 영어로 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#D92D3A",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "EPS guidance sits more than half above consensus",
+    "subtitle": "September-quarter adjusted EPS guidance of $0.40-0.42 versus $0.27 consensus",
+    "source": "Source: Viavi Solutions fiscal Q4 2026 results release and TheFly/MarketBeat consensus, 5 August 2026 - source-visible",
+    "timeRange": "September quarter 2026 guidance",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Street consensus",
+        "Guidance low",
+        "Guidance high"
+      ],
+      "displayTickValues": [
+        "Street consensus",
+        "Guidance low",
+        "Guidance high"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Adjusted EPS (cents)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "Adjusted EPS",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Adjusted EPS",
+        "data": [
+          {
+            "x": "Street consensus",
+            "y": 27,
+            "confidence": 0.74
+          },
+          {
+            "x": "Guidance low",
+            "y": 40,
+            "confidence": 0.74
+          },
+          {
+            "x": "Guidance high",
+            "y": 42,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Values were read off the source image; check Viavi's own filing before any precision use."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.183,
+      "description": "Spread preserved from the source image."
+    },
+    "changeRates": [
+      {
+        "period": "First versus last bar",
+        "percentChange": 55.6,
+        "absoluteChange": 15,
+        "from": 27,
+        "to": 42
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 42,
+        "at": "Guidance high"
+      },
+      "min": {
+        "value": 27,
+        "at": "Street consensus"
+      },
+      "average": 36.3333,
+      "median": 40,
+      "range": 15
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "EPS guidance sits more than half above consensus",
+    "subMessage": "September-quarter adjusted EPS guidance of $0.40-0.42 versus $0.27 consensus",
+    "headline": "EPS guidance sits more than half above consensus",
+    "summary": "September-quarter adjusted EPS guidance of $0.40-0.42 versus $0.27 consensus",
+    "story": "The original three-bar comparison in cents is kept intact; only the text has been rendered in English.",
+    "keyTakeaways": [
+      "September-quarter adjusted EPS guidance of $0.40-0.42 versus $0.27 consensus",
+      "Even the low end of guidance is 13 cents above the street.",
+      "Values are source-visible readings from the original chart."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the consensus bar first, then see how far both guidance bars clear it.",
+    "contextualNotes": [
+      "Source: Viavi Solutions fiscal Q4 2026 results release and TheFly/MarketBeat consensus, 5 August 2026 - source-visible",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D3A",
+      "secondary": [
+        "#AEB8C6",
+        "#C8D0DA"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Guidance high",
+        "y": 42
+      },
+      "displayText": "42",
+      "reason": "September-quarter adjusted EPS guidance of $0.40-0.42 versus $0.27 consensus"
+    },
+    "densityLevel": "focused"
+  }
+}

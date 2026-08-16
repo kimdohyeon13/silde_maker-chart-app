@@ -1,0 +1,251 @@
+{
+  "id": "04-d218a-asml-duv-units",
+  "mode": "faithful",
+  "sourceImage": "input/dib-218-07.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "비교 기준은 ASML의 실제 판매량",
+    "originalMessage": "2025년 ASML DUV 279대, 그중 47%가 immersion(약 131대). 중국의 20대는 의미 있지만 규모는 다르다",
+    "preservedElements": [
+      "ASML 2025년 DUV 인식 대수",
+      "immersion 비중에서 환산한 대수",
+      "중국 자국 노광 라인 대수",
+      "대수 단위의 단일 시리즈",
+      "ASML 실적 자료 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "원본 텍스트 슬라이드를 세 개 막대의 비교 차트로 정리",
+      "영문 표기로 번역",
+      "100 이상 값은 10 단위 내림 표기(279 → 270, 131 → 130)",
+      "중국 라인 막대에만 강조색 적용",
+      "Paperlogy 900/300 제목 계층"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 슬라이드에 인쇄된 279대·47%·약 131대·20대를 그대로 사용했고, 계정 규칙에 따라 100 이상 값만 10 단위로 내려 적었습니다.",
+    "sourceAttribution": "Source: ASML full-year 2025 results slide"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "279대, 약 131대, 20대는 원본 슬라이드에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "279 → 270, 131 → 130으로 내려 적었고 부제도 같은 숫자로 맞췄습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "제목·부제·축·범례·출처·내러티브를 모두 영문으로 작성했습니다."
+    },
+    {
+      "id": "no-point-color-key",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않았습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "ASML's DUV year versus China's count",
+    "subtitle": "ASML booked 270 DUV systems in 2025, about 130 of them immersion; China's homegrown line counts 20",
+    "source": "Source: ASML full-year 2025 results slide · source-visible",
+    "timeRange": "2025",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "ASML DUV, all types",
+        "ASML immersion DUV",
+        "China homegrown line"
+      ],
+      "displayTickValues": [
+        "ASML DUV, all types",
+        "ASML immersion DUV",
+        "China homegrown line"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Systems recognised",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 300
+    },
+    "legend": [
+      {
+        "name": "Systems",
+        "role": "primary",
+        "originalColor": "#1F5FAE",
+        "remakeColor": "#B9C0C9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Systems",
+        "data": [
+          {
+            "x": "ASML DUV, all types",
+            "y": 270,
+            "confidence": 0.8
+          },
+          {
+            "x": "ASML immersion DUV",
+            "y": 130,
+            "confidence": 0.76
+          },
+          {
+            "x": "China homegrown line",
+            "y": 20,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C0C9"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.76,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "The immersion count is the source slide's own 47% conversion, not a separately reported line item."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.9,
+      "description": "Counts fall sharply from the full DUV line to the homegrown programme.",
+      "recentDirection": "down"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.79,
+      "description": "The three counts sit an order of magnitude apart."
+    },
+    "changeRates": [
+      {
+        "period": "ASML immersion to China line",
+        "percentChange": -84.6,
+        "absoluteChange": -110,
+        "from": 130,
+        "to": 20
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 270,
+        "at": "ASML DUV, all types"
+      },
+      "min": {
+        "value": 20,
+        "at": "China homegrown line"
+      },
+      "average": 140,
+      "median": 130,
+      "range": 250
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "ASML's DUV year versus China's count",
+    "subMessage": "ASML booked 270 DUV systems in 2025, about 130 of them immersion; China's homegrown line counts 20",
+    "headline": "ASML's DUV year versus China's count",
+    "summary": "One supplier's single year of immersion DUV is several times the entire homegrown count.",
+    "story": "The export-control argument is usually made in nanometres. The source slide makes it in units, and the units are the part that sets a calendar.",
+    "keyTakeaways": [
+      "ASML recognised revenue on 270 DUV systems in 2025.",
+      "About 130 of those were immersion systems.",
+      "The homegrown line is counted in 20 units.",
+      "Figures are read from the source slide (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the immersion bar with the homegrown bar before reading a capacity claim.",
+    "contextualNotes": [
+      "Source: ASML full-year 2025 results slide",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#B9C0C9",
+      "secondary": [
+        "#D7DEE8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "China homegrown line",
+      "y": 20,
+      "displayText": "20"
+    },
+    "densityLevel": "focused"
+  }
+}

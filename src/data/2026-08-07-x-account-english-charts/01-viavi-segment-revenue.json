@@ -1,0 +1,262 @@
+{
+  "id": "01-viavi-segment-revenue",
+  "mode": "faithful",
+  "sourceImage": "input/w79-05.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "성장은 전부 네트워크 테스트 쪽에서 나왔다",
+    "originalMessage": "NSE 3억 5,390만 달러로 69.2% 증가, OSP 8,920만 달러로 9.6% 증가",
+    "preservedElements": [
+      "원본 차트 종류",
+      "막대 개수와 순서",
+      "축 구조와 0 기준선",
+      "원본에 인쇄된 실제 수치",
+      "비교 방향과 핵심 메시지",
+      "출처 맥락",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 노출 문자열의 영어 번역",
+      "색상 조정",
+      "글꼴 조정",
+      "여백 조정"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본의 네 개 막대와 값을 그대로 두고 문자열만 영어로 옮겼습니다.",
+    "sourceAttribution": "Source: back-calculated from the growth rates in Viavi Solutions' fiscal Q4 2026 results release, 5 August 2026 - source-visible"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "faithful-mode-preserved",
+      "label": "원본 충실 모드 유지",
+      "status": "pass",
+      "detail": "원본의 차트 종류, 막대 개수, 시리즈 구성, 실제 수치를 그대로 유지하고 텍스트만 영어로 옮겼습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에서 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "dataFidelity와 출처 줄에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 문자열",
+      "status": "pass",
+      "detail": "@WorldTechRsrch 영문 계정용이므로 화면에 렌더되는 모든 문자열을 영어로 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#D92D3A",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "All of the growth came from network test",
+    "subtitle": "NSE revenue $350M, up 69.2%; OSP revenue $89.2M, up 9.6%",
+    "source": "Source: back-calculated from the growth rates in Viavi Solutions' fiscal Q4 2026 results release, 5 August 2026 - source-visible",
+    "timeRange": "June quarter 2025 versus June quarter 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "NSE FY25",
+        "NSE FY26",
+        "OSP FY25",
+        "OSP FY26"
+      ],
+      "displayTickValues": [
+        "NSE FY25",
+        "NSE FY26",
+        "OSP FY25",
+        "OSP FY26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Revenue ($M)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 400
+    },
+    "legend": [
+      {
+        "name": "Segment revenue",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#D92D3A"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Segment revenue",
+        "data": [
+          {
+            "x": "NSE FY25",
+            "y": 200,
+            "confidence": 0.74
+          },
+          {
+            "x": "NSE FY26",
+            "y": 350,
+            "confidence": 0.74
+          },
+          {
+            "x": "OSP FY25",
+            "y": 81.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "OSP FY26",
+            "y": 89.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Values were read off the source image; check Viavi's own filing before any precision use."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.604,
+      "description": "Spread preserved from the source image."
+    },
+    "changeRates": [
+      {
+        "period": "First versus last bar",
+        "percentChange": -57.3,
+        "absoluteChange": -119.9,
+        "from": 209.1,
+        "to": 89.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 353.9,
+        "at": "NSE FY26"
+      },
+      "min": {
+        "value": 81.4,
+        "at": "OSP FY25"
+      },
+      "average": 183.4,
+      "median": 149.15,
+      "range": 272.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "All of the growth came from network test",
+    "subMessage": "NSE revenue $350M, up 69.2%; OSP revenue $89.2M, up 9.6%",
+    "headline": "All of the growth came from network test",
+    "summary": "NSE revenue $353.9M, up 69.2%; OSP revenue $89.2M, up 9.6%",
+    "story": "The original comparison of the two segments across both years is kept intact; only the text has been rendered in English.",
+    "keyTakeaways": [
+      "NSE revenue $353.9M, up 69.2%; OSP revenue $89.2M, up 9.6%",
+      "Network test added about $145M year on year, while OSP added under $8M.",
+      "Values are source-visible readings from the original chart."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the two NSE bars first, then check how little the OSP pair moved.",
+    "contextualNotes": [
+      "Source: back-calculated from the growth rates in Viavi Solutions' fiscal Q4 2026 results release, 5 August 2026 - source-visible",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#D92D3A",
+      "secondary": [
+        "#AEB8C6",
+        "#C8D0DA"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "NSE FY26",
+        "y": 353.9
+      },
+      "displayText": "353.9",
+      "reason": "NSE revenue $353.9M, up 69.2%; OSP revenue $89.2M, up 9.6%"
+    },
+    "densityLevel": "focused"
+  }
+}

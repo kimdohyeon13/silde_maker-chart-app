@@ -1,0 +1,390 @@
+{
+  "id": "consensus-eps-estimates",
+  "mode": "faithful",
+  "sourceImage": "input/01-consensus-eps-estimates.png",
+  "analyzedAt": "2026-07-27T20:45:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Consensus EPS Estimates",
+    "originalMessage": "Consensus EPS Estimates",
+    "preservedElements": [
+      "상단 단일 EPS 선그래프",
+      "좌측 과거 구간 음영",
+      "Y축 0~40과 8 단위 눈금",
+      "2026~2030 회계연도 표 5행",
+      "EPS 추정치·성장률·선행 PER·최저·최고·애널리스트 수"
+    ],
+    "changedElements": [
+      "제목과 표 헤더를 한국어로 번역",
+      "초광폭 원본을 16:9 Paperlogy 카드로 재배치",
+      "차트와 표를 재현 가능한 DOM 요소로 다시 그림"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "표 30개 수치는 화면의 셀을 그대로 전사한 exact 값입니다. 차트의 2027~2031 구간은 표의 EPS 추정치와 대응하는 exact 값이고, 좌측 음영 구간의 2025~2026 두 점만 화면 판독 근사값입니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "상단 7포인트 라인과 하단 5행×7열 표를 한 카드에 배치합니다.",
+      "checkedAt": "2026-07-27"
+    },
+    {
+      "id": "table-values-exact",
+      "label": "표 수치 30개 보존",
+      "status": "pass",
+      "detail": "원본 표의 모든 숫자를 소수점과 퍼센트까지 그대로 전사했습니다.",
+      "checkedAt": "2026-07-27"
+    },
+    {
+      "id": "source-visible-review",
+      "label": "과거 구간 근사값 공개",
+      "status": "pass",
+      "detail": "원본에 표 값이 없는 좌측 두 점은 source-visible로 구분했습니다.",
+      "checkedAt": "2026-07-27"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "15px 26px 0",
+    "contentPadding": "0 22px",
+    "sourcePadding": "0",
+    "hideSource": true,
+    "titleFontSize": 26,
+    "subtitleFontSize": 14,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 398,
+    "gridMode": "solid",
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "lineStrokeWidth": 2.3,
+    "compactChartMargins": true,
+    "accentColor": "#4B5563"
+  },
+  "chartTableOptions": {
+    "chartHeight": 174,
+    "gap": 4
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "컨센서스 EPS 추정치",
+    "source": "",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2027",
+        "2031"
+      ],
+      "displayTickValues": [
+        "2027",
+        "2031"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "8",
+        "16",
+        "24",
+        "32",
+        "40"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "EPS 추정치",
+        "originalColor": "#5A5A5A",
+        "remakeColor": "#4B5563",
+        "role": "primary",
+        "seriesKind": "normal"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "EPS 추정치",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {
+            "x": "2025",
+            "y": 2.8,
+            "confidence": 0.65
+          },
+          {
+            "x": "2026",
+            "y": 3.7,
+            "confidence": 0.65
+          },
+          {
+            "x": "2027",
+            "y": 7.45,
+            "confidence": 0.99
+          },
+          {
+            "x": "2028",
+            "y": 13.72,
+            "confidence": 0.99
+          },
+          {
+            "x": "2029",
+            "y": 19.93,
+            "confidence": 0.99
+          },
+          {
+            "x": "2030",
+            "y": 23.95,
+            "confidence": 0.99
+          },
+          {
+            "x": "2031",
+            "y": 37.07,
+            "confidence": 0.99
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.89,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 표에 없는 2025~2026 차트 값"
+      ],
+      "readabilityScore": "excellent"
+    }
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "period",
+        "label": "회계연도",
+        "align": "left",
+        "dataType": "date",
+        "width": "17%",
+        "isRowHeader": true
+      },
+      {
+        "key": "eps",
+        "label": "EPS 추정치",
+        "align": "right",
+        "dataType": "number",
+        "width": "14%"
+      },
+      {
+        "key": "growth",
+        "label": "전년 대비 성장률",
+        "align": "right",
+        "dataType": "percent",
+        "width": "16%"
+      },
+      {
+        "key": "forwardPe",
+        "label": "선행 PER",
+        "align": "right",
+        "dataType": "number",
+        "width": "14%"
+      },
+      {
+        "key": "low",
+        "label": "최저",
+        "align": "right",
+        "dataType": "number",
+        "width": "13%"
+      },
+      {
+        "key": "high",
+        "label": "최고",
+        "align": "right",
+        "dataType": "number",
+        "width": "13%"
+      },
+      {
+        "key": "analysts",
+        "label": "애널리스트 수",
+        "align": "right",
+        "dataType": "number",
+        "width": "13%"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "period": { "value": "2026년 12월" },
+          "eps": { "value": 7.45, "displayValue": "7.45" },
+          "growth": { "value": 78.63, "displayValue": "78.63%" },
+          "forwardPe": { "value": 70.07, "displayValue": "70.07" },
+          "low": { "value": 6.45, "displayValue": "6.45" },
+          "high": { "value": 9.8, "displayValue": "9.80" },
+          "analysts": { "value": 46, "displayValue": "46" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "period": { "value": "2027년 12월" },
+          "eps": { "value": 13.72, "displayValue": "13.72" },
+          "growth": { "value": 84.24, "displayValue": "84.24%" },
+          "forwardPe": { "value": 38.03, "displayValue": "38.03" },
+          "low": { "value": 8, "displayValue": "8.00" },
+          "high": { "value": 19.46, "displayValue": "19.46" },
+          "analysts": { "value": 45, "displayValue": "45" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "period": { "value": "2028년 12월" },
+          "eps": { "value": 19.93, "displayValue": "19.93" },
+          "growth": { "value": 45.23, "displayValue": "45.23%" },
+          "forwardPe": { "value": 26.19, "displayValue": "26.19" },
+          "low": { "value": 14.12, "displayValue": "14.12" },
+          "high": { "value": 28.04, "displayValue": "28.04" },
+          "analysts": { "value": 30, "displayValue": "30" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "period": { "value": "2029년 12월" },
+          "eps": { "value": 23.95, "displayValue": "23.95" },
+          "growth": { "value": 20.15, "displayValue": "20.15%" },
+          "forwardPe": { "value": 21.8, "displayValue": "21.80" },
+          "low": { "value": 14.65, "displayValue": "14.65" },
+          "high": { "value": 35.4, "displayValue": "35.40" },
+          "analysts": { "value": 6, "displayValue": "6" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "period": { "value": "2030년 12월" },
+          "eps": { "value": 37.07, "displayValue": "37.07" },
+          "growth": { "value": 54.8, "displayValue": "54.80%" },
+          "forwardPe": { "value": 14.08, "displayValue": "14.08" },
+          "low": { "value": 29.21, "displayValue": "29.21" },
+          "high": { "value": 55.84, "displayValue": "55.84" },
+          "analysts": { "value": 6, "displayValue": "6" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 34,
+      "cellPadding": "3px 7px",
+      "lineHeight": 1.1,
+      "zebraStripe": false,
+      "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", sans-serif",
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": false,
+      "fontWeight": {
+        "body": 500,
+        "numeric": 600,
+        "rowHeader": 800,
+        "header": 800
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "12px",
+        "unit": "10px"
+      }
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.96,
+      "description": "컨센서스 EPS 추정치가 장기적으로 상승합니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.73,
+      "description": "후반부 추정치 증가폭이 큽니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 37.07, "at": "2031" },
+      "min": { "value": 2.8, "at": "2025" },
+      "average": 15.52,
+      "median": 13.72,
+      "range": 34.27
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "컨센서스 EPS 추정치",
+    "headline": "컨센서스 EPS 추정치",
+    "summary": "",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [
+      {
+        "fromX": "2025",
+        "toX": "2026",
+        "color": "#F1F3F5",
+        "label": "",
+        "description": "원본 좌측 회색 음영 구간"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#4B5563",
+      "secondary": ["#9CA3AF"],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#4B5563",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "2031", "y": 37.07 },
+      "reason": "원본 선그래프의 마지막 추정치",
+      "displayText": "37.07"
+    },
+    "densityLevel": "detailed"
+  }
+}

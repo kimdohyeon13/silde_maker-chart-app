@@ -1,0 +1,309 @@
+{
+  "id": "02-combo-nvidia-revenue-gpm",
+  "sourceImage": "input/02-01-page_01_graph_01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "consulting-slide",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "원문 숫자",
+      "비교 방향",
+      "투자 메시지"
+    ],
+    "sourceAttribution": "Bloomberg, NVIDIA filings",
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 검수팩 여백"
+    ],
+    "notes": "형식 검수를 위한 복제본이며 원본 데이터 payload는 변경하지 않았습니다."
+  },
+  "allowedTransformations": [
+    "한국어 제목 재작성",
+    "복잡한 원문 레이아웃 단순화",
+    "핵심 시리즈 강조",
+    "출처명 명시화",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "이미지 기반 근사값 표시",
+      "status": "pass",
+      "detail": "원문 PDF가 이미지형인 차트는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."
+    },
+    {
+      "id": "credible-source-line",
+      "label": "공신력 있는 출처 표시",
+      "status": "pass",
+      "detail": "Bloomberg, FactSet, SEMI, 각사 공시/IR 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."
+    },
+    {
+      "id": "readability-first",
+      "label": "Notion 삽입 가독성",
+      "status": "pass",
+      "detail": "긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."
+    },
+    {
+      "id": "paperlogy-format-review",
+      "label": "Paperlogy 900·300 형식 검수",
+      "status": "pass",
+      "detail": "막대+선 콤보의 Paperlogy 900·300, 16:9, 겹침·오버플로·콘텐츠 개수를 DOM에서 확인했습니다.",
+      "checkedAt": "2026-07-17"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 28,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "accentColor": "#101828",
+    "chartHeight": 400
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "엔비디아는 매출과 GPM을 같이 지켰다",
+    "subtitle": "분기 매출은 우상향, 매출총이익률은 높은 구간을 유지",
+    "source": "Bloomberg, NVIDIA filings",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "20Q4",
+        "21Q4",
+        "22Q4",
+        "23Q4",
+        "24Q4",
+        "25Q4",
+        "26Q4E"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "값",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "$B",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 127.44
+    },
+    "legend": [
+      {
+        "name": "매출",
+        "role": "primary",
+        "originalColor": "#1458D4",
+        "remakeColor": "#1458D4"
+      },
+      {
+        "name": "GPM",
+        "role": "secondary",
+        "originalColor": "#FF8A3D",
+        "remakeColor": "#FF8A3D"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "성장률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 89.67999999999999
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출",
+        "renderAs": "bar",
+        "data": [
+          {
+            "x": "20Q4",
+            "y": 5,
+            "confidence": 0.8
+          },
+          {
+            "x": "21Q4",
+            "y": 8,
+            "confidence": 0.8
+          },
+          {
+            "x": "22Q4",
+            "y": 6,
+            "confidence": 0.8
+          },
+          {
+            "x": "23Q4",
+            "y": 22,
+            "confidence": 0.8
+          },
+          {
+            "x": "24Q4",
+            "y": 61,
+            "confidence": 0.8
+          },
+          {
+            "x": "25Q4",
+            "y": 88,
+            "confidence": 0.8
+          },
+          {
+            "x": "26Q4E",
+            "y": 108,
+            "confidence": 0.8
+          }
+        ],
+        "color": "#1458D4"
+      },
+      {
+        "name": "GPM",
+        "renderAs": "line",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "20Q4",
+            "y": 63,
+            "confidence": 0.8
+          },
+          {
+            "x": "21Q4",
+            "y": 66,
+            "confidence": 0.8
+          },
+          {
+            "x": "22Q4",
+            "y": 43,
+            "confidence": 0.8
+          },
+          {
+            "x": "23Q4",
+            "y": 74,
+            "confidence": 0.8
+          },
+          {
+            "x": "24Q4",
+            "y": 76,
+            "confidence": 0.8
+          },
+          {
+            "x": "25Q4",
+            "y": 72,
+            "confidence": 0.8
+          },
+          {
+            "x": "26Q4E",
+            "y": 75,
+            "confidence": 0.8
+          }
+        ],
+        "color": "#FF8A3D"
+      }
+    ],
+    "totalDataPoints": 14,
+    "quality": {
+      "overallConfidence": 0.82,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.72,
+      "description": "원문 이미지와 OCR에서 읽은 방향성을 리포트용으로 단순화했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": 2060,
+        "absoluteChange": 103,
+        "from": 5,
+        "to": 108
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 108,
+        "at": ""
+      },
+      "min": {
+        "value": 5,
+        "at": ""
+      },
+      "average": 42.57142857142857,
+      "median": 22,
+      "range": 103
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "높은 기대도 다시 넘었다",
+    "subMessage": "분기 매출은 우상향, 매출총이익률은 높은 구간을 유지",
+    "headline": "높은 기대도 다시 넘었다",
+    "summary": "AI 서버 수요가 커지면서 매출이 뛰고, 제품 믹스 덕분에 이익률 방어도 이어졌습니다.",
+    "story": "AI 서버 수요가 커지면서 매출이 뛰고, 제품 믹스 덕분에 이익률 방어도 이어졌습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": [
+      "Bloomberg, NVIDIA filings"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "높은 기대도 다시 넘었다",
+      "reason": "AI 서버 수요가 커지면서 매출이 뛰고, 제품 믹스 덕분에 이익률 방어도 이어졌습니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

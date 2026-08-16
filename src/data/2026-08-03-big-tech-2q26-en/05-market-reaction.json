@@ -1,0 +1,231 @@
+{
+  "id": "market-reaction",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Alphabet·Amazon·Microsoft·Meta의 실적 직후 시간외 반응과 다음 정규장 반응을 세션별로 비교",
+    "preservedElements": [
+      "GOOGL 시간외 -3.3%, 다음 정규장 -7.1%",
+      "AMZN 시간외 +9.0%와 다음 정규장 미확정",
+      "MSFT 시간외 +9.1%, 다음 정규장 +15.5%",
+      "META 시간외 -4.2%~-6.2%, 다음 정규장 -8.0%",
+      "시간외와 다음 정규장 수익률은 별도 세션이며 합산하지 않음"
+    ],
+    "changedElements": [
+      "판독 유의사항 열을 제거하고 세션 이름을 열 제목에만 남김",
+      "회사명을 티커로 축약",
+      "출처 푸터를 화면에서 숨김"
+    ],
+    "dataFidelity": "exact",
+    "notes": "시간외는 각 시점 스냅샷이며, 다음 정규장 수익률과 합산하지 않는다. AMZN은 기준일 당시 다음 정규장 종가가 확정되지 않았다."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "session-boundary-visible",
+      "label": "세션 구분 유지",
+      "status": "pass",
+      "detail": "시간외와 다음 정규장을 독립 열로 두고 Amazon의 미확정을 명시했다."
+    }
+  ],
+  "structure": {
+    "title": "Post-Earnings Stock Reactions — By Session",
+    "source": "자료: Reuters·AP·Yahoo Finance·Nasdaq | 시간외는 각 시점 스냅샷, ET 기준"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "28px 36px 0",
+    "contentPadding": "14px 36px 0",
+    "titleFontSize": 27,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "company",
+        "label": "Company",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "28%"
+      },
+      {
+        "key": "afterHours",
+        "label": "After Hours",
+        "dataType": "percent",
+        "align": "right",
+        "width": "36%"
+      },
+      {
+        "key": "nextDay",
+        "label": "Next Regular Session",
+        "dataType": "percent",
+        "align": "right",
+        "width": "36%"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "GOOGL"
+          },
+          "afterHours": {
+            "value": -3.3,
+            "displayValue": "-3.3%",
+            "highlight": "negative"
+          },
+          "nextDay": {
+            "value": -7.1,
+            "displayValue": "-7.1%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "AMZN"
+          },
+          "afterHours": {
+            "value": 9.0,
+            "displayValue": "+9.0%",
+            "highlight": "positive"
+          },
+          "nextDay": {
+            "value": "Not yet available",
+            "displayValue": "Not yet available",
+            "highlight": "muted"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "MSFT"
+          },
+          "afterHours": {
+            "value": 9.1,
+            "displayValue": "+9.1%",
+            "highlight": "positive"
+          },
+          "nextDay": {
+            "value": 15.5,
+            "displayValue": "+15.5%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "META"
+          },
+          "afterHours": {
+            "value": "-4.2%~-6.2%",
+            "displayValue": "-4.2% ~ -6.2%",
+            "highlight": "negative"
+          },
+          "nextDay": {
+            "value": -8.0,
+            "displayValue": "-8.0%",
+            "highlight": "negative"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 59,
+      "cellPadding": "8px 12px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": {
+        "body": 600,
+        "numeric": 800,
+        "rowHeader": 800,
+        "header": 700
+      },
+      "fontSize": {
+        "body": 17,
+        "header": 12,
+        "total": 17,
+        "badge": 10
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Post-Earnings Stock Reactions — By Session",
+    "subMessage": "Post-Earnings Stock Reactions — By Session",
+    "headline": "시간외와 다음 정규장 반응을 따로 비교한다.",
+    "summary": "Amazon과 Microsoft는 시간외 상승, Alphabet과 Meta는 하락을 보였다.",
+    "story": "시장 반응은 세션별 수익률을 나란히 보여 주고, 합산하지 않는다.",
+    "keyTakeaways": [
+      "시간외와 정규장은 별도 세션이다.",
+      "Amazon의 다음 정규장 수익률은 기준일 당시 미확정이다."
+    ],
+    "questionsRaised": [
+      "수요·가이던스·마진 중 어느 요소가 다음 정규장에 재평가되는가?"
+    ],
+    "viewerAction": "시간외 수익률을 다음 정규장 수익률과 합산하지 않는다.",
+    "contextualNotes": [
+      "모두 발표 전 정규장 종가 대비 수익률."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "세션별 분리",
+      "reason": "수익률 합산 방지"
+    },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      {
+        "row": 2,
+        "col": "nextDay",
+        "reason": "Microsoft 다음 정규장 반응"
+      },
+      {
+        "row": 1,
+        "col": "nextDay",
+        "reason": "Amazon 미확정"
+      }
+    ]
+  }
+}

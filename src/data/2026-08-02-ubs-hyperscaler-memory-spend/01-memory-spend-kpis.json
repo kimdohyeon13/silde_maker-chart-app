@@ -1,0 +1,160 @@
+{
+  "id": "memory-spend-kpis",
+  "mode": "redesign",
+  "analyzedAt": "2026-08-02T11:20:00+09:00",
+  "sourceImage": "input/01-ubs-hyperscaler-memory-spend.png",
+  "contentType": "infographic",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Figure 28: Hyperscaler memory spend",
+    "originalMessage": "Figure 28: Hyperscaler memory spend",
+    "preservedElements": [
+      "총 메모리 지출 2025·2026E·2027E",
+      "2027E CAPEX 비중"
+    ],
+    "changedElements": [
+      "KPI 카드 2×2",
+      "십억달러 단위 환산",
+      "2년 배수 파생",
+      "Paperlogy 타이포"
+    ],
+    "dataFidelity": "exact",
+    "mode": "redesign",
+    "sourceAttribution": "자료: UBS, Figure 28",
+    "notes": "표 셀에 직접 보이는 숫자는 exact-as-displayed입니다. ASP는 표시 자릿수로 반올림돼 있습니다. 10.46배는 761,317÷72,800의 파생 계산입니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "convert-display-unit",
+    "derive-ratio",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "핵심 지표 4개를 2×2 KPI 카드로 배치했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "visible-values-transcribed",
+      "label": "원표 표시값 전사",
+      "status": "pass",
+      "detail": "UBS Figure 28의 화면 셀 숫자·행 순서·2026E/2027E 표기·Gb/GB 대소문자를 대조했습니다.",
+      "checkedAt": "2026-08-02"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "1,824×1,026 PNG, 제목 900, 서브메시지 300, overflow 0을 최종 DOM QA에서 확인합니다.",
+      "checkedAt": "2026-08-02"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 14,
+    "sourceFontSize": 10,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828"
+  },
+  "structure": {
+    "title": "메모리 지출, 2년 만에 10.5배",
+    "subtitle": "상위 11개 하이퍼스케일러 · 총 메모리 지출과 CAPEX 비중",
+    "source": "자료: UBS, Figure 28 | US$m을 십억달러로 환산"
+  },
+  "infographicData": {
+    "subType": "kpi_card",
+    "layout": "grid",
+    "items": [
+      {
+        "label": "2025 총 메모리 지출",
+        "value": "72.8",
+        "unit": "십억달러",
+        "accentColor": "#8B95A1"
+      },
+      {
+        "label": "2026E 총 메모리 지출",
+        "value": "335.7",
+        "unit": "십억달러",
+        "change": {
+          "value": 361,
+          "direction": "up",
+          "period": "전년 대비"
+        },
+        "accentColor": "#8EB7D8"
+      },
+      {
+        "label": "2027E 총 메모리 지출",
+        "value": "761.3",
+        "unit": "십억달러",
+        "change": {
+          "value": 127,
+          "direction": "up",
+          "period": "전년 대비"
+        },
+        "accentColor": "#1458D4"
+      },
+      {
+        "label": "2027E 전체 CAPEX 대비",
+        "value": "73",
+        "unit": "%",
+        "accentColor": "#D92D3A"
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "메모리 지출, 2년 만에 10.5배",
+    "subMessage": "전체 CAPEX에서 메모리 비중은 14%에서 73%로 상승",
+    "headline": "총 메모리 지출은 2025년 728억달러에서 2027E 7,613억달러로 늘어납니다.",
+    "summary": "전체 CAPEX에서 메모리 비중은 14%에서 73%로 상승",
+    "story": "총 메모리 지출은 2025년 728억달러에서 2027E 7,613억달러로 늘어납니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원표 숫자와 단위를 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: UBS, Figure 28",
+      "ASP는 원표 표시값 기준"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2027E 761.3십억달러",
+      "reason": "가장 큰 지출 전망"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#8EB7D8",
+        "#D1D6DB",
+        "#F59E0B"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#1458D4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

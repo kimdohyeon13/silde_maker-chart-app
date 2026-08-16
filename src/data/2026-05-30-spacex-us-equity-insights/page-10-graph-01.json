@@ -1,0 +1,110 @@
+{
+  "id": "page-10-graph-01",
+  "sourceImage": "input/12-page-10-graph-01.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Factset, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "S&P500 P/E 21배, 평균 크게 상회",
+    "subtitle": "12개월 선행 P/E(배), 10년 평균 약 17배, 이미지 기반 근사값",
+    "source": "Factset, 삼성증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "tickValues": ["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "P/E",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "max": 26
+    },
+    "legend": [
+      { "name": "S&P500 12m fwd P/E", "role": "primary", "originalColor": "#4C8BF5", "remakeColor": "#1458D4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P500 12m fwd P/E",
+        "renderAs": "line",
+        "role": "primary",
+        "data": [
+          {"x": "2010", "y": 13, "confidence": 0.8},
+          {"x": "2011", "y": 12, "confidence": 0.8},
+          {"x": "2012", "y": 12.5, "confidence": 0.8},
+          {"x": "2013", "y": 14, "confidence": 0.8},
+          {"x": "2014", "y": 15, "confidence": 0.8},
+          {"x": "2015", "y": 16, "confidence": 0.8},
+          {"x": "2016", "y": 16.5, "confidence": 0.8},
+          {"x": "2017", "y": 17.5, "confidence": 0.8},
+          {"x": "2018", "y": 16, "confidence": 0.8},
+          {"x": "2019", "y": 15, "confidence": 0.8},
+          {"x": "2020", "y": 20, "confidence": 0.8},
+          {"x": "2021", "y": 22, "confidence": 0.8},
+          {"x": "2022", "y": 17, "confidence": 0.8},
+          {"x": "2023", "y": 18, "confidence": 0.8},
+          {"x": "2024", "y": 21, "confidence": 0.8},
+          {"x": "2025", "y": 22, "confidence": 0.8},
+          {"x": "2026", "y": 21, "confidence": 0.8}
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 17,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "up", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "stable" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 22, "at": ""}, "min": {"value": 12, "at": ""}, "average": 17, "median": 16.5, "range": 10 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "밸류 부담은 분명하다",
+    "subMessage": "현재 21배로 10년 평균(약 17배)을 웃돈다",
+    "headline": "S&P500의 12개월 선행 P/E가 21배까지 올라 10년 평균을 크게 웃돌며 밸류에이션 부담을 키우고 있습니다.",
+    "summary": "S&P500의 12개월 선행 P/E가 21배로 10년 평균을 크게 웃돌아 밸류에이션 부담이 분명한 구간입니다.",
+    "story": "S&P500의 12개월 선행 P/E가 21배로 10년 평균을 크게 웃돌아 밸류에이션 부담이 분명한 구간입니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Factset, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"현재 21배","position":{"x":"2026"},"importance":"critical","style":"negative"},
+      {"text":"코로나 급등","position":{"x":"2020"},"importance":"high","style":"neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"2026","y":21}, "displayText": "밸류 부담은 분명하다", "reason": "S&P500의 12개월 선행 P/E가 21배로 10년 평균을 크게 웃돌아 밸류에이션 부담이 분명한 구간입니다." },
+    "densityLevel": "balanced"
+  }
+}

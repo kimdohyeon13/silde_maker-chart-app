@@ -1,0 +1,246 @@
+{
+  "id": "01-d220d-four-names-one-book",
+  "mode": "faithful",
+  "sourceImage": "input/dib-220-26.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "네오클라우드 4사, AI 인프라 우려 해소에 급등",
+    "originalMessage": "IREN +30.54%, 사이퍼디지털 +28.07%, 네비우스 +27.13%, 코어위브 +21.51% (2026-07-30 종가)",
+    "preservedElements": [
+      "4개 AI 인프라 종목의 당일 등락률",
+      "IREN·사이퍼디지털·네비우스·코어위브 값",
+      "2026-07-30 종가 기준일",
+      "Yahoo Finance 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "지수화 라인차트를 당일 등락률 막대로 정리",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 최대 상승 종목만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 라인차트 우측에 인쇄된 4사 당일 등락률만 옮겼습니다. 3개월 누적 열은 사용하지 않았습니다.",
+    "sourceAttribution": "Yahoo Finance · 30 July 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "30.54, 28.07, 27.13, 21.51은 원본 이미지에 인쇄된 값입니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 소수점을 유지했습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 점검",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 표현이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "영문 전용 표기",
+      "status": "pass",
+      "detail": "모든 노출 문자열을 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Four names, one session, one range",
+    "subtitle": "All four between +21.51% and +30.54% on 30 July 2026",
+    "source": "Source: Yahoo Finance · 30 July 2026 close · source-visible",
+    "timeRange": "30 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "IREN",
+        "Cipher Mining",
+        "Nebius",
+        "CoreWeave"
+      ],
+      "displayTickValues": [
+        "IREN",
+        "Cipher Mining",
+        "Nebius",
+        "CoreWeave"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 35
+    },
+    "legend": [
+      {
+        "name": "One-day change",
+        "role": "primary",
+        "originalColor": "#C43D3D",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-day change",
+        "data": [
+          {
+            "x": "IREN",
+            "y": 30.54,
+            "confidence": 0.9
+          },
+          {
+            "x": "Cipher Mining",
+            "y": 28.07,
+            "confidence": 0.9
+          },
+          {
+            "x": "Nebius",
+            "y": 27.13,
+            "confidence": 0.9
+          },
+          {
+            "x": "CoreWeave",
+            "y": 21.51,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.85,
+      "description": "All four names gapped higher in the same session.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.14,
+      "description": "The four moves sit inside a nine-point band."
+    },
+    "changeRates": [
+      {
+        "period": "Largest vs smallest move",
+        "percentChange": 42.0,
+        "absoluteChange": 9.03,
+        "from": 21.51,
+        "to": 30.54
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 30.54,
+        "at": "IREN"
+      },
+      "min": {
+        "value": 21.51,
+        "at": "CoreWeave"
+      },
+      "average": 26.8125,
+      "median": 27.6,
+      "range": 9.03
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Four names, one session, one range",
+    "subMessage": "All four between +21.51% and +30.54% on 30 July 2026",
+    "headline": "Four names, one session, one range",
+    "summary": "Four AI infrastructure names moved together inside a nine-point band.",
+    "story": "Four separate companies posted one-day moves within nine points of each other, which is closer than four independent order flows usually land.",
+    "keyTakeaways": [
+      "IREN +30.54% was the largest of the four.",
+      "CoreWeave +21.51% was the smallest, still above 21%.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read how tightly the four moves cluster rather than any single name.",
+    "contextualNotes": [
+      "Source: Yahoo Finance, 30 July 2026 close",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "IREN",
+      "y": 30.54,
+      "displayText": "30.54%"
+    },
+    "densityLevel": "focused"
+  }
+}

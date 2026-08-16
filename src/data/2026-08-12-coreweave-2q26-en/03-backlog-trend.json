@@ -1,0 +1,236 @@
+{
+  "id": "03-backlog-trend",
+  "sourceImage": "input/03-backlog-trend.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "$104.2 billion at the end of the June 2026 quarter, up 246% year over year.",
+    "preservedElements": [
+      "chart type",
+      "series count",
+      "axis structure",
+      "comparison direction",
+      "core message",
+      "source attribution"
+    ],
+    "changedElements": [
+      "display language"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "English re-render of the Korean original. Values, chart type, series, axes and order are unchanged; only display text was translated.",
+    "sourceAttribution": "Source: CoreWeave Q2 2026 earnings materials, August 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type, axes, series and values match the Korean original; only the on-chart language changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read from source image",
+      "status": "pass",
+      "detail": "Chart type, axes, series and values match the Korean original; only the on-chart language changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axes, series and values match the Korean original; only the on-chart language changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Helvetica, Arial, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Backlog Quadrupled in Five Quarters",
+    "subtitle": "$104.2 billion at the end of the June 2026 quarter, up 246% year over year.",
+    "source": "Source: CoreWeave Q2 2026 earnings materials, August 2026",
+    "timeRange": "Q1 2025 - Q2 2026",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "Mar '25",
+        "Jun '25",
+        "Sep '25",
+        "Dec '25",
+        "Mar '26",
+        "Jun '26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "$ billions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Revenue backlog",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue backlog",
+        "data": [
+          {
+            "x": "Mar '25",
+            "y": 25.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun '25",
+            "y": 30.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep '25",
+            "y": 55.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "Dec '25",
+            "y": 66.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "Mar '26",
+            "y": 99.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun '26",
+            "y": 104.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Any span needing raw-data confirmation is flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.23,
+      "description": "Volatility preserved as visible in the source image."
+    },
+    "changeRates": [
+      {
+        "period": "First vs last",
+        "percentChange": 302.3,
+        "absoluteChange": 783.0,
+        "from": 259.0,
+        "to": 1042.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1042.0,
+        "at": ""
+      },
+      "min": {
+        "value": 259.0,
+        "at": ""
+      },
+      "average": 636.6666666666666,
+      "median": 612.0,
+      "range": 783.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Backlog Quadrupled in Five Quarters",
+    "subMessage": "$104.2 billion at the end of the June 2026 quarter, up 246% year over year.",
+    "headline": "Backlog Quadrupled in Five Quarters",
+    "summary": "$104.2 billion at the end of the June 2026 quarter, up 246% year over year.",
+    "story": "Data relationships from the source are preserved; labels and emphasis were tidied for report use.",
+    "keyTakeaways": [
+      "$104.2 billion at the end of the June 2026 quarter, up 246% year over year.",
+      "The source axes and comparison relationship were preserved first.",
+      "Read direction, order, and gap before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change the next leaders and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the original.",
+    "contextualNotes": [
+      "Source: CoreWeave Q2 2026 earnings materials, August 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 104.2
+      },
+      "displayText": "Backlog Quadrupled in Five Quarters",
+      "reason": "$104.2 billion at the end of the June 2026 quarter, up 246% year over year."
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "id": "02-segment-revenue",
+  "sourceImage": "input/02-segment-revenue.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 샌디스크 FY2026 4분기 실적 보도자료(SEC 8-K 첨부), 2026년 8월 5일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "매출의 60%는 아직 엣지에서 나온다",
+    "subtitle": "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러",
+    "source": "자료: 샌디스크 FY2026 4분기 실적 보도자료(SEC 8-K 첨부), 2026년 8월 5일",
+    "timeRange": "FY2026 4분기",
+    "xAxis": {
+      "label": "전방 고객군",
+      "type": "category",
+      "tickValues": [
+        "엣지",
+        "데이터센터",
+        "소비자"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "백만 달러",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "FY26 4분기 매출",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "FY26 4분기 매출",
+        "data": [
+          {
+            "x": "엣지",
+            "y": 5432,
+            "confidence": 0.74
+          },
+          {
+            "x": "데이터센터",
+            "y": 2977,
+            "confidence": 0.74
+          },
+          {
+            "x": "소비자",
+            "y": 556,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.632,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -89.8,
+        "absoluteChange": -4876.0,
+        "from": 5432.0,
+        "to": 556.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5432.0,
+        "at": ""
+      },
+      "min": {
+        "value": 556.0,
+        "at": ""
+      },
+      "average": 2988.3333333333335,
+      "median": 2977.0,
+      "range": 4876.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "매출의 60%는 아직 엣지에서 나온다",
+    "subMessage": "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러",
+    "headline": "매출의 60%는 아직 엣지에서 나온다",
+    "summary": "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 샌디스크 FY2026 4분기 실적 보도자료(SEC 8-K 첨부), 2026년 8월 5일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 556.0
+      },
+      "displayText": "매출의 60%는 아직 엣지에서",
+      "reason": "데이터센터 29억 7,700만, 엣지 54억 3,200만, 소비자 5억 5,600만 달러"
+    },
+    "densityLevel": "balanced"
+  }
+}

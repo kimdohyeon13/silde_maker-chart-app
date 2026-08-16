@@ -1,0 +1,616 @@
+{
+  "id": "valuation-comparison-table",
+  "sourceImage": "input/17-growth-adjusted-valuation-table.png",
+  "analyzedAt": "2026-07-13T18:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "네오클라우드와 대형 기술주·시장지수의 밸류에이션, 성장률, 수익성, 규모, 주가 성과를 한 표에서 비교한다.",
+    "preservedElements": [
+      "8개 비교 열과 원본 순서",
+      "10개 지표 행과 원본 순서",
+      "모든 표 수치와 공란",
+      "성장조정 행 강조",
+      "표의 0.04 스케일"
+    ],
+    "changedElements": [
+      "한글 텍스트 정리",
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "mode": "faithful",
+    "originalTitle": "표 2. 밸류에이션 상대비교",
+    "dataFidelity": "exact",
+    "notes": "핵심 감사값은 pdf-audit.md와 대조했고, 감사 문서에 요약되지 않은 시가총액·연간 매출액·배당수익률은 같은 원본 표의 화면값을 그대로 옮겼습니다. 성장조정 행은 CAGR을 퍼센트 숫자로 사용한 0.04 스케일이며 그림 10의 3.6 스케일과 혼용하지 않습니다.",
+    "sourceAttribution": "FactSet Consensus, KB증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "audit-core-values",
+      "label": "감사 문서 핵심값 일치",
+      "status": "pass",
+      "detail": "EV/EBITDA, EV/Sales, CAGR, 성장조정 값, 마진, 연초 대비 총수익률을 pdf-audit.md와 대조했습니다."
+    },
+    {
+      "id": "visible-table-completeness",
+      "label": "원본 표 행·열 보존",
+      "status": "pass",
+      "detail": "8개 비교 열과 10개 지표 행을 모두 유지했습니다."
+    },
+    {
+      "id": "scale-separation",
+      "label": "0.04 스케일 보존",
+      "status": "pass",
+      "detail": "성장조정 행을 0.04, 0.04, 0.04, 0.08, 0.22, 0.43, 0.50, 0.47로 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 20,
+    "sourceFontSize": 15,
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", Arial, sans-serif",
+    "headerPadding": "22px 28px 2px",
+    "contentPadding": "4px 8px 4px",
+    "sourcePadding": "0 28px 14px",
+    "chartHeight": 760
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "표 2. 밸류에이션 상대비교",
+    "subtitle": "성장조정 값은 표의 0.04 스케일 · 그림 10의 3.6배 스케일과 혼용 금지",
+    "source": "자료: FactSet Consensus, KB증권"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "width": "19%",
+        "isRowHeader": true,
+        "align": "left"
+      },
+      {
+        "key": "nbis",
+        "label": "네비우스\nNBIS-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "crwv",
+        "label": "코어위브\nCRWV-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "iren",
+        "label": "아이렌\nIREN-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "apld",
+        "label": "어플라이드디지털\nAPLD-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "amzn",
+        "label": "아마존\nAMZN-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "msft",
+        "label": "마이크로소프트\nMSFT-US",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "sp500",
+        "label": "S&P500\nSP50",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      },
+      {
+        "key": "xlk",
+        "label": "IT 산업\nXLK",
+        "dataType": "number",
+        "width": "10.125%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "metric": {
+            "value": "EV/EBITDA (x)"
+          },
+          "nbis": {
+            "value": 16.8,
+            "displayValue": "16.8"
+          },
+          "crwv": {
+            "value": 6.9,
+            "displayValue": "6.9"
+          },
+          "iren": {
+            "value": 7.2,
+            "displayValue": "7.2"
+          },
+          "apld": {
+            "value": 27.6,
+            "displayValue": "27.6"
+          },
+          "amzn": {
+            "value": 11.6,
+            "displayValue": "11.6"
+          },
+          "msft": {
+            "value": 12.1,
+            "displayValue": "12.1"
+          },
+          "sp500": {
+            "value": 14.3,
+            "displayValue": "14.3"
+          },
+          "xlk": {
+            "value": 17.3,
+            "displayValue": "17.3"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "EV/매출액 (x)"
+          },
+          "nbis": {
+            "value": 8.9,
+            "displayValue": "8.9"
+          },
+          "crwv": {
+            "value": 4.2,
+            "displayValue": "4.2"
+          },
+          "iren": {
+            "value": 5.1,
+            "displayValue": "5.1"
+          },
+          "apld": {
+            "value": 11.2,
+            "displayValue": "11.2"
+          },
+          "amzn": {
+            "value": 3.1,
+            "displayValue": "3.1"
+          },
+          "msft": {
+            "value": 7.5,
+            "displayValue": "7.5"
+          },
+          "sp500": {
+            "value": 3.8,
+            "displayValue": "3.8"
+          },
+          "xlk": {
+            "value": 7.2,
+            "displayValue": "7.2"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "Sales 2026~2028 CAGR (%, 12MF)"
+          },
+          "nbis": {
+            "value": 246.1,
+            "displayValue": "246.1%"
+          },
+          "crwv": {
+            "value": 98.3,
+            "displayValue": "98.3%"
+          },
+          "iren": {
+            "value": 122,
+            "displayValue": "122.0%"
+          },
+          "apld": {
+            "value": 142.9,
+            "displayValue": "142.9%"
+          },
+          "amzn": {
+            "value": 14.1,
+            "displayValue": "14.1%"
+          },
+          "msft": {
+            "value": 17.4,
+            "displayValue": "17.4%"
+          },
+          "sp500": {
+            "value": 7.7,
+            "displayValue": "7.7%"
+          },
+          "xlk": {
+            "value": 15.2,
+            "displayValue": "15.2%"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "(EV/매출액) ÷ 3년 매출 CAGR"
+          },
+          "nbis": {
+            "value": 0.04,
+            "displayValue": "0.04",
+            "highlight": "positive"
+          },
+          "crwv": {
+            "value": 0.04,
+            "displayValue": "0.04",
+            "highlight": "positive"
+          },
+          "iren": {
+            "value": 0.04,
+            "displayValue": "0.04",
+            "highlight": "positive"
+          },
+          "apld": {
+            "value": 0.08,
+            "displayValue": "0.08",
+            "highlight": "positive"
+          },
+          "amzn": {
+            "value": 0.22,
+            "displayValue": "0.22",
+            "highlight": "warning"
+          },
+          "msft": {
+            "value": 0.43,
+            "displayValue": "0.43",
+            "highlight": "muted"
+          },
+          "sp500": {
+            "value": 0.5,
+            "displayValue": "0.50",
+            "highlight": "muted"
+          },
+          "xlk": {
+            "value": 0.47,
+            "displayValue": "0.47",
+            "highlight": "muted"
+          }
+        },
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#FFF1F2"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "매출총이익률 (%)"
+          },
+          "nbis": {
+            "value": -10.2,
+            "displayValue": "-10.2%"
+          },
+          "crwv": {
+            "value": 23.9,
+            "displayValue": "23.9%"
+          },
+          "iren": {
+            "value": 31.4,
+            "displayValue": "31.4%"
+          },
+          "apld": {
+            "value": 29.6,
+            "displayValue": "29.6%"
+          },
+          "amzn": {
+            "value": 50.3,
+            "displayValue": "50.3%"
+          },
+          "msft": {
+            "value": 68.8,
+            "displayValue": "68.8%"
+          },
+          "sp500": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "xlk": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "영업이익률 (%, 연간)"
+          },
+          "nbis": {
+            "value": -115.5,
+            "displayValue": "-115.5%"
+          },
+          "crwv": {
+            "value": -0.3,
+            "displayValue": "-0.3%"
+          },
+          "iren": {
+            "value": 4.6,
+            "displayValue": "4.6%"
+          },
+          "apld": {
+            "value": -28,
+            "displayValue": "-28.0%"
+          },
+          "amzn": {
+            "value": 11.8,
+            "displayValue": "11.8%"
+          },
+          "msft": {
+            "value": 45.6,
+            "displayValue": "45.6%"
+          },
+          "sp500": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "xlk": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "시가총액 (십억 USD)"
+          },
+          "nbis": {
+            "value": 47.9,
+            "displayValue": "47.9"
+          },
+          "crwv": {
+            "value": 39.8,
+            "displayValue": "39.8"
+          },
+          "iren": {
+            "value": 14.7,
+            "displayValue": "14.7"
+          },
+          "apld": {
+            "value": 8.9,
+            "displayValue": "8.9"
+          },
+          "amzn": {
+            "value": 2639.1,
+            "displayValue": "2,639.1"
+          },
+          "msft": {
+            "value": 2860.7,
+            "displayValue": "2,860.7"
+          },
+          "sp500": {
+            "value": 65108.2,
+            "displayValue": "65,108.2"
+          },
+          "xlk": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "연간 매출액 (십억 USD)"
+          },
+          "nbis": {
+            "value": 0.5,
+            "displayValue": "0.5"
+          },
+          "crwv": {
+            "value": 5.1,
+            "displayValue": "5.1"
+          },
+          "iren": {
+            "value": 0.3,
+            "displayValue": "0.3"
+          },
+          "apld": {
+            "value": 0.1,
+            "displayValue": "0.1"
+          },
+          "amzn": {
+            "value": 716.9,
+            "displayValue": "716.9"
+          },
+          "msft": {
+            "value": 281.7,
+            "displayValue": "281.7"
+          },
+          "sp500": {
+            "value": 17855.5,
+            "displayValue": "17,855.5"
+          },
+          "xlk": {
+            "value": 11.9,
+            "displayValue": "11.9"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "최근 연간 배당수익률 (%)"
+          },
+          "nbis": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "crwv": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "iren": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "apld": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "amzn": {
+            "value": "—",
+            "displayValue": "—",
+            "highlight": "muted"
+          },
+          "msft": {
+            "value": 0.9,
+            "displayValue": "0.9%"
+          },
+          "sp500": {
+            "value": 1,
+            "displayValue": "1.0%"
+          },
+          "xlk": {
+            "value": 0.5,
+            "displayValue": "0.5%"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "metric": {
+            "value": "연초 대비 주가 수익률 (%, TR)"
+          },
+          "nbis": {
+            "value": 162.4,
+            "displayValue": "162.4%"
+          },
+          "crwv": {
+            "value": 24.1,
+            "displayValue": "24.1%"
+          },
+          "iren": {
+            "value": 8.9,
+            "displayValue": "8.9%"
+          },
+          "apld": {
+            "value": 27,
+            "displayValue": "27.0%"
+          },
+          "amzn": {
+            "value": 6.3,
+            "displayValue": "6.3%"
+          },
+          "msft": {
+            "value": -20,
+            "displayValue": "-20.0%"
+          },
+          "sp500": {
+            "value": 10.7,
+            "displayValue": "10.7%"
+          },
+          "xlk": {
+            "value": 29.3,
+            "displayValue": "29.3%"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 48,
+      "cellPadding": "9px 8px",
+      "lineHeight": 1.25,
+      "zebraStripe": true,
+      "zebraOpacity": 0.3,
+      "highlightMode": "background",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "accentColor": "#D92D3A",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 650,
+        "rowHeader": 700,
+        "header": 750
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "12px",
+        "total": "12px",
+        "badge": "11px",
+        "unit": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headline": "성장조정 값은 네오클라우드 3사가 0.04로 가장 낮지만, 현재 수익성은 약합니다.",
+    "summary": "NBIS·CRWV·IREN의 성장조정 값은 모두 0.04입니다. 반면 영업이익률은 각각 -115.5%, -0.3%, 4.6%로 성장 전망의 실행이 중요합니다.",
+    "keyTakeaways": [
+      "네오클라우드 3사의 2026~2028년 매출 CAGR은 98.3~246.1%로 높습니다.",
+      "성장조정 값 0.04는 대형 기술주와 시장지수보다 낮습니다.",
+      "네비우스와 코어위브의 현재 영업이익률은 음수여서 성장조정 저평가 논리는 실적 전환에 달려 있습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "성장조정 값 0.04"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

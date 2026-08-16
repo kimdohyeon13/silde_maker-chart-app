@@ -1,0 +1,248 @@
+{
+  "id": "10-market-reaction",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "알파벳은 하락하고 NVDA·AVGO는 상승했다",
+    "preservedElements": [
+      "공식 수치",
+      "기간 순서",
+      "단위",
+      "출처"
+    ],
+    "changedElements": [
+      "주장형 제목",
+      "Paperlogy 타이포",
+      "16:9 레이아웃",
+      "강조색"
+    ],
+    "dataFidelity": "source-visible",
+    "mode": "redesign",
+    "notes": "캡처 시점과 원시 수치를 QA 스냅샷 파일에 보존했습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "2개 시리즈와 8개 데이터 포인트를 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "source-snapshot-preserved",
+      "label": "시장 시세 스냅샷 보존",
+      "status": "pass",
+      "detail": "qa/market-snapshot.json에 2026-07-22 17:51 ET 원시값과 출처 링크를 저장하고 SHA-256을 검증했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 27,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828",
+    "chartHeight": 365,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "barColorMode": "sign",
+    "gridMode": "solid"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "알파벳은 하락하고 NVDA·AVGO는 상승했다",
+    "subtitle": "2026년 7월 22일 17:51 ET · 직전 종가 대비 %",
+    "source": "자료: Google Finance 스냅샷, 2026-07-22 17:51 ET",
+    "timeRange": "2026-07-22",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Alphabet",
+        "NVIDIA",
+        "Broadcom",
+        "Micron"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "직전 종가 대비",
+      "type": "numeric",
+      "tickValues": [
+        "-2",
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "unit": "%",
+      "min": -2,
+      "max": 3,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "상승",
+        "role": "primary",
+        "originalColor": "#D92D3A",
+        "remakeColor": "#D92D3A"
+      },
+      {
+        "name": "하락",
+        "role": "secondary",
+        "originalColor": "#4285F4",
+        "remakeColor": "#4285F4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상승",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#D92D3A",
+        "data": [
+          {
+            "x": "Alphabet",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "NVIDIA",
+            "y": 2.291,
+            "confidence": 1
+          },
+          {
+            "x": "Broadcom",
+            "y": 2.603,
+            "confidence": 1
+          },
+          {
+            "x": "Micron",
+            "y": 0,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "하락",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#4285F4",
+        "data": [
+          {
+            "x": "Alphabet",
+            "y": -1.478,
+            "confidence": 1
+          },
+          {
+            "x": "NVIDIA",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "Broadcom",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "Micron",
+            "y": -1.188,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": -1.478,
+      "max": 2.603,
+      "average": 0.279,
+      "latest": -1.188
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "같은 날 하드웨어 종목도 엇갈렸지만 NVDA와 AVGO는 강했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "알파벳은 하락하고 NVDA·AVGO는 상승했다",
+    "subMessage": "2026년 7월 22일 17:51 ET · 직전 종가 대비 %",
+    "headline": "같은 날 하드웨어 종목도 엇갈렸지만 NVDA와 AVGO는 강했습니다.",
+    "summary": "같은 날 하드웨어 종목도 엇갈렸지만 NVDA와 AVGO는 강했습니다.",
+    "keyTakeaways": [
+      "Alphabet은 초기 상승 뒤 하락으로 돌아섰습니다.",
+      "NVIDIA와 Broadcom은 직전 종가를 웃돌았습니다.",
+      "Micron은 하락해 모든 공급망 종목의 동반 상승으로 일반화할 수 없습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "Alphabet",
+        "y": -1.478
+      },
+      "displayText": "Alphabet -1.5%",
+      "reason": "CAPEX 가이던스 이후 반전"
+    },
+    "colorStrategy": {
+      "primary": "#4285F4",
+      "secondary": [
+        "#667085",
+        "#D0D5DD"
+      ],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#D92D3A",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  }
+}

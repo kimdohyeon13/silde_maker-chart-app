@@ -1,0 +1,144 @@
+{
+  "id": "microsoft-azure-capex",
+  "sourceImage": "input/source-register.md",
+  "analyzedAt": "2026-07-31T00:00:00+09:00",
+  "mode": "redesign",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Microsoft Azure 성장·CapEx·회계 재분류를 실제치와 사용자 제공 시장 컨센서스로 구분",
+    "preservedElements": [
+      "Azure Commercial Cloud 성장 +43.0%와 사용자 제공 컨센서스 +40.3%",
+      "FY27 Q1 Azure Commercial Cloud 가이던스 약 +45.0%",
+      "cash PP&E $35.802B, 금융리스 포함 CapEx 약 $41B",
+      "FY27 Q1 CapEx $50B 초과와 CY26 약 $175B 재분류 문맥"
+    ],
+    "changedElements": [
+      "컨센서스 전용 열과 빈 셀을 제거하고 필요한 비교값을 같은 셀에 병기",
+      "PP&E·금융리스·재분류의 정의 차이를 한 줄로 압축",
+      "긴 부제·출처 푸터를 화면에서 숨김"
+    ],
+    "dataFidelity": "exact",
+    "notes": "실제치·전망은 Microsoft 공개 IR/실적 콜, 컨센서스는 사용자 제공 시장 컨센서스다. PP&E·금융리스·재분류는 동일 정의가 아니다."
+  },
+  "allowedTransformations": ["simplify-labels", "adjust-layout", "adjust-density", "adjust-colors"],
+  "qualityChecks": [
+    {
+      "id": "minimal-layout",
+      "label": "미니멀 표 구조",
+      "status": "pass",
+      "detail": "5행·3열로 줄였지만 CapEx 정의 경계는 별도 행으로 유지했다."
+    }
+  ],
+  "structure": {
+    "title": "Microsoft: Azure는 가속, CapEx는 정의",
+    "source": "자료: Microsoft IR·실적 콜 | 컨센서스: 사용자 제공 시장 컨센서스"
+  },
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "headerPadding": "26px 36px 0",
+    "contentPadding": "13px 36px 0",
+    "titleFontSize": 25,
+    "titleLineHeight": 1.18,
+    "hideSource": true,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+    "accentColor": "#111827",
+    "squareEdges": true
+  },
+  "tableData": {
+    "columns": [
+      { "key": "metric", "label": "지표", "dataType": "text", "isRowHeader": true, "width": "31%" },
+      { "key": "value", "label": "실적·가이던스", "dataType": "text", "align": "right", "width": "45%" },
+      { "key": "read", "label": "해석", "dataType": "text", "align": "right", "width": "24%" }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": { "value": "Azure CC 성장" },
+          "value": { "value": "+43.0% / vs +40.3%", "displayValue": "+43.0%\nvs 컨센서스 +40.3%", "highlight": "accent" },
+          "read": { "value": "상회", "highlight": "positive" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": { "value": "FY27 Q1 Azure" },
+          "value": { "value": "약 +45.0%", "displayValue": "약 +45.0%", "highlight": "accent" },
+          "read": { "value": "성장 가속" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": { "value": "Q4 CapEx" },
+          "value": { "value": "$35.802B PP&E / 약 $41B 리스 포함", "displayValue": "$35.802B PP&E\n약 $41B (리스 포함)" },
+          "read": { "value": "정의 분리", "highlight": "muted" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": { "value": "FY27 Q1 CapEx" },
+          "value": { "value": ">$50B", "displayValue": ">$50B", "highlight": "accent" },
+          "read": { "value": "추가 확대" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": { "value": "CY26 규모" },
+          "value": { "value": "약 $175B", "displayValue": "약 $175B", "highlight": "accent" },
+          "read": { "value": "회계 재분류", "highlight": "muted" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 51,
+      "cellPadding": "7px 12px",
+      "lineHeight": 1.18,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), sans-serif",
+      "fontWeight": { "body": 500, "numeric": 700, "rowHeader": 800, "header": 700 },
+      "fontSize": { "body": 15, "header": 11, "total": 15, "badge": 9 }
+    }
+  },
+  "narrative": {
+    "headMessage": "Microsoft: Azure는 가속, CapEx는 정의",
+    "subMessage": "Microsoft: Azure는 가속, CapEx는 정의",
+    "headline": "Azure 성장과 CapEx는 정의를 나눠서 봐야 한다.",
+    "summary": "Azure Commercial Cloud 성장률은 +43.0%, 다음 분기 가이던스는 약 +45.0%다.",
+    "story": "수요 신호와 투자 확대를 짧게 보여주되, 회계 정의가 다른 CapEx는 하나의 서프라이즈로 합치지 않는다.",
+    "keyTakeaways": ["Azure 성장률은 사용자 제공 컨센서스를 상회했다.", "CapEx는 PP&E·리스·재분류 정의를 분리해야 한다."],
+    "questionsRaised": ["회계 분류 변화가 현금 투자 속도와 어떻게 다른가?"],
+    "viewerAction": "CapEx 숫자를 비교하기 전에 정의를 맞춘다.",
+    "contextualNotes": ["금액은 USD billions."]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "Azure +43.0%", "reason": "성장률 가속" },
+    "colorStrategy": {
+      "primary": "#111827",
+      "secondary": ["#667085", "#D0D5DD"],
+      "positive": "#B42318",
+      "negative": "#175CD3",
+      "accent": "#111827",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "highlightCells": [
+      { "row": 0, "col": "value", "reason": "Azure 성장률" },
+      { "row": 2, "col": "read", "reason": "CapEx 정의 경계" }
+    ]
+  }
+}

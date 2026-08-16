@@ -21,7 +21,7 @@
 "use client";
 
 import React from "react";
-import type { VisualAnalysis } from "@/lib/analysis/schema";
+import type { ExportOptions, VisualAnalysis } from "@/lib/analysis/schema";
 import { isChartAnalysis, isInfographicAnalysis } from "@/lib/analysis/schema";
 import { getDisplayMessages } from "@/lib/analysis/message-agent";
 import {
@@ -30,6 +30,10 @@ import {
   getPresetColors,
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
+import { cleanSourceText } from "@/lib/chart-format";
+import { resolveSubMessageWeight } from "@/lib/slide-typography";
+import { mergeOptionDefaults } from "@/lib/visual-system-options";
+import Watermark from "@/components/app/Watermark";
 
 interface ChartWrapperProps {
   /** 분석 결과 — 차트, 표, 인포그래픽 모두 가능 */
@@ -73,20 +77,34 @@ export default function ChartWrapper({
   const { headMessage, subMessage, metaMessage } = getDisplayMessages(analysis);
   const fidelityNotice = getFidelityNotice(analysis);
   const isCompactExportCard = !showHeader && !showInsights;
-  const exportOptions = (analysis as { exportOptions?: { sourceReplica?: boolean } }).exportOptions ?? {};
+  const exportOptions = mergeOptionDefaults<ExportOptions>(
+    preset.exportDefaults,
+    analysis.exportOptions,
+  );
   const isSourceReplica = !!exportOptions.sourceReplica;
+  const squareEdges = isSourceReplica || !!exportOptions.squareEdges;
   const isNewsBrief =
     isInfographicAnalysis(analysis) &&
     analysis.infographicData.subType === "news_brief";
+  // 최종 출처 줄에는 원문 근거만 남기고 내부 제작 메타데이터만 제거한다.
+  const cleanedSource = cleanSourceText(structure.source);
 
   return (
     <div
       style={{
         width: typeof width === "number" ? `${width}px` : width,
+        position: "relative",
         // export 모드(헤더/인사이트 모두 꺼짐)에서는 투명 → 상위 div의 배경색 사용
         background: isCompactExportCard ? "transparent" : colors.surface,
-        borderRadius: isSourceReplica ? 0 : isCompactExportCard ? `${preset.card.borderRadius}px ${preset.card.borderRadius}px 0 0` : preset.card.borderRadius,
-        border: isSourceReplica ? "0" : `${preset.card.borderWidth}px solid ${colors.border}`,
+        borderRadius: squareEdges
+          ? 0
+          : isCompactExportCard
+            ? `${preset.card.borderRadius}px ${preset.card.borderRadius}px 0 0`
+            : preset.card.borderRadius,
+        border:
+          isSourceReplica || (isCompactExportCard && exportOptions.contentBorder === false)
+            ? "0"
+            : `${preset.card.borderWidth}px solid ${colors.border}`,
         boxShadow: isCompactExportCard ? "none" : preset.card.shadow,
         overflow: "hidden",
         fontFamily: preset.typography.fontFamily ?? theme.typography.fontFamily.sans,
@@ -113,7 +131,10 @@ export default function ChartWrapper({
               style={{
                 color: colors.textSecondary,
                 fontSize: theme.typography.fontSize.messageSubtitle,
-                fontWeight: preset.typography.subtitleWeight,
+                fontWeight: resolveSubMessageWeight(
+                  exportOptions.subtitleFontWeight,
+                  preset.typography.subtitleWeight,
+                ),
                 margin: "8px 0 0",
                 lineHeight: 1.5,
               }}
@@ -212,7 +233,7 @@ export default function ChartWrapper({
       {/* ── 차트 영역 ── */}
       <div
         style={{
-          padding: isSourceReplica ? 0 : isCompactExportCard ? "6px 4px" : "16px 12px",
+          padding: isSourceReplica ? 0 : isCompactExportCard ? 0 : "16px 12px",
           height: height || "auto",
         }}
       >
@@ -245,7 +266,7 @@ export default function ChartWrapper({
       )}
 
       {/* ── 하단 출처 패널 ── */}
-      {showInsights && !isNewsBrief && structure.source && (
+      {showInsights && !isNewsBrief && cleanedSource && (
         <div
           style={{
             padding: "16px 28px 24px",
@@ -261,10 +282,12 @@ export default function ChartWrapper({
               margin: 0,
             }}
           >
-            출처: {structure.source}
+            출처: {cleanedSource}
           </p>
         </div>
       )}
+
+      {!isCompactExportCard && <Watermark color={colors.textTertiary} />}
     </div>
   );
 }

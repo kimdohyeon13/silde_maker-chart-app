@@ -1,0 +1,235 @@
+{
+  "id": "w76rev-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "분기 매출이 처음으로 10억 달러를 넘었다",
+    "preservedElements": [
+      "3개 분기의 순서와 값: 401.2 / 751.1 / 1,065.4 (백만 달러)",
+      "분기 매출이 처음으로 10억 달러를 넘었다는 원본의 메시지",
+      "원본 출처 줄(블룸에너지 2026년 2분기 실적 발표)"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 막대 3개의 값과 순서를 그대로 유지했습니다.",
+    "sourceAttribution": "자료: 블룸에너지 2026년 2분기 실적 발표, 2026년 7월 28일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 3개, 값 라벨 전부 표시, 최신 분기만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "1차 자료(회사 실적 발표)만 적었다. 셀사이드·우리 발행물 이름은 없다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "분기 매출이 처음으로 10억 달러를 넘었다",
+    "subtitle": "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%",
+    "source": "자료: 블룸에너지 2026년 2분기 실적 발표, 2026년 7월 28일",
+    "timeRange": "2025-2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "25년 2분기",
+        "26년 1분기",
+        "26년 2분기"
+      ],
+      "displayTickValues": [
+        "25년 2분기",
+        "26년 1분기",
+        "26년 2분기"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1200
+    },
+    "legend": [
+      {
+        "name": "매출 (백만 달러)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출 (백만 달러)",
+        "data": [
+          {
+            "x": "25년 2분기",
+            "y": 401.2,
+            "confidence": 0.99
+          },
+          {
+            "x": "26년 1분기",
+            "y": 751.1,
+            "confidence": 0.99
+          },
+          {
+            "x": "26년 2분기",
+            "y": 1065.4,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1065.4,
+        "at": "26년 2분기"
+      },
+      "min": {
+        "value": 401.2,
+        "at": "25년 2분기"
+      },
+      "average": 739.2333333333332,
+      "median": 0,
+      "range": 664.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "분기 매출이 처음으로 10억 달러를 넘었다",
+    "subMessage": "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%",
+    "headline": "분기 매출이 처음으로 10억 달러를 넘었다",
+    "summary": "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%",
+    "story": "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%",
+    "keyTakeaways": [
+      "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: 블룸에너지 2026년 2분기 실적 발표, 2026년 7월 28일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "26년 2분기",
+        "y": 1065.4
+      },
+      "displayText": "1065.4",
+      "reason": "2026년 2분기 매출 10억 6,540만 달러 · 1년 전의 2.7배, 전 분기 대비 41.9%"
+    },
+    "densityLevel": "focused"
+  }
+}

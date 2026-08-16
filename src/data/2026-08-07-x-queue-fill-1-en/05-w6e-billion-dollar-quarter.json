@@ -1,0 +1,244 @@
+{
+  "id": "05-w6e-billion-dollar-quarter",
+  "mode": "faithful",
+  "sourceImage": "input/w7-6-06.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "분기 매출 첫 10억달러",
+    "originalMessage": "2Q26 매출 10억6,540만달러, 처음으로 10억달러 돌파 · 2Q25~2Q26",
+    "preservedElements": [
+      "2Q25·1Q26·2Q26 세 분기의 순서와 값",
+      "단일 분기 매출 시리즈",
+      "세로 막대 차트와 0 기준축",
+      "백만 달러 단위",
+      "Bloom Energy SEC 실적 발표 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 문자열을 영어로 번역",
+      "100 이상 값을 10 단위로 내림(401.2→400, 751.1→750, 1,065.4→1,060)",
+      "중립 회색 막대에 최신 분기만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본에 인쇄된 401.2·751.1·1,065.4를 계정 규칙에 따라 10 단위로 내려 표기했습니다.",
+    "sourceAttribution": "Bloom Energy SEC earnings release · 28 July 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "401.2·751.1·1,065.4는 원본 이미지에 인쇄된 값이며 다른 분기를 추가하지 않았습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "401.2→400, 751.1→750, 1,065.4→1,060으로 내렸고 부제도 내린 값과 일치시켰습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 금지 항목 없음",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 언급이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "표시 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브를 모두 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The first billion-dollar quarter",
+    "subtitle": "2Q26 revenue $1,060M, up from $400M a year earlier",
+    "source": "Source: Bloom Energy SEC earnings release · 28 July 2026 · source-visible",
+    "timeRange": "2Q25 to 2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "2Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Revenue ($M)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1200
+    },
+    "legend": [
+      {
+        "name": "Quarterly revenue",
+        "role": "primary",
+        "originalColor": "#D92D3A",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Quarterly revenue",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 400,
+            "confidence": 0.9
+          },
+          {
+            "x": "1Q26",
+            "y": 750,
+            "confidence": 0.9
+          },
+          {
+            "x": "2Q26",
+            "y": 1060,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "Revenue rose in both steps shown and crossed one billion dollars in the last one.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.42,
+      "description": "Deliveries are booked in blocks, so the quarterly line is lumpy by construction."
+    },
+    "changeRates": [
+      {
+        "period": "2Q25 to 2Q26",
+        "percentChange": 165,
+        "absoluteChange": 660,
+        "from": 400,
+        "to": 1060
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1060,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 400,
+        "at": "2Q25"
+      },
+      "average": 736.67,
+      "median": 750,
+      "range": 660
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The first billion-dollar quarter",
+    "subMessage": "2Q26 revenue $1,060M, up from $400M a year earlier",
+    "headline": "The first billion-dollar quarter",
+    "summary": "Quarterly revenue crossed one billion dollars for the first time, from $400M in the same quarter a year earlier.",
+    "story": "Twelve hyperscalers are already running this equipment on site. The volume behind that is now large enough to show up as a billion-dollar quarter rather than as a pilot programme.",
+    "keyTakeaways": [
+      "2Q26 revenue $1,060M, the first quarter above one billion dollars.",
+      "2Q25 was $400M and 1Q26 was $750M.",
+      "Values are read from the source image and floored to the nearest ten (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Check whether the next quarter holds the same level rather than reading one print as a trend.",
+    "contextualNotes": [
+      "Source: Bloom Energy SEC earnings release, 28 July 2026",
+      "Values of 100 or more are floored to the nearest ten",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "2Q26",
+      "y": 1060,
+      "displayText": "$1,060M"
+    },
+    "densityLevel": "focused"
+  }
+}

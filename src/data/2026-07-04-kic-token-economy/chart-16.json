@@ -1,0 +1,260 @@
+{
+  "id": "chart-16",
+  "sourceImage": "",
+  "analyzedAt": "2026-07-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "미국 클로즈드 프론티어(입력 $2~5/출력 $12~25)와 중국 오픈웨이트(입력 $0.14~1.00/출력 $0.28~3.20)의 토큰 가격은 자릿수가 다르다.",
+    "dataFidelity": "source-derived",
+    "sourceAttribution": "출처: DevTk.AI·PricePerToken 외 (devtk.ai, pricepertoken.com)"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "100만 토큰당 API 가격 — 중국 오픈웨이트의 파괴력",
+    "subtitle": "출력 기준 Claude Opus 4.7 대비 MiniMax M2.5 약 1/21, DeepSeek V4 Flash 약 1/89",
+    "source": "출처: DevTk.AI·PricePerToken 외 (devtk.ai, pricepertoken.com)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Opus 4.7",
+        "GPT-5.5",
+        "Gemini 3.1",
+        "Qwen 3.7",
+        "GLM-5",
+        "Kimi K2.6",
+        "DS V4 Pro",
+        "MiniMax",
+        "DS Flash"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "$/1M tokens",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 28.75
+    },
+    "legend": [
+      {
+        "name": "입력",
+        "role": "primary"
+      },
+      {
+        "name": "출력",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "입력",
+        "data": [
+          {
+            "x": "Opus 4.7",
+            "y": 5.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "GPT-5.5",
+            "y": 5.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "Gemini 3.1",
+            "y": 2.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "Qwen 3.7",
+            "y": 2.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "GLM-5",
+            "y": 1.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "Kimi K2.6",
+            "y": 0.6,
+            "confidence": 0.82
+          },
+          {
+            "x": "DS V4 Pro",
+            "y": 0.435,
+            "confidence": 0.82
+          },
+          {
+            "x": "MiniMax",
+            "y": 0.3,
+            "confidence": 0.82
+          },
+          {
+            "x": "DS Flash",
+            "y": 0.14,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#939597"
+      },
+      {
+        "name": "출력",
+        "data": [
+          {
+            "x": "Opus 4.7",
+            "y": 25.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "GPT-5.5",
+            "y": 15.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "Gemini 3.1",
+            "y": 12.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "Qwen 3.7",
+            "y": 7.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "GLM-5",
+            "y": 3.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "Kimi K2.6",
+            "y": 2.5,
+            "confidence": 0.82
+          },
+          {
+            "x": "DS V4 Pro",
+            "y": 0.87,
+            "confidence": 0.82
+          },
+          {
+            "x": "MiniMax",
+            "y": 1.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "DS Flash",
+            "y": 0.28,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "axis": "left",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.8,
+      "description": "원본 자료에서 읽은 전체 방향입니다.",
+      "recentDirection": "steady"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 5.0,
+        "to": 0.14,
+        "absoluteChange": -4.86,
+        "percentChange": -97.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 25.0,
+        "at": ""
+      },
+      "min": {
+        "value": 0.14,
+        "at": ""
+      },
+      "average": 4.7,
+      "median": 2.25,
+      "range": 24.86
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "토큰 가격의 두 세계",
+    "subMessage": "출력 기준 Claude Opus 4.7 대비 MiniMax M2.5 약 1/21, DeepSeek V4 Flash 약 1/89",
+    "headline": "토큰 가격의 두 세계",
+    "summary": "미국 클로즈드 프론티어(입력 $2~5/출력 $12~25)와 중국 오픈웨이트(입력 $0.14~1.00/출력 $0.28~3.20)의 토큰 가격은 자릿수가 다르다.",
+    "story": "미국 클로즈드 프론티어(입력 $2~5/출력 $12~25)와 중국 오픈웨이트(입력 $0.14~1.00/출력 $0.28~3.20)의 토큰 가격은 자릿수가 다르다.",
+    "keyTakeaways": [
+      "미국 클로즈드 프론티어(입력 $2~5/출력 $12~25)와 중국 오픈웨이트(입력 $0.14~1.00/출력 $0.28~3.20)의 토큰 가격은 자릿수가 다르다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본 맥락과 함께 방향·축·시리즈를 확인하세요.",
+    "contextualNotes": [
+      "DeepSeek V4 Pro는 75% 프로모션 적용가(정가 $1.74/$3.48)",
+      "Gemini 3.1 Pro는 20만 토큰 이하 구간 가격",
+      "출처: DevTk.AI·PricePerToken 외 (devtk.ai, pricepertoken.com)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Opus 4.7",
+        "y": 25.0
+      },
+      "reason": "미국 클로즈드 프론티어(입력 $2~5/출력 $12~25)와 중국 오픈웨이트(입력 $0.14~1.00/출력 $0.28~3.20)의 토큰 가격은 자릿수가 다르다.",
+      "displayText": "토큰 가격의 두 세계"
+    },
+    "densityLevel": "balanced"
+  }
+}

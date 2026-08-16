@@ -1,0 +1,241 @@
+{
+  "id": "a63mix-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "preservedElements": [
+      "4개 세그먼트의 순서와 비중: 77.0 / 12.1 / 8.5 / 2.3",
+      "전체 3,050억 달러(중앙 표기 305)"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용",
+      "도넛 → 세로 막대"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 도넛이지만 세그먼트별 금액이 인쇄돼 있지 않고 비중 4개의 합이 99.9라, 도넛 중앙 합계가 99.9로 찍힌다. 금액을 역산하면 인쇄되지 않은 값을 만드는 것이라 비중만 쓰는 세로 막대로 옮기고 전체 금액은 부제에 적었다.",
+    "sourceAttribution": "자료: World Tech Research, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "change-chart-type"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 4개, 값 라벨 전부 표시, 최대값(AI 컴퓨트)만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "판독 출처 줄의 SemiAnalysis 는 리서치샵 이름이라 인쇄하지 않았다. 댈 1차 기록이 없어 발행 계정과 날짜만 남겼다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "subtitle": "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러",
+    "source": "자료: World Tech Research, 2026년 8월",
+    "timeRange": "2027",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AI 컴퓨트",
+        "커넥티비티",
+        "AI 애플리케이션",
+        "우주 발사"
+      ],
+      "displayTickValues": [
+        "AI 컴퓨트",
+        "커넥티비티",
+        "AI 애플리케이션",
+        "우주 발사"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "매출 비중 (%)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출 비중 (%)",
+        "data": [
+          {
+            "x": "AI 컴퓨트",
+            "y": 77,
+            "confidence": 0.99
+          },
+          {
+            "x": "커넥티비티",
+            "y": 12.1,
+            "confidence": 0.99
+          },
+          {
+            "x": "AI 애플리케이션",
+            "y": 8.5,
+            "confidence": 0.99
+          },
+          {
+            "x": "우주 발사",
+            "y": 2.3,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 77,
+        "at": "AI 컴퓨트"
+      },
+      "min": {
+        "value": 2.3,
+        "at": "우주 발사"
+      },
+      "average": 24.974999999999998,
+      "median": 0,
+      "range": 74.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "subMessage": "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러",
+    "headline": "3,050억 달러의 77퍼센트는 컴퓨트",
+    "summary": "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러",
+    "story": "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러",
+    "keyTakeaways": [
+      "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: World Tech Research, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "AI 컴퓨트",
+        "y": 77
+      },
+      "displayText": "77",
+      "reason": "2027년 4분기 연환산 매출 구성, 전체 3,050억 달러"
+    },
+    "densityLevel": "focused"
+  }
+}

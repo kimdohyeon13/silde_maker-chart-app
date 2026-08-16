@@ -1,0 +1,236 @@
+{
+  "id": "09-gross-margin-path",
+  "sourceImage": "input/09-gross-margin-path.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 어플라이드 옵토일렉트로닉스 2026년 2분기 실적 보도자료, 2026년 8월 6일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "매출총이익률은 아직 30% 문턱에서 오르내린다",
+    "subtitle": "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%",
+    "source": "자료: 어플라이드 옵토일렉트로닉스 2026년 2분기 실적 보도자료, 2026년 8월 6일",
+    "timeRange": "2025년 6월 분기~2026년 9월 분기",
+    "xAxis": {
+      "label": "분기",
+      "type": "category",
+      "tickValues": [
+        "25년 6월",
+        "26년 3월",
+        "26년 6월",
+        "9월 하단",
+        "9월 상단"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 27.0,
+      "max": 32.0
+    },
+    "legend": [
+      {
+        "name": "조정 기준 매출총이익률",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "조정 기준 매출총이익률",
+        "data": [
+          {
+            "x": "25년 6월",
+            "y": 30.4,
+            "confidence": 0.74
+          },
+          {
+            "x": "26년 3월",
+            "y": 29.2,
+            "confidence": 0.74
+          },
+          {
+            "x": "26년 6월",
+            "y": 29.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "9월 하단",
+            "y": 29.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "9월 상단",
+            "y": 30.5,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.05,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 0.3,
+        "absoluteChange": 0.1,
+        "from": 30.4,
+        "to": 30.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 30.5,
+        "at": ""
+      },
+      "min": {
+        "value": 29.0,
+        "at": ""
+      },
+      "average": 29.78,
+      "median": 29.8,
+      "range": 1.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "매출총이익률은 아직 30% 문턱에서 오르내린다",
+    "subMessage": "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%",
+    "headline": "매출총이익률은 아직 30% 문턱에서 오르내린다",
+    "summary": "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 어플라이드 옵토일렉트로닉스 2026년 2분기 실적 보도자료, 2026년 8월 6일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 30.5
+      },
+      "displayText": "매출총이익률은 아직 30% 문",
+      "reason": "조정 기준 매출총이익률이 30.4%에서 29.2%로 내렸다가 29.8%로 회복. 9월 분기 가이던스는 29~30.5%"
+    },
+    "densityLevel": "balanced"
+  }
+}

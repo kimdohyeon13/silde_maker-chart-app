@@ -1,0 +1,234 @@
+{
+  "id": "a63gw-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "1년치 임대료로 건설비를 회수한다는 계산",
+    "preservedElements": [
+      "막대 3개의 순서와 값: 50 / 30 / 50",
+      "y축 눈금 0, 15, 30, 45, 60"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "작업지시 JSON 의 reading 에 인쇄된 값만 썼습니다.",
+    "sourceAttribution": "Source: World Tech Research · Aug 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 3개, 값 라벨 전부 표시, 최대값 막대만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "판독 출처 줄의 SemiAnalysis 는 리서치샵 이름이라 다시 그린 차트에 인쇄하지 않았다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "One year of rent covers the build",
+    "subtitle": "Per-GW build capex vs annual contracted revenue, $B, at the top contract price",
+    "source": "Source: World Tech Research · Aug 2026",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Build capex",
+        "Contracted rev., low",
+        "Contracted rev., high"
+      ],
+      "displayTickValues": [
+        "Build capex",
+        "Contracted rev., low",
+        "Contracted rev., high"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "15",
+        "30",
+        "45",
+        "60"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "Per gigawatt ($B)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Per gigawatt ($B)",
+        "data": [
+          {
+            "x": "Build capex",
+            "y": 50,
+            "confidence": 0.99
+          },
+          {
+            "x": "Contracted rev., low",
+            "y": 30,
+            "confidence": 0.99
+          },
+          {
+            "x": "Contracted rev., high",
+            "y": 50,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 50,
+        "at": "Build capex"
+      },
+      "min": {
+        "value": 30,
+        "at": "Contracted rev., low"
+      },
+      "average": 43.333333333333336,
+      "median": 0,
+      "range": 20
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "One year of rent covers the build",
+    "subMessage": "Per-GW build capex vs annual contracted revenue, $B, at the top contract price",
+    "headline": "One year of rent covers the build",
+    "summary": "Per-GW build capex vs annual contracted revenue, $B, at the top contract price",
+    "story": "Per-GW build capex vs annual contracted revenue, $B, at the top contract price",
+    "keyTakeaways": [
+      "Per-GW build capex vs annual contracted revenue, $B, at the top contract price"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: World Tech Research · Aug 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Build capex",
+        "y": 50
+      },
+      "displayText": "50",
+      "reason": "Per-GW build capex vs annual contracted revenue, $B, at the top contract price"
+    },
+    "densityLevel": "focused"
+  }
+}

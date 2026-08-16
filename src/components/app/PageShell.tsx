@@ -25,6 +25,7 @@ export default function PageShell({
     <main
       style={{
         minHeight: "100vh",
+        width: "100%",
         padding: "32px 24px",
         maxWidth: 960,
         margin: "0 auto",

@@ -1,0 +1,239 @@
+{
+  "id": "w710t16-dark-terminal",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "1.6T 매출은 회사가 밝힌 하한만 봐도 두 배로 뛴다",
+    "preservedElements": [
+      "3개 항목의 순서와 값: 70 / 80 / 140",
+      "회사가 상한을 제시하지 않았다는 사실(하한 표기)",
+      "원본 출처 줄(어플라이드 옵토일렉트로닉스 2026년 2분기 어닝콜)"
+    ],
+    "changedElements": [
+      "보이는 글자를 영어로 정리",
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 막대 3개의 값, 순서, 축 범위를 그대로 유지했습니다.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 3개, 값 라벨 전부 표시, 최대값(27년 3월 하한)만 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "1차 자료(회사 어닝콜)만 적었다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "1.6T revenue doubles on the floor alone",
+    "subtitle": "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026",
+    "timeRange": "2026-2027",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Dec qtr, low",
+        "Dec qtr, high",
+        "Mar 2027 floor"
+      ],
+      "displayTickValues": [
+        "Dec qtr, low",
+        "Dec qtr, high",
+        "Mar 2027 floor"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100",
+        "120",
+        "140",
+        "160"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 160
+    },
+    "legend": [
+      {
+        "name": "1.6T revenue lower bound ($M)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "1.6T revenue lower bound ($M)",
+        "data": [
+          {
+            "x": "Dec qtr, low",
+            "y": 70,
+            "confidence": 0.99
+          },
+          {
+            "x": "Dec qtr, high",
+            "y": 80,
+            "confidence": 0.99
+          },
+          {
+            "x": "Mar 2027 floor",
+            "y": 140,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 140,
+        "at": "Mar 2027 floor"
+      },
+      "min": {
+        "value": 70,
+        "at": "Dec qtr, low"
+      },
+      "average": 96.66666666666667,
+      "median": 0,
+      "range": 70
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "1.6T revenue doubles on the floor alone",
+    "subMessage": "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that",
+    "headline": "1.6T revenue doubles on the floor alone",
+    "summary": "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that",
+    "story": "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that",
+    "keyTakeaways": [
+      "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "Mar 2027 floor",
+        "y": 140
+      },
+      "displayText": "140",
+      "reason": "Dec quarter is at least $70M-$80M; the Mar 2027 floor is over twice that"
+    },
+    "densityLevel": "focused"
+  }
+}

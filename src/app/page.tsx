@@ -56,6 +56,9 @@ export default function Home() {
       description="차트·표·뉴스 기사를 토스증권 스타일 콘텐츠로 리메이크"
       actions={
         <>
+          <ActionButton href="/editor" themeMode={themeMode}>
+            부분 수정
+          </ActionButton>
           <ActionButton href="/export" themeMode={themeMode} variant="primary">
             PNG 내보내기
           </ActionButton>

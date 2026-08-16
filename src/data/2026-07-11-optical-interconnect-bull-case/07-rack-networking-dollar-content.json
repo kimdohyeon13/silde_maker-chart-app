@@ -1,0 +1,128 @@
+{
+  "id": "rack-networking-dollar-content",
+  "mode": "faithful",
+  "sourceImage": "input/07-rack-networking-dollar-content.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 6: Dollar content per rack: GB300, Vera Rubin and Rubin Ultra",
+    "preservedElements": ["5개 시스템 시나리오", "출하시기·scale-up·scale-out 가정", "GPU·NV Switch ASIC·NIC 수량", "랙당 네트워킹 비용", "scale-up·scale-out 부품별 금액·Volume·ASP", "출처"],
+    "changedElements": ["항목명을 한국어로 번역", "상단 가정·Scale-up·Scale-out 섹션으로 행 그룹화", "글꼴·간격 정리"],
+    "dataFidelity": "exact",
+    "notes": "Exhibit 6의 표 셀을 직접 전사했습니다. 같은 이미지 하단 Exhibit 7 CPO switch specification comparison은 이번 산출물 범위가 아닙니다.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "AI 레이아웃 계획 선행", "status": "pass", "detail": "5개 시나리오와 세 개 행 섹션을 먼저 설계했습니다.", "checkedAt": "2026-07-11" },
+    { "id": "visible-cell-values", "label": "표시 셀 직접값 보존", "status": "pass", "detail": "Exhibit 6의 시스템 가정·합계·부품·Volume·ASP 표시값을 전사했습니다.", "checkedAt": "2026-07-11" },
+    { "id": "tall-table", "label": "긴 표 가독성", "status": "pending", "detail": "export 후 그룹 고아·셀 줄바꿈·출처 잘림 확인 필요", "checkedAt": "2026-07-11" }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF", "canvasHeight": 1510, "frameStyle": "none", "contentBorder": false,
+    "squareEdges": true, "headerPadding": "18px 24px 2px", "contentPadding": "5px 18px 2px",
+    "sourcePadding": "0 24px 12px", "titleFontSize": 28, "subtitleFontSize": 13, "sourceFontSize": 9
+  },
+  "structure": {
+    "title": "랙당 달러 콘텐츠: GB300, Vera Rubin, Rubin Ultra",
+    "subtitle": "Volume assumptions: spec table (Exhibit 5) | ASP assumptions: spec table and industry checks | US$k unless noted",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "item", "label": "Dollar content", "dataType": "text", "isRowHeader": true, "width": "30%", "align": "left" },
+      { "key": "gb300", "label": "GB300 NVL72", "dataType": "text", "width": "14%", "align": "right" },
+      { "key": "vr_a", "label": "Vera Rubin Spec A\nNVL72", "dataType": "text", "width": "14%", "align": "right" },
+      { "key": "vr_b", "label": "Vera Rubin Spec B\nNVL72 · 25% CPO", "dataType": "text", "width": "14%", "align": "right" },
+      { "key": "ru_a", "label": "Rubin Ultra Spec A\nNVL144 · 29% CPO", "dataType": "text", "width": "14%", "align": "right" },
+      { "key": "ru_b", "label": "Rubin Ultra Spec B\nNVL576 · 29% CPO", "dataType": "text", "width": "14%", "align": "right" }
+    ],
+    "columnGroups": [
+      { "label": "", "keys": ["item"] },
+      { "label": "GB300", "keys": ["gb300"] },
+      { "label": "Vera Rubin", "keys": ["vr_a", "vr_b"] },
+      { "label": "Rubin Ultra", "keys": ["ru_a", "ru_b"] }
+    ],
+    "rows": [
+      { "rowType": "data", "cells": { "item": { "value": "Shipment period", "displayValue": "출하시기" }, "gb300": { "value": "2H25-2026" }, "vr_a": { "value": "2H26-2027" }, "vr_b": { "value": "2H26-2027" }, "ru_a": { "value": "2H27-2028" }, "ru_b": { "value": "2H27-2028" } } },
+      { "rowType": "data", "cells": { "item": { "value": "Scale up" }, "gb300": { "value": "Copper cable", "displayValue": "구리 케이블" }, "vr_a": { "value": "Copper cable", "displayValue": "구리 케이블" }, "vr_b": { "value": "Copper cable", "displayValue": "구리 케이블" }, "ru_a": { "value": "PCB Midplane" }, "ru_b": { "value": "Copper cable + CPO", "displayValue": "구리 케이블 + CPO" } } },
+      { "rowType": "data", "cells": { "item": { "value": "Scale out" }, "gb300": { "value": "Optical modules (1.6T)", "displayValue": "광모듈 (1.6T)" }, "vr_a": { "value": "Optical modules (1.6T)", "displayValue": "광모듈 (1.6T)" }, "vr_b": { "value": "CPO TOR Switch (1.6T) + Optical module (1.6T)", "displayValue": "CPO TOR (1.6T) + 광모듈 (1.6T)" }, "ru_a": { "value": "CPO TOR Switch (3.2T) + Optical module (3.2T)", "displayValue": "CPO TOR (3.2T) + 광모듈 (3.2T)" }, "ru_b": { "value": "CPO TOR Switch (3.2T) + Optical module (3.2T)", "displayValue": "CPO TOR (3.2T) + 광모듈 (3.2T)" } } },
+      { "rowType": "data", "cells": { "item": { "value": "# of GPU package", "displayValue": "GPU 패키지 수" }, "gb300": { "value": 72 }, "vr_a": { "value": 72 }, "vr_b": { "value": 72 }, "ru_a": { "value": 144 }, "ru_b": { "value": 72 } } },
+      { "rowType": "data", "cells": { "item": { "value": "# of NV Switch ASIC", "displayValue": "NV Switch ASIC 수" }, "gb300": { "value": 18 }, "vr_a": { "value": 36 }, "vr_b": { "value": 36 }, "ru_a": { "value": 430 }, "ru_b": { "value": 430 } } },
+      { "rowType": "data", "cells": { "item": { "value": "# of NIC", "displayValue": "NIC 수" }, "gb300": { "value": 72 }, "vr_a": { "value": 144 }, "vr_b": { "value": 144 }, "ru_a": { "value": 288 }, "ru_b": { "value": 144 } } },
+      { "rowType": "total", "cells": { "item": { "value": "Networking costs per rack (US$ k)", "displayValue": "랙당 네트워킹 비용 (US$k)" }, "gb300": { "value": 315, "displayValue": "315" }, "vr_a": { "value": 489, "displayValue": "489" }, "vr_b": { "value": 504, "displayValue": "504" }, "ru_a": { "value": 1113, "displayValue": "1,113" }, "ru_b": { "value": 1169, "displayValue": "1,169" } } },
+      { "rowType": "subtotal", "cells": { "item": { "value": "Scale-up" }, "gb300": { "value": 140 }, "vr_a": { "value": 140 }, "vr_b": { "value": 140 }, "ru_a": { "value": 381 }, "ru_b": { "value": 803 } } },
+      { "rowType": "subtotal", "cells": { "item": { "value": "Scale-out" }, "gb300": { "value": 175 }, "vr_a": { "value": 349 }, "vr_b": { "value": 364 }, "ru_a": { "value": 732 }, "ru_b": { "value": 366 } } },
+
+      { "rowType": "header", "cells": { "item": { "value": "Scale up dollar content per rack (US$ k)", "displayValue": "Scale-up 랙당 달러 콘텐츠 (US$k)" } } },
+      { "rowType": "subtotal", "cells": { "item": { "value": "Scale up dollar content per rack (US$ k)", "displayValue": "Scale-up 합계" }, "gb300": { "value": 140 }, "vr_a": { "value": 140 }, "vr_b": { "value": 140 }, "ru_a": { "value": 381 }, "ru_b": { "value": 803 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Copper cable - backplane (US$ k)", "displayValue": "구리 케이블 - backplane" }, "gb300": { "value": 93 }, "vr_a": { "value": 93 }, "vr_b": { "value": 93 }, "ru_a": { "value": "-" }, "ru_b": { "value": 156 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": 5184, "displayValue": "5,184" }, "vr_a": { "value": 5184, "displayValue": "5,184" }, "vr_b": { "value": 5184, "displayValue": "5,184" }, "ru_a": { "value": "-" }, "ru_b": { "value": 5184, "displayValue": "5,184" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": 18 }, "vr_a": { "value": 18 }, "vr_b": { "value": 18 }, "ru_a": { "value": "-" }, "ru_b": { "value": 30 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Copper cable - flyover in switch tray (US$ k)", "displayValue": "구리 케이블 - flyover in switch tray" }, "gb300": { "value": 47 }, "vr_a": { "value": 47 }, "vr_b": { "value": 47 }, "ru_a": { "value": 156 }, "ru_b": { "value": 78 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": 5184, "displayValue": "5,184" }, "vr_a": { "value": 5184, "displayValue": "5,184" }, "vr_b": { "value": 5184, "displayValue": "5,184" }, "ru_a": { "value": 10368, "displayValue": "10,368" }, "ru_b": { "value": 5184, "displayValue": "5,184" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": 9 }, "vr_a": { "value": 9 }, "vr_b": { "value": 9 }, "ru_a": { "value": 15 }, "ru_b": { "value": 15 } } },
+      { "rowType": "data", "cells": { "item": { "value": "PCB midplane (US$ k)", "displayValue": "PCB midplane" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": 225 }, "ru_b": { "value": "-" } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": 2 }, "ru_b": { "value": "-" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": 112500, "displayValue": "112,500" }, "ru_b": { "value": "-" } } },
+      { "rowType": "data", "cells": { "item": { "value": "Optical engine & FAU (CPO/NPO, US$ k)", "displayValue": "광엔진 & FAU (CPO/NPO)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 324 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 324 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 1000, "displayValue": "1,000" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ELS (CPO/NPO, US$ k)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 65 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 162 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 400 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Fiber cable and MPO (CPO/NPO, US$ k)", "displayValue": "광케이블 & MPO (CPO/NPO)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 156 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 5184, "displayValue": "5,184" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 30 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Shufflebox (US$ k)", "displayValue": "셔플박스" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 25 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 36 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": "-" }, "ru_a": { "value": "-" }, "ru_b": { "value": 700 } } },
+
+      { "rowType": "header", "cells": { "item": { "value": "Scale out dollar content per rack (US$ k)", "displayValue": "Scale-out 랙당 달러 콘텐츠 (US$k)" } } },
+      { "rowType": "subtotal", "cells": { "item": { "value": "Scale out dollar content per rack (US$ k)", "displayValue": "Scale-out 합계" }, "gb300": { "value": 175 }, "vr_a": { "value": 349 }, "vr_b": { "value": 364 }, "ru_a": { "value": 732 }, "ru_b": { "value": 366 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Optical module (US$ k)", "displayValue": "광모듈" }, "gb300": { "value": 173 }, "vr_a": { "value": 346 }, "vr_b": { "value": 259 }, "ru_a": { "value": 491 }, "ru_b": { "value": 245 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": 216 }, "vr_a": { "value": 432 }, "vr_b": { "value": 324 }, "ru_a": { "value": 307 }, "ru_b": { "value": 153 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": 800 }, "vr_a": { "value": 800 }, "vr_b": { "value": 800 }, "ru_a": { "value": 1600, "displayValue": "1,600" }, "ru_b": { "value": 1600, "displayValue": "1,600" } } },
+      { "rowType": "data", "cells": { "item": { "value": "Optical engine & FAU (CPO/NPO, US$ k)", "displayValue": "광엔진 & FAU (CPO/NPO)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 86 }, "ru_a": { "value": 200 }, "ru_b": { "value": 100 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 108 }, "ru_a": { "value": 125 }, "ru_b": { "value": 63 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 800 }, "ru_a": { "value": 1600, "displayValue": "1,600" }, "ru_b": { "value": 1600, "displayValue": "1,600" } } },
+      { "rowType": "data", "cells": { "item": { "value": "ELS (CPO/NPO, US$ k)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 11 }, "ru_a": { "value": 25 }, "ru_b": { "value": 13 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 27 }, "ru_a": { "value": 63 }, "ru_b": { "value": 31 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 400 }, "ru_a": { "value": 400 }, "ru_b": { "value": 400 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Fiber cable and MPO (CPO/NPO, US$ k)", "displayValue": "광케이블 & MPO (CPO/NPO)" }, "gb300": { "value": 2 }, "vr_a": { "value": 4 }, "vr_b": { "value": 4 }, "ru_a": { "value": 6 }, "ru_b": { "value": 3 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": 108 }, "vr_a": { "value": 216 }, "vr_b": { "value": 216 }, "ru_a": { "value": 216 }, "ru_b": { "value": 108 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": 18 }, "vr_a": { "value": 18 }, "vr_b": { "value": 18 }, "ru_a": { "value": 30 }, "ru_b": { "value": 30 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Shufflebox (US$ k)", "displayValue": "셔플박스" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 4 }, "ru_a": { "value": 10 }, "ru_b": { "value": 5 } } },
+      { "rowType": "data", "cells": { "item": { "value": "Volume (unit)", "displayValue": "↳ Volume (unit)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 6 }, "ru_a": { "value": 14 }, "ru_b": { "value": 7 } } },
+      { "rowType": "data", "cells": { "item": { "value": "ASP (US$)", "displayValue": "↳ ASP (US$)" }, "gb300": { "value": "-" }, "vr_a": { "value": "-" }, "vr_b": { "value": 700 }, "ru_a": { "value": 700 }, "ru_b": { "value": 700 } } }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 27, "cellPadding": "4px 6px", "lineHeight": 1.08, "zebraStripe": false,
+      "highlightMode": "text", "headerTone": "inverse", "rowRules": "soft", "groupHeaderTone": "band",
+      "columnGroupTone": "tinted", "columnRules": true, "accentColor": "#123E73",
+      "fontWeight": { "body": 480, "numeric": 620, "rowHeader": 600, "header": 720, "total": 800, "groupHeader": 760, "columnGroup": 760 },
+      "fontSize": { "header": "10px", "body": "10px", "total": "11px", "badge": "8px", "unit": "8px", "groupHeader": "10px", "columnGroup": "10px" }
+    }
+  },
+  "narrative": {
+    "headMessage": "랙당 달러 콘텐츠: GB300, Vera Rubin, Rubin Ultra", "subMessage": "시스템 가정·Scale-up·Scale-out 세부 BoM | US$k",
+    "headline": "랙당 달러 콘텐츠: GB300, Vera Rubin, Rubin Ultra", "summary": "Exhibit 6의 표시 셀을 상세표로 보존했습니다.",
+    "story": "5개 시나리오의 네트워킹 비용과 부품별 구성입니다.", "keyTakeaways": [], "questionsRaised": [],
+    "viewerAction": "시나리오별 랙 합계와 Scale-up/Scale-out 세부 항목을 비교합니다.",
+    "contextualNotes": ["Source: Company data, Goldman Sachs Global Investment Research"]
+  },
+  "emphasis": {
+    "focusPoint": { "displayText": "exact", "reason": "표 셀 직접 전사값" },
+    "colorStrategy": { "primary": "#123E73", "secondary": ["#D8E8F5"], "positive": "#D92D3A", "negative": "#2563EB", "accent": "#5E93BC", "backgroundTone": "light" },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      { "row": 6, "col": "ru_a", "reason": "Rubin Ultra Spec A 랙당 네트워킹 비용" },
+      { "row": 6, "col": "ru_b", "reason": "Rubin Ultra Spec B 랙당 네트워킹 비용" },
+      { "row": 33, "col": "ru_a", "reason": "Scale-out 합계" }
+    ]
+  }
+}

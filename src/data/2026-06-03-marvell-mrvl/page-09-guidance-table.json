@@ -1,0 +1,214 @@
+{
+  "id": "guidance-vs-actual",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "신한 리포트 가이던스-실제 비교 표.",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "exact",
+    "notes": "신한 리포트 가이던스-실제 비교 표.",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=exact."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "title": "분기 가이던스 vs 실제 실적",
+    "subtitle": "5개 분기 연속 가이던스 상단 부합/초과 — '약속을 지키는 회사'",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)"
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "신한 리포트 가이던스-실제 비교 표.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "분기 가이던스 vs 실제 실적",
+    "summary": "5개 분기 연속 가이던스 상단 부합/초과 — '약속을 지키는 회사'",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "5개 분기 연속 가이던스 상단 부합/초과 — '약속을 지키는 회사'"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "tableData": {
+    "columns": [
+      {
+        "key": "q",
+        "label": "대상 분기",
+        "dataType": "text",
+        "width": "16%",
+        "isRowHeader": true,
+        "align": "center"
+      },
+      {
+        "key": "guide",
+        "label": "제시 가이던스 (매출 / GPM / EPS)",
+        "dataType": "text",
+        "width": "44%",
+        "align": "left"
+      },
+      {
+        "key": "actual",
+        "label": "실제 결과 (매출 / GPM / EPS)",
+        "dataType": "text",
+        "width": "40%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "q": {
+            "value": "FY1Q26",
+            "displayValue": "FY1Q26"
+          },
+          "guide": {
+            "value": "매출 18.75억 / GPM 59.0~60.0% / EPS 0.61",
+            "displayValue": "매출 18.75억 / GPM 59.0~60.0% / EPS 0.61"
+          },
+          "actual": {
+            "value": "18.95억 / 59.8% / 0.62",
+            "displayValue": "18.95억 / 59.8% / 0.62",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "q": {
+            "value": "FY2Q26",
+            "displayValue": "FY2Q26"
+          },
+          "guide": {
+            "value": "매출 20.0억 / GPM 59.0~60.0% / EPS 0.67",
+            "displayValue": "매출 20.0억 / GPM 59.0~60.0% / EPS 0.67"
+          },
+          "actual": {
+            "value": "20.1억 / 59.4% / 0.67",
+            "displayValue": "20.1억 / 59.4% / 0.67",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "q": {
+            "value": "FY3Q26",
+            "displayValue": "FY3Q26"
+          },
+          "guide": {
+            "value": "매출 20.6억 / GPM 59.5~60.0% / EPS 0.74",
+            "displayValue": "매출 20.6억 / GPM 59.5~60.0% / EPS 0.74"
+          },
+          "actual": {
+            "value": "20.8억 / 59.7% / 0.76",
+            "displayValue": "20.8억 / 59.7% / 0.76",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "q": {
+            "value": "FY4Q26",
+            "displayValue": "FY4Q26"
+          },
+          "guide": {
+            "value": "매출 22.0억 / GPM 58.5~59.5% / EPS 0.79",
+            "displayValue": "매출 22.0억 / GPM 58.5~59.5% / EPS 0.79"
+          },
+          "actual": {
+            "value": "22.2억 / 58.3% / 0.80",
+            "displayValue": "22.2억 / 58.3% / 0.80",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "q": {
+            "value": "FY1Q27",
+            "displayValue": "FY1Q27"
+          },
+          "guide": {
+            "value": "매출 24.0억 / GPM 58.25~59.25% / EPS 0.79",
+            "displayValue": "매출 24.0억 / GPM 58.25~59.25% / EPS 0.79"
+          },
+          "actual": {
+            "value": "24.2억 / 58.9% / 0.80",
+            "displayValue": "24.2억 / 58.9% / 0.80",
+            "highlight": "positive"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "zebra": true,
+      "compact": false
+    }
+  }
+}

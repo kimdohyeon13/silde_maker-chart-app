@@ -1,0 +1,262 @@
+{
+  "id": "w79-15-ko",
+  "mode": "faithful",
+  "sourceImage": "input/w7-9-15.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "회사 매출의 40%가 이미 데이터센터에서 나온다",
+    "preservedElements": [
+      "4개 항목의 순서와 값: Data center 39.9, Telecom carriers 26.4, OSP (optics and security) 20.1, Aerospace and defense 13.6",
+      "차트 종류 bar_horizontal 와 0 기준축",
+      "눈금 0, 10, 20, 30, 40",
+      "단위 %",
+      "원본 출처 줄의 기관·문서·날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "보이는 글자를 한국어로 옮김 (Threads 발행본)",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 장표의 수치·순서·축을 그대로 두고 표시 문자열만 영어로 옮겼습니다. 숫자는 원본에 인쇄된 값입니다.",
+    "sourceAttribution": "Source: Viavi Solutions FY2026 Q4 earnings call NSE mix, restated on a company-wide basis, Aug 5, 2026"
+  },
+  "allowedTransformations": [
+    "adjust-fonts",
+    "adjust-spacing",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "bar_horizontal 4개, 0 기준축, 눈금 0~40, 전 항목 값 라벨, 강조 없음(단색)를 먼저 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 장표에 인쇄된 source-visible 수치이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "source-visible-disclosure",
+      "label": "source-visible 상태 보존",
+      "status": "pass",
+      "detail": "데이터 충실도에 source-visible 상태를 명시했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "단일 시리즈, 4개 항목, % 단위, 원본 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "sign",
+    "numberLocale": "en",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "borderColor": "#24433D",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "회사 매출의 40%가 이미 데이터센터에서 나온다",
+    "subtitle": "데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 방산 13.6%",
+    "source": "Source: Viavi Solutions FY2026 Q4 earnings call NSE mix, restated on a company-wide basis, Aug 5, 2026",
+    "timeRange": "FY2026 Q4",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 40
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "데이터센터",
+        "통신 사업자",
+        "OSP (광학 보안 및 성능)",
+        "항공우주 및 방산"
+      ],
+      "displayTickValues": [
+        "데이터센터",
+        "통신 사업자",
+        "OSP (광학 보안 및 성능)",
+        "항공우주 및 방산"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "전사 매출 구성비",
+        "role": "primary",
+        "originalColor": "#1B4E7E",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전사 매출 구성비",
+        "data": [
+          {
+            "x": "데이터센터",
+            "y": 39.9,
+            "confidence": 0.95
+          },
+          {
+            "x": "통신 사업자",
+            "y": 26.4,
+            "confidence": 0.95
+          },
+          {
+            "x": "OSP (광학 보안 및 성능)",
+            "y": 20.1,
+            "confidence": 0.95
+          },
+          {
+            "x": "항공우주 및 방산",
+            "y": 13.6,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본 그대로 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "최대 대 최소",
+        "percentChange": 193.4,
+        "absoluteChange": 26.3,
+        "from": 13.6,
+        "to": 39.9
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 39.9,
+        "at": "데이터센터"
+      },
+      "min": {
+        "value": 13.6,
+        "at": "항공우주 및 방산"
+      },
+      "average": 25,
+      "median": 26.4,
+      "range": 26.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "회사 매출의 40%가 이미 데이터센터에서 나온다",
+    "subMessage": "데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 방산 13.6%",
+    "headline": "회사 매출의 40%가 이미 데이터센터에서 나온다",
+    "summary": "데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 방산 13.6%",
+    "story": "원본 장표의 값과 배치를 그대로 두고 표시 문자열만 한국어로 옮겼습니다.",
+    "keyTakeaways": [
+      "데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 방산 13.6%",
+      "데이터센터가 39.9%로 가장 큼",
+      "원본 장표에서 보이는 수치를 그대로 옮김"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "데이터센터와 나머지 항목을 비교하세요.",
+    "contextualNotes": [
+      "Source: Viavi Solutions FY2026 Q4 earnings call NSE mix, restated on a company-wide basis, Aug 5, 2026",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "항공우주 및 방산",
+        "y": 39.9
+      },
+      "displayText": "39.9",
+      "reason": "데이터센터 39.9%, 통신 26.4%, OSP 20.1%, 방산 13.6%"
+    },
+    "densityLevel": "focused"
+  }
+}

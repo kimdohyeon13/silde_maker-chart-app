@@ -1,0 +1,238 @@
+{
+  "id": "19-debt-vs-equity",
+  "sourceImage": "input/19-debt-vs-equity.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "squareEdges": true,
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "chartHeight": 370,
+    "compactChartMargins": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "자기자본 1달러가 부채 7달러를 지고 있다",
+    "subtitle": "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다",
+    "source": "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월",
+    "timeRange": "2026년 6월 말",
+    "xAxis": {
+      "label": "항목",
+      "type": "category",
+      "tickValues": [
+        "소구 부채",
+        "비소구 부채",
+        "자기자본"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "억 달러",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "2026년 6월 말 잔액",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2026년 6월 말 잔액",
+        "data": [
+          {
+            "x": "소구 부채",
+            "y": 314.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "비소구 부채",
+            "y": 36.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "자기자본",
+            "y": 50.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.077,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -84,
+        "absoluteChange": -263.9,
+        "from": 314.1,
+        "to": 50.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 314.1,
+        "at": ""
+      },
+      "min": {
+        "value": 36.6,
+        "at": ""
+      },
+      "average": 133.63333333333335,
+      "median": 50.2,
+      "range": 277.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "자기자본 1달러가 부채 7달러를 지고 있다",
+    "subMessage": "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다",
+    "headline": "자기자본 1달러가 부채 7달러를 지고 있다",
+    "summary": "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 코어위브 2026년 2분기 실적 발표 자료, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 50.2
+      },
+      "displayText": "자기자본 1달러가 부채 7달러",
+      "reason": "6월 말 상환청구권 있는 부채 314억, 없는 부채 37억 달러. 같은 시점 자기자본은 50억 달러다"
+    },
+    "densityLevel": "balanced"
+  }
+}

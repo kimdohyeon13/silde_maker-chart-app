@@ -1,0 +1,264 @@
+{
+  "id": "15-rule-of-40-implied-path",
+  "sourceImage": "input/15-rule-of-40-implied-path.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Down 24 points in two quarters, on the company's own guidance",
+    "preservedElements": [
+      "Original chart type",
+      "Series count",
+      "Axis structure",
+      "Comparison direction",
+      "Key message",
+      "Source context"
+    ],
+    "changedElements": [
+      "Title",
+      "Colors",
+      "Label density",
+      "Readability",
+      "Annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series, and relative positions were preserved as read from the source image.",
+    "sourceAttribution": "Source: Calculated from Palantir Q2 2026 Business Update appendix reconciliation and guidance, 2026-08-03"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series composition were matched first, then styling was adjusted."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Data read from source image",
+      "status": "pass",
+      "detail": "Values were read from the axes, series, and relative positions visible in the source crop."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% similarity to source",
+      "status": "pass",
+      "detail": "Chart type, axis structure, series count, and peak/trough positions were matched first; only styling was cleaned up."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The Rule of 40 Also Peaks This Quarter",
+    "subtitle": "Down 24 points in two quarters, on the company's own guidance",
+    "source": "Source: Calculated from Palantir Q2 2026 Business Update appendix reconciliation and guidance, 2026-08-03",
+    "timeRange": "3Q24~4Q26",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26",
+        "3Q26 Guidance",
+        "4Q26 Implied"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Rule of 40 score",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Rule of 40 score",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 68,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 81,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 83,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 94,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 114,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 127,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 145,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 155,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26 Guidance",
+            "y": 143,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26 Implied",
+            "y": 131,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Ranges needing primary-source confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read from the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.762,
+      "description": "Volatility visible in the source image was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "First vs. last",
+        "percentChange": 92.6,
+        "absoluteChange": 63.0,
+        "from": 68.0,
+        "to": 131.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 155.0,
+        "at": ""
+      },
+      "min": {
+        "value": 68.0,
+        "at": ""
+      },
+      "average": 114.1,
+      "median": 120.5,
+      "range": 87.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The Rule of 40 Also Peaks This Quarter",
+    "subMessage": "Down 24 points in two quarters, on the company's own guidance",
+    "headline": "The Rule of 40 Also Peaks This Quarter",
+    "summary": "Down 24 points in two quarters, on the company's own guidance",
+    "story": "Data relationships from the source are kept; labels and emphasis were cleaned up for report use.",
+    "keyTakeaways": [
+      "Down 24 points in two quarters, on the company's own guidance",
+      "Axes and comparison relationships from the source were preserved first.",
+      "Read direction, ordering, and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this shift the next leadership names and regional choices?"
+    ],
+    "viewerAction": "Check direction, axes, and series composition against the source.",
+    "contextualNotes": [
+      "Source: Calculated from Palantir Q2 2026 Business Update appendix reconciliation and guidance, 2026-08-03"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 131.0
+      },
+      "displayText": "Rule of 40 peaks now",
+      "reason": "Down 24 points in two quarters, on the company's own guidance"
+    },
+    "densityLevel": "balanced"
+  }
+}

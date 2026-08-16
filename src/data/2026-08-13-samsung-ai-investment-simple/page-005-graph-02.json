@@ -1,0 +1,150 @@
+{
+  "id": "page-005-graph-02",
+  "sourceImage": "/Users/mac/waltech/automation/silde_maker/projects/2026-08-12-samsung-ai-report/input/02-page_005_graph_02.png",
+  "analyzedAt": "2026-08-13T22:42:00+09:00",
+  "stylePreset": "toss-clean",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "모델 토큰 가격 추이",
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: SilliconData",
+    "mustPreserve": [
+      "2025년 12월부터 2026년 8월까지의 9개 월별 값",
+      "평균·폐쇄형·오픈 모델의 3개 가격 비교",
+      "달러 단위와 원본 출처"
+    ],
+    "changedElements": [
+      "제목을 AI 사용 비용 관점으로 단순화",
+      "월 표시를 5개로 줄여 라벨 겹침 방지",
+      "선 끝 직접 라벨로 범례 왕복을 줄임"
+    ]
+  },
+  "allowedTransformations": [
+    "adjust-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible",
+      "status": "pass",
+      "detail": "원본 그래프에서 읽은 월별 가격을 그대로 사용했습니다."
+    },
+    {
+      "id": "layout-plan",
+      "status": "pass",
+      "detail": "3개 선과 9개 월별 값을 유지하고, 짧은 월 라벨과 선 끝 직접 라벨을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "fontFamily": "Paperlogy",
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 140,
+    "lineStrokeWidth": 2.8
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "오픈 AI 모델은 사용료가 훨씬 쌉니다",
+    "subtitle": "모델별 토큰 가격 추이",
+    "source": "자료: SilliconData",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": ["2025-12", "2026-02", "2026-04", "2026-06", "2026-08"],
+      "displayTickValues": ["25.12", "26.02", "26.04", "26.06", "26.08"],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "토큰 가격",
+      "type": "numeric",
+      "tickValues": ["0", "1", "2", "3", "4", "5"],
+      "unit": "달러",
+      "min": 0,
+      "max": 5,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      { "name": "평균", "originalColor": "#1479F2", "remakeColor": "#1479F2" },
+      { "name": "폐쇄형 모델", "originalColor": "#F04473", "remakeColor": "#F04473" },
+      { "name": "오픈 모델", "originalColor": "#12B8C4", "remakeColor": "#12B8C4" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "평균",
+        "renderAs": "line",
+        "seriesKind": "normal",
+        "data": [
+          { "x": "2025-12", "y": 1.0, "confidence": 0.75 }, { "x": "2026-01", "y": 1.2, "confidence": 0.75 }, { "x": "2026-02", "y": 1.4, "confidence": 0.75 },
+          { "x": "2026-03", "y": 1.5, "confidence": 0.75 }, { "x": "2026-04", "y": 1.6, "confidence": 0.75 }, { "x": "2026-05", "y": 1.9, "confidence": 0.75 },
+          { "x": "2026-06", "y": 1.7, "confidence": 0.75 }, { "x": "2026-07", "y": 1.6, "confidence": 0.75 }, { "x": "2026-08", "y": 1.2, "confidence": 0.75 }
+        ]
+      },
+      {
+        "name": "폐쇄형 모델",
+        "renderAs": "line",
+        "seriesKind": "normal",
+        "data": [
+          { "x": "2025-12", "y": 1.2, "confidence": 0.75 }, { "x": "2026-01", "y": 1.6, "confidence": 0.75 }, { "x": "2026-02", "y": 2.3, "confidence": 0.75 },
+          { "x": "2026-03", "y": 2.5, "confidence": 0.75 }, { "x": "2026-04", "y": 2.0, "confidence": 0.75 }, { "x": "2026-05", "y": 3.0, "confidence": 0.75 },
+          { "x": "2026-06", "y": 3.7, "confidence": 0.75 }, { "x": "2026-07", "y": 4.0, "confidence": 0.75 }, { "x": "2026-08", "y": 3.0, "confidence": 0.75 }
+        ]
+      },
+      {
+        "name": "오픈 모델",
+        "renderAs": "line",
+        "seriesKind": "normal",
+        "data": [
+          { "x": "2025-12", "y": 0.25, "confidence": 0.75 }, { "x": "2026-01", "y": 0.27, "confidence": 0.75 }, { "x": "2026-02", "y": 0.32, "confidence": 0.75 },
+          { "x": "2026-03", "y": 0.36, "confidence": 0.75 }, { "x": "2026-04", "y": 0.42, "confidence": 0.75 }, { "x": "2026-05", "y": 0.55, "confidence": 0.75 },
+          { "x": "2026-06", "y": 0.48, "confidence": 0.75 }, { "x": "2026-07", "y": 0.43, "confidence": 0.75 }, { "x": "2026-08", "y": 0.50, "confidence": 0.75 }
+        ]
+      }
+    ],
+    "totalDataPoints": 27,
+    "quality": { "overallConfidence": 0.75, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "good" }
+  },
+  "statistics": { "summary": {}, "changeRates": [] },
+  "patterns": { "trend": "폐쇄형 모델의 토큰 가격이 가장 높고 변동 폭도 큽니다.", "supportResistance": [] },
+  "narrative": {
+    "headMessage": "오픈 AI 모델은 사용료가 훨씬 쌉니다",
+    "subMessage": "8월 기준 폐쇄형 3.0달러, 오픈 모델 0.5달러",
+    "headline": "오픈 AI 모델은 사용료가 훨씬 쌉니다",
+    "summary": "모델별 토큰 가격 차이가 크게 유지됩니다.",
+    "story": "AI를 많이 쓸수록 토큰 단가 차이가 전체 비용에 더 큰 영향을 줍니다.",
+    "keyTakeaways": ["2026년 8월 폐쇄형 모델 가격은 오픈 모델의 6배입니다."],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": { "x": "2026-08", "y": 3.0, "displayText": "폐쇄형 3.0달러" },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#1479F2", "secondary": ["#F04473", "#12B8C4"], "positive": "#16A34A", "negative": "#D92D20", "accent": "#0969DA", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  }
+}

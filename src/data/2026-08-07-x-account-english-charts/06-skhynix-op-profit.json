@@ -1,0 +1,276 @@
+{
+  "id": "06-skhynix-op-profit",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-08-07-x-account-english-charts/input/w75-06.png",
+  "sourceImages": [
+    "projects/2026-08-07-x-account-english-charts/input/w75-06.png"
+  ],
+  "contentType": "chart",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "영업이익은 1년 새 6.6배",
+    "originalMessage": "2Q26 영업이익 60.5조원, 전분기 대비 61% 증가",
+    "preservedElements": [
+      "세로 막대 차트와 0 기준축",
+      "2Q25·1Q26·2Q26 세 개 막대",
+      "9.2 / 37.6 / 60.5 조원의 실제 값",
+      "조원 단위 (달러로 환산하지 않음)",
+      "제목과 부제의 사실 관계",
+      "SK하이닉스 IR 2Q26 실적발표 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "모든 표기 문자열을 영문으로 번역 (@WorldTechRsrch 영문 전용 계정)",
+      "조원을 trillion won으로 표기 (환산 없이 단위명만 영문화)",
+      "회색 기준색 + 2Q26 막대 1개만 레드 강조",
+      "y축 눈금을 0/10/…/70의 균등 간격으로 정리",
+      "Paperlogy 900/300 제목 계층과 16:9 캔버스 여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "차트 타입·막대 3개·수치를 그대로 두고 문자열만 영문화했습니다. 원화 값은 달러로 환산하지 않고 trillion won으로 표기했습니다.",
+    "sourceAttribution": "Source: SK hynix IR, 2Q26 earnings release (2026-07-29)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "english-only-strings",
+      "label": "영문 전용 문자열",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브 등 화면에 보이는 모든 문자열을 영문으로 작성했습니다."
+    },
+    {
+      "id": "currency-not-converted",
+      "label": "원화 유지",
+      "status": "pass",
+      "detail": "조원 값을 달러로 환산하지 않고 trillion won으로 단위명만 영문화했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처 보존",
+      "status": "pass",
+      "detail": "세로 막대 3개, 조원 단위, 0 기준축, SK하이닉스 IR 출처를 유지했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "9.2, 37.6, 60.5는 원본 화면에서 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "axis-unit-single-place",
+      "label": "축 단위 중복 금지",
+      "status": "pass",
+      "detail": "trillion won은 y축 label에만 두고 unit은 비워 중복 표기를 피했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "headMessage는 Paperlogy 900, subMessage는 Paperlogy 300으로 지정했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#E12B3C",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Operating profit is 6.6x a year ago",
+    "subtitle": "2Q26 operating profit of 60.5 trillion won, up 61% from the previous quarter",
+    "source": "Source: SK hynix IR, 2Q26 earnings release (2026-07-29) · source-visible",
+    "timeRange": "2Q25 to 2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "2Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Operating profit (trillion won)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "Operating profit",
+        "role": "primary",
+        "originalColor": "#C4CAD4",
+        "remakeColor": "#C4CAD4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Operating profit",
+        "data": [
+          {
+            "x": "2Q25",
+            "y": 9.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "1Q26",
+            "y": 37.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2Q26",
+            "y": 60.5,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C4CAD4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에 값 라벨이 인쇄되어 있어 판독 난이도는 낮습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.94,
+      "description": "Operating profit rose in each of the two steps shown.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.587,
+      "description": "The spread between the first and last bar is the point of the chart."
+    },
+    "changeRates": [
+      {
+        "period": "2Q25 to 2Q26",
+        "percentChange": 557.6,
+        "absoluteChange": 51.3,
+        "from": 9.2,
+        "to": 60.5
+      },
+      {
+        "period": "1Q26 to 2Q26",
+        "percentChange": 60.9,
+        "absoluteChange": 22.9,
+        "from": 37.6,
+        "to": 60.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 60.5,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 9.2,
+        "at": "2Q25"
+      },
+      "average": 35.7667,
+      "median": 37.6,
+      "range": 51.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Operating profit is 6.6 times higher than a year ago",
+    "subMessage": "2Q26 operating profit of 60.5 trillion won, up 61% from the previous quarter",
+    "headline": "Operating profit is 6.6 times higher than a year ago",
+    "summary": "SK hynix operating profit went from 9.2 trillion won in 2Q25 to 60.5 trillion won in 2Q26.",
+    "story": "The chart keeps the original three-bar quarterly comparison and only changes the language and the colour emphasis for an English-reading audience.",
+    "keyTakeaways": [
+      "2Q25 operating profit: 9.2 trillion won",
+      "1Q26 operating profit: 37.6 trillion won",
+      "2Q26 operating profit: 60.5 trillion won, up 61% quarter over quarter",
+      "Values are source-visible, read off the published chart"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the three bars left to right and note the 6.6x gap between the first and the last.",
+    "contextualNotes": [
+      "Source: SK hynix IR, 2Q26 earnings release (2026-07-29)",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#C4CAD4",
+      "secondary": [
+        "#E3E6EC"
+      ],
+      "positive": "#E12B3C",
+      "negative": "#4B5563",
+      "accent": "#E12B3C",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 60.5
+      },
+      "displayText": "60.5",
+      "reason": "2Q26 operating profit of 60.5 trillion won is what the title is about."
+    },
+    "densityLevel": "focused"
+  }
+}

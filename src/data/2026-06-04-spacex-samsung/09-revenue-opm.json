@@ -1,0 +1,190 @@
+{
+  "id": "09-revenue-opm",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-04T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "combo",
+    "title": "매출은 고성장, 그러나 다시 적자 전환",
+    "subtitle": "매출 186.7억(+33.2%)인데 영업이익률(선)은 2025년 -13.9%",
+    "source": "삼성증권 SpaceX 리포트, 2026-06-04",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "백만 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 22035.32
+    },
+    "legend": [
+      {
+        "name": "매출(백만 달러)",
+        "role": "primary"
+      },
+      {
+        "name": "영업이익률(%)",
+        "role": "secondary"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "영업이익률",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출(백만 달러)",
+        "data": [
+          {
+            "x": "2023",
+            "y": 10387,
+            "confidence": 0.95
+          },
+          {
+            "x": "2024",
+            "y": 14015,
+            "confidence": 0.95
+          },
+          {
+            "x": "2025",
+            "y": 18674,
+            "confidence": 0.95
+          }
+        ],
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "영업이익률(%)",
+        "data": [
+          {
+            "x": "2023",
+            "y": -33.7,
+            "confidence": 0.95
+          },
+          {
+            "x": "2024",
+            "y": 3.3,
+            "confidence": 0.95
+          },
+          {
+            "x": "2025",
+            "y": -13.9,
+            "confidence": 0.95
+          }
+        ],
+        "role": "secondary",
+        "renderAs": "line",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원문 수치를 그대로 옮겨 읽기 쉽게 재배치했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "from": 10387.0,
+        "to": 18674.0,
+        "absoluteChange": 8287.0,
+        "percentChange": 79.78242033310869
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 18674.0,
+        "at": ""
+      },
+      "min": {
+        "value": 10387.0,
+        "at": ""
+      },
+      "average": 14358.666666666666,
+      "median": 14015.0,
+      "range": 8287.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "성장의 비용은 적자",
+    "subMessage": "매출 186.7억(+33.2%)인데 영업이익률(선)은 2025년 -13.9%",
+    "headline": "성장의 비용은 적자",
+    "summary": "2025년 매출은 33.2% 늘었지만 영업비용이 더 빨리 커지며 영업이익률은 마이너스로 돌아섰습니다.",
+    "story": "2025년 매출은 33.2% 늘었지만 영업비용이 더 빨리 커지며 영업이익률은 마이너스로 돌아섰습니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "원문 crop과 숫자를 대조해 보세요.",
+    "contextualNotes": [
+      "삼성증권 SpaceX 리포트, 2026-06-04"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#F5DF4D"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2025",
+        "y": 18674.0
+      },
+      "reason": "2025년 매출은 33.2% 늘었지만 영업비용이 더 빨리 커지며 영업이익률은 마이너스로 돌아섰습니다.",
+      "displayText": "성장의 비용은 적자"
+    },
+    "densityLevel": "balanced"
+  }
+}

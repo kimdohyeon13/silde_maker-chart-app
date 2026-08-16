@@ -1,0 +1,499 @@
+{
+  "id": "us-10y-yield-yahoo-finance",
+  "sourceImage": "input/source-08-us-10y-yield.png",
+  "analyzedAt": "2026-07-08T21:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "18. 미국 국채 10년물 금리 - 4.471%",
+    "preservedElements": [
+      "title",
+      "source",
+      "axis",
+      "series",
+      "order",
+      "visible-values"
+    ],
+    "changedElements": [
+      "translate-text",
+      "adjust-colors",
+      "adjust-fonts",
+      "adjust-spacing"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원자료 CSV 없이 이미지에서 읽은 값은 근사값입니다.",
+    "sourceAttribution": "Source: Yahoo Finance | title exact; line source-visible",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "차트 유형, 축, 라벨, 색상, QA 리스크를 먼저 정리한 뒤 JSON을 생성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-visible-values",
+      "label": "이미지 표시값 기반",
+      "status": "pass",
+      "detail": "원본 이미지에서 보이는 값과 구조를 기준으로 재구성했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    },
+    {
+      "id": "source-fidelity-note",
+      "label": "근사값 고지",
+      "status": "pass",
+      "detail": "원자료 CSV가 없어 source-visible/directional 값을 QA 문서에 별도 표시했습니다.",
+      "checkedAt": "2026-07-08T21:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 32,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 13,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 32px 0",
+    "contentPadding": "0 12px 0",
+    "sourcePadding": "0 32px 10px",
+    "squareEdges": true,
+    "chartHeight": 380,
+    "endLabelRightMargin": 72
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "18. 미국 국채 10년물 금리 - 4.471%",
+    "subtitle": "기준일 2026-07-06 | 선 끝 직접 라벨 4.48",
+    "source": "Source: Yahoo Finance | title exact; line source-visible",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-01-05",
+        "2026-03-01",
+        "2026-05-01",
+        "2026-07-06"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "1월",
+        "3월",
+        "5월",
+        "7월"
+      ]
+    },
+    "yAxis": {
+      "label": "미 10년물 국채금리",
+      "type": "numeric",
+      "tickValues": [
+        "4.0",
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 3.9,
+      "max": 4.7
+    },
+    "legend": [
+      {
+        "name": "미 10Y 금리",
+        "originalColor": "#1F7664",
+        "remakeColor": "#1F7664",
+        "role": "primary"
+      }
+    ]
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.5,
+      "description": "원본 시각 요소를 보존하는 faithful 재구성입니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "정량 통계보다 원본 형태와 표시값 보존을 우선했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "18. 미국 국채 10년물 금리 - 4.471%",
+    "subMessage": "기준일 2026-07-06 | 선 끝 직접 라벨 4.48",
+    "headline": "18. 미국 국채 10년물 금리 - 4.471%",
+    "summary": "기준일 2026-07-06 | 선 끝 직접 라벨 4.48",
+    "story": "원본 이미지의 데이터 구조와 출처를 유지한 한국어 카드입니다.",
+    "keyTakeaways": [
+      "기준일 2026-07-06 | 선 끝 직접 라벨 4.48"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본과 함께 제목, 수치, 축, 출처를 확인합니다.",
+    "contextualNotes": [
+      "Source: Yahoo Finance | title exact; line source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1F7664",
+      "secondary": [],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "reason": "원본 제목, 수치, 출처를 우선 보존합니다.",
+      "displayText": "source-visible"
+    },
+    "densityLevel": "balanced"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "미 10Y 금리",
+        "data": [
+          {
+            "x": "2026-01-05",
+            "y": 4.18,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-09",
+            "y": 4.14,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-13",
+            "y": 4.19,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-17",
+            "y": 4.17,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-21",
+            "y": 4.26,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-25",
+            "y": 4.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-01-29",
+            "y": 4.24,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-02",
+            "y": 4.28,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-06",
+            "y": 4.23,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-10",
+            "y": 4.27,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-14",
+            "y": 4.28,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-18",
+            "y": 4.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-22",
+            "y": 4.18,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-02-26",
+            "y": 4.05,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-01",
+            "y": 3.96,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-04",
+            "y": 4.07,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-07",
+            "y": 4.1,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-10",
+            "y": 4.15,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-13",
+            "y": 4.14,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-16",
+            "y": 4.14,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-19",
+            "y": 4.28,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-22",
+            "y": 4.2,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-25",
+            "y": 4.27,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-28",
+            "y": 4.36,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-03-31",
+            "y": 4.43,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-03",
+            "y": 4.31,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-06",
+            "y": 4.35,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-09",
+            "y": 4.3,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-12",
+            "y": 4.33,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-15",
+            "y": 4.25,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-18",
+            "y": 4.3,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-21",
+            "y": 4.4,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-24",
+            "y": 4.36,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-27",
+            "y": 4.48,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-04-30",
+            "y": 4.42,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-01",
+            "y": 4.44,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-04",
+            "y": 4.6,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-07",
+            "y": 4.62,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-10",
+            "y": 4.67,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-13",
+            "y": 4.58,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-16",
+            "y": 4.6,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-19",
+            "y": 4.52,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-22",
+            "y": 4.47,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-25",
+            "y": 4.45,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-28",
+            "y": 4.48,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-05-31",
+            "y": 4.46,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-03",
+            "y": 4.49,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-06",
+            "y": 4.54,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-09",
+            "y": 4.55,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-12",
+            "y": 4.46,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-15",
+            "y": 4.48,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-18",
+            "y": 4.43,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-21",
+            "y": 4.45,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-24",
+            "y": 4.51,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-27",
+            "y": 4.48,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-06-30",
+            "y": 4.37,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-07-03",
+            "y": 4.37,
+            "confidence": 0.82
+          },
+          {
+            "x": "2026-07-06",
+            "y": 4.48,
+            "confidence": 0.82
+          }
+        ],
+        "confidence": 0.82
+      }
+    ],
+    "totalDataPoints": 58,
+    "quality": {
+      "overallConfidence": 0.84,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 CSV 없이 PNG에서 읽은 근사값 포함"
+      ],
+      "readabilityScore": "good"
+    }
+  }
+}

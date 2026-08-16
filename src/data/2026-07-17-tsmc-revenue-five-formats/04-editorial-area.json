@@ -1,0 +1,285 @@
+{
+  "id": "04-editorial-area",
+  "sourceImage": "input/source-01-quarterly-revenue.png",
+  "mode": "redesign",
+  "stylePreset": "editorial-card",
+  "preserveIntent": {
+    "originalMessage": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "preservedElements": [
+      "3Q24부터 2Q26까지 8개 분기값과 순서",
+      "분기 매출 단일 시리즈",
+      "십억 달러 단위",
+      "2Q26 최종값 40.2",
+      "자료: TSMC IR (2026-07-16)",
+      "source-visible 데이터 신뢰도"
+    ],
+    "changedElements": [
+      "레이아웃 계획: 8개 분기의 연속 추세를 한 개의 에디토리얼 영역선으로 표현",
+      "라벨 계획: 중간값과 직접 라벨을 생략하고 마지막 값은 제목·부제로 강조",
+      "색상 계획: 단일 네이비 선과 같은 계열의 옅은 면 채움만 사용",
+      "밀도 계획: 범례와 추가 주석 없이 차트, 제목, 출처의 한 가지 시각 문법 유지",
+      "QA 위험: 과한 면 채움, 축·출처 누락, 우측 잘림을 확인"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 이미지에서 읽은 8개 분기값을 변경하지 않았습니다. 영역선은 표현 형식만 바꾼 리디자인이며 정밀 원자료가 아닌 source-visible 값입니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density",
+    "reorder-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-recorded",
+      "label": "AI 레이아웃 계획",
+      "status": "pass",
+      "detail": "8포인트 단일 영역선과 옅은 단색 면 채움으로 설계하고, 잘린 우측 직접 라벨은 제거했습니다."
+    },
+    {
+      "id": "quarter-values-preserved",
+      "label": "8개 분기값·순서 보존",
+      "status": "pass",
+      "detail": "3Q24 23.5, 4Q24 26.88, 1Q25 25.53, 2Q25 30.07, 3Q25 33.1, 4Q25 33.73, 1Q26 35.9, 2Q26 40.2를 원본 JSON과 동일하게 유지했습니다."
+    },
+    {
+      "id": "source-visible-disclosed",
+      "label": "source-visible 공개",
+      "status": "pass",
+      "detail": "이미지 기반 근사값이라는 데이터 신뢰도를 preserveIntent와 하단 출처 문맥에 유지했습니다."
+    },
+    {
+      "id": "single-visual-grammar",
+      "label": "단일 시각 문법",
+      "status": "pass",
+      "detail": "네이비 영역선 하나만 사용하며 KPI 카드나 중복 주석을 추가하지 않았습니다."
+    },
+    {
+      "id": "label-collision-plan",
+      "label": "라벨 충돌 방지",
+      "status": "pass",
+      "detail": "8개 값의 개별 라벨과 끝 직접 라벨을 생략해 오른쪽 잘림과 충돌을 제거했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 900·300 위계",
+      "status": "pass",
+      "detail": "editorial-card 기본 제목 900과 subtitleFontWeight 300을 적용하도록 지정했습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "단위·출처 보존",
+      "status": "pass",
+      "detail": "십억 달러 단위와 자료: TSMC IR (2026-07-16)을 그대로 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 24,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 17,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "20px 36px 0",
+    "contentPadding": "2px 12px 2px",
+    "sourcePadding": "0 36px 12px",
+    "chartHeight": 336,
+    "compactChartMargins": true,
+    "squareEdges": true,
+    "showAreaFill": true,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 1,
+    "lineStrokeWidth": 4,
+    "gridMode": "solid",
+    "showLatestGuide": false,
+    "endLabelRightMargin": 132,
+    "backgroundColor": "#FFFEFB",
+    "borderColor": "#E6E1D8",
+    "accentColor": "#173F5F"
+  },
+  "structure": {
+    "chartType": "area",
+    "title": "분기 매출, 다시 사상 최대",
+    "subtitle": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가 · 단위: 십억 달러",
+    "source": "자료: TSMC IR (2026-07-16) · source-visible",
+    "timeRange": "3Q24~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "십억 달러",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "분기 매출",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#173F5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "분기 매출",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 23.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 26.88,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 25.53,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 30.07,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 33.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 33.73,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 35.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 40.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "area",
+        "seriesKind": "normal",
+        "role": "primary",
+        "color": "#173F5F"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.537,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 71.1,
+        "absoluteChange": 16.7,
+        "from": 23.5,
+        "to": 40.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 40.2,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 23.5,
+        "at": "3Q24"
+      },
+      "average": 31.11375,
+      "median": 31.585,
+      "range": 16.700000000000003
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "분기 매출, 다시 사상 최대",
+    "subMessage": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가 · 단위: 십억 달러",
+    "headline": "분기 매출, 다시 사상 최대",
+    "summary": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "story": "8개 분기의 매출 흐름을 한 개의 옅은 영역선으로 연결하고 마지막 분기만 강조했습니다.",
+    "keyTakeaways": [
+      "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+      "3Q24 이후 분기 매출의 상승 흐름을 연속적으로 보여줍니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "제목의 마지막 분기 수치와 전체 상승 기울기를 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: TSMC IR (2026-07-16)",
+      "source-visible: 원본 이미지에서 읽은 근사값"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173F5F",
+      "secondary": [
+        "#AAB8C2"
+      ],
+      "positive": "#173F5F",
+      "negative": "#9E3B3B",
+      "accent": "#173F5F",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 40.2
+      },
+      "displayText": "2Q26 · 40.2",
+      "reason": "마지막 분기이자 8개 분기 중 최고 매출"
+    },
+    "densityLevel": "minimal"
+  }
+}

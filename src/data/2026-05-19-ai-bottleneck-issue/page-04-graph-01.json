@@ -1,0 +1,235 @@
+{
+  "id": "page-04-graph-01",
+  "sourceImage": "input/01-page_04_graph_01.png",
+  "analyzedAt": "2026-05-19T00:00:00+09:00",
+  "structure": {
+    "chartType": "line",
+    "title": "Mythos는 장기 과제 수행 능력을 한 단계 올렸다",
+    "subtitle": "누적 토큰이 늘어날수록 완료 단계 수가 급격히 상승, 고성능 모델은 같은 토큰으로 더 깊이 간다",
+    "source": "제공 PDF 기반 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "01 10K",
+        "02 100K",
+        "03 1M",
+        "04 10M",
+        "05 100M"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "완료 단계 수",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "단계",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Mythos Preview",
+        "role": "primary"
+      },
+      {
+        "name": "GPT-5.5 Cyber",
+        "role": "primary"
+      },
+      {
+        "name": "Claude 4.x",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Mythos Preview",
+        "role": "primary",
+        "data": [
+          {
+            "x": "01 10K",
+            "y": 1,
+            "confidence": 0.9
+          },
+          {
+            "x": "02 100K",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "03 1M",
+            "y": 8,
+            "confidence": 0.9
+          },
+          {
+            "x": "04 10M",
+            "y": 20,
+            "confidence": 0.9
+          },
+          {
+            "x": "05 100M",
+            "y": 32,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "name": "GPT-5.5 Cyber",
+        "role": "primary",
+        "data": [
+          {
+            "x": "01 10K",
+            "y": 1,
+            "confidence": 0.9
+          },
+          {
+            "x": "02 100K",
+            "y": 3,
+            "confidence": 0.9
+          },
+          {
+            "x": "03 1M",
+            "y": 7,
+            "confidence": 0.9
+          },
+          {
+            "x": "04 10M",
+            "y": 17,
+            "confidence": 0.9
+          },
+          {
+            "x": "05 100M",
+            "y": 30,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "name": "Claude 4.x",
+        "role": "secondary",
+        "data": [
+          {
+            "x": "01 10K",
+            "y": 0.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "02 100K",
+            "y": 2,
+            "confidence": 0.9
+          },
+          {
+            "x": "03 1M",
+            "y": 5,
+            "confidence": 0.9
+          },
+          {
+            "x": "04 10M",
+            "y": 10,
+            "confidence": 0.9
+          },
+          {
+            "x": "05 100M",
+            "y": 16,
+            "confidence": 0.9
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.88,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "복잡한 원문 시각물을 메시지 중심으로 재구성했습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.75,
+      "description": "원문 숫자와 본문 설명을 리포트용으로 단순화했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "핵심 방향성과 상대 비교가 중요합니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": 3100.0,
+        "absoluteChange": 31.0,
+        "from": 1.0,
+        "to": 32.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 32.0,
+        "at": ""
+      },
+      "min": {
+        "value": 1.0,
+        "at": ""
+      },
+      "average": 13.0,
+      "median": 8.0,
+      "range": 31.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "32단계",
+    "subMessage": "누적 토큰이 늘어날수록 완료 단계 수가 급격히 상승, 고성능 모델은 같은 토큰으로 더 깊이 간다",
+    "headline": "32단계",
+    "summary": "모델 성능 도약은 곧 긴 실행 시간, 더 많은 토큰, 더 큰 메모리 요구로 번역됩니다.",
+    "story": "모델 성능 도약은 곧 긴 실행 시간, 더 많은 토큰, 더 큰 메모리 요구로 번역됩니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문 해설과 함께 숫자의 의미를 확인합니다.",
+    "contextualNotes": [
+      "제공 PDF 기반 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "32단계",
+      "reason": "모델 성능 도약은 곧 긴 실행 시간, 더 많은 토큰, 더 큰 메모리 요구로 번역됩니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

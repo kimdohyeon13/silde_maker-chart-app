@@ -1,0 +1,181 @@
+{
+  "id": "chart-02",
+  "sourceImage": "",
+  "analyzedAt": "2026-06-16T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "DSP 기반 약 20W·12.5pJ/bit 대비 아날로그 방식은 2W 미만·1.25pJ/bit로 약 10배 효율적이다.",
+    "dataFidelity": "source-derived",
+    "sourceAttribution": "자료: Semtech 기술 비교 재구성"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "DSP를 제거한 아날로그 방식, 전력·에너지를 약 10배 줄인다",
+    "subtitle": "200G/lane 신호를 디지털 연산 없이 아날로그 등화기로 살려낸 결과",
+    "source": "자료: Semtech 기술 비교 재구성",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "케이블 끝단 전력(W)",
+        "비트당 에너지(pJ/bit)"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 23.6
+    },
+    "legend": [
+      {
+        "name": "DSP 기반",
+        "role": "primary"
+      },
+      {
+        "name": "Semtech 아날로그",
+        "role": "secondary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "DSP 기반",
+        "data": [
+          {
+            "x": "케이블 끝단 전력(W)",
+            "y": 20.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "비트당 에너지(pJ/bit)",
+            "y": 12.5,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#939597",
+        "axis": "left"
+      },
+      {
+        "name": "Semtech 아날로그",
+        "data": [
+          {
+            "x": "케이블 끝단 전력(W)",
+            "y": 2.0,
+            "confidence": 0.82
+          },
+          {
+            "x": "비트당 에너지(pJ/bit)",
+            "y": 1.25,
+            "confidence": 0.82
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.8,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "방향성 확인용입니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "from": 20.0,
+        "to": 12.5,
+        "absoluteChange": -7.5,
+        "percentChange": -37.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 20.0,
+        "at": ""
+      },
+      "min": {
+        "value": 12.5,
+        "at": ""
+      },
+      "average": 16.25,
+      "median": 16.25,
+      "range": 7.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "약 10배 전력·에너지 절감",
+    "subMessage": "200G/lane 신호를 디지털 연산 없이 아날로그 등화기로 살려낸 결과",
+    "headline": "약 10배 전력·에너지 절감",
+    "summary": "DSP 기반 약 20W·12.5pJ/bit 대비 아날로그 방식은 2W 미만·1.25pJ/bit로 약 10배 효율적이다.",
+    "story": "DSP 기반 약 20W·12.5pJ/bit 대비 아날로그 방식은 2W 미만·1.25pJ/bit로 약 10배 효율적이다.",
+    "keyTakeaways": [
+      "DSP 기반 약 20W·12.5pJ/bit 대비 아날로그 방식은 2W 미만·1.25pJ/bit로 약 10배 효율적이다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "원본 맥락과 함께 방향·축·시리즈를 확인하세요.",
+    "contextualNotes": [
+      "자료: Semtech 기술 비교 재구성"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#FF6F61",
+        "#E0A500"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#EF4444",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "비트당 에너지(pJ/bit)",
+        "y": 12.5
+      },
+      "reason": "DSP 기반 약 20W·12.5pJ/bit 대비 아날로그 방식은 2W 미만·1.25pJ/bit로 약 10배 효율적이다.",
+      "displayText": "약 10배 전력·에너지 절감"
+    },
+    "densityLevel": "balanced"
+  }
+}

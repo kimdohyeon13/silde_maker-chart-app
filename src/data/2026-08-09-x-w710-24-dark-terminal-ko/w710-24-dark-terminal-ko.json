@@ -1,0 +1,244 @@
+{
+  "id": "w710-24-dark-terminal-ko",
+  "mode": "faithful",
+  "sourceImage": "input/w7-10-24.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "CPO는 광연결당 레이저 출력을 3배로 높인다",
+    "preservedElements": [
+      "3개 항목의 순서와 값: 70, 100, 300",
+      "차트 종류 bar와 축 범위 0~350",
+      "눈금 0, 50, 100, 150, 200, 250, 300, 350",
+      "원본 출처 줄의 기관·문서·날짜",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "보이는 글자를 한국어로 정리",
+      "승인된 다크 터미널 팔레트·프레임·헤더 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 장표의 수치·순서·축을 유지하고 표시 문자열만 채널 언어에 맞췄습니다.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세로 막대 3개, 전 항목 값 라벨, 최대값 한 곳 강조를 계획했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본에 인쇄된 수치를 그대로 옮겼습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조와 출처",
+      "status": "pass",
+      "detail": "항목 순서, 축 범위, 출처를 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "emphasis",
+    "numberLocale": "ko",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "borderColor": "#24433D",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "CPO는 광연결당 레이저 출력을 3배로 높인다",
+    "subtitle": "800G용 70밀리와트, 1.6T용 100밀리와트, CPO용 약 300밀리와트",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026",
+    "timeRange": "2025-2027",
+    "xAxis": {
+      "label": "용도",
+      "type": "category",
+      "tickValues": [
+        "800G 트랜시버용",
+        "1.6T 트랜시버용",
+        "CPO용"
+      ],
+      "displayTickValues": [
+        "800G 트랜시버용",
+        "1.6T 트랜시버용",
+        "CPO용"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 350
+    },
+    "legend": [
+      {
+        "name": "레이저 출력 (밀리와트)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "레이저 출력 (밀리와트)",
+        "data": [
+          {
+            "x": "800G 트랜시버용",
+            "y": 70,
+            "confidence": 0.99
+          },
+          {
+            "x": "1.6T 트랜시버용",
+            "y": 100,
+            "confidence": 0.99
+          },
+          {
+            "x": "CPO용",
+            "y": 300,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 300,
+        "at": "CPO용"
+      },
+      "min": {
+        "value": 70,
+        "at": "800G 트랜시버용"
+      },
+      "average": 156.66666666666666,
+      "median": 100,
+      "range": 230
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CPO는 광연결당 레이저 출력을 3배로 높인다",
+    "subMessage": "800G용 70밀리와트, 1.6T용 100밀리와트, CPO용 약 300밀리와트",
+    "headline": "CPO는 광연결당 레이저 출력을 3배로 높인다",
+    "summary": "800G용 70밀리와트, 1.6T용 100밀리와트, CPO용 약 300밀리와트",
+    "story": "원본 장표의 값과 배치를 그대로 두고 한국어로 렌더했습니다.",
+    "keyTakeaways": [
+      "800G용 70밀리와트, 1.6T용 100밀리와트, CPO용 약 300밀리와트",
+      "CPO용: 300",
+      "Values are source-visible readings from the original slide"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the highlighted value with the other bars.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings call, Aug 6, 2026",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "CPO용",
+        "y": 300
+      },
+      "displayText": "300",
+      "reason": "800G용 70밀리와트, 1.6T용 100밀리와트, CPO용 약 300밀리와트"
+    },
+    "densityLevel": "focused"
+  }
+}

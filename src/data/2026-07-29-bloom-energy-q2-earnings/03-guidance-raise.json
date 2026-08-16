@@ -1,0 +1,84 @@
+{
+  "id": "03-guidance-raise",
+  "analyzedAt": "2026-07-29T11:10:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "exact",
+    "preservedElements": ["공식 가이던스 범위", "중간값 계산", "상향률", "출처"],
+    "sourceAttribution": "Bloom Energy Q1 and Q2 2026 guidance"
+  },
+  "allowedTransformations": ["rewrite-title", "adjust-colors", "adjust-layout", "adjust-density"],
+  "qualityChecks": [
+    {"id": "midpoint-math", "label": "중간값 계산", "status": "pass", "detail": "각 가이던스 범위의 산술 중간값으로 상향률을 계산했습니다."},
+    {"id": "units-separated", "label": "단위 혼합 방지", "status": "pass", "detail": "달러 규모와 EPS를 한 축에 놓지 않고 상향률만 비교했습니다."},
+    {"id": "official-ranges", "label": "공식 범위", "status": "pass", "detail": "Q1과 Q2 공식 가이던스를 사용했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 18,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "26px 40px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 40px 18px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "가이던스는 EPS가 가장 크게 올랐다",
+    "subtitle": "Q1 발표 대비 Q2 발표의 2026년 연간 가이던스 중간값 변화",
+    "source": "자료: Bloom Energy Q1·Q2 2026 실적 발표, 중간값 기준",
+    "timeRange": "2026년 연간 가이던스",
+    "xAxis": {"label": "중간값 상향률", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": true, "isLogScale": false, "max": 35},
+    "yAxis": {"label": "", "type": "category", "tickValues": ["매출", "비GAAP 영업이익", "비GAAP EPS"], "unit": "", "startsAtZero": false, "isLogScale": false},
+    "legend": [
+      {"name": "가이던스 중간값 상향률", "role": "primary", "originalColor": "#1458D4", "remakeColor": "#1458D4"}
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "가이던스 중간값 상향률",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {"x": "매출", "y": 12.5, "confidence": 1.0},
+          {"x": "비GAAP 영업이익", "y": 25.9, "confidence": 1.0},
+          {"x": "비GAAP EPS", "y": 31.7, "confidence": 1.0}
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {"overallConfidence": 1.0, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "excellent"}
+  },
+  "statistics": {
+    "trend": {"direction": "strong_up", "strength": 0.9, "description": "이익 관련 가이던스가 매출보다 더 크게 상향됐습니다.", "recentDirection": "accelerating_up"},
+    "volatility": {"level": "moderate", "coefficient": 0.4, "description": "지표별 상향 폭 차이가 큽니다."},
+    "changeRates": [],
+    "correlations": [],
+    "summary": {"max": {"value": 31.7, "at": "비GAAP EPS"}, "min": {"value": 12.5, "at": "매출"}, "average": 23.37, "median": 25.9, "range": 19.2}
+  },
+  "patterns": {"points": [], "crossovers": [], "supportResistance": []},
+  "narrative": {
+    "headMessage": "매출보다 이익 전망이 더 올랐다",
+    "subMessage": "EPS 중간값은 Q1 발표보다 31.7% 높아졌습니다.",
+    "headline": "회사는 매출뿐 아니라 영업이익과 EPS 전망을 더 공격적으로 올렸습니다.",
+    "summary": "연간 매출 가이던스는 39억~42억달러, 비GAAP 영업이익은 8억~9억달러, 비GAAP EPS는 2.55~2.85달러입니다.",
+    "story": "경영진이 현재 수요와 생산능력에 자신이 없었다면 이익 가이던스를 이 정도로 올리기 어렵습니다.",
+    "keyTakeaways": ["매출 중간값 +12.5%", "영업이익 중간값 +25.9%", "EPS 중간값 +31.7%"],
+    "questionsRaised": ["상향된 가이던스를 제품 믹스 변화 속에서도 달성할 수 있는가?"],
+    "viewerAction": "하반기 제품 매출과 현금 전환을 확인합니다.",
+    "contextualNotes": ["Q1·Q2 공식 가이던스의 산술 중간값 비교"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text": "가장 큰 상향", "position": {"x": "비GAAP EPS", "y": 31.7}, "importance": "critical", "style": "positive"}
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {"primary": "#1458D4", "secondary": ["#8B95A1"], "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"},
+    "focusPoint": {"position": {"x": "비GAAP EPS", "y": 31.7}, "displayText": "EPS 중간값 +31.7%", "reason": "이익 전망의 상향 폭이 매출보다 큽니다."},
+    "densityLevel": "minimal"
+  }
+}

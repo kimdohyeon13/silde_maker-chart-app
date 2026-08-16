@@ -1,0 +1,571 @@
+{
+  "id": "samsung-price",
+  "sourceImage": "page_11_graph_03.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "목표주가 55만원·투자의견 매수 유지",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Computex 2026 키노트 리뷰"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "삼성전자 주가, 2년 흐름 끝 가파른 재평가",
+    "subtitle": "목표주가 55만원·투자의견 매수 유지",
+    "source": "자료: Computex 2026 키노트 리뷰",
+    "timeRange": "2024.06~2026.06",
+    "xAxis": {
+      "label": "거래일",
+      "type": "category",
+      "tickValues": [
+        "2024-06-04",
+        "2025-06-04",
+        "2026-06-04"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "주가 (원)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "삼성전자 주가",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "삼성전자 주가",
+        "data": [
+          {
+            "x": "2024-06-04",
+            "y": 78000,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-06-14",
+            "y": 78445,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-06-24",
+            "y": 78889,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-07-04",
+            "y": 79334,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-07-14",
+            "y": 79779,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-07-24",
+            "y": 80223,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-08-03",
+            "y": 80668,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-08-13",
+            "y": 81113,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-08-24",
+            "y": 81558,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-09-03",
+            "y": 81997,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-09-13",
+            "y": 81330,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-09-23",
+            "y": 80663,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-10-03",
+            "y": 79996,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-10-13",
+            "y": 79329,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-10-23",
+            "y": 78662,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-11-03",
+            "y": 77995,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-11-13",
+            "y": 77327,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-11-23",
+            "y": 76660,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-12-03",
+            "y": 76013,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-12-13",
+            "y": 77347,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024-12-23",
+            "y": 78681,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-01-02",
+            "y": 80015,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-01-13",
+            "y": 81349,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-01-23",
+            "y": 82683,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-02-02",
+            "y": 84018,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-02-12",
+            "y": 85352,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-02-22",
+            "y": 86686,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-03-04",
+            "y": 88028,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-03-14",
+            "y": 89918,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-03-25",
+            "y": 91808,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-04-04",
+            "y": 93698,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-04-14",
+            "y": 95588,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-04-24",
+            "y": 97478,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-05-04",
+            "y": 99368,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-05-14",
+            "y": 101257,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-05-24",
+            "y": 103147,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-06-04",
+            "y": 105066,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-06-14",
+            "y": 108401,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-06-24",
+            "y": 111736,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-07-04",
+            "y": 115071,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-07-14",
+            "y": 118406,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-07-24",
+            "y": 121742,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-08-03",
+            "y": 125077,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-08-13",
+            "y": 128412,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-08-24",
+            "y": 131747,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-09-03",
+            "y": 135206,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-09-13",
+            "y": 143543,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-09-23",
+            "y": 151881,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-10-03",
+            "y": 160219,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-10-13",
+            "y": 168557,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-10-23",
+            "y": 176895,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-11-03",
+            "y": 185233,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-11-13",
+            "y": 193571,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-11-23",
+            "y": 201909,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-12-03",
+            "y": 210493,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-12-13",
+            "y": 227169,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-12-23",
+            "y": 243845,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-02",
+            "y": 260521,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-13",
+            "y": 277197,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-23",
+            "y": 293872,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-02",
+            "y": 310658,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-12",
+            "y": 330669,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-22",
+            "y": 350680,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-04",
+            "y": 370691,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-14",
+            "y": 390702,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-25",
+            "y": 410713,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-04",
+            "y": 430603,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-14",
+            "y": 447279,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-24",
+            "y": 463955,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-04",
+            "y": 480630,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-14",
+            "y": 497306,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-24",
+            "y": 513982,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-04",
+            "y": 530000,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 73,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.62,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 579.5,
+        "absoluteChange": 452000.0,
+        "from": 78000.0,
+        "to": 530000.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 530000.0,
+        "at": ""
+      },
+      "min": {
+        "value": 76013.0,
+        "at": ""
+      },
+      "average": 173260.80821917808,
+      "median": 105066.0,
+      "range": 453987.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "삼성전자 주가, 2년 흐름 끝 가파른 재평가",
+    "subMessage": "목표주가 55만원·투자의견 매수 유지",
+    "headline": "삼성전자 주가, 2년 흐름 끝 가파른 재평가",
+    "summary": "목표주가 55만원·투자의견 매수 유지",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "목표주가 55만원·투자의견 매수 유지",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Computex 2026 키노트 리뷰"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 530000.0
+      },
+      "displayText": "삼성전자 주가, 2년 흐름 끝",
+      "reason": "목표주가 55만원·투자의견 매수 유지"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "id": "05-rule-of-40",
+  "sourceImage": "input/05-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "빅테크 5개사 매출성장률·영업이익률·40의 법칙 평균 추이",
+    "preservedElements": [
+      "축 라벨/단위/기간 축",
+      "계열 구성",
+      "핵심 추세와 대소 관계"
+    ],
+    "changedElements": [
+      "팬톤 2026 팔레트로 색 통일",
+      "제목/부제 한국어 재작성",
+      "격자·여백 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "연간 평균 궤적은 신한투자증권 차트에서 읽은 값 기준."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visual-similarity-90",
+      "label": "소스 차트 구조 보존",
+      "status": "pass",
+      "detail": "신한 리포트의 40의 법칙 곡선을 연간 앵커로 재구성.",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "palette-pantone-2026",
+      "label": "팬톤 2026 팔레트",
+      "status": "pass",
+      "detail": "Classic Blue/Living Coral/Very Peri/Illuminating/Ultimate Gray만 사용",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "빅테크 5개사는 '40의 법칙'을 지키고 있다",
+    "subtitle": "성장률+이익률 합계 55% 안팎 — 재무 체력은 여전히 탄탄",
+    "source": "자료: Factset, 신한투자증권 (MSFT·GOOGL·AMZN·META·ORCL)",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "비율",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "min": 0,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "40의 법칙 (성장+이익)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "매출 성장률",
+        "role": "secondary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      },
+      {
+        "name": "영업이익률",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "성장률+이익률 합계 55% 안팎 — 재무 체력은 여전히 탄탄",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "빅테크 5개사는 '40의 법칙'을 지키고 있다",
+    "summary": "성장률+이익률 합계 55% 안팎 — 재무 체력은 여전히 탄탄",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "40의 법칙 평균 55% 안팎"
+    },
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#FF6F61",
+        "#939597"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#F5DF4D",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-07-04T16:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "40의 법칙 (성장+이익)",
+        "data": [
+          {
+            "x": "2021",
+            "y": 62,
+            "confidence": 0.75
+          },
+          {
+            "x": "2022",
+            "y": 48,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 40,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 46,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 52,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026",
+            "y": 56,
+            "confidence": 0.75
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "매출 성장률",
+        "data": [
+          {
+            "x": "2021",
+            "y": 32,
+            "confidence": 0.75
+          },
+          {
+            "x": "2022",
+            "y": 18,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 10,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 16,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 20,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026",
+            "y": 22,
+            "confidence": 0.75
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "left"
+      },
+      {
+        "name": "영업이익률",
+        "data": [
+          {
+            "x": "2021",
+            "y": 30,
+            "confidence": 0.75
+          },
+          {
+            "x": "2022",
+            "y": 24,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 22,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 26,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 30,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026",
+            "y": 34,
+            "confidence": 0.75
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left"
+      }
+    ],
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

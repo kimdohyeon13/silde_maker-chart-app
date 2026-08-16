@@ -1,0 +1,282 @@
+{
+  "id": "02-terminal-line",
+  "sourceImage": "input/source-01-quarterly-revenue.png",
+  "analyzedAt": "2026-07-17T00:00:00+09:00",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "preservedElements": [
+      "3Q24~2Q26의 8개 분기 값과 시간 순서",
+      "단일 분기 매출 시리즈",
+      "십억 달러 단위",
+      "자료: TSMC IR (2026-07-16)",
+      "source-visible 데이터 충실도"
+    ],
+    "changedElements": [
+      "레이아웃 계획: 8개 분기를 한 화면에 유지하는 단일 라인 차트",
+      "밀도 계획: 분기 축 전체를 노출하고 마지막 값은 제목에서 강조",
+      "스케일 계획: 0부터 시작하는 십억 달러 단일 축으로 원본 비교 관계 유지",
+      "라벨 계획: 모든 분기 tick을 유지하고 우측 잘림을 피하려 직접 라벨은 생략",
+      "색상 계획: 터미널 녹색 단일 시리즈와 중립 그리드만 사용",
+      "QA 위험: 출처 누락, Paperlogy 굵기 오류, 과한 장식과 축 잘림 점검"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 이미지에서 읽은 8개 분기 값을 변경하지 않고 막대 표현만 터미널형 라인으로 리디자인했습니다.",
+    "sourceAttribution": "자료: TSMC IR (2026-07-16)"
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-colors",
+    "adjust-spacing",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "단일 라인, 8개 전체 분기 tick, 0 기준 단일 축, 단색 터미널 팔레트를 확정하고 잘린 종점 라벨은 제거했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "source-visible 8개 값 보존",
+      "status": "pass",
+      "detail": "23.5, 26.88, 25.53, 30.07, 33.1, 33.73, 35.9, 40.2를 원본 순서 그대로 유지했습니다."
+    },
+    {
+      "id": "source-attribution-preserved",
+      "label": "출처와 단위 보존",
+      "status": "pass",
+      "detail": "TSMC IR 날짜와 십억 달러 단위를 원문 그대로 유지했습니다."
+    },
+    {
+      "id": "paperlogy-weight-contract",
+      "label": "Paperlogy 제목 900 · 서브 300",
+      "status": "pass",
+      "detail": "market-terminal 프리셋의 headMessage 900과 exportOptions.subtitleFontWeight 300을 명시했습니다."
+    },
+    {
+      "id": "terminal-density-qa",
+      "label": "고밀도 터미널 가독성",
+      "status": "pass",
+      "detail": "최종 PNG에서 8개 분기 tick, source-visible 출처, 텍스트 잘림 없음과 터미널 대비를 직접 확인했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 31,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "15px 26px 0",
+    "contentPadding": "0 8px 0",
+    "sourcePadding": "0 26px 9px",
+    "chartHeight": 390,
+    "showDirectLabels": false,
+    "endLabelRightMargin": 78,
+    "compactChartMargins": true,
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "TSMC 분기 매출 | 402억 달러",
+    "subtitle": "2Q26 매출 402억 달러 · 전년 동기 대비 34% 증가 · 단위: 십억 달러",
+    "source": "자료: TSMC IR (2026-07-16) · source-visible",
+    "timeRange": "3Q24~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "분기 매출(십억 달러)",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "분기 매출",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "분기 매출",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 23.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 26.88,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 25.53,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 30.07,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 33.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 33.73,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 35.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 40.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료가 아닌 이미지에서 읽은 source-visible 값이므로 정밀 계산 전 TSMC 원자료 대조가 필요합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "3Q24 23.5에서 2Q26 40.2로 상승한 원본 흐름을 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.537,
+      "description": "원본 화면에서 보이는 분기별 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 71.1,
+        "absoluteChange": 16.7,
+        "from": 23.5,
+        "to": 40.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 40.2,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 23.5,
+        "at": "3Q24"
+      },
+      "average": 31.11375,
+      "median": 31.585,
+      "range": 16.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "TSMC 분기 매출 | 402억 달러",
+    "subMessage": "2Q26 매출 402억 달러 · 전년 동기 대비 34% 증가 · 단위: 십억 달러",
+    "headline": "TSMC 분기 매출 | 402억 달러",
+    "summary": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "story": "8개 분기 매출을 터미널형 단일 라인으로 압축해 상승 경로와 최신 고점을 한 번에 읽게 했습니다.",
+    "keyTakeaways": [
+      "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+      "3Q24 235억 달러에서 2Q26 402억 달러로 상승"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "전체 8개 분기의 경로와 2Q26 종점 값을 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: TSMC IR (2026-07-16)",
+      "source-visible: 원본 이미지에서 읽은 값"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [],
+      "positive": "#FF6A5F",
+      "negative": "#4AA8FF",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 40.2
+      },
+      "displayText": "40.2",
+      "reason": "2Q26 사상 최대 분기 매출"
+    },
+    "densityLevel": "dense"
+  }
+}

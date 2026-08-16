@@ -1,0 +1,234 @@
+{
+  "id": "01-quarterly-revenue-en",
+  "sourceImage": "input/01-quarterly-revenue.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "June quarter revenue $191.9M and up 86% year over year",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Quarterly revenue is 1.9x a year ago",
+    "subtitle": "June quarter revenue $191.9M and up 86% year over year",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026",
+    "timeRange": "Jun 2025 quarter - Sep 2026 quarter",
+    "xAxis": {
+      "label": "Quarter",
+      "type": "category",
+      "tickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26",
+        "Sep '26 guide"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "Jun '25",
+        "Mar '26",
+        "Jun '26",
+        "Sep '26 guide"
+      ]
+    },
+    "yAxis": {
+      "label": "$ millions",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Quarterly revenue",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Quarterly revenue",
+        "data": [
+          {
+            "x": "Jun '25",
+            "y": 103.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "Mar '26",
+            "y": 151.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "Jun '26",
+            "y": 191.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "Sep '26 guide",
+            "y": 272.5,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.944,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 164.6,
+        "absoluteChange": 169.5,
+        "from": 103.0,
+        "to": 272.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 272.5,
+        "at": ""
+      },
+      "min": {
+        "value": 103.0,
+        "at": ""
+      },
+      "average": 179.625,
+      "median": 171.5,
+      "range": 169.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Quarterly revenue is 1.9x a year ago",
+    "subMessage": "June quarter revenue $191.9M and up 86% year over year",
+    "headline": "Quarterly revenue is 1.9x a year ago",
+    "summary": "June quarter revenue $191.9M and up 86% year over year",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "June quarter revenue $191.9M and up 86% year over year",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings release, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 272.5
+      },
+      "displayText": "Quarterly revenue is 1.9x ",
+      "reason": "June quarter revenue $191.9M and up 86% year over year"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "id": "page-27-graph-02",
+  "sourceImage": "input/33-page_27_graph_02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 회사 자료, 언론 종합"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "NVIDIA AI 가속기와 메모리 BOM 비교",
+    "subtitle": "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달",
+    "source": "자료: 회사 자료, 언론 종합",
+    "timeRange": "",
+    "xAxis": {
+      "label": "AI 가속기 플랫폼",
+      "type": "category",
+      "tickValues": [
+        "DGX H100",
+        "GB200 NVL72",
+        "GB300 NVL72",
+        "VR200 NVL72 (Max Q)",
+        "VR300 NVL576"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "메모리 BOM 비중",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "HBM",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "LPDDR/SOCAMM",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "HBM",
+        "data": [
+          {
+            "x": "DGX H100",
+            "y": 2,
+            "confidence": 0.78
+          },
+          {
+            "x": "GB200 NVL72",
+            "y": 7,
+            "confidence": 0.78
+          },
+          {
+            "x": "GB300 NVL72",
+            "y": 9,
+            "confidence": 0.78
+          },
+          {
+            "x": "VR200 NVL72 (Max Q)",
+            "y": 12,
+            "confidence": 0.78
+          },
+          {
+            "x": "VR300 NVL576",
+            "y": 36,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "LPDDR/SOCAMM",
+        "data": [
+          {
+            "x": "DGX H100",
+            "y": 7,
+            "confidence": 0.78
+          },
+          {
+            "x": "GB200 NVL72",
+            "y": 2,
+            "confidence": 0.78
+          },
+          {
+            "x": "GB300 NVL72",
+            "y": 2,
+            "confidence": 0.78
+          },
+          {
+            "x": "VR200 NVL72 (Max Q)",
+            "y": 11,
+            "confidence": 0.78
+          },
+          {
+            "x": "VR300 NVL576",
+            "y": 20,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.148,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 900.0,
+        "absoluteChange": 18.0,
+        "from": 2.0,
+        "to": 20.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 36.0,
+        "at": ""
+      },
+      "min": {
+        "value": 2.0,
+        "at": ""
+      },
+      "average": 10.8,
+      "median": 8.0,
+      "range": 34.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "NVIDIA AI 가속기와 메모리 BOM 비교",
+    "subMessage": "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달",
+    "headline": "NVIDIA AI 가속기와 메모리 BOM 비교",
+    "summary": "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 회사 자료, 언론 종합"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 20.0
+      },
+      "displayText": "NVIDIA AI 가속기와 메",
+      "reason": "세대를 거듭할수록 메모리 BOM 비중이 급증하며, VR300 NVL576에서는 HBM 36%·LPDDR/SOCAMM 20%로 합산 56%에 도달"
+    },
+    "densityLevel": "balanced"
+  }
+}

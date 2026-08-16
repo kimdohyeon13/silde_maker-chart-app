@@ -1,0 +1,889 @@
+{
+  "id": "page-16-table-01",
+  "sourceImage": "input/21-page_16_table_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다.",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "미국 주식시장 유동성 흡수",
+    "subtitle": "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다.",
+    "source": "자료: LSEG, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2016",
+        "2016.1",
+        "2016.21",
+        "2016.31",
+        "2016.42",
+        "2016.52",
+        "2016.62",
+        "2016.73",
+        "2016.83",
+        "2016.94",
+        "2017",
+        "2017.15",
+        "2017.25",
+        "2017.35",
+        "2017.46",
+        "2017.56",
+        "2017.67",
+        "2017.77",
+        "2017.88",
+        "2018",
+        "2018.08",
+        "2018.19",
+        "2018.29",
+        "2018.4",
+        "2018.5",
+        "2018.6",
+        "2018.71",
+        "2018.81",
+        "2018.92",
+        "2019",
+        "2019.12",
+        "2019.23",
+        "2019.33",
+        "2019.44",
+        "2019.54",
+        "2019.65",
+        "2019.75",
+        "2019.85",
+        "2020",
+        "2020.06",
+        "2020.17",
+        "2020.27",
+        "2020.38",
+        "2020.48",
+        "2020.58",
+        "2020.69",
+        "2020.79",
+        "2020.9",
+        "2021",
+        "2021.1",
+        "2021.21",
+        "2021.31",
+        "2021.42",
+        "2021.52",
+        "2021.62",
+        "2021.73",
+        "2021.83",
+        "2021.94",
+        "2022",
+        "2022.15",
+        "2022.25",
+        "2022.35",
+        "2022.46",
+        "2022.56",
+        "2022.67",
+        "2022.77",
+        "2022.88",
+        "2023",
+        "2023.08",
+        "2023.19",
+        "2023.29",
+        "2023.4",
+        "2023.5",
+        "2023.6",
+        "2023.71",
+        "2023.81",
+        "2023.92",
+        "2024",
+        "2024.12",
+        "2024.23",
+        "2024.33",
+        "2024.44",
+        "2024.54",
+        "2024.65",
+        "2024.75",
+        "2024.85",
+        "2025",
+        "2025.06",
+        "2025.17",
+        "2025.27",
+        "2025.38",
+        "2025.48",
+        "2025.58",
+        "2025.69",
+        "2025.79",
+        "2025.9",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "2",
+        "4",
+        "6",
+        "7",
+        "8",
+        "12",
+        "500"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 2.0,
+      "max": 500.0
+    },
+    "legend": [
+      {
+        "name": "미국 주식시장 유동성  값",
+        "role": "primary",
+        "originalColor": "#B7D5ED",
+        "remakeColor": "#B7D5ED"
+      },
+      {
+        "name": "미국 주식시장 유동성  추세",
+        "role": "primary",
+        "originalColor": "#9CC1E0",
+        "remakeColor": "#9CC1E0"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 2.0,
+      "max": 500.0
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "미국 주식시장 유동성  값",
+        "data": [
+          {
+            "x": "2016",
+            "y": 495,
+            "confidence": 0.68
+          },
+          {
+            "x": "2017",
+            "y": 447.21,
+            "confidence": 0.68
+          },
+          {
+            "x": "2018",
+            "y": 399.4,
+            "confidence": 0.68
+          },
+          {
+            "x": "2019",
+            "y": 400.4,
+            "confidence": 0.68
+          },
+          {
+            "x": "2020",
+            "y": 450.2,
+            "confidence": 0.68
+          },
+          {
+            "x": "2021",
+            "y": 500,
+            "confidence": 0.68
+          },
+          {
+            "x": "2022",
+            "y": 498,
+            "confidence": 0.68
+          },
+          {
+            "x": "2023",
+            "y": 496,
+            "confidence": 0.68
+          },
+          {
+            "x": "2024",
+            "y": 411.36,
+            "confidence": 0.68
+          },
+          {
+            "x": "2025E",
+            "y": 244,
+            "confidence": 0.68
+          },
+          {
+            "x": "2026E",
+            "y": 76.7,
+            "confidence": 0.68
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B7D5ED",
+        "axis": "left"
+      },
+      {
+        "name": "미국 주식시장 유동성  추세",
+        "data": [
+          {
+            "x": "2016",
+            "y": 12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.1",
+            "y": 12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.21",
+            "y": 12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.31",
+            "y": 12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.42",
+            "y": 12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.52",
+            "y": 16.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.62",
+            "y": 16.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.73",
+            "y": 16.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.83",
+            "y": 16.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2016.94",
+            "y": 16.94,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017",
+            "y": 76.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.15",
+            "y": 76.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.25",
+            "y": 96.62,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.35",
+            "y": 86.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.46",
+            "y": 86.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.56",
+            "y": 86.66,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.67",
+            "y": 96.62,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.77",
+            "y": 405.38,
+            "confidence": 0.8
+          },
+          {
+            "x": "2017.88",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.08",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.19",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.29",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.4",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.5",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.6",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.71",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.81",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2018.92",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.12",
+            "y": 430.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.23",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.33",
+            "y": 390.44,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.44",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.54",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.65",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.75",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2019.85",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.06",
+            "y": 430.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.17",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.27",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.38",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.48",
+            "y": 425.3,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.58",
+            "y": 440.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.69",
+            "y": 440.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.79",
+            "y": 450.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2020.9",
+            "y": 435.26,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021",
+            "y": 430.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.1",
+            "y": 455.18,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.21",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.31",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.42",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.52",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.62",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.73",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.83",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2021.94",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.15",
+            "y": 236.06,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.25",
+            "y": 226.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.35",
+            "y": 231.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.46",
+            "y": 226.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.56",
+            "y": 226.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.67",
+            "y": 216.14,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.77",
+            "y": 211.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2022.88",
+            "y": 206.18,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023",
+            "y": 196.22,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.08",
+            "y": 191.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.19",
+            "y": 191.24,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.29",
+            "y": 201.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.4",
+            "y": 211.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.5",
+            "y": 340.64,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.6",
+            "y": 370.52,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.71",
+            "y": 385.46,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.81",
+            "y": 400.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2023.92",
+            "y": 410.36,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.12",
+            "y": 430.28,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.23",
+            "y": 455.18,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.33",
+            "y": 470.12,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.44",
+            "y": 490,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.54",
+            "y": 490,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.65",
+            "y": 495,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.75",
+            "y": 500,
+            "confidence": 0.8
+          },
+          {
+            "x": "2024.85",
+            "y": 500,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025",
+            "y": 490,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.06",
+            "y": 480.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.17",
+            "y": 480.08,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.27",
+            "y": 475.1,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.38",
+            "y": 460.16,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.48",
+            "y": 455.18,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.58",
+            "y": 450.2,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.69",
+            "y": 420.32,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.79",
+            "y": 415.34,
+            "confidence": 0.8
+          },
+          {
+            "x": "2025.9",
+            "y": 400.4,
+            "confidence": 0.8
+          },
+          {
+            "x": "2026",
+            "y": 395.42,
+            "confidence": 0.8
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#9CC1E0",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 108,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.42,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -20.1,
+        "absoluteChange": -99.58,
+        "from": 495.0,
+        "to": 395.42
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 500.0,
+        "at": ""
+      },
+      "min": {
+        "value": 12.0,
+        "at": ""
+      },
+      "average": 343.7200925925926,
+      "median": 415.34,
+      "range": 488.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미국 주식시장 유동성 흡수",
+    "subMessage": "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다.",
+    "headline": "미국 주식시장 유동성 흡수",
+    "summary": "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다.",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 395.42
+      },
+      "displayText": "미국 주식시장 유동성 흡수",
+      "reason": "구경제가 약할수록 성장 희소성은 미국 기술주로 몰렸습니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

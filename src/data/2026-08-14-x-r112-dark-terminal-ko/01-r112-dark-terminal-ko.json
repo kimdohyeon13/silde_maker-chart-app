@@ -1,0 +1,265 @@
+{
+  "id": "r112-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/report-1/images/report-1-12.png",
+  "preserveIntent": {
+    "originalMessage": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다",
+    "preservedElements": [
+      "막대 7개의 순서와 값: 40 / 25 / 12 / 9 / 5 / 22.4 / 19.1",
+      "y축 눈금 0%, 10%, 20%, 30%, 40%, 50%",
+      "HBM 막대만 강조"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용"
+    ],
+    "dataFidelity": "exact",
+    "notes": "막대 7개의 값이 원본에 전부 인쇄돼 있습니다. 판독값이 아닙니다.",
+    "sourceAttribution": "자료: 산업 추정"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "원본의 차트 종류·계열·행 순서를 그대로 두고 색과 프레임만 다크 터미널로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "막대 7개의 값이 원본에 전부 인쇄돼 있습니다. 판독값이 아닙니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "원본에 인쇄된 자료 출처를 그대로 옮겼습니다. 셀사이드 이름도, 우리 발행물 이름(알파테크리포트·데일리이슈브리프·W7팔로업)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "compactChartMargins": true,
+    "chartHeight": 390,
+    "showAreaFill": false,
+    "barColorMode": "emphasis",
+    "metricValue": "40",
+    "metricLabel": "HBM 수요 증가율 · %"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "HBM 수요가 가장 빠르게 늘어난다",
+    "subtitle": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다",
+    "source": "자료: 산업 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "HBM",
+        "서버",
+        "PC",
+        "모바일",
+        "기타",
+        "전체 포함",
+        "전체 제외"
+      ],
+      "displayTickValues": [
+        "HBM",
+        "서버",
+        "PC",
+        "모바일",
+        "기타",
+        "전체 포함",
+        "전체 제외"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "수요 증가율 (%)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "장기 수요 전망",
+        "role": "primary",
+        "originalColor": "#00E0A4",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "장기 수요 전망",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 40,
+            "confidence": 0.99
+          },
+          {
+            "x": "서버",
+            "y": 25,
+            "confidence": 0.99
+          },
+          {
+            "x": "PC",
+            "y": 12,
+            "confidence": 0.99
+          },
+          {
+            "x": "모바일",
+            "y": 9,
+            "confidence": 0.99
+          },
+          {
+            "x": "기타",
+            "y": 5,
+            "confidence": 0.99
+          },
+          {
+            "x": "전체 포함",
+            "y": 22.4,
+            "confidence": 0.99
+          },
+          {
+            "x": "전체 제외",
+            "y": 19.1,
+            "confidence": 0.99
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본의 방향을 그대로 옮겼습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "원본의 변동폭을 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 40,
+        "at": "HBM"
+      },
+      "min": {
+        "value": 5,
+        "at": "기타"
+      },
+      "average": 18.929,
+      "median": 0,
+      "range": 35
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "HBM 수요가 가장 빠르게 늘어난다",
+    "subMessage": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다",
+    "headline": "HBM 수요가 가장 빠르게 늘어난다",
+    "summary": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다",
+    "story": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다",
+    "keyTakeaways": [
+      "HBM을 포함하면 전체 디램 수요 전망은 22.4%다"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: 산업 추정"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "HBM",
+        "y": 40
+      },
+      "displayText": "40",
+      "reason": "HBM을 포함하면 전체 디램 수요 전망은 22.4%다"
+    },
+    "densityLevel": "focused"
+  }
+}

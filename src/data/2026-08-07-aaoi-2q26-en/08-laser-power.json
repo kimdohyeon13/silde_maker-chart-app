@@ -1,0 +1,227 @@
+{
+  "id": "12-laser-power-en",
+  "sourceImage": "input/12-laser-power.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO",
+    "preservedElements": [
+      "original chart type",
+      "series count",
+      "axis structure",
+      "direction of comparison",
+      "core message",
+      "source context"
+    ],
+    "changedElements": [
+      "title",
+      "colors",
+      "label density",
+      "readability",
+      "annotation wording"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Axes, series and relative positions visible in the source were preserved.",
+    "sourceAttribution": "Source: Applied Optoelectronics Q2 2026 earnings call, August 6, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "Source structure preserved",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Values read off the source",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "90% visual similarity target",
+      "status": "pass",
+      "detail": "Chart type and series structure were matched to the source before any styling changed."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "CPO triples the power the laser must deliver",
+    "subtitle": "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO",
+    "source": "Source: Applied Optoelectronics Q2 2026 earnings call, August 6, 2026",
+    "timeRange": "As of August 2026",
+    "xAxis": {
+      "label": "Application",
+      "type": "category",
+      "tickValues": [
+        "For 800G transceivers",
+        "For 1.6T transceivers",
+        "For CPO"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "For 800G transceivers",
+        "For 1.6T transceivers",
+        "For CPO"
+      ]
+    },
+    "yAxis": {
+      "label": "Milliwatts",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Laser power required",
+        "role": "primary",
+        "originalColor": "#F5DF4D",
+        "remakeColor": "#F5DF4D"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Laser power required",
+        "data": [
+          {
+            "x": "For 800G transceivers",
+            "y": 70,
+            "confidence": 0.74
+          },
+          {
+            "x": "For 1.6T transceivers",
+            "y": 100,
+            "confidence": 0.74
+          },
+          {
+            "x": "For CPO",
+            "y": 300,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#F5DF4D"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing raw-data confirmation are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "Overall direction as read off the source image.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.468,
+      "description": "The swing visible in the source was preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first vs. last",
+        "percentChange": 328.6,
+        "absoluteChange": 230.0,
+        "from": 70.0,
+        "to": 300.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 300.0,
+        "at": ""
+      },
+      "min": {
+        "value": 70.0,
+        "at": ""
+      },
+      "average": 156.66666666666666,
+      "median": 100.0,
+      "range": 230.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CPO triples the power the laser must deliver",
+    "subMessage": "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO",
+    "headline": "CPO triples the power the laser must deliver",
+    "summary": "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO",
+    "story": "Data relationships from the source are unchanged; labels and emphasis were tidied for publication.",
+    "keyTakeaways": [
+      "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO",
+      "The source's axes and comparison relationships take priority.",
+      "Read direction, order and gaps before precise values."
+    ],
+    "questionsRaised": [
+      "How does this change which names and regions lead next?"
+    ],
+    "viewerAction": "Check direction, axes and series composition against the source.",
+    "contextualNotes": [
+      "Source: Applied Optoelectronics Q2 2026 earnings call, August 6, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 300.0
+      },
+      "displayText": "CPO triples the power the ",
+      "reason": "70 mW for 800G and 100 mW for 1.6T against roughly 300 mW for CPO"
+    },
+    "densityLevel": "balanced"
+  }
+}

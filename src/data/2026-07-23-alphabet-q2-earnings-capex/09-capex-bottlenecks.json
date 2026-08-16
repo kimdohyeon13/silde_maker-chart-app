@@ -1,0 +1,114 @@
+{
+  "id": "09-capex-bottlenecks",
+  "contentType": "infographic",
+  "mode": "redesign",
+  "analyzedAt": "2026-07-23T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "AI infrastructure bottleneck map",
+    "preservedElements": [
+      "가속기",
+      "메모리",
+      "네트워크·광학",
+      "전력·냉각",
+      "데이터센터 장비"
+    ],
+    "changedElements": [
+      "5개 밸류체인 특징 리스트",
+      "2Q26 CAPEX 맥락"
+    ],
+    "dataFidelity": "redrawn",
+    "mode": "redesign",
+    "notes": "볼트의 기존 설명 구조를 현재 분기 맥락에 맞춰 다시 그렸습니다."
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "CAPEX가 매출로 전달되는 5개 병목을 설계했습니다.",
+      "checkedAt": "2026-07-23"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 16:9 계약",
+      "status": "pass",
+      "detail": "2026-07-23 export와 DOM QA에서 1,824×1,026, 제목 900, 서브메시지 300, overflow 0을 확인했습니다.",
+      "checkedAt": "2026-07-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 513,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "\"Paperlogy\", var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "17px 28px 1px",
+    "contentPadding": "2px 16px 2px",
+    "sourcePadding": "0 28px 9px",
+    "titleFontSize": 27,
+    "subtitleFontSize": 14,
+    "accentColor": "#101828"
+  },
+  "structure": {
+    "title": "구글의 지출은 AI 병목 공급자의 매출이 된다",
+    "subtitle": "2,000억달러 안팎의 CAPEX가 흘러가는 핵심 밸류체인",
+    "source": "자료: Alphabet, 월텍남 알파테크 045·056·060화, WisdomTree"
+  },
+  "infographicData": {
+    "subType": "feature_list",
+    "items": [
+      {
+        "label": "가속기·맞춤형 칩",
+        "description": "GPU와 TPU용 ASIC 수요가 연산 용량 확장을 받칩니다."
+      },
+      {
+        "label": "HBM·서버 메모리",
+        "description": "모델 규모와 추론량이 커질수록 대역폭과 용량 제약이 커집니다."
+      },
+      {
+        "label": "네트워크·광통신",
+        "description": "스위치, DSP, 리타이머, 광모듈이 클러스터 가동률을 결정합니다."
+      },
+      {
+        "label": "전력·냉각",
+        "description": "배전, UPS, 발전, 냉각은 데이터센터 인도 속도의 물리적 한계입니다."
+      },
+      {
+        "label": "건물·패키징·검사",
+        "description": "부지와 첨단 패키징, 검사 장비가 실제 공급량을 제한합니다."
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "CAPEX 부담과 공급망 매출은 같은 숫자의 양면",
+    "subMessage": "투자 회수 우려는 Alphabet에, 수요 가시성은 병목 공급자에 먼저 반영됩니다.",
+    "headline": "하이퍼스케일러가 지출을 늘릴수록 희소한 메모리, 네트워크, 광학, 전력의 매출 기회가 커집니다.",
+    "keyTakeaways": [
+      "병목은 GPU 한 종류에만 머물지 않습니다.",
+      "메모리 대역폭과 광통신이 2026년 핵심 제약으로 부상했습니다.",
+      "전력과 냉각은 데이터센터 착공·가동 속도를 제한합니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "병목=가격 결정력",
+      "reason": "공급이 따라오지 못하는 구간"
+    },
+    "densityLevel": "balanced"
+  }
+}

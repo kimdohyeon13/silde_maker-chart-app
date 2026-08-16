@@ -1,0 +1,247 @@
+{
+  "id": "02-ai-infra-capex-trend",
+  "sourceImage": "input/02-source.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "주요 AI 인프라 5개사의 합산 설비투자 추이",
+    "preservedElements": [
+      "축 라벨/단위/기간 축",
+      "계열 구성",
+      "핵심 추세와 대소 관계"
+    ],
+    "changedElements": [
+      "팬톤 2026 팔레트로 색 통일",
+      "제목/부제 한국어 재작성",
+      "격자·여백 정리"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "연간 합산 규모는 신한투자증권 차트에서 읽은 값 기준."
+  },
+  "allowedTransformations": [
+    "simplify-labels",
+    "rewrite-title",
+    "reorder-emphasis",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visual-similarity-90",
+      "label": "소스 차트 구조 보존",
+      "status": "pass",
+      "detail": "신한 리포트의 5개사 CapEx 스택 막대와 증가율 곡선을 연간 앵커로 재구성.",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    },
+    {
+      "id": "palette-pantone-2026",
+      "label": "팬톤 2026 팔레트",
+      "status": "pass",
+      "detail": "Classic Blue/Living Coral/Very Peri/Illuminating/Ultimate Gray만 사용",
+      "checkedAt": "2026-07-04T16:00:00+09:00"
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "AI 인프라 5개사, 설비투자는 오히려 가속",
+    "subtitle": "합산 CapEx 2026년 900억 달러 돌파 전망 — 둔화 신호는 없다",
+    "source": "자료: Factset, 신한투자증권 (MSFT·GOOGL·AMZN·META·ORCL)",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "합산 CapEx",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "unit": "십억달러",
+      "tickValues": [
+        "0",
+        "25",
+        "50",
+        "75",
+        "100"
+      ],
+      "min": 0,
+      "max": 100
+    },
+    "legend": [
+      {
+        "name": "합산 CapEx (좌)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "전년비 증가율 (우)",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "전년비 증가율",
+      "type": "numeric",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "unit": "%",
+      "tickValues": [
+        "-30",
+        "0",
+        "30",
+        "60",
+        "90",
+        "120"
+      ],
+      "min": -30,
+      "max": 120
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "합산 CapEx 2026년 900억 달러 돌파 전망 — 둔화 신호는 없다",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "AI 인프라 5개사, 설비투자는 오히려 가속",
+    "summary": "합산 CapEx 2026년 900억 달러 돌파 전망 — 둔화 신호는 없다",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2026F 합산 CapEx 약 900억 달러"
+    },
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#FF6F61"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#F5DF4D",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "medium",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-07-04T16:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "합산 CapEx (좌)",
+        "data": [
+          {
+            "x": "2020",
+            "y": 18,
+            "confidence": 0.75
+          },
+          {
+            "x": "2021",
+            "y": 25,
+            "confidence": 0.75
+          },
+          {
+            "x": "2022",
+            "y": 30,
+            "confidence": 0.75
+          },
+          {
+            "x": "2023",
+            "y": 33,
+            "confidence": 0.75
+          },
+          {
+            "x": "2024",
+            "y": 42,
+            "confidence": 0.75
+          },
+          {
+            "x": "2025",
+            "y": 63,
+            "confidence": 0.75
+          },
+          {
+            "x": "2026F",
+            "y": 90,
+            "confidence": 0.75
+          },
+          {
+            "x": "2027F",
+            "y": 87,
+            "confidence": 0.75
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left"
+      },
+      {
+        "name": "전년비 증가율 (우)",
+        "data": [
+          {
+            "x": "2021",
+            "y": 39,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022",
+            "y": 20,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023",
+            "y": 10,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024",
+            "y": 27,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025",
+            "y": 50,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026F",
+            "y": 43,
+            "confidence": 0.7
+          },
+          {
+            "x": "2027F",
+            "y": -3,
+            "confidence": 0.7
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "right"
+      }
+    ],
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

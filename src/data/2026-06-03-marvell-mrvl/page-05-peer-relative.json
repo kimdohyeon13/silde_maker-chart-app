@@ -1,0 +1,262 @@
+{
+  "id": "peer-relative",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "원본은 그림만 있고 표가 없어 추세를 보존한 근사치. 정확 수치 아님.",
+    "preservedElements": [
+      "수치",
+      "범례",
+      "추세"
+    ],
+    "changedElements": [
+      "색상",
+      "폰트",
+      "여백"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 그림만 있고 표가 없어 추세를 보존한 근사치. 정확 수치 아님.",
+    "sourceAttribution": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-hallucinated-items",
+      "label": "환각 항목 제거",
+      "status": "pass",
+      "detail": "원본 리포트에 없는 항목/수치를 만들지 않았습니다."
+    },
+    {
+      "id": "fidelity-flag",
+      "label": "데이터 정직성",
+      "status": "pass",
+      "detail": "dataFidelity=source-visible."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 40,
+    "subtitleFontSize": 23,
+    "sourceFontSize": 16,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "글로벌 Peer 상대주가 추이",
+    "subtitle": "2021=0 기준 (눈으로 읽은 근사치) · 브로드컴이 선두, 마벨이 최근 추격",
+    "source": "자료: 신한투자증권, Factset, LSEG (2026-05-28)",
+    "xAxis": {
+      "label": "연도",
+      "type": "category",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "tickValues": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    "yAxis": {
+      "label": "상대주가 (2021=0)",
+      "type": "numeric",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "tickValues": [
+        "0",
+        "250",
+        "500",
+        "750",
+        "1000"
+      ],
+      "min": 0,
+      "max": 1000
+    },
+    "axisDistortionWarning": "원본 리포트에 수치 표가 없어 그래프에서 눈으로 읽은 근사치(source-visible)입니다.",
+    "legend": [
+      {
+        "name": "마벨",
+        "role": "primary",
+        "originalColor": "#2563EB",
+        "remakeColor": "#2563EB"
+      },
+      {
+        "name": "브로드컴",
+        "role": "secondary",
+        "originalColor": "#64748B",
+        "remakeColor": "#64748B"
+      },
+      {
+        "name": "시스코",
+        "role": "secondary",
+        "originalColor": "#F59E0B",
+        "remakeColor": "#F59E0B"
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "원본은 그림만 있고 표가 없어 추세를 보존한 근사치. 정확 수치 아님.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headline": "글로벌 Peer 상대주가 추이",
+    "summary": "2021=0 기준 (눈으로 읽은 근사치) · 브로드컴이 선두, 마벨이 최근 추격",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2021=0 기준 (눈으로 읽은 근사치) · 브로드컴이 선두, 마벨이 최근 추격"
+    },
+    "colorStrategy": {
+      "primary": "#2563EB",
+      "secondary": [
+        "#94A3B8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#F59E0B",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "minimal",
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": []
+  },
+  "analyzedAt": "2026-06-03T12:00:00+09:00",
+  "data": {
+    "series": [
+      {
+        "name": "마벨",
+        "data": [
+          {
+            "x": "2021",
+            "y": 0,
+            "confidence": 0.45
+          },
+          {
+            "x": "2022",
+            "y": 30,
+            "confidence": 0.45
+          },
+          {
+            "x": "2023",
+            "y": 70,
+            "confidence": 0.45
+          },
+          {
+            "x": "2024",
+            "y": 110,
+            "confidence": 0.45
+          },
+          {
+            "x": "2025",
+            "y": 160,
+            "confidence": 0.45
+          },
+          {
+            "x": "2026",
+            "y": 250,
+            "confidence": 0.45
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary"
+      },
+      {
+        "name": "브로드컴",
+        "data": [
+          {
+            "x": "2021",
+            "y": 0,
+            "confidence": 0.45
+          },
+          {
+            "x": "2022",
+            "y": 120,
+            "confidence": 0.45
+          },
+          {
+            "x": "2023",
+            "y": 260,
+            "confidence": 0.45
+          },
+          {
+            "x": "2024",
+            "y": 520,
+            "confidence": 0.45
+          },
+          {
+            "x": "2025",
+            "y": 720,
+            "confidence": 0.45
+          },
+          {
+            "x": "2026",
+            "y": 850,
+            "confidence": 0.45
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      },
+      {
+        "name": "시스코",
+        "data": [
+          {
+            "x": "2021",
+            "y": 0,
+            "confidence": 0.45
+          },
+          {
+            "x": "2022",
+            "y": -5,
+            "confidence": 0.45
+          },
+          {
+            "x": "2023",
+            "y": 0,
+            "confidence": 0.45
+          },
+          {
+            "x": "2024",
+            "y": 25,
+            "confidence": 0.45
+          },
+          {
+            "x": "2025",
+            "y": 55,
+            "confidence": 0.45
+          },
+          {
+            "x": "2026",
+            "y": 80,
+            "confidence": 0.45
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary"
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": {
+      "overallConfidence": 0.45,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  }
+}

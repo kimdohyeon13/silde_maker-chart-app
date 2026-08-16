@@ -1,0 +1,232 @@
+{
+  "id": "page-035-graph-01",
+  "mode": "faithful",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "combo",
+    "title": "HBM: 대역폭당 가격 추이",
+    "subtitle": "TB/s 및 USD/(GB/s)",
+    "source": "자료: 엔비디아, World Tech Research 추정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "displayTickValues": [
+        "H100\n2022",
+        "H200\n2023",
+        "GB200\n2024",
+        "GB300\n2025",
+        "VR200\n2026",
+        "VR300\n2027"
+      ]
+    },
+    "yAxis": {
+      "label": "대역폭",
+      "unit": "TB/s",
+      "min": 0,
+      "max": 35
+    },
+    "secondaryYAxis": {
+      "label": "대역폭당 가격",
+      "unit": "$",
+      "min": 0,
+      "max": 0.45
+    },
+    "legend": [
+      {
+        "name": "Total package bandwidth (TB/s)",
+        "color": "#BFC4D0",
+        "originalColor": "#BFC4D0"
+      },
+      {
+        "name": "Nvidia's official spec (TB/s)",
+        "color": "#D9D9D9",
+        "originalColor": "#D9D9D9"
+      },
+      {
+        "name": "Price per bandwidth ($/GB/s, 우측)",
+        "color": "#1478F2",
+        "originalColor": "#1478F2"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Total package bandwidth (TB/s)",
+        "data": [
+          {
+            "x": "H100-2022",
+            "y": 4
+          },
+          {
+            "x": "H200-2023",
+            "y": 4.8
+          },
+          {
+            "x": "GB200-2024",
+            "y": 8.08
+          },
+          {
+            "x": "GB300-2025",
+            "y": 9.6
+          },
+          {
+            "x": "VR200-2026",
+            "y": 23.4
+          },
+          {
+            "x": "VR300-2027",
+            "y": 32
+          }
+        ]
+      },
+      {
+        "name": "Nvidia's official spec (TB/s)",
+        "data": [
+          {
+            "x": "H100-2022",
+            "y": 3.4
+          },
+          {
+            "x": "H200-2023",
+            "y": 4.8
+          },
+          {
+            "x": "GB200-2024",
+            "y": 8
+          },
+          {
+            "x": "GB300-2025",
+            "y": 8
+          },
+          {
+            "x": "VR200-2026",
+            "y": 22
+          },
+          {
+            "x": "VR300-2027",
+            "y": null
+          }
+        ]
+      },
+      {
+        "name": "Price per bandwidth ($/GB/s, 우측)",
+        "data": [
+          {
+            "x": "H100-2022",
+            "y": 0.25
+          },
+          {
+            "x": "H200-2023",
+            "y": 0.22
+          },
+          {
+            "x": "GB200-2024",
+            "y": 0.21
+          },
+          {
+            "x": "GB300-2025",
+            "y": 0.35
+          },
+          {
+            "x": "VR200-2026",
+            "y": 0.3
+          },
+          {
+            "x": "VR300-2027",
+            "y": 0.24
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "min": 0.21,
+      "max": 32,
+      "average": 8.8,
+      "latest": 32
+    },
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "HBM: 대역폭당 가격 추이",
+    "subMessage": "대역폭당 가격은 2025년 조정 뒤 2026년 큰 폭 반등",
+    "headline": "HBM: 대역폭당 가격 추이",
+    "keyTakeaways": [
+      "VR300 총 대역폭 32.0TB/s"
+    ],
+    "sentiment": "neutral",
+    "summary": "대역폭당 가격은 2025년 조정 뒤 2026년 큰 폭 반등",
+    "story": "대역폭당 가격은 2025년 조정 뒤 2026년 큰 폭 반등"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "VR300-2027",
+      "y": 32,
+      "displayText": "32.0"
+    },
+    "annotations": [
+      {
+        "text": "Price down by 15% (2025)",
+        "position": {
+          "x": "GB300-2025",
+          "y": 31
+        },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "Price up by 80% (3Q26)",
+        "position": {
+          "x": "VR200-2026",
+          "y": 12
+        },
+        "importance": "high",
+        "style": "positive"
+      },
+      {
+        "text": "Based on 11.7Gbps",
+        "position": {
+          "x": "VR200-2026",
+          "y": 34
+        },
+        "importance": "high",
+        "style": "neutral"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "대역폭 확대와 대역폭당 가격 변동",
+    "supportResistance": []
+  },
+  "preserveIntent": {
+    "originalTitle": "HBM: 대역폭당 가격 추이",
+    "changedElements": [
+      "Paperlogy 글꼴과 1920x1080 카드 레이아웃만 적용"
+    ],
+    "qaNote": "원본 막대 라벨과 파란 선을 화면에서 읽은 source-visible 값이다. VR300의 공식 사양 막대는 원본에 표시되지 않아 null로 보존한다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": {
+    "titlePreserved": true,
+    "seriesCountMatches": true,
+    "sourcePreserved": true,
+    "xAxisLabelsMatch": true,
+    "dataFidelityNote": "source-visible QA: 막대·선·주석을 원본과 대조"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300
+  }
+}

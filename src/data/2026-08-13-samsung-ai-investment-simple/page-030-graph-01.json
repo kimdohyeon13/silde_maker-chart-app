@@ -1,0 +1,132 @@
+{
+  "id": "page-030-graph-01",
+  "sourceImage": "35-page_030_graph_01.png",
+  "analyzedAt": "2026-08-13T00:00:00+09:00",
+  "mode": "redesign",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "대형 AI 모델은 더 강한 서버가 필요합니다",
+    "subtitle": "서버 한 대가 처리하는 AI 연산 성능 비교",
+    "source": "자료: SemiAnalysis",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["DGX H200", "GB200 NVL72", "GB300 NVL72", "VR200 NVL72", "VR300 NVL576"],
+      "displayTickValues": ["DGX H200", "GB200 NVL72", "GB300 NVL72", "VR200 NVL72", "VR300 NVL576"],
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "연산 성능",
+      "type": "numeric",
+      "unit": "페타플롭스",
+      "tickValues": ["0", "1,000", "2,000", "3,000", "4,000", "5,000", "6,000"],
+      "min": 0,
+      "max": 6000,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "data": {
+    "series": [
+      {
+        "name": "FP8 성능",
+        "originalColor": "#1A73E8",
+        "color": "#1A73E8",
+        "data": [
+          { "x": "DGX H200", "y": 40, "confidence": 0.7 },
+          { "x": "GB200 NVL72", "y": 180, "confidence": 0.7 },
+          { "x": "GB300 NVL72", "y": 320, "confidence": 0.7 },
+          { "x": "VR200 NVL72", "y": 1150, "confidence": 0.8 },
+          { "x": "VR300 NVL576", "y": 5000, "confidence": 0.8 }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": ["DGX H200, GB200 NVL72, GB300 NVL72 막대는 원본 축에서 읽은 근사값"],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "서버랙 FP8 성능은 VR300 NVL576에서 약 5,000 페타플롭스로 크게 높아집니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "대형 AI 모델은 더 강한 서버가 필요합니다",
+    "subMessage": "차세대 서버로 갈수록 처리 성능이 빠르게 높아집니다.",
+    "headline": "대형 AI 모델은 더 강한 서버가 필요합니다",
+    "summary": "VR300 NVL576은 약 5,000 페타플롭스로 이전 세대보다 크게 높습니다.",
+    "story": "VR300 NVL576은 약 5,000 페타플롭스로 이전 세대보다 크게 높습니다.",
+    "keyTakeaways": ["VR300 NVL576: 약 5,000 PFLOPS"],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "VR300 NVL576: 약 5,000 PFLOPS",
+      "reason": "원본 그래프의 최고 성능 막대"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": [],
+    "colorStrategy": {
+      "primary": "#1A73E8",
+      "secondary": ["#98A2B3"],
+      "positive": "#1A73E8",
+      "negative": "#2F6FB3",
+      "accent": "#1A73E8",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "preserveIntent": {
+    "originalTitle": "Kimi K3는 엔비디아의 GB200 NVL72 이상을 요구",
+    "mustPreserve": [
+      "서버랙 5개와 원본 순서",
+      "FP8 성능의 상승 관계",
+      "0~6,000 PFLOPS 축",
+      "VR300 NVL576 약 5,000 PFLOPS"
+    ],
+    "changedElements": [
+      "긴 영문 단위를 부제의 쉬운 한국어 단위로 보완",
+      "모든 막대의 모서리를 사각형으로 지정"
+    ],
+    "qaNote": "원본 그래프에서 읽은 5개 성능값을 유지했습니다. 초기 3개 값은 축 대비 작아 source-visible 근사값입니다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": {
+    "titleMeaningPreserved": true,
+    "seriesCountMatchesSource": true,
+    "barCountMatchesSource": true,
+    "axisRangePreserved": true,
+    "labelOverlapRisk": "낮음"
+  },
+  "exportOptions": {
+    "canvasWidth": 1920,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "fontFamily": "Paperlogy",
+    "titleFontSize": 32,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "squareEdges": true,
+    "headerVariant": "centered",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "barColorMode": "series"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "cpo-switch-bom-share",
+  "mode": "faithful",
+  "sourceImage": "input/05-cpo-switch-bom.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 23: CPO Switch BoM breakdown, by % (GSe)",
+    "preservedElements": ["7 slices", "Original share total 100%", "Item order", "Source"],
+    "changedElements": ["Title and item translation", "Font and spacing cleanup"],
+    "dataFidelity": "source-visible",
+    "notes": "Shares read from the donut labels; no raw source file is available.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "AI layout plan completed first", "status": "pass", "checkedAt": "2026-07-11" },
+    { "id": "source-visible-values", "label": "Based on values shown in image", "status": "pass", "detail": "Directly transcribed the seven share labels from the original donut.", "checkedAt": "2026-07-11" },
+    { "id": "share-total", "label": "Share total 100%", "status": "pass", "detail": "16+43+5+9+3+8+16=100", "checkedAt": "2026-07-11" }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF", "canvasHeight": 540, "frameStyle": "none", "contentBorder": false,
+    "squareEdges": true, "headerPadding": "18px 32px 0", "contentPadding": "0 12px 0",
+    "sourcePadding": "0 32px 10px", "titleFontSize": 31, "subtitleFontSize": 15,
+    "sourceFontSize": 10, "chartHeight": 350
+  },
+  "structure": {
+    "chartType": "donut",
+    "title": "CPO Switch BoM Breakdown by Share (GSe)",
+    "subtitle": "Quantum-X Photonics | %",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research",
+    "xAxis": {
+      "label": "", "type": "category",
+      "tickValues": ["Switch ASIC", "Optical engine (1.6T)", "FAU", "ELS", "Shuffle box", "MPO connector & cable", "Single-mode fiber"],
+      "unit": "", "startsAtZero": true, "isLogScale": false
+    },
+    "yAxis": { "label": "BoM share", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": true, "isLogScale": false, "min": 0, "max": 100 },
+    "legend": [
+      { "name": "Switch ASIC", "originalColor": "#173D66", "remakeColor": "#173D66" },
+      { "name": "Optical engine (1.6T)", "originalColor": "#A8CBE4", "remakeColor": "#A8CBE4" },
+      { "name": "FAU", "originalColor": "#A5A8AA", "remakeColor": "#A5A8AA" },
+      { "name": "ELS", "originalColor": "#6E91BB", "remakeColor": "#6E91BB" },
+      { "name": "Shuffle box", "originalColor": "#3F8B62", "remakeColor": "#3F8B62" },
+      { "name": "MPO connector & cable", "originalColor": "#9AC45C", "remakeColor": "#9AC45C" },
+      { "name": "Single-mode fiber", "originalColor": "#0E2947", "remakeColor": "#0E2947" }
+    ]
+  },
+  "data": {
+    "series": [{
+      "name": "BoM share", "renderAs": "bar", "role": "primary",
+      "data": [
+        { "x": "Switch ASIC", "y": 16, "confidence": 0.99 },
+        { "x": "Optical engine (1.6T)", "y": 43, "confidence": 0.99 },
+        { "x": "FAU", "y": 5, "confidence": 0.99 },
+        { "x": "ELS", "y": 9, "confidence": 0.99 },
+        { "x": "Shuffle box", "y": 3, "confidence": 0.99 },
+        { "x": "MPO connector & cable", "y": 8, "confidence": 0.99 },
+        { "x": "Single-mode fiber", "y": 16, "confidence": 0.99 }
+      ]
+    }],
+    "totalDataPoints": 7,
+    "quality": { "overallConfidence": 0.99, "missingPoints": 0, "hardToReadAreas": ["No raw source CSV"], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "sideways", "strength": 0, "description": "Share breakdown donut", "recentDirection": "flat" },
+    "volatility": { "level": "moderate", "coefficient": 0, "description": "Share comparison" },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": { "value": 43, "at": "Optical engine (1.6T)" }, "min": { "value": 3, "at": "Shuffle box" }, "average": 14.29, "median": 9, "range": 40 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "CPO Switch BoM Breakdown by Share", "subMessage": "Quantum-X Photonics | 7 items totaling 100%",
+    "headline": "CPO Switch BoM Breakdown by Share (GSe)", "summary": "The original chart's categories and shares are preserved.",
+    "story": "The original shares are carried over into a donut chart.", "keyTakeaways": [], "questionsRaised": [],
+    "viewerAction": "Review each slice's share.", "contextualNotes": ["Source: Company data, Goldman Sachs Global Investment Research", "source-visible"]
+  },
+  "emphasis": {
+    "annotations": [], "highlightZones": [], "trendLines": [],
+    "colorStrategy": { "primary": "#173D66", "secondary": ["#A8CBE4", "#A5A8AA", "#6E91BB", "#3F8B62", "#9AC45C", "#0E2947"], "positive": "#D92D3A", "negative": "#2563EB", "accent": "#A8CBE4", "backgroundTone": "light" },
+    "focusPoint": { "position": { "x": "Optical engine (1.6T)", "y": 43 }, "reason": "Largest slice in the original", "displayText": "source-visible" },
+    "densityLevel": "balanced"
+  }
+}

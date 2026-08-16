@@ -1,0 +1,284 @@
+{
+  "id": "02-d224b-ai-infra-one-year",
+  "mode": "faithful",
+  "sourceImage": "input/dib-224-02.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "AI 인프라 마켓 뷰 · 1/3",
+    "originalMessage": "AI 컴퓨트·전력 7종목 · 티커별 현재가와 기간 수익률",
+    "preservedElements": [
+      "All seven tickers on page 1/3 of the source table",
+      "The one-year return column as printed",
+      "The 2026-08-04 as-of date",
+      "source-visible data status"
+    ],
+    "changedElements": [
+      "Layout plan: one column of the table redrawn as a ranked bar chart",
+      "Column plan: the price-target column of the source table was dropped and is not charted",
+      "Rounding plan: every value of 100 or more floored to the nearest ten",
+      "Colour plan: neutral grey bars with the Micron bar accented",
+      "Language plan: all visible strings translated to English"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 표의 목표가 열은 사용하지 않고 제외했으며, 1년 수익률 열만 막대로 재구성했습니다. 100 이상 값은 10 단위 내림했습니다.",
+    "sourceAttribution": "Source: Investing Pro, AI infrastructure screen 1/3, 2026-08-04"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "no-point-color",
+      "label": "데이터 포인트 색상 키 없음",
+      "status": "pass",
+      "detail": "data.series[].data[]에 color 키를 넣지 않아 플롯 영역이 비는 렌더 실패를 방지했습니다."
+    },
+    {
+      "id": "floor-to-ten",
+      "label": "100 이상 10 단위 내림",
+      "status": "pass",
+      "detail": "100 이상 값은 모두 10 단위로 내려 표기했고, 부제 문구도 내림 처리된 숫자와 일치시켰습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "값은 원본 이미지에 인쇄된 숫자를 읽은 source-visible 값이며 정밀 원자료로 과장하지 않습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 5개 금지항목 없음",
+      "status": "pass",
+      "detail": "목표주가, 매수·매도 의견, 밸류에이션 의견, 보유 여부, 실현 수익률을 카드에 넣지 않았습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "노출 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·주석·내러티브를 모두 영어로 작성했습니다."
+    },
+    {
+      "id": "target-price-column-dropped",
+      "label": "목표가 열 제외",
+      "status": "pass",
+      "detail": "원본 표의 목표가·상승여력 열은 차트에서 완전히 제외했고 다른 열만 사용했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The one-year column, memory on top",
+    "subtitle": "One-year return: Micron 710%, Lumentum 680%, Bloom Energy 500%, AMD 190%, TSMC 81%, Nvidia 19%, CoreWeave -17%",
+    "source": "Source: Investing Pro, AI infrastructure screen 1/3, 2026-08-04 · source-visible",
+    "timeRange": "Trailing one year to 2026-08-04",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "MU",
+        "LITE",
+        "BE",
+        "AMD",
+        "TSM",
+        "NVDA",
+        "CRWV"
+      ],
+      "displayTickValues": [
+        "MU",
+        "LITE",
+        "BE",
+        "AMD",
+        "TSM",
+        "NVDA",
+        "CRWV"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "One-year return",
+      "type": "value",
+      "tickValues": [
+        "-100",
+        "0",
+        "200",
+        "400",
+        "600",
+        "800"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": -100,
+      "max": 800
+    },
+    "legend": [
+      {
+        "name": "One-year return",
+        "role": "primary",
+        "originalColor": "#2F6F5E",
+        "remakeColor": "#C3CCD8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "One-year return",
+        "data": [
+          {
+            "x": "MU",
+            "y": 710,
+            "confidence": 0.72
+          },
+          {
+            "x": "LITE",
+            "y": 680,
+            "confidence": 0.72
+          },
+          {
+            "x": "BE",
+            "y": 500,
+            "confidence": 0.72
+          },
+          {
+            "x": "AMD",
+            "y": 190,
+            "confidence": 0.72
+          },
+          {
+            "x": "TSM",
+            "y": 81,
+            "confidence": 0.72
+          },
+          {
+            "x": "NVDA",
+            "y": 19,
+            "confidence": 0.72
+          },
+          {
+            "x": "CRWV",
+            "y": -17,
+            "confidence": 0.72
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#C3CCD8"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "표 값은 선명하나, 1년 수익률의 기준일 정의는 원본 화면에 명시되지 않았습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.6,
+      "description": "Direction read from the source image.",
+      "recentDirection": "accelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "The spread visible in the source image is preserved."
+    },
+    "changeRates": [
+      {
+        "period": "first to last",
+        "percentChange": -102.4,
+        "absoluteChange": -727,
+        "from": 710,
+        "to": -17
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 710,
+        "at": "MU"
+      },
+      "min": {
+        "value": -17,
+        "at": "CRWV"
+      },
+      "average": 309.0,
+      "median": 190,
+      "range": 727
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The one-year column, memory on top",
+    "subMessage": "One-year return: Micron 710%, Lumentum 680%, Bloom Energy 500%, AMD 190%, TSMC 81%, Nvidia 19%, CoreWeave -17%",
+    "headline": "The one-year column, memory on top",
+    "summary": "One-year return: Micron 710%, Lumentum 680%, Bloom Energy 500%, AMD 190%, TSMC 81%, Nvidia 19%, CoreWeave -17%",
+    "story": "The source chart's data relationships are kept; only the information hierarchy and language were rebuilt.",
+    "keyTakeaways": [
+      "Micron's one-year return prints at 710%, the highest of the seven.",
+      "The same table shows Nvidia at 19% and CoreWeave at -17% over the same window.",
+      "Values of 100 or more are floored to the nearest ten."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the long column against how far ahead the supply is committed.",
+    "contextualNotes": [
+      "Source: Investing Pro, AI infrastructure screen 1/3, 2026-08-04",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#C3CCD8"
+      ],
+      "positive": "#0B63CE",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "MU",
+      "y": 710,
+      "displayText": "710"
+    },
+    "densityLevel": "focused"
+  }
+}

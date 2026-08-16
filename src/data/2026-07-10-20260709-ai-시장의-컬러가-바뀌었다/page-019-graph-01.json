@@ -1,0 +1,264 @@
+{
+  "id": "page-019-graph-01",
+  "sourceImage": "input/page_019_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Mercor 분기별 전문가 투입 시간이 10개 분기 만에 2천 시간에서 252만 시간 수준으로 1,000배 이상 급증",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다. 막대 위 데이터 라벨 값을 그대로 읽었습니다.",
+    "sourceAttribution": "자료: Mercor"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형(단일 계열 세로 막대)과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop의 막대 위 데이터 라벨(2, 5, 23, 85, 260, 295, 541, 1,038, 1,486, 2,517)을 그대로 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Mercor 전문가 투입 시간, 10개 분기 만에 1,000배 넘게 급증",
+    "subtitle": "분기별 전문가 투입 시간 (천 시간), '24년 1분기 2 → '26년 2분기 2,517",
+    "source": "자료: Mercor",
+    "timeRange": "'24.1Q~'26.2Q",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "'24 1Q",
+        "'24 2Q",
+        "'24 3Q",
+        "'24 4Q",
+        "'25 1Q",
+        "'25 2Q",
+        "'25 3Q",
+        "'25 4Q",
+        "'26 1Q",
+        "'26 2Q"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "천 시간",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 3000
+    },
+    "legend": [
+      {
+        "name": "전문가 투입 시간",
+        "role": "primary",
+        "originalColor": "#F2A65A",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전문가 투입 시간",
+        "data": [
+          {
+            "x": "'24 1Q",
+            "y": 2,
+            "confidence": 0.95
+          },
+          {
+            "x": "'24 2Q",
+            "y": 5,
+            "confidence": 0.95
+          },
+          {
+            "x": "'24 3Q",
+            "y": 23,
+            "confidence": 0.95
+          },
+          {
+            "x": "'24 4Q",
+            "y": 85,
+            "confidence": 0.95
+          },
+          {
+            "x": "'25 1Q",
+            "y": 260,
+            "confidence": 0.95
+          },
+          {
+            "x": "'25 2Q",
+            "y": 295,
+            "confidence": 0.95
+          },
+          {
+            "x": "'25 3Q",
+            "y": 541,
+            "confidence": 0.95
+          },
+          {
+            "x": "'25 4Q",
+            "y": 1038,
+            "confidence": 0.95
+          },
+          {
+            "x": "'26 1Q",
+            "y": 1486,
+            "confidence": 0.95
+          },
+          {
+            "x": "'26 2Q",
+            "y": 2517,
+            "confidence": 0.95
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.95,
+      "description": "10개 분기 연속 증가, 후반부로 갈수록 증가 폭이 커지는 지수적 성장 형태입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 1.256,
+      "description": "지수적 성장 구간이라 절대 수준 편차가 큽니다. 원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 125750.0,
+        "absoluteChange": 2515,
+        "from": 2,
+        "to": 2517
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2517,
+        "at": "'26 2Q"
+      },
+      "min": {
+        "value": 2,
+        "at": "'24 1Q"
+      },
+      "average": 625.2,
+      "median": 277.5,
+      "range": 2515
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Mercor 전문가 투입 시간, 10개 분기 만에 1,000배 넘게 급증",
+    "subMessage": "분기별 전문가 투입 시간 (천 시간), '24년 1분기 2 → '26년 2분기 2,517",
+    "headline": "Mercor 전문가 투입 시간, 10개 분기 만에 1,000배 넘게 급증",
+    "summary": "Mercor의 분기별 전문가 투입 시간이 '24년 1분기 2천 시간에서 '26년 2분기 2,517천 시간으로 10개 분기 만에 1,000배 이상 늘었습니다.",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "'24년 1분기 2천 시간에서 '26년 2분기 2,517천 시간으로 1,000배 이상 증가",
+      "'25년 4분기에 1,000천 시간을 돌파한 뒤에도 분기마다 증가 폭이 확대",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "전문가 데이터 수요의 지수적 성장이 언제까지 이어질 수 있는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Mercor"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#F5DF4D",
+        "#FF6F61",
+        "#6667AB"
+      ],
+      "positive": "#0F4C81",
+      "negative": "#FF6F61",
+      "accent": "#6667AB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "'26 2Q",
+        "y": 2517
+      },
+      "displayText": "'26년 2분기 2,517천 시간",
+      "reason": "10개 분기 만에 1,000배 이상 증가한 종착점"
+    },
+    "densityLevel": "balanced"
+  }
+}

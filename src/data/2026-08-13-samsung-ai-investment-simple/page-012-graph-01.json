@@ -1,0 +1,95 @@
+{
+  "id": "page-012-graph-01",
+  "sourceImage": "12-page_012_graph_01.png",
+  "mode": "redesign",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "line",
+    "title": "계약과 현금이 있어 AI 투자를 이어갑니다",
+    "subtitle": "하이퍼스케일러 합산, 연간 설비투자",
+    "source": "자료: Bloomberg, 산업 전망 자료",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["2024", "2025", "2026E", "2027E"],
+      "displayTickValues": ["2024", "2025", "2026E", "2027E"]
+    },
+    "yAxis": {
+      "label": "10억 달러",
+      "unit": "",
+      "min": 200,
+      "max": 1200,
+      "tickValues": ["200", "400", "600", "800", "1,000", "1,200"]
+    },
+    "legend": [
+      {"name": "현재 추정", "color": "#0969DA", "originalColor": "#1478F2"},
+      {"name": "시장 전망", "color": "#D92D20", "originalColor": "#F0446B"},
+      {"name": "과거 추정", "color": "#98A2B3", "originalColor": "#1478F2", "style": "dashed"}
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현재 추정",
+        "data": [{"x": "2024", "y": 250}, {"x": "2025", "y": 430}, {"x": "2026E", "y": 819}, {"x": "2027E", "y": 1154}]
+      },
+      {
+        "name": "시장 전망",
+        "data": [{"x": "2024", "y": 250}, {"x": "2025", "y": 430}, {"x": "2026E", "y": 789}, {"x": "2027E", "y": 1076}]
+      },
+      {
+        "name": "과거 추정",
+        "seriesKind": "forecast",
+        "data": [{"x": "2024", "y": 250}, {"x": "2025", "y": 430}, {"x": "2026E", "y": 623}, {"x": "2027E", "y": 928}]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {"min": 250, "max": 1154, "average": 700, "latest": 1154},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "계약과 현금이 있어 AI 투자를 이어갑니다",
+    "subMessage": "현재 추정은 2027년 1조 1,540억 달러로, 과거 추정 9,280억 달러를 웃돕니다.",
+    "headline": "계약과 현금이 있어 AI 투자를 이어갑니다",
+    "keyTakeaways": ["2027년 현재 추정은 현재 컨센서스보다 780억 달러 높습니다."],
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": {"x": "2027E", "y": 1154, "displayText": "현재 추정 1,154"},
+    "annotations": [],
+    "highlightZones": [{"fromX": "2026E", "toX": "2027E", "color": "#EAF2FF", "label": "투자 확대"}],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "현재 추정치는 과거 추정보다 높고, 2027년에도 설비투자가 늘어납니다.",
+    "supportResistance": []
+  },
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러 CapEx 전망치",
+    "dataFidelity": "source-visible",
+    "changedElements": "초기 컨센서스 한 개 시리즈를 빼고, 현재 추정과 과거 추정의 차이가 바로 보이도록 세 시리즈로 줄였다.",
+    "comparisonPreserved": "2025년 공통 출발점, 2026~2027년 현재 추정이 현재 컨센서스와 과거 추정보다 높은 관계, 원본의 표기값을 보존했다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-color-emphasis"],
+  "qualityChecks": {
+    "titleMeaningPreserved": true,
+    "comparisonRelationshipPreserved": true,
+    "sourcePreserved": true,
+    "xAxisLabelsReadable": true,
+    "dataFidelityNote": "source-visible"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32,
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 28px 8px"
+  }
+}

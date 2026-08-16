@@ -1,0 +1,139 @@
+{
+  "id": "page-03-graph-02",
+  "sourceImage": "input/02-page-03-graph-02.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": ["원문 숫자", "비교 방향", "투자 메시지"],
+    "sourceAttribution": "Bloomberg, 삼성증권"
+  },
+  "allowedTransformations": ["한국어 제목 재작성", "복잡한 원문 레이아웃 단순화", "핵심 시리즈 강조", "출처명 명시화"],
+  "qualityChecks": [
+    {"id":"source-visible-approximation","label":"이미지 기반 근사값 표시","status":"pass","detail":"이미지형 PDF는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."},
+    {"id":"credible-source-line","label":"공신력 있는 출처 표시","status":"pass","detail":"Bloomberg, FactSet, Nasdaq, 삼성증권 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."},
+    {"id":"readability-first","label":"Notion 삽입 가독성","status":"pass","detail":"긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 48, "subtitleFontSize": 28, "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px", "contentPadding": "10px 14px 8px", "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "상장 후 주가는 종목마다 천차만별",
+    "subtitle": "공모가 대비 %, 상장당일~D+30, 이미지 기반 근사값",
+    "source": "Bloomberg, 삼성증권",
+    "timeRange": "",
+    "xAxis": { "label": "상장 후 경과", "type": "category", "tickValues": ["상장당일","D+5","D+10","D+15","D+20","D+25","D+30"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "공모가 대비", "type": "numeric", "tickValues": [], "unit": "%", "startsAtZero": false, "isLogScale": false, "max": 100 },
+    "legend": [
+      { "name": "비자", "role": "primary", "originalColor": "#7CB342", "remakeColor": "#34A853" },
+      { "name": "알리바바", "role": "secondary", "originalColor": "#EF5350", "remakeColor": "#EA4335" },
+      { "name": "리비안", "role": "secondary", "originalColor": "#FFA726", "remakeColor": "#FF8A3D" },
+      { "name": "AIA", "role": "secondary", "originalColor": "#26C6DA", "remakeColor": "#00ACC1" },
+      { "name": "사우디 아람코", "role": "secondary", "originalColor": "#90A4AE", "remakeColor": "#8B95A1" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "비자", "renderAs": "line", "role": "primary",
+        "data": [
+          {"x": "상장당일", "y": 13, "confidence": 0.8},
+          {"x": "D+5", "y": 22, "confidence": 0.8},
+          {"x": "D+10", "y": 30, "confidence": 0.8},
+          {"x": "D+15", "y": 42, "confidence": 0.8},
+          {"x": "D+20", "y": 55, "confidence": 0.8},
+          {"x": "D+25", "y": 73, "confidence": 0.8},
+          {"x": "D+30", "y": 92, "confidence": 0.8}
+        ],
+        "color": "#34A853"
+      },
+      {
+        "name": "알리바바", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "상장당일", "y": 38, "confidence": 0.8},
+          {"x": "D+5", "y": 60, "confidence": 0.8},
+          {"x": "D+10", "y": 45, "confidence": 0.8},
+          {"x": "D+15", "y": 40, "confidence": 0.8},
+          {"x": "D+20", "y": 47, "confidence": 0.8},
+          {"x": "D+25", "y": 44, "confidence": 0.8},
+          {"x": "D+30", "y": 52, "confidence": 0.8}
+        ],
+        "color": "#EA4335"
+      },
+      {
+        "name": "리비안", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "상장당일", "y": 18, "confidence": 0.8},
+          {"x": "D+5", "y": 15, "confidence": 0.8},
+          {"x": "D+10", "y": 14, "confidence": 0.8},
+          {"x": "D+15", "y": 16, "confidence": 0.8},
+          {"x": "D+20", "y": 18, "confidence": 0.8},
+          {"x": "D+25", "y": 17, "confidence": 0.8},
+          {"x": "D+30", "y": 20, "confidence": 0.8}
+        ],
+        "color": "#FF8A3D"
+      },
+      {
+        "name": "AIA", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "상장당일", "y": 15, "confidence": 0.8},
+          {"x": "D+5", "y": 13, "confidence": 0.8},
+          {"x": "D+10", "y": 12, "confidence": 0.8},
+          {"x": "D+15", "y": 13, "confidence": 0.8},
+          {"x": "D+20", "y": 14, "confidence": 0.8},
+          {"x": "D+25", "y": 13, "confidence": 0.8},
+          {"x": "D+30", "y": 14, "confidence": 0.8}
+        ],
+        "color": "#00ACC1"
+      },
+      {
+        "name": "사우디 아람코", "renderAs": "line", "role": "secondary",
+        "data": [
+          {"x": "상장당일", "y": 10, "confidence": 0.8},
+          {"x": "D+5", "y": 11, "confidence": 0.8},
+          {"x": "D+10", "y": 10, "confidence": 0.8},
+          {"x": "D+15", "y": 9, "confidence": 0.8},
+          {"x": "D+20", "y": 8, "confidence": 0.8},
+          {"x": "D+25", "y": 7, "confidence": 0.8},
+          {"x": "D+30", "y": 6, "confidence": 0.8}
+        ],
+        "color": "#8B95A1"
+      }
+    ],
+    "totalDataPoints": 35,
+    "quality": { "overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": ["이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "up", "strength": 0.7, "description": "원문 이미지와 OCR에서 읽은 방향성을 단순화했습니다.", "recentDirection": "accelerating_up" },
+    "volatility": { "level": "moderate", "coefficient": 0.3, "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": {"value": 92, "at": ""}, "min": {"value": 6, "at": ""}, "average": 28, "median": 18, "range": 86 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "상장 후가 더 중요하다",
+    "subMessage": "같은 대형 IPO라도 한 달 성적표는 극과 극",
+    "headline": "공모가는 출발선일 뿐, 상장 후 한 달간 비자는 +92%, 아람코는 +6%로 흐름이 크게 갈렸습니다.",
+    "summary": "비자처럼 꾸준히 오르는 종목이 있는가 하면 아람코처럼 거의 횡보하는 종목도 있어, 상장 이후 흐름은 종목별로 크게 갈립니다.",
+    "story": "비자처럼 꾸준히 오르는 종목이 있는가 하면 아람코처럼 거의 횡보하는 종목도 있어, 상장 이후 흐름은 종목별로 크게 갈립니다.",
+    "keyTakeaways": [], "questionsRaised": [], "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": ["Bloomberg, 삼성증권"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text":"비자 +92%","position":{"x":"D+30"},"importance":"critical","style":"positive"},
+      {"text":"아람코 +6%","position":{"x":"D+30"},"importance":"high","style":"neutral"}
+    ],
+    "highlightZones": [], "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": ["#8B95A1", "#D1D6DB", "#F2B705", "#FF8A3D"],
+      "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"
+    },
+    "focusPoint": { "position": {"x":"D+30","y":92}, "displayText": "상장 후가 더 중요하다", "reason": "비자처럼 꾸준히 오르는 종목이 있는가 하면 아람코처럼 거의 횡보하는 종목도 있어, 상장 이후 흐름은 종목별로 크게 갈립니다." },
+    "densityLevel": "balanced"
+  }
+}

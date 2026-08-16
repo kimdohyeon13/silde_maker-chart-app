@@ -1,0 +1,356 @@
+{
+  "id": "page-62-graph-01",
+  "sourceImage": "input/70-page_62_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Quantiwise"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "SK하이닉스: 12m fwd P/B",
+    "subtitle": "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락",
+    "source": "자료: Quantiwise",
+    "timeRange": "25년 7월~26년 6월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "25년 7월",
+        "25년 9월",
+        "25년 11월",
+        "26년 1월",
+        "26년 3월"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "P/B",
+      "type": "value",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "legend": [
+      {
+        "name": "P/B (좌측)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "ROE (우측)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "ROE",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 20,
+      "max": 70
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "P/B (좌측)",
+        "data": [
+          {
+            "x": "25년 7월",
+            "y": 1.55,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 8월",
+            "y": 1.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 9월",
+            "y": 1.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 10월",
+            "y": 1.9,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 11월",
+            "y": 2.35,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 12월",
+            "y": 2.3,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 1월",
+            "y": 2.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 2월",
+            "y": 2.65,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 3월",
+            "y": 2.4,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 4월",
+            "y": 2.7,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 5월",
+            "y": 2.2,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 6월",
+            "y": 1.95,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "ROE (우측)",
+        "data": [
+          {
+            "x": "25년 7월",
+            "y": 30,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 8월",
+            "y": 31,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 9월",
+            "y": 33,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 10월",
+            "y": 36,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 11월",
+            "y": 41,
+            "confidence": 0.78
+          },
+          {
+            "x": "25년 12월",
+            "y": 43,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 1월",
+            "y": 44,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 2월",
+            "y": 65,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 3월",
+            "y": 64,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 4월",
+            "y": 66,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 5월",
+            "y": 66,
+            "confidence": 0.78
+          },
+          {
+            "x": "26년 6월",
+            "y": 68,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.607,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 4287.1,
+        "absoluteChange": 66.45,
+        "from": 1.55,
+        "to": 68.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 68.0,
+        "at": ""
+      },
+      "min": {
+        "value": 1.5,
+        "at": ""
+      },
+      "average": 25.5125,
+      "median": 16.35,
+      "range": 66.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "SK하이닉스: 12m fwd P/B",
+    "subMessage": "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락",
+    "headline": "SK하이닉스: 12m fwd P/B",
+    "summary": "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Quantiwise"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 68.0
+      },
+      "displayText": "SK하이닉스: 12m fwd ",
+      "reason": "P/B는 미드텀 평균 2.1배를 상회, 목표 2.5배(목표주가 350만원)와 하방 1.4배(198만원) 사이에서 등락"
+    },
+    "densityLevel": "balanced"
+  }
+}

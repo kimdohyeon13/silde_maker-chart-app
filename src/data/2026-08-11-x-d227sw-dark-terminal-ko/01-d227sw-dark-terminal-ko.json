@@ -1,0 +1,292 @@
+{
+  "id": "d227sw-dark-terminal-ko",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "소프트웨어, 팔란티어 주도 순환매",
+    "preservedElements": [
+      "5개 종목의 순서: 서비스나우, 팔란티어, 세일즈포스, 오라클, 앱로빈",
+      "시작일=100 기준 등락률 +37.0 / +24.8 / +6.0 / -25.0 / -26.0",
+      "전일 대비 등락률 +6.42 / +10.32 / +3.20 / +2.47 / +3.32",
+      "원본 출처 줄(야후 파이낸스, 2026-08-07 종가)"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용",
+      "선형 지수 추이 → 등락률 가로 막대"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본은 시작일=100 정규화 라인차트지만, 판독에 인쇄된 값은 각 종목의 기간 등락률과 전일 등락률뿐이라 일별 경로가 없다. 없는 경로를 지어내지 않기 위해 인쇄된 두 등락률만 쓰는 가로 막대로 옮겼다.",
+    "sourceAttribution": "자료: 야후 파이낸스, 2026년 8월 7일 종가 기준"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "change-chart-type"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "가로 막대 5행 × 2계열. 값 라벨 전부 표시, 기간 등락은 보조색, 전일 등락은 에메랄드."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "작업지시 JSON 의 reading 에 인쇄된 값만 사용했습니다. 원본 이미지를 다시 판독하지 않았습니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "야후 파이낸스는 데이터 벤더라 그대로 적었다. 셀사이드·우리 발행물 이름은 없다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 380,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "barColorMode": "emphasis",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "소프트웨어, 팔란티어 주도 순환매",
+    "subtitle": "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%",
+    "source": "자료: 야후 파이낸스, 2026년 8월 7일 종가 기준",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "서비스나우",
+        "팔란티어",
+        "세일즈포스",
+        "오라클",
+        "앱로빈"
+      ],
+      "displayTickValues": [
+        "서비스나우",
+        "팔란티어",
+        "세일즈포스",
+        "오라클",
+        "앱로빈"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-30",
+        "-20",
+        "-10",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -30,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "시작일 대비 (%)",
+        "role": "secondary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#275A50"
+      },
+      {
+        "name": "8월 7일 등락 (%)",
+        "role": "primary",
+        "originalColor": "#8E99A8",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "시작일 대비 (%)",
+        "data": [
+          {
+            "x": "서비스나우",
+            "y": 37,
+            "confidence": 0.99
+          },
+          {
+            "x": "팔란티어",
+            "y": 24.8,
+            "confidence": 0.99
+          },
+          {
+            "x": "세일즈포스",
+            "y": 6,
+            "confidence": 0.99
+          },
+          {
+            "x": "오라클",
+            "y": -25,
+            "confidence": 0.99
+          },
+          {
+            "x": "앱로빈",
+            "y": -26,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#275A50"
+      },
+      {
+        "name": "8월 7일 등락 (%)",
+        "data": [
+          {
+            "x": "서비스나우",
+            "y": 6.42,
+            "confidence": 0.99
+          },
+          {
+            "x": "팔란티어",
+            "y": 10.32,
+            "confidence": 0.99
+          },
+          {
+            "x": "세일즈포스",
+            "y": 3.2,
+            "confidence": 0.99
+          },
+          {
+            "x": "오라클",
+            "y": 2.47,
+            "confidence": 0.99
+          },
+          {
+            "x": "앱로빈",
+            "y": 3.32,
+            "confidence": 0.99
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.99,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "원본의 항목 비교를 그대로 옮겼습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "항목 간 격차를 원본대로 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 37,
+        "at": "서비스나우"
+      },
+      "min": {
+        "value": -26,
+        "at": "앱로빈"
+      },
+      "average": 4.253,
+      "median": 0,
+      "range": 63
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "소프트웨어, 팔란티어 주도 순환매",
+    "subMessage": "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%",
+    "headline": "소프트웨어, 팔란티어 주도 순환매",
+    "summary": "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%",
+    "story": "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%",
+    "keyTakeaways": [
+      "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "자료: 야후 파이낸스, 2026년 8월 7일 종가 기준"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "팔란티어",
+        "y": 10.32
+      },
+      "displayText": "10.32",
+      "reason": "시작일을 100으로 환산 · 8월 7일 하루에만 팔란티어 +10.32%"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "frontier-lab-gross-margin",
+  "sourceImage": "input/18-page_015_graph_01.png",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "line",
+    "title": "미국 프론티어랩 매출 총이익률 연간 전망",
+    "source": "자료: 언론 보도, World Tech Research",
+    "xAxis": { "label": "", "type": "category", "tickValues": ["2025", "2026", "2027", "2028", "2029", "2030"], "displayTickValues": ["2025", "2026", "2027", "2028", "2029", "2030"] },
+    "yAxis": { "label": "매출 총이익률", "type": "numeric", "tickValues": ["30", "40", "50", "60", "70", "80"], "unit": "%", "min": 30, "max": 80, "startsAtZero": false, "isLogScale": false },
+    "legend": [
+      { "name": "오픈AI", "originalColor": "#1479F2", "remakeColor": "#1479F2" },
+      { "name": "앤스로픽", "originalColor": "#F04473", "remakeColor": "#F04473", "seriesKind": "forecast" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "오픈AI", "data": [
+        { "x": "2025", "y": 33, "confidence": 0.75 }, { "x": "2026", "y": 52, "confidence": 0.75 },
+        { "x": "2027", "y": 55, "confidence": 0.75 }, { "x": "2028", "y": 61, "confidence": 0.75 },
+        { "x": "2029", "y": 64, "confidence": 0.75 }, { "x": "2030", "y": 67, "confidence": 0.75 }
+      ] },
+      { "name": "앤스로픽", "seriesKind": "forecast", "data": [
+        { "x": "2025", "y": 40, "confidence": 0.75 }, { "x": "2026", "y": 63, "confidence": 0.75 },
+        { "x": "2027", "y": 70, "confidence": 0.75 }, { "x": "2028", "y": 75, "confidence": 0.75 },
+        { "x": "2029", "y": 77, "confidence": 0.75 }, { "x": "2030", "y": null, "confidence": 0 }
+      ] }
+    ]
+  },
+  "statistics": { "summary": { "min": 33, "max": 77, "average": 61, "latest": 67 }, "changeRates": [] },
+  "narrative": {
+    "headMessage": "미국 프론티어랩 매출 총이익률 연간 전망",
+    "subMessage": "오픈AI는 2026년 초, 앤스로픽은 2025년 말 전망 기준",
+    "headline": "미국 프론티어랩 매출 총이익률 연간 전망",
+    "keyTakeaways": ["규모 확대와 함께 매출 총이익률이 개선될 전망"],
+    "sentiment": "neutral"
+  },
+  "emphasis": { "focusPoint": { "x": "2030", "y": 67, "displayText": "오픈AI 67%" }, "annotations": [], "highlightZones": [], "trendLines": [] },
+  "patterns": { "trend": "두 회사의 매출 총이익률이 상승한다.", "supportResistance": [] },
+  "preserveIntent": { "originalTitle": "미국 프론티어랩 매출 총이익률 연간 전망", "dataFidelity": "source-visible", "notes": "원문 수치와 전망 기준을 보존하고 시리즈 이름은 직접 라벨에 맞게 줄였다." },
+  "allowedTransformations": ["translate-text", "adjust-colors", "adjust-fonts", "adjust-spacing", "adjust-labels"],
+  "qualityChecks": { "titlePreserved": true, "seriesCountMatches": true, "sourcePreserved": true, "xAxisLabelsMatch": true },
+  "exportOptions": { "canvasHeight": 540, "fontFamily": "Paperlogy", "titleFontWeight": 900, "subtitleFontWeight": 300, "chartHeight": 350, "compactChartMargins": true, "showDirectLabels": true }
+}

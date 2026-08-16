@@ -1,0 +1,603 @@
+{
+  "id": "page-05-graph-01",
+  "sourceImage": "input/01-page_05_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Quantiwise"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "2020년-2022년 사이클 분석",
+    "subtitle": "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환",
+    "source": "자료: Quantiwise",
+    "timeRange": "2020.01 - 2022.12",
+    "xAxis": {
+      "label": "기간",
+      "type": "category",
+      "tickValues": [
+        "'20.01",
+        "'20.04",
+        "'20.07",
+        "'20.10",
+        "'21.01",
+        "'21.04",
+        "'21.07",
+        "'21.10",
+        "'22.01",
+        "'22.04",
+        "'22.07",
+        "'22.10"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "삼성전자 주가(원)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "원",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 40000,
+      "max": 100000
+    },
+    "legend": [
+      {
+        "name": "삼성전자 (좌측)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "SK하이닉스 (우측)",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "SK하이닉스 주가(원)",
+      "type": "value",
+      "tickValues": [],
+      "unit": "원",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 60000,
+      "max": 160000
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "삼성전자 (좌측)",
+        "data": [
+          {
+            "x": "'20.01",
+            "y": 59000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.02",
+            "y": 57000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.03",
+            "y": 49000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.04",
+            "y": 50000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.05",
+            "y": 50500,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.06",
+            "y": 53000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.07",
+            "y": 55000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.08",
+            "y": 56000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.09",
+            "y": 58000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.10",
+            "y": 60000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.11",
+            "y": 64000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.12",
+            "y": 73000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.01",
+            "y": 88000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.02",
+            "y": 83000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.03",
+            "y": 82000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.04",
+            "y": 81000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.05",
+            "y": 80000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.06",
+            "y": 80500,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.07",
+            "y": 79000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.08",
+            "y": 76000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.09",
+            "y": 75000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.10",
+            "y": 70000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.11",
+            "y": 71000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.12",
+            "y": 78000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.01",
+            "y": 75000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.02",
+            "y": 71000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.03",
+            "y": 69000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.04",
+            "y": 67000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.05",
+            "y": 66000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.06",
+            "y": 58000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.07",
+            "y": 59000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.08",
+            "y": 60000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.09",
+            "y": 55000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.10",
+            "y": 56000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.11",
+            "y": 60000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.12",
+            "y": 55500,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "SK하이닉스 (우측)",
+        "data": [
+          {
+            "x": "'20.01",
+            "y": 97000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.02",
+            "y": 93000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.03",
+            "y": 79000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.04",
+            "y": 84000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.05",
+            "y": 84000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.06",
+            "y": 86000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.07",
+            "y": 84000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.08",
+            "y": 80000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.09",
+            "y": 82000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.10",
+            "y": 84000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.11",
+            "y": 95000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'20.12",
+            "y": 118000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.01",
+            "y": 138000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.02",
+            "y": 142000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.03",
+            "y": 145000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.04",
+            "y": 135000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.05",
+            "y": 130000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.06",
+            "y": 128000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.07",
+            "y": 113000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.08",
+            "y": 102000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.09",
+            "y": 100000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.10",
+            "y": 103000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.11",
+            "y": 116000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'21.12",
+            "y": 124000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.01",
+            "y": 126000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.02",
+            "y": 122000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.03",
+            "y": 121000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.04",
+            "y": 113000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.05",
+            "y": 108000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.06",
+            "y": 92000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.07",
+            "y": 96000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.08",
+            "y": 99000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.09",
+            "y": 84000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.10",
+            "y": 90000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.11",
+            "y": 91000,
+            "confidence": 0.78
+          },
+          {
+            "x": "'22.12",
+            "y": 76000,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#FF6F61",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 72,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.126,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 28.8,
+        "absoluteChange": 17000.0,
+        "from": 59000.0,
+        "to": 76000.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 145000.0,
+        "at": ""
+      },
+      "min": {
+        "value": 49000.0,
+        "at": ""
+      },
+      "average": 85270.83333333333,
+      "median": 81500.0,
+      "range": 96000.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "2020년-2022년 사이클 분석",
+    "subMessage": "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환",
+    "headline": "2020년-2022년 사이클 분석",
+    "summary": "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Quantiwise"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 76000.0
+      },
+      "displayText": "2020년-2022년 사이클 ",
+      "reason": "직전 메모리 사이클: 2020년 공급망 병목과 2021년 DRAM 가격 상승률 peak 이후 주가가 먼저 정점을 찍고 하락 전환"
+    },
+    "densityLevel": "balanced"
+  }
+}

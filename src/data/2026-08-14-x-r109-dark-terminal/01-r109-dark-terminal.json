@@ -1,0 +1,258 @@
+{
+  "id": "r109-dark-terminal",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "sourceImage": "inbox/report-1/images/report-1-09.png",
+  "preserveIntent": {
+    "originalMessage": "랙 전체 DRAM은 38.3TB에서 360TB로 늘어납니다",
+    "preservedElements": [
+      "행 5개(GPU당 HBM · CPU당 LPDDR · 총 GPU 수 · 랙 전체 HBM · 랙 전체 DRAM)",
+      "열 2개(GB300 NVL72 · VR300 NVL576)",
+      "인쇄된 값 전부: 288GB/512GB/72/20.3TB/38.3TB, 1,024GB/1,536GB/144/144TB/360TB"
+    ],
+    "changedElements": [
+      "다크 터미널 팔레트 적용",
+      "두 패널을 한 표의 두 열로 합침",
+      "보이는 글자를 영어로 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표의 값 10개가 원본에 전부 인쇄돼 있습니다. 판독값이 아닙니다.",
+    "sourceAttribution": "Source: SemiAnalysis"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "원본의 차트 종류·계열·행 순서를 그대로 두고 색과 프레임만 다크 터미널로 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "표의 값 10개가 원본에 전부 인쇄돼 있습니다. 판독값이 아닙니다."
+    },
+    {
+      "id": "no-sellside-credit",
+      "label": "출처 규칙",
+      "status": "pass",
+      "detail": "원본에 인쇄된 자료 출처를 그대로 옮겼습니다. 셀사이드 이름도, 우리 발행물 이름(알파테크리포트·데일리이슈브리프·W7팔로업)도 쓰지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 32,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11,
+    "metricValue": "9.4x",
+    "metricLabel": "Rack DRAM · GB300 to VR300",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "table",
+    "title": "Next-gen AI servers use far more memory",
+    "subtitle": "Rack DRAM goes from 38.3TB to 360TB",
+    "source": "Source: SemiAnalysis"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "gb300",
+        "label": "GB300 NVL72",
+        "dataType": "text",
+        "width": "33%",
+        "align": "right"
+      },
+      {
+        "key": "vr300",
+        "label": "VR300 NVL576 (Rubin)",
+        "dataType": "text",
+        "width": "33%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "HBM per GPU"
+          },
+          "gb300": {
+            "value": "288GB"
+          },
+          "vr300": {
+            "value": "1,024GB",
+            "highlight": true
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "LPDDR per CPU"
+          },
+          "gb300": {
+            "value": "512GB"
+          },
+          "vr300": {
+            "value": "1,536GB",
+            "highlight": true
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "GPUs per rack"
+          },
+          "gb300": {
+            "value": "72"
+          },
+          "vr300": {
+            "value": "144",
+            "highlight": true
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "HBM per rack"
+          },
+          "gb300": {
+            "value": "20.3TB"
+          },
+          "vr300": {
+            "value": "144TB",
+            "highlight": true
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "DRAM per rack"
+          },
+          "gb300": {
+            "value": "38.3TB"
+          },
+          "vr300": {
+            "value": "360TB",
+            "highlight": true
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 29,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 30,
+      "maxRowHeight": 72,
+      "cellPadding": "6px 12px",
+      "lineHeight": 1.35,
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "14px",
+        "body": "15px",
+        "total": "15px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Next-gen AI servers use far more memory",
+    "subMessage": "Rack DRAM goes from 38.3TB to 360TB",
+    "headline": "Next-gen AI servers use far more memory",
+    "summary": "Rack DRAM goes from 38.3TB to 360TB",
+    "story": "Rack DRAM goes from 38.3TB to 360TB",
+    "keyTakeaways": [
+      "Rack DRAM goes from 38.3TB to 360TB"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: SemiAnalysis"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

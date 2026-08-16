@@ -1,0 +1,226 @@
+{
+  "id": "page-05-graph-02",
+  "sourceImage": "input/06-page_05_graph_02.png",
+  "analyzedAt": "2026-05-30T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "source-visible",
+    "mustPreserve": [
+      "원문 숫자",
+      "비교 방향",
+      "투자 메시지"
+    ],
+    "sourceAttribution": "Alphabet filings, Bloomberg, FactSet"
+  },
+  "allowedTransformations": [
+    "한국어 제목 재작성",
+    "복잡한 원문 레이아웃 단순화",
+    "핵심 시리즈 강조",
+    "출처명 명시화"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "이미지 기반 근사값 표시",
+      "status": "pass",
+      "detail": "원문 PDF가 이미지형인 차트는 OCR과 시각 확인을 함께 사용했고 export 하단에 근사값을 표시합니다."
+    },
+    {
+      "id": "credible-source-line",
+      "label": "공신력 있는 출처 표시",
+      "status": "pass",
+      "detail": "Bloomberg, FactSet, SEMI, 각사 공시/IR 등 원문 근거의 데이터 제공자를 출처줄에 남겼습니다."
+    },
+    {
+      "id": "readability-first",
+      "label": "Notion 삽입 가독성",
+      "status": "pass",
+      "detail": "긴 원문 표와 그래프를 큰 한글 제목과 핵심 메시지 중심으로 재구성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 48,
+    "subtitleFontSize": 28,
+    "sourceFontSize": 21,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "30px 42px 4px",
+    "contentPadding": "10px 14px 8px",
+    "sourcePadding": "0 42px 18px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "구글 토큰 처리량은 3,200조 개까지 뛰었다",
+    "subtitle": "월간 토큰 처리량은 1년 전보다 약 7배 확대",
+    "source": "Alphabet filings, Bloomberg, FactSet",
+    "timeRange": "",
+    "xAxis": {
+      "label": "구간",
+      "type": "category",
+      "tickValues": [
+        "24.05",
+        "24.09",
+        "25.01",
+        "25.05",
+        "25.09",
+        "26.01",
+        "26.05"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "값",
+      "type": "numeric",
+      "tickValues": [],
+      "unit": "조 개",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 3776.0
+    },
+    "legend": [
+      {
+        "name": "월간 토큰",
+        "role": "primary",
+        "originalColor": "#1458D4",
+        "remakeColor": "#1458D4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "월간 토큰",
+        "renderAs": "line",
+        "data": [
+          {
+            "x": "24.05",
+            "y": 9.7,
+            "confidence": 0.8
+          },
+          {
+            "x": "24.09",
+            "y": 60,
+            "confidence": 0.8
+          },
+          {
+            "x": "25.01",
+            "y": 180,
+            "confidence": 0.8
+          },
+          {
+            "x": "25.05",
+            "y": 480,
+            "confidence": 0.8
+          },
+          {
+            "x": "25.09",
+            "y": 1500,
+            "confidence": 0.8
+          },
+          {
+            "x": "26.01",
+            "y": 2500,
+            "confidence": 0.8
+          },
+          {
+            "x": "26.05",
+            "y": 3200,
+            "confidence": 0.8
+          }
+        ],
+        "color": "#1458D4"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.82,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "이미지형 PDF이므로 세부값은 원문 이미지 기반 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.72,
+      "description": "원문 이미지와 OCR에서 읽은 방향성을 리포트용으로 단순화했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.3,
+      "description": "정밀 추정치보다 추세와 상대 비교가 더 중요합니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비",
+        "percentChange": 32889.69072164949,
+        "absoluteChange": 3190.3,
+        "from": 9.7,
+        "to": 3200.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3200.0,
+        "at": ""
+      },
+      "min": {
+        "value": 9.7,
+        "at": ""
+      },
+      "average": 1132.8142857142857,
+      "median": 480.0,
+      "range": 3190.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "사용량이 실적 논리를 만든다",
+    "subMessage": "월간 토큰 처리량은 1년 전보다 약 7배 확대",
+    "headline": "사용량이 실적 논리를 만든다",
+    "summary": "AI가 실제로 쓰일수록 클라우드 투자와 반도체 수요를 설명하는 근거도 강해집니다.",
+    "story": "AI가 실제로 쓰일수록 클라우드 투자와 반도체 수요를 설명하는 근거도 강해집니다.",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "본문의 쉬운 해설과 함께 원문 근거를 대조합니다.",
+    "contextualNotes": [
+      "Alphabet filings, Bloomberg, FactSet"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB",
+        "#F2B705",
+        "#FF8A3D"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0
+      },
+      "displayText": "사용량이 실적 논리를 만든다",
+      "reason": "AI가 실제로 쓰일수록 클라우드 투자와 반도체 수요를 설명하는 근거도 강해집니다."
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "id": "05-w6a-grid-wait-vs-onsite",
+  "mode": "faithful",
+  "sourceImage": "input/w7-6-04.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "BTM의 위치: 전력망 바깥이 아니라 계량기 뒤",
+    "originalMessage": "전력망 접속 3~7년, 온사이트 90일",
+    "preservedElements": [
+      "전력망 접속 대기 3~7년",
+      "온사이트 설치 90일",
+      "두 경로를 같은 시간축에서 비교하는 구조",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "개념 도식에 인쇄된 두 기간을 같은 시간 단위 막대로 정리",
+      "연·일 표기를 월 단위로 환산해 한 축에 올림",
+      "모든 문자열을 영어로 번역",
+      "중립 회색 막대에 가장 긴 대기 구간만 강조"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 도식에 인쇄된 '전력망 3~7년'과 '온사이트 90일'만 사용했고, 비교를 위해 같은 시간 단위(개월)로만 환산했습니다.",
+    "sourceAttribution": "Concept diagram · 29 July 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "3년·7년·90일은 원본 도식에 인쇄된 값이며, 개월 환산(36·84·3) 외에 어떤 수치도 만들지 않았습니다."
+    },
+    {
+      "id": "floor-rule",
+      "label": "100 이상 값 10 단위 내림",
+      "status": "pass",
+      "detail": "모든 값이 100 미만이라 내림 규칙 적용 대상이 없습니다."
+    },
+    {
+      "id": "compliance-clean",
+      "label": "컴플라이언스 금지 항목 없음",
+      "status": "pass",
+      "detail": "목표주가·투자의견·밸류에이션 의견·보유·수익률 언급이 없습니다."
+    },
+    {
+      "id": "english-only",
+      "label": "표시 문자열 전부 영어",
+      "status": "pass",
+      "detail": "제목·부제·출처·축·범례·내러티브를 모두 영어로 작성했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "22px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 12px",
+    "accentColor": "#173B67",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "subtle"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "The grid wait is measured in years",
+    "subtitle": "Grid interconnect 3 to 7 years against a 90-day on-site install",
+    "source": "Source: concept diagram · 29 July 2026 · source-visible",
+    "timeRange": "29 July 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Grid, fast case",
+        "Grid, slow case",
+        "On-site fuel cell"
+      ],
+      "displayTickValues": [
+        "Grid, fast case",
+        "Grid, slow case",
+        "On-site fuel cell"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Time to power (months)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "24",
+        "48",
+        "72",
+        "96"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 96
+    },
+    "legend": [
+      {
+        "name": "Time to power",
+        "role": "primary",
+        "originalColor": "#1F5FD0",
+        "remakeColor": "#B9C2CC"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Time to power",
+        "data": [
+          {
+            "x": "Grid, fast case",
+            "y": 36,
+            "confidence": 0.85
+          },
+          {
+            "x": "Grid, slow case",
+            "y": 84,
+            "confidence": 0.85
+          },
+          {
+            "x": "On-site fuel cell",
+            "y": 3,
+            "confidence": 0.85
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#B9C2CC"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.85,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본은 개념 도식이라 기간이 범위로만 인쇄되어 있습니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.7,
+      "description": "The on-site route collapses the schedule the grid route stretches out.",
+      "recentDirection": "down"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.8,
+      "description": "The gap between the slowest and fastest route is 28 times."
+    },
+    "changeRates": [
+      {
+        "period": "Grid slow case vs on-site",
+        "percentChange": -96.4,
+        "absoluteChange": -81,
+        "from": 84,
+        "to": 3
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 84,
+        "at": "Grid, slow case"
+      },
+      "min": {
+        "value": 3,
+        "at": "On-site fuel cell"
+      },
+      "average": 41,
+      "median": 36,
+      "range": 81
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "The grid wait is measured in years",
+    "subMessage": "Grid interconnect 3 to 7 years against a 90-day on-site install",
+    "headline": "The grid wait is measured in years",
+    "summary": "The same megawatt arrives in 3 months behind the meter or in 3 to 7 years through an interconnect queue.",
+    "story": "A datacenter can pour the slab, take rack delivery and staff the building, and still wait on a utility queue. Generation placed behind the meter is scheduled by the installer instead of by the queue.",
+    "keyTakeaways": [
+      "Grid interconnect runs 3 to 7 years in the source diagram.",
+      "On-site generation is put in place in about 90 days.",
+      "Values are read from the source image (source-visible)."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the schedule risk on the calendar axis, not on the cost axis.",
+    "contextualNotes": [
+      "Source: concept diagram, 29 July 2026",
+      "Years and days converted to months so both routes sit on one axis",
+      "Data status: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": [
+        "#B9C2CC"
+      ],
+      "positive": "#173B67",
+      "negative": "#C43D3D",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "x": "Grid, slow case",
+      "y": 84,
+      "displayText": "84 months"
+    },
+    "densityLevel": "focused"
+  }
+}

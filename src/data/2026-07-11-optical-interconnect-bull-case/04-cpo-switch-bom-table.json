@@ -1,0 +1,275 @@
+{
+  "id": "cpo-switch-bom-table",
+  "mode": "faithful",
+  "sourceImage": "input/05-cpo-switch-bom.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 22: CPO Switch BoM breakdown, by value (GSe)",
+    "originalMessage": "CPO switch BoM (Quantum-X Photonics)",
+    "preservedElements": [
+      "7개 주요 BoM 항목과 CW laser 하위 행",
+      "수량·ASP·Value 표시값",
+      "BoM 75,803·Markup 62,220·Selling price 130,000",
+      "ASP estimates are based on industry checks 각주",
+      "Company data, Goldman Sachs Global Investment Research 출처"
+    ],
+    "changedElements": [
+      "표 헤더와 부품명을 한국어로 번역",
+      "CW laser를 ELS 하위 항목으로 들여쓰기",
+      "글꼴·간격·합계행 스타일만 정리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표 셀 직접 전사값입니다. 화면의 BoM 75,803 + Markup 62,220은 Selling price 130,000과 산술적으로 일치하지 않지만 원본 표시를 수정하지 않았습니다.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "부품·수량·ASP·가치 4열과 합계 3행을 먼저 설계했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "visible-cell-values",
+      "label": "표시 셀 직접값 보존",
+      "status": "pass",
+      "detail": "수량·ASP·Value와 하단 합계 표시를 원문 그대로 전사했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "source-arithmetic",
+      "label": "원본 산술 일관성",
+      "status": "warning",
+      "detail": "원본 표시값 75,803 + 62,220은 130,000과 일치하지 않습니다. 임의 수정하지 않았습니다.",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 600,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "18px 32px 2px",
+    "contentPadding": "7px 30px 3px",
+    "sourcePadding": "0 32px 12px",
+    "titleFontSize": 31,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "title": "CPO 스위치 BoM 구성: 가치 기준 (GSe)",
+    "subtitle": "CPO switch BoM (Quantum-X Photonics) | US$ | ASP estimates are based on industry checks",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "component",
+        "label": "부품",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "48%",
+        "align": "left"
+      },
+      {
+        "key": "qty",
+        "label": "#",
+        "dataType": "number",
+        "width": "14%",
+        "align": "right"
+      },
+      {
+        "key": "asp",
+        "label": "ASP",
+        "dataType": "currency",
+        "width": "18%",
+        "align": "right"
+      },
+      {
+        "key": "value",
+        "label": "Value",
+        "dataType": "currency",
+        "width": "20%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Switch ASIC", "displayValue": "스위치 ASIC" },
+          "qty": { "value": 4, "displayValue": "4" },
+          "asp": { "value": 3000, "displayValue": "3,000" },
+          "value": { "value": 12000, "displayValue": "12,000" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#EEF6FF",
+        "cells": {
+          "component": { "value": "Optical engines (1.6T)", "displayValue": "광엔진 (1.6T)" },
+          "qty": { "value": 72, "displayValue": "72" },
+          "asp": { "value": 450, "displayValue": "450" },
+          "value": { "value": 32400, "displayValue": "32,400" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "FAU" },
+          "qty": { "value": 72, "displayValue": "72" },
+          "asp": { "value": 50, "displayValue": "50" },
+          "value": { "value": 3600, "displayValue": "3,600" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "ELS" },
+          "qty": { "value": 18, "displayValue": "18" },
+          "asp": { "value": 400, "displayValue": "400" },
+          "value": { "value": 7200, "displayValue": "7,200" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Among which: CW laser (300mw)", "displayValue": "└ CW 레이저 (300mw)" },
+          "qty": { "value": 144, "displayValue": "144" },
+          "asp": { "value": 30, "displayValue": "30" },
+          "value": { "value": 4320, "displayValue": "4,320" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Shuffle box", "displayValue": "셔플 박스" },
+          "qty": { "value": 1, "displayValue": "1" },
+          "asp": { "value": 2500, "displayValue": "2,500" },
+          "value": { "value": 2500, "displayValue": "2,500" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "MPO connectors/cables", "displayValue": "MPO 커넥터·케이블" },
+          "qty": { "value": 144, "displayValue": "144" },
+          "asp": { "value": 40, "displayValue": "40.0" },
+          "value": { "value": 5760, "displayValue": "5,760" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "component": { "value": "Single mode Fiber", "displayValue": "단일모드 광섬유" },
+          "qty": { "value": 1152, "displayValue": "1,152" },
+          "asp": { "value": 11, "displayValue": "11" },
+          "value": { "value": 12343, "displayValue": "12,343" }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "component": { "value": "BoM" },
+          "qty": { "value": "" },
+          "asp": { "value": "" },
+          "value": { "value": 75803, "displayValue": "75,803" }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "component": { "value": "Markup" },
+          "qty": { "value": "" },
+          "asp": { "value": "" },
+          "value": { "value": 62220, "displayValue": "62,220" }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "component": { "value": "Selling price", "displayValue": "판매가격" },
+          "qty": { "value": "" },
+          "asp": { "value": "" },
+          "value": { "value": 130000, "displayValue": "130,000" }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 36,
+      "cellPadding": "6px 11px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "highlightMode": "background",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "accentColor": "#133D67",
+      "fontWeight": {
+        "body": 520,
+        "numeric": 680,
+        "rowHeader": 650,
+        "header": 760,
+        "total": 820
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "14px",
+        "total": "15px",
+        "badge": "10px",
+        "unit": "11px",
+        "groupHeader": "12px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "CPO 스위치 BoM 구성: 가치 기준",
+    "subMessage": "Quantum-X Photonics | US$",
+    "headline": "CPO 스위치 BoM 구성: 가치 기준 (GSe)",
+    "summary": "원본 표의 부품·수량·ASP·Value를 보존했습니다.",
+    "story": "원본 표를 한국어 금융표 형식으로 옮겼습니다.",
+    "keyTakeaways": [
+      "ASP estimates are based on industry checks"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "부품별 수량·ASP·가치를 원본 순서로 확인합니다.",
+    "contextualNotes": [
+      "Source: Company data, Goldman Sachs Global Investment Research",
+      "원본 하단 합계는 산술적으로 일치하지 않음"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "exact",
+      "reason": "표 셀 직접 전사값"
+    },
+    "colorStrategy": {
+      "primary": "#133D67",
+      "secondary": ["#D7E8F7", "#8EB3D1"],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#6EA4CF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      { "row": 1, "col": "value", "reason": "원본에서 가장 큰 부품 가치" },
+      { "row": 10, "col": "value", "reason": "판매가격" }
+    ]
+  }
+}

@@ -65,6 +65,14 @@ function dedupeMessages(
   return { primary, secondary };
 }
 
+function isUnitOnlyMeta(value?: string): boolean {
+  if (!value) return false;
+  const compact = value.replace(/\s+/g, "").toLowerCase();
+  return /^(?:단위[:：]?)?(?:십억달러|10억달러|억달러|백만달러|억원|조원|\$?bn|\$?mn|bp|bps|%)(?:및(?:%|bp|bps))?$/.test(
+    compact,
+  );
+}
+
 export function getDisplayMessages(analysis: VisualAnalysis): DisplayMessages {
   const title = normalizeText(analysis.structure.title);
   const subtitle = normalizeText(analysis.structure.subtitle);
@@ -94,7 +102,9 @@ export function getDisplayMessages(analysis: VisualAnalysis): DisplayMessages {
     : undefined;
 
   const deduped = dedupeMessages(headMessage, subMessage);
-  const metaParts = [subtitle, timeRange].filter(Boolean);
+  // 단위만 적힌 subtitle은 축에서 보여준다. 헤더에 다시 찍으면 같은 단위가
+  // 중복되고 차트 높이만 줄어든다.
+  const metaParts = [isUnitOnlyMeta(subtitle) ? undefined : subtitle, timeRange].filter(Boolean);
   const metaCandidate = metaParts.length > 0 ? metaParts.join(" · ") : undefined;
   const metaMessage =
     metaCandidate && deduped.secondary

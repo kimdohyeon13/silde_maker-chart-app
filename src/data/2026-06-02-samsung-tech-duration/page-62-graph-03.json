@@ -1,0 +1,317 @@
+{
+  "id": "page-62-graph-03",
+  "sourceImage": "input/71-page_62_graph_03.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Quantiwise"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "SK하이닉스: 12m fwd P/B vs ROE",
+    "subtitle": "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용",
+    "source": "자료: Quantiwise",
+    "timeRange": "2020~2028",
+    "xAxis": {
+      "label": "ROE",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "P/B",
+      "type": "value",
+      "tickValues": [],
+      "unit": "배",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "legend": [
+      {
+        "name": "연도별 실적",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "목표주가 (ROE 42%)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "추세선 (y=0.0405x+0.7583)",
+        "role": "secondary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "연도별 실적",
+        "data": [
+          {
+            "x": "2022",
+            "y": 0.85,
+            "confidence": 0.78
+          },
+          {
+            "x": "2020",
+            "y": 1.55,
+            "confidence": 0.78
+          },
+          {
+            "x": "2021",
+            "y": 1.4,
+            "confidence": 0.78
+          },
+          {
+            "x": "2024",
+            "y": 1.6,
+            "confidence": 0.78
+          },
+          {
+            "x": "2025",
+            "y": 3.75,
+            "confidence": 0.78
+          },
+          {
+            "x": "2027",
+            "y": 2.55,
+            "confidence": 0.78
+          },
+          {
+            "x": "2026",
+            "y": 5.1,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      },
+      {
+        "name": "목표주가 (ROE 42%)",
+        "data": [
+          {
+            "x": "목표주가",
+            "y": 2.5,
+            "confidence": 0.78
+          },
+          {
+            "x": "2028",
+            "y": 1.55,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "axis": "left"
+      },
+      {
+        "name": "추세선 (y=0.0405x+0.7583)",
+        "data": [
+          {
+            "x": "0",
+            "y": 0.76,
+            "confidence": 0.78
+          },
+          {
+            "x": "20",
+            "y": 1.57,
+            "confidence": 0.78
+          },
+          {
+            "x": "40",
+            "y": 2.38,
+            "confidence": 0.78
+          },
+          {
+            "x": "60",
+            "y": 3.19,
+            "confidence": 0.78
+          },
+          {
+            "x": "80",
+            "y": 4,
+            "confidence": 0.78
+          },
+          {
+            "x": "100",
+            "y": 4.81,
+            "confidence": 0.78
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#6667AB",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.733,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 465.9,
+        "absoluteChange": 3.96,
+        "from": 0.85,
+        "to": 4.81
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5.1,
+        "at": ""
+      },
+      "min": {
+        "value": 0.76,
+        "at": ""
+      },
+      "average": 2.504,
+      "median": 2.38,
+      "range": 4.34
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "SK하이닉스: 12m fwd P/B vs ROE",
+    "subMessage": "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용",
+    "headline": "SK하이닉스: 12m fwd P/B vs ROE",
+    "summary": "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Quantiwise"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 4.81
+      },
+      "displayText": "SK하이닉스: 12m fwd ",
+      "reason": "P/B는 ROE와 강한 양의 상관(R²=0.74), 목표주가는 ROE 42%에 P/B 2.5배 적용"
+    },
+    "densityLevel": "balanced"
+  }
+}

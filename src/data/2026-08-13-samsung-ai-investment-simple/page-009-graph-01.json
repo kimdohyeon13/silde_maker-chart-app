@@ -1,0 +1,104 @@
+{
+  "id": "page-009-graph-01",
+  "sourceImage": "07-page_009_graph_01.png",
+  "mode": "redesign",
+  "dataFidelity": "source-visible",
+  "stylePreset": "toss-clean",
+  "structure": {
+    "chartType": "bar",
+    "title": "계약 증가액이 AI 투자액보다 큽니다",
+    "subtitle": "최근 4개 분기, 약 10억 달러",
+    "source": "자료: 알파벳, 마이크로소프트, 아마존, 오라클",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": ["4분기 전", "3분기 전", "2분기 전", "최근 분기"],
+      "displayTickValues": ["4분기 전", "3분기 전", "2분기 전", "최근 분기"]
+    },
+    "yAxis": {
+      "label": "10억 달러",
+      "unit": "",
+      "min": 0,
+      "max": 450,
+      "tickValues": ["0", "100", "200", "300", "400", "450"],
+      "startsAtZero": true
+    },
+    "legend": [
+      {"name": "분기 설비투자", "color": "#0969DA", "originalColor": "#1677F0"},
+      {"name": "계약 잔고 증가", "color": "#98A2B3", "originalColor": "#D9D9D9"}
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "분기 설비투자",
+        "renderAs": "bar",
+        "data": [
+          {"x": "4분기 전", "y": 85},
+          {"x": "3분기 전", "y": 110},
+          {"x": "2분기 전", "y": 125},
+          {"x": "최근 분기", "y": 145}
+        ]
+      },
+      {
+        "name": "계약 잔고 증가",
+        "renderAs": "bar",
+        "data": [
+          {"x": "4분기 전", "y": 390},
+          {"x": "3분기 전", "y": 425},
+          {"x": "2분기 전", "y": 370},
+          {"x": "최근 분기", "y": 320}
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "summary": {"min": 85, "max": 425, "average": 246.25, "latest": 320},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "계약 증가액이 AI 투자액보다 큽니다",
+    "subMessage": "최근 4개 분기 모두 계약 증가액이 분기 투자액을 웃돕니다.",
+    "headline": "계약 증가액이 AI 투자액보다 큽니다",
+    "keyTakeaways": ["계약 증가액이 분기 투자액을 계속 웃돌고 있습니다."],
+    "sentiment": "positive"
+  },
+  "emphasis": {
+    "focusPoint": {"x": "최근 분기", "y": 320, "displayText": "계약 증가 약 320"},
+    "annotations": [],
+    "highlightZones": [{"fromX": "최근 분기", "toX": "최근 분기", "color": "#EAF2FF", "label": "최근 분기"}],
+    "trendLines": []
+  },
+  "patterns": {
+    "trend": "계약 증가액이 분기 투자액보다 큰 흐름이 이어집니다.",
+    "supportResistance": []
+  },
+  "preserveIntent": {
+    "originalTitle": "하이퍼스케일러의 RPO 증분과 분기별 CapEx 금액 추이",
+    "dataFidelity": "source-visible",
+    "changedElements": "최근 4개 분기의 두 막대를 같은 시점끼리 묶어 비교하도록 재구성했다.",
+    "comparisonPreserved": "각 분기의 계약 잔고 증가액이 같은 분기 설비투자보다 큰 관계를 보존했다."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-density", "adjust-labels", "adjust-color-emphasis"],
+  "qualityChecks": {
+    "titleMeaningPreserved": true,
+    "seriesCountMatches": true,
+    "sourcePreserved": true,
+    "xAxisLabelsReadable": true,
+    "squareBarEdges": true,
+    "dataFidelityNote": "source-visible"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy",
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontSize": 32,
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "squareEdges": true,
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 28px 8px"
+  }
+}

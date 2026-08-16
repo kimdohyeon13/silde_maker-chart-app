@@ -1,0 +1,348 @@
+{
+  "id": "nvda-ecosystem-investments",
+  "mode": "faithful",
+  "sourceImage": "input/01-nvidia-ecosystem-investments.png",
+  "analyzedAt": "2026-07-11T22:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 6: NVDA's total investments of ~$65bn to ecosystem partners is ~35% of total CY26E FCF of ~$187bn or just ~17% of total CY27E FCF of $385bn",
+    "originalMessage": "NVDA List of Recent Ecosystem (Supplier/Customer) Partner Investments",
+    "preservedElements": [
+      "16개 투자 대상과 원본 행 순서",
+      "투자일·투자액·bucket의 원문 의미",
+      "총 투자액 약 $65bn",
+      "NVDA FCF $97bn(CY25)·$187bn(CY26E)·$385bn(CY27E)",
+      "BofA Global Research estimates 출처"
+    ],
+    "changedElements": [
+      "영문 표 헤더와 bucket을 한국어로 번역",
+      "표시값·통화·날짜는 원문 그대로 보존",
+      "광학 관련 행만 옅게 강조"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표 셀에서 직접 읽은 값입니다. 약 $65bn 전체는 모든 생태계 투자 합계이며 광통신 투자 합계가 아닙니다.",
+    "sourceAttribution": "Source: BofA Global Research estimates",
+    "mode": "faithful"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "4열·19행 고밀도 표와 합계/FCF 행을 먼저 설계했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "visible-cell-values",
+      "label": "표시 셀 직접값 보존",
+      "status": "pass",
+      "detail": "16개 기업의 날짜·금액·bucket과 하단 합계·FCF를 전사했습니다.",
+      "checkedAt": "2026-07-11"
+    },
+    {
+      "id": "source-complete",
+      "label": "출처 완전 보존",
+      "status": "pass",
+      "detail": "BofA Global Research estimates를 그대로 유지했습니다.",
+      "checkedAt": "2026-07-11"
+    }
+  ],
+  "exportOptions": {
+    "backgroundColor": "#FFFFFF",
+    "canvasHeight": 820,
+    "frameStyle": "none",
+    "contentBorder": false,
+    "squareEdges": true,
+    "headerVariant": "stacked",
+    "headerPadding": "18px 32px 2px",
+    "contentPadding": "6px 24px 2px",
+    "sourcePadding": "0 32px 12px",
+    "titleFontSize": 27,
+    "subtitleFontSize": 15,
+    "sourceFontSize": 11,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+  },
+  "structure": {
+    "title": "NVDA 생태계 투자 약 650억달러: CY26E FCF의 약 35%, CY27E FCF의 약 17%",
+    "subtitle": "NVDA 최근 생태계(공급업체·고객) 파트너 투자 목록",
+    "source": "Source: BofA Global Research estimates"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "company",
+        "label": "투자 대상",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "19%",
+        "align": "left"
+      },
+      {
+        "key": "date",
+        "label": "투자일",
+        "dataType": "date",
+        "width": "16%",
+        "align": "left"
+      },
+      {
+        "key": "investment",
+        "label": "NVDA 투자액",
+        "dataType": "currency",
+        "width": "20%",
+        "align": "right"
+      },
+      {
+        "key": "bucket",
+        "label": "투자 영역",
+        "dataType": "text",
+        "width": "45%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "OpenAI" },
+          "date": { "value": "Feb/Mar-2026" },
+          "investment": { "value": 30, "displayValue": "$30bn" },
+          "bucket": { "value": "Frontier model", "displayValue": "프런티어 모델" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Anthropic" },
+          "date": { "value": "Nov-25" },
+          "investment": { "value": 10, "displayValue": "Up to $10bn" },
+          "bucket": { "value": "Frontier model", "displayValue": "프런티어 모델" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Intel" },
+          "date": { "value": "Sep-25" },
+          "investment": { "value": 5, "displayValue": "$5bn" },
+          "bucket": { "value": "CPU / x86 ecosystem", "displayValue": "CPU / x86 생태계" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Synopsys" },
+          "date": { "value": "Dec-25" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "EDA / engineering software", "displayValue": "EDA / 엔지니어링 소프트웨어" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Nokia" },
+          "date": { "value": "Oct-25" },
+          "investment": { "value": 1, "displayValue": "$1bn" },
+          "bucket": { "value": "AI-RAN / 6G / networking", "displayValue": "AI-RAN / 6G / 네트워킹" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "CoreWeave" },
+          "date": { "value": "Jan-26" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "Neocloud / AI infrastructure", "displayValue": "네오클라우드 / AI 인프라" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Nebius" },
+          "date": { "value": "Mar-26" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "Neocloud / AI cloud", "displayValue": "네오클라우드 / AI 클라우드" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#F2F7FF",
+        "cells": {
+          "company": { "value": "Lumentum" },
+          "date": { "value": "Mar-26" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "Photonics / lasers", "displayValue": "포토닉스 / 레이저" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#F2F7FF",
+        "cells": {
+          "company": { "value": "Coherent" },
+          "date": { "value": "Mar-26" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "Photonics / optical networking", "displayValue": "포토닉스 / 광네트워킹" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#F2F7FF",
+        "cells": {
+          "company": { "value": "Marvell" },
+          "date": { "value": "Mar-26" },
+          "investment": { "value": 2, "displayValue": "$2bn" },
+          "bucket": { "value": "Custom silicon / silicon photonics / networking", "displayValue": "커스텀 실리콘 / 실리콘 포토닉스 / 네트워킹" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#F2F7FF",
+        "cells": {
+          "company": { "value": "Corning" },
+          "date": { "value": "May-26" },
+          "investment": { "value": 3.2, "displayValue": "Up to $3.2bn" },
+          "bucket": { "value": "Optical fiber / AI interconnect manufacturing", "displayValue": "광섬유 / AI 인터커넥트 제조" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "IREN" },
+          "date": { "value": "May-26" },
+          "investment": { "value": 2.1, "displayValue": "Up to $2.1bn" },
+          "bucket": { "value": "AI data-center infrastructure / power", "displayValue": "AI 데이터센터 인프라 / 전력" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Wayve" },
+          "date": { "value": "Sep-25" },
+          "investment": { "value": 500, "displayValue": "Proposed $500mn" },
+          "bucket": { "value": "Autonomous driving / embodied AI", "displayValue": "자율주행 / 임바디드 AI" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "Nscale" },
+          "date": { "value": "Sep-25" },
+          "investment": { "value": 500, "displayValue": "£500mn" },
+          "bucket": { "value": "UK AI infrastructure / neocloud", "displayValue": "영국 AI 인프라 / 네오클라우드" }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "highlightBg": "#F2F7FF",
+        "cells": {
+          "company": { "value": "Ayar Labs" },
+          "date": { "value": "Mar-26" },
+          "investment": { "value": "Unknown", "displayValue": "Unknown" },
+          "bucket": { "value": "Co-packaged optics", "displayValue": "Co-packaged optics" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": { "value": "xAI" },
+          "date": { "value": "Jan-26" },
+          "investment": { "value": "Unknown", "displayValue": "Unknown" },
+          "bucket": { "value": "Frontier model", "displayValue": "프런티어 모델" }
+        }
+      },
+      {
+        "rowType": "total",
+        "cells": {
+          "company": { "value": "Total Invested", "displayValue": "총 투자액" },
+          "date": { "value": "" },
+          "investment": { "value": 65, "displayValue": "~$65bn" },
+          "bucket": { "value": "" }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "cells": {
+          "company": { "value": "NVDA FCF" },
+          "date": { "value": "$97bn (CY25)" },
+          "investment": { "value": 187, "displayValue": "$187bn (CY26E)" },
+          "bucket": { "value": "$385bn (CY27E)" }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 31,
+      "cellPadding": "5px 9px",
+      "lineHeight": 1.18,
+      "zebraStripe": false,
+      "highlightMode": "background",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "accentColor": "#103A70",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 650,
+        "rowHeader": 650,
+        "header": 750,
+        "total": 800
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "13px",
+        "total": "14px",
+        "badge": "11px",
+        "unit": "11px",
+        "groupHeader": "12px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "NVDA 생태계 파트너 투자 목록",
+    "subMessage": "총 투자 약 $65bn · CY26E FCF의 약 35% · CY27E의 약 17%",
+    "headline": "NVDA 생태계 파트너 투자 목록",
+    "summary": "원본 표의 16개 투자 대상과 하단 FCF 비교를 보존했습니다.",
+    "story": "원본 투자 목록을 한국어 표로 옮겼습니다.",
+    "keyTakeaways": [
+      "총 투자액은 모든 생태계 파트너 투자 합계입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "기업별 bucket과 금액을 원본 순서대로 확인합니다.",
+    "contextualNotes": [
+      "Source: BofA Global Research estimates"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "exact",
+      "reason": "표 셀 직접 전사값"
+    },
+    "colorStrategy": {
+      "primary": "#103A70",
+      "secondary": ["#DCE7F5"],
+      "positive": "#D92D3A",
+      "negative": "#2563EB",
+      "accent": "#4E8BC9",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed",
+    "highlightCells": [
+      { "row": 7, "col": "company", "reason": "Photonics / lasers" },
+      { "row": 8, "col": "company", "reason": "Photonics / optical networking" },
+      { "row": 9, "col": "company", "reason": "Silicon photonics / networking" },
+      { "row": 10, "col": "company", "reason": "Optical fiber / AI interconnect" },
+      { "row": 14, "col": "company", "reason": "Co-packaged optics" }
+    ]
+  }
+}

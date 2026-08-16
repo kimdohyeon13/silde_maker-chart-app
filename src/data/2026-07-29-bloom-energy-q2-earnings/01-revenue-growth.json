@@ -1,0 +1,86 @@
+{
+  "id": "01-revenue-growth",
+  "analyzedAt": "2026-07-29T11:10:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "dataFidelity": "exact",
+    "preservedElements": ["공식 매출", "분기 순서", "단위", "출처"],
+    "sourceAttribution": "Bloom Energy SEC filings"
+  },
+  "allowedTransformations": ["rewrite-title", "adjust-colors", "adjust-layout", "adjust-density"],
+  "qualityChecks": [
+    {"id": "official-values", "label": "공식 수치", "status": "pass", "detail": "SEC 8-K와 회사 실적 발표의 분기 매출을 사용했습니다."},
+    {"id": "unit-preserved", "label": "단위 보존", "status": "pass", "detail": "모든 값은 백만달러 기준입니다."},
+    {"id": "readability", "label": "리포트 가독성", "status": "pass", "detail": "분기 3개만 남겨 증가 속도를 즉시 읽게 했습니다."}
+  ],
+  "exportOptions": {
+    "titleFontSize": 44,
+    "subtitleFontSize": 25,
+    "sourceFontSize": 18,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "26px 40px 4px",
+    "contentPadding": "8px 18px 8px",
+    "sourcePadding": "0 40px 18px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "분기 매출, 1년 만에 2.7배",
+    "subtitle": "2Q26 매출 10억6,540만달러, 처음으로 10억달러 돌파",
+    "source": "자료: Bloom Energy SEC 실적 발표, 2026-07-28",
+    "timeRange": "2Q25~2Q26",
+    "xAxis": {"label": "", "type": "category", "tickValues": ["2Q25", "1Q26", "2Q26"], "unit": "", "startsAtZero": false, "isLogScale": false},
+    "yAxis": {"label": "매출", "type": "numeric", "tickValues": [], "unit": "백만달러", "startsAtZero": true, "isLogScale": false, "max": 1200},
+    "legend": [
+      {"name": "매출", "role": "primary", "originalColor": "#0F4C81", "remakeColor": "#1458D4"}
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#1458D4",
+        "data": [
+          {"x": "2Q25", "y": 401.2, "confidence": 1.0},
+          {"x": "1Q26", "y": 751.1, "confidence": 1.0},
+          {"x": "2Q26", "y": 1065.4, "confidence": 1.0}
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {"overallConfidence": 1.0, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "excellent"}
+  },
+  "statistics": {
+    "trend": {"direction": "strong_up", "strength": 0.99, "description": "2Q25 이후 분기 매출이 빠르게 증가했습니다.", "recentDirection": "accelerating_up"},
+    "volatility": {"level": "moderate", "coefficient": 0.43, "description": "분기 매출 수준 차이가 큽니다."},
+    "changeRates": [
+      {"period": "전년 대비", "percentChange": 165.5, "absoluteChange": 664.2, "from": 401.2, "to": 1065.4}
+    ],
+    "correlations": [],
+    "summary": {"max": {"value": 1065.4, "at": "2Q26"}, "min": {"value": 401.2, "at": "2Q25"}, "average": 739.23, "median": 751.1, "range": 664.2}
+  },
+  "patterns": {"points": [], "crossovers": [], "supportResistance": []},
+  "narrative": {
+    "headMessage": "분기 매출 첫 10억달러",
+    "subMessage": "제품 매출 급증이 전체 성장을 이끌었습니다.",
+    "headline": "블룸에너지는 2분기 매출 10억달러를 처음 넘었습니다.",
+    "summary": "매출은 전년 동기보다 165.5%, 전 분기보다 41.9% 증가했습니다.",
+    "story": "AI 데이터센터용 현장 전력 수요가 제품 출하로 전환되면서 분기 매출 규모가 한 단계 올라갔습니다.",
+    "keyTakeaways": ["2Q26 매출 10억6,540만달러", "전년 대비 165.5% 증가"],
+    "questionsRaised": ["이 매출 속도가 다음 분기에도 유지되는가?"],
+    "viewerAction": "제품 매출 집중도와 수주 전환 속도를 함께 확인합니다.",
+    "contextualNotes": ["Bloom Energy SEC 실적 발표"]
+  },
+  "emphasis": {
+    "annotations": [
+      {"text": "첫 10억달러", "position": {"x": "2Q26", "y": 1065.4}, "importance": "critical", "style": "positive"}
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {"primary": "#1458D4", "secondary": ["#8B95A1"], "positive": "#16A34A", "negative": "#EF4444", "accent": "#2563EB", "backgroundTone": "light"},
+    "focusPoint": {"position": {"x": "2Q26", "y": 1065.4}, "displayText": "분기 매출 첫 10억달러", "reason": "매출 규모가 구조적으로 한 단계 올라갔습니다."},
+    "densityLevel": "minimal"
+  }
+}

@@ -1,0 +1,3489 @@
+{
+  "id": "page-11-graph-01",
+  "sourceImage": "input/13-page_11_graph_01.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "강세장 시작=100, LogScale",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, Bloomberg, 신한투자증권"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "경험적인 버블 패턴을 답습해나가는 주식시장",
+    "subtitle": "강세장 시작=100, LogScale",
+    "source": "자료: LSEG, Bloomberg, 신한투자증권",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "T",
+        "T",
+        "T+0.08Y",
+        "T+0.12Y",
+        "T+0.16Y",
+        "T+0.2Y",
+        "T+0.24Y",
+        "T+0.28Y",
+        "T+0.32Y",
+        "T+0.36Y",
+        "T+0.4Y",
+        "T+0.44Y",
+        "T+0.48Y",
+        "T+0.52Y",
+        "T+0.56Y",
+        "T+0.6Y",
+        "T+0.64Y",
+        "T+0.68Y",
+        "T+0.72Y",
+        "T+0.76Y",
+        "T+0.8Y",
+        "T+0.84Y",
+        "T+0.88Y",
+        "T+0.92Y",
+        "T+1Y",
+        "T+1Y",
+        "T+1Y",
+        "T+1.08Y",
+        "T+1.12Y",
+        "T+1.16Y",
+        "T+1.2Y",
+        "T+1.24Y",
+        "T+1.28Y",
+        "T+1.32Y",
+        "T+1.36Y",
+        "T+1.4Y",
+        "T+1.44Y",
+        "T+1.48Y",
+        "T+1.52Y",
+        "T+1.56Y",
+        "T+1.6Y",
+        "T+1.64Y",
+        "T+1.68Y",
+        "T+1.72Y",
+        "T+1.76Y",
+        "T+1.8Y",
+        "T+1.84Y",
+        "T+1.88Y",
+        "T+1.92Y",
+        "T+2Y",
+        "T+2Y",
+        "T+2Y",
+        "T+2.08Y",
+        "T+2.12Y",
+        "T+2.16Y",
+        "T+2.2Y",
+        "T+2.24Y",
+        "T+2.28Y",
+        "T+2.32Y",
+        "T+2.36Y",
+        "T+2.4Y",
+        "T+2.44Y",
+        "T+2.48Y",
+        "T+2.52Y",
+        "T+2.56Y",
+        "T+2.6Y",
+        "T+2.64Y",
+        "T+2.68Y",
+        "T+2.72Y",
+        "T+2.76Y",
+        "T+2.8Y",
+        "T+2.84Y",
+        "T+2.88Y",
+        "T+2.92Y",
+        "T+3Y",
+        "T+3Y",
+        "T+3Y",
+        "T+3.08Y",
+        "T+3.12Y",
+        "T+3.16Y",
+        "T+3.2Y",
+        "T+3.24Y",
+        "T+3.28Y",
+        "T+3.32Y",
+        "T+3.36Y",
+        "T+3.4Y",
+        "T+3.44Y",
+        "T+3.48Y",
+        "T+3.52Y",
+        "T+3.56Y",
+        "T+3.6Y",
+        "T+3.64Y",
+        "T+3.68Y",
+        "T+3.72Y",
+        "T+3.76Y",
+        "T+3.8Y",
+        "T+3.84Y",
+        "T+3.88Y",
+        "T+3.92Y",
+        "T+4Y",
+        "T+4Y",
+        "T+4Y",
+        "T+4.08Y",
+        "T+4.12Y",
+        "T+4.16Y",
+        "T+4.2Y",
+        "T+4.24Y",
+        "T+4.28Y",
+        "T+4.32Y",
+        "T+4.36Y",
+        "T+4.4Y",
+        "T+4.44Y",
+        "T+4.48Y",
+        "T+4.52Y",
+        "T+4.56Y",
+        "T+4.6Y",
+        "T+4.64Y",
+        "T+4.68Y",
+        "T+4.72Y",
+        "T+4.76Y",
+        "T+4.8Y",
+        "T+4.84Y",
+        "T+4.88Y",
+        "T+4.92Y",
+        "T+5Y",
+        "T+5Y",
+        "T+5Y",
+        "T+5.08Y",
+        "T+5.12Y",
+        "T+5.16Y",
+        "T+5.2Y",
+        "T+5.24Y",
+        "T+5.28Y",
+        "T+5.32Y",
+        "T+5.36Y",
+        "T+5.4Y",
+        "T+5.44Y",
+        "T+5.48Y",
+        "T+5.52Y",
+        "T+5.56Y",
+        "T+5.6Y",
+        "T+5.64Y",
+        "T+5.68Y",
+        "T+5.72Y",
+        "T+5.76Y",
+        "T+5.8Y",
+        "T+5.84Y",
+        "T+5.88Y",
+        "T+5.92Y",
+        "T+6Y",
+        "T+6Y",
+        "T+6Y",
+        "T+6.08Y",
+        "T+6.12Y",
+        "T+6.16Y",
+        "T+6.2Y",
+        "T+6.24Y",
+        "T+6.28Y",
+        "T+6.32Y",
+        "T+6.36Y",
+        "T+6.4Y",
+        "T+6.44Y",
+        "T+6.48Y",
+        "T+6.52Y",
+        "T+6.56Y",
+        "T+6.6Y",
+        "T+6.64Y",
+        "T+6.68Y",
+        "T+6.72Y",
+        "T+6.76Y",
+        "T+6.8Y",
+        "T+6.84Y",
+        "T+6.88Y",
+        "T+6.92Y",
+        "T+7Y",
+        "T+7Y"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "T",
+        "T+1Y",
+        "T+2Y",
+        "T+3Y",
+        "T+4Y",
+        "T+5Y",
+        "T+6Y",
+        "T+7Y"
+      ]
+    },
+    "yAxis": {
+      "label": "강세장 시작=100",
+      "type": "numeric",
+      "tickValues": [
+        "100",
+        "200",
+        "400",
+        "800"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": true,
+      "min": 100,
+      "max": 800
+    },
+    "legend": [
+      {
+        "name": "광란의 20년대: 다우",
+        "role": "secondary",
+        "originalColor": "#B7BCC4",
+        "remakeColor": "#B7BCC4"
+      },
+      {
+        "name": "닷컴 버블: 나스닥",
+        "role": "primary",
+        "originalColor": "#D2A000",
+        "remakeColor": "#D2A000"
+      },
+      {
+        "name": "FANG: 나스닥",
+        "role": "secondary",
+        "originalColor": "#6FA4CC",
+        "remakeColor": "#6FA4CC"
+      },
+      {
+        "name": "AI 사이클: 나스닥",
+        "role": "primary",
+        "originalColor": "#3E4E86",
+        "remakeColor": "#3E4E86"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "광란의 20년대: 다우",
+        "data": [
+          {
+            "x": "T",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "T",
+            "y": 102.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.08Y",
+            "y": 104.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.12Y",
+            "y": 107.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.16Y",
+            "y": 109.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.2Y",
+            "y": 112,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.24Y",
+            "y": 114.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.28Y",
+            "y": 116.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.32Y",
+            "y": 118.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.36Y",
+            "y": 119.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.4Y",
+            "y": 121.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.44Y",
+            "y": 123.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.48Y",
+            "y": 125.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.52Y",
+            "y": 126.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.56Y",
+            "y": 127,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.6Y",
+            "y": 127.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.64Y",
+            "y": 128.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.68Y",
+            "y": 128.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.72Y",
+            "y": 129.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.76Y",
+            "y": 130.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.8Y",
+            "y": 132,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.84Y",
+            "y": 133.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.88Y",
+            "y": 135.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.92Y",
+            "y": 136.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 138.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 140,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 141.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.08Y",
+            "y": 143.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.12Y",
+            "y": 144.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.16Y",
+            "y": 146.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.2Y",
+            "y": 148,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.24Y",
+            "y": 149.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.28Y",
+            "y": 151.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.32Y",
+            "y": 154.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.36Y",
+            "y": 156.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.4Y",
+            "y": 159,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.44Y",
+            "y": 161.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.48Y",
+            "y": 163.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.52Y",
+            "y": 166.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.56Y",
+            "y": 168.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.6Y",
+            "y": 171,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.64Y",
+            "y": 173.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.68Y",
+            "y": 175.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.72Y",
+            "y": 178.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.76Y",
+            "y": 180.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.8Y",
+            "y": 182,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.84Y",
+            "y": 183.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.88Y",
+            "y": 185.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.92Y",
+            "y": 186.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 188.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 190,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 187.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.08Y",
+            "y": 185.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.12Y",
+            "y": 182.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.16Y",
+            "y": 180.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.2Y",
+            "y": 178,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.24Y",
+            "y": 175.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.28Y",
+            "y": 172,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.32Y",
+            "y": 168,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.36Y",
+            "y": 164,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.4Y",
+            "y": 160,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.44Y",
+            "y": 156,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.48Y",
+            "y": 152,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.52Y",
+            "y": 151.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.56Y",
+            "y": 154.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.6Y",
+            "y": 158,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.64Y",
+            "y": 161.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.68Y",
+            "y": 164.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.72Y",
+            "y": 167.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.76Y",
+            "y": 170.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.8Y",
+            "y": 174,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.84Y",
+            "y": 177.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.88Y",
+            "y": 180.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.92Y",
+            "y": 183.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 186.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 190,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 193.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.08Y",
+            "y": 196.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.12Y",
+            "y": 199.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.16Y",
+            "y": 202.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.2Y",
+            "y": 206,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.24Y",
+            "y": 209.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.28Y",
+            "y": 212.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.32Y",
+            "y": 215.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.36Y",
+            "y": 218.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.4Y",
+            "y": 222,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.44Y",
+            "y": 225.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.48Y",
+            "y": 228.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.52Y",
+            "y": 231.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.56Y",
+            "y": 233.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.6Y",
+            "y": 236,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.64Y",
+            "y": 238.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.68Y",
+            "y": 240.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.72Y",
+            "y": 243.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.76Y",
+            "y": 246,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.8Y",
+            "y": 250,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.84Y",
+            "y": 254,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.88Y",
+            "y": 258,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.92Y",
+            "y": 262,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 266,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 270,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 274.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.08Y",
+            "y": 279.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.12Y",
+            "y": 284.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.16Y",
+            "y": 289.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.2Y",
+            "y": 294,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.24Y",
+            "y": 298.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.28Y",
+            "y": 301.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.32Y",
+            "y": 302.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.36Y",
+            "y": 304.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.4Y",
+            "y": 306,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.44Y",
+            "y": 307.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.48Y",
+            "y": 309.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.52Y",
+            "y": 311.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.56Y",
+            "y": 314.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.6Y",
+            "y": 318,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.64Y",
+            "y": 321.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.68Y",
+            "y": 324.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.72Y",
+            "y": 327.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.76Y",
+            "y": 331.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.8Y",
+            "y": 338,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.84Y",
+            "y": 344.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.88Y",
+            "y": 350.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.92Y",
+            "y": 357.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 363.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 370,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 374,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.08Y",
+            "y": 378,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.12Y",
+            "y": 382,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.16Y",
+            "y": 386,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.2Y",
+            "y": 390,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.24Y",
+            "y": 394,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.28Y",
+            "y": 375.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.32Y",
+            "y": 348.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.36Y",
+            "y": 322.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.4Y",
+            "y": 296,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.44Y",
+            "y": 269.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.48Y",
+            "y": 243.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.52Y",
+            "y": 235.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.56Y",
+            "y": 246.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.6Y",
+            "y": 258,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.64Y",
+            "y": 269.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.68Y",
+            "y": 280.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.72Y",
+            "y": 291.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.76Y",
+            "y": 299.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.8Y",
+            "y": 296,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.84Y",
+            "y": 292.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.88Y",
+            "y": 289.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.92Y",
+            "y": 286.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 283.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 280,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 273.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.08Y",
+            "y": 267.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.12Y",
+            "y": 260.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.16Y",
+            "y": 254.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.2Y",
+            "y": 248,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.24Y",
+            "y": 241.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.28Y",
+            "y": 236.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.32Y",
+            "y": 231.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.36Y",
+            "y": 226.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.4Y",
+            "y": 222,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.44Y",
+            "y": 217.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.48Y",
+            "y": 212.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.52Y",
+            "y": 207.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.56Y",
+            "y": 202.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.6Y",
+            "y": 198,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.64Y",
+            "y": 193.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.68Y",
+            "y": 188.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.72Y",
+            "y": 183.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.76Y",
+            "y": 178.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.8Y",
+            "y": 174,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.84Y",
+            "y": 169.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.88Y",
+            "y": 164.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.92Y",
+            "y": 159.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 154.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 150,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#B7BCC4"
+      },
+      {
+        "name": "닷컴 버블: 나스닥",
+        "data": [
+          {
+            "x": "T",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "T",
+            "y": 101.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.08Y",
+            "y": 102.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.12Y",
+            "y": 103.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.16Y",
+            "y": 105.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.2Y",
+            "y": 106.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.24Y",
+            "y": 107.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.28Y",
+            "y": 109,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.32Y",
+            "y": 110.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.36Y",
+            "y": 111.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.4Y",
+            "y": 112.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.44Y",
+            "y": 114.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.48Y",
+            "y": 115.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.52Y",
+            "y": 116.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.56Y",
+            "y": 117.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.6Y",
+            "y": 118,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.64Y",
+            "y": 118.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.68Y",
+            "y": 119.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.72Y",
+            "y": 120.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.76Y",
+            "y": 121.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.8Y",
+            "y": 122.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.84Y",
+            "y": 124.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.88Y",
+            "y": 125.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.92Y",
+            "y": 127.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 128.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 130,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 131.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.08Y",
+            "y": 132.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.12Y",
+            "y": 133.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.16Y",
+            "y": 135.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.2Y",
+            "y": 136.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.24Y",
+            "y": 137.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.28Y",
+            "y": 139.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.32Y",
+            "y": 141.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.36Y",
+            "y": 142.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.4Y",
+            "y": 144.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.44Y",
+            "y": 146.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.48Y",
+            "y": 148.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.52Y",
+            "y": 150,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.56Y",
+            "y": 152.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.6Y",
+            "y": 154.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.64Y",
+            "y": 156.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.68Y",
+            "y": 158.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.72Y",
+            "y": 160.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.76Y",
+            "y": 162.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.8Y",
+            "y": 164.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.84Y",
+            "y": 166.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.88Y",
+            "y": 168.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.92Y",
+            "y": 170.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 172.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 175,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 173.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.08Y",
+            "y": 172.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.12Y",
+            "y": 171.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.16Y",
+            "y": 169.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.2Y",
+            "y": 168.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.24Y",
+            "y": 167.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.28Y",
+            "y": 165.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.32Y",
+            "y": 163.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.36Y",
+            "y": 161.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.4Y",
+            "y": 159.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.44Y",
+            "y": 157.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.48Y",
+            "y": 155,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.52Y",
+            "y": 156.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.56Y",
+            "y": 162.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.6Y",
+            "y": 167.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.64Y",
+            "y": 173,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.68Y",
+            "y": 178.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.72Y",
+            "y": 183.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.76Y",
+            "y": 189.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.8Y",
+            "y": 195.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.84Y",
+            "y": 201.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.88Y",
+            "y": 207.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.92Y",
+            "y": 213.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 219.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 226,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 224.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.08Y",
+            "y": 223.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.12Y",
+            "y": 222.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.16Y",
+            "y": 220.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.2Y",
+            "y": 219.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.24Y",
+            "y": 218.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.28Y",
+            "y": 223,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.32Y",
+            "y": 229.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.36Y",
+            "y": 236.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.4Y",
+            "y": 243.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.44Y",
+            "y": 249.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.48Y",
+            "y": 256.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.52Y",
+            "y": 257.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.56Y",
+            "y": 252.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.6Y",
+            "y": 248,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.64Y",
+            "y": 243.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.68Y",
+            "y": 238.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.72Y",
+            "y": 233.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.76Y",
+            "y": 233.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.8Y",
+            "y": 246,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.84Y",
+            "y": 258.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.88Y",
+            "y": 271.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.92Y",
+            "y": 284.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 297.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 310,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 314,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.08Y",
+            "y": 318,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.12Y",
+            "y": 322,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.16Y",
+            "y": 326,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.2Y",
+            "y": 330,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.24Y",
+            "y": 334,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.28Y",
+            "y": 338.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.32Y",
+            "y": 343.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.36Y",
+            "y": 348.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.4Y",
+            "y": 353,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.44Y",
+            "y": 357.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.48Y",
+            "y": 362.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.52Y",
+            "y": 368.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.56Y",
+            "y": 375.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.6Y",
+            "y": 383,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.64Y",
+            "y": 390.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.68Y",
+            "y": 397.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.72Y",
+            "y": 404.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.76Y",
+            "y": 414.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.8Y",
+            "y": 432,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.84Y",
+            "y": 449.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.88Y",
+            "y": 467.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.92Y",
+            "y": 484.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 502.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 520,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 543.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.08Y",
+            "y": 566.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.12Y",
+            "y": 589.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.16Y",
+            "y": 612.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.2Y",
+            "y": 636,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.24Y",
+            "y": 659.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.28Y",
+            "y": 639.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.32Y",
+            "y": 604.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.36Y",
+            "y": 570.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.4Y",
+            "y": 536,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.44Y",
+            "y": 501.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.48Y",
+            "y": 467.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.52Y",
+            "y": 455.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.56Y",
+            "y": 466.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.6Y",
+            "y": 478,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.64Y",
+            "y": 489.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.68Y",
+            "y": 500.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.72Y",
+            "y": 511.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.76Y",
+            "y": 521.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.8Y",
+            "y": 528,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.84Y",
+            "y": 534.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.88Y",
+            "y": 540.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.92Y",
+            "y": 547.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 553.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 560,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 539.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.08Y",
+            "y": 518.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.12Y",
+            "y": 497.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.16Y",
+            "y": 476.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.2Y",
+            "y": 456,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.24Y",
+            "y": 435.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.28Y",
+            "y": 420.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.32Y",
+            "y": 407.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.36Y",
+            "y": 394.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.4Y",
+            "y": 382,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.44Y",
+            "y": 369.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.48Y",
+            "y": 356.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.52Y",
+            "y": 344.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.56Y",
+            "y": 334.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.6Y",
+            "y": 324,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.64Y",
+            "y": 313.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.68Y",
+            "y": 303.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.72Y",
+            "y": 292.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.76Y",
+            "y": 282.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.8Y",
+            "y": 274,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.84Y",
+            "y": 265.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.88Y",
+            "y": 256.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.92Y",
+            "y": 247.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 238.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 230,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#D2A000"
+      },
+      {
+        "name": "FANG: 나스닥",
+        "data": [
+          {
+            "x": "T",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "T",
+            "y": 101,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.08Y",
+            "y": 101.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.12Y",
+            "y": 102.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.16Y",
+            "y": 103.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.2Y",
+            "y": 104.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.24Y",
+            "y": 105.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.28Y",
+            "y": 106.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.32Y",
+            "y": 107.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.36Y",
+            "y": 108.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.4Y",
+            "y": 109.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.44Y",
+            "y": 110.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.48Y",
+            "y": 111.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.52Y",
+            "y": 112.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.56Y",
+            "y": 113.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.6Y",
+            "y": 114.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.64Y",
+            "y": 115.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.68Y",
+            "y": 116.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.72Y",
+            "y": 117.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.76Y",
+            "y": 118.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.8Y",
+            "y": 119.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.84Y",
+            "y": 120.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.88Y",
+            "y": 121.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.92Y",
+            "y": 122.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 123.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 125,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 126.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.08Y",
+            "y": 127.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.12Y",
+            "y": 128.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.16Y",
+            "y": 129.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.2Y",
+            "y": 130.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.24Y",
+            "y": 131.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.28Y",
+            "y": 133,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.32Y",
+            "y": 134.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.36Y",
+            "y": 135.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.4Y",
+            "y": 136.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.44Y",
+            "y": 138.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.48Y",
+            "y": 139.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.52Y",
+            "y": 140.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.56Y",
+            "y": 142.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.6Y",
+            "y": 144,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.64Y",
+            "y": 145.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.68Y",
+            "y": 147.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.72Y",
+            "y": 148.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.76Y",
+            "y": 150.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.8Y",
+            "y": 151.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.84Y",
+            "y": 152.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.88Y",
+            "y": 154.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.92Y",
+            "y": 155.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 156.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 158,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 154.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.08Y",
+            "y": 150.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.12Y",
+            "y": 147,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.16Y",
+            "y": 143.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.2Y",
+            "y": 139.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.24Y",
+            "y": 135.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.28Y",
+            "y": 137.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.32Y",
+            "y": 140.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.36Y",
+            "y": 143.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.4Y",
+            "y": 147,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.44Y",
+            "y": 150.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.48Y",
+            "y": 153.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.52Y",
+            "y": 155.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.56Y",
+            "y": 157.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.6Y",
+            "y": 159,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.64Y",
+            "y": 160.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.68Y",
+            "y": 162.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.72Y",
+            "y": 163.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.76Y",
+            "y": 164.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.8Y",
+            "y": 164,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.84Y",
+            "y": 163.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.88Y",
+            "y": 162.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.92Y",
+            "y": 161.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 160.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 160,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 161.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.08Y",
+            "y": 163.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.12Y",
+            "y": 164.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.16Y",
+            "y": 166.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.2Y",
+            "y": 168,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.24Y",
+            "y": 169.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.28Y",
+            "y": 171.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.32Y",
+            "y": 172.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.36Y",
+            "y": 174.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.4Y",
+            "y": 176,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.44Y",
+            "y": 177.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.48Y",
+            "y": 179.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.52Y",
+            "y": 182,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.56Y",
+            "y": 186,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.6Y",
+            "y": 190,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.64Y",
+            "y": 194,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.68Y",
+            "y": 198,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.72Y",
+            "y": 202,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.76Y",
+            "y": 206.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.8Y",
+            "y": 211,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.84Y",
+            "y": 215.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.88Y",
+            "y": 220.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.92Y",
+            "y": 225.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 230.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 235,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4Y",
+            "y": 239,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.08Y",
+            "y": 243,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.12Y",
+            "y": 247,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.16Y",
+            "y": 251,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.2Y",
+            "y": 255,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.24Y",
+            "y": 259,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.28Y",
+            "y": 261.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.32Y",
+            "y": 264.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.36Y",
+            "y": 266.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.4Y",
+            "y": 269,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.44Y",
+            "y": 271.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.48Y",
+            "y": 273.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.52Y",
+            "y": 276.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.56Y",
+            "y": 278.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.6Y",
+            "y": 281,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.64Y",
+            "y": 283.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.68Y",
+            "y": 285.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.72Y",
+            "y": 288.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.76Y",
+            "y": 290.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.8Y",
+            "y": 292,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.84Y",
+            "y": 293.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.88Y",
+            "y": 295.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+4.92Y",
+            "y": 296.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 298.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 300,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5Y",
+            "y": 302.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.08Y",
+            "y": 304.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.12Y",
+            "y": 307.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.16Y",
+            "y": 309.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.2Y",
+            "y": 312,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.24Y",
+            "y": 314.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.28Y",
+            "y": 312,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.32Y",
+            "y": 308,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.36Y",
+            "y": 304,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.4Y",
+            "y": 300,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.44Y",
+            "y": 296,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.48Y",
+            "y": 292,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.52Y",
+            "y": 288.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.56Y",
+            "y": 285.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.6Y",
+            "y": 282,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.64Y",
+            "y": 278.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.68Y",
+            "y": 275.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.72Y",
+            "y": 272.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.76Y",
+            "y": 269,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.8Y",
+            "y": 265,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.84Y",
+            "y": 261,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.88Y",
+            "y": 257,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+5.92Y",
+            "y": 253,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 249,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 245,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6Y",
+            "y": 247.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.08Y",
+            "y": 249.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.12Y",
+            "y": 252.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.16Y",
+            "y": 254.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.2Y",
+            "y": 257,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.24Y",
+            "y": 259.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.28Y",
+            "y": 257,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.32Y",
+            "y": 253,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.36Y",
+            "y": 249,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.4Y",
+            "y": 245,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.44Y",
+            "y": 241,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.48Y",
+            "y": 237,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.52Y",
+            "y": 234.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.56Y",
+            "y": 232.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.6Y",
+            "y": 231,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.64Y",
+            "y": 229.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.68Y",
+            "y": 227.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.72Y",
+            "y": 226.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.76Y",
+            "y": 224.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.8Y",
+            "y": 223,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.84Y",
+            "y": 221.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.88Y",
+            "y": 219.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+6.92Y",
+            "y": 218.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 216.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+7Y",
+            "y": 215,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#6FA4CC"
+      },
+      {
+        "name": "AI 사이클: 나스닥",
+        "data": [
+          {
+            "x": "T",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "T",
+            "y": 102.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.08Y",
+            "y": 105.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.12Y",
+            "y": 108.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.16Y",
+            "y": 111.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.2Y",
+            "y": 114.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.24Y",
+            "y": 117.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.28Y",
+            "y": 119.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.32Y",
+            "y": 122,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.36Y",
+            "y": 124.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.4Y",
+            "y": 126.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.44Y",
+            "y": 128.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.48Y",
+            "y": 131,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.52Y",
+            "y": 131.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.56Y",
+            "y": 130,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.6Y",
+            "y": 128.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.64Y",
+            "y": 127.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.68Y",
+            "y": 126.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.72Y",
+            "y": 124.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.76Y",
+            "y": 125,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.8Y",
+            "y": 128.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.84Y",
+            "y": 131.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.88Y",
+            "y": 135.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+0.92Y",
+            "y": 138.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 141.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 145.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1Y",
+            "y": 148.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.08Y",
+            "y": 151.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.12Y",
+            "y": 154.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.16Y",
+            "y": 158.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.2Y",
+            "y": 161.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.24Y",
+            "y": 164.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.28Y",
+            "y": 163.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.32Y",
+            "y": 162,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.36Y",
+            "y": 160.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.4Y",
+            "y": 158.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.44Y",
+            "y": 157.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.48Y",
+            "y": 155.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.52Y",
+            "y": 157.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.56Y",
+            "y": 161.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.6Y",
+            "y": 165.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.64Y",
+            "y": 169.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.68Y",
+            "y": 173.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.72Y",
+            "y": 177.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.76Y",
+            "y": 179.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.8Y",
+            "y": 178.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.84Y",
+            "y": 178.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.88Y",
+            "y": 177.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+1.92Y",
+            "y": 176.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 175.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 174.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2Y",
+            "y": 168.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.08Y",
+            "y": 162.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.12Y",
+            "y": 157.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.16Y",
+            "y": 151.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.2Y",
+            "y": 146,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.24Y",
+            "y": 140.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.28Y",
+            "y": 145.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.32Y",
+            "y": 152.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.36Y",
+            "y": 158.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.4Y",
+            "y": 165.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.44Y",
+            "y": 171.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.48Y",
+            "y": 178,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.52Y",
+            "y": 183.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.56Y",
+            "y": 188.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.6Y",
+            "y": 193,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.64Y",
+            "y": 197.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.68Y",
+            "y": 202.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.72Y",
+            "y": 207.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.76Y",
+            "y": 211.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.8Y",
+            "y": 214.7,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.84Y",
+            "y": 217.9,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.88Y",
+            "y": 221.1,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+2.92Y",
+            "y": 224.3,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 227.5,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 229.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3Y",
+            "y": 228,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.08Y",
+            "y": 226.4,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.12Y",
+            "y": 224.8,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.16Y",
+            "y": 223.2,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.2Y",
+            "y": 221.6,
+            "confidence": 0.9
+          },
+          {
+            "x": "T+3.24Y",
+            "y": 220,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#3E4E86",
+        "allowSparseTail": true
+      }
+    ],
+    "totalDataPoints": 610,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.505,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 120.0,
+        "absoluteChange": 120.0,
+        "from": 100.0,
+        "to": 220.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 659.2,
+        "at": ""
+      },
+      "min": {
+        "value": 100.0,
+        "at": ""
+      },
+      "average": 223.22590163934427,
+      "median": 188.25,
+      "range": 559.2
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "경험적인 버블 패턴을 답습해나가는 주식시장",
+    "subMessage": "강세장 시작=100, LogScale",
+    "headline": "경험적인 버블 패턴을 답습해나가는 주식시장",
+    "summary": "강세장 시작=100, LogScale",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "강세장 시작=100, LogScale",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, Bloomberg, 신한투자증권"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 220.0
+      },
+      "displayText": "경험적인 버블 패턴을 답습해나",
+      "reason": "강세장 시작=100, LogScale"
+    },
+    "densityLevel": "balanced"
+  }
+}
