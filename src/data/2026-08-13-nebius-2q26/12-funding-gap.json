@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-funding-gap"
   },
   "allowedTransformations": [
     "translate-text",
@@ -86,14 +87,20 @@
       "label": "",
       "type": "category",
       "tickValues": [
+        "Operating cash flow",
+        "Capex",
+        "ATM equity issuance",
+        "July secured loan"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
         "영업현금흐름",
         "설비투자",
         "ATM 주식 발행",
         "7월 담보대출"
-      ],
-      "unit": "",
-      "startsAtZero": false,
-      "isLogScale": false
+      ]
     },
     "yAxis": {
       "label": "",
@@ -120,22 +127,22 @@
         "name": "현금 흐름",
         "data": [
           {
-            "x": "영업현금흐름",
+            "x": "Operating cash flow",
             "y": 2.25,
             "confidence": 0.74
           },
           {
-            "x": "설비투자",
+            "x": "Capex",
             "y": -5.66,
             "confidence": 0.74
           },
           {
-            "x": "ATM 주식 발행",
+            "x": "ATM equity issuance",
             "y": 2.85,
             "confidence": 0.74
           },
           {
-            "x": "7월 담보대출",
+            "x": "July secured loan",
             "y": 0.78,
             "confidence": 0.74
           }

@@ -1,0 +1,160 @@
+{
+  "id": "04-cost-passthrough",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "directional",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백"
+    ],
+    "notes": "원문이 말한 전가 경로를 단계로만 정리했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "2px 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#0969DA",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "title": "원가 상승이 임대료까지 가는 길",
+    "subtitle": "칩 업체의 원가 상승에서 끝나지 않을 수 있다",
+    "source": "자료: 업계 전망치 · 2026년 8월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "단계",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "v",
+        "label": "일어나는 일",
+        "dataType": "text",
+        "width": "66%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "1단계",
+            "displayValue": "1단계"
+          },
+          "v": {
+            "value": "칩 업체의 원가가 오른다",
+            "displayValue": "칩 업체의 원가가 오른다"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "2단계",
+            "displayValue": "2단계"
+          },
+          "v": {
+            "value": "클라우드 사업자가 늘어난 비용을 고객에게 전가한다",
+            "displayValue": "클라우드 사업자가 늘어난 비용을 고객에게 전가한다"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "3단계",
+            "displayValue": "3단계"
+          },
+          "v": {
+            "value": "AI 컴퓨팅 임대료가 오른다",
+            "displayValue": "AI 컴퓨팅 임대료가 오른다"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "fontSize": {
+        "header": "17px",
+        "body": "22px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+    }
+  },
+  "narrative": {
+    "headMessage": "원가 상승이 임대료까지 가는 길",
+    "subMessage": "칩 업체의 원가 상승에서 끝나지 않을 수 있다"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#8B95A1"
+      ],
+      "accent": "#0969DA"
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "id": "dib236-04",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-236-04.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "03. 브렌트유·WTI",
+    "preservedElements": [
+      "Yahoo Finance daily OHLC rows frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, Aug 21 focus date, and line-chart form",
+      "base-date=100 normalization where present in the original chart",
+      "source attribution and printed headline values"
+    ],
+    "changedElements": [
+      "visible copy localized by channel",
+      "light source JSON prepared for deterministic four-set derivation"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Raw Yahoo Finance OHLC values are persisted before rendering; no pixel interpolation.",
+    "sourceAttribution": "Source: Yahoo Finance · daily closes through Aug 21, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance OHLC를 CSV에 고정한 뒤 같은 행에서 시계열을 생성했습니다."
+    },
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "티커 순서, 기간, 기준일, 지수화 여부와 line 형식을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@WorldTechRsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#1E755F",
+    "borderColor": "#D7DFDC",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 150,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "03. Brent And WTI Crude",
+    "subtitle": "Aug 21: Brent +0.10%, WTI -1.35%",
+    "source": "Source: Yahoo Finance · daily closes through Aug 21, 2026",
+    "timeRange": "2026-05-21 to 2026-08-21",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-05-21",
+        "2026-06-10",
+        "2026-06-29",
+        "2026-07-17",
+        "2026-08-04",
+        "2026-08-21"
+      ],
+      "displayTickValues": [
+        "05-21",
+        "06-10",
+        "06-29",
+        "07-17",
+        "08-04",
+        "08-21"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "65",
+        "70",
+        "75",
+        "80",
+        "85",
+        "90",
+        "95",
+        "100",
+        "105"
+      ],
+      "unit": "$",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 65,
+      "max": 105
+    },
+    "legend": [
+      {
+        "name": "Brent",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "WTI",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Brent",
+        "data": [
+          {
+            "x": "2026-05-21",
+            "y": 102.58
+          },
+          {
+            "x": "2026-05-22",
+            "y": 103.54
+          },
+          {
+            "x": "2026-05-26",
+            "y": 99.58
+          },
+          {
+            "x": "2026-05-27",
+            "y": 94.29
+          },
+          {
+            "x": "2026-05-28",
+            "y": 93.71
+          },
+          {
+            "x": "2026-05-29",
+            "y": 92.05
+          },
+          {
+            "x": "2026-06-01",
+            "y": 94.98
+          },
+          {
+            "x": "2026-06-02",
+            "y": 96.0
+          },
+          {
+            "x": "2026-06-03",
+            "y": 97.81
+          },
+          {
+            "x": "2026-06-04",
+            "y": 95.03
+          },
+          {
+            "x": "2026-06-05",
+            "y": 93.09
+          },
+          {
+            "x": "2026-06-08",
+            "y": 94.25
+          },
+          {
+            "x": "2026-06-09",
+            "y": 91.45
+          },
+          {
+            "x": "2026-06-10",
+            "y": 93.1
+          },
+          {
+            "x": "2026-06-11",
+            "y": 90.38
+          },
+          {
+            "x": "2026-06-12",
+            "y": 87.33
+          },
+          {
+            "x": "2026-06-15",
+            "y": 83.17
+          },
+          {
+            "x": "2026-06-16",
+            "y": 78.96
+          },
+          {
+            "x": "2026-06-17",
+            "y": 79.55
+          },
+          {
+            "x": "2026-06-18",
+            "y": 79.85
+          },
+          {
+            "x": "2026-06-22",
+            "y": 77.9
+          },
+          {
+            "x": "2026-06-23",
+            "y": 77.08
+          },
+          {
+            "x": "2026-06-24",
+            "y": 73.74
+          },
+          {
+            "x": "2026-06-25",
+            "y": 75.26
+          },
+          {
+            "x": "2026-06-26",
+            "y": 71.99
+          },
+          {
+            "x": "2026-06-29",
+            "y": 73.15
+          },
+          {
+            "x": "2026-06-30",
+            "y": 72.92
+          },
+          {
+            "x": "2026-07-01",
+            "y": 71.57
+          },
+          {
+            "x": "2026-07-02",
+            "y": 71.8
+          },
+          {
+            "x": "2026-07-06",
+            "y": 71.99
+          },
+          {
+            "x": "2026-07-07",
+            "y": 74.16
+          },
+          {
+            "x": "2026-07-08",
+            "y": 78.02
+          },
+          {
+            "x": "2026-07-09",
+            "y": 76.3
+          },
+          {
+            "x": "2026-07-10",
+            "y": 76.01
+          },
+          {
+            "x": "2026-07-13",
+            "y": 83.3
+          },
+          {
+            "x": "2026-07-14",
+            "y": 84.73
+          },
+          {
+            "x": "2026-07-15",
+            "y": 84.95
+          },
+          {
+            "x": "2026-07-16",
+            "y": 84.23
+          },
+          {
+            "x": "2026-07-17",
+            "y": 88.1
+          },
+          {
+            "x": "2026-07-20",
+            "y": 89.22
+          },
+          {
+            "x": "2026-07-21",
+            "y": 91.01
+          },
+          {
+            "x": "2026-07-22",
+            "y": 94.07
+          },
+          {
+            "x": "2026-07-23",
+            "y": 100.69
+          },
+          {
+            "x": "2026-07-24",
+            "y": 96.78
+          },
+          {
+            "x": "2026-07-27",
+            "y": 88.36
+          },
+          {
+            "x": "2026-07-28",
+            "y": 84.09
+          },
+          {
+            "x": "2026-07-29",
+            "y": 90.74
+          },
+          {
+            "x": "2026-07-30",
+            "y": 89.03
+          },
+          {
+            "x": "2026-07-31",
+            "y": 90.12
+          },
+          {
+            "x": "2026-08-03",
+            "y": 83.77
+          },
+          {
+            "x": "2026-08-04",
+            "y": 79.36
+          },
+          {
+            "x": "2026-08-05",
+            "y": 79.45
+          },
+          {
+            "x": "2026-08-06",
+            "y": 82.49
+          },
+          {
+            "x": "2026-08-07",
+            "y": 83.55
+          },
+          {
+            "x": "2026-08-10",
+            "y": 87.72
+          },
+          {
+            "x": "2026-08-11",
+            "y": 88.91
+          },
+          {
+            "x": "2026-08-12",
+            "y": 88.98
+          },
+          {
+            "x": "2026-08-13",
+            "y": 87.07
+          },
+          {
+            "x": "2026-08-14",
+            "y": 88.52
+          },
+          {
+            "x": "2026-08-17",
+            "y": 90.87
+          },
+          {
+            "x": "2026-08-18",
+            "y": 91.02
+          },
+          {
+            "x": "2026-08-19",
+            "y": 91.62
+          },
+          {
+            "x": "2026-08-20",
+            "y": 93.78
+          },
+          {
+            "x": "2026-08-21",
+            "y": 93.87
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "WTI",
+        "data": [
+          {
+            "x": "2026-05-21",
+            "y": 96.35
+          },
+          {
+            "x": "2026-05-22",
+            "y": 96.6
+          },
+          {
+            "x": "2026-05-26",
+            "y": 93.89
+          },
+          {
+            "x": "2026-05-27",
+            "y": 88.68
+          },
+          {
+            "x": "2026-05-28",
+            "y": 88.9
+          },
+          {
+            "x": "2026-05-29",
+            "y": 87.36
+          },
+          {
+            "x": "2026-06-01",
+            "y": 92.16
+          },
+          {
+            "x": "2026-06-02",
+            "y": 93.76
+          },
+          {
+            "x": "2026-06-03",
+            "y": 96.02
+          },
+          {
+            "x": "2026-06-04",
+            "y": 93.04
+          },
+          {
+            "x": "2026-06-05",
+            "y": 90.54
+          },
+          {
+            "x": "2026-06-08",
+            "y": 91.3
+          },
+          {
+            "x": "2026-06-09",
+            "y": 88.2
+          },
+          {
+            "x": "2026-06-10",
+            "y": 90.03
+          },
+          {
+            "x": "2026-06-11",
+            "y": 87.71
+          },
+          {
+            "x": "2026-06-12",
+            "y": 84.88
+          },
+          {
+            "x": "2026-06-15",
+            "y": 80.75
+          },
+          {
+            "x": "2026-06-16",
+            "y": 76.05
+          },
+          {
+            "x": "2026-06-17",
+            "y": 76.79
+          },
+          {
+            "x": "2026-06-18",
+            "y": 76.6
+          },
+          {
+            "x": "2026-06-22",
+            "y": 74.82
+          },
+          {
+            "x": "2026-06-23",
+            "y": 73.21
+          },
+          {
+            "x": "2026-06-24",
+            "y": 70.34
+          },
+          {
+            "x": "2026-06-25",
+            "y": 71.92
+          },
+          {
+            "x": "2026-06-26",
+            "y": 69.23
+          },
+          {
+            "x": "2026-06-29",
+            "y": 70.75
+          },
+          {
+            "x": "2026-06-30",
+            "y": 69.5
+          },
+          {
+            "x": "2026-07-01",
+            "y": 68.58
+          },
+          {
+            "x": "2026-07-02",
+            "y": 68.69
+          },
+          {
+            "x": "2026-07-06",
+            "y": 68.55
+          },
+          {
+            "x": "2026-07-07",
+            "y": 70.44
+          },
+          {
+            "x": "2026-07-08",
+            "y": 73.52
+          },
+          {
+            "x": "2026-07-09",
+            "y": 72.08
+          },
+          {
+            "x": "2026-07-10",
+            "y": 71.41
+          },
+          {
+            "x": "2026-07-13",
+            "y": 78.14
+          },
+          {
+            "x": "2026-07-14",
+            "y": 79.34
+          },
+          {
+            "x": "2026-07-15",
+            "y": 79.6
+          },
+          {
+            "x": "2026-07-16",
+            "y": 78.95
+          },
+          {
+            "x": "2026-07-17",
+            "y": 82.49
+          },
+          {
+            "x": "2026-07-20",
+            "y": 83.23
+          },
+          {
+            "x": "2026-07-21",
+            "y": 84.91
+          },
+          {
+            "x": "2026-07-22",
+            "y": 86.83
+          },
+          {
+            "x": "2026-07-23",
+            "y": 92.19
+          },
+          {
+            "x": "2026-07-24",
+            "y": 89.31
+          },
+          {
+            "x": "2026-07-27",
+            "y": 82.61
+          },
+          {
+            "x": "2026-07-28",
+            "y": 79.26
+          },
+          {
+            "x": "2026-07-29",
+            "y": 84.46
+          },
+          {
+            "x": "2026-07-30",
+            "y": 83.59
+          },
+          {
+            "x": "2026-07-31",
+            "y": 84.67
+          },
+          {
+            "x": "2026-08-03",
+            "y": 80.34
+          },
+          {
+            "x": "2026-08-04",
+            "y": 75.77
+          },
+          {
+            "x": "2026-08-05",
+            "y": 75.22
+          },
+          {
+            "x": "2026-08-06",
+            "y": 77.29
+          },
+          {
+            "x": "2026-08-07",
+            "y": 78.18
+          },
+          {
+            "x": "2026-08-10",
+            "y": 82.13
+          },
+          {
+            "x": "2026-08-11",
+            "y": 83.2
+          },
+          {
+            "x": "2026-08-12",
+            "y": 83.27
+          },
+          {
+            "x": "2026-08-13",
+            "y": 81.25
+          },
+          {
+            "x": "2026-08-14",
+            "y": 82.4
+          },
+          {
+            "x": "2026-08-17",
+            "y": 84.5
+          },
+          {
+            "x": "2026-08-18",
+            "y": 84.94
+          },
+          {
+            "x": "2026-08-19",
+            "y": 85.83
+          },
+          {
+            "x": "2026-08-20",
+            "y": 87.83
+          },
+          {
+            "x": "2026-08-21",
+            "y": 86.64
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 128,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Aug 21: Brent +0.10%, WTI -1.35%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [
+      {
+        "period": "2026-05-21 to 2026-08-21",
+        "percentChange": -8.49,
+        "from": 102.58,
+        "to": 93.87
+      },
+      {
+        "period": "2026-05-21 to 2026-08-21",
+        "percentChange": -10.08,
+        "from": 96.35,
+        "to": 86.64
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 103.54,
+        "series": "all"
+      },
+      "min": {
+        "value": 68.55,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "03. Brent And WTI Crude",
+    "subMessage": "Aug 21: Brent +0.10%, WTI -1.35%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-08-21",
+        "y": 93.87
+      },
+      "displayText": "93.87",
+      "reason": "Aug 21: Brent +0.10%, WTI -1.35%"
+    },
+    "densityLevel": "focused"
+  }
+}

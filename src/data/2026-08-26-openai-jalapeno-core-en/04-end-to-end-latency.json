@@ -1,0 +1,109 @@
+{
+  "id": "04-end-to-end-latency",
+  "mode": "redesign",
+  "sourceImage": "https://openai.com/index/jalapeno-first-results/",
+  "sourceImages": ["https://openai.com/index/jalapeno-first-results/"],
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Lower end-to-end latency",
+    "originalMessage": "Jalapeño returns a complete response faster than the comparison systems across GPT-OSS, DeepSeek R1, and Kimi K2.5.",
+    "sourceKey": "openai-jalapeno-end-to-end-latency-2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/",
+    "sourceAttribution": "OpenAI, Jalapeño’s first results, August 25, 2026",
+    "preservedElements": ["GPT-OSS 120B, DeepSeek R1 670B, and Kimi K2.5 1T in the original order", "Jalapeño versus GB200 or GB300 comparison for every model", "Exact end-to-end latency values in seconds", "The lower-is-better latency meaning", "OpenAI source URL and official comparison labels"],
+    "changedElements": ["Recomposed the comparisons as a grouped bar chart for quick model-by-model reading", "Used direct labels with the comparison hardware name and exact two-decimal seconds", "Added a short plain-language English headline and subtitle", "Kept a shared zero-based seconds axis; no inversion or normalization was introduced"],
+    "dataFidelity": "exact",
+    "notes": "All six latency values are copied from OpenAI’s official appendix. Lower bars mean a shorter wait for the complete response."
+  },
+  "allowedTransformations": ["translate-text", "rewrite-title", "adjust-layout", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "Grouped bar layout planned", "status": "pass", "detail": "Three model groups, two bars per group, a shared 0–6.5 second axis, direct labels, and a lower-is-better subtitle were planned before JSON authoring." },
+    { "id": "exact-official-data", "label": "Exact official OpenAI data", "status": "pass", "detail": "1.03 vs 1.80; 1.65 vs 5.99; and 1.56 vs 5.31 seconds match the OpenAI appendix exactly." },
+    { "id": "lower-is-better", "label": "Latency direction is explicit", "status": "pass", "detail": "The subtitle says lower is better, and the zero-based seconds axis makes shorter response time visually clear." },
+    { "id": "bilingual-data-parity", "label": "KO/EN data parity", "status": "pass", "detail": "KO and EN use identical x order, numeric values, series order, series colors, source URL, and comparison hardware." },
+    { "id": "paperlogy-hierarchy", "label": "Paperlogy hierarchy", "status": "pass", "detail": "canvasHeight is 540, the title uses Paperlogy 900, and the subtitle uses Paperlogy 300." },
+    { "id": "render-overflow", "label": "Render overflow", "status": "pending", "detail": "Export and visual preflight are reserved for the parent lane." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 18px 0",
+    "sourcePadding": "0 24px 6px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "gridMode": "solid",
+    "barColorMode": "series",
+    "accentColor": "#173B67",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Jalapeño also finishes the response faster",
+    "subtitle": "End-to-end latency in milliseconds · lower is better",
+    "source": "OpenAI, Jalapeño’s first results, August 25, 2026 · https://openai.com/index/jalapeno-first-results/",
+    "timeRange": "End-to-end latency",
+    "xAxis": { "label": "Model · comparison GPU", "type": "category", "tickValues": ["GPT-OSS 120B · GB200", "DeepSeek R1 670B · GB300", "Kimi K2.5 1T · GB300"], "displayTickValues": ["GPT-OSS 120B · GB200", "DeepSeek R1 670B · GB300", "Kimi K2.5 1T · GB300"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "End-to-end latency", "type": "value", "tickValues": ["0", "1000", "2000", "3000", "4000", "5000", "6000"], "unit": "ms", "min": 0, "max": 6500, "startsAtZero": true, "isLogScale": false },
+    "legend": [
+      { "name": "Jalapeño", "role": "primary", "originalColor": "#16A3A8", "remakeColor": "#16A3A8" },
+      { "name": "Comparison GPU", "role": "secondary", "originalColor": "#98A2B3", "remakeColor": "#98A2B3" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "Jalapeño", "renderAs": "bar", "role": "primary", "color": "#16A3A8", "data": [
+        { "x": "GPT-OSS 120B · GB200", "y": 1030, "displayLabel": "Jalapeño · 1,030 ms", "confidence": 1 },
+        { "x": "DeepSeek R1 670B · GB300", "y": 1650, "displayLabel": "Jalapeño · 1,650 ms", "confidence": 1 },
+        { "x": "Kimi K2.5 1T · GB300", "y": 1560, "displayLabel": "Jalapeño · 1,560 ms", "confidence": 1 }
+      ] },
+      { "name": "Comparison GPU", "renderAs": "bar", "role": "secondary", "color": "#98A2B3", "data": [
+        { "x": "GPT-OSS 120B · GB200", "y": 1800, "displayLabel": "GB200 · 1,800 ms", "confidence": 1 },
+        { "x": "DeepSeek R1 670B · GB300", "y": 5990, "displayLabel": "GB300 · 5,990 ms", "confidence": 1 },
+        { "x": "Kimi K2.5 1T · GB300", "y": 5310, "displayLabel": "GB300 · 5,310 ms", "confidence": 1 }
+      ] }
+    ],
+    "totalDataPoints": 6,
+    "quality": { "overallConfidence": 1, "missingPoints": 0, "hardToReadAreas": ["The grouped bars are intentionally zero-based so shorter latency is not exaggerated."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "sideways", "strength": 0, "description": "This is a cross-model comparison, not a time trend.", "recentDirection": "flat" },
+    "volatility": { "level": "high", "coefficient": 0.88, "description": "Comparison latency ranges from 1.03 to 5.99 seconds." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": { "value": 5990, "at": "DeepSeek GB300" }, "min": { "value": 1030, "at": "GPT-OSS Jalapeño" }, "average": 2890, "median": 1725, "range": 4960 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "Jalapeño also finishes the response faster",
+    "subMessage": "Shorter end-to-end latency across all three models · lower is better",
+    "headline": "Jalapeño also finishes the response faster",
+    "summary": "End-to-end latency is the time from sending a request to receiving the complete response.",
+    "story": "A shorter bar means the response finishes sooner. Jalapeño is faster than the comparison GPU on all three models.",
+    "keyTakeaways": ["GPT-OSS: Jalapeño 1.03s vs GB200 1.80s", "DeepSeek: Jalapeño 1.65s vs GB300 5.99s", "Kimi: Jalapeño 1.56s vs GB300 5.31s"],
+    "questionsRaised": [],
+    "viewerAction": "In each model group, look for the shorter teal bar: shorter means faster.",
+    "contextualNotes": ["Exact data: OpenAI, https://openai.com/index/jalapeno-first-results/", "Lower end-to-end latency is better."]
+  },
+  "emphasis": {
+    "focusPoint": { "position": { "x": "DeepSeek R1 670B", "y": 5990 }, "displayText": "DeepSeek · GB300 5,990ms", "reason": "The largest comparison latency makes the lower-is-better gap easy to understand." },
+    "annotations": [], "highlightZones": [], "trendLines": [],
+    "colorStrategy": { "primary": "#16A3A8", "secondary": ["#98A2B3"], "positive": "#16A3A8", "negative": "#D92D20", "accent": "#173B67", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  }
+}

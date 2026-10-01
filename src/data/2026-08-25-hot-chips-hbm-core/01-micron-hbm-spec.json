@@ -1,0 +1,299 @@
+{
+  "id": "01-micron-hbm-spec",
+  "mode": "faithful",
+  "sourceImage": "input/01-micron-hbm-spec.png",
+  "sourceImages": ["input/01-micron-hbm-spec.png"],
+  "analyzedAt": "2026-08-25T15:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "What is HBM?",
+    "originalMessage": "HBM is the memory powering accelerated computing behind the AI revolution.",
+    "sourceKey": "micron-hbm-spec-page-7",
+    "sourceAttribution": "Micron · What is HBM? · p. 7",
+    "preservedElements": [
+      "Product, HBM1, HBM2, HBM2E, HBM3, HBM3E, HBM4 columns",
+      "All 12 visible row labels in the original order",
+      "Every visible table-cell value, including -, 4/8, 8+, and 24GB+",
+      "The original HBM generation order and units"
+    ],
+    "changedElements": [
+      "Black source slide background changed to a white light-report card",
+      "The surrounding die illustration and explanatory bullets are kept out of the comparison table",
+      "A short Korean explanation is added in the title and subtitle"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The table values and row order are copied character-for-character from the visible Micron table. No value is calculated or rounded."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-a",
+      "label": "A lane layout plan recorded",
+      "status": "pass",
+      "detail": "Use one comparison table with the six HBM generations as columns and all 12 source rows in the original order."
+    },
+    {
+      "id": "source-table-exact",
+      "label": "Visible table values preserved exactly",
+      "status": "pass",
+      "detail": "All source cells, including punctuation and capacity strings, are present without inference."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "Title uses Paperlogy 900 and subtitle uses Paperlogy 300."
+    },
+    {
+      "id": "export-visual-qa",
+      "label": "Export and visual QA",
+      "status": "pending",
+      "detail": "Export/preflight intentionally left to the parent lane."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 12px 0",
+    "sourcePadding": "0 24px 6px",
+    "accentColor": "#173B67",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "HBM 세대별 핵심 사양 비교",
+    "subtitle": "세대가 바뀔수록 채널·속도·용량이 함께 커진다",
+    "source": "Micron · What is HBM? · p. 7"
+  },
+  "tableData": {
+    "columns": [
+      { "key": "product", "label": "항목", "dataType": "text", "width": "30%", "align": "left", "isRowHeader": true },
+      { "key": "hbm1", "label": "HBM1", "dataType": "text", "width": "11.67%", "align": "center" },
+      { "key": "hbm2", "label": "HBM2", "dataType": "text", "width": "11.67%", "align": "center" },
+      { "key": "hbm2e", "label": "HBM2E", "dataType": "text", "width": "11.67%", "align": "center" },
+      { "key": "hbm3", "label": "HBM3", "dataType": "text", "width": "11.67%", "align": "center" },
+      { "key": "hbm3e", "label": "HBM3E", "dataType": "text", "width": "11.67%", "align": "center" },
+      { "key": "hbm4", "label": "HBM4", "dataType": "text", "width": "11.65%", "align": "center" }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "세대 출시", "displayValue": "세대 출시" },
+          "hbm1": { "value": "2014", "displayValue": "2014" },
+          "hbm2": { "value": "2018", "displayValue": "2018" },
+          "hbm2e": { "value": "2020", "displayValue": "2020" },
+          "hbm3": { "value": "2022", "displayValue": "2022" },
+          "hbm3e": { "value": "2024", "displayValue": "2024" },
+          "hbm4": { "value": "2026", "displayValue": "2026" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "채널 수", "displayValue": "채널 수" },
+          "hbm1": { "value": "8", "displayValue": "8" },
+          "hbm2": { "value": "8", "displayValue": "8" },
+          "hbm2e": { "value": "8", "displayValue": "8" },
+          "hbm3": { "value": "16", "displayValue": "16" },
+          "hbm3e": { "value": "16", "displayValue": "16" },
+          "hbm4": { "value": "32", "displayValue": "32" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "의사 채널 수(PC)", "displayValue": "의사 채널 수(PC)" },
+          "hbm1": { "value": "-", "displayValue": "-" },
+          "hbm2": { "value": "16", "displayValue": "16" },
+          "hbm2e": { "value": "16", "displayValue": "16" },
+          "hbm3": { "value": "32", "displayValue": "32" },
+          "hbm3e": { "value": "32", "displayValue": "32" },
+          "hbm4": { "value": "64", "displayValue": "64" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "PC 폭", "displayValue": "PC 폭" },
+          "hbm1": { "value": "128", "displayValue": "128" },
+          "hbm2": { "value": "64", "displayValue": "64" },
+          "hbm2e": { "value": "64", "displayValue": "64" },
+          "hbm3": { "value": "32", "displayValue": "32" },
+          "hbm3e": { "value": "32", "displayValue": "32" },
+          "hbm4": { "value": "32", "displayValue": "32" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "버스트 길이", "displayValue": "버스트 길이" },
+          "hbm1": { "value": "2", "displayValue": "2" },
+          "hbm2": { "value": "4", "displayValue": "4" },
+          "hbm2e": { "value": "4", "displayValue": "4" },
+          "hbm3": { "value": "8", "displayValue": "8" },
+          "hbm3e": { "value": "8", "displayValue": "8" },
+          "hbm4": { "value": "8", "displayValue": "8" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "프리페치", "displayValue": "프리페치" },
+          "hbm1": { "value": "256", "displayValue": "256" },
+          "hbm2": { "value": "256", "displayValue": "256" },
+          "hbm2e": { "value": "256", "displayValue": "256" },
+          "hbm3": { "value": "256", "displayValue": "256" },
+          "hbm3e": { "value": "256", "displayValue": "256" },
+          "hbm4": { "value": "256", "displayValue": "256" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "데이터 I/O 수", "displayValue": "데이터 I/O 수" },
+          "hbm1": { "value": "1024", "displayValue": "1024" },
+          "hbm2": { "value": "1024", "displayValue": "1024" },
+          "hbm2e": { "value": "1024", "displayValue": "1024" },
+          "hbm3": { "value": "1024", "displayValue": "1024" },
+          "hbm3e": { "value": "1024", "displayValue": "1024" },
+          "hbm4": { "value": "2048", "displayValue": "2048" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "공칭 데이터 속도", "displayValue": "공칭 데이터 속도" },
+          "hbm1": { "value": "1", "displayValue": "1" },
+          "hbm2": { "value": "2.4", "displayValue": "2.4" },
+          "hbm2e": { "value": "3.6", "displayValue": "3.6" },
+          "hbm3": { "value": "6.4", "displayValue": "6.4" },
+          "hbm3e": { "value": "8", "displayValue": "8" },
+          "hbm4": { "value": "11", "displayValue": "11" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "공칭 대역폭", "displayValue": "공칭 대역폭" },
+          "hbm1": { "value": "128", "displayValue": "128" },
+          "hbm2": { "value": "307", "displayValue": "307" },
+          "hbm2e": { "value": "460", "displayValue": "460" },
+          "hbm3": { "value": "819", "displayValue": "819" },
+          "hbm3e": { "value": "1024", "displayValue": "1024" },
+          "hbm4": { "value": "2800", "displayValue": "2800" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "DRAM 밀도", "displayValue": "DRAM 밀도" },
+          "hbm1": { "value": "2", "displayValue": "2" },
+          "hbm2": { "value": "8", "displayValue": "8" },
+          "hbm2e": { "value": "16", "displayValue": "16" },
+          "hbm3": { "value": "16", "displayValue": "16" },
+          "hbm3e": { "value": "24", "displayValue": "24" },
+          "hbm4": { "value": "24", "displayValue": "24" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "DRAM 적층 높이", "displayValue": "DRAM 적층 높이" },
+          "hbm1": { "value": "4", "displayValue": "4" },
+          "hbm2": { "value": "4/8", "displayValue": "4/8" },
+          "hbm2e": { "value": "4/8", "displayValue": "4/8" },
+          "hbm3": { "value": "8/12", "displayValue": "8/12" },
+          "hbm3e": { "value": "8+", "displayValue": "8+" },
+          "hbm4": { "value": "8+", "displayValue": "8+" }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "product": { "value": "큐브 용량", "displayValue": "큐브 용량" },
+          "hbm1": { "value": "1GB", "displayValue": "1GB" },
+          "hbm2": { "value": "4/8GB", "displayValue": "4/8GB" },
+          "hbm2e": { "value": "8/16GB", "displayValue": "8/16GB" },
+          "hbm3": { "value": "16/24GB", "displayValue": "16/24GB" },
+          "hbm3e": { "value": "24GB+", "displayValue": "24GB+" },
+          "hbm4": { "value": "24GB+", "displayValue": "24GB+" }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 24,
+      "maxRowHeight": 34,
+      "rowHeight": 26,
+      "cellPadding": "3px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "zebraOpacity": 0.06,
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": true,
+      "accentColor": "#173B67",
+      "rowRuleColor": "#D7DEE5",
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": { "body": 500, "rowHeader": 700, "header": 900 },
+      "fontSize": { "header": "12px", "body": "13px", "total": "13px", "unit": "10px" }
+    }
+  },
+  "narrative": {
+    "headMessage": "HBM 세대별 핵심 사양 비교",
+    "subMessage": "세대가 바뀔수록 채널·속도·용량이 함께 커진다",
+    "headline": "HBM 세대별 핵심 사양 비교",
+    "summary": "HBM1부터 HBM4까지의 표에 보이는 모든 셀과 행을 원문 순서로 옮겼습니다.",
+    "story": "어려운 반도체 용어가 많아도 먼저 열을 세대라고 읽으면 됩니다. 오른쪽으로 갈수록 더 최신 HBM이며, 채널 수·데이터 속도·용량이 어떻게 커지는지 한 표에서 비교할 수 있습니다.",
+    "keyTakeaways": [
+      "HBM4는 Data I/O’s가 2048로 늘어난다.",
+      "Nominal Bandwidth는 HBM1의 128GB/s에서 HBM4의 2800GB/s로 커진다.",
+      "표에 없는 수치는 계산해 넣지 않고 원본의 -, 4/8, 8+, 24GB+를 그대로 둔다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "먼저 같은 행을 왼쪽에서 오른쪽으로 읽어 세대별 변화만 비교한다.",
+    "contextualNotes": ["Micron · What is HBM? · p. 7"]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": { "x": "hbm4", "y": 2800 },
+      "displayText": "HBM4 · 2800 GB/s",
+      "reason": "가장 최신 열의 채널·I/O·대역폭 증가를 한눈에 보이게 한다."
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B67",
+      "secondary": ["#D7DEE5", "#EAF0F6"],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "detailed"
+  }
+}

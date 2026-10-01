@@ -1,0 +1,327 @@
+{
+  "id": "05-sk-16hi",
+  "sourceImage": "input/17-sk-16hi.png",
+  "analyzedAt": "2026-08-25T15:15:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "ADVANCED MR-MUF FOR 16HI",
+    "originalMessage": "HBM3E 16Hi(@48GB/Cube) and the 12Hi → 16Hi package KPI changes",
+    "sourceKey": "@wltechrsrch/hot-chips-hbm-16hi",
+    "preservedElements": [
+      "HBM3E 16Hi(@48GB/Cube) successfully developed by advanced MR-MUF technology",
+      "Key Technology: Warpage control, Fine Pitch Int’n & Narrow Gap-fill",
+      "8Hi HBM2E~, 12Hi HBM3~, 16Hi HBM4~, >16Hi stack labels",
+      "12Hi → 16Hi total package height 720→775µm",
+      "Chip thickness 1.0x→0.9x",
+      "Gap height 1.0x→0.5x",
+      "Bump pitch 1.0x→0.9x",
+      "Challenges: Die Warpage and Gap-Fill Quality"
+    ],
+    "changedElements": [
+      "Recomposed the source KPI table as a readable editable table",
+      "Retained the package-stack labels and Key Technology explanation in narrative metadata",
+      "Kept the original English terms while adding a clearer Korean counterpart in the paired file",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The four KPI rows retain the source arrows, units, and ratios exactly. The 8Hi/12Hi/16Hi/>16Hi stack labels and the 12Hi/16Hi package-height callouts are also preserved.",
+    "sourceAttribution": "SK hynix source slide; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Built the slide around four exact KPI rows and a Challenge column."
+    },
+    {
+      "id": "exact-kpi-values",
+      "label": "Exact 12Hi→16Hi KPIs",
+      "status": "pass",
+      "detail": "Checked 720→775µm, 1.0x→0.9x, 1.0x→0.5x, and 1.0x→0.9x against the source table."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data, order, and color parity",
+      "status": "pass",
+      "detail": "KO/EN files use the same KPI values, row order, highlight colors, and sourceKey."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "structure": {
+    "title": "Advanced MR-MUF for 16Hi",
+    "subtitle": "HBM3E 16Hi and the 12Hi→16Hi package KPIs",
+    "source": "SK hynix · Advanced MR-MUF for 16Hi"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 24px 0",
+    "contentPadding": "0 14px 0",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "Item",
+        "dataType": "text",
+        "width": "38%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "change",
+        "label": "12Hi→16Hi",
+        "dataType": "number",
+        "width": "34%",
+        "align": "center"
+      },
+      {
+        "key": "challenge",
+        "label": "Challenge",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Total PKG Height (µm)",
+            "displayValue": "Total PKG Height (µm)"
+          },
+          "change": {
+            "value": "720→775µm",
+            "displayValue": "720→775µm",
+            "highlight": "accent"
+          },
+          "challenge": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Chip Thickness (µm)",
+            "displayValue": "Chip Thickness (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.9x",
+            "displayValue": "1.0x→0.9x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "Die Warpage",
+            "displayValue": "Die Warpage",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Gap-Height (µm)",
+            "displayValue": "Gap-Height (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.5x",
+            "displayValue": "1.0x→0.5x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "Gap-Fill Quality",
+            "displayValue": "Gap-Fill Quality",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Bump Pitch (µm)",
+            "displayValue": "Bump Pitch (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.9x",
+            "displayValue": "1.0x→0.9x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+    "rowHeight": 76,
+    "fitRowsToCanvas": false,
+    "minRowHeight": 76,
+    "maxRowHeight": 76,
+    "cellPadding": "8px 10px",
+    "lineHeight": 1.08,
+    "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+      "body": 550,
+      "numeric": 800,
+      "rowHeader": 750,
+      "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "17px",
+        "total": "17px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Advanced MR-MUF for 16Hi",
+    "subMessage": "HBM3E 16Hi(@48GB/Cube) and the key 12Hi→16Hi package changes",
+    "headline": "Advanced MR-MUF for 16Hi",
+    "summary": "For 16-layer stacking, package height rises from 720µm to 775µm while the chip, gap, and bump dimensions become thinner or tighter.",
+    "story": "The source states that HBM3E 16Hi(@48GB/Cube) was successfully developed with advanced MR-MUF. The four KPI rows show how package height and detailed dimensions change from 12Hi to 16Hi.",
+    "keyTakeaways": [
+      "Total package height: 720→775µm",
+      "Chip thickness: 1.0x→0.9x",
+      "Gap height: 1.0x→0.5x",
+      "Bump pitch: 1.0x→0.9x"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Follow the arrows in the table to see what grows and what becomes thinner or tighter.",
+    "contextualNotes": [
+      "Key Technology: Warpage control, Fine Pitch Int’n & Narrow Gap-fill",
+      "Stack labels: 8Hi HBM2E~, 12Hi HBM3~, 16Hi HBM4~, >16Hi",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This is a package KPI comparison, not a time series.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "No time-series volatility is implied by the source table."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "12Hi→16Hi",
+        "y": 0
+      },
+      "reason": "The table preserves all four exact KPI transitions and their named challenges.",
+      "displayText": "720→775µm · 1.0x→0.5x"
+    },
+    "densityLevel": "detailed"
+  }
+}

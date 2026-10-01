@@ -1,0 +1,326 @@
+{
+  "id": "01-partner-roles",
+  "sourceImage": "output/2026-08-26-openai-jalapeno-inference-chip/source/source_notion_enhanced.md",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "OpenAI–Broadcom Jalapeño inference chip program",
+    "originalMessage": "OpenAI, Broadcom, Celestica, and deployment partners have distinct roles",
+    "sourceKey": "openai-jalapeno-official-partner-roles",
+    "officialSourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ],
+    "preservedElements": [
+      "OpenAI: chip, model, and software design",
+      "Broadcom: silicon implementation and networking",
+      "Celestica: board, rack, and system integration",
+      "Microsoft/other partners: initial data-center deployment",
+      "Original partner-role order",
+      "No contract value added"
+    ],
+    "changedElements": [
+      "Recomposed the partner roles as a four-row table",
+      "Shortened the title and subtitle for first-pass readability",
+      "Applied Paperlogy title 900, subtitle 300, and a light palette",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Only roles supported by official OpenAI pages are shown. No contract value or undisclosed condition was added.",
+    "sourceAttribution": "OpenAI official pages"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Placed the four partners in company-and-role rows for a single-pass comparison."
+    },
+    {
+      "id": "official-source-only",
+      "label": "Official sources only",
+      "status": "pass",
+      "detail": "Recorded only two official OpenAI URLs in preserveIntent."
+    },
+    {
+      "id": "no-invented-contract-value",
+      "label": "No invented contract value",
+      "status": "pass",
+      "detail": "No contract value or scale was added."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data and order parity",
+      "status": "pass",
+      "detail": "KO/EN files keep the same four rows, roles, and order."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Jalapeño partner roles",
+    "subtitle": "OpenAI designs it; partners build and deploy it",
+    "source": "OpenAI · Official announcements",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "partner",
+        "label": "Partner",
+        "dataType": "text",
+        "width": "30%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "role",
+        "label": "Role",
+        "dataType": "text",
+        "width": "70%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "OpenAI",
+            "displayValue": "OpenAI"
+          },
+          "role": {
+            "value": "Chip, model, and software design",
+            "displayValue": "Chip, model, and software design",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Broadcom",
+            "displayValue": "Broadcom"
+          },
+          "role": {
+            "value": "Silicon implementation and networking",
+            "displayValue": "Silicon implementation and networking",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Celestica",
+            "displayValue": "Celestica"
+          },
+          "role": {
+            "value": "Board, rack, and system integration",
+            "displayValue": "Board, rack, and system integration",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Microsoft / other partners",
+            "displayValue": "Microsoft / other partners"
+          },
+          "role": {
+            "value": "Initial data-center deployment",
+            "displayValue": "Initial data-center deployment",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 68,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 82,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "14px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Jalapeño partner roles",
+    "subMessage": "OpenAI designs it; partners build and deploy it",
+    "headline": "Jalapeño is split across design, implementation, system integration, and initial deployment rather than being built by one company alone.",
+    "summary": "The four partner roles are shown as company-and-role rows.",
+    "story": "OpenAI designs the chip, model, and software. Broadcom handles silicon implementation and networking. Celestica handles board, rack, and system integration. Microsoft and other partners handle initial data-center deployment.",
+    "keyTakeaways": [
+      "OpenAI: chip, model, and software design",
+      "Broadcom: silicon implementation and networking",
+      "Celestica: board, rack, and system integration",
+      "Microsoft/other partners: initial data-center deployment"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read each company and role from top to bottom.",
+    "contextualNotes": [
+      "Source: official OpenAI announcements",
+      "Output watermark: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This partner-role comparison table has no time-series trend.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "This is a role comparison table, not a quantitative time series."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "OpenAI",
+        "y": 0
+      },
+      "displayText": "Built through distinct roles",
+      "reason": "The partners have distinct roles from design through initial deployment."
+    },
+    "densityLevel": "sparse"
+  }
+}

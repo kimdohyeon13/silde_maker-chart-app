@@ -1,0 +1,502 @@
+{
+  "id": "dib264-23",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-23.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "IonQ, Rocket Lab, Symbotic Hold Firm",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 30, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "IonQ, Rocket Lab, Symbotic Hold Firm",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 30, 2026 close",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "IonQ",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Rocket Lab",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "Symbotic",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "IonQ",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.629435
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.282164
+          },
+          {
+            "x": "2026-09-04",
+            "y": 104.605616
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.120176
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.952887
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.511915
+          },
+          {
+            "x": "2026-09-11",
+            "y": 97.273693
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.25887
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.067762
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.511915
+          },
+          {
+            "x": "2026-09-17",
+            "y": 106.776076
+          },
+          {
+            "x": "2026-09-18",
+            "y": 103.573325
+          },
+          {
+            "x": "2026-09-21",
+            "y": 107.226045
+          },
+          {
+            "x": "2026-09-22",
+            "y": 107.834841
+          },
+          {
+            "x": "2026-09-23",
+            "y": 112.599265
+          },
+          {
+            "x": "2026-09-24",
+            "y": 119.057705
+          },
+          {
+            "x": "2026-09-25",
+            "y": 120.381157
+          },
+          {
+            "x": "2026-09-28",
+            "y": 117.99895
+          },
+          {
+            "x": "2026-09-29",
+            "y": 116.225519
+          },
+          {
+            "x": "2026-09-30",
+            "y": 116.093175
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-0.11%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Rocket Lab",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.895423
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.030701
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.750242
+          },
+          {
+            "x": "2026-09-08",
+            "y": 105.324595
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.847456
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.072591
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.65558
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.015987
+          },
+          {
+            "x": "2026-09-15",
+            "y": 101.614964
+          },
+          {
+            "x": "2026-09-16",
+            "y": 101.854813
+          },
+          {
+            "x": "2026-09-17",
+            "y": 108.442595
+          },
+          {
+            "x": "2026-09-18",
+            "y": 103.245921
+          },
+          {
+            "x": "2026-09-21",
+            "y": 111.752476
+          },
+          {
+            "x": "2026-09-22",
+            "y": 115.094343
+          },
+          {
+            "x": "2026-09-23",
+            "y": 112.424043
+          },
+          {
+            "x": "2026-09-24",
+            "y": 117.700671
+          },
+          {
+            "x": "2026-09-25",
+            "y": 118.244317
+          },
+          {
+            "x": "2026-09-28",
+            "y": 115.430127
+          },
+          {
+            "x": "2026-09-29",
+            "y": 111.448666
+          },
+          {
+            "x": "2026-09-30",
+            "y": 111.416692
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-0.03%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Symbotic",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 104.317105
+          },
+          {
+            "x": "2026-09-03",
+            "y": 108.84353
+          },
+          {
+            "x": "2026-09-04",
+            "y": 112.349548
+          },
+          {
+            "x": "2026-09-08",
+            "y": 113.291465
+          },
+          {
+            "x": "2026-09-09",
+            "y": 111.512291
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.535314
+          },
+          {
+            "x": "2026-09-11",
+            "y": 110.230245
+          },
+          {
+            "x": "2026-09-14",
+            "y": 108.84353
+          },
+          {
+            "x": "2026-09-15",
+            "y": 111.90476
+          },
+          {
+            "x": "2026-09-16",
+            "y": 112.794347
+          },
+          {
+            "x": "2026-09-17",
+            "y": 116.718993
+          },
+          {
+            "x": "2026-09-18",
+            "y": 109.602297
+          },
+          {
+            "x": "2026-09-21",
+            "y": 115.018309
+          },
+          {
+            "x": "2026-09-22",
+            "y": 117.922549
+          },
+          {
+            "x": "2026-09-23",
+            "y": 114.311871
+          },
+          {
+            "x": "2026-09-24",
+            "y": 115.227628
+          },
+          {
+            "x": "2026-09-25",
+            "y": 113.736263
+          },
+          {
+            "x": "2026-09-28",
+            "y": 109.890106
+          },
+          {
+            "x": "2026-09-29",
+            "y": 108.608051
+          },
+          {
+            "x": "2026-09-30",
+            "y": 110.073257
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "+1.35%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 63,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 120.381157,
+        "series": "all"
+      },
+      "min": {
+        "value": 97.273693,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "IonQ, Rocket Lab, Symbotic Hold Firm",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 116.093175
+      },
+      "displayText": "116.09",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

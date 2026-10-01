@@ -1,0 +1,483 @@
+{
+  "id": "dib261-07",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-07.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Yen Firms After Bessent-Katayama Talks",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original series, 2026-06-25 start (same first bar as the origin), 2026-09-25 focus date, and raw-value line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "chart number prefix dropped from the title",
+      "last point and today move use the 17:00 ET values (157.258 vs 158.832) as in the origin"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 25, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-sign-color",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 24일과 25일 값으로 계산했고 상승 빨강, 하락 파랑으로 칠했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@WorldTechRsrch",
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Yen Firms After Bessent-Katayama Talks",
+    "subtitle": "Sep 25 NY close: 157.26 yen per dollar, down 0.99% as the yen firmed",
+    "source": "Source: Yahoo Finance · through the September 25, 2026 close",
+    "timeRange": "2026-06-25 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-25",
+        "2026-07-14",
+        "2026-07-31",
+        "2026-08-20",
+        "2026-09-08",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "06-25",
+        "07-14",
+        "07-31",
+        "08-20",
+        "09-08",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "JPY",
+      "type": "value",
+      "tickValues": [
+        "150",
+        "160",
+        "170"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 150,
+      "max": 170
+    },
+    "legend": [
+      {
+        "name": "USD/JPY",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "USD/JPY",
+        "data": [
+          {
+            "x": "2026-06-25",
+            "y": 161.763
+          },
+          {
+            "x": "2026-06-26",
+            "y": 161.805
+          },
+          {
+            "x": "2026-06-29",
+            "y": 161.787
+          },
+          {
+            "x": "2026-06-30",
+            "y": 161.923
+          },
+          {
+            "x": "2026-07-01",
+            "y": 162.628
+          },
+          {
+            "x": "2026-07-02",
+            "y": 162.539
+          },
+          {
+            "x": "2026-07-03",
+            "y": 161.449
+          },
+          {
+            "x": "2026-07-06",
+            "y": 161.452
+          },
+          {
+            "x": "2026-07-07",
+            "y": 162.088
+          },
+          {
+            "x": "2026-07-08",
+            "y": 162.363
+          },
+          {
+            "x": "2026-07-09",
+            "y": 162.539
+          },
+          {
+            "x": "2026-07-10",
+            "y": 162.363
+          },
+          {
+            "x": "2026-07-13",
+            "y": 161.878
+          },
+          {
+            "x": "2026-07-14",
+            "y": 162.429
+          },
+          {
+            "x": "2026-07-15",
+            "y": 162.187
+          },
+          {
+            "x": "2026-07-16",
+            "y": 162.072
+          },
+          {
+            "x": "2026-07-17",
+            "y": 162.376
+          },
+          {
+            "x": "2026-07-20",
+            "y": 162.512
+          },
+          {
+            "x": "2026-07-21",
+            "y": 162.487
+          },
+          {
+            "x": "2026-07-22",
+            "y": 163.186
+          },
+          {
+            "x": "2026-07-23",
+            "y": 163.081
+          },
+          {
+            "x": "2026-07-24",
+            "y": 163.832
+          },
+          {
+            "x": "2026-07-27",
+            "y": 163.611
+          },
+          {
+            "x": "2026-07-28",
+            "y": 163.771
+          },
+          {
+            "x": "2026-07-29",
+            "y": 163.864
+          },
+          {
+            "x": "2026-07-30",
+            "y": 163.3
+          },
+          {
+            "x": "2026-07-31",
+            "y": 160.183
+          },
+          {
+            "x": "2026-08-03",
+            "y": 157.582
+          },
+          {
+            "x": "2026-08-04",
+            "y": 157.529
+          },
+          {
+            "x": "2026-08-05",
+            "y": 157.692
+          },
+          {
+            "x": "2026-08-06",
+            "y": 157.6
+          },
+          {
+            "x": "2026-08-07",
+            "y": 158.409
+          },
+          {
+            "x": "2026-08-10",
+            "y": 157.891
+          },
+          {
+            "x": "2026-08-11",
+            "y": 159.156
+          },
+          {
+            "x": "2026-08-12",
+            "y": 159.265
+          },
+          {
+            "x": "2026-08-13",
+            "y": 159.328
+          },
+          {
+            "x": "2026-08-14",
+            "y": 159.426
+          },
+          {
+            "x": "2026-08-17",
+            "y": 159.223
+          },
+          {
+            "x": "2026-08-18",
+            "y": 159.34
+          },
+          {
+            "x": "2026-08-19",
+            "y": 159.55
+          },
+          {
+            "x": "2026-08-20",
+            "y": 158.276
+          },
+          {
+            "x": "2026-08-21",
+            "y": 158.883
+          },
+          {
+            "x": "2026-08-24",
+            "y": 158.904
+          },
+          {
+            "x": "2026-08-25",
+            "y": 159.139
+          },
+          {
+            "x": "2026-08-26",
+            "y": 159.223
+          },
+          {
+            "x": "2026-08-27",
+            "y": 159.255
+          },
+          {
+            "x": "2026-08-28",
+            "y": 159.321
+          },
+          {
+            "x": "2026-08-31",
+            "y": 160.122
+          },
+          {
+            "x": "2026-09-01",
+            "y": 159.747
+          },
+          {
+            "x": "2026-09-02",
+            "y": 160.196
+          },
+          {
+            "x": "2026-09-03",
+            "y": 158.923
+          },
+          {
+            "x": "2026-09-04",
+            "y": 155.66
+          },
+          {
+            "x": "2026-09-07",
+            "y": 156.197
+          },
+          {
+            "x": "2026-09-08",
+            "y": 153.855
+          },
+          {
+            "x": "2026-09-09",
+            "y": 153.478
+          },
+          {
+            "x": "2026-09-10",
+            "y": 153.573
+          },
+          {
+            "x": "2026-09-11",
+            "y": 154.482
+          },
+          {
+            "x": "2026-09-14",
+            "y": 153.424
+          },
+          {
+            "x": "2026-09-15",
+            "y": 154.385
+          },
+          {
+            "x": "2026-09-16",
+            "y": 155.266
+          },
+          {
+            "x": "2026-09-17",
+            "y": 156.014
+          },
+          {
+            "x": "2026-09-18",
+            "y": 156.129
+          },
+          {
+            "x": "2026-09-21",
+            "y": 157.046
+          },
+          {
+            "x": "2026-09-22",
+            "y": 157.369
+          },
+          {
+            "x": "2026-09-23",
+            "y": 157.464
+          },
+          {
+            "x": "2026-09-24",
+            "y": 158.265
+          },
+          {
+            "x": "2026-09-25",
+            "y": 157.258
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-0.99%",
+          "color": "#175CD3",
+          "layout": "two-column",
+          "label": "TODAY"
+        }
+      }
+    ],
+    "totalDataPoints": 67,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 25 NY close: 157.26 yen per dollar, down 0.99% as the yen firmed",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 163.864,
+        "series": "all"
+      },
+      "min": {
+        "value": 153.424,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Yen Firms After Bessent-Katayama Talks",
+    "subMessage": "Sep 25 NY close: 157.26 yen per dollar, down 0.99% as the yen firmed"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 157.258
+      },
+      "displayText": "157.26",
+      "reason": "Sep 25 NY close: 157.26 yen per dollar, down 0.99% as the yen firmed"
+    },
+    "densityLevel": "focused"
+  }
+}

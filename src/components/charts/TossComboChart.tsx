@@ -24,6 +24,7 @@ import {
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
+import { resolveYAxisWidth } from "@/lib/axis-label-layout";
 import {
   formatAxisLabel,
   formatAxisTickLabel,
@@ -162,6 +163,48 @@ export default function TossComboChart({
     }
     return [axis.min ?? "auto", axis.max ?? "auto"];
   }
+  /** 좌축 눈금 문자열 — 축 폭 계산과 실제 라벨이 같은 함수를 쓰게 한다. */
+  function formatLeftYAxisTick(value: number | string): string {
+    return formatValueWithUnit(
+      Number(value),
+      // 눈금에는 짧은 단위만(인덱스 기준표현 '2020=100' 등은 축 라벨에만): A1
+      getTickUnit(analysis.structure.yAxis.unit || "", analysis.structure.yAxis.label || ""),
+      getAxisFractionDigits(
+        analysis.structure.yAxis.min,
+        analysis.structure.yAxis.max,
+        analysis.structure.yAxis.tickValues,
+      ),
+    );
+  }
+
+  /** 우축 눈금 문자열 — 이중축일 때만 쓴다. */
+  function formatRightYAxisTick(value: number | string): string {
+    const secondary = analysis.structure.secondaryYAxis;
+    if (!secondary) return String(value);
+    return formatValueWithUnit(
+      Number(value),
+      // 우축 눈금 단위도 짧은 단위만 통과(A1)
+      getTickUnit(secondary.unit || "", secondary.label || ""),
+      getAxisFractionDigits(secondary.min, secondary.max, secondary.tickValues),
+    );
+  }
+
+  const axisTickFontSize =
+    typeof styles.yAxis.tick === "object" && styles.yAxis.tick
+      ? Number((styles.yAxis.tick as { fontSize?: number }).fontSize) ||
+        Number.parseInt(theme.typography.fontSize.axisLabel, 10)
+      : Number.parseInt(theme.typography.fontSize.axisLabel, 10);
+  const resolvedYAxisWidth = resolveYAxisWidth(
+    (leftAxisTicks ?? []).map(formatLeftYAxisTick),
+    axisTickFontSize,
+    chartSettings.yAxis.width,
+  );
+  const resolvedSecondaryYAxisWidth = resolveYAxisWidth(
+    (rightAxisTicks ?? []).map(formatRightYAxisTick),
+    axisTickFontSize,
+    chartSettings.yAxis.rightWidth,
+  );
+
   const leftAxisDomain = computeAxisDomain(analysis.structure.yAxis, leftAxisTicks);
   const rightAxisDomain = hasSecondaryYAxis
     ? computeAxisDomain(analysis.structure.secondaryYAxis!, rightAxisTicks)
@@ -527,23 +570,9 @@ export default function TossComboChart({
 
         <YAxis
           yAxisId="left"
-          width={chartSettings.yAxis.width}
+          width={resolvedYAxisWidth}
           {...styles.yAxis}
-          tickFormatter={(value) =>
-            formatValueWithUnit(
-              Number(value),
-              // 눈금에는 짧은 단위만(인덱스 기준표현 '2020=100' 등은 축 라벨에만): A1
-              getTickUnit(
-                analysis.structure.yAxis.unit || "",
-                analysis.structure.yAxis.label || "",
-              ),
-              getAxisFractionDigits(
-                analysis.structure.yAxis.min,
-                analysis.structure.yAxis.max,
-                analysis.structure.yAxis.tickValues,
-              ),
-            )
-          }
+          tickFormatter={formatLeftYAxisTick}
           label={{
             value: formatAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
             position: "insideTopLeft",
@@ -566,17 +595,9 @@ export default function TossComboChart({
           <YAxis
             yAxisId="right"
             orientation="right"
-            width={chartSettings.yAxis.rightWidth}
+            width={resolvedSecondaryYAxisWidth}
             {...styles.yAxis}
-            tickFormatter={(value) => {
-              const secondary = analysis.structure.secondaryYAxis!;
-              return formatValueWithUnit(
-                Number(value),
-                // 우축 눈금 단위도 짧은 단위만 통과(A1)
-                getTickUnit(secondary.unit || "", secondary.label || ""),
-                getAxisFractionDigits(secondary.min, secondary.max, secondary.tickValues),
-              );
-            }}
+            tickFormatter={formatRightYAxisTick}
             // 수정1(D2): 우축도 nice-tick이 있으면 그 [min,max]를 도메인으로 사용(클리핑 방지).
             domain={rightAxisDomain}
             // D2: 우축도 nice-round 균등 눈금 우선, 없으면 자동 눈금

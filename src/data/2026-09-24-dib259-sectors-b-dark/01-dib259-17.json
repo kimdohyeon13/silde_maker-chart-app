@@ -1,0 +1,472 @@
+{
+  "id": "dib259-17",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-259-17.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "팔란티어, FAA 기대에 상승",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form",
+      "raw share price (not indexed)"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 23일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-two-column",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "팔란티어, FAA 기대에 상승",
+    "subtitle": "9월 23일 종가 $191.79 · +3.68%",
+    "source": "자료: Yahoo Finance · 2026년 9월 23일 종가까지",
+    "timeRange": "2026-06-24 to 2026-09-23",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-24",
+        "2026-07-14",
+        "2026-07-30",
+        "2026-08-18",
+        "2026-09-03",
+        "2026-09-23"
+      ],
+      "displayTickValues": [
+        "06-24",
+        "07-14",
+        "07-30",
+        "08-18",
+        "09-03",
+        "09-23"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "주가",
+      "type": "value",
+      "tickValues": [
+        "100",
+        "120",
+        "140",
+        "160",
+        "180",
+        "200"
+      ],
+      "unit": "$",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 100,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "팔란티어",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "팔란티어",
+        "data": [
+          {
+            "x": "2026-06-24",
+            "y": 113.5
+          },
+          {
+            "x": "2026-06-25",
+            "y": 107.27
+          },
+          {
+            "x": "2026-06-26",
+            "y": 112.93
+          },
+          {
+            "x": "2026-06-29",
+            "y": 115.7
+          },
+          {
+            "x": "2026-06-30",
+            "y": 116.67
+          },
+          {
+            "x": "2026-07-01",
+            "y": 125.73
+          },
+          {
+            "x": "2026-07-02",
+            "y": 129.3
+          },
+          {
+            "x": "2026-07-06",
+            "y": 132.54
+          },
+          {
+            "x": "2026-07-07",
+            "y": 134.37
+          },
+          {
+            "x": "2026-07-08",
+            "y": 132.22
+          },
+          {
+            "x": "2026-07-09",
+            "y": 129.04
+          },
+          {
+            "x": "2026-07-10",
+            "y": 126.79
+          },
+          {
+            "x": "2026-07-13",
+            "y": 130.04
+          },
+          {
+            "x": "2026-07-14",
+            "y": 133.72
+          },
+          {
+            "x": "2026-07-15",
+            "y": 133.76
+          },
+          {
+            "x": "2026-07-16",
+            "y": 134.44
+          },
+          {
+            "x": "2026-07-17",
+            "y": 132.38
+          },
+          {
+            "x": "2026-07-20",
+            "y": 134.85
+          },
+          {
+            "x": "2026-07-21",
+            "y": 132.66
+          },
+          {
+            "x": "2026-07-22",
+            "y": 124.57
+          },
+          {
+            "x": "2026-07-23",
+            "y": 123.37
+          },
+          {
+            "x": "2026-07-24",
+            "y": 122.92
+          },
+          {
+            "x": "2026-07-27",
+            "y": 131.53
+          },
+          {
+            "x": "2026-07-28",
+            "y": 123.53
+          },
+          {
+            "x": "2026-07-29",
+            "y": 123
+          },
+          {
+            "x": "2026-07-30",
+            "y": 122.26
+          },
+          {
+            "x": "2026-07-31",
+            "y": 123.06
+          },
+          {
+            "x": "2026-08-03",
+            "y": 125.65
+          },
+          {
+            "x": "2026-08-04",
+            "y": 162.66
+          },
+          {
+            "x": "2026-08-05",
+            "y": 158.43
+          },
+          {
+            "x": "2026-08-06",
+            "y": 155.92
+          },
+          {
+            "x": "2026-08-07",
+            "y": 172.01
+          },
+          {
+            "x": "2026-08-10",
+            "y": 175.23
+          },
+          {
+            "x": "2026-08-11",
+            "y": 174.94
+          },
+          {
+            "x": "2026-08-12",
+            "y": 171.04
+          },
+          {
+            "x": "2026-08-13",
+            "y": 179.01
+          },
+          {
+            "x": "2026-08-14",
+            "y": 174.04
+          },
+          {
+            "x": "2026-08-17",
+            "y": 172.55
+          },
+          {
+            "x": "2026-08-18",
+            "y": 171.54
+          },
+          {
+            "x": "2026-08-19",
+            "y": 175.19
+          },
+          {
+            "x": "2026-08-20",
+            "y": 173.96
+          },
+          {
+            "x": "2026-08-21",
+            "y": 179.94
+          },
+          {
+            "x": "2026-08-24",
+            "y": 175.89
+          },
+          {
+            "x": "2026-08-25",
+            "y": 172.73
+          },
+          {
+            "x": "2026-08-26",
+            "y": 177.5
+          },
+          {
+            "x": "2026-08-27",
+            "y": 185.93
+          },
+          {
+            "x": "2026-08-28",
+            "y": 186.29
+          },
+          {
+            "x": "2026-08-31",
+            "y": 186.38
+          },
+          {
+            "x": "2026-09-01",
+            "y": 179.92
+          },
+          {
+            "x": "2026-09-02",
+            "y": 169.46
+          },
+          {
+            "x": "2026-09-03",
+            "y": 182.53
+          },
+          {
+            "x": "2026-09-04",
+            "y": 174.33
+          },
+          {
+            "x": "2026-09-08",
+            "y": 170.3
+          },
+          {
+            "x": "2026-09-09",
+            "y": 169.53
+          },
+          {
+            "x": "2026-09-10",
+            "y": 165.86
+          },
+          {
+            "x": "2026-09-11",
+            "y": 167.23
+          },
+          {
+            "x": "2026-09-14",
+            "y": 173.31
+          },
+          {
+            "x": "2026-09-15",
+            "y": 172.56
+          },
+          {
+            "x": "2026-09-16",
+            "y": 174.34
+          },
+          {
+            "x": "2026-09-17",
+            "y": 176.24
+          },
+          {
+            "x": "2026-09-18",
+            "y": 177.64
+          },
+          {
+            "x": "2026-09-21",
+            "y": 183.09
+          },
+          {
+            "x": "2026-09-22",
+            "y": 184.99
+          },
+          {
+            "x": "2026-09-23",
+            "y": 191.79
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+3.68%",
+          "color": "#D92D20",
+          "layout": "two-column",
+          "label": "오늘"
+        },
+        "seriesKind": "price"
+      }
+    ],
+    "totalDataPoints": 64,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 23일 종가 $191.79 · +3.68%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 191.79,
+        "series": "all"
+      },
+      "min": {
+        "value": 107.27,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "팔란티어, FAA 기대에 상승",
+    "subMessage": "9월 23일 종가 $191.79 · +3.68%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-23",
+        "y": 191.79
+      },
+      "displayText": "191.79",
+      "reason": "9월 23일 종가 $191.79 · +3.68%"
+    },
+    "densityLevel": "focused"
+  }
+}

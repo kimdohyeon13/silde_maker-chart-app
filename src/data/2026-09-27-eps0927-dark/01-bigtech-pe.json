@@ -1,0 +1,264 @@
+{
+  "id": "bigtech-pe",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "빅테크 예상 P/E, 테슬라만 세 자릿수",
+    "preservedElements": [
+      "요청서 숫자·순서·라벨 표기"
+    ],
+    "changedElements": [
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: InvestingPro 평균 EPS 컨센서스 · 2026년 9월 23일 장중 주가"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "요청서 값 그대로",
+      "status": "pass",
+      "detail": "요청서에 적힌 숫자와 라벨 표기를 그대로 썼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "빅테크 예상 P/E, 테슬라만 세 자릿수",
+    "subtitle": "단위: 배 · 알파벳은 A주",
+    "source": "자료: InvestingPro 평균 EPS 컨센서스 · 2026년 9월 23일 장중 주가",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "TSLA",
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "displayTickValues": [
+        "테슬라",
+        "애플",
+        "아마존",
+        "알파벳",
+        "메타",
+        "마이크로소프트",
+        "엔비디아"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "TSLA",
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "displayTickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "테슬라",
+        "애플",
+        "아마존",
+        "알파벳",
+        "메타",
+        "마이크로소프트",
+        "엔비디아"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "예상 P/E",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "예상 P/E",
+        "data": [
+          {
+            "x": "TSLA",
+            "y": 172.5,
+            "displayLabel": "172.5",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "AAPL",
+            "y": 35.2,
+            "displayLabel": "35.2",
+            "color": "#275A50"
+          },
+          {
+            "x": "AMZN",
+            "y": 24,
+            "displayLabel": "24.0",
+            "color": "#275A50"
+          },
+          {
+            "x": "GOOGL",
+            "y": 22.8,
+            "displayLabel": "22.8",
+            "color": "#275A50"
+          },
+          {
+            "x": "META",
+            "y": 21.6,
+            "displayLabel": "21.6",
+            "color": "#275A50"
+          },
+          {
+            "x": "MSFT",
+            "y": 21.1,
+            "displayLabel": "21.1",
+            "color": "#275A50"
+          },
+          {
+            "x": "NVDA",
+            "y": 14.4,
+            "displayLabel": "14.4",
+            "color": "#275A50"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 23일 장중 주가를 다음 회계연도 EPS 예상치로 나눈 값",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 172.5,
+        "at": "TSLA"
+      },
+      "min": {
+        "value": 14.4,
+        "at": "NVDA"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "빅테크 예상 P/E, 테슬라만 세 자릿수",
+    "subMessage": "9월 23일 장중 주가를 다음 회계연도 EPS 예상치로 나눈 값",
+    "headline": "빅테크 예상 P/E, 테슬라만 세 자릿수",
+    "summary": "9월 23일 장중 주가를 다음 회계연도 EPS 예상치로 나눈 값",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "TSLA",
+        "y": 172.5
+      },
+      "displayText": "172.5",
+      "reason": "9월 23일 장중 주가를 다음 회계연도 EPS 예상치로 나눈 값"
+    },
+    "densityLevel": "focused"
+  }
+}

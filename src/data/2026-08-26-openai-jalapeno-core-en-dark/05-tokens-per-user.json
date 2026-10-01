@@ -1,0 +1,243 @@
+{
+  "id": "05-tokens-per-user",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Token throughput per user at minimum TBT",
+    "preservedElements": [
+      "GPT-OSS, DeepSeek, and Kimi comparison",
+      "Tokens per user at the minimum-TBT point",
+      "Jalapeño and comparison-baseline series",
+      "All source values and model order"
+    ],
+    "changedElements": [
+      "Recomposed the three models as grouped horizontal bars",
+      "Displayed exact value labels on every bar",
+      "Applied Paperlogy typography and toss-clean spacing",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Uses only the official OpenAI first-results values for tokens per user at minimum TBT. No competitor identity or additional multiple was inferred.",
+    "sourceAttribution": "OpenAI · Jalapeño first results · 2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Three models by two series, six bars total, with every exact value shown directly."
+    },
+    {
+      "id": "exact-official-values",
+      "label": "Official OpenAI values",
+      "status": "pass",
+      "detail": "GPT-OSS 1,459 vs 535, DeepSeek 700 vs 169, and Kimi 694 vs 182 tok/s/user are preserved exactly."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data and order parity",
+      "status": "pass",
+      "detail": "The six values, model order, series, and axis range match the Korean file."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "canvasHeight 540, title weight 900, and subtitle weight 300 are specified."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask covers JSON authoring; export/preflight remains with the parent agent."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Jalapeño leads on tokens per user",
+    "subtitle": "Tokens per user at the minimum-TBT point · Unit: tok/s/user",
+    "source": "Source: OpenAI, Jalapeño first results (2026-08-25)",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "Model",
+      "type": "category",
+      "tickValues": [
+        "GPT-OSS",
+        "DeepSeek",
+        "Kimi"
+      ],
+      "displayTickValues": [
+        "GPT-OSS",
+        "DeepSeek",
+        "Kimi"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Tokens per user",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "400",
+        "800",
+        "1,200",
+        "1,600"
+      ],
+      "unit": "tok/s/user",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1600
+    },
+    "legend": [
+      {
+        "name": "Jalapeño",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Comparison baseline",
+        "role": "secondary",
+        "originalColor": "#98A2B3",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Jalapeño",
+        "data": [
+          {
+            "x": "GPT-OSS",
+            "y": 1459,
+            "confidence": 1,
+            "displayValue": "1,459"
+          },
+          {
+            "x": "DeepSeek",
+            "y": 700,
+            "confidence": 1,
+            "displayValue": "700"
+          },
+          {
+            "x": "Kimi",
+            "y": 694,
+            "confidence": 1,
+            "displayValue": "694"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "Comparison baseline",
+        "data": [
+          {
+            "x": "GPT-OSS",
+            "y": 535,
+            "confidence": 1,
+            "displayValue": "535"
+          },
+          {
+            "x": "DeepSeek",
+            "y": 169,
+            "confidence": 1,
+            "displayValue": "169"
+          },
+          {
+            "x": "Kimi",
+            "y": 182,
+            "confidence": 1,
+            "displayValue": "182"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "Jalapeño leads on tokens per user",
+    "subMessage": "Only official comparison values at the minimum-TBT point are shown.",
+    "headline": "Jalapeño leads on tokens per user",
+    "summary": "Jalapeño bars are higher than the comparison baseline for all three models.",
+    "story": "The chart compares tokens per user at the minimum-TBT point for each model.",
+    "keyTakeaways": [
+      "Model order and values are preserved from the official OpenAI results."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 30,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "series",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "numberLocale": "en",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "id": "dib264-24",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-24.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Optical Stocks: LITE, COHR, AAOI, FN, CIEN",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 30, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Optical Stocks: LITE, COHR, AAOI, FN, CIEN",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 30, 2026 close",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "Lumentum",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Coherent",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "AAOI",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "Fabrinet",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "Ciena",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Lumentum",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.187583
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.516541
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.416076
+          },
+          {
+            "x": "2026-09-08",
+            "y": 112.611193
+          },
+          {
+            "x": "2026-09-09",
+            "y": 113.813219
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.681685
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.683931
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.09644
+          },
+          {
+            "x": "2026-09-15",
+            "y": 96.548709
+          },
+          {
+            "x": "2026-09-16",
+            "y": 105.805859
+          },
+          {
+            "x": "2026-09-17",
+            "y": 102.837905
+          },
+          {
+            "x": "2026-09-18",
+            "y": 107.13044
+          },
+          {
+            "x": "2026-09-21",
+            "y": 109.844062
+          },
+          {
+            "x": "2026-09-22",
+            "y": 108.829043
+          },
+          {
+            "x": "2026-09-23",
+            "y": 107.831289
+          },
+          {
+            "x": "2026-09-24",
+            "y": 106.915239
+          },
+          {
+            "x": "2026-09-25",
+            "y": 108.366421
+          },
+          {
+            "x": "2026-09-28",
+            "y": 106.026813
+          },
+          {
+            "x": "2026-09-29",
+            "y": 112.030609
+          },
+          {
+            "x": "2026-09-30",
+            "y": 111.773979
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-0.23%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Coherent",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.75382
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.19884
+          },
+          {
+            "x": "2026-09-04",
+            "y": 103.613567
+          },
+          {
+            "x": "2026-09-08",
+            "y": 110.973057
+          },
+          {
+            "x": "2026-09-09",
+            "y": 111.561229
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.771207
+          },
+          {
+            "x": "2026-09-11",
+            "y": 112.256
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.967136
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.683864
+          },
+          {
+            "x": "2026-09-16",
+            "y": 106.580154
+          },
+          {
+            "x": "2026-09-17",
+            "y": 108.804181
+          },
+          {
+            "x": "2026-09-18",
+            "y": 116.663598
+          },
+          {
+            "x": "2026-09-21",
+            "y": 118.192843
+          },
+          {
+            "x": "2026-09-22",
+            "y": 114.101392
+          },
+          {
+            "x": "2026-09-23",
+            "y": 110.502521
+          },
+          {
+            "x": "2026-09-24",
+            "y": 106.830124
+          },
+          {
+            "x": "2026-09-25",
+            "y": 108.749031
+          },
+          {
+            "x": "2026-09-28",
+            "y": 103.830465
+          },
+          {
+            "x": "2026-09-29",
+            "y": 107.418297
+          },
+          {
+            "x": "2026-09-30",
+            "y": 105.800831
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-1.51%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "AAOI",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.748523
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.088691
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.069832
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.89245
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.391141
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.90328
+          },
+          {
+            "x": "2026-09-11",
+            "y": 101.905408
+          },
+          {
+            "x": "2026-09-14",
+            "y": 92.620179
+          },
+          {
+            "x": "2026-09-15",
+            "y": 92.165588
+          },
+          {
+            "x": "2026-09-16",
+            "y": 93.568042
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.844761
+          },
+          {
+            "x": "2026-09-18",
+            "y": 101.721635
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.106876
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.491634
+          },
+          {
+            "x": "2026-09-23",
+            "y": 97.746395
+          },
+          {
+            "x": "2026-09-24",
+            "y": 97.71738
+          },
+          {
+            "x": "2026-09-25",
+            "y": 98.075251
+          },
+          {
+            "x": "2026-09-28",
+            "y": 93.645421
+          },
+          {
+            "x": "2026-09-29",
+            "y": 97.369183
+          },
+          {
+            "x": "2026-09-30",
+            "y": 96.005417
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-1.40%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Fabrinet",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.328649
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.241598
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.325636
+          },
+          {
+            "x": "2026-09-08",
+            "y": 103.541669
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.029145
+          },
+          {
+            "x": "2026-09-10",
+            "y": 100.467581
+          },
+          {
+            "x": "2026-09-11",
+            "y": 103.111393
+          },
+          {
+            "x": "2026-09-14",
+            "y": 95.145119
+          },
+          {
+            "x": "2026-09-15",
+            "y": 93.244957
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.664582
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.739724
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.637397
+          },
+          {
+            "x": "2026-09-21",
+            "y": 99.875644
+          },
+          {
+            "x": "2026-09-22",
+            "y": 100.430268
+          },
+          {
+            "x": "2026-09-23",
+            "y": 99.69657
+          },
+          {
+            "x": "2026-09-24",
+            "y": 99.07727
+          },
+          {
+            "x": "2026-09-25",
+            "y": 103.810284
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.962341
+          },
+          {
+            "x": "2026-09-29",
+            "y": 105.484117
+          },
+          {
+            "x": "2026-09-30",
+            "y": 105.521425
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "+0.04%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Ciena",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.287685
+          },
+          {
+            "x": "2026-09-03",
+            "y": 88.102574
+          },
+          {
+            "x": "2026-09-04",
+            "y": 89.085009
+          },
+          {
+            "x": "2026-09-08",
+            "y": 94.715961
+          },
+          {
+            "x": "2026-09-09",
+            "y": 93.802906
+          },
+          {
+            "x": "2026-09-10",
+            "y": 92.848225
+          },
+          {
+            "x": "2026-09-11",
+            "y": 97.005529
+          },
+          {
+            "x": "2026-09-14",
+            "y": 88.707581
+          },
+          {
+            "x": "2026-09-15",
+            "y": 92.784392
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.496715
+          },
+          {
+            "x": "2026-09-17",
+            "y": 95.537428
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.800156
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.562458
+          },
+          {
+            "x": "2026-09-22",
+            "y": 102.284021
+          },
+          {
+            "x": "2026-09-23",
+            "y": 98.773351
+          },
+          {
+            "x": "2026-09-24",
+            "y": 99.472707
+          },
+          {
+            "x": "2026-09-25",
+            "y": 99.050875
+          },
+          {
+            "x": "2026-09-28",
+            "y": 95.520777
+          },
+          {
+            "x": "2026-09-29",
+            "y": 98.498606
+          },
+          {
+            "x": "2026-09-30",
+            "y": 97.63828
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "-0.87%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 118.192843,
+        "series": "all"
+      },
+      "min": {
+        "value": 88.102574,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Optical Stocks: LITE, COHR, AAOI, FN, CIEN",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 111.773979
+      },
+      "displayText": "111.77",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

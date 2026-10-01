@@ -1,0 +1,267 @@
+{
+  "id": "10-lab-revenue-runrate",
+  "sourceImage": "input/10-lab-revenue-runrate.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 각사 및 TMT Breakout 집계, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "오픈AI와 앤트로픽 합산 연환산 매출",
+    "subtitle": "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다",
+    "source": "자료: 각사 및 TMT Breakout 집계, 2026년 8월",
+    "timeRange": "2025년 11월~2026년 7월",
+    "xAxis": {
+      "label": "시점",
+      "type": "category",
+      "tickValues": [
+        "25년 11월",
+        "25년 12월",
+        "26년 1월",
+        "26년 2월",
+        "26년 3월",
+        "26년 4월",
+        "26년 5월",
+        "26년 6월",
+        "26년 7월"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "합산 연환산 매출 (10억 달러)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "합산 연환산 매출 (10억 달러)",
+        "data": [
+          {
+            "x": "25년 11월",
+            "y": 27,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "25년 12월",
+            "y": 29,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 1월",
+            "y": 35,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 2월",
+            "y": 44,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 3월",
+            "y": 58,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 4월",
+            "y": 72,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 5월",
+            "y": 83,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 6월",
+            "y": 92,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "26년 7월",
+            "y": 105,
+            "confidence": 0.74,
+            "color": "#0F4C81"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 9,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.288,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 288.9,
+        "absoluteChange": 78.0,
+        "from": 27.0,
+        "to": 105.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 105.0,
+        "at": ""
+      },
+      "min": {
+        "value": 27.0,
+        "at": ""
+      },
+      "average": 60.55555555555556,
+      "median": 58.0,
+      "range": 78.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "오픈AI와 앤트로픽 합산 연환산 매출",
+    "subMessage": "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다",
+    "headline": "오픈AI와 앤트로픽 합산 연환산 매출",
+    "summary": "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 각사 및 TMT Breakout 집계, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 105.0
+      },
+      "displayText": "오픈AI와 앤트로픽 합산 연환",
+      "reason": "여덟 달 만에 270억 달러에서 1,050억 달러로 약 3.9배가 됐다"
+    },
+    "densityLevel": "balanced"
+  }
+}

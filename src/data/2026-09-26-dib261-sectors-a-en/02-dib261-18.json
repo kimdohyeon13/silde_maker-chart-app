@@ -1,0 +1,727 @@
+{
+  "id": "dib261-18",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-18.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Memory and Storage Stocks Rebound",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form",
+      "start date = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 25, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Memory and Storage Stocks Rebound",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 25, 2026 close",
+    "timeRange": "2026-08-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-26",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-21",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "08-26",
+        "09-01",
+        "09-08",
+        "09-15",
+        "09-21",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "Micron",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Sandisk",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "Seagate",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "WDC",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      },
+      {
+        "name": "Hynix ADR",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#7A4E9E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Micron",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 99.67924
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.409629
+          },
+          {
+            "x": "2026-08-31",
+            "y": 102.166449
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.471438
+          },
+          {
+            "x": "2026-09-02",
+            "y": 101.884057
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.105706
+          },
+          {
+            "x": "2026-09-04",
+            "y": 108.332268
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.59207
+          },
+          {
+            "x": "2026-09-09",
+            "y": 109.523657
+          },
+          {
+            "x": "2026-09-10",
+            "y": 104.15707
+          },
+          {
+            "x": "2026-09-11",
+            "y": 103.927961
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.468671
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.8491
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.737208
+          },
+          {
+            "x": "2026-09-17",
+            "y": 104.166664
+          },
+          {
+            "x": "2026-09-18",
+            "y": 108.248078
+          },
+          {
+            "x": "2026-09-21",
+            "y": 111.248927
+          },
+          {
+            "x": "2026-09-22",
+            "y": 116.811595
+          },
+          {
+            "x": "2026-09-23",
+            "y": 114.224209
+          },
+          {
+            "x": "2026-09-24",
+            "y": 115.145993
+          },
+          {
+            "x": "2026-09-25",
+            "y": 115.332481
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+0.16%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Sandisk",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 99.03826
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.040263
+          },
+          {
+            "x": "2026-08-31",
+            "y": 104.49055
+          },
+          {
+            "x": "2026-09-01",
+            "y": 102.50105
+          },
+          {
+            "x": "2026-09-02",
+            "y": 103.603515
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.709558
+          },
+          {
+            "x": "2026-09-04",
+            "y": 116.048741
+          },
+          {
+            "x": "2026-09-08",
+            "y": 115.914684
+          },
+          {
+            "x": "2026-09-09",
+            "y": 117.660754
+          },
+          {
+            "x": "2026-09-10",
+            "y": 112.886744
+          },
+          {
+            "x": "2026-09-11",
+            "y": 108.935752
+          },
+          {
+            "x": "2026-09-14",
+            "y": 103.509474
+          },
+          {
+            "x": "2026-09-15",
+            "y": 102.102551
+          },
+          {
+            "x": "2026-09-16",
+            "y": 101.373909
+          },
+          {
+            "x": "2026-09-17",
+            "y": 107.671223
+          },
+          {
+            "x": "2026-09-18",
+            "y": 119.504856
+          },
+          {
+            "x": "2026-09-21",
+            "y": 117.825488
+          },
+          {
+            "x": "2026-09-22",
+            "y": 125.855529
+          },
+          {
+            "x": "2026-09-23",
+            "y": 121.155549
+          },
+          {
+            "x": "2026-09-24",
+            "y": 116.957122
+          },
+          {
+            "x": "2026-09-25",
+            "y": 118.569803
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+1.38%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Seagate",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 100.098068
+          },
+          {
+            "x": "2026-08-28",
+            "y": 98.037503
+          },
+          {
+            "x": "2026-08-31",
+            "y": 97.874453
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.487354
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.530322
+          },
+          {
+            "x": "2026-09-03",
+            "y": 94.357077
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.343825
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.853978
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.672896
+          },
+          {
+            "x": "2026-09-10",
+            "y": 101.885703
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.085942
+          },
+          {
+            "x": "2026-09-14",
+            "y": 95.177049
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.190614
+          },
+          {
+            "x": "2026-09-16",
+            "y": 92.533998
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.891124
+          },
+          {
+            "x": "2026-09-18",
+            "y": 101.467441
+          },
+          {
+            "x": "2026-09-21",
+            "y": 103.657977
+          },
+          {
+            "x": "2026-09-22",
+            "y": 108.680604
+          },
+          {
+            "x": "2026-09-23",
+            "y": 109.155569
+          },
+          {
+            "x": "2026-09-24",
+            "y": 107.035929
+          },
+          {
+            "x": "2026-09-25",
+            "y": 108.324967
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "+1.20%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "WDC",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 98.532673
+          },
+          {
+            "x": "2026-08-28",
+            "y": 97.988826
+          },
+          {
+            "x": "2026-08-31",
+            "y": 96.090681
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.067224
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.738779
+          },
+          {
+            "x": "2026-09-03",
+            "y": 94.175483
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.697148
+          },
+          {
+            "x": "2026-09-08",
+            "y": 101.795765
+          },
+          {
+            "x": "2026-09-09",
+            "y": 102.857873
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.304468
+          },
+          {
+            "x": "2026-09-11",
+            "y": 95.371948
+          },
+          {
+            "x": "2026-09-14",
+            "y": 91.05528
+          },
+          {
+            "x": "2026-09-15",
+            "y": 87.860431
+          },
+          {
+            "x": "2026-09-16",
+            "y": 88.928936
+          },
+          {
+            "x": "2026-09-17",
+            "y": 90.400527
+          },
+          {
+            "x": "2026-09-18",
+            "y": 94.13069
+          },
+          {
+            "x": "2026-09-21",
+            "y": 95.583093
+          },
+          {
+            "x": "2026-09-22",
+            "y": 99.087187
+          },
+          {
+            "x": "2026-09-23",
+            "y": 101.025848
+          },
+          {
+            "x": "2026-09-24",
+            "y": 96.039497
+          },
+          {
+            "x": "2026-09-25",
+            "y": 97.425779
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "+1.44%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Hynix ADR",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 102.271862
+          },
+          {
+            "x": "2026-08-28",
+            "y": 101.911143
+          },
+          {
+            "x": "2026-08-31",
+            "y": 104.151372
+          },
+          {
+            "x": "2026-09-01",
+            "y": 101.746611
+          },
+          {
+            "x": "2026-09-02",
+            "y": 104.4045
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.581818
+          },
+          {
+            "x": "2026-09-04",
+            "y": 112.011135
+          },
+          {
+            "x": "2026-09-08",
+            "y": 117.421844
+          },
+          {
+            "x": "2026-09-09",
+            "y": 125.699278
+          },
+          {
+            "x": "2026-09-10",
+            "y": 119.16213
+          },
+          {
+            "x": "2026-09-11",
+            "y": 120.282244
+          },
+          {
+            "x": "2026-09-14",
+            "y": 111.144159
+          },
+          {
+            "x": "2026-09-15",
+            "y": 110.637892
+          },
+          {
+            "x": "2026-09-16",
+            "y": 110.663201
+          },
+          {
+            "x": "2026-09-17",
+            "y": 115.801798
+          },
+          {
+            "x": "2026-09-18",
+            "y": 118.655863
+          },
+          {
+            "x": "2026-09-21",
+            "y": 119.516514
+          },
+          {
+            "x": "2026-09-22",
+            "y": 123.636242
+          },
+          {
+            "x": "2026-09-23",
+            "y": 119.782302
+          },
+          {
+            "x": "2026-09-24",
+            "y": 117.940761
+          },
+          {
+            "x": "2026-09-25",
+            "y": 121.225157
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#7A4E9E",
+        "dailyMove": {
+          "value": "+2.78%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 110,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 125.855529,
+        "series": "all"
+      },
+      "min": {
+        "value": 87.860431,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Memory and Storage Stocks Rebound",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 115.332481
+      },
+      "displayText": "115.33",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

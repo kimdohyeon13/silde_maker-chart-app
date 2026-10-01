@@ -1,0 +1,317 @@
+{
+  "id": "p21a-power-consumption",
+  "sourceImage": "input/p21_a_power_consumption.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: EIA, 2026년 3월. 미국 전체 평균, 2022년 3월 대비 2026년 3월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "showDirectLabels": false
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "미국 주거용·상업용 전력 소비량 추이 (2022~2026년)",
+    "subtitle": "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다",
+    "source": "자료: EIA, 2026년 3월. 미국 전체 평균, 2022년 3월 대비 2026년 3월",
+    "timeRange": "2022년 3월 ~ 2026년 3월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 100000,
+      "max": 125000
+    },
+    "legend": [
+      {
+        "name": "주거용",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "상업용",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "주거용",
+        "data": [
+          {
+            "x": "2022",
+            "y": 112300,
+            "confidence": 0.74
+          },
+          {
+            "x": "2023",
+            "y": 111000,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024",
+            "y": 102600,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025",
+            "y": 109000,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026",
+            "y": 108850,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81",
+        "allowSparseTail": true
+      },
+      {
+        "name": "상업용",
+        "data": [
+          {
+            "x": "2022",
+            "y": 107800,
+            "confidence": 0.74
+          },
+          {
+            "x": "2023",
+            "y": 109900,
+            "confidence": 0.74
+          },
+          {
+            "x": "2024",
+            "y": 110100,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025",
+            "y": 114400,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026",
+            "y": 119500,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6F61",
+        "allowSparseTail": true
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.089,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -3.1,
+        "absoluteChange": -3450.0,
+        "from": 112300.0,
+        "to": 108850.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 112300.0,
+        "at": ""
+      },
+      "min": {
+        "value": 102600.0,
+        "at": ""
+      },
+      "average": 108750.0,
+      "median": 109000.0,
+      "range": 9700.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미국 주거용·상업용 전력 소비량 추이 (2022~2026년)",
+    "subMessage": "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다",
+    "headline": "미국 주거용·상업용 전력 소비량 추이 (2022~2026년)",
+    "summary": "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: EIA, 2026년 3월. 미국 전체 평균, 2022년 3월 대비 2026년 3월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "callout",
+        "position": {
+          "x": "2026",
+          "y": 121000
+        },
+        "text": "4년간 +10.9% 증가",
+        "importance": "critical"
+      },
+      {
+        "type": "callout",
+        "position": {
+          "x": "2026",
+          "y": 110800
+        },
+        "text": "-3.1% 감소",
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 119500.0
+      },
+      "displayText": "미국 주거용·상업용 전력 소비",
+      "reason": "단위 1,000MWh. 상업용은 4년간 10.9% 늘고 주거용은 3.1% 줄었다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

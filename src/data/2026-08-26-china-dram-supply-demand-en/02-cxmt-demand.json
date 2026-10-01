@@ -1,0 +1,365 @@
+{
+  "id": "02-cxmt-demand",
+  "mode": "faithful",
+  "sourceImage": "input/02-cxmt-demand.png",
+  "sourceImages": [
+    "input/02-cxmt-demand.png"
+  ],
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "CXMT supply to cover 50% of China DRAM demand by 2028E",
+    "originalMessage": "CXMT supply to cover 50% of China DRAM demand by 2028E",
+    "sourceAttribution": "Company data, Goldman Sachs Global Investment Research",
+    "preservedElements": [
+      "2024~2028E order",
+      "CXMT supply and China DRAM demand bars",
+      "S/D supply-to-demand line",
+      "0% guide",
+      "full source attribution"
+    ],
+    "changedElements": [
+      "Light colors and Paperlogy typography",
+      "Source-visible approximations recorded from the image axes and bar heights"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The source crop does not print an exact data table. Bar values and S/D percentages are approximate readings from the visible axes and must not be treated as exact raw data."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "Source-visible approximation disclosed",
+      "status": "warning",
+      "detail": "Supply, demand, and S/D values are approximate readings from the source image."
+    },
+    {
+      "id": "combo-structure-preserved",
+      "label": "Combo structure preserved",
+      "status": "pass",
+      "detail": "Supply and demand remain left-axis bars; S/D remains a right-axis line."
+    },
+    {
+      "id": "zero-guide-preserved",
+      "label": "0% guide preserved",
+      "status": "pass",
+      "detail": "The dashed 0% guide is retained for the S/D axis."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 900/300 hierarchy",
+      "status": "pass",
+      "detail": "Paperlogy 900 is used for the title and 300 for subtitle and labels."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 18px 0",
+    "sourcePadding": "0 24px 6px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3,
+    "showAreaFill": false,
+    "accentColor": "#173B67",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "CXMT: 50% of China DRAM demand by 2028E",
+    "subtitle": "Supply in mn GB · S/D on the right percent axis",
+    "source": "Company data, Goldman Sachs Global Investment Research",
+    "timeRange": "2024~2028E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E"
+      ],
+      "displayTickValues": [
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Supply and demand (mn GB)",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5,000",
+        "10,000",
+        "15,000",
+        "20,000",
+        "25,000"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 25000,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "S/D",
+      "type": "numeric",
+      "tickValues": [
+        "-100",
+        "-80",
+        "-60",
+        "-40",
+        "-20",
+        "0"
+      ],
+      "unit": "%",
+      "min": -100,
+      "max": 0,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "CXMT supply [mn GB]",
+        "role": "primary",
+        "originalColor": "#5B9BD5",
+        "remakeColor": "#5B9BD5"
+      },
+      {
+        "name": "China DRAM demand [mn GB]",
+        "role": "primary",
+        "originalColor": "#ED7D31",
+        "remakeColor": "#ED7D31"
+      },
+      {
+        "name": "S/D [%]",
+        "role": "secondary",
+        "originalColor": "#7F7F7F",
+        "remakeColor": "#7F7F7F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CXMT supply [mn GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#5B9BD5",
+        "data": [
+          {
+            "x": "2024",
+            "y": 2000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025",
+            "y": 4000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 5500,
+            "confidence": 0.65
+          },
+          {
+            "x": "2027E",
+            "y": 7500,
+            "confidence": 0.65
+          },
+          {
+            "x": "2028E",
+            "y": 10000,
+            "confidence": 0.65
+          }
+        ]
+      },
+      {
+        "name": "China DRAM demand [mn GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#ED7D31",
+        "data": [
+          {
+            "x": "2024",
+            "y": 7000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025",
+            "y": 8000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 9200,
+            "confidence": 0.65
+          },
+          {
+            "x": "2027E",
+            "y": 12000,
+            "confidence": 0.65
+          },
+          {
+            "x": "2028E",
+            "y": 19500,
+            "confidence": 0.65
+          }
+        ]
+      },
+      {
+        "name": "S/D [%]",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#7F7F7F",
+        "data": [
+          {
+            "x": "2024",
+            "y": -71.4,
+            "confidence": 0.65
+          },
+          {
+            "x": "2025",
+            "y": -50,
+            "confidence": 0.65
+          },
+          {
+            "x": "2026E",
+            "y": -40.2,
+            "confidence": 0.6
+          },
+          {
+            "x": "2027E",
+            "y": -37.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2028E",
+            "y": -48.7,
+            "confidence": 0.6
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.64,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "The source image provides no exact table; values are source-visible approximations."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.72,
+      "description": "Both supply and demand rise, with demand remaining higher.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.44,
+      "description": "The S/D line narrows most in 2027E and widens again in 2028E."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 19500,
+        "at": "2028E China DRAM demand"
+      },
+      "min": {
+        "value": 2000,
+        "at": "2024 CXMT supply"
+      },
+      "average": 8800,
+      "median": 7500,
+      "range": 17500
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CXMT: 50% of China DRAM demand by 2028E",
+    "subMessage": "Supply rises, but demand rises faster into 2028E.",
+    "headline": "CXMT: 50% of China DRAM demand by 2028E",
+    "summary": "A combo chart comparing CXMT supply with China DRAM demand from 2024 to 2028E.",
+    "story": "CXMT supply rises from approximately 2,000mn GB in 2024 to 10,000mn GB in 2028E. China DRAM demand rises from approximately 7,000mn GB to 19,500mn GB, so the S/D line narrows in 2027E and falls again in 2028E.",
+    "keyTakeaways": [
+      "2028E CXMT supply is approximately 10,000mn GB",
+      "2028E China DRAM demand is approximately 19,500mn GB",
+      "The supply-demand gap remains in 2028E"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the bars against the left mn GB axis and the S/D line against the right percent axis.",
+    "contextualNotes": [
+      "Company data, Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "2024",
+          "y": 0
+        },
+        "to": {
+          "x": "2028E",
+          "y": 0
+        },
+        "style": "dashed",
+        "color": "#A7A7A7",
+        "label": "0%"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#5B9BD5",
+      "secondary": [
+        "#ED7D31",
+        "#7F7F7F"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#173B67",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

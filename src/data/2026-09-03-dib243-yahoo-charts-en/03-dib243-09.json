@@ -1,0 +1,484 @@
+{
+  "id": "dib243-09",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-243-09.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "04. Dell Jumps 15.81% in One Day",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 2, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-two-column",
+      "label": "당일 등락",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#1E755F",
+    "borderColor": "#D7DFDC",
+    "chartHeight": 340,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "04. Dell Jumps 15.81% in One Day",
+    "subtitle": "Sep 2 close $492.20 · +15.81%",
+    "source": "Source: Yahoo Finance · through the September 2, 2026 close",
+    "timeRange": "2026-05-29 to 2026-09-02",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-05-29",
+        "2026-06-17",
+        "2026-07-08",
+        "2026-07-28",
+        "2026-08-14",
+        "2026-09-02"
+      ],
+      "displayTickValues": [
+        "05-29",
+        "06-17",
+        "07-08",
+        "07-28",
+        "08-14",
+        "09-02"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Share price",
+      "type": "value",
+      "tickValues": [
+        "360",
+        "380",
+        "400",
+        "420",
+        "440",
+        "460",
+        "480",
+        "500"
+      ],
+      "unit": "$",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 360,
+      "max": 500
+    },
+    "legend": [
+      {
+        "name": "Dell",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Dell",
+        "data": [
+          {
+            "x": "2026-05-29",
+            "y": 420.91
+          },
+          {
+            "x": "2026-06-01",
+            "y": 465.96
+          },
+          {
+            "x": "2026-06-02",
+            "y": 435.31
+          },
+          {
+            "x": "2026-06-03",
+            "y": 421.08
+          },
+          {
+            "x": "2026-06-04",
+            "y": 422.05
+          },
+          {
+            "x": "2026-06-05",
+            "y": 394.39
+          },
+          {
+            "x": "2026-06-08",
+            "y": 400.77
+          },
+          {
+            "x": "2026-06-09",
+            "y": 381.78
+          },
+          {
+            "x": "2026-06-10",
+            "y": 369.83
+          },
+          {
+            "x": "2026-06-11",
+            "y": 391.45
+          },
+          {
+            "x": "2026-06-12",
+            "y": 395.57
+          },
+          {
+            "x": "2026-06-15",
+            "y": 409.07
+          },
+          {
+            "x": "2026-06-16",
+            "y": 404.08
+          },
+          {
+            "x": "2026-06-17",
+            "y": 419.32
+          },
+          {
+            "x": "2026-06-18",
+            "y": 409.5
+          },
+          {
+            "x": "2026-06-22",
+            "y": 418.71
+          },
+          {
+            "x": "2026-06-23",
+            "y": 427.78
+          },
+          {
+            "x": "2026-06-24",
+            "y": 434.06
+          },
+          {
+            "x": "2026-06-25",
+            "y": 409.45
+          },
+          {
+            "x": "2026-06-26",
+            "y": 399.49
+          },
+          {
+            "x": "2026-06-29",
+            "y": 414.61
+          },
+          {
+            "x": "2026-06-30",
+            "y": 431.46
+          },
+          {
+            "x": "2026-07-01",
+            "y": 425.25
+          },
+          {
+            "x": "2026-07-02",
+            "y": 394.32
+          },
+          {
+            "x": "2026-07-06",
+            "y": 411.8
+          },
+          {
+            "x": "2026-07-07",
+            "y": 417.28
+          },
+          {
+            "x": "2026-07-08",
+            "y": 431.97
+          },
+          {
+            "x": "2026-07-09",
+            "y": 450.22
+          },
+          {
+            "x": "2026-07-10",
+            "y": 434.97
+          },
+          {
+            "x": "2026-07-13",
+            "y": 427.11
+          },
+          {
+            "x": "2026-07-14",
+            "y": 457.54
+          },
+          {
+            "x": "2026-07-15",
+            "y": 412.68
+          },
+          {
+            "x": "2026-07-16",
+            "y": 391.38
+          },
+          {
+            "x": "2026-07-17",
+            "y": 396.34
+          },
+          {
+            "x": "2026-07-20",
+            "y": 381.88
+          },
+          {
+            "x": "2026-07-21",
+            "y": 404.15
+          },
+          {
+            "x": "2026-07-22",
+            "y": 441.8
+          },
+          {
+            "x": "2026-07-23",
+            "y": 439.34
+          },
+          {
+            "x": "2026-07-24",
+            "y": 437.5
+          },
+          {
+            "x": "2026-07-27",
+            "y": 426.91
+          },
+          {
+            "x": "2026-07-28",
+            "y": 392.1
+          },
+          {
+            "x": "2026-07-29",
+            "y": 369.64
+          },
+          {
+            "x": "2026-07-30",
+            "y": 404.81
+          },
+          {
+            "x": "2026-07-31",
+            "y": 405.37
+          },
+          {
+            "x": "2026-08-03",
+            "y": 429.02
+          },
+          {
+            "x": "2026-08-04",
+            "y": 467.27
+          },
+          {
+            "x": "2026-08-05",
+            "y": 462.7
+          },
+          {
+            "x": "2026-08-06",
+            "y": 437.65
+          },
+          {
+            "x": "2026-08-07",
+            "y": 453.77
+          },
+          {
+            "x": "2026-08-10",
+            "y": 457.88
+          },
+          {
+            "x": "2026-08-11",
+            "y": 440.97
+          },
+          {
+            "x": "2026-08-12",
+            "y": 484.5
+          },
+          {
+            "x": "2026-08-13",
+            "y": 494.51
+          },
+          {
+            "x": "2026-08-14",
+            "y": 490.81
+          },
+          {
+            "x": "2026-08-17",
+            "y": 479.81
+          },
+          {
+            "x": "2026-08-18",
+            "y": 468.65
+          },
+          {
+            "x": "2026-08-19",
+            "y": 437.55
+          },
+          {
+            "x": "2026-08-20",
+            "y": 434.78
+          },
+          {
+            "x": "2026-08-21",
+            "y": 442.08
+          },
+          {
+            "x": "2026-08-24",
+            "y": 433.19
+          },
+          {
+            "x": "2026-08-25",
+            "y": 451.5
+          },
+          {
+            "x": "2026-08-26",
+            "y": 463.82
+          },
+          {
+            "x": "2026-08-27",
+            "y": 472.26
+          },
+          {
+            "x": "2026-08-28",
+            "y": 456.24
+          },
+          {
+            "x": "2026-08-31",
+            "y": 456.01
+          },
+          {
+            "x": "2026-09-01",
+            "y": 425.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 492.2
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+15.81%",
+          "color": "#D92D20",
+          "layout": "two-column",
+          "label": "TODAY"
+        },
+        "seriesKind": "price"
+      }
+    ],
+    "totalDataPoints": 67,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 2 close $492.20 · +15.81%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 494.510009765625,
+        "series": "all"
+      },
+      "min": {
+        "value": 369.6400146484375,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "04. Dell Jumps 15.81% in One Day",
+    "subMessage": "Sep 2 close $492.20 · +15.81%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F",
+        "#4AA8FF",
+        "#A78BFA",
+        "#F472B6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-02",
+        "y": 492.2
+      },
+      "displayText": "492.2",
+      "reason": "Sep 2 close $492.20 · +15.81%"
+    },
+    "densityLevel": "focused"
+  }
+}

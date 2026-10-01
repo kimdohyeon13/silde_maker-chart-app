@@ -1,0 +1,704 @@
+{
+  "id": "dib263-17",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-17.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "광통신주 동반 상승",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 29일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "광통신주 동반 상승",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 29일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "루멘텀",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "코히런트",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "코닝",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "시에나",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "파브리넷",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "루멘텀",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.992129
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.170319
+          },
+          {
+            "x": "2026-09-03",
+            "y": 92.633039
+          },
+          {
+            "x": "2026-09-04",
+            "y": 96.33729
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.97177
+          },
+          {
+            "x": "2026-09-09",
+            "y": 108.1136
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.289125
+          },
+          {
+            "x": "2026-09-11",
+            "y": 101.341338
+          },
+          {
+            "x": "2026-09-14",
+            "y": 91.284055
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.713675
+          },
+          {
+            "x": "2026-09-16",
+            "y": 100.507238
+          },
+          {
+            "x": "2026-09-17",
+            "y": 97.687915
+          },
+          {
+            "x": "2026-09-18",
+            "y": 101.765486
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.343214
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.379025
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.431238
+          },
+          {
+            "x": "2026-09-24",
+            "y": 101.561062
+          },
+          {
+            "x": "2026-09-25",
+            "y": 102.93957
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.717128
+          },
+          {
+            "x": "2026-09-29",
+            "y": 106.420262
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+5.66%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "코히런트",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.912397
+          },
+          {
+            "x": "2026-09-02",
+            "y": 96.692232
+          },
+          {
+            "x": "2026-09-03",
+            "y": 95.169714
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.450527
+          },
+          {
+            "x": "2026-09-08",
+            "y": 108.65638
+          },
+          {
+            "x": "2026-09-09",
+            "y": 109.232274
+          },
+          {
+            "x": "2026-09-10",
+            "y": 105.521372
+          },
+          {
+            "x": "2026-09-11",
+            "y": 109.91254
+          },
+          {
+            "x": "2026-09-14",
+            "y": 95.921971
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.60286
+          },
+          {
+            "x": "2026-09-16",
+            "y": 104.355184
+          },
+          {
+            "x": "2026-09-17",
+            "y": 106.532781
+          },
+          {
+            "x": "2026-09-18",
+            "y": 114.228125
+          },
+          {
+            "x": "2026-09-21",
+            "y": 115.725445
+          },
+          {
+            "x": "2026-09-22",
+            "y": 111.719407
+          },
+          {
+            "x": "2026-09-23",
+            "y": 108.195667
+          },
+          {
+            "x": "2026-09-24",
+            "y": 104.599935
+          },
+          {
+            "x": "2026-09-25",
+            "y": 106.478782
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.662897
+          },
+          {
+            "x": "2026-09-29",
+            "y": 105.175832
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+3.46%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "코닝",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.868622
+          },
+          {
+            "x": "2026-09-02",
+            "y": 96.907153
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.164462
+          },
+          {
+            "x": "2026-09-04",
+            "y": 103.745046
+          },
+          {
+            "x": "2026-09-08",
+            "y": 111.584759
+          },
+          {
+            "x": "2026-09-09",
+            "y": 113.265657
+          },
+          {
+            "x": "2026-09-10",
+            "y": 109.67525
+          },
+          {
+            "x": "2026-09-11",
+            "y": 111.880588
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.550804
+          },
+          {
+            "x": "2026-09-15",
+            "y": 96.530634
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.927323
+          },
+          {
+            "x": "2026-09-17",
+            "y": 99.374711
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.941309
+          },
+          {
+            "x": "2026-09-21",
+            "y": 106.891683
+          },
+          {
+            "x": "2026-09-22",
+            "y": 107.369063
+          },
+          {
+            "x": "2026-09-23",
+            "y": 103.866066
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.644186
+          },
+          {
+            "x": "2026-09-25",
+            "y": 105.385605
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.922948
+          },
+          {
+            "x": "2026-09-29",
+            "y": 106.710149
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "+4.70%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "시에나",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.130094
+          },
+          {
+            "x": "2026-09-02",
+            "y": 92.51829
+          },
+          {
+            "x": "2026-09-03",
+            "y": 82.931035
+          },
+          {
+            "x": "2026-09-04",
+            "y": 83.855802
+          },
+          {
+            "x": "2026-09-08",
+            "y": 89.156222
+          },
+          {
+            "x": "2026-09-09",
+            "y": 88.296764
+          },
+          {
+            "x": "2026-09-10",
+            "y": 87.398121
+          },
+          {
+            "x": "2026-09-11",
+            "y": 91.311395
+          },
+          {
+            "x": "2026-09-14",
+            "y": 83.500529
+          },
+          {
+            "x": "2026-09-15",
+            "y": 87.338035
+          },
+          {
+            "x": "2026-09-16",
+            "y": 88.949846
+          },
+          {
+            "x": "2026-09-17",
+            "y": 89.92947
+          },
+          {
+            "x": "2026-09-18",
+            "y": 91.118077
+          },
+          {
+            "x": "2026-09-21",
+            "y": 95.600837
+          },
+          {
+            "x": "2026-09-22",
+            "y": 96.280044
+          },
+          {
+            "x": "2026-09-23",
+            "y": 92.975448
+          },
+          {
+            "x": "2026-09-24",
+            "y": 93.633752
+          },
+          {
+            "x": "2026-09-25",
+            "y": 93.236681
+          },
+          {
+            "x": "2026-09-28",
+            "y": 89.913797
+          },
+          {
+            "x": "2026-09-29",
+            "y": 92.716826
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "+3.12%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "파브리넷",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.370018
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.742623
+          },
+          {
+            "x": "2026-09-03",
+            "y": 95.657861
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.66079
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.818542
+          },
+          {
+            "x": "2026-09-09",
+            "y": 101.293197
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.825302
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.399582
+          },
+          {
+            "x": "2026-09-14",
+            "y": 92.64282
+          },
+          {
+            "x": "2026-09-15",
+            "y": 90.792631
+          },
+          {
+            "x": "2026-09-16",
+            "y": 95.096021
+          },
+          {
+            "x": "2026-09-17",
+            "y": 92.248086
+          },
+          {
+            "x": "2026-09-18",
+            "y": 94.09585
+          },
+          {
+            "x": "2026-09-21",
+            "y": 97.248932
+          },
+          {
+            "x": "2026-09-22",
+            "y": 97.78897
+          },
+          {
+            "x": "2026-09-23",
+            "y": 97.074568
+          },
+          {
+            "x": "2026-09-24",
+            "y": 96.471555
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.080092
+          },
+          {
+            "x": "2026-09-28",
+            "y": 99.280749
+          },
+          {
+            "x": "2026-09-29",
+            "y": 102.709904
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "+3.45%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 115.725445,
+        "series": "all"
+      },
+      "min": {
+        "value": 82.931035,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "광통신주 동반 상승",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 106.420262
+      },
+      "displayText": "106.42",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

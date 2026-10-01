@@ -8,6 +8,7 @@
  *   npm run export-png                          # 최신 프로젝트 자동 선택
  *   npm run export-png -- 2026-03-25-pmi-macro  # 특정 프로젝트 지정
  *   npm run export-png -- --list                # 프로젝트 목록 보기
+ *   npm run export-png -- slug --only=02-chart.png # 지정한 장표만 재출력
  *
  * 동작 원리:
  * 1. dev 서버가 켜져 있는지 확인 (없으면 에러)
@@ -26,10 +27,10 @@ import { chromium } from "playwright";
 import { existsSync, mkdirSync, readdirSync, copyFileSync } from "fs";
 import { resolve, dirname, extname } from "path";
 import { fileURLToPath } from "url";
-import { parseExportArgs, resolveExportTargets } from "./export-png-core.mjs";
+import { parseExportArgs, resolveExportTargets, selectExportCardIndices } from "./export-png-core.mjs";
 
 // ── 설정 ──
-const PORT = 3001;
+const PORT = Number.parseInt(process.env.CHART_APP_PORT ?? "3001", 10);
 const BASE_URL = `http://localhost:${PORT}`;
 const PIXEL_RATIO = 2; // 고해상도
 // 출처 줄 높이를 포함해 표 끝에서 카드 바닥까지 허용하는 최대 거리.
@@ -84,6 +85,7 @@ async function hideDevOverlays(page) {
 
 async function waitForProjectReady(page, targetSlug, expectedCount) {
   const select = page.locator("select");
+  await select.locator(`option[value="${targetSlug}"]`).waitFor({ state: "attached" });
   const currentSlug = await select.inputValue();
 
   if (currentSlug !== targetSlug) {
@@ -131,17 +133,28 @@ async function waitForProjectReady(page, targetSlug, expectedCount) {
 }
 
 // Recharts 등장 애니메이션이 끝날 때까지 기다린다.
-// 선의 path d와 막대의 높이를 지문으로 삼아, 두 번 연속 같은 값이 나오면 정지로 본다.
+// 선의 path d와 막대의 위치·폭·높이를 지문으로 삼아, 두 번 연속 같은 값이 나오면 정지로 본다.
 // 애니메이션이 없는 표 전용 프로젝트에서는 첫 비교에서 바로 통과한다.
 async function waitForChartAnimationSettled(page, { timeout = 8000, interval = 220 } = {}) {
   const fingerprint = () =>
     page.evaluate(() => {
+      // Recharts 의 선 등장 애니메이션은 `d` 가 아니라 stroke-dasharray/offset 을
+      // 움직인다. `d` 만 보면 선이 아직 그려지는 중인데도 "멈췄다"고 판정해,
+      // 오른쪽 끝이 잘린 프레임을 캡처한다(dib-235 다크 차트가 그렇게 나갔다).
       const lines = [...document.querySelectorAll("path.recharts-curve.recharts-line-curve")].map(
-        (element) => element.getAttribute("d") ?? "",
+        (element) => {
+          const style = getComputedStyle(element);
+          return [
+            element.getAttribute("d") ?? "",
+            style.strokeDasharray,
+            style.strokeDashoffset,
+          ].join("|");
+        },
       );
-      const bars = [...document.querySelectorAll(".recharts-rectangle")].map((element) =>
-        Math.round(element.getBoundingClientRect().height * 10),
-      );
+      const bars = [...document.querySelectorAll(".recharts-rectangle")].map((element) => {
+        const rect = element.getBoundingClientRect();
+        return [rect.x, rect.y, rect.width, rect.height].map((value) => Math.round(value * 10));
+      });
       const areas = [...document.querySelectorAll("path.recharts-curve.recharts-area-area")].map(
         (element) => element.getAttribute("d") ?? "",
       );
@@ -309,6 +322,46 @@ async function findCardDomProblems(card) {
       }
     }
 
+    // 서로 다른 축의 눈금끼리도 겹친다. 대표적으로 Y축 마지막 눈금("90")과
+    // X축 첫 눈금("05-29")이 왼쪽 아래 모서리에서 포개진다. 같은 축만 보는 위
+    // 검사로는 이 조합을 잡지 못하므로 Y축×X축을 따로 대조한다.
+    const axisTicksOf = (selector) =>
+      [...element.querySelectorAll(`${selector} .recharts-cartesian-axis-tick text`)]
+        .filter((tick) => isVisible(tick) && tick.textContent.trim())
+        .map((tick) => ({ text: tick.textContent.trim(), rect: tick.getBoundingClientRect() }));
+    const yTicks = axisTicksOf(".recharts-cartesian-axis.recharts-yAxis");
+    const xTicks = axisTicksOf(".recharts-cartesian-axis.recharts-xAxis");
+    outer: for (const yTick of yTicks) {
+      for (const xTick of xTicks) {
+        if (overlap(yTick.rect, xTick.rect)) {
+          issues.push(`Y축과 X축 눈금이 겹칩니다 ("${yTick.text}" / "${xTick.text}")`);
+          break outer;
+        }
+      }
+    }
+
+    // 헤더(제목·부제·메타)와 차트 안 글자가 포개지는 경우.
+    // 축 제목("3개월 전 = 100")이 위로 올라와 부제 위에 얹히는 사고를 잡는다.
+    const header = element.querySelector("[data-export-header]");
+    if (header && isVisible(header)) {
+      const headerTexts = [...header.querySelectorAll("h1, h2, h3, p")]
+        .filter((node) => isVisible(node) && node.textContent.trim())
+        .map((node) => ({ text: node.textContent.trim(), rect: node.getBoundingClientRect() }));
+      const chartTexts = [...element.querySelectorAll("svg text")]
+        .filter((node) => isVisible(node) && node.textContent.trim())
+        .map((node) => ({ text: node.textContent.trim(), rect: node.getBoundingClientRect() }));
+      headerLoop: for (const headerText of headerTexts) {
+        for (const chartText of chartTexts) {
+          if (overlap(headerText.rect, chartText.rect)) {
+            issues.push(
+              `헤더 글자와 차트 글자가 겹칩니다 ("${headerText.text.slice(0, 20)}" / "${chartText.text}")`,
+            );
+            break headerLoop;
+          }
+        }
+      }
+    }
+
     // X축 눈금은 서로 안 겹쳐도 플롯 안으로 올라와 기준선·막대를 침범할 수 있다.
     // X축에만 한정해 정상적인 Y축 눈금/격자 배치를 오탐하지 않는다.
     for (const axis of element.querySelectorAll(".recharts-cartesian-axis.recharts-xAxis")) {
@@ -371,14 +424,19 @@ async function findCardDomProblems(card) {
 
 // ── 메인 ──
 async function main() {
-  const { listOnly, requestedSlugs } = parseExportArgs(process.argv.slice(2));
+  const { listOnly, requestedSlugs, onlyNames } = parseExportArgs(process.argv.slice(2));
 
-  // dev 서버 체크
+  const startedAt = performance.now();
+
+  // 출력에 필요한 API로 확인한다. 홈 화면의 초기 컴파일을 기다리지 않는다.
   log("🔍", `localhost:${PORT} 확인 중...`);
+  let projectsPayload;
   try {
-    await fetch(BASE_URL, { signal: AbortSignal.timeout(3000) });
+    const response = await fetch(`${BASE_URL}/api/projects`, { signal: AbortSignal.timeout(15000) });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    projectsPayload = await response.json();
   } catch {
-    console.error(`\n❌ dev 서버가 실행 중이 아닙니다.`);
+    console.error(`\n❌ 출력 서버에서 정상 응답을 받지 못했습니다: ${BASE_URL}/api/projects`);
     console.error(`   먼저 다른 터미널에서 실행하세요:`);
     console.error(`   cd output/chart-app && npm run dev -- --port ${PORT}\n`);
     process.exit(1);
@@ -386,8 +444,7 @@ async function main() {
   log("✅", "dev 서버 연결됨");
 
   // 프로젝트 목록 가져오기
-  const projectsRes = await fetch(`${BASE_URL}/api/projects`);
-  const { projects } = await projectsRes.json();
+  const { projects } = projectsPayload;
 
   if (!projects || projects.length === 0) {
     console.error("❌ 프로젝트가 없습니다. JSON 파일을 먼저 만들어주세요.");
@@ -423,7 +480,18 @@ async function main() {
   });
   try {
     let totalExported = 0;
+    const page = await context.newPage();
+    // 목록은 방금 읽은 같은 실행의 응답을 재사용한다. 다음 실행에는 다시 읽는다.
+    await page.route(`${BASE_URL}/api/projects`, (route) =>
+      route.fulfill({ json: projectsPayload }),
+    );
+    await page.goto(`${BASE_URL}/export?project=${encodeURIComponent(targetSlugs[0])}`, {
+      waitUntil: "domcontentloaded",
+    });
+    await page.addStyleTag({ content: "main { max-width: 1008px !important; }" });
+    await hideDevOverlays(page);
     for (const targetSlug of targetSlugs) {
+      const projectStartedAt = performance.now();
       const project = projects.find((entry) => entry.slug === targetSlug);
       const projectDir = resolve(PROJECTS_DIR, targetSlug);
       const outDir = resolve(projectDir, "output");
@@ -433,11 +501,7 @@ async function main() {
       mkdirSync(inputDir, { recursive: true });
       mkdirSync(previewProjectDir, { recursive: true });
 
-      const page = await context.newPage();
-      try {
-        await page.goto(`${BASE_URL}/export`, { waitUntil: "networkidle" });
-        await page.addStyleTag({ content: "main { max-width: 1008px !important; }" });
-        await hideDevOverlays(page);
+      {
         await waitForProjectReady(page, targetSlug, project.analysisCount);
         await hideDevOverlays(page);
         log("📄", `${targetSlug} 로드 완료`);
@@ -465,8 +529,12 @@ async function main() {
         log("📊", `${targetSlug}: ${exportCount}개 차트 발견`);
 
     // 5) 각 차트 캡처
+        const exportNames = await exportCards.evaluateAll((cards) =>
+          cards.map((card) => card.getAttribute("data-export-name")),
+        );
+        const cardIndices = selectExportCardIndices(exportNames, onlyNames);
         const exported = [];
-        for (let i = 0; i < exportCount; i++) {
+        for (const i of cardIndices) {
       const card = exportCards.nth(i);
       const exportName = await card.getAttribute("data-export-name");
       const titleEl = card.locator("h2").first();
@@ -535,13 +603,13 @@ async function main() {
         totalExported += exported.length;
         log("✅", `${targetSlug}: ${exported.length}개 PNG 완료`);
         log("📁", outDir);
-      } finally {
-        await page.close();
+        log("⏱", `${targetSlug}: ${((performance.now() - projectStartedAt) / 1000).toFixed(2)}초`);
       }
     }
 
     console.log("");
     log("✅", `일괄 내보내기 완료! ${targetSlugs.length}개 프로젝트, PNG ${totalExported}개`);
+    log("⏱", `전체 ${((performance.now() - startedAt) / 1000).toFixed(2)}초`);
     console.log("");
 
   } catch (err) {
@@ -552,4 +620,7 @@ async function main() {
   }
 }
 
-main();
+main().catch((error) => {
+  console.error("❌ 내보내기 실패:", error.message);
+  process.exitCode = 1;
+});

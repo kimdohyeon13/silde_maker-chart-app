@@ -1,0 +1,512 @@
+{
+  "id": "cyber-watchlist",
+  "mode": "redesign",
+  "sourceImages": [
+    "input/source-01-market-view-top.png",
+    "input/source-02-market-view-continuation.png"
+  ],
+  "analyzedAt": "2026-09-11T06:15:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "사이버보안 Market View",
+    "originalMessage": "InvestingPro Market View · 2026-09-13 조회 · 가격·목표가: USD",
+    "preservedElements": [
+      "5 ticker order",
+      "raw source values",
+      "FY+2 PE",
+      "EPS mean consensus",
+      "day direction"
+    ],
+    "changedElements": [
+      "Restore actual 2026-09-11 watchlist design and all 10 columns",
+      "Group five cybersecurity names by role"
+    ],
+    "dataFidelity": "exact"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "select-columns",
+    "truncate-display-decimals",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "Authenticated Pro snapshot",
+      "status": "pass",
+      "detail": "Five observed rows; day arrows checked on screenshot; raw decimals retained in source JSON."
+    }
+  ],
+  "structure": {
+    "title": "사이버보안 마켓 뷰",
+    "subtitle": "InvestingPro 마켓뷰 · 2026.09.13 조회 · 가격·목표가: USD · P/E: FY+2",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "headerCopySingleLine": true,
+    "numberLocale": "ko",
+    "titleFontWeight": 900,
+    "watermarkText": "@WorldTechRsrch"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n($B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "통합 보안 플랫폼",
+            "displayValue": "통합 보안 플랫폼"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PANW",
+            "displayValue": "PANW\n팔로알토",
+            "sideValue": {
+              "displayValue": "-2.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 4px",
+              "borderRadius": "999px",
+              "fontSize": "11px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "통합 보안",
+            "displayValue": "통합 보안"
+          },
+          "current": {
+            "value": 330.65,
+            "displayValue": "330"
+          },
+          "target": {
+            "value": 393.42,
+            "displayValue": "393\n19%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 9.1,
+            "displayValue": "9%"
+          },
+          "pe": {
+            "value": 65.3,
+            "displayValue": "65x"
+          },
+          "m1": {
+            "value": -16.5,
+            "displayValue": "-16%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 68.4,
+            "displayValue": "68%"
+          },
+          "high52": {
+            "value": 82.9,
+            "displayValue": "82%"
+          },
+          "marketCap": {
+            "value": 270.5,
+            "displayValue": "270"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FTNT",
+            "displayValue": "FTNT\n포티넷",
+            "sideValue": {
+              "displayValue": "-1.8%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 4px",
+              "borderRadius": "999px",
+              "fontSize": "11px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "네트워크",
+            "displayValue": "네트워크"
+          },
+          "current": {
+            "value": 156.07,
+            "displayValue": "156"
+          },
+          "target": {
+            "value": 163.13,
+            "displayValue": "163\n4%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 25.0,
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": 40.7,
+            "displayValue": "40x"
+          },
+          "m1": {
+            "value": -5.7,
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 95.9,
+            "displayValue": "95%"
+          },
+          "high52": {
+            "value": 89.8,
+            "displayValue": "89%"
+          },
+          "marketCap": {
+            "value": 114.5,
+            "displayValue": "114"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "단말 보안·관제",
+            "displayValue": "단말 보안·관제"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRWD",
+            "displayValue": "CRWD\n크라우드스트라이크",
+            "sideValue": {
+              "displayValue": "-1.0%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 4px",
+              "borderRadius": "999px",
+              "fontSize": "11px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "단말·관제",
+            "displayValue": "단말·관제"
+          },
+          "current": {
+            "value": 206.74,
+            "displayValue": "206"
+          },
+          "target": {
+            "value": 234.09,
+            "displayValue": "234\n13%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 34.7,
+            "displayValue": "34%"
+          },
+          "pe": {
+            "value": 125.7,
+            "displayValue": "125x"
+          },
+          "m1": {
+            "value": -8.3,
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 89.6,
+            "displayValue": "89%"
+          },
+          "high52": {
+            "value": 88.4,
+            "displayValue": "88%"
+          },
+          "marketCap": {
+            "value": 212.1,
+            "displayValue": "212"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "S",
+            "displayValue": "S\n센티넬원",
+            "sideValue": {
+              "displayValue": "-0.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 4px",
+              "borderRadius": "999px",
+              "fontSize": "11px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "단말·자동대응",
+            "displayValue": "단말·자동대응"
+          },
+          "current": {
+            "value": 19.75,
+            "displayValue": "19"
+          },
+          "target": {
+            "value": 24.25,
+            "displayValue": "24\n22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 59.7,
+            "displayValue": "59%"
+          },
+          "pe": {
+            "value": 39.3,
+            "displayValue": "39x"
+          },
+          "m1": {
+            "value": -17.2,
+            "displayValue": "-17%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 8.0,
+            "displayValue": "8%"
+          },
+          "high52": {
+            "value": 82.5,
+            "displayValue": "82%"
+          },
+          "marketCap": {
+            "value": 6.874,
+            "displayValue": "6"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "접속·데이터 보안",
+            "displayValue": "접속·데이터 보안"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ZS",
+            "displayValue": "ZS\n지스케일러",
+            "sideValue": {
+              "displayValue": "+0.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 4px",
+              "borderRadius": "999px",
+              "fontSize": "11px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "접속·데이터",
+            "displayValue": "접속·데이터"
+          },
+          "current": {
+            "value": 164.54,
+            "displayValue": "164"
+          },
+          "target": {
+            "value": 207.18,
+            "displayValue": "207\n25%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 16.6,
+            "displayValue": "16%"
+          },
+          "pe": {
+            "value": 26.8,
+            "displayValue": "26x"
+          },
+          "m1": {
+            "value": -12.6,
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": -41.9,
+            "displayValue": "-41%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": 48.8,
+            "displayValue": "48%"
+          },
+          "marketCap": {
+            "value": 26.829,
+            "displayValue": "26"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 32,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 56,
+      "headerTone": "tinted",
+      "groupHeaderTone": "accent-rule",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "accentColor": "#0F4A3B"
+    }
+  },
+  "narrative": {
+    "headMessage": "사이버보안 마켓 뷰",
+    "headline": "사이버보안 마켓 뷰",
+    "subMessage": "InvestingPro 마켓뷰 · 2026.09.13 조회 · 가격·목표가: USD · P/E: FY+2",
+    "summary": "InvestingPro 마켓뷰 · 2026.09.13 조회 · 가격·목표가: USD · P/E: FY+2",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceImage": "input/source-01-market-view-top.png"
+}

@@ -1,0 +1,301 @@
+{
+  "id": "01-partner-roles",
+  "sourceImage": "output/2026-08-26-openai-jalapeno-inference-chip/source/source_notion_enhanced.md",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "OpenAI–Broadcom Jalapeño inference chip program",
+    "originalMessage": "OpenAI, Broadcom, Celestica, and deployment partners have distinct roles",
+    "sourceKey": "openai-jalapeno-official-partner-roles",
+    "officialSourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ],
+    "preservedElements": [
+      "OpenAI: 칩·모델·소프트웨어 설계",
+      "Broadcom: 실리콘 구현·네트워킹",
+      "Celestica: 보드·랙·시스템 통합",
+      "Microsoft/other partners: 초기 데이터센터 배치",
+      "파트너별 역할의 원래 순서",
+      "계약 금액을 추가하지 않음"
+    ],
+    "changedElements": [
+      "파트너 역할을 한눈에 읽는 4행 표로 재배치",
+      "초보자도 바로 이해하도록 제목과 부제를 짧게 정리",
+      "Paperlogy 제목 900·서브메시지 300과 라이트 팔레트 적용"
+    ],
+    "dataFidelity": "exact",
+    "notes": "공식 OpenAI 페이지에 근거한 역할만 표시했습니다. 계약 금액과 공개되지 않은 조건은 넣지 않았습니다.",
+    "sourceAttribution": "OpenAI official pages"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "네 파트너를 회사와 역할의 4행 표로 배치해 역할 차이를 한 번에 읽도록 했습니다."
+    },
+    {
+      "id": "official-source-only",
+      "label": "공식 출처만 사용",
+      "status": "pass",
+      "detail": "OpenAI 공식 URL 두 곳만 preserveIntent에 기록했습니다."
+    },
+    {
+      "id": "no-invented-contract-value",
+      "label": "계약 금액 추정 금지",
+      "status": "pass",
+      "detail": "계약 금액이나 규모를 임의로 추가하지 않았습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서 동일",
+      "status": "pass",
+      "detail": "KO/EN 파일의 네 행, 역할, 순서를 동일하게 유지합니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "이번 하위 작업은 JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "할라피뇨의 파트너 역할",
+    "subtitle": "OpenAI가 설계하고, 파트너가 구현·배치합니다",
+    "source": "OpenAI · 공식 발표",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 30,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "11px 24px 0",
+    "contentPadding": "0 14px 0",
+    "sourcePadding": "0 24px 6px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "partner",
+        "label": "파트너",
+        "dataType": "text",
+        "width": "30%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "role",
+        "label": "역할",
+        "dataType": "text",
+        "width": "70%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "OpenAI",
+            "displayValue": "OpenAI"
+          },
+          "role": {
+            "value": "칩·모델·소프트웨어 설계",
+            "displayValue": "칩·모델·소프트웨어 설계",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Broadcom",
+            "displayValue": "Broadcom"
+          },
+          "role": {
+            "value": "실리콘 구현·네트워킹",
+            "displayValue": "실리콘 구현·네트워킹",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Celestica",
+            "displayValue": "Celestica"
+          },
+          "role": {
+            "value": "보드·랙·시스템 통합",
+            "displayValue": "보드·랙·시스템 통합",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "partner": {
+            "value": "Microsoft / 기타 파트너",
+            "displayValue": "Microsoft / 기타 파트너"
+          },
+          "role": {
+            "value": "초기 데이터센터 배치",
+            "displayValue": "초기 데이터센터 배치",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 62,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 52,
+      "maxRowHeight": 82,
+      "cellPadding": "9px 14px",
+      "lineHeight": 1.12,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 600,
+        "numeric": 600,
+        "rowHeader": 800,
+        "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "14px",
+        "body": "20px",
+        "total": "20px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "할라피뇨의 파트너 역할",
+    "subMessage": "OpenAI가 설계하고, 파트너가 구현·배치합니다",
+    "headline": "할라피뇨는 한 회사가 모든 일을 맡는 칩이 아니라, 설계·구현·시스템 통합·초기 배치를 나눠 진행하는 프로젝트입니다.",
+    "summary": "네 파트너의 역할을 회사와 역할 두 열로 정리했습니다.",
+    "story": "OpenAI는 칩과 모델, 소프트웨어를 설계합니다. Broadcom은 실리콘 구현과 네트워킹을 맡습니다. Celestica는 보드·랙·시스템 통합을 담당하고, Microsoft와 기타 파트너는 초기 데이터센터 배치를 담당합니다.",
+    "keyTakeaways": [
+      "OpenAI: 칩·모델·소프트웨어 설계",
+      "Broadcom: 실리콘 구현·네트워킹",
+      "Celestica: 보드·랙·시스템 통합",
+      "Microsoft/기타 파트너: 초기 데이터센터 배치"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "위에서 아래로 회사와 역할을 한 줄씩 읽습니다.",
+    "contextualNotes": [
+      "출처: OpenAI 공식 발표",
+      "출력 워터마크: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "파트너 역할 비교표에는 시계열 추세가 없습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "정량 시계열이 아닌 역할 비교표입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 0, "at": "" },
+      "min": { "value": 0, "at": "" },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#667085", "#98A2B3", "#B8C3D1"],
+      "positive": "#175CD3",
+      "negative": "#D92D20",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "OpenAI", "y": 0 },
+      "displayText": "역할을 나눠 만든다",
+      "reason": "설계부터 초기 데이터센터 배치까지 파트너별 역할이 다릅니다."
+    },
+    "densityLevel": "sparse"
+  }
+}

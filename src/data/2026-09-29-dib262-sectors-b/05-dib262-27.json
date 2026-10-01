@@ -1,0 +1,587 @@
+{
+  "id": "dib262-27",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-262-27.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "전력망·발전사, 수주잔고 덕에 낙폭 제한",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 28일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "전력망·발전사, 수주잔고 덕에 낙폭 제한",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 28일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-16",
+        "2026-09-22",
+        "2026-09-28"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-16",
+        "09-22",
+        "09-28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "GE버노바",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "이튼",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "컨스털레이션",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "비스트라",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "GE버노바",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 102.605363
+          },
+          {
+            "x": "2026-09-03",
+            "y": 104.820095
+          },
+          {
+            "x": "2026-09-04",
+            "y": 104.832335
+          },
+          {
+            "x": "2026-09-08",
+            "y": 108.099893
+          },
+          {
+            "x": "2026-09-09",
+            "y": 105.843984
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.824607
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.537343
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.354566
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.250472
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.955939
+          },
+          {
+            "x": "2026-09-17",
+            "y": 102.938128
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.652041
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.307551
+          },
+          {
+            "x": "2026-09-22",
+            "y": 105.759407
+          },
+          {
+            "x": "2026-09-23",
+            "y": 105.930795
+          },
+          {
+            "x": "2026-09-24",
+            "y": 106.289155
+          },
+          {
+            "x": "2026-09-25",
+            "y": 106.577407
+          },
+          {
+            "x": "2026-09-28",
+            "y": 105.702646
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-0.82%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "이튼",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.22056
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.2554
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.815564
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.23201
+          },
+          {
+            "x": "2026-09-08",
+            "y": 105.038817
+          },
+          {
+            "x": "2026-09-09",
+            "y": 103.319398
+          },
+          {
+            "x": "2026-09-10",
+            "y": 101.808995
+          },
+          {
+            "x": "2026-09-11",
+            "y": 105.845026
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.830198
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.641084
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.984767
+          },
+          {
+            "x": "2026-09-17",
+            "y": 101.886132
+          },
+          {
+            "x": "2026-09-18",
+            "y": 105.695726
+          },
+          {
+            "x": "2026-09-21",
+            "y": 108.34826
+          },
+          {
+            "x": "2026-09-22",
+            "y": 110.105003
+          },
+          {
+            "x": "2026-09-23",
+            "y": 109.17687
+          },
+          {
+            "x": "2026-09-24",
+            "y": 109.485417
+          },
+          {
+            "x": "2026-09-25",
+            "y": 109.480443
+          },
+          {
+            "x": "2026-09-28",
+            "y": 107.347964
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-1.95%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "컨스털레이션",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 102.016235
+          },
+          {
+            "x": "2026-09-02",
+            "y": 105.557383
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.741311
+          },
+          {
+            "x": "2026-09-04",
+            "y": 108.803728
+          },
+          {
+            "x": "2026-09-08",
+            "y": 108.836481
+          },
+          {
+            "x": "2026-09-09",
+            "y": 106.96401
+          },
+          {
+            "x": "2026-09-10",
+            "y": 104.076141
+          },
+          {
+            "x": "2026-09-11",
+            "y": 103.632133
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.287811
+          },
+          {
+            "x": "2026-09-15",
+            "y": 94.584571
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.453546
+          },
+          {
+            "x": "2026-09-17",
+            "y": 95.643629
+          },
+          {
+            "x": "2026-09-18",
+            "y": 92.699355
+          },
+          {
+            "x": "2026-09-21",
+            "y": 95.392509
+          },
+          {
+            "x": "2026-09-22",
+            "y": 95.883831
+          },
+          {
+            "x": "2026-09-23",
+            "y": 96.036691
+          },
+          {
+            "x": "2026-09-24",
+            "y": 95.214181
+          },
+          {
+            "x": "2026-09-25",
+            "y": 95.814681
+          },
+          {
+            "x": "2026-09-28",
+            "y": 94.781091
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "-1.08%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "비스트라",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 100.516857
+          },
+          {
+            "x": "2026-09-02",
+            "y": 104.433291
+          },
+          {
+            "x": "2026-09-03",
+            "y": 104.986537
+          },
+          {
+            "x": "2026-09-04",
+            "y": 108.684581
+          },
+          {
+            "x": "2026-09-08",
+            "y": 110.446245
+          },
+          {
+            "x": "2026-09-09",
+            "y": 109.994913
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.046668
+          },
+          {
+            "x": "2026-09-11",
+            "y": 108.014858
+          },
+          {
+            "x": "2026-09-14",
+            "y": 102.445949
+          },
+          {
+            "x": "2026-09-15",
+            "y": 103.02832
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.198445
+          },
+          {
+            "x": "2026-09-17",
+            "y": 104.50608
+          },
+          {
+            "x": "2026-09-18",
+            "y": 102.402274
+          },
+          {
+            "x": "2026-09-21",
+            "y": 102.48235
+          },
+          {
+            "x": "2026-09-22",
+            "y": 102.213008
+          },
+          {
+            "x": "2026-09-23",
+            "y": 100.436781
+          },
+          {
+            "x": "2026-09-24",
+            "y": 100.414943
+          },
+          {
+            "x": "2026-09-25",
+            "y": 100.793486
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.473181
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "-0.32%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 80,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 110.446245,
+        "series": "all"
+      },
+      "min": {
+        "value": 92.699355,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "전력망·발전사, 수주잔고 덕에 낙폭 제한",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-28",
+        "y": 105.702646
+      },
+      "displayText": "105.70",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "03-throughput-per-kw",
+  "mode": "redesign",
+  "sourceImage": "https://openai.com/index/jalapeno-first-results/",
+  "sourceImages": ["https://openai.com/index/jalapeno-first-results/"],
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Jalapeño delivers more throughput per kilowatt",
+    "originalMessage": "Jalapeño delivers higher peak mixed TPS per kW than the comparison systems across GPT-OSS, DeepSeek R1, and Kimi K2.5.",
+    "sourceKey": "openai-jalapeno-throughput-per-kw-2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/",
+    "sourceAttribution": "OpenAI, Jalapeño’s first results, August 25, 2026",
+    "preservedElements": ["GPT-OSS 120B, DeepSeek R1 670B, and Kimi K2.5 1T in the original order", "Jalapeño versus GB200 or GB300 comparison for every model", "Exact peak mixed TPS per kW values", "The higher-is-better throughput-per-kW meaning", "OpenAI source URL and official comparison labels"],
+    "changedElements": ["Recomposed the comparisons as a grouped horizontal bar chart so all six exact values remain readable", "Used direct labels with the comparison hardware name and exact comma-formatted value", "Added a short plain-language English headline and subtitle", "Kept a shared 0–90,000 axis; no normalization or rescaling was introduced"],
+    "dataFidelity": "exact",
+    "notes": "All values are copied from OpenAI’s official appendix. The horizontal grouped layout keeps the smaller DeepSeek and Kimi bars visible without fake normalization."
+  },
+  "allowedTransformations": ["translate-text", "rewrite-title", "adjust-layout", "adjust-colors", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    { "id": "layout-plan-first", "label": "Grouped horizontal layout planned", "status": "pass", "detail": "Three model groups, two bars per group, a shared 0–90,000 TPS/kW axis, direct labels, and a wide left plot were planned before JSON authoring." },
+    { "id": "exact-official-data", "label": "Exact official OpenAI data", "status": "pass", "detail": "85,448 vs 44,960; 19,641 vs 11,781; and 18,195 vs 11,862 match the OpenAI appendix exactly." },
+    { "id": "mixed-scale-readability", "label": "Mixed-scale readability", "status": "pass", "detail": "A horizontal grouped chart is used instead of a misleading normalized index; every bar retains its exact TPS/kW value." },
+    { "id": "bilingual-data-parity", "label": "KO/EN data parity", "status": "pass", "detail": "KO and EN use identical x order, numeric values, series order, series colors, source URL, and comparison hardware." },
+    { "id": "paperlogy-hierarchy", "label": "Paperlogy hierarchy", "status": "pass", "detail": "canvasHeight is 540, the title uses Paperlogy 900, and the subtitle uses Paperlogy 300." },
+    { "id": "render-overflow", "label": "Render overflow", "status": "pending", "detail": "Export and visual preflight are reserved for the parent lane." }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 18px 0",
+    "sourcePadding": "0 24px 6px",
+    "chartHeight": 360,
+    "compactChartMargins": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "gridMode": "solid",
+    "barColorMode": "series",
+    "accentColor": "#173B67",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "More AI work from the same power",
+    "subtitle": "Throughput per kW across GPT-OSS, DeepSeek, and Kimi",
+    "source": "OpenAI, Jalapeño’s first results, August 25, 2026 · https://openai.com/index/jalapeno-first-results/",
+    "timeRange": "Peak mixed TPS/kW",
+    "xAxis": { "label": "Model · comparison GPU", "type": "category", "tickValues": ["GPT-OSS 120B · GB200", "DeepSeek R1 670B · GB300", "Kimi K2.5 1T · GB300"], "displayTickValues": ["GPT-OSS 120B · GB200", "DeepSeek R1 670B · GB300", "Kimi K2.5 1T · GB300"], "unit": "", "startsAtZero": false, "isLogScale": false },
+    "yAxis": { "label": "Peak mixed throughput per kW", "type": "value", "tickValues": ["0", "20,000", "40,000", "60,000", "80,000"], "unit": "TPS/kW", "min": 0, "max": 90000, "startsAtZero": true, "isLogScale": false },
+    "legend": [
+      { "name": "Jalapeño", "role": "primary", "originalColor": "#16A3A8", "remakeColor": "#16A3A8" },
+      { "name": "Comparison GPU", "role": "secondary", "originalColor": "#98A2B3", "remakeColor": "#98A2B3" }
+    ]
+  },
+  "data": {
+    "series": [
+      { "name": "Jalapeño", "renderAs": "bar", "role": "primary", "color": "#16A3A8", "data": [
+        { "x": "GPT-OSS 120B · GB200", "y": 85448, "displayLabel": "Jalapeño · 85,448", "confidence": 1 },
+        { "x": "DeepSeek R1 670B · GB300", "y": 19641, "displayLabel": "Jalapeño · 19,641", "confidence": 1 },
+        { "x": "Kimi K2.5 1T · GB300", "y": 18195, "displayLabel": "Jalapeño · 18,195", "confidence": 1 }
+      ] },
+      { "name": "Comparison GPU", "renderAs": "bar", "role": "secondary", "color": "#98A2B3", "data": [
+        { "x": "GPT-OSS 120B · GB200", "y": 44960, "displayLabel": "GB200 · 44,960", "confidence": 1 },
+        { "x": "DeepSeek R1 670B · GB300", "y": 11781, "displayLabel": "GB300 · 11,781", "confidence": 1 },
+        { "x": "Kimi K2.5 1T · GB300", "y": 11862, "displayLabel": "GB300 · 11,862", "confidence": 1 }
+      ] }
+    ],
+    "totalDataPoints": 6,
+    "quality": { "overallConfidence": 1, "missingPoints": 0, "hardToReadAreas": ["The DeepSeek and Kimi bars are smaller than GPT-OSS; direct labels and the horizontal layout preserve their exact values."], "readabilityScore": "good" }
+  },
+  "statistics": {
+    "trend": { "direction": "sideways", "strength": 0, "description": "This is a cross-model comparison, not a time trend.", "recentDirection": "flat" },
+    "volatility": { "level": "high", "coefficient": 1.02, "description": "Peak throughput per kW differs substantially by model and hardware pair." },
+    "changeRates": [], "correlations": [],
+    "summary": { "max": { "value": 85448, "at": "GPT-OSS Jalapeño" }, "min": { "value": 11781, "at": "DeepSeek GB300" }, "average": 31981.1667, "median": 18918, "range": 73667 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "More AI work from the same power",
+    "subMessage": "Throughput per kW across GPT-OSS, DeepSeek, and Kimi",
+    "headline": "More AI work from the same power",
+    "summary": "Throughput per kW shows how much AI work a system can do with one kilowatt of power.",
+    "story": "A longer bar means more AI work from the same power. Jalapeño beats the comparison GPU on all three models: GPT-OSS, DeepSeek, and Kimi.",
+    "keyTakeaways": ["GPT-OSS: Jalapeño 85,448 vs GB200 44,960 TPS/kW", "DeepSeek: Jalapeño 19,641 vs GB300 11,781 TPS/kW", "Kimi: Jalapeño 18,195 vs GB300 11,862 TPS/kW"],
+    "questionsRaised": [],
+    "viewerAction": "Compare the teal Jalapeño bar with the gray comparison-GPU bar in each model group.",
+    "contextualNotes": ["Exact data: OpenAI, https://openai.com/index/jalapeno-first-results/", "TPS/kW means mixed throughput per kilowatt."]
+  },
+  "emphasis": {
+    "focusPoint": { "position": { "x": "GPT-OSS 120B", "y": 85448 }, "displayText": "GPT-OSS · Jalapeño 85,448 TPS/kW", "reason": "The largest exact throughput-per-kW result is easy to see first." },
+    "annotations": [], "highlightZones": [], "trendLines": [],
+    "colorStrategy": { "primary": "#16A3A8", "secondary": ["#98A2B3"], "positive": "#16A3A8", "negative": "#D92D20", "accent": "#173B67", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  }
+}

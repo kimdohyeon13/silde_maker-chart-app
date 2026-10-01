@@ -1,0 +1,307 @@
+{
+  "id": "04-sk-package-tech",
+  "sourceImage": "input/16-sk-package-tech.png",
+  "analyzedAt": "2026-08-25T15:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "HBM PACKAGE TECHNOLOGIES",
+    "originalMessage": "TC+NCF and MR+MUF packaging process, pros and cons",
+    "sourceKey": "@wltechrsrch/hot-chips-hbm-package-technologies",
+    "preservedElements": [
+      "TC+NCF (Thermo-compression + Non-Conductive Film)",
+      "MR+MUF (Mass Reflow + Molded Underfill)",
+      "각 방식의 공정 문구",
+      "각 방식의 장점과 단점",
+      "도식에 보이는 NCF · EMC · Flux · MUF 라벨",
+      "SK hynix 원본 슬라이드의 비교 순서"
+    ],
+    "changedElements": [
+      "두 개의 원본 프로세스 카드를 한눈에 읽는 편집 가능한 비교표로 재배치",
+      "영문 설명에 쉬운 한국어 풀이를 병기",
+      "Paperlogy 제목 900·서브메시지 300과 라이트 팔레트 적용",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원본에 인쇄된 공정·장점·단점과 도식 라벨을 빠짐없이 옮겼습니다. 표 재배치는 사용자가 지정한 비교표 형식이며, 수치 데이터는 없습니다.",
+    "sourceAttribution": "SK hynix source slide; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "공정·장점·단점 3행 비교표로 구성하고, 두 방식의 원본 순서와 모든 항목을 유지했습니다."
+    },
+    {
+      "id": "source-text-completeness",
+      "label": "원본 텍스트 보존",
+      "status": "pass",
+      "detail": "TC+NCF와 MR+MUF의 process/pros/cons, NCF·EMC·Flux·MUF 라벨을 대조했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서·색 동일",
+      "status": "pass",
+      "detail": "KO/EN 파일의 열 순서, 행 순서, sourceKey, 강조 색을 동일하게 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "이번 하위 작업은 JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "title": "HBM 패키지 기술",
+    "subtitle": "TC+NCF와 MR+MUF의 공정·장점·한계 비교",
+    "source": "SK hynix · HBM Package Technologies"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 24px 0",
+    "contentPadding": "0 14px 0",
+    "sourcePadding": "0 24px 6px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "구분",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "tc_ncf",
+        "label": "TC+NCF\nThermo-compression + NCF",
+        "dataType": "text",
+        "width": "41%",
+        "align": "left"
+      },
+      {
+        "key": "mr_muf",
+        "label": "MR+MUF\nMass Reflow + MUF",
+        "dataType": "text",
+        "width": "41%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "PROCESS",
+            "displayValue": "공정"
+          },
+          "tc_ncf": {
+            "value": "Thermo-compression bonding with NCF\nDiagram labels: NCF · EMC",
+            "displayValue": "열압착 접합(Thermo-compression) + 비전도성 필름(NCF)\n도식 라벨: NCF · EMC"
+          },
+          "mr_muf": {
+            "value": "Mass Reflow + Molded underfill (MUF)\nDiagram labels: Flux · MUF",
+            "displayValue": "대량 리플로우(Mass Reflow) + 몰드 언더필(MUF)\n도식 라벨: Flux · MUF"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "cells": {
+          "item": {
+            "value": "PROS",
+            "displayValue": "장점",
+            "highlight": "positive"
+          },
+          "tc_ncf": {
+            "value": "Less sensitive to Thin Die Warpage",
+            "displayValue": "얇은 다이 휨에 덜 민감\n(Less sensitive to Thin Die Warpage)",
+            "highlight": "positive"
+          },
+          "mr_muf": {
+            "value": "High Productivity\nLow thermal resistivity",
+            "displayValue": "높은 생산성\n(High Productivity)\n낮은 열저항\n(Low thermal resistivity)",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "cells": {
+          "item": {
+            "value": "CONS",
+            "displayValue": "단점",
+            "highlight": "negative"
+          },
+          "tc_ncf": {
+            "value": "Low productivity (each die bonding)\nHigh thermal resistivity",
+            "displayValue": "낮은 생산성(다이마다 접합)\n(Low productivity, each die bonding)\n높은 열저항\n(High thermal resistivity)",
+            "highlight": "negative"
+          },
+          "mr_muf": {
+            "value": "Sensitivity to Chip Warpage\nNarrow Gap Fill",
+            "displayValue": "칩 휨에 민감\n(Sensitivity to Chip Warpage)\n좁은 간극 충진의 어려움\n(Narrow Gap Fill)",
+            "highlight": "negative"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+    "rowHeight": 94,
+    "fitRowsToCanvas": false,
+    "minRowHeight": 94,
+    "maxRowHeight": 94,
+    "cellPadding": "6px 9px",
+    "lineHeight": 1.04,
+    "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+      "body": 500,
+      "numeric": 600,
+      "rowHeader": 800,
+      "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "15px",
+        "total": "15px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "HBM 패키지 기술",
+    "subMessage": "TC+NCF는 휨에 강하고, MR+MUF는 생산성과 열저항에서 유리합니다.",
+    "headline": "HBM 패키지 기술",
+    "summary": "TC+NCF와 MR+MUF는 접합 방식이 다릅니다. 원본 표의 장점과 단점을 그대로 비교합니다.",
+    "story": "TC+NCF는 다이가 휘는 문제에 상대적으로 덜 민감하지만 다이를 하나씩 접합해 생산성이 낮고 열저항이 높습니다. MR+MUF는 대량 리플로우로 생산성이 높고 열저항이 낮지만 칩 휨과 좁은 간극 충진에 더 민감합니다.",
+    "keyTakeaways": [
+      "TC+NCF: 얇은 다이 휨에 덜 민감",
+      "MR+MUF: 높은 생산성·낮은 열저항",
+      "MR+MUF의 과제: 칩 휨 민감도·좁은 간극 충진"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "두 방식의 공정 차이와 장단점을 표의 같은 행에서 비교합니다.",
+    "contextualNotes": [
+      "원본 도식 라벨: NCF, EMC, Flux, MUF",
+      "출력 출처 표기: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "비교표에는 시계열 추세가 없습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "정량 시계열이 아닌 공정 비교표입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "MR+MUF",
+        "y": 0
+      },
+      "reason": "두 패키지 공정의 장점과 단점을 같은 표에서 비교합니다.",
+      "displayText": "PROCESS · PROS · CONS"
+    },
+    "densityLevel": "detailed"
+  }
+}

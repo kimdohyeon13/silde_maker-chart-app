@@ -1,0 +1,408 @@
+{
+  "id": "dib261-20",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-20.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "AI Servers: Dell +5.01%, SMCI +4.22%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form",
+      "start date = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 25, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "AI Servers: Dell +5.01%, SMCI +4.22%",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 25, 2026 close",
+    "timeRange": "2026-08-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-26",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-21",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "08-26",
+        "09-01",
+        "09-08",
+        "09-15",
+        "09-21",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "Dell",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Supermicro",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Dell",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 101.819672
+          },
+          {
+            "x": "2026-08-28",
+            "y": 98.365742
+          },
+          {
+            "x": "2026-08-31",
+            "y": 98.316158
+          },
+          {
+            "x": "2026-09-01",
+            "y": 91.630372
+          },
+          {
+            "x": "2026-09-02",
+            "y": 106.118754
+          },
+          {
+            "x": "2026-09-03",
+            "y": 111.33414
+          },
+          {
+            "x": "2026-09-04",
+            "y": 113.005046
+          },
+          {
+            "x": "2026-09-08",
+            "y": 115.104997
+          },
+          {
+            "x": "2026-09-09",
+            "y": 115.400369
+          },
+          {
+            "x": "2026-09-10",
+            "y": 109.227715
+          },
+          {
+            "x": "2026-09-11",
+            "y": 122.308216
+          },
+          {
+            "x": "2026-09-14",
+            "y": 115.191242
+          },
+          {
+            "x": "2026-09-15",
+            "y": 117.181234
+          },
+          {
+            "x": "2026-09-16",
+            "y": 121.445813
+          },
+          {
+            "x": "2026-09-17",
+            "y": 126.859561
+          },
+          {
+            "x": "2026-09-18",
+            "y": 122.474233
+          },
+          {
+            "x": "2026-09-21",
+            "y": 124.03734
+          },
+          {
+            "x": "2026-09-22",
+            "y": 118.347629
+          },
+          {
+            "x": "2026-09-23",
+            "y": 118.543833
+          },
+          {
+            "x": "2026-09-24",
+            "y": 115.566386
+          },
+          {
+            "x": "2026-09-25",
+            "y": 121.35958
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+5.01%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Supermicro",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 102.861727
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.170908
+          },
+          {
+            "x": "2026-08-31",
+            "y": 99.705802
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.181331
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.956942
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.283765
+          },
+          {
+            "x": "2026-09-04",
+            "y": 105.883928
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.675846
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.118751
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.973259
+          },
+          {
+            "x": "2026-09-11",
+            "y": 107.247925
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.261573
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.319604
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.555761
+          },
+          {
+            "x": "2026-09-17",
+            "y": 107.916553
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.546672
+          },
+          {
+            "x": "2026-09-21",
+            "y": 110.189894
+          },
+          {
+            "x": "2026-09-22",
+            "y": 111.099229
+          },
+          {
+            "x": "2026-09-23",
+            "y": 110.831771
+          },
+          {
+            "x": "2026-09-24",
+            "y": 111.018986
+          },
+          {
+            "x": "2026-09-25",
+            "y": 115.699382
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+4.22%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 44,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 126.859561,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.630372,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI Servers: Dell +5.01%, SMCI +4.22%",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 121.35958
+      },
+      "displayText": "121.36",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

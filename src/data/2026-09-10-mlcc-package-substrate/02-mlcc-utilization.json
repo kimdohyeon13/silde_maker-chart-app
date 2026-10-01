@@ -1,0 +1,316 @@
+{
+  "id": "02-mlcc-utilization",
+  "sourceImage": "input/02-mlcc-utilization.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 각 사 실적 발표, 2026년 5월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "주요 MLCC 업체의 분기별 공장 가동률",
+    "subtitle": "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다",
+    "source": "자료: 각 사 실적 발표, 2026년 5월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "maker",
+        "label": "업체",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "q2",
+        "label": "2Q25",
+        "dataType": "text",
+        "width": "17%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q3",
+        "label": "3Q25",
+        "dataType": "text",
+        "width": "17%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q4",
+        "label": "4Q25",
+        "dataType": "text",
+        "width": "17%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q5",
+        "label": "1Q26",
+        "dataType": "text",
+        "width": "17%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "q6",
+        "label": "2Q26E",
+        "dataType": "text",
+        "width": "17%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "maker": {
+            "value": "삼성전기",
+            "displayValue": "삼성전기"
+          },
+          "q2": {
+            "value": "90%",
+            "displayValue": "90%"
+          },
+          "q3": {
+            "value": "98%",
+            "displayValue": "98%"
+          },
+          "q4": {
+            "value": "92%",
+            "displayValue": "92%"
+          },
+          "q5": {
+            "value": "92%",
+            "displayValue": "92%"
+          },
+          "q6": {
+            "value": "95%",
+            "displayValue": "95%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "maker": {
+            "value": "무라타",
+            "displayValue": "무라타"
+          },
+          "q2": {
+            "value": "85~90%",
+            "displayValue": "85~90%"
+          },
+          "q3": {
+            "value": "90~95%",
+            "displayValue": "90~95%"
+          },
+          "q4": {
+            "value": "90~95%",
+            "displayValue": "90~95%"
+          },
+          "q5": {
+            "value": "95%",
+            "displayValue": "95%"
+          },
+          "q6": {
+            "value": "95%",
+            "displayValue": "95%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "maker": {
+            "value": "타이요유덴",
+            "displayValue": "타이요유덴"
+          },
+          "q2": {
+            "value": "85%",
+            "displayValue": "85%"
+          },
+          "q3": {
+            "value": "90%",
+            "displayValue": "90%"
+          },
+          "q4": {
+            "value": "85%",
+            "displayValue": "85%"
+          },
+          "q5": {
+            "value": "85%",
+            "displayValue": "85%"
+          },
+          "q6": {
+            "value": "90%",
+            "displayValue": "90%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "maker": {
+            "value": "야게오 범용",
+            "displayValue": "야게오 범용"
+          },
+          "q2": {
+            "value": "65%",
+            "displayValue": "65%"
+          },
+          "q3": {
+            "value": "65%",
+            "displayValue": "65%"
+          },
+          "q4": {
+            "value": "75%",
+            "displayValue": "75%"
+          },
+          "q5": {
+            "value": "72%",
+            "displayValue": "72%"
+          },
+          "q6": {
+            "value": "75%",
+            "displayValue": "75%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "maker": {
+            "value": "야게오 고부가",
+            "displayValue": "야게오 고부가"
+          },
+          "q2": {
+            "value": "80%",
+            "displayValue": "80%"
+          },
+          "q3": {
+            "value": "85%",
+            "displayValue": "85%"
+          },
+          "q4": {
+            "value": "80%",
+            "displayValue": "80%"
+          },
+          "q5": {
+            "value": "82%",
+            "displayValue": "82%"
+          },
+          "q6": {
+            "value": "85%",
+            "displayValue": "85%"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "compact",
+      "zebraStripe": true,
+      "highlightMode": "cell",
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "주요 MLCC 업체의 분기별 공장 가동률",
+    "subMessage": "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다",
+    "headline": "주요 MLCC 업체의 분기별 공장 가동률",
+    "summary": "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 각 사 실적 발표, 2026년 5월"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "주요 MLCC 업체의 분기별 ",
+      "reason": "1선 업체는 90%를 넘겼고 2선 업체도 80% 선을 회복했습니다"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

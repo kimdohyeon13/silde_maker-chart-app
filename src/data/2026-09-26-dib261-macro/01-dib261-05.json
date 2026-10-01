@@ -1,0 +1,478 @@
+{
+  "id": "dib261-05",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-05.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "WTI, 이란 협상 진전 관측에 하락",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original series, 2026-06-25 start (same first bar as the origin), 2026-09-25 focus date, and raw-value line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "chart number prefix dropped from the title",
+      "CL=F front-month as in the origin; rolled Oct->Nov (CLX26) on 2026-09-23, today move measured on the 17:00 ET values of the Nov contract; see input/SOURCE.txt"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-sign-color",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 24일과 25일 값으로 계산했고 상승 빨강, 하락 파랑으로 칠했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@wtm_waltechman",
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "WTI, 이란 협상 진전 관측에 하락",
+    "subtitle": "9월 25일: 배럴당 92.44달러, 하루 새 2.45% 하락",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-06-25 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-25",
+        "2026-07-15",
+        "2026-08-03",
+        "2026-08-19",
+        "2026-09-08",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "06-25",
+        "07-15",
+        "08-03",
+        "08-19",
+        "09-08",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "달러/배럴",
+      "type": "value",
+      "tickValues": [
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 60,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "WTI",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "WTI",
+        "data": [
+          {
+            "x": "2026-06-25",
+            "y": 71.92
+          },
+          {
+            "x": "2026-06-26",
+            "y": 69.23
+          },
+          {
+            "x": "2026-06-29",
+            "y": 70.75
+          },
+          {
+            "x": "2026-06-30",
+            "y": 69.5
+          },
+          {
+            "x": "2026-07-01",
+            "y": 68.58
+          },
+          {
+            "x": "2026-07-02",
+            "y": 68.69
+          },
+          {
+            "x": "2026-07-06",
+            "y": 68.55
+          },
+          {
+            "x": "2026-07-07",
+            "y": 70.44
+          },
+          {
+            "x": "2026-07-08",
+            "y": 73.52
+          },
+          {
+            "x": "2026-07-09",
+            "y": 72.08
+          },
+          {
+            "x": "2026-07-10",
+            "y": 71.41
+          },
+          {
+            "x": "2026-07-13",
+            "y": 78.14
+          },
+          {
+            "x": "2026-07-14",
+            "y": 79.34
+          },
+          {
+            "x": "2026-07-15",
+            "y": 79.6
+          },
+          {
+            "x": "2026-07-16",
+            "y": 78.95
+          },
+          {
+            "x": "2026-07-17",
+            "y": 82.49
+          },
+          {
+            "x": "2026-07-20",
+            "y": 83.23
+          },
+          {
+            "x": "2026-07-21",
+            "y": 84.91
+          },
+          {
+            "x": "2026-07-22",
+            "y": 86.83
+          },
+          {
+            "x": "2026-07-23",
+            "y": 92.19
+          },
+          {
+            "x": "2026-07-24",
+            "y": 89.31
+          },
+          {
+            "x": "2026-07-27",
+            "y": 82.61
+          },
+          {
+            "x": "2026-07-28",
+            "y": 79.26
+          },
+          {
+            "x": "2026-07-29",
+            "y": 84.46
+          },
+          {
+            "x": "2026-07-30",
+            "y": 83.59
+          },
+          {
+            "x": "2026-07-31",
+            "y": 84.67
+          },
+          {
+            "x": "2026-08-03",
+            "y": 80.34
+          },
+          {
+            "x": "2026-08-04",
+            "y": 75.77
+          },
+          {
+            "x": "2026-08-05",
+            "y": 75.22
+          },
+          {
+            "x": "2026-08-06",
+            "y": 77.29
+          },
+          {
+            "x": "2026-08-07",
+            "y": 78.18
+          },
+          {
+            "x": "2026-08-10",
+            "y": 82.13
+          },
+          {
+            "x": "2026-08-11",
+            "y": 83.2
+          },
+          {
+            "x": "2026-08-12",
+            "y": 83.27
+          },
+          {
+            "x": "2026-08-13",
+            "y": 81.25
+          },
+          {
+            "x": "2026-08-14",
+            "y": 82.4
+          },
+          {
+            "x": "2026-08-17",
+            "y": 84.5
+          },
+          {
+            "x": "2026-08-18",
+            "y": 84.94
+          },
+          {
+            "x": "2026-08-19",
+            "y": 85.83
+          },
+          {
+            "x": "2026-08-20",
+            "y": 87.83
+          },
+          {
+            "x": "2026-08-21",
+            "y": 87.06
+          },
+          {
+            "x": "2026-08-24",
+            "y": 85.01
+          },
+          {
+            "x": "2026-08-25",
+            "y": 82.36
+          },
+          {
+            "x": "2026-08-26",
+            "y": 82.23
+          },
+          {
+            "x": "2026-08-27",
+            "y": 83.53
+          },
+          {
+            "x": "2026-08-28",
+            "y": 83.4
+          },
+          {
+            "x": "2026-08-31",
+            "y": 85.76
+          },
+          {
+            "x": "2026-09-01",
+            "y": 90.22
+          },
+          {
+            "x": "2026-09-02",
+            "y": 91.01
+          },
+          {
+            "x": "2026-09-03",
+            "y": 91.3
+          },
+          {
+            "x": "2026-09-04",
+            "y": 91.48
+          },
+          {
+            "x": "2026-09-08",
+            "y": 93.03
+          },
+          {
+            "x": "2026-09-09",
+            "y": 96.05
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.48
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.05
+          },
+          {
+            "x": "2026-09-14",
+            "y": 101.39
+          },
+          {
+            "x": "2026-09-15",
+            "y": 105.83
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.43
+          },
+          {
+            "x": "2026-09-17",
+            "y": 101.91
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.3
+          },
+          {
+            "x": "2026-09-21",
+            "y": 95.78
+          },
+          {
+            "x": "2026-09-22",
+            "y": 94.59
+          },
+          {
+            "x": "2026-09-23",
+            "y": 92.16
+          },
+          {
+            "x": "2026-09-24",
+            "y": 94.61
+          },
+          {
+            "x": "2026-09-25",
+            "y": 92.44
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-2.45%",
+          "color": "#175CD3",
+          "layout": "two-column",
+          "label": "오늘"
+        }
+      }
+    ],
+    "totalDataPoints": 65,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 25일: 배럴당 92.44달러, 하루 새 2.45% 하락",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 105.83,
+        "series": "all"
+      },
+      "min": {
+        "value": 68.55,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "WTI, 이란 협상 진전 관측에 하락",
+    "subMessage": "9월 25일: 배럴당 92.44달러, 하루 새 2.45% 하락"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 92.44
+      },
+      "displayText": "92.44",
+      "reason": "9월 25일: 배럴당 92.44달러, 하루 새 2.45% 하락"
+    },
+    "densityLevel": "focused"
+  }
+}

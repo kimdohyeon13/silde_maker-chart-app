@@ -1,0 +1,405 @@
+{
+  "id": "dib261-28",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-28.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "양자·우주 보합권(아이온큐·로켓랩)",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-26) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "양자·우주 보합권(아이온큐·로켓랩)",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-08-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-26",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-21",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "08-26",
+        "09-01",
+        "09-08",
+        "09-15",
+        "09-21",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "아이온큐",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "로켓랩",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "아이온큐",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100
+          },
+          {
+            "x": "2026-08-27",
+            "y": 106.0704
+          },
+          {
+            "x": "2026-08-28",
+            "y": 97.9266
+          },
+          {
+            "x": "2026-08-31",
+            "y": 98.2014
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.3792
+          },
+          {
+            "x": "2026-09-02",
+            "y": 94.0295
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.4769
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.726
+          },
+          {
+            "x": "2026-09-08",
+            "y": 101.0992
+          },
+          {
+            "x": "2026-09-09",
+            "y": 95.2785
+          },
+          {
+            "x": "2026-09-10",
+            "y": 92.031
+          },
+          {
+            "x": "2026-09-11",
+            "y": 91.8061
+          },
+          {
+            "x": "2026-09-14",
+            "y": 93.6797
+          },
+          {
+            "x": "2026-09-15",
+            "y": 92.5556
+          },
+          {
+            "x": "2026-09-16",
+            "y": 92.031
+          },
+          {
+            "x": "2026-09-17",
+            "y": 100.7744
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.7517
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.1991
+          },
+          {
+            "x": "2026-09-22",
+            "y": 101.7737
+          },
+          {
+            "x": "2026-09-23",
+            "y": 106.2703
+          },
+          {
+            "x": "2026-09-24",
+            "y": 112.3657
+          },
+          {
+            "x": "2026-09-25",
+            "y": 113.6148
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+1.11%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "로켓랩",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100
+          },
+          {
+            "x": "2026-08-27",
+            "y": 102.0399
+          },
+          {
+            "x": "2026-08-28",
+            "y": 97.2953
+          },
+          {
+            "x": "2026-08-31",
+            "y": 96.5851
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.4998
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.346
+          },
+          {
+            "x": "2026-09-03",
+            "y": 96.4189
+          },
+          {
+            "x": "2026-09-04",
+            "y": 97.0988
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.5316
+          },
+          {
+            "x": "2026-09-09",
+            "y": 95.3007
+          },
+          {
+            "x": "2026-09-10",
+            "y": 93.6234
+          },
+          {
+            "x": "2026-09-11",
+            "y": 95.1194
+          },
+          {
+            "x": "2026-09-14",
+            "y": 94.515
+          },
+          {
+            "x": "2026-09-15",
+            "y": 96.026
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.2526
+          },
+          {
+            "x": "2026-09-17",
+            "y": 102.4781
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.5672
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.6059
+          },
+          {
+            "x": "2026-09-22",
+            "y": 108.764
+          },
+          {
+            "x": "2026-09-23",
+            "y": 106.2406
+          },
+          {
+            "x": "2026-09-24",
+            "y": 111.227
+          },
+          {
+            "x": "2026-09-25",
+            "y": 111.7407
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+0.46%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 44,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 113.6148,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.8061,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "양자·우주 보합권(아이온큐·로켓랩)",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 113.6148
+      },
+      "displayText": "113.61",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

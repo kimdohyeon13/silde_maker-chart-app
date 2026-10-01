@@ -1,0 +1,254 @@
+{
+  "id": "software-pe",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Software, Security Fwd P/E: Oracle Lowest",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [
+      "slide_maker_dark: approved dark terminal palette, frame, header and density rules",
+      "slide_maker_dark: title, labels, axes and source raised to white-mint contrast"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "Software, Security Fwd P/E: Oracle Lowest",
+    "subtitle": "Unit: x",
+    "source": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "CRWD",
+        "PLTR",
+        "PANW",
+        "FTNT",
+        "ZS",
+        "ORCL"
+      ],
+      "displayTickValues": [
+        "CrowdStrike",
+        "Palantir",
+        "Palo Alto",
+        "Fortinet",
+        "Zscaler",
+        "Oracle"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "CRWD",
+        "PLTR",
+        "PANW",
+        "FTNT",
+        "ZS",
+        "ORCL"
+      ],
+      "displayTickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "CrowdStrike",
+        "Palantir",
+        "Palo Alto",
+        "Fortinet",
+        "Zscaler",
+        "Oracle"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "Forward P/E",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Forward P/E",
+        "data": [
+          {
+            "x": "CRWD",
+            "y": 161.7,
+            "displayLabel": "161.7",
+            "color": "#275A50"
+          },
+          {
+            "x": "PLTR",
+            "y": 81.8,
+            "displayLabel": "81.8",
+            "color": "#275A50"
+          },
+          {
+            "x": "PANW",
+            "y": 79.3,
+            "displayLabel": "79.3",
+            "color": "#275A50"
+          },
+          {
+            "x": "FTNT",
+            "y": 46.9,
+            "displayLabel": "46.9",
+            "color": "#275A50"
+          },
+          {
+            "x": "ZS",
+            "y": 37.8,
+            "displayLabel": "37.8",
+            "color": "#275A50"
+          },
+          {
+            "x": "ORCL",
+            "y": 13.3,
+            "displayLabel": "13.3",
+            "color": "#00E0A4"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Oracle 13.3x with 35.1% EPS growth outlook",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 161.7,
+        "at": "CRWD"
+      },
+      "min": {
+        "value": 13.3,
+        "at": "ORCL"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Software, Security Fwd P/E: Oracle Lowest",
+    "subMessage": "Oracle 13.3x with 35.1% EPS growth outlook",
+    "headline": "Software, Security Fwd P/E: Oracle Lowest",
+    "summary": "Oracle 13.3x with 35.1% EPS growth outlook",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "CRWD",
+        "y": 161.7
+      },
+      "displayText": "161.7",
+      "reason": "Oracle 13.3x with 35.1% EPS growth outlook"
+    },
+    "densityLevel": "focused"
+  }
+}

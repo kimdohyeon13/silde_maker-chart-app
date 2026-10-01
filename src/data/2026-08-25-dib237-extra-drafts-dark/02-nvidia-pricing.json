@@ -1,0 +1,203 @@
+{
+  "id": "02-nvidia-pricing",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "exact",
+    "preservedElements": [
+      "S11에 명시된 두 수치",
+      "가격 인상 적용 시점과 대상 시스템",
+      "Vera Rubin 200 랙의 비용 전망",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "1,920×1,080 16:9 비교표 레이아웃",
+      "두 수치를 한 표로 정리",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "dib-237 S11의 블룸버그 보도에 명시된 수치와 조건만 사용했습니다. 메모리 가격 상승은 인상 이유로 제시된 설명을 보존했습니다.",
+    "sourceAttribution": "자료: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "두 행 비교표로 형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다."
+    },
+    {
+      "id": "source-exact",
+      "label": "S11 명시 수치 보존",
+      "status": "pass",
+      "detail": "S11의 최대 인상률, 적용 조건, 랙 비용 전망을 그대로 옮겼고 추가 계산이나 추정은 넣지 않았습니다."
+    },
+    {
+      "id": "paired-data",
+      "label": "한영 수치·순서·색상 일치",
+      "status": "pass",
+      "detail": "영문판은 같은 두 행과 수치를 사용하고 텍스트만 자연스럽게 번역했습니다."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 캔버스",
+      "status": "pass",
+      "detail": "canvasHeight 540으로 1,920×1,080 출력을 계약했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "ko",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "엔비디아 AI 서버 가격과 랙 경제성",
+    "subtitle": "내년 초 출하분 최대 17% 인상, Vera Rubin 200랙은 800만 달러 초과 전망",
+    "source": "자료: Bloomberg"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "구분",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "48%",
+        "align": "left"
+      },
+      {
+        "key": "reading",
+        "label": "수치",
+        "dataType": "text",
+        "width": "52%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "AI 서버 가격 (Vera Rubin·Grace Blackwell 시스템)",
+            "displayValue": "AI 서버 가격 (Vera Rubin·Grace Blackwell 시스템)"
+          },
+          "reading": {
+            "value": "최대 17% 인상 · 내년 초 출하분",
+            "displayValue": "최대 17% 인상 · 내년 초 출하분"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Vera Rubin 200랙",
+            "displayValue": "Vera Rubin 200랙"
+          },
+          "reading": {
+            "value": "800만 달러 초과 전망",
+            "displayValue": "800만 달러 초과 전망"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "lineHeight": 1,
+      "fontSize": {
+        "header": "17px",
+        "body": "22px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "numeric": 700,
+        "rowHeader": 700,
+        "header": 700,
+        "groupHeader": 700
+      },
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "rowHeight": 29,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "엔비디아 AI 서버 가격과 랙 경제성",
+    "subMessage": "내년 초 출하분 최대 17% 인상, Vera Rubin 200랙은 800만 달러 초과 전망",
+    "headline": "엔비디아 AI 서버 가격과 랙 경제성",
+    "summary": "블룸버그는 엔비디아가 주요 고객에게 AI 서버 가격을 최대 17% 올리겠다고 통보했다고 전했습니다.",
+    "story": "인상은 내년 초 출하분부터 적용되고 Vera Rubin과 Grace Blackwell 칩을 얹은 시스템이 대상입니다. Vera Rubin 200랙은 개당 800만 달러를 넘어설 것으로 전망됩니다. 메모리 가격 상승이 이유로 제시됐습니다.",
+    "keyTakeaways": [
+      "가격 인상 폭은 최대 17%입니다.",
+      "적용 대상은 Vera Rubin과 Grace Blackwell 시스템의 내년 초 출하분입니다.",
+      "Vera Rubin 200랙은 개당 800만 달러를 넘어설 전망입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "두 수치와 적용 조건을 Bloomberg 원문과 대조합니다.",
+    "contextualNotes": [
+      "출처: Bloomberg",
+      "메모리 가격 상승이 가격 인상 이유로 제시됐습니다."
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "accent": "#00E0A4",
+      "backgroundTone": "dark",
+      "positive": "#D92D20",
+      "negative": "#175CD3"
+    },
+    "densityLevel": "balanced"
+  }
+}

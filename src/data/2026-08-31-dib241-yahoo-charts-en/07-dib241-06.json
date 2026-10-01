@@ -1,0 +1,743 @@
+{
+  "id": "dib241-06",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-241-06.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "22. Dollar vs Yen ETFs",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the August 31, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#1E755F",
+    "borderColor": "#D7DFDC",
+    "chartHeight": 340,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 260,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "22. Dollar vs Yen ETFs",
+    "subtitle": "Aug 31: Dollar -0.21%, Yen +0.24%",
+    "source": "Source: Yahoo Finance · through the August 31, 2026 close",
+    "timeRange": "2026-06-01 to 2026-08-31",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-01",
+        "2026-06-17",
+        "2026-07-08",
+        "2026-07-27",
+        "2026-08-13",
+        "2026-08-31"
+      ],
+      "displayTickValues": [
+        "06-01",
+        "06-17",
+        "07-08",
+        "07-27",
+        "08-13",
+        "08-31"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "3 months ago = 100",
+      "type": "value",
+      "tickValues": [
+        "97",
+        "98",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 97,
+      "max": 104
+    },
+    "legend": [
+      {
+        "name": "Dollar ETF",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Yen ETF",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Dollar ETF",
+        "data": [
+          {
+            "x": "2026-06-01",
+            "y": 100
+          },
+          {
+            "x": "2026-06-02",
+            "y": 100
+          },
+          {
+            "x": "2026-06-03",
+            "y": 100.3602
+          },
+          {
+            "x": "2026-06-04",
+            "y": 100.2882
+          },
+          {
+            "x": "2026-06-05",
+            "y": 100.9366
+          },
+          {
+            "x": "2026-06-08",
+            "y": 100.9726
+          },
+          {
+            "x": "2026-06-09",
+            "y": 100.9006
+          },
+          {
+            "x": "2026-06-10",
+            "y": 101.0447
+          },
+          {
+            "x": "2026-06-11",
+            "y": 100.6844
+          },
+          {
+            "x": "2026-06-12",
+            "y": 100.6844
+          },
+          {
+            "x": "2026-06-15",
+            "y": 100.7565
+          },
+          {
+            "x": "2026-06-16",
+            "y": 100.6124
+          },
+          {
+            "x": "2026-06-17",
+            "y": 101.513
+          },
+          {
+            "x": "2026-06-18",
+            "y": 101.9452
+          },
+          {
+            "x": "2026-06-22",
+            "y": 102.1614
+          },
+          {
+            "x": "2026-06-23",
+            "y": 102.4856
+          },
+          {
+            "x": "2026-06-24",
+            "y": 102.7738
+          },
+          {
+            "x": "2026-06-25",
+            "y": 102.5937
+          },
+          {
+            "x": "2026-06-26",
+            "y": 102.5216
+          },
+          {
+            "x": "2026-06-29",
+            "y": 102.1974
+          },
+          {
+            "x": "2026-06-30",
+            "y": 102.3415
+          },
+          {
+            "x": "2026-07-01",
+            "y": 102.6297
+          },
+          {
+            "x": "2026-07-02",
+            "y": 102.0893
+          },
+          {
+            "x": "2026-07-06",
+            "y": 102.0173
+          },
+          {
+            "x": "2026-07-07",
+            "y": 102.3055
+          },
+          {
+            "x": "2026-07-08",
+            "y": 102.1614
+          },
+          {
+            "x": "2026-07-09",
+            "y": 102.1614
+          },
+          {
+            "x": "2026-07-10",
+            "y": 102.2694
+          },
+          {
+            "x": "2026-07-13",
+            "y": 102.6657
+          },
+          {
+            "x": "2026-07-14",
+            "y": 102.2694
+          },
+          {
+            "x": "2026-07-15",
+            "y": 101.7651
+          },
+          {
+            "x": "2026-07-16",
+            "y": 102.0893
+          },
+          {
+            "x": "2026-07-17",
+            "y": 102.0533
+          },
+          {
+            "x": "2026-07-20",
+            "y": 102.2694
+          },
+          {
+            "x": "2026-07-21",
+            "y": 102.5937
+          },
+          {
+            "x": "2026-07-22",
+            "y": 102.4856
+          },
+          {
+            "x": "2026-07-23",
+            "y": 102.8818
+          },
+          {
+            "x": "2026-07-24",
+            "y": 102.9539
+          },
+          {
+            "x": "2026-07-27",
+            "y": 103.0259
+          },
+          {
+            "x": "2026-07-28",
+            "y": 102.9539
+          },
+          {
+            "x": "2026-07-29",
+            "y": 102.3775
+          },
+          {
+            "x": "2026-07-30",
+            "y": 101.3689
+          },
+          {
+            "x": "2026-07-31",
+            "y": 101.4769
+          },
+          {
+            "x": "2026-08-03",
+            "y": 101.4769
+          },
+          {
+            "x": "2026-08-04",
+            "y": 101.4409
+          },
+          {
+            "x": "2026-08-05",
+            "y": 101.1888
+          },
+          {
+            "x": "2026-08-06",
+            "y": 101.549
+          },
+          {
+            "x": "2026-08-07",
+            "y": 101.1167
+          },
+          {
+            "x": "2026-08-10",
+            "y": 101.3689
+          },
+          {
+            "x": "2026-08-11",
+            "y": 101.3689
+          },
+          {
+            "x": "2026-08-12",
+            "y": 101.585
+          },
+          {
+            "x": "2026-08-13",
+            "y": 101.513
+          },
+          {
+            "x": "2026-08-14",
+            "y": 101.2608
+          },
+          {
+            "x": "2026-08-17",
+            "y": 101.2248
+          },
+          {
+            "x": "2026-08-18",
+            "y": 101.3689
+          },
+          {
+            "x": "2026-08-19",
+            "y": 100.4323
+          },
+          {
+            "x": "2026-08-20",
+            "y": 100.5403
+          },
+          {
+            "x": "2026-08-21",
+            "y": 100.5043
+          },
+          {
+            "x": "2026-08-24",
+            "y": 100.7205
+          },
+          {
+            "x": "2026-08-25",
+            "y": 100.6484
+          },
+          {
+            "x": "2026-08-26",
+            "y": 100.9366
+          },
+          {
+            "x": "2026-08-27",
+            "y": 100.9366
+          },
+          {
+            "x": "2026-08-28",
+            "y": 101.513
+          },
+          {
+            "x": "2026-08-31",
+            "y": 101.2968
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-0.21%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Yen ETF",
+        "data": [
+          {
+            "x": "2026-06-01",
+            "y": 100
+          },
+          {
+            "x": "2026-06-02",
+            "y": 99.8609
+          },
+          {
+            "x": "2026-06-03",
+            "y": 99.7044
+          },
+          {
+            "x": "2026-06-04",
+            "y": 99.7218
+          },
+          {
+            "x": "2026-06-05",
+            "y": 99.6522
+          },
+          {
+            "x": "2026-06-08",
+            "y": 99.6001
+          },
+          {
+            "x": "2026-06-09",
+            "y": 99.5131
+          },
+          {
+            "x": "2026-06-10",
+            "y": 99.4088
+          },
+          {
+            "x": "2026-06-11",
+            "y": 99.8609
+          },
+          {
+            "x": "2026-06-12",
+            "y": 99.5653
+          },
+          {
+            "x": "2026-06-15",
+            "y": 99.5305
+          },
+          {
+            "x": "2026-06-16",
+            "y": 99.4436
+          },
+          {
+            "x": "2026-06-17",
+            "y": 99.2697
+          },
+          {
+            "x": "2026-06-18",
+            "y": 98.8524
+          },
+          {
+            "x": "2026-06-22",
+            "y": 98.748
+          },
+          {
+            "x": "2026-06-23",
+            "y": 98.7654
+          },
+          {
+            "x": "2026-06-24",
+            "y": 98.5916
+          },
+          {
+            "x": "2026-06-25",
+            "y": 98.5742
+          },
+          {
+            "x": "2026-06-26",
+            "y": 98.6089
+          },
+          {
+            "x": "2026-06-29",
+            "y": 98.522
+          },
+          {
+            "x": "2026-06-30",
+            "y": 98.1395
+          },
+          {
+            "x": "2026-07-01",
+            "y": 98.1221
+          },
+          {
+            "x": "2026-07-02",
+            "y": 99.0263
+          },
+          {
+            "x": "2026-07-06",
+            "y": 98.4003
+          },
+          {
+            "x": "2026-07-07",
+            "y": 98.4698
+          },
+          {
+            "x": "2026-07-08",
+            "y": 98.1742
+          },
+          {
+            "x": "2026-07-09",
+            "y": 98.209
+          },
+          {
+            "x": "2026-07-10",
+            "y": 98.6611
+          },
+          {
+            "x": "2026-07-13",
+            "y": 98.1742
+          },
+          {
+            "x": "2026-07-14",
+            "y": 98.3655
+          },
+          {
+            "x": "2026-07-15",
+            "y": 98.2959
+          },
+          {
+            "x": "2026-07-16",
+            "y": 98.1568
+          },
+          {
+            "x": "2026-07-17",
+            "y": 98.2612
+          },
+          {
+            "x": "2026-07-20",
+            "y": 98.1742
+          },
+          {
+            "x": "2026-07-21",
+            "y": 97.7569
+          },
+          {
+            "x": "2026-07-22",
+            "y": 97.7743
+          },
+          {
+            "x": "2026-07-23",
+            "y": 97.3918
+          },
+          {
+            "x": "2026-07-24",
+            "y": 97.4439
+          },
+          {
+            "x": "2026-07-27",
+            "y": 97.3918
+          },
+          {
+            "x": "2026-07-28",
+            "y": 97.3744
+          },
+          {
+            "x": "2026-07-29",
+            "y": 97.6004
+          },
+          {
+            "x": "2026-07-30",
+            "y": 100.1217
+          },
+          {
+            "x": "2026-07-31",
+            "y": 100.2608
+          },
+          {
+            "x": "2026-08-03",
+            "y": 101.7214
+          },
+          {
+            "x": "2026-08-04",
+            "y": 101.1129
+          },
+          {
+            "x": "2026-08-05",
+            "y": 101.1129
+          },
+          {
+            "x": "2026-08-06",
+            "y": 100.6608
+          },
+          {
+            "x": "2026-08-07",
+            "y": 101.2694
+          },
+          {
+            "x": "2026-08-10",
+            "y": 100.1913
+          },
+          {
+            "x": "2026-08-11",
+            "y": 100.2087
+          },
+          {
+            "x": "2026-08-12",
+            "y": 100.0174
+          },
+          {
+            "x": "2026-08-13",
+            "y": 100.0348
+          },
+          {
+            "x": "2026-08-14",
+            "y": 100.1217
+          },
+          {
+            "x": "2026-08-17",
+            "y": 100.0348
+          },
+          {
+            "x": "2026-08-18",
+            "y": 99.9478
+          },
+          {
+            "x": "2026-08-19",
+            "y": 100.8868
+          },
+          {
+            "x": "2026-08-20",
+            "y": 100.2608
+          },
+          {
+            "x": "2026-08-21",
+            "y": 100.3304
+          },
+          {
+            "x": "2026-08-24",
+            "y": 100.226
+          },
+          {
+            "x": "2026-08-25",
+            "y": 100.2087
+          },
+          {
+            "x": "2026-08-26",
+            "y": 100.0696
+          },
+          {
+            "x": "2026-08-27",
+            "y": 99.9826
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.5552
+          },
+          {
+            "x": "2026-08-31",
+            "y": 99.7913
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+0.24%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 128,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Aug 31: Dollar -0.21%, Yen +0.24%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 103.0259371241429,
+        "series": "all"
+      },
+      "min": {
+        "value": 97.37437251677362,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "22. Dollar vs Yen ETFs",
+    "subMessage": "Aug 31: Dollar -0.21%, Yen +0.24%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F",
+        "#4AA8FF",
+        "#A78BFA",
+        "#F472B6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-08-31",
+        "y": 101.2968
+      },
+      "displayText": "101.2968",
+      "reason": "Aug 31: Dollar -0.21%, Yen +0.24%"
+    },
+    "densityLevel": "focused"
+  }
+}

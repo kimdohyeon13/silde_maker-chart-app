@@ -1,0 +1,587 @@
+{
+  "id": "dib262-22",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-262-22.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "대형 기술주, 금리 부담에 일제히 약세",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "Alphabet drawn with GOOGL; printed 342.75 / -0.34% match GOOGL, not GOOG"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 28일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "대형 기술주, 금리 부담에 일제히 약세",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 28일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-16",
+        "2026-09-22",
+        "2026-09-28"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-16",
+        "09-22",
+        "09-28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "마이크로소프트",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "아마존",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "알파벳",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "애플",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "마이크로소프트",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.764017
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.936092
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.557864
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.503815
+          },
+          {
+            "x": "2026-09-08",
+            "y": 97.370341
+          },
+          {
+            "x": "2026-09-09",
+            "y": 96.916948
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.072679
+          },
+          {
+            "x": "2026-09-11",
+            "y": 97.701511
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.629402
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.995227
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.650827
+          },
+          {
+            "x": "2026-09-17",
+            "y": 98.119417
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.336827
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.88032
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.168699
+          },
+          {
+            "x": "2026-09-23",
+            "y": 98.679254
+          },
+          {
+            "x": "2026-09-24",
+            "y": 98.154898
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.750473
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.380452
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-1.35%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "아마존",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.132967
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.156064
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.66509
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.514964
+          },
+          {
+            "x": "2026-09-08",
+            "y": 98.922128
+          },
+          {
+            "x": "2026-09-09",
+            "y": 97.162877
+          },
+          {
+            "x": "2026-09-10",
+            "y": 96.966551
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.848986
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.601726
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.630754
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.683765
+          },
+          {
+            "x": "2026-09-17",
+            "y": 96.697083
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.667174
+          },
+          {
+            "x": "2026-09-21",
+            "y": 99.491867
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.156064
+          },
+          {
+            "x": "2026-09-23",
+            "y": 95.957969
+          },
+          {
+            "x": "2026-09-24",
+            "y": 96.000314
+          },
+          {
+            "x": "2026-09-25",
+            "y": 96.111949
+          },
+          {
+            "x": "2026-09-28",
+            "y": 94.756902
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-1.41%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "알파벳",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.724026
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.342858
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.922353
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.73773
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.70826
+          },
+          {
+            "x": "2026-09-09",
+            "y": 97.436272
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.010903
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.749519
+          },
+          {
+            "x": "2026-09-14",
+            "y": 102.9586
+          },
+          {
+            "x": "2026-09-15",
+            "y": 101.659055
+          },
+          {
+            "x": "2026-09-16",
+            "y": 101.037274
+          },
+          {
+            "x": "2026-09-17",
+            "y": 102.351549
+          },
+          {
+            "x": "2026-09-18",
+            "y": 103.0028
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.602916
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.480182
+          },
+          {
+            "x": "2026-09-23",
+            "y": 99.552079
+          },
+          {
+            "x": "2026-09-24",
+            "y": 100.886984
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.346694
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.001914
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "-0.34%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "애플",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 102.613223
+          },
+          {
+            "x": "2026-09-02",
+            "y": 102.559566
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.585288
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.984692
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.801166
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.523431
+          },
+          {
+            "x": "2026-09-10",
+            "y": 103.067698
+          },
+          {
+            "x": "2026-09-11",
+            "y": 104.866651
+          },
+          {
+            "x": "2026-09-14",
+            "y": 105.122291
+          },
+          {
+            "x": "2026-09-15",
+            "y": 104.573139
+          },
+          {
+            "x": "2026-09-16",
+            "y": 104.91084
+          },
+          {
+            "x": "2026-09-17",
+            "y": 106.359474
+          },
+          {
+            "x": "2026-09-18",
+            "y": 106.084898
+          },
+          {
+            "x": "2026-09-21",
+            "y": 106.984379
+          },
+          {
+            "x": "2026-09-22",
+            "y": 107.227393
+          },
+          {
+            "x": "2026-09-23",
+            "y": 106.365783
+          },
+          {
+            "x": "2026-09-24",
+            "y": 106.018623
+          },
+          {
+            "x": "2026-09-25",
+            "y": 107.643996
+          },
+          {
+            "x": "2026-09-28",
+            "y": 106.801322
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "-0.78%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 80,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 107.643996,
+        "series": "all"
+      },
+      "min": {
+        "value": 94.683765,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "대형 기술주, 금리 부담에 일제히 약세",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-28",
+        "y": 100.380452
+      },
+      "displayText": "100.38",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

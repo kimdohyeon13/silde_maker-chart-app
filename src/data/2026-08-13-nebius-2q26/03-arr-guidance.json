@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-arr-guidance"
   },
   "allowedTransformations": [
     "translate-text",
@@ -87,12 +88,17 @@
       "type": "category",
       "tickValues": [
         "2Q26",
-        "가이던스 하단",
-        "가이던스 상단"
+        "Guidance low",
+        "Guidance high"
       ],
       "unit": "",
       "startsAtZero": false,
-      "isLogScale": false
+      "isLogScale": false,
+      "displayTickValues": [
+        "2Q26",
+        "가이던스 하단",
+        "가이던스 상단"
+      ]
     },
     "yAxis": {
       "label": "",
@@ -122,12 +128,12 @@
             "confidence": 0.74
           },
           {
-            "x": "가이던스 하단",
+            "x": "Guidance low",
             "y": 70,
             "confidence": 0.74
           },
           {
-            "x": "가이던스 상단",
+            "x": "Guidance high",
             "y": 90,
             "confidence": 0.74
           }

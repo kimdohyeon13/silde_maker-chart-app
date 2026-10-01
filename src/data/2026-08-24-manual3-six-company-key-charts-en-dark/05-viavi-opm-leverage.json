@@ -1,0 +1,203 @@
+{
+  "id": "05-viavi-opm-leverage",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "24.0%는 현재 실적, 27~29%는 분기 매출 5억달러 조건의 경영진 설명이다. 같은 기준으로 섞지 않고 조건을 제목에 남겼다.",
+    "sourceAttribution": "Source: Viavi management commentary",
+    "sourceKey": "05-viavi-opm-leverage"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@WorldTechRsrch",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Viavi operating-margin leverage",
+    "subtitle": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now",
+    "source": "Source: Viavi management commentary",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "current",
+        "low",
+        "high"
+      ],
+      "displayTickValues": [
+        "CY2Q26",
+        "$500M low",
+        "$500M high"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 32
+    },
+    "legend": [
+      {
+        "name": "Non-GAAP OPM",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Non-GAAP OPM",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "current",
+            "y": 24.0,
+            "confidence": 1.0,
+            "displayLabel": "24.0%"
+          },
+          {
+            "x": "low",
+            "y": 27.0,
+            "confidence": 1.0,
+            "displayLabel": "27%"
+          },
+          {
+            "x": "high",
+            "y": 29.0,
+            "confidence": 1.0,
+            "displayLabel": "29%"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Viavi operating-margin leverage",
+    "subMessage": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now",
+    "headline": "Viavi operating-margin leverage",
+    "summary": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Management sees 27-29% OPM at $500M quarterly revenue versus 24.0% now"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "id": "interconnect-value",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "GPU 랙 1대 기준 31만 5천 달러에서 116만 9천 달러로 늘어난다",
+    "preservedElements": [
+      "랙 1대 기준 금액",
+      "Scale-up과 Scale-out 구분",
+      "다섯 개 랙 구성의 순서",
+      "천 달러 단위"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking (2026-09-11)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "세대 5개를 가로로 놓고 Scale-up과 Scale-out을 위아래로 쌓는 누적 막대. 0 기준축, 단위 천 달러."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "엔비디아 랙 세대별 인터커넥트 부품 가치",
+    "subtitle": "GPU 랙 1대 기준 31만 5천 달러에서 116만 9천 달러로 늘어난다",
+    "source": "자료: 골드만삭스 Optical Networking (2026-09-11)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GB300",
+        "VR200-A",
+        "VR200-B",
+        "Kyber",
+        "Oberon"
+      ],
+      "displayTickValues": [
+        "GB300 NVL72",
+        "VR200 플러거블",
+        "VR200 CPO 25%",
+        "Kyber NVL144",
+        "Oberon 랙 1대"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "250",
+        "500",
+        "750",
+        "1000",
+        "1250"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1250
+    },
+    "legend": [
+      {
+        "name": "Scale-up",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Scale-out",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#BDD8D1"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Scale-up",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 140,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-A",
+            "y": 140,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-B",
+            "y": 140,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kyber",
+            "y": 381,
+            "confidence": 0.9
+          },
+          {
+            "x": "Oberon",
+            "y": 803,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      },
+      {
+        "name": "Scale-out",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 175,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-A",
+            "y": 349,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-B",
+            "y": 364,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kyber",
+            "y": 732,
+            "confidence": 0.9
+          },
+          {
+            "x": "Oberon",
+            "y": 366,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#BDD8D1"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 271.1,
+        "absoluteChange": 854,
+        "from": 315,
+        "to": 1169
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1169,
+        "at": "Oberon 랙 1대"
+      },
+      "min": {
+        "value": 140,
+        "at": "Oberon 랙 1대"
+      },
+      "average": 718,
+      "median": 504,
+      "range": 1029
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "엔비디아 랙 세대별 인터커넥트 부품 가치",
+    "subMessage": "GPU 랙 1대 기준 31만 5천 달러에서 116만 9천 달러로 늘어난다",
+    "headline": "엔비디아 랙 세대별 인터커넥트 부품 가치",
+    "summary": "GPU 랙 1대 기준 31만 5천 달러에서 116만 9천 달러로 늘어난다",
+    "story": "GPU 랙 1대 기준 31만 5천 달러에서 116만 9천 달러로 늘어난다",
+    "keyTakeaways": [
+      "GB300 랙 1대는 Scale-up 14만 달러, Scale-out 17만 5천 달러다.",
+      "Kyber는 Scale-out이 73만 2천 달러로 가장 크다.",
+      "Oberon 랙은 Scale-up이 80만 3천 달러로 뒤집힌다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "GB300 랙 1대는 Scale-up 14만 달러, Scale-out 17만 5천 달러다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking (2026-09-11)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

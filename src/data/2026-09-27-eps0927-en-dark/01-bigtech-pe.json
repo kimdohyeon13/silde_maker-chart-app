@@ -1,0 +1,264 @@
+{
+  "id": "bigtech-pe",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Big Tech Fwd P/E: Only Tesla in Triple Digits",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [
+      "slide_maker_dark: approved dark terminal palette, frame, header and density rules",
+      "slide_maker_dark: title, labels, axes and source raised to white-mint contrast"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "Big Tech Fwd P/E: Only Tesla in Triple Digits",
+    "subtitle": "Unit: x · Alphabet Class A",
+    "source": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "TSLA",
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "displayTickValues": [
+        "Tesla",
+        "Apple",
+        "Amazon",
+        "Alphabet",
+        "Meta",
+        "Microsoft",
+        "Nvidia"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "TSLA",
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "MSFT",
+        "NVDA"
+      ],
+      "displayTickValues": [
+        "0",
+        "50",
+        "100",
+        "150",
+        "200",
+        "Tesla",
+        "Apple",
+        "Amazon",
+        "Alphabet",
+        "Meta",
+        "Microsoft",
+        "Nvidia"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 200
+    },
+    "legend": [
+      {
+        "name": "Forward P/E",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Forward P/E",
+        "data": [
+          {
+            "x": "TSLA",
+            "y": 172.5,
+            "displayLabel": "172.5",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "AAPL",
+            "y": 35.2,
+            "displayLabel": "35.2",
+            "color": "#275A50"
+          },
+          {
+            "x": "AMZN",
+            "y": 24,
+            "displayLabel": "24.0",
+            "color": "#275A50"
+          },
+          {
+            "x": "GOOGL",
+            "y": 22.8,
+            "displayLabel": "22.8",
+            "color": "#275A50"
+          },
+          {
+            "x": "META",
+            "y": 21.6,
+            "displayLabel": "21.6",
+            "color": "#275A50"
+          },
+          {
+            "x": "MSFT",
+            "y": 21.1,
+            "displayLabel": "21.1",
+            "color": "#275A50"
+          },
+          {
+            "x": "NVDA",
+            "y": 14.4,
+            "displayLabel": "14.4",
+            "color": "#275A50"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 23 intraday price divided by next fiscal-year EPS estimate",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 172.5,
+        "at": "TSLA"
+      },
+      "min": {
+        "value": 14.4,
+        "at": "NVDA"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Big Tech Fwd P/E: Only Tesla in Triple Digits",
+    "subMessage": "Sep 23 intraday price divided by next fiscal-year EPS estimate",
+    "headline": "Big Tech Fwd P/E: Only Tesla in Triple Digits",
+    "summary": "Sep 23 intraday price divided by next fiscal-year EPS estimate",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "TSLA",
+        "y": 172.5
+      },
+      "displayText": "172.5",
+      "reason": "Sep 23 intraday price divided by next fiscal-year EPS estimate"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "id": "01-combo",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-08-27-nvidia-revenue-forward-pe-remake/input/source.png",
+  "analyzedAt": "2026-08-27T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "연간 매출액 추이 및 전망",
+    "originalMessage": "NVIDIA의 연간 매출액 전망과 전년 대비 성장률을 이중축으로 비교한다.",
+    "preservedElements": [
+      "이중축 콤보 차트",
+      "4개 항목의 원본 순서",
+      "매출액 막대와 성장률 점",
+      "좌우 축 단위",
+      "제목·주석·출처"
+    ],
+    "changedElements": [
+      "16:9 레이아웃",
+      "Paperlogy 900/300 타이포",
+      "여백과 범례 정렬"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "막대와 점의 값은 원본 화면의 축과 위치에서 판독했다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "4개 막대와 성장률 점, 좌우 축을 원본 순서로 보존했다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "화면 판독값",
+      "status": "pass",
+      "detail": "매출액 210·380·560·660, 성장률 65·82·44·69을 원본 축에서 판독했다."
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "제목 900, 보조 문구 300을 사용한다."
+    },
+    {
+      "id": "export-ready",
+      "label": "내보내기 설정",
+      "status": "pass",
+      "detail": "1,920×1,080 출력용 canvasHeight 540을 설정했다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "width": 1920,
+    "height": 1080,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "accentColor": "#1479C9",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "연간 매출액 추이 및 전망",
+    "subtitle": "매출액(좌축) · 전년 대비 성장률(우축)",
+    "source": "자료: NVIDIA, 삼성증권",
+    "footnote": "참고: 회계연도(1월 결산) 기준",
+    "timeRange": "2026~2028",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026",
+        "2027E",
+        "2028E",
+        "2028G"
+      ],
+      "displayTickValues": [
+        "2026",
+        "2027E",
+        "2028E",
+        "2028G"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "매출액 (10억 달러)",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 800,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "전년 대비",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "unit": "%",
+      "min": 0,
+      "max": 90,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "매출액 (좌축)",
+        "role": "primary",
+        "originalColor": "#B9BDCA",
+        "remakeColor": "#B9BDCA"
+      },
+      {
+        "name": "성장률 (우측)",
+        "role": "secondary",
+        "originalColor": "#1479C9",
+        "remakeColor": "#1479C9"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출액 (좌축)",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#B9BDCA",
+        "data": [
+          {
+            "x": "2026",
+            "y": 210,
+            "confidence": 0.82
+          },
+          {
+            "x": "2027E",
+            "y": 380,
+            "confidence": 0.82
+          },
+          {
+            "x": "2028E",
+            "y": 560,
+            "confidence": 0.82
+          },
+          {
+            "x": "2028G",
+            "y": 660,
+            "confidence": 0.82
+          }
+        ]
+      },
+      {
+        "name": "성장률 (우측)",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#1479C9",
+        "data": [
+          {
+            "x": "2026",
+            "y": 65,
+            "confidence": 0.78
+          },
+          {
+            "x": "2027E",
+            "y": 82,
+            "confidence": 0.78
+          },
+          {
+            "x": "2028E",
+            "y": 44,
+            "confidence": 0.78
+          },
+          {
+            "x": "2028G",
+            "y": 69,
+            "confidence": 0.78
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.8,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 44,
+      "max": 660,
+      "average": 258.75,
+      "latest": 660
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "매출액 전망은 2026년부터 2028년 가이던스까지 높아지고, 성장률은 2027년 컨센서스에서 가장 높다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "연간 매출액 추이 및 전망",
+    "subMessage": "회계연도(1월 결산) 기준 · E=컨센서스, G=가이던스",
+    "headline": "연간 매출액 추이 및 전망",
+    "summary": "매출액 막대와 성장률 점을 좌우 축에 표시한다.",
+    "keyTakeaways": []
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "2028G",
+        "y": 660
+      },
+      "displayText": "2028 가이던스",
+      "reason": "가장 높은 매출액 전망"
+    },
+    "annotations": [],
+    "trendLines": [],
+    "highlightZones": [],
+    "colorStrategy": {
+      "primary": "#B9BDCA",
+      "secondary": [
+        "#1479C9"
+      ],
+      "accent": "#1479C9",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

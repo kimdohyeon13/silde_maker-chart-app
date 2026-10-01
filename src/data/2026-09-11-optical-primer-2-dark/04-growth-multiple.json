@@ -1,0 +1,251 @@
+{
+  "id": "growth-multiple",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Scale-up이 45배로 가장 크고 전체 합계로는 29배 늘어난다",
+    "preservedElements": [
+      "배수 값",
+      "비교 기준(GB300 대비 VR300 NVL576)"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking (2026-09-11)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "항목 이름이 길어 가로 막대. 네 항목을 큰 값부터 배치하고 배수 단위로 통일."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "세대 교체로 늘어나는 네트워킹 배수",
+    "subtitle": "Scale-up이 45배로 가장 크고 전체 합계로는 29배 늘어난다",
+    "source": "자료: 골드만삭스 Optical Networking (2026-09-11)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "scale-up",
+        "total",
+        "scale-out",
+        "per72"
+      ],
+      "displayTickValues": [
+        "Scale-up 45배",
+        "네트워킹 합계 29배",
+        "Scale-out 16배",
+        "GPU 72개 환산 3.7배"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "증가 배수",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "증가 배수",
+        "data": [
+          {
+            "x": "scale-up",
+            "y": 45,
+            "confidence": 0.9
+          },
+          {
+            "x": "total",
+            "y": 29,
+            "confidence": 0.9
+          },
+          {
+            "x": "scale-out",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "per72",
+            "y": 3.7,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -91.8,
+        "absoluteChange": -41.3,
+        "from": 45,
+        "to": 3.7
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 45,
+        "at": "Scale-up 45배"
+      },
+      "min": {
+        "value": 3.7,
+        "at": "GPU 72개 환산 3.7배"
+      },
+      "average": 23.425,
+      "median": 29,
+      "range": 41.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "세대 교체로 늘어나는 네트워킹 배수",
+    "subMessage": "Scale-up이 45배로 가장 크고 전체 합계로는 29배 늘어난다",
+    "headline": "세대 교체로 늘어나는 네트워킹 배수",
+    "summary": "Scale-up이 45배로 가장 크고 전체 합계로는 29배 늘어난다",
+    "story": "Scale-up이 45배로 가장 크고 전체 합계로는 29배 늘어난다",
+    "keyTakeaways": [
+      "Scale-up 45배가 증가폭이 가장 크다.",
+      "컴퓨팅 유닛을 통째로 보면 29배다.",
+      "같은 GPU 72개로 맞춰 비교하면 3.7배다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Scale-up 45배가 증가폭이 가장 크다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking (2026-09-11)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "id": "06-switch-package-size",
+  "sourceImage": "input/06-switch-package-size.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 브로드컴 발표 자료, 2026년 5월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "브로드컴 스위치 칩 세대별 패키지 크기",
+    "subtitle": "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다",
+    "source": "자료: 브로드컴 발표 자료, 2026년 5월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "model",
+        "label": "제품",
+        "dataType": "text",
+        "width": "20%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "year",
+        "label": "연도",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "band",
+        "label": "스위치 대역폭",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "size",
+        "label": "패키지 크기",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "note",
+        "label": "비고",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "TH-3",
+            "displayValue": "TH-3"
+          },
+          "year": {
+            "value": "2017",
+            "displayValue": "2017"
+          },
+          "band": {
+            "value": "12.8 Tbps",
+            "displayValue": "12.8 Tbps"
+          },
+          "size": {
+            "value": "67.5×67.5mm",
+            "displayValue": "67.5×67.5mm"
+          },
+          "note": {
+            "value": "-",
+            "displayValue": "-"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "TH-4",
+            "displayValue": "TH-4"
+          },
+          "year": {
+            "value": "2019~20",
+            "displayValue": "2019~20"
+          },
+          "band": {
+            "value": "25.6 Tbps",
+            "displayValue": "25.6 Tbps"
+          },
+          "size": {
+            "value": "77.5×77.8mm",
+            "displayValue": "77.5×77.8mm"
+          },
+          "note": {
+            "value": "-",
+            "displayValue": "-"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "TH-5 Bailly",
+            "displayValue": "TH-5 Bailly"
+          },
+          "year": {
+            "value": "2023~24",
+            "displayValue": "2023~24"
+          },
+          "band": {
+            "value": "51.2 Tbps",
+            "displayValue": "51.2 Tbps"
+          },
+          "size": {
+            "value": "75×75mm",
+            "displayValue": "75×75mm"
+          },
+          "note": {
+            "value": "광엔진 8개",
+            "displayValue": "광엔진 8개"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "TH-6 Davisson",
+            "displayValue": "TH-6 Davisson"
+          },
+          "year": {
+            "value": "2025~26",
+            "displayValue": "2025~26"
+          },
+          "band": {
+            "value": "102.4 Tbps",
+            "displayValue": "102.4 Tbps"
+          },
+          "size": {
+            "value": "120×120mm",
+            "displayValue": "120×120mm"
+          },
+          "note": {
+            "value": "광엔진 16개",
+            "displayValue": "광엔진 16개"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "compact",
+      "zebraStripe": true,
+      "highlightMode": "cell",
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "브로드컴 스위치 칩 세대별 패키지 크기",
+    "subMessage": "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다",
+    "headline": "브로드컴 스위치 칩 세대별 패키지 크기",
+    "summary": "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 브로드컴 발표 자료, 2026년 5월"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "브로드컴 스위치 칩 세대별 패",
+      "reason": "광엔진을 함께 얹자 한 변이 75mm에서 120mm로 늘었습니다"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

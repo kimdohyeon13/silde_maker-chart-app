@@ -1,0 +1,364 @@
+{
+  "id": "02-samsung-hbm-history",
+  "mode": "faithful",
+  "sourceImage": "input/03-samsung-hbm-history.png",
+  "sourceImages": [
+    "input/03-samsung-hbm-history.png"
+  ],
+  "analyzedAt": "2026-08-25T15:00:00+09:00",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "HBM Development History",
+    "originalMessage": "Higher bandwidth is the primary driver of HBM evolution.",
+    "sourceKey": "samsung-hbm-development-history-hot-chips-2026",
+    "sourceAttribution": "Samsung · HBM Development History · Hot Chips 2026",
+    "preservedElements": [
+      "The original dual-axis combo format: capacity bars with a bandwidth line",
+      "All eight generations in the original order: HBM through HBM5",
+      "The left capacity axis and right bandwidth axis",
+      "The original blue-bar / contrasting-line relationship"
+    ],
+    "changedElements": [
+      "Title and subtitle rewritten in plain English",
+      "Source-like blue and orange colors replaced with accessible blue and magenta while keeping the two-series distinction",
+      "Point values are recorded as source-visible readings from the plotted grid",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The source image does not print point labels. Capacity and bandwidth values below are readings from the visible axes/grid, not newly asserted raw data."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-a",
+      "label": "Original combo-chart structure retained",
+      "status": "pass",
+      "detail": "Eight categories stay in order; capacity remains bars on the left axis and bandwidth remains a line on the right axis."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Source-visible values disclosed",
+      "status": "warning",
+      "detail": "The chart has no printed point labels. Values are read from the visible grid and must not be described as raw exact data."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "Title uses Paperlogy 900 and subtitle uses Paperlogy 300."
+    },
+    {
+      "id": "export-visual-qa",
+      "label": "Export and visual QA",
+      "status": "pending",
+      "detail": "Export/preflight intentionally left to the parent lane."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "HBM generations lift capacity and bandwidth",
+    "subtitle": "Bars = max capacity (GB) · line = bandwidth (TB/s) · HBM through HBM5",
+    "source": "Samsung · HBM Development History · Hot Chips 2026",
+    "timeRange": "HBM to HBM5",
+    "xAxis": {
+      "label": "HBM generation",
+      "type": "category",
+      "tickValues": [
+        "HBM",
+        "HBM2",
+        "HBM2E",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "HBM4E",
+        "HBM5"
+      ],
+      "displayTickValues": [
+        "HBM",
+        "HBM2",
+        "HBM2E",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "HBM4E",
+        "HBM5"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Max capacity",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "GB",
+      "min": 0,
+      "max": 70,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "Bandwidth",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "unit": "TB/s",
+      "min": 0,
+      "max": 7,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Max capacity [GB]",
+        "role": "primary",
+        "originalColor": "#5B9BD5",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Bandwidth [TB/s]",
+        "role": "secondary",
+        "originalColor": "#FF9900",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Max capacity [GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 4,
+            "confidence": 0.72
+          },
+          {
+            "x": "HBM2",
+            "y": 4,
+            "confidence": 0.72
+          },
+          {
+            "x": "HBM2E",
+            "y": 16,
+            "confidence": 0.76
+          },
+          {
+            "x": "HBM3",
+            "y": 16,
+            "confidence": 0.76
+          },
+          {
+            "x": "HBM3E",
+            "y": 36,
+            "confidence": 0.72
+          },
+          {
+            "x": "HBM4",
+            "y": 36,
+            "confidence": 0.72
+          },
+          {
+            "x": "HBM4E",
+            "y": 64,
+            "confidence": 0.76
+          },
+          {
+            "x": "HBM5",
+            "y": 64,
+            "confidence": 0.76
+          }
+        ]
+      },
+      {
+        "name": "Bandwidth [TB/s]",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 0.1,
+            "confidence": 0.45
+          },
+          {
+            "x": "HBM2",
+            "y": 0.25,
+            "confidence": 0.45
+          },
+          {
+            "x": "HBM2E",
+            "y": 0.3,
+            "confidence": 0.45
+          },
+          {
+            "x": "HBM3",
+            "y": 0.8,
+            "confidence": 0.5
+          },
+          {
+            "x": "HBM3E",
+            "y": 1,
+            "confidence": 0.55
+          },
+          {
+            "x": "HBM4",
+            "y": 3,
+            "confidence": 0.62
+          },
+          {
+            "x": "HBM4E",
+            "y": 4.1,
+            "confidence": 0.6
+          },
+          {
+            "x": "HBM5",
+            "y": 6.1,
+            "confidence": 0.6
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 16,
+    "quality": {
+      "overallConfidence": 0.61,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "The source chart prints no point labels; line values are approximate readings from the right-axis grid."
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.9,
+      "description": "Both capacity and bandwidth rise across generations in the source-visible chart.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.84,
+      "description": "The source-visible series make their largest jumps in HBM3E/HBM4E/HBM5."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 64,
+        "at": "HBM4E/HBM5"
+      },
+      "min": {
+        "value": 4,
+        "at": "HBM/HBM2"
+      },
+      "average": 27.999,
+      "median": 26,
+      "range": 60
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "HBM generations lift capacity and bandwidth",
+    "subMessage": "Bars show how much can be stored; the line shows how fast it moves. Both rise toward HBM5.",
+    "headline": "HBM generations lift capacity and bandwidth",
+    "summary": "The chart shows, in one view, how much memory an HBM generation can hold and how quickly it can move data.",
+    "story": "A larger warehouse is not enough if the door is still narrow. AI needs both more room and a faster path in and out. Here, bars are maximum capacity and the line is bandwidth; both rise sharply in the newer generations.",
+    "keyTakeaways": [
+      "HBM4E and HBM5 reach the highest visible capacity bars at about 64GB.",
+      "The bandwidth line rises from about 3TB/s after HBM4 to above 6TB/s at HBM5.",
+      "The values are source-visible readings, not a raw-data claim."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read the bars and line against their own axes; the units are different.",
+    "contextualNotes": [
+      "Samsung · HBM Development History · Hot Chips 2026",
+      "Point labels are not printed in the source image."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "HBM5",
+        "y": 6.1
+      },
+      "displayText": "HBM5 · about 6.1 TB/s",
+      "reason": "The highest visible bandwidth point and 64GB bar show the latest-generation step-up."
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

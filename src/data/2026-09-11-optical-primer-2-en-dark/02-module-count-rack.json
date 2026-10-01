@@ -1,0 +1,299 @@
+{
+  "id": "module-count-rack",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "CPO가 25% 들어와도 플러거블은 이전 세대 216개보다 많은 324개",
+    "preservedElements": [
+      "랙당 광모듈 개수",
+      "CPO 포트 개수",
+      "CPO 침투율 가정",
+      "다섯 개 구성 순서"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "랙 1대 기준 플러거블 광모듈과 CPO 포트를 누적 막대로. 대체와 증가를 한 장에서 보이게."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "Optical Modules and CPO Ports per Rack",
+    "subtitle": "Even at 25% CPO, pluggables total 324 versus 216 a generation earlier",
+    "source": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GB300",
+        "VR200-A",
+        "VR200-B",
+        "Kyber",
+        "Oberon"
+      ],
+      "displayTickValues": [
+        "GB300 NVL72",
+        "VR200 pluggable",
+        "VR200 CPO 25%",
+        "Kyber NVL144",
+        "Oberon per rack"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 500
+    },
+    "legend": [
+      {
+        "name": "Pluggable modules",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "CPO ports",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Pluggable modules",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 216,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-A",
+            "y": 432,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-B",
+            "y": 324,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kyber",
+            "y": 307,
+            "confidence": 0.9
+          },
+          {
+            "x": "Oberon",
+            "y": 153,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "CPO ports",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-A",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200-B",
+            "y": 108,
+            "confidence": 0.9
+          },
+          {
+            "x": "Kyber",
+            "y": 125,
+            "confidence": 0.9
+          },
+          {
+            "x": "Oberon",
+            "y": 63,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 0,
+        "absoluteChange": 0,
+        "from": 216,
+        "to": 216
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 432,
+        "at": "VR200 pluggable"
+      },
+      "min": {
+        "value": 0,
+        "at": "Oberon per rack"
+      },
+      "average": 345.6,
+      "median": 432,
+      "range": 432
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Optical Modules and CPO Ports per Rack",
+    "subMessage": "Even at 25% CPO, pluggables total 324 versus 216 a generation earlier",
+    "headline": "Optical Modules and CPO Ports per Rack",
+    "summary": "Even at 25% CPO, pluggables total 324 versus 216 a generation earlier",
+    "story": "Even at 25% CPO, pluggables total 324 versus 216 a generation earlier",
+    "keyTakeaways": [
+      "GB300 runs 216 pluggable 1.6T modules and no CPO.",
+      "VR200 doubles scale-out bandwidth and reaches 432.",
+      "Kyber and Oberon move to 3.2T, so unit counts look smaller."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "GB300 runs 216 pluggable 1.6T modules and no CPO.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

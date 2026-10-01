@@ -1,0 +1,458 @@
+{
+  "id": "05-semicap-usd-2",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.002Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존",
+      "1~4종목은 10개 지표를 행으로 전치"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "반도체 장비·소재 · 2/2",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 4종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "stock0",
+        "label": "AEHR\n에어테스트\n신뢰성 검사",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock1",
+        "label": "FORM\n폼팩터\n프로브 카드",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock2",
+        "label": "MKSI\nMKS\n공정 제어",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock3",
+        "label": "AXTI\nAXT\n화합물 기판",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "현재가",
+            "displayValue": "현재가"
+          },
+          "stock0": {
+            "value": "93.49",
+            "displayValue": "93"
+          },
+          "stock1": {
+            "value": "118.38",
+            "displayValue": "118"
+          },
+          "stock2": {
+            "value": "252.08",
+            "displayValue": "252"
+          },
+          "stock3": {
+            "value": "70.03",
+            "displayValue": "70"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "오늘 등락",
+            "displayValue": "오늘 등락"
+          },
+          "stock0": {
+            "value": "+3.3%",
+            "displayValue": "+3.3%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "+6.1%",
+            "displayValue": "+6.1%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "+4.9%",
+            "displayValue": "+4.9%",
+            "highlight": "positive"
+          },
+          "stock3": {
+            "value": "+3.4%",
+            "displayValue": "+3.4%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1개월 수익률",
+            "displayValue": "1개월 수익률"
+          },
+          "stock0": {
+            "value": "-13.4%",
+            "displayValue": "-13%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "3.0%",
+            "displayValue": "3%"
+          },
+          "stock2": {
+            "value": "-10.4%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "stock3": {
+            "value": "-4.6%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1년 수익률",
+            "displayValue": "1년 수익률"
+          },
+          "stock0": {
+            "value": "212.2%",
+            "displayValue": "212%"
+          },
+          "stock1": {
+            "value": "236.0%",
+            "displayValue": "236%"
+          },
+          "stock2": {
+            "value": "96.8%",
+            "displayValue": "96%"
+          },
+          "stock3": {
+            "value": "1,513.6%",
+            "displayValue": "1,513%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "52주 고점 대비",
+            "displayValue": "52주 고점 대비"
+          },
+          "stock0": {
+            "value": "63.4%",
+            "displayValue": "63%"
+          },
+          "stock1": {
+            "value": "73.9%",
+            "displayValue": "73%"
+          },
+          "stock2": {
+            "value": "56.3%",
+            "displayValue": "56%"
+          },
+          "stock3": {
+            "value": "48.9%",
+            "displayValue": "48%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가",
+            "displayValue": "목표가"
+          },
+          "stock0": {
+            "value": "128",
+            "displayValue": "128"
+          },
+          "stock1": {
+            "value": "138.63",
+            "displayValue": "138"
+          },
+          "stock2": {
+            "value": "410.86",
+            "displayValue": "410"
+          },
+          "stock3": {
+            "value": "91.60",
+            "displayValue": "91"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가 여력",
+            "displayValue": "목표가 여력"
+          },
+          "stock0": {
+            "value": "36.9%",
+            "displayValue": "36%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "17.1%",
+            "displayValue": "17%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "63.0%",
+            "displayValue": "63%",
+            "highlight": "positive"
+          },
+          "stock3": {
+            "value": "30.8%",
+            "displayValue": "30%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "EPS 성장",
+            "displayValue": "EPS 성장"
+          },
+          "stock0": {
+            "value": "2,516.7%",
+            "displayValue": "2,516%"
+          },
+          "stock1": {
+            "value": "135.2%",
+            "displayValue": "135%"
+          },
+          "stock2": {
+            "value": "66.8%",
+            "displayValue": "66%"
+          },
+          "stock3": {
+            "value": "311.7%",
+            "displayValue": "311%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY+2 PER",
+            "displayValue": "FY+2 PER"
+          },
+          "stock0": {
+            "value": "62.3x",
+            "displayValue": "62x"
+          },
+          "stock1": {
+            "value": "30.7x",
+            "displayValue": "30x"
+          },
+          "stock2": {
+            "value": "13.2x",
+            "displayValue": "13x"
+          },
+          "stock3": {
+            "value": "30.6x",
+            "displayValue": "30x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "시총",
+            "displayValue": "시총"
+          },
+          "stock0": {
+            "value": "3.05 B",
+            "displayValue": "USD 3B"
+          },
+          "stock1": {
+            "value": "9.248 B",
+            "displayValue": "USD 9B"
+          },
+          "stock2": {
+            "value": "17.045 B",
+            "displayValue": "USD 17B"
+          },
+          "stock3": {
+            "value": "4.496 B",
+            "displayValue": "USD 4B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 36,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "반도체 장비·소재 · 2/2",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 4종목",
+    "headline": "반도체 장비·소재 · 2/2",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "AEHR",
+      "instrument": "NASDAQCM:AEHR",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "FORM",
+      "instrument": "NASDAQGS:FORM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "MKSI",
+      "instrument": "NASDAQGS:MKSI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "AXTI",
+      "instrument": "NASDAQGS:AXTI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "transposed-comparison-table",
+    "stockCount": 4,
+    "rowCount": 10,
+    "columns": 5,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Three-line stock headers need export inspection."
+    ]
+  }
+}

@@ -1,0 +1,744 @@
+{
+  "id": "04-big-tech-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:49:57.477Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "승인 종목 유지. EPS 성장률과 PER를 동일한 InvestingPro EPS Forecast Mean Consensus FY+1/FY+2 원문으로 계산. EPS 아래는 FY+2 결산연월."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "빅테크",
+    "subtitle": "2026.09.18 종가 · 평균 EPS 기준 · 8종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 574,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "4px 6px 0",
+    "contentPadding": "0 1px",
+    "sourcePadding": "0 6px 2px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "12%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가\n(USD)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "고점=100\n(52주)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "예상\nPER",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AAPL",
+            "displayValue": "AAPL\n애플",
+            "sideValue": {
+              "displayValue": "-0.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "기기·서비스",
+            "displayValue": "기기·서비스"
+          },
+          "current": {
+            "value": "336.13",
+            "displayValue": "336"
+          },
+          "m1": {
+            "value": "6.1%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "37.4%",
+            "displayValue": "37%"
+          },
+          "high52": {
+            "value": "97.6%",
+            "displayValue": "97%"
+          },
+          "target": {
+            "value": "328.22",
+            "displayValue": "328\n-2%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "8.6%",
+            "displayValue": "8%"
+          },
+          "pe": {
+            "value": "35.1x",
+            "displayValue": "35.1x"
+          },
+          "marketCap": {
+            "value": "4,905.5 B",
+            "displayValue": "4,905"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMZN",
+            "displayValue": "AMZN\n아마존",
+            "sideValue": {
+              "displayValue": "+1.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "커머스·클라우드",
+            "displayValue": "커머스·클라우드"
+          },
+          "current": {
+            "value": "253.71",
+            "displayValue": "253"
+          },
+          "m1": {
+            "value": "-4.6%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "9.6%",
+            "displayValue": "9%"
+          },
+          "high52": {
+            "value": "88.3%",
+            "displayValue": "88%"
+          },
+          "target": {
+            "value": "328.22",
+            "displayValue": "328\n29%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-19.3%",
+            "displayValue": "-19%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "24.4x",
+            "displayValue": "24.4x"
+          },
+          "marketCap": {
+            "value": "2,736.6 B",
+            "displayValue": "2,736"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GOOGL",
+            "displayValue": "GOOGL\n알파벳 A",
+            "sideValue": {
+              "displayValue": "+0.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "검색·클라우드",
+            "displayValue": "검색·클라우드"
+          },
+          "current": {
+            "value": "349.54",
+            "displayValue": "349"
+          },
+          "m1": {
+            "value": "1.5%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "37.6%",
+            "displayValue": "37%"
+          },
+          "high52": {
+            "value": "85.5%",
+            "displayValue": "85%"
+          },
+          "target": {
+            "value": "428.16",
+            "displayValue": "428\n22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-27.8%",
+            "displayValue": "-27%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "23.5x",
+            "displayValue": "23.5x"
+          },
+          "marketCap": {
+            "value": "4,246.5 B",
+            "displayValue": "4,246"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GOOG",
+            "displayValue": "GOOG\n알파벳 C",
+            "sideValue": {
+              "displayValue": "+0.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "검색·클라우드",
+            "displayValue": "검색·클라우드"
+          },
+          "current": {
+            "value": "344.41",
+            "displayValue": "344"
+          },
+          "m1": {
+            "value": "0.9%",
+            "displayValue": "0%"
+          },
+          "y1": {
+            "value": "35.3%",
+            "displayValue": "35%"
+          },
+          "high52": {
+            "value": "85.2%",
+            "displayValue": "85%"
+          },
+          "target": {
+            "value": "422.34",
+            "displayValue": "422\n22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-27.8%",
+            "displayValue": "-27%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "23.1x",
+            "displayValue": "23.1x"
+          },
+          "marketCap": {
+            "value": "4,246.5 B",
+            "displayValue": "4,246"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MSFT",
+            "displayValue": "MSFT\n마이크로소프트",
+            "sideValue": {
+              "displayValue": "-0.8%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "클라우드·AI",
+            "displayValue": "클라우드·AI"
+          },
+          "current": {
+            "value": "493.78",
+            "displayValue": "493"
+          },
+          "m1": {
+            "value": "2.1%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "-3.9%",
+            "displayValue": "-3%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "89.2%",
+            "displayValue": "89%"
+          },
+          "target": {
+            "value": "572.92",
+            "displayValue": "572\n16%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "19.4%",
+            "displayValue": "19%"
+          },
+          "pe": {
+            "value": "20.9x",
+            "displayValue": "20.9x"
+          },
+          "marketCap": {
+            "value": "3,666.6 B",
+            "displayValue": "3,666"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "META",
+            "displayValue": "META\n메타",
+            "sideValue": {
+              "displayValue": "-2.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "SNS·광고",
+            "displayValue": "SNS·광고"
+          },
+          "current": {
+            "value": "665.75",
+            "displayValue": "665"
+          },
+          "m1": {
+            "value": "21.9%",
+            "displayValue": "21%"
+          },
+          "y1": {
+            "value": "-14.2%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "84.7%",
+            "displayValue": "84%"
+          },
+          "target": {
+            "value": "755.28",
+            "displayValue": "755\n13%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "12.1%",
+            "displayValue": "12%"
+          },
+          "pe": {
+            "value": "19.0x",
+            "displayValue": "19.0x"
+          },
+          "marketCap": {
+            "value": "1,696 B",
+            "displayValue": "1,696"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSLA",
+            "displayValue": "TSLA\n테슬라",
+            "sideValue": {
+              "displayValue": "-0.5%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전기차·자율주행",
+            "displayValue": "전기차·자율주행"
+          },
+          "current": {
+            "value": "364.27",
+            "displayValue": "364"
+          },
+          "m1": {
+            "value": "3.7%",
+            "displayValue": "3%"
+          },
+          "y1": {
+            "value": "-14.5%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "73.0%",
+            "displayValue": "73%"
+          },
+          "target": {
+            "value": "396.94",
+            "displayValue": "396\n9%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "23.6%",
+            "displayValue": "23%"
+          },
+          "pe": {
+            "value": "165.6x",
+            "displayValue": "165.6x"
+          },
+          "marketCap": {
+            "value": "1,438.7 B",
+            "displayValue": "1,438"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NVDA",
+            "displayValue": "NVDA\n엔비디아",
+            "sideValue": {
+              "displayValue": "+1.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          },
+          "current": {
+            "value": "222.27",
+            "displayValue": "222"
+          },
+          "m1": {
+            "value": "2.3%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "26.1%",
+            "displayValue": "26%"
+          },
+          "high52": {
+            "value": "94.0%",
+            "displayValue": "94%"
+          },
+          "target": {
+            "value": "327.70",
+            "displayValue": "327\n47%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "68.4%",
+            "displayValue": "68%"
+          },
+          "pe": {
+            "value": "14.2x",
+            "displayValue": "14.2x"
+          },
+          "marketCap": {
+            "value": "5,367.2 B",
+            "displayValue": "5,367"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 54,
+      "cellPadding": "3px 2px",
+      "lineHeight": 1.06,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "15px",
+        "body": "19px",
+        "total": "19px",
+        "badge": "13px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": false,
+      "minRowHeight": 29,
+      "maxRowHeight": 53,
+      "fontWeight": {
+        "body": 600,
+        "numeric": 700,
+        "rowHeader": 800,
+        "header": 800
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "빅테크",
+    "subMessage": "2026.09.18 종가 · 평균 EPS 기준 · 8종목",
+    "headline": "빅테크",
+    "summary": "승인된 63개 종목의 동일 EPS 평균 컨센서스 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "AAPL",
+      "instrument": "NASDAQGS:AAPL",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-09-30",
+      "fy2Date": "2027-09-30",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:AAPL/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "AMZN",
+      "instrument": "NASDAQGS:AMZN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:AMZN/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "GOOGL",
+      "instrument": "NASDAQGS:GOOGL",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:GOOGL/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "GOOG",
+      "instrument": "NASDAQGS:GOOG",
+      "sourceFile": "input/pro-extra-a.json",
+      "sourceUrl": "https://www.investing.com/pro/NASDAQGS:GOOG",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:GOOG/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "MSFT",
+      "instrument": "NASDAQGS:MSFT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2027-06-30",
+      "fy2Date": "2028-06-30",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:MSFT/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "META",
+      "instrument": "NASDAQGS:META",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:META/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "TSLA",
+      "instrument": "NASDAQGS:TSLA",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070284.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:TSLA/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "NVDA",
+      "instrument": "NASDAQGS:NVDA",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2027-01-31",
+      "fy2Date": "2028-01-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:NVDA/explorer/eps_proj_mean_raw"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 8,
+    "rowCount": 8,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1148
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ],
+    "rowHeight": 54,
+    "bodyFontPx": 38,
+    "headerFontPx": 30,
+    "notes": "User-requested compact redesign; preserve raw values and fiscal calculation basis, hide visible fiscal dates/FY+2 labels."
+  }
+}

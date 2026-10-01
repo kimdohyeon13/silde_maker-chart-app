@@ -1,0 +1,332 @@
+{
+  "id": "02-official-benchmark-summary",
+  "sourceImage": "output/2026-08-26-openai-jalapeno-inference-chip/source/source_notion_enhanced.md",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Jalapeño model benchmark comparison",
+    "originalMessage": "OpenAI published efficiency and end-to-end latency advantages across three models",
+    "sourceKey": "openai-jalapeno-official-benchmark-summary",
+    "officialSourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ],
+    "preservedElements": [
+      "GPT-OSS 120B: efficiency advantage 1.9x; lower end-to-end latency 1.7x",
+      "DeepSeek R1 670B: efficiency advantage 1.7x; lower end-to-end latency 3.6x",
+      "Kimi K2.5 1T: efficiency advantage 1.5x; lower end-to-end latency 3.4x",
+      "Three-row model order",
+      "OpenAI published comparison result framing"
+    ],
+    "changedElements": [
+      "Reorganized the benchmark values into a three-row editable table",
+      "Shortened metric names for quick reading",
+      "Applied Paperlogy title 900, subtitle 300, and a light palette",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The six x-values are copied as published comparison results. No baseline name or unreported absolute value was added.",
+    "sourceAttribution": "OpenAI official pages"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Used three model rows and separate columns for efficiency and end-to-end latency advantages."
+    },
+    {
+      "id": "official-source-only",
+      "label": "Official sources only",
+      "status": "pass",
+      "detail": "Recorded only two official OpenAI URLs in preserveIntent."
+    },
+    {
+      "id": "exact-benchmark-values",
+      "label": "Benchmark values preserved",
+      "status": "pass",
+      "detail": "Kept 1.9x, 1.7x, 1.5x and 1.7x, 3.6x, 3.4x in model order."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data and order parity",
+      "status": "pass",
+      "detail": "KO/EN files keep the same model order and six values."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Model performance comparison",
+    "subtitle": "OpenAI published comparison results",
+    "source": "OpenAI · Official announcements",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "model",
+        "label": "Model",
+        "dataType": "text",
+        "width": "42%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "efficiency_advantage",
+        "label": "Efficiency advantage",
+        "dataType": "number",
+        "width": "29%",
+        "align": "center"
+      },
+      {
+        "key": "lower_end_to_end_latency",
+        "label": "Lower end-to-end latency",
+        "dataType": "number",
+        "width": "29%",
+        "align": "center"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "GPT-OSS 120B",
+            "displayValue": "GPT-OSS 120B"
+          },
+          "efficiency_advantage": {
+            "value": 1.9,
+            "displayValue": "1.9x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 1.7,
+            "displayValue": "1.7x",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "DeepSeek R1 670B",
+            "displayValue": "DeepSeek R1 670B"
+          },
+          "efficiency_advantage": {
+            "value": 1.7,
+            "displayValue": "1.7x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 3.6,
+            "displayValue": "3.6x",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "Kimi K2.5 1T",
+            "displayValue": "Kimi K2.5 1T"
+          },
+          "efficiency_advantage": {
+            "value": 1.5,
+            "displayValue": "1.5x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 3.4,
+            "displayValue": "3.4x",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 86,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 76,
+      "maxRowHeight": 104,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "15px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Model performance comparison",
+    "subMessage": "OpenAI published comparison results",
+    "headline": "OpenAI's published comparison shows efficiency and end-to-end latency advantages across three models.",
+    "summary": "The published comparison values are shown in one table.",
+    "story": "GPT-OSS 120B shows a 1.9x efficiency advantage and 1.7x lower end-to-end latency. DeepSeek R1 670B shows 1.7x and 3.6x. Kimi K2.5 1T shows 1.5x and 3.4x.",
+    "keyTakeaways": [
+      "GPT-OSS 120B: 1.9x efficiency, 1.7x lower end-to-end latency",
+      "DeepSeek R1 670B: 1.7x efficiency, 3.6x lower end-to-end latency",
+      "Kimi K2.5 1T: 1.5x efficiency, 3.4x lower end-to-end latency"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the model name with the two x-values in each row.",
+    "contextualNotes": [
+      "Values: OpenAI published comparison results",
+      "Output watermark: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This model comparison table has no time-series trend.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "This is a model comparison table, not a quantitative time series."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "DeepSeek R1 670B",
+        "y": 3.6
+      },
+      "displayText": "OpenAI published comparison",
+      "reason": "Compare the efficiency and end-to-end latency advantages across the three models."
+    },
+    "densityLevel": "detailed"
+  }
+}

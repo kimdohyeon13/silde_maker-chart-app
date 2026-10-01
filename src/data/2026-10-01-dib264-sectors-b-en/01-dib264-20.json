@@ -1,0 +1,708 @@
+{
+  "id": "dib264-20",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-20.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Apple Up 1.10%, Meta Down 1.84%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "Alphabet drawn with GOOGL; printed legend 344.08 / +0.93% match GOOGL. The origin title's +1.01% is the GOOG figure, so the remade title leaves Alphabet out"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · as of the 2026-09-30 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 29일과 30일 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Apple Up 1.10%, Meta Down 1.84%",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · as of the 2026-09-30 close",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Sep 1 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "Apple",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Microsoft",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "Alphabet",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "Amazon",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      },
+      {
+        "name": "Meta",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#7A4E9E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Apple",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.947709
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.947309
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.412941
+          },
+          {
+            "x": "2026-09-08",
+            "y": 97.259557
+          },
+          {
+            "x": "2026-09-09",
+            "y": 96.988894
+          },
+          {
+            "x": "2026-09-10",
+            "y": 100.442901
+          },
+          {
+            "x": "2026-09-11",
+            "y": 102.19604
+          },
+          {
+            "x": "2026-09-14",
+            "y": 102.44517
+          },
+          {
+            "x": "2026-09-15",
+            "y": 101.910003
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.239104
+          },
+          {
+            "x": "2026-09-17",
+            "y": 103.650846
+          },
+          {
+            "x": "2026-09-18",
+            "y": 103.383262
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.259836
+          },
+          {
+            "x": "2026-09-22",
+            "y": 104.496661
+          },
+          {
+            "x": "2026-09-23",
+            "y": 103.656994
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.318675
+          },
+          {
+            "x": "2026-09-25",
+            "y": 104.902655
+          },
+          {
+            "x": "2026-09-28",
+            "y": 104.081441
+          },
+          {
+            "x": "2026-09-29",
+            "y": 101.313317
+          },
+          {
+            "x": "2026-09-30",
+            "y": 102.42672
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+1.10%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Microsoft",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.161714
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.816296
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.736542
+          },
+          {
+            "x": "2026-09-08",
+            "y": 98.588883
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.129816
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.287496
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.924198
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.876215
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.221589
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.860365
+          },
+          {
+            "x": "2026-09-17",
+            "y": 99.347334
+          },
+          {
+            "x": "2026-09-18",
+            "y": 98.55495
+          },
+          {
+            "x": "2026-09-21",
+            "y": 100.117759
+          },
+          {
+            "x": "2026-09-22",
+            "y": 99.397232
+          },
+          {
+            "x": "2026-09-23",
+            "y": 99.914177
+          },
+          {
+            "x": "2026-09-24",
+            "y": 99.383259
+          },
+          {
+            "x": "2026-09-25",
+            "y": 103.02383
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.636664
+          },
+          {
+            "x": "2026-09-29",
+            "y": 101.584768
+          },
+          {
+            "x": "2026-09-30",
+            "y": 102.371165
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+0.77%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Alphabet",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.62683
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.226739
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.026805
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.996954
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.695602
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.27766
+          },
+          {
+            "x": "2026-09-11",
+            "y": 101.038747
+          },
+          {
+            "x": "2026-09-14",
+            "y": 104.289304
+          },
+          {
+            "x": "2026-09-15",
+            "y": 102.972963
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.343146
+          },
+          {
+            "x": "2026-09-17",
+            "y": 103.674407
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.334076
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.954872
+          },
+          {
+            "x": "2026-09-22",
+            "y": 104.817627
+          },
+          {
+            "x": "2026-09-23",
+            "y": 100.838755
+          },
+          {
+            "x": "2026-09-24",
+            "y": 102.190913
+          },
+          {
+            "x": "2026-09-25",
+            "y": 102.656565
+          },
+          {
+            "x": "2026-09-28",
+            "y": 102.307328
+          },
+          {
+            "x": "2026-09-29",
+            "y": 101.761096
+          },
+          {
+            "x": "2026-09-30",
+            "y": 102.70432
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "+0.93%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Amazon",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.023536
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.561272
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.40829
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.804175
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.011453
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.811392
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.729641
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.458652
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.45018
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.485175
+          },
+          {
+            "x": "2026-09-17",
+            "y": 98.536798
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.525345
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.384754
+          },
+          {
+            "x": "2026-09-22",
+            "y": 100.023536
+          },
+          {
+            "x": "2026-09-23",
+            "y": 97.783621
+          },
+          {
+            "x": "2026-09-24",
+            "y": 97.826772
+          },
+          {
+            "x": "2026-09-25",
+            "y": 97.94053
+          },
+          {
+            "x": "2026-09-28",
+            "y": 96.559703
+          },
+          {
+            "x": "2026-09-29",
+            "y": 96.763691
+          },
+          {
+            "x": "2026-09-30",
+            "y": 97.736546
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "+1.01%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Meta",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 102.473467
+          },
+          {
+            "x": "2026-09-03",
+            "y": 105.555366
+          },
+          {
+            "x": "2026-09-04",
+            "y": 106.608021
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.039341
+          },
+          {
+            "x": "2026-09-09",
+            "y": 112.989599
+          },
+          {
+            "x": "2026-09-10",
+            "y": 111.380376
+          },
+          {
+            "x": "2026-09-11",
+            "y": 112.011279
+          },
+          {
+            "x": "2026-09-14",
+            "y": 115.048225
+          },
+          {
+            "x": "2026-09-15",
+            "y": 115.850246
+          },
+          {
+            "x": "2026-09-16",
+            "y": 116.380894
+          },
+          {
+            "x": "2026-09-17",
+            "y": 117.936534
+          },
+          {
+            "x": "2026-09-18",
+            "y": 115.074157
+          },
+          {
+            "x": "2026-09-21",
+            "y": 128.124249
+          },
+          {
+            "x": "2026-09-22",
+            "y": 127.320497
+          },
+          {
+            "x": "2026-09-23",
+            "y": 128.616864
+          },
+          {
+            "x": "2026-09-24",
+            "y": 134.405582
+          },
+          {
+            "x": "2026-09-25",
+            "y": 129.923601
+          },
+          {
+            "x": "2026-09-28",
+            "y": 123.69413
+          },
+          {
+            "x": "2026-09-29",
+            "y": 127.699037
+          },
+          {
+            "x": "2026-09-30",
+            "y": 125.346567
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#7A4E9E",
+        "dailyMove": {
+          "value": "-1.84%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 134.405582,
+        "series": "all"
+      },
+      "min": {
+        "value": 96.485175,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Apple Up 1.10%, Meta Down 1.84%",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 102.42672
+      },
+      "displayText": "102.43",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

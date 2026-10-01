@@ -1,0 +1,206 @@
+{
+  "id": "01-nebius-power-ramp",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "260MW에서 최종 1.2GW까지 단계적으로 확대",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "2029년 11월 수치는 원문이 1,000MW+로 표기했다. 그래프에는 하한 1,000MW를 사용하고 부제·QA에 + 표기를 보존한다.",
+    "sourceAttribution": "자료: Nebius 공식 일정",
+    "sourceKey": "01-nebius-power-ramp"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@wtm_waltechman"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "네비우스 Highridge 전력 공급 일정",
+    "subtitle": "260MW에서 최종 1.2GW까지 단계적으로 확대",
+    "source": "자료: Nebius 공식 일정",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "p1",
+        "p2",
+        "p3",
+        "full"
+      ],
+      "displayTickValues": [
+        "2027.10",
+        "2029.01",
+        "2029.11\n1,000+",
+        "최종"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "전력 규모 (MW)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "1000",
+        "1200"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1300
+    },
+    "legend": [
+      {
+        "name": "전력 공급",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전력 공급",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "p1",
+            "y": 260,
+            "confidence": 1.0
+          },
+          {
+            "x": "p2",
+            "y": 660,
+            "confidence": 1.0
+          },
+          {
+            "x": "p3",
+            "y": 1000,
+            "confidence": 1.0
+          },
+          {
+            "x": "full",
+            "y": 1200,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "260MW에서 최종 1.2GW까지 단계적으로 확대",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "네비우스 Highridge 전력 공급 일정",
+    "subMessage": "260MW에서 최종 1.2GW까지 단계적으로 확대",
+    "headline": "네비우스 Highridge 전력 공급 일정",
+    "summary": "260MW에서 최종 1.2GW까지 단계적으로 확대",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "260MW에서 최종 1.2GW까지 단계적으로 확대"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

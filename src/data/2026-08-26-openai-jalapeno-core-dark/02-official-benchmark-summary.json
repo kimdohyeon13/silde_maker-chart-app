@@ -1,0 +1,331 @@
+{
+  "id": "02-official-benchmark-summary",
+  "sourceImage": "output/2026-08-26-openai-jalapeno-inference-chip/source/source_notion_enhanced.md",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Jalapeño model benchmark comparison",
+    "originalMessage": "OpenAI published efficiency and end-to-end latency advantages across three models",
+    "sourceKey": "openai-jalapeno-official-benchmark-summary",
+    "officialSourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ],
+    "preservedElements": [
+      "GPT-OSS 120B: efficiency advantage 1.9x; lower end-to-end latency 1.7x",
+      "DeepSeek R1 670B: efficiency advantage 1.7x; lower end-to-end latency 3.6x",
+      "Kimi K2.5 1T: efficiency advantage 1.5x; lower end-to-end latency 3.4x",
+      "Three-row model order",
+      "OpenAI published comparison result framing"
+    ],
+    "changedElements": [
+      "Benchmark values reorganized into a three-row editable table",
+      "Metric names shortened for quick reading",
+      "Applied Paperlogy title 900, subtitle 300, and a light palette",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The six x-values are copied as published comparison results. The table does not add a baseline name or any unreported absolute value.",
+    "sourceAttribution": "OpenAI official pages"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "모델 3개를 행으로 두고 효율 우위와 종단 간 지연시간 우위를 열로 분리했습니다."
+    },
+    {
+      "id": "official-source-only",
+      "label": "공식 출처만 사용",
+      "status": "pass",
+      "detail": "OpenAI 공식 URL 두 곳만 preserveIntent에 기록했습니다."
+    },
+    {
+      "id": "exact-benchmark-values",
+      "label": "벤치마크 수치 보존",
+      "status": "pass",
+      "detail": "1.9x·1.7x·1.5x와 1.7x·3.6x·3.4x를 모델 순서대로 유지했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서 동일",
+      "status": "pass",
+      "detail": "KO/EN 파일의 모델 행 순서와 여섯 수치를 동일하게 유지합니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "이번 하위 작업은 JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "모델별 성능 비교",
+    "subtitle": "OpenAI 공개 비교 결과",
+    "source": "OpenAI · 공식 발표",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [],
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "model",
+        "label": "모델",
+        "dataType": "text",
+        "width": "42%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "efficiency_advantage",
+        "label": "효율 우위",
+        "dataType": "number",
+        "width": "29%",
+        "align": "center"
+      },
+      {
+        "key": "lower_end_to_end_latency",
+        "label": "종단 간 지연시간 우위",
+        "dataType": "number",
+        "width": "29%",
+        "align": "center"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "GPT-OSS 120B",
+            "displayValue": "GPT-OSS 120B"
+          },
+          "efficiency_advantage": {
+            "value": 1.9,
+            "displayValue": "1.9x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 1.7,
+            "displayValue": "1.7x",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "DeepSeek R1 670B",
+            "displayValue": "DeepSeek R1 670B"
+          },
+          "efficiency_advantage": {
+            "value": 1.7,
+            "displayValue": "1.7x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 3.6,
+            "displayValue": "3.6x",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "model": {
+            "value": "Kimi K2.5 1T",
+            "displayValue": "Kimi K2.5 1T"
+          },
+          "efficiency_advantage": {
+            "value": 1.5,
+            "displayValue": "1.5x",
+            "highlight": "positive"
+          },
+          "lower_end_to_end_latency": {
+            "value": 3.4,
+            "displayValue": "3.4x",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 86,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 76,
+      "maxRowHeight": 104,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "16px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "모델별 성능 비교",
+    "subMessage": "OpenAI 공개 비교 결과",
+    "headline": "OpenAI가 공개한 세 모델 비교에서 효율 우위와 종단 간 지연시간 우위가 모두 확인됩니다.",
+    "summary": "세 모델의 공개 비교 수치를 한 표에 정리했습니다.",
+    "story": "GPT-OSS 120B는 효율 1.9배, 종단 간 지연시간 1.7배의 우위를 보였습니다. DeepSeek R1 670B는 각각 1.7배와 3.6배입니다. Kimi K2.5 1T는 각각 1.5배와 3.4배입니다.",
+    "keyTakeaways": [
+      "GPT-OSS 120B: 효율 1.9x, 종단 간 지연시간 1.7x",
+      "DeepSeek R1 670B: 효율 1.7x, 종단 간 지연시간 3.6x",
+      "Kimi K2.5 1T: 효율 1.5x, 종단 간 지연시간 3.4x"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "각 행에서 모델명과 두 개의 x값을 가로로 비교합니다.",
+    "contextualNotes": [
+      "수치 출처: OpenAI 공개 비교 결과",
+      "출력 워터마크: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "모델 비교표에는 시계열 추세가 없습니다.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "정량 시계열이 아닌 모델별 비교표입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "DeepSeek R1 670B",
+        "y": 3.6
+      },
+      "displayText": "OpenAI 공개 비교 결과",
+      "reason": "세 모델의 효율 우위와 종단 간 지연시간 우위를 같은 기준으로 비교합니다."
+    },
+    "densityLevel": "detailed"
+  }
+}

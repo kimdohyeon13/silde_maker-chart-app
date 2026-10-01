@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-cost-ratios"
   },
   "allowedTransformations": [
     "translate-text",
@@ -86,14 +87,20 @@
       "label": "",
       "type": "category",
       "tickValues": [
+        "COGS",
+        "R&D",
+        "SG&A",
+        "D&A"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
         "매출원가",
         "연구개발",
         "판관비",
         "감가상각"
-      ],
-      "unit": "",
-      "startsAtZero": false,
-      "isLogScale": false
+      ]
     },
     "yAxis": {
       "label": "",
@@ -120,22 +127,22 @@
         "name": "전년 대비 비용 비중 변화",
         "data": [
           {
-            "x": "매출원가",
+            "x": "COGS",
             "y": -6,
             "confidence": 0.74
           },
           {
-            "x": "연구개발",
+            "x": "R&D",
             "y": -8,
             "confidence": 0.74
           },
           {
-            "x": "판관비",
+            "x": "SG&A",
             "y": -35,
             "confidence": 0.74
           },
           {
-            "x": "감가상각",
+            "x": "D&A",
             "y": -27,
             "confidence": 0.74
           }

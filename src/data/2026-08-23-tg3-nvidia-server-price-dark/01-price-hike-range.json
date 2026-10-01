@@ -1,0 +1,195 @@
+{
+  "id": "01-price-hike-range",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "확정 원문이 제시한 인상률 범위 두 값만 그렸습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "엔비디아 AI 서버 가격 인상 전망 범위",
+    "subtitle": "내년 인도분 Grace Blackwell 300·Vera Rubin 200 시스템에 적용",
+    "source": "자료: 업계 전망치 · 2026년 8월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "low",
+        "high"
+      ],
+      "displayTickValues": [
+        "하단",
+        "상단"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 20
+    },
+    "legend": [
+      {
+        "name": "가격 인상률",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "가격 인상률",
+        "data": [
+          {
+            "x": "low",
+            "y": 15
+          },
+          {
+            "x": "high",
+            "y": 17
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 2
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.5,
+      "description": "확정 원문이 제시한 범위입니다.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.06,
+      "description": "두 값의 폭입니다."
+    },
+    "changeRates": [
+      {
+        "period": "하단 대비 상단",
+        "percentChange": 13.3,
+        "absoluteChange": 2,
+        "from": 15,
+        "to": 17
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 17,
+        "at": ""
+      },
+      "min": {
+        "value": 15,
+        "at": ""
+      },
+      "average": 16,
+      "median": 16,
+      "range": 2
+    }
+  },
+  "patterns": {
+    "seasonality": null,
+    "outliers": [],
+    "cycles": [],
+    "anomalies": []
+  },
+  "narrative": {
+    "headMessage": "엔비디아 AI 서버 가격 인상 전망 범위",
+    "subMessage": "내년 인도분 Grace Blackwell 300·Vera Rubin 200 시스템에 적용"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

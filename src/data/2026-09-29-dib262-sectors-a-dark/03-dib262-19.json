@@ -1,0 +1,686 @@
+{
+  "id": "dib262-19",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-262-19.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "AI 반도체, 엔비디아 빼고 동반 하락",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 28일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "AI 반도체, 엔비디아 빼고 동반 하락",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 28일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-16",
+        "2026-09-22",
+        "2026-09-28"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-16",
+        "09-22",
+        "09-28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140",
+        "150"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 150
+    },
+    "legend": [
+      {
+        "name": "AMD",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "퀄컴",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "인텔",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "마벨",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "브로드컴",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "AMD",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.639782
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.098062
+          },
+          {
+            "x": "2026-09-03",
+            "y": 96.906867
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.455219
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.439665
+          },
+          {
+            "x": "2026-09-09",
+            "y": 110.702748
+          },
+          {
+            "x": "2026-09-10",
+            "y": 106.985045
+          },
+          {
+            "x": "2026-09-11",
+            "y": 109.646925
+          },
+          {
+            "x": "2026-09-14",
+            "y": 104.820276
+          },
+          {
+            "x": "2026-09-15",
+            "y": 107.112511
+          },
+          {
+            "x": "2026-09-16",
+            "y": 108.875765
+          },
+          {
+            "x": "2026-09-17",
+            "y": 115.799207
+          },
+          {
+            "x": "2026-09-18",
+            "y": 118.928451
+          },
+          {
+            "x": "2026-09-21",
+            "y": 130.761391
+          },
+          {
+            "x": "2026-09-22",
+            "y": 132.514025
+          },
+          {
+            "x": "2026-09-23",
+            "y": 130.568062
+          },
+          {
+            "x": "2026-09-24",
+            "y": 133.680321
+          },
+          {
+            "x": "2026-09-25",
+            "y": 133.971364
+          },
+          {
+            "x": "2026-09-28",
+            "y": 129.136215
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-3.61%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "퀄컴",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.729942
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.694985
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.879641
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.979358
+          },
+          {
+            "x": "2026-09-08",
+            "y": 102.117551
+          },
+          {
+            "x": "2026-09-09",
+            "y": 103.472547
+          },
+          {
+            "x": "2026-09-10",
+            "y": 103.754112
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.739797
+          },
+          {
+            "x": "2026-09-14",
+            "y": 105.672219
+          },
+          {
+            "x": "2026-09-15",
+            "y": 110.159554
+          },
+          {
+            "x": "2026-09-16",
+            "y": 108.423276
+          },
+          {
+            "x": "2026-09-17",
+            "y": 110.693343
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.246836
+          },
+          {
+            "x": "2026-09-21",
+            "y": 113.931253
+          },
+          {
+            "x": "2026-09-22",
+            "y": 116.301038
+          },
+          {
+            "x": "2026-09-23",
+            "y": 115.696862
+          },
+          {
+            "x": "2026-09-24",
+            "y": 113.94885
+          },
+          {
+            "x": "2026-09-25",
+            "y": 118.471379
+          },
+          {
+            "x": "2026-09-28",
+            "y": 109.971844
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-7.17%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "인텔",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.396714
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.603286
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.413134
+          },
+          {
+            "x": "2026-09-04",
+            "y": 107.027149
+          },
+          {
+            "x": "2026-09-08",
+            "y": 116.713215
+          },
+          {
+            "x": "2026-09-09",
+            "y": 118.690644
+          },
+          {
+            "x": "2026-09-10",
+            "y": 112.07686
+          },
+          {
+            "x": "2026-09-11",
+            "y": 115.00391
+          },
+          {
+            "x": "2026-09-14",
+            "y": 108.580047
+          },
+          {
+            "x": "2026-09-15",
+            "y": 108.524184
+          },
+          {
+            "x": "2026-09-16",
+            "y": 112.892415
+          },
+          {
+            "x": "2026-09-17",
+            "y": 121.550665
+          },
+          {
+            "x": "2026-09-18",
+            "y": 121.327221
+          },
+          {
+            "x": "2026-09-21",
+            "y": 136.051833
+          },
+          {
+            "x": "2026-09-22",
+            "y": 138.375598
+          },
+          {
+            "x": "2026-09-23",
+            "y": 136.967932
+          },
+          {
+            "x": "2026-09-24",
+            "y": 142.31929
+          },
+          {
+            "x": "2026-09-25",
+            "y": 137.414811
+          },
+          {
+            "x": "2026-09-28",
+            "y": 129.62797
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-5.67%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "마벨",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.399979
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.552675
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.662949
+          },
+          {
+            "x": "2026-09-04",
+            "y": 105.617499
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.496267
+          },
+          {
+            "x": "2026-09-09",
+            "y": 111.031839
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.228575
+          },
+          {
+            "x": "2026-09-11",
+            "y": 111.546821
+          },
+          {
+            "x": "2026-09-14",
+            "y": 103.382785
+          },
+          {
+            "x": "2026-09-15",
+            "y": 104.743453
+          },
+          {
+            "x": "2026-09-16",
+            "y": 108.527829
+          },
+          {
+            "x": "2026-09-17",
+            "y": 113.74846
+          },
+          {
+            "x": "2026-09-18",
+            "y": 115.397333
+          },
+          {
+            "x": "2026-09-21",
+            "y": 121.600681
+          },
+          {
+            "x": "2026-09-22",
+            "y": 123.953501
+          },
+          {
+            "x": "2026-09-23",
+            "y": 123.26372
+          },
+          {
+            "x": "2026-09-24",
+            "y": 122.34244
+          },
+          {
+            "x": "2026-09-25",
+            "y": 123.755078
+          },
+          {
+            "x": "2026-09-28",
+            "y": 119.011617
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "-3.83%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "브로드컴",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.821784
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.16293
+          },
+          {
+            "x": "2026-09-03",
+            "y": 96.44111
+          },
+          {
+            "x": "2026-09-04",
+            "y": 96.640924
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.519361
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.39067
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.432087
+          },
+          {
+            "x": "2026-09-11",
+            "y": 97.745313
+          },
+          {
+            "x": "2026-09-14",
+            "y": 93.082034
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.61041
+          },
+          {
+            "x": "2026-09-16",
+            "y": 91.675221
+          },
+          {
+            "x": "2026-09-17",
+            "y": 93.778687
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.562615
+          },
+          {
+            "x": "2026-09-21",
+            "y": 97.926232
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.433875
+          },
+          {
+            "x": "2026-09-23",
+            "y": 95.855158
+          },
+          {
+            "x": "2026-09-24",
+            "y": 94.604955
+          },
+          {
+            "x": "2026-09-25",
+            "y": 95.266512
+          },
+          {
+            "x": "2026-09-28",
+            "y": 94.391643
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "-0.92%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 100,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 142.31929,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.61041,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 반도체, 엔비디아 빼고 동반 하락",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-28",
+        "y": 129.136215
+      },
+      "displayText": "129.14",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,725 @@
+{
+  "id": "dib261-29",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-29.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "나이키, 투자의견 하향에 52주 최저",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original series, 2026-03-26 start (same first bar as the origin), 2026-09-25 focus date, and raw-value line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "chart number prefix dropped from the title",
+      "broker name removed from the title; 52-week low is the 2026-09-25 intraday low 35.22 (input/NKE_1y.json)"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-sign-color",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 24일과 25일 값으로 계산했고 상승 빨강, 하락 파랑으로 칠했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@wtm_waltechman",
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "나이키, 투자의견 하향에 52주 최저",
+    "subtitle": "9월 25일: 35.75달러, 하루 새 0.67% 하락, 장중 52주 최저 35.22달러",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-03-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-03-26",
+        "2026-05-01",
+        "2026-06-08",
+        "2026-07-16",
+        "2026-08-20",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "03-26",
+        "05-01",
+        "06-08",
+        "07-16",
+        "08-20",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "달러",
+      "type": "value",
+      "tickValues": [
+        "35",
+        "40",
+        "45",
+        "50",
+        "55"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 35,
+      "max": 55
+    },
+    "legend": [
+      {
+        "name": "나이키",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "나이키",
+        "data": [
+          {
+            "x": "2026-03-26",
+            "y": 52.07
+          },
+          {
+            "x": "2026-03-27",
+            "y": 51.37
+          },
+          {
+            "x": "2026-03-30",
+            "y": 51.24
+          },
+          {
+            "x": "2026-03-31",
+            "y": 52.82
+          },
+          {
+            "x": "2026-04-01",
+            "y": 44.63
+          },
+          {
+            "x": "2026-04-02",
+            "y": 44.19
+          },
+          {
+            "x": "2026-04-06",
+            "y": 44.03
+          },
+          {
+            "x": "2026-04-07",
+            "y": 42.69
+          },
+          {
+            "x": "2026-04-08",
+            "y": 43.13
+          },
+          {
+            "x": "2026-04-09",
+            "y": 44.0
+          },
+          {
+            "x": "2026-04-10",
+            "y": 42.62
+          },
+          {
+            "x": "2026-04-13",
+            "y": 42.91
+          },
+          {
+            "x": "2026-04-14",
+            "y": 44.2
+          },
+          {
+            "x": "2026-04-15",
+            "y": 45.44
+          },
+          {
+            "x": "2026-04-16",
+            "y": 45.7
+          },
+          {
+            "x": "2026-04-17",
+            "y": 46.03
+          },
+          {
+            "x": "2026-04-20",
+            "y": 46.48
+          },
+          {
+            "x": "2026-04-21",
+            "y": 46.39
+          },
+          {
+            "x": "2026-04-22",
+            "y": 45.68
+          },
+          {
+            "x": "2026-04-23",
+            "y": 44.78
+          },
+          {
+            "x": "2026-04-24",
+            "y": 44.69
+          },
+          {
+            "x": "2026-04-27",
+            "y": 45.14
+          },
+          {
+            "x": "2026-04-28",
+            "y": 45.03
+          },
+          {
+            "x": "2026-04-29",
+            "y": 44.39
+          },
+          {
+            "x": "2026-04-30",
+            "y": 44.36
+          },
+          {
+            "x": "2026-05-01",
+            "y": 44.4
+          },
+          {
+            "x": "2026-05-04",
+            "y": 43.09
+          },
+          {
+            "x": "2026-05-05",
+            "y": 43.06
+          },
+          {
+            "x": "2026-05-06",
+            "y": 43.88
+          },
+          {
+            "x": "2026-05-07",
+            "y": 44.41
+          },
+          {
+            "x": "2026-05-08",
+            "y": 44.14
+          },
+          {
+            "x": "2026-05-11",
+            "y": 42.39
+          },
+          {
+            "x": "2026-05-12",
+            "y": 42.35
+          },
+          {
+            "x": "2026-05-13",
+            "y": 42.34
+          },
+          {
+            "x": "2026-05-14",
+            "y": 42.02
+          },
+          {
+            "x": "2026-05-15",
+            "y": 41.88
+          },
+          {
+            "x": "2026-05-18",
+            "y": 42.57
+          },
+          {
+            "x": "2026-05-19",
+            "y": 42.42
+          },
+          {
+            "x": "2026-05-20",
+            "y": 44.19
+          },
+          {
+            "x": "2026-05-21",
+            "y": 44.39
+          },
+          {
+            "x": "2026-05-22",
+            "y": 44.67
+          },
+          {
+            "x": "2026-05-26",
+            "y": 44.94
+          },
+          {
+            "x": "2026-05-27",
+            "y": 45.98
+          },
+          {
+            "x": "2026-05-28",
+            "y": 47.37
+          },
+          {
+            "x": "2026-05-29",
+            "y": 46.23
+          },
+          {
+            "x": "2026-06-01",
+            "y": 45.93
+          },
+          {
+            "x": "2026-06-02",
+            "y": 43.73
+          },
+          {
+            "x": "2026-06-03",
+            "y": 43.81
+          },
+          {
+            "x": "2026-06-04",
+            "y": 43.62
+          },
+          {
+            "x": "2026-06-05",
+            "y": 42.98
+          },
+          {
+            "x": "2026-06-08",
+            "y": 43.23
+          },
+          {
+            "x": "2026-06-09",
+            "y": 44.65
+          },
+          {
+            "x": "2026-06-10",
+            "y": 43.96
+          },
+          {
+            "x": "2026-06-11",
+            "y": 45.96
+          },
+          {
+            "x": "2026-06-12",
+            "y": 44.93
+          },
+          {
+            "x": "2026-06-15",
+            "y": 45.2
+          },
+          {
+            "x": "2026-06-16",
+            "y": 45.04
+          },
+          {
+            "x": "2026-06-17",
+            "y": 44.19
+          },
+          {
+            "x": "2026-06-18",
+            "y": 45.2
+          },
+          {
+            "x": "2026-06-22",
+            "y": 43.19
+          },
+          {
+            "x": "2026-06-23",
+            "y": 42.38
+          },
+          {
+            "x": "2026-06-24",
+            "y": 41.82
+          },
+          {
+            "x": "2026-06-25",
+            "y": 40.9
+          },
+          {
+            "x": "2026-06-26",
+            "y": 40.75
+          },
+          {
+            "x": "2026-06-29",
+            "y": 41.48
+          },
+          {
+            "x": "2026-06-30",
+            "y": 41.05
+          },
+          {
+            "x": "2026-07-01",
+            "y": 43.06
+          },
+          {
+            "x": "2026-07-02",
+            "y": 44.09
+          },
+          {
+            "x": "2026-07-06",
+            "y": 43.34
+          },
+          {
+            "x": "2026-07-07",
+            "y": 43.21
+          },
+          {
+            "x": "2026-07-08",
+            "y": 42.89
+          },
+          {
+            "x": "2026-07-09",
+            "y": 42.78
+          },
+          {
+            "x": "2026-07-10",
+            "y": 44.37
+          },
+          {
+            "x": "2026-07-13",
+            "y": 43.76
+          },
+          {
+            "x": "2026-07-14",
+            "y": 42.86
+          },
+          {
+            "x": "2026-07-15",
+            "y": 42.77
+          },
+          {
+            "x": "2026-07-16",
+            "y": 44.57
+          },
+          {
+            "x": "2026-07-17",
+            "y": 43.76
+          },
+          {
+            "x": "2026-07-20",
+            "y": 43.47
+          },
+          {
+            "x": "2026-07-21",
+            "y": 42.96
+          },
+          {
+            "x": "2026-07-22",
+            "y": 42.21
+          },
+          {
+            "x": "2026-07-23",
+            "y": 40.99
+          },
+          {
+            "x": "2026-07-24",
+            "y": 41.7
+          },
+          {
+            "x": "2026-07-27",
+            "y": 42.14
+          },
+          {
+            "x": "2026-07-28",
+            "y": 43.05
+          },
+          {
+            "x": "2026-07-29",
+            "y": 43.22
+          },
+          {
+            "x": "2026-07-30",
+            "y": 42.29
+          },
+          {
+            "x": "2026-07-31",
+            "y": 41.71
+          },
+          {
+            "x": "2026-08-03",
+            "y": 42.64
+          },
+          {
+            "x": "2026-08-04",
+            "y": 41.53
+          },
+          {
+            "x": "2026-08-05",
+            "y": 42.45
+          },
+          {
+            "x": "2026-08-06",
+            "y": 42.0
+          },
+          {
+            "x": "2026-08-07",
+            "y": 41.7
+          },
+          {
+            "x": "2026-08-10",
+            "y": 42.11
+          },
+          {
+            "x": "2026-08-11",
+            "y": 41.32
+          },
+          {
+            "x": "2026-08-12",
+            "y": 40.51
+          },
+          {
+            "x": "2026-08-13",
+            "y": 41.23
+          },
+          {
+            "x": "2026-08-14",
+            "y": 40.73
+          },
+          {
+            "x": "2026-08-17",
+            "y": 39.09
+          },
+          {
+            "x": "2026-08-18",
+            "y": 40.06
+          },
+          {
+            "x": "2026-08-19",
+            "y": 41.05
+          },
+          {
+            "x": "2026-08-20",
+            "y": 40.21
+          },
+          {
+            "x": "2026-08-21",
+            "y": 40.76
+          },
+          {
+            "x": "2026-08-24",
+            "y": 40.75
+          },
+          {
+            "x": "2026-08-25",
+            "y": 39.48
+          },
+          {
+            "x": "2026-08-26",
+            "y": 38.59
+          },
+          {
+            "x": "2026-08-27",
+            "y": 38.44
+          },
+          {
+            "x": "2026-08-28",
+            "y": 39.6
+          },
+          {
+            "x": "2026-08-31",
+            "y": 39.06
+          },
+          {
+            "x": "2026-09-01",
+            "y": 38.12
+          },
+          {
+            "x": "2026-09-02",
+            "y": 38.24
+          },
+          {
+            "x": "2026-09-03",
+            "y": 38.77
+          },
+          {
+            "x": "2026-09-04",
+            "y": 38.4
+          },
+          {
+            "x": "2026-09-08",
+            "y": 38.1
+          },
+          {
+            "x": "2026-09-09",
+            "y": 37.35
+          },
+          {
+            "x": "2026-09-10",
+            "y": 36.62
+          },
+          {
+            "x": "2026-09-11",
+            "y": 36.8
+          },
+          {
+            "x": "2026-09-14",
+            "y": 37.05
+          },
+          {
+            "x": "2026-09-15",
+            "y": 36.22
+          },
+          {
+            "x": "2026-09-16",
+            "y": 35.78
+          },
+          {
+            "x": "2026-09-17",
+            "y": 36.36
+          },
+          {
+            "x": "2026-09-18",
+            "y": 35.51
+          },
+          {
+            "x": "2026-09-21",
+            "y": 36.1
+          },
+          {
+            "x": "2026-09-22",
+            "y": 36.1
+          },
+          {
+            "x": "2026-09-23",
+            "y": 36.05
+          },
+          {
+            "x": "2026-09-24",
+            "y": 35.99
+          },
+          {
+            "x": "2026-09-25",
+            "y": 35.75
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-0.67%",
+          "color": "#175CD3",
+          "layout": "two-column",
+          "label": "오늘"
+        }
+      }
+    ],
+    "totalDataPoints": 127,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 25일: 35.75달러, 하루 새 0.67% 하락, 장중 52주 최저 35.22달러",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 52.82,
+        "series": "all"
+      },
+      "min": {
+        "value": 35.51,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "나이키, 투자의견 하향에 52주 최저",
+    "subMessage": "9월 25일: 35.75달러, 하루 새 0.67% 하락, 장중 52주 최저 35.22달러"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 35.75
+      },
+      "displayText": "35.75",
+      "reason": "9월 25일: 35.75달러, 하루 새 0.67% 하락, 장중 52주 최저 35.22달러"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -23,10 +23,10 @@ export const chartSettings = {
   // 차트 내부에서 그래프 영역과 테두리 사이의 빈 공간.
   // 텍스트가 잘리면 해당 방향의 값을 키우세요.
   margin: {
-    top: 40,     // 상단: 기본 여백을 줄여 plot 영역을 키움
-    right: 108,  // 오른쪽: 직접 라벨 공간은 유지하되 과한 여백은 축소
-    bottom: 50,  // 하단: X축 라벨 공간을 남기면서 카드 하단 여백 축소
-    left: 10,    // 왼쪽: Y축 숫자 옆 여유 공간
+    top: 36,     // 상단: Y축 제목 한 줄이 헤더와 겹치지 않는 최소값
+    right: 44,   // 오른쪽: 직접 라벨은 endLabelRightMargin이 따로 확보하므로 기본은 최소값
+    bottom: 34,  // 하단: X축 라벨 한 줄 공간만 남긴다
+    left: 6,     // 왼쪽: Y축 폭이 라벨에 맞춰 늘어나므로 추가 여유는 최소값
   },
 
   // ─────────────────────────────────────────────
@@ -35,8 +35,8 @@ export const chartSettings = {
   // "120$/bbl" 같은 Y축 숫자가 차지하는 가로 폭.
   // 숫자가 잘리면(앞자리가 안 보이면) 이 값을 키우세요.
   yAxis: {
-    width: 112,       // 왼쪽 Y축 너비 (큰 축 라벨 대응)
-    rightWidth: 108,  // 오른쪽 보조 Y축 너비 (듀얼 축용, 예: "$11.5")
+    width: 112,       // 왼쪽 Y축 너비 상한 — 실제 폭은 눈금 길이로 계산(axis-label-layout.ts)
+    rightWidth: 92,   // 오른쪽 보조 Y축 너비 상한 (듀얼 축용, 예: "$11.5")
   },
 
   // ─────────────────────────────────────────────
@@ -95,7 +95,7 @@ export const chartSettings = {
     enabled: true,
     maxSeries: 3,
     extraRightMargin: 128,
-    fontSize: 19,
+    fontSize: 21,
     offset: 16,
     dotRadius: 5,
   },
@@ -123,12 +123,12 @@ export const chartSettings = {
   // 나머지는 secondary로 설정하면 시각적으로 약화됩니다.
   seriesRole: {
     primary: {
-      strokeWidth: 4.6,     // 굵은 선
+      strokeWidth: 5.2,     // 굵은 선
       opacity: 1,           // 완전 불투명
       areaOpacity: 1,       // 영역 채움 불투명도
     },
     secondary: {
-      strokeWidth: 3.1,     // 가는 선이지만 충분히 읽히는 두께
+      strokeWidth: 3.6,     // 가는 선이지만 충분히 읽히는 두께
       opacity: 0.74,        // 조연이지만 수치 비교가 가능할 만큼 유지
       areaOpacity: 0.3,     // 영역 채움도 약하게
     },

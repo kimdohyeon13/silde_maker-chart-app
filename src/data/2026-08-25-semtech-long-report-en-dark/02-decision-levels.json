@@ -1,0 +1,315 @@
+{
+  "id": "02-decision-levels",
+  "contentType": "table",
+  "tableSubType": "summary",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "exact",
+    "preservedElements": [
+      "기술 지표",
+      "가격 레벨",
+      "신호",
+      "출처"
+    ],
+    "changedElements": [
+      "Paperlogy 900·300 타이포",
+      "핵심 레벨 강조",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "2026-08-24 종가와 계산 지표를 그대로 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-colors"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "7행×4열 요약표로 레벨과 행동을 한 화면에 배치했습니다.",
+      "checkedAt": "2026-08-25"
+    },
+    {
+      "id": "exact-values",
+      "label": "시장 데이터 보존",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉과 리포트 계산값을 반올림해 표기했습니다.",
+      "checkedAt": "2026-08-25"
+    }
+  ],
+  "exportOptions": {
+    "numberLocale": "en",
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "Price levels to watch before buying",
+    "subtitle": "As of the August 24, 2026 close",
+    "source": "Source: Yahoo Finance · waltechman calculations"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "24%",
+        "align": "left"
+      },
+      {
+        "key": "value",
+        "label": "Current",
+        "dataType": "text",
+        "width": "18%",
+        "align": "right"
+      },
+      {
+        "key": "distance",
+        "label": "From close",
+        "dataType": "text",
+        "width": "18%",
+        "align": "right"
+      },
+      {
+        "key": "meaning",
+        "label": "Interpretation",
+        "dataType": "text",
+        "width": "40%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Close",
+            "displayValue": "Close"
+          },
+          "value": {
+            "value": 120.91,
+            "displayValue": "$120.91",
+            "highlight": "accent"
+          },
+          "distance": {
+            "value": 0,
+            "displayValue": "Baseline"
+          },
+          "meaning": {
+            "value": "Starting point for the Hold view",
+            "displayValue": "Starting point for the Hold view"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "10-day EMA",
+            "displayValue": "10-day EMA"
+          },
+          "value": {
+            "value": 129.26,
+            "displayValue": "$129.26"
+          },
+          "distance": {
+            "value": 6.9,
+            "displayValue": "+6.9%"
+          },
+          "meaning": {
+            "value": "Short-term recovery line",
+            "displayValue": "Short-term recovery line"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "50-day SMA",
+            "displayValue": "50-day SMA"
+          },
+          "value": {
+            "value": 137.75,
+            "displayValue": "$137.75"
+          },
+          "distance": {
+            "value": 13.9,
+            "displayValue": "+13.9%"
+          },
+          "meaning": {
+            "value": "Gate for medium-term recovery",
+            "displayValue": "Gate for medium-term recovery",
+            "highlight": "warning"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "200-day SMA",
+            "displayValue": "200-day SMA"
+          },
+          "value": {
+            "value": 104.45,
+            "displayValue": "$104.45"
+          },
+          "distance": {
+            "value": -13.6,
+            "displayValue": "-13.6%"
+          },
+          "meaning": {
+            "value": "Long-term trend failure line",
+            "displayValue": "Long-term trend failure line",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "RSI(14)",
+            "displayValue": "RSI(14)"
+          },
+          "value": {
+            "value": 44.23,
+            "displayValue": "44.23"
+          },
+          "distance": {
+            "value": "",
+            "displayValue": "Lower neutral"
+          },
+          "meaning": {
+            "value": "Not yet oversold enough for a rebound thesis",
+            "displayValue": "Not yet oversold enough for a rebound thesis"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "ATR(14)",
+            "displayValue": "ATR(14)"
+          },
+          "value": {
+            "value": 11.3,
+            "displayValue": "$11.30"
+          },
+          "distance": {
+            "value": 9.35,
+            "displayValue": "9.35%"
+          },
+          "meaning": {
+            "value": "Requires a smaller-than-normal position",
+            "displayValue": "Requires a smaller-than-normal position",
+            "highlight": "warning"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "First reduction",
+            "displayValue": "First reduction"
+          },
+          "value": {
+            "value": 115,
+            "displayValue": "$115.00"
+          },
+          "distance": {
+            "value": -4.9,
+            "displayValue": "-4.9%"
+          },
+          "meaning": {
+            "value": "Cut exposure to 20% on a closing break",
+            "displayValue": "Cut exposure to 20% on a closing break",
+            "highlight": "negative"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 48,
+      "maxRowHeight": 62,
+      "cellPadding": "1px 5px",
+      "fontSize": {
+        "header": "12px",
+        "body": "12px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "rowHeight": 29,
+      "lineHeight": 1,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Price levels to watch before buying",
+    "subMessage": "As of the August 24, 2026 close"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    }
+  }
+}

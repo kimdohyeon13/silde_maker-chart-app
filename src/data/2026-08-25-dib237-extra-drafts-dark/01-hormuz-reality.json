@@ -1,0 +1,211 @@
+{
+  "id": "01-hormuz-reality",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "originalTitle": "이란의 대답은 호르무즈였습니다",
+    "dataFidelity": "exact",
+    "preservedElements": [
+      "모흐센 레자이의 호르무즈·페르시아만 원유 수출 중단 경고",
+      "미 에너지부가 전한 최근 7일 호르무즈 평균 통과량 하루 800만 배럴 초과",
+      "TotalEnergies CEO의 호르무즈 원유 흐름 관측"
+    ],
+    "changedElements": [
+      "Paperlogy 비교표 형식으로 경고와 관측을 두 행에 배치",
+      "16:9 여백과 한영 공통 색상 적용",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "sourceAttribution": "자료: 미 에너지부·TotalEnergies",
+    "notes": "dib-237 S8에 명시된 세 발언만 사용했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "2행 비교표 레이아웃",
+      "status": "pass",
+      "detail": "경고와 관측을 두 데이터 행으로 배치하고 표 안에서 발언 주체를 분리했습니다."
+    },
+    {
+      "id": "source-facts-only",
+      "label": "S8 발언만 사용",
+      "status": "pass",
+      "detail": "모흐센 레자이, 크리스 라이트, 패트릭 푸얀네의 지정된 발언만 반영했습니다."
+    },
+    {
+      "id": "source-visible",
+      "label": "출처 표기",
+      "status": "pass",
+      "detail": "자료: 미 에너지부·TotalEnergies"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "ko",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "호르무즈 봉쇄 경고와 실제 원유 흐름",
+    "subtitle": "미 에너지부가 집계한 최근 7일 평균 통과량은 하루 800만 배럴을 넘었습니다.",
+    "source": "자료: 미 에너지부·TotalEnergies"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "stance",
+        "label": "구분",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "16%",
+        "align": "left"
+      },
+      {
+        "key": "statement",
+        "label": "발언·관측",
+        "dataType": "text",
+        "width": "62%",
+        "align": "left"
+      },
+      {
+        "key": "source",
+        "label": "주체",
+        "dataType": "text",
+        "width": "22%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "stance": {
+            "value": "봉쇄 경고",
+            "displayValue": "봉쇄 경고",
+            "highlight": "negative"
+          },
+          "statement": {
+            "value": "경제 전쟁이 계속되면 호르무즈 해협이나 페르시아만 어디에서든 석유 한 방울도 수출되지 않을 것",
+            "displayValue": "경제 전쟁이 계속되면 호르무즈 해협이나 페르시아만 어디에서든 석유 한 방울도 수출되지 않을 것"
+          },
+          "source": {
+            "value": "모흐센 레자이",
+            "displayValue": "모흐센 레자이"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "stance": {
+            "value": "실제 흐름",
+            "displayValue": "실제 흐름",
+            "highlight": "positive"
+          },
+          "statement": {
+            "value": "최근 7일 평균 통과량은 하루 800만 배럴 초과 · 석유는 매우 조용히 흐르는 중",
+            "displayValue": "최근 7일 평균 통과량은 하루 800만 배럴 초과 · 석유는 매우 조용히 흐르는 중"
+          },
+          "source": {
+            "value": "크리스 라이트 · 패트릭 푸얀네",
+            "displayValue": "크리스 라이트 · 패트릭 푸얀네"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": true,
+      "fontWeight": {
+        "body": 400,
+        "numeric": 700,
+        "rowHeader": 700,
+        "header": 700,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "17px",
+        "body": "22px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "rowHeight": 29,
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "호르무즈 봉쇄 경고와 실제 원유 흐름",
+    "subMessage": "미 에너지부가 집계한 최근 7일 평균 통과량은 하루 800만 배럴을 넘었습니다."
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "stance",
+        "reason": "호르무즈 봉쇄 경고"
+      },
+      {
+        "row": 1,
+        "col": "stance",
+        "reason": "최근 원유 흐름"
+      }
+    ]
+  }
+}

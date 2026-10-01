@@ -1,0 +1,488 @@
+{
+  "id": "07-quantum-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:49:57.478Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "승인 종목 유지. EPS 성장률과 PER를 동일한 InvestingPro EPS Forecast Mean Consensus FY+1/FY+2 원문으로 계산. EPS 아래는 FY+2 결산연월."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "양자컴퓨팅",
+    "subtitle": "2026.09.18 종가 · 평균 EPS 기준 · 4종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 358,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "4px 6px 0",
+    "contentPadding": "0 1px",
+    "sourcePadding": "0 6px 2px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "12%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가\n(USD)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "고점=100\n(52주)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "예상\nPER",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "IONQ",
+            "displayValue": "IONQ\n아이온큐",
+            "sideValue": {
+              "displayValue": "-3.0%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "이온트랩",
+            "displayValue": "이온트랩"
+          },
+          "current": {
+            "value": "39.13",
+            "displayValue": "39"
+          },
+          "m1": {
+            "value": "-9.8%",
+            "displayValue": "-9%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-44.4%",
+            "displayValue": "-44%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "46.2%",
+            "displayValue": "46%"
+          },
+          "target": {
+            "value": "69.25",
+            "displayValue": "69\n77%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "적자확대",
+            "displayValue": "적자확대",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "marketCap": {
+            "value": "15.546 B",
+            "displayValue": "15"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "QBTS",
+            "displayValue": "QBTS\n디웨이브",
+            "sideValue": {
+              "displayValue": "-3.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "양자 어닐링",
+            "displayValue": "양자 어닐링"
+          },
+          "current": {
+            "value": "17.11",
+            "displayValue": "17"
+          },
+          "m1": {
+            "value": "-11.4%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-36.3%",
+            "displayValue": "-36%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "36.6%",
+            "displayValue": "36%"
+          },
+          "target": {
+            "value": "35.24",
+            "displayValue": "35\n105%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "적자확대",
+            "displayValue": "적자확대",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "marketCap": {
+            "value": "6.372 B",
+            "displayValue": "6"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "RGTI",
+            "displayValue": "RGTI\n리게티",
+            "sideValue": {
+              "displayValue": "-1.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "초전도 양자",
+            "displayValue": "초전도 양자"
+          },
+          "current": {
+            "value": "15.76",
+            "displayValue": "15"
+          },
+          "m1": {
+            "value": "-7.3%",
+            "displayValue": "-7%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-44.7%",
+            "displayValue": "-44%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "27.1%",
+            "displayValue": "27%"
+          },
+          "target": {
+            "value": "28.81",
+            "displayValue": "28\n82%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "적자확대",
+            "displayValue": "적자확대",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "marketCap": {
+            "value": "5.26 B",
+            "displayValue": "5"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "QUBT",
+            "displayValue": "QUBT\n퀀텀컴퓨팅",
+            "sideValue": {
+              "displayValue": "+3.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 4px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광자 양자",
+            "displayValue": "광자 양자"
+          },
+          "current": {
+            "value": "8.70",
+            "displayValue": "8"
+          },
+          "m1": {
+            "value": "3.3%",
+            "displayValue": "3%"
+          },
+          "y1": {
+            "value": "-62.6%",
+            "displayValue": "-62%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "33.7%",
+            "displayValue": "33%"
+          },
+          "target": {
+            "value": "18.67",
+            "displayValue": "18\n114%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "적자확대",
+            "displayValue": "적자확대",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "NM",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "marketCap": {
+            "value": "1.969 B",
+            "displayValue": "1"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 54,
+      "cellPadding": "3px 2px",
+      "lineHeight": 1.06,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "15px",
+        "body": "19px",
+        "total": "19px",
+        "badge": "13px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": false,
+      "minRowHeight": 29,
+      "maxRowHeight": 105,
+      "fontWeight": {
+        "body": 600,
+        "numeric": 700,
+        "rowHeader": 800,
+        "header": 800
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "양자컴퓨팅",
+    "subMessage": "2026.09.18 종가 · 평균 EPS 기준 · 4종목",
+    "headline": "양자컴퓨팅",
+    "summary": "승인된 63개 종목의 동일 EPS 평균 컨센서스 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "IONQ",
+      "instrument": "NYSE:IONQ",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070242.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NYSE:IONQ/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "QBTS",
+      "instrument": "NASDAQGS:QBTS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070242.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:QBTS/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "RGTI",
+      "instrument": "NASDAQCM:RGTI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070242.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQCM:RGTI/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "QUBT",
+      "instrument": "NASDAQCM:QUBT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68070242.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQCM:QUBT/explorer/eps_proj_mean_raw"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 4,
+    "rowCount": 4,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      716
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ],
+    "rowHeight": 54,
+    "bodyFontPx": 38,
+    "headerFontPx": 30,
+    "notes": "User-requested compact redesign; preserve raw values and fiscal calculation basis, hide visible fiscal dates/FY+2 labels."
+  }
+}

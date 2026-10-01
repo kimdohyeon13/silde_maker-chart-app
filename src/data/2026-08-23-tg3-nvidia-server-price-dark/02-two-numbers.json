@@ -1,0 +1,180 @@
+{
+  "id": "02-two-numbers",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "확정 원문의 두 금액만 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "가격 인상이 바꾸는 숫자",
+    "subtitle": "17% 인상을 가정했을 때",
+    "source": "자료: 업계 전망치 · 2026년 8월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "항목",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "v",
+        "label": "금액",
+        "dataType": "text",
+        "width": "66%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "72-GPU Vera Rubin 랙 가격",
+            "displayValue": "72-GPU Vera Rubin 랙 가격"
+          },
+          "v": {
+            "value": "약 800만 달러",
+            "displayValue": "약 800만 달러"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "1GW 데이터센터 칩 시스템 비용",
+            "displayValue": "1GW 데이터센터 칩 시스템 비용"
+          },
+          "v": {
+            "value": "최소 50억 달러 추가",
+            "displayValue": "최소 50억 달러 추가"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "적용 시점",
+            "displayValue": "적용 시점"
+          },
+          "v": {
+            "value": "내년 인도분부터",
+            "displayValue": "내년 인도분부터"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "fontSize": {
+        "header": "17px",
+        "body": "22px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "rowHeight": 29,
+      "lineHeight": 1,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "가격 인상이 바꾸는 숫자",
+    "subMessage": "17% 인상을 가정했을 때"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "accent": "#00E0A4",
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "backgroundTone": "dark"
+    }
+  }
+}

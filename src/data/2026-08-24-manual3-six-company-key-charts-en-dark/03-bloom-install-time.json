@@ -1,0 +1,186 @@
+{
+  "id": "03-bloom-install-time",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Company says on-site power installation time can fall by more than 40%",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "40%는 회사가 제시한 최소 단축률이다. 100→60 같은 파생 지수는 만들지 않았다.",
+    "sourceAttribution": "Source: Bloom Energy",
+    "sourceKey": "03-bloom-install-time"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@WorldTechRsrch",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Bloom Energy Power Connect installation time",
+    "subtitle": "Company says on-site power installation time can fall by more than 40%",
+    "source": "Source: Bloom Energy",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "power-connect"
+      ],
+      "displayTickValues": [
+        "Power Connect"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "Installation time reduction",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Installation time reduction",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "power-connect",
+            "y": 40,
+            "confidence": 1.0,
+            "displayLabel": "40%+"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 1,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Company says on-site power installation time can fall by more than 40%",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Bloom Energy Power Connect installation time",
+    "subMessage": "Company says on-site power installation time can fall by more than 40%",
+    "headline": "Bloom Energy Power Connect installation time",
+    "summary": "Company says on-site power installation time can fall by more than 40%",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Company says on-site power installation time can fall by more than 40%"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "id": "03-guidance-vs-consensus",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "FY3Q27 revenue guidance midpoint exceeded consensus while gross-margin outlook was below consensus.",
+    "preservedElements": [
+      "Revenue and gross-margin guidance",
+      "consensus comparison",
+      "source attribution"
+    ],
+    "changedElements": [
+      "Mixed units converted into explicit versus-consensus deltas for a compact single-axis chart",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Revenue guidance and gross-margin guidance are official NVIDIA midpoints. Consensus values are the user-provided inputs.",
+    "sourceAttribution": "NVIDIA FY2Q27 earnings release, August 26, 2026; consensus values supplied by the user",
+    "sourceKey": "nvidia-fy2q27-earnings-2026-08-26"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Single bar chart with two explicitly named deltas; the full guidance and consensus values remain in the subtitle."
+    },
+    {
+      "id": "expected-bar-count",
+      "label": "Bar count",
+      "status": "pass",
+      "detail": "Two data points are expected."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Title 900, subtitle 300, 16:9 canvas."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pass",
+      "detail": "Exported PNG and rendered DOM inspected with zero overflow findings."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "lineStrokeWidth": 3.4
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "FY3Q27 가이던스, 매출은 상회·마진은 하회",
+    "subtitle": "매출 중간값 1,080억달러 vs 1,046억달러 · GPM 74.0% vs 74.8%",
+    "source": "자료: NVIDIA FY2Q27 실적발표, 2026.08.26 · 컨센서스: 시장 예상치",
+    "timeRange": "FY3Q27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "revenue",
+        "gpm"
+      ],
+      "displayTickValues": [
+        "매출\n+3.3%",
+        "GPM\n-0.8%p"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "컨센서스 대비 변화",
+      "type": "value",
+      "tickValues": [
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -1.5,
+      "max": 4
+    },
+    "legend": [
+      {
+        "name": "컨센서스 대비",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "컨센서스 대비",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "revenue",
+            "y": 3.3,
+            "displayLabel": "+3.3%",
+            "confidence": 1
+          },
+          {
+            "x": "gpm",
+            "y": -0.8,
+            "displayLabel": "-0.8pp",
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.6,
+      "description": "Revenue guidance exceeded consensus while gross-margin guidance was lower.",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.9,
+      "description": "Two different-unit deltas shown directly."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 3.3,
+        "at": "revenue"
+      },
+      "min": {
+        "value": -0.8,
+        "at": "gpm"
+      },
+      "average": 1.25,
+      "median": 1.25,
+      "range": 4.1
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "FY3Q27 가이던스, 매출은 상회·마진은 하회",
+    "subMessage": "매출은 컨센서스보다 3.3% 높고, GPM은 0.8%p 낮다",
+    "headline": "FY3Q27 가이던스, 매출은 상회·마진은 하회",
+    "summary": "Revenue and GPM guidance versus consensus.",
+    "story": "Mixed units are represented as two explicitly labelled deltas.",
+    "keyTakeaways": [
+      "매출 중간값 1,080억달러",
+      "GPM 74.0%",
+      "매출 컨센서스 1,046억달러"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "NVIDIA FY2Q27 earnings release"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "revenue",
+        "y": 3.3
+      },
+      "displayText": "+3.3%",
+      "reason": "Revenue guide above consensus."
+    },
+    "densityLevel": "compact"
+  }
+}

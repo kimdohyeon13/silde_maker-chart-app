@@ -1,0 +1,74 @@
+{
+  "id": "01-revenue-outlook",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-08-27-nvidia-revenue-forward-pe-remake/input/source.png",
+  "analyzedAt": "2026-08-27T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Annual Revenue Trend and Outlook",
+    "originalMessage": "Compare NVIDIA annual revenue outlook and year-over-year growth on dual axes.",
+    "preservedElements": ["dual-axis combo chart", "original order of four categories", "revenue bars and growth dots", "left and right axis units", "title, footnote, and source"],
+    "changedElements": ["16:9 layout", "Paperlogy 900/300 typography", "spacing and legend alignment"],
+    "dataFidelity": "source-visible",
+    "notes": "Bar and dot values are read from the visible source axes and positions."
+  },
+  "allowedTransformations": ["adjust-layout", "adjust-fonts", "adjust-spacing", "adjust-colors"],
+  "qualityChecks": [
+    {"id": "source-structure-preserved", "label": "Source structure preserved", "status": "pass", "detail": "Four bars, growth dots, and dual axes retain the source order."},
+    {"id": "source-visible-values", "label": "Source-visible values", "status": "pass", "detail": "Revenue 210, 380, 560, 660 and growth 65, 82, 44, 69 are read from source axes."},
+    {"id": "paperlogy-contract", "label": "Paperlogy hierarchy", "status": "pass", "detail": "Title uses 900 and supporting text uses 300."},
+    {"id": "export-ready", "label": "Export settings", "status": "pass", "detail": "canvasHeight 540 is set for 1,920×1,080 export."}
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "width": 1920,
+    "height": 1080,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 18px 0",
+    "sourcePadding": "0 24px 6px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.8,
+    "showAreaFill": false,
+    "numberLocale": "en",
+    "accentColor": "#1479C9",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "Annual Revenue Trend and Outlook",
+    "subtitle": "Revenue (left axis) · Year-over-year growth (right axis)",
+    "source": "Source: NVIDIA, Samsung Securities",
+    "footnote": "Note: Fiscal year ending in January",
+    "timeRange": "2026–2028",
+    "xAxis": {"label": "", "type": "category", "tickValues": ["2026", "2027E", "2028E", "2028G"], "displayTickValues": ["2026", "2027E", "2028E", "2028G"], "unit": "", "startsAtZero": false, "isLogScale": false},
+    "yAxis": {"label": "Revenue (US$bn)", "type": "numeric", "tickValues": ["0", "100", "200", "300", "400", "500", "600", "700", "800"], "unit": "", "min": 0, "max": 800, "startsAtZero": true, "isLogScale": false},
+    "secondaryYAxis": {"label": "Year-over-year", "type": "numeric", "tickValues": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90"], "unit": "%", "min": 0, "max": 90, "startsAtZero": true, "isLogScale": false},
+    "legend": [{"name": "Revenue (left axis)", "role": "primary", "originalColor": "#B9BDCA", "remakeColor": "#B9BDCA"}, {"name": "Growth (right axis)", "role": "secondary", "originalColor": "#1479C9", "remakeColor": "#1479C9"}]
+  },
+  "data": {
+    "series": [
+      {"name": "Revenue (left axis)", "renderAs": "bar", "role": "primary", "axis": "left", "color": "#B9BDCA", "data": [{"x": "2026", "y": 210, "confidence": 0.82}, {"x": "2027E", "y": 380, "confidence": 0.82}, {"x": "2028E", "y": 560, "confidence": 0.82}, {"x": "2028G", "y": 660, "confidence": 0.82}]},
+      {"name": "Growth (right axis)", "renderAs": "line", "role": "secondary", "axis": "right", "color": "#1479C9", "data": [{"x": "2026", "y": 65, "confidence": 0.78}, {"x": "2027E", "y": 82, "confidence": 0.78}, {"x": "2028E", "y": 44, "confidence": 0.78}, {"x": "2028G", "y": 69, "confidence": 0.78}]}
+    ],
+    "totalDataPoints": 8,
+    "quality": {"overallConfidence": 0.8, "missingPoints": 0, "hardToReadAreas": [], "readabilityScore": "good"}
+  },
+  "statistics": {"summary": {"min": 44, "max": 660, "average": 258.75, "latest": 660}, "changeRates": []},
+  "patterns": {"trend": "Revenue outlook rises from 2026 to 2028 guidance, while growth peaks at 2027 consensus.", "supportResistance": []},
+  "narrative": {"headMessage": "Annual Revenue Trend and Outlook", "subMessage": "Fiscal years ending in January · E=consensus, G=guidance", "headline": "Annual Revenue Trend and Outlook", "summary": "Revenue bars and growth points use separate axes.", "keyTakeaways": []},
+  "emphasis": {"focusPoint": {"position": {"x": "2028G", "y": 660}, "displayText": "2028 Guidance", "reason": "Highest revenue outlook"}, "annotations": [], "trendLines": [], "highlightZones": [], "colorStrategy": {"primary": "#B9BDCA", "secondary": ["#1479C9"], "accent": "#1479C9", "backgroundTone": "light"}, "densityLevel": "balanced"}
+}

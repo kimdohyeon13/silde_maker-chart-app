@@ -1,0 +1,706 @@
+{
+  "id": "dib263-16",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-16.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "반도체 장비주 일제히 강세",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 29일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "반도체 장비주 일제히 강세",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 29일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "램리서치",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "AMAT",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "KLA",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "ASML",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "ARM",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "램리서치",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.255273
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.631701
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.071217
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.043187
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.278823
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.759696
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.845739
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.915391
+          },
+          {
+            "x": "2026-09-14",
+            "y": 90.712793
+          },
+          {
+            "x": "2026-09-15",
+            "y": 89.843777
+          },
+          {
+            "x": "2026-09-16",
+            "y": 89.299817
+          },
+          {
+            "x": "2026-09-17",
+            "y": 89.326348
+          },
+          {
+            "x": "2026-09-18",
+            "y": 95.56204
+          },
+          {
+            "x": "2026-09-21",
+            "y": 100.262035
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.141067
+          },
+          {
+            "x": "2026-09-23",
+            "y": 101.920465
+          },
+          {
+            "x": "2026-09-24",
+            "y": 101.880664
+          },
+          {
+            "x": "2026-09-25",
+            "y": 104.550732
+          },
+          {
+            "x": "2026-09-28",
+            "y": 104.305288
+          },
+          {
+            "x": "2026-09-29",
+            "y": 107.419818
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+2.99%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "AMAT",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.391717
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.652169
+          },
+          {
+            "x": "2026-09-03",
+            "y": 95.095877
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.197185
+          },
+          {
+            "x": "2026-09-08",
+            "y": 103.141428
+          },
+          {
+            "x": "2026-09-09",
+            "y": 102.281898
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.044481
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.5855
+          },
+          {
+            "x": "2026-09-14",
+            "y": 92.543463
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.880277
+          },
+          {
+            "x": "2026-09-16",
+            "y": 90.617158
+          },
+          {
+            "x": "2026-09-17",
+            "y": 91.057829
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.985099
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.2762
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.069434
+          },
+          {
+            "x": "2026-09-23",
+            "y": 103.488294
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.459933
+          },
+          {
+            "x": "2026-09-25",
+            "y": 105.805097
+          },
+          {
+            "x": "2026-09-28",
+            "y": 106.189052
+          },
+          {
+            "x": "2026-09-29",
+            "y": 111.697459
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+5.19%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "KLA",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.40097
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.181817
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.569396
+          },
+          {
+            "x": "2026-09-04",
+            "y": 105.785129
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.711598
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.251928
+          },
+          {
+            "x": "2026-09-10",
+            "y": 100.986033
+          },
+          {
+            "x": "2026-09-11",
+            "y": 102.958109
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.375035
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.765179
+          },
+          {
+            "x": "2026-09-16",
+            "y": 95.389002
+          },
+          {
+            "x": "2026-09-17",
+            "y": 96.312339
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.877748
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.856087
+          },
+          {
+            "x": "2026-09-22",
+            "y": 107.335429
+          },
+          {
+            "x": "2026-09-23",
+            "y": 107.073242
+          },
+          {
+            "x": "2026-09-24",
+            "y": 106.64577
+          },
+          {
+            "x": "2026-09-25",
+            "y": 107.107439
+          },
+          {
+            "x": "2026-09-28",
+            "y": 107.819893
+          },
+          {
+            "x": "2026-09-29",
+            "y": 112.014821
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "+3.89%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "ASML",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.179846
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.191634
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.062513
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.112611
+          },
+          {
+            "x": "2026-09-08",
+            "y": 104.058936
+          },
+          {
+            "x": "2026-09-09",
+            "y": 101.975814
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.494109
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.135025
+          },
+          {
+            "x": "2026-09-14",
+            "y": 92.873864
+          },
+          {
+            "x": "2026-09-15",
+            "y": 93.836709
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.46996
+          },
+          {
+            "x": "2026-09-17",
+            "y": 96.088468
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.051305
+          },
+          {
+            "x": "2026-09-21",
+            "y": 100.902703
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.059535
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.865548
+          },
+          {
+            "x": "2026-09-24",
+            "y": 101.561901
+          },
+          {
+            "x": "2026-09-25",
+            "y": 102.826041
+          },
+          {
+            "x": "2026-09-28",
+            "y": 104.44573
+          },
+          {
+            "x": "2026-09-29",
+            "y": 108.159149
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "+3.56%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "ARM",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.06916
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.085692
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.281093
+          },
+          {
+            "x": "2026-09-04",
+            "y": 104.208174
+          },
+          {
+            "x": "2026-09-08",
+            "y": 108.110452
+          },
+          {
+            "x": "2026-09-09",
+            "y": 109.226575
+          },
+          {
+            "x": "2026-09-10",
+            "y": 105.07213
+          },
+          {
+            "x": "2026-09-11",
+            "y": 109.458065
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.801203
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.966929
+          },
+          {
+            "x": "2026-09-16",
+            "y": 100.855687
+          },
+          {
+            "x": "2026-09-17",
+            "y": 109.50353
+          },
+          {
+            "x": "2026-09-18",
+            "y": 113.930793
+          },
+          {
+            "x": "2026-09-21",
+            "y": 133.479389
+          },
+          {
+            "x": "2026-09-22",
+            "y": 137.737178
+          },
+          {
+            "x": "2026-09-23",
+            "y": 137.472611
+          },
+          {
+            "x": "2026-09-24",
+            "y": 126.633869
+          },
+          {
+            "x": "2026-09-25",
+            "y": 128.279113
+          },
+          {
+            "x": "2026-09-28",
+            "y": 117.122063
+          },
+          {
+            "x": "2026-09-29",
+            "y": 121.396385
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "+3.65%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 137.737178,
+        "series": "all"
+      },
+      "min": {
+        "value": 89.299817,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "반도체 장비주 일제히 강세",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 107.419818
+      },
+      "displayText": "107.42",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

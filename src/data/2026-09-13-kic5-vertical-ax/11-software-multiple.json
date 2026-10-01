@@ -1,0 +1,244 @@
+{
+  "id": "software-multiple",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "22.7배로 내려와 사상 처음 S&P 500보다 낮아졌습니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: SaaStr 집계 (2026년 3월 기준)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 5개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "소프트웨어 업종 선행 주가수익배수 추이",
+    "subtitle": "22.7배로 내려와 사상 처음 S&P 500보다 낮아졌습니다",
+    "source": "자료: SaaStr 집계 (2026년 3월 기준)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2020년 5월~2022년 5월",
+        "2022년 6월~2024년 6월",
+        "2024년 7월~2025년 6월",
+        "2025년 7월~12월",
+        "2026년 1월~3월"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "선행 주가수익배수",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "선행 주가수익배수",
+        "data": [
+          {
+            "x": "2020년 5월~2022년 5월",
+            "y": 84.1,
+            "confidence": 0.95,
+            "displayLabel": "84.1배",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "2022년 6월~2024년 6월",
+            "y": 43.2,
+            "confidence": 0.95,
+            "displayLabel": "43.2배",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "2024년 7월~2025년 6월",
+            "y": 33.6,
+            "confidence": 0.95,
+            "displayLabel": "33.6배",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "2025년 7월~12월",
+            "y": 31.2,
+            "confidence": 0.95,
+            "displayLabel": "31.2배",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "2026년 1월~3월",
+            "y": 22.7,
+            "confidence": 0.95,
+            "displayLabel": "22.7배",
+            "color": "#087A68"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 84.1,
+        "at": ""
+      },
+      "min": {
+        "value": 22.7,
+        "at": ""
+      },
+      "average": 42.959999999999994,
+      "median": 33.6,
+      "range": 61.39999999999999
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "소프트웨어 업종 선행 주가수익배수 추이",
+    "subMessage": "22.7배로 내려와 사상 처음 S&P 500보다 낮아졌습니다",
+    "headline": "소프트웨어 업종 선행 주가수익배수 추이",
+    "summary": "22.7배로 내려와 사상 처음 S&P 500보다 낮아졌습니다",
+    "story": "22.7배로 내려와 사상 처음 S&P 500보다 낮아졌습니다",
+    "keyTakeaways": [
+      "선행 주가수익배수는 앞으로 1년 이익 대비 주가 배수입니다.",
+      "6년 만에 84.1배에서 22.7배가 됐습니다.",
+      "소프트웨어 ETF IGV는 고점 대비 약 30% 내렸습니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "선행 주가수익배수는 앞으로 1년 이익 대비 주가 배수입니다.",
+    "contextualNotes": [
+      "자료: SaaStr 집계 (2026년 3월 기준)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

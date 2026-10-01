@@ -1,0 +1,244 @@
+{
+  "id": "meta-q2",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Meta Q2: Costs Up 55%, EPS Down 13%",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [
+      "slide_maker_dark: approved dark terminal palette, frame, header and density rules",
+      "slide_maker_dark: title, labels, axes and source raised to white-mint contrast"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Meta Q2 2026 earnings release"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "Meta Q2: Costs Up 55%, EPS Down 13%",
+    "subtitle": "Unit: %",
+    "source": "Source: Meta Q2 2026 earnings release",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "REV",
+        "COST",
+        "OPINC",
+        "NI",
+        "EPS"
+      ],
+      "displayTickValues": [
+        "Revenue",
+        "Costs and expenses",
+        "Operating income",
+        "Net income",
+        "Diluted EPS"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "REV",
+        "COST",
+        "OPINC",
+        "NI",
+        "EPS"
+      ],
+      "displayTickValues": [
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "Revenue",
+        "Costs and expenses",
+        "Operating income",
+        "Net income",
+        "Diluted EPS"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -20,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "Year-over-year change",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Year-over-year change",
+        "data": [
+          {
+            "x": "REV",
+            "y": 28,
+            "displayLabel": "28",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "COST",
+            "y": 55,
+            "displayLabel": "55",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "OPINC",
+            "y": -8,
+            "displayLabel": "-8",
+            "color": "#175CD3"
+          },
+          {
+            "x": "NI",
+            "y": -14,
+            "displayLabel": "-14",
+            "color": "#175CD3"
+          },
+          {
+            "x": "EPS",
+            "y": -13,
+            "displayLabel": "-13",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Q2 2026, year-over-year change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 55,
+        "at": "COST"
+      },
+      "min": {
+        "value": -14,
+        "at": "NI"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Meta Q2: Costs Up 55%, EPS Down 13%",
+    "subMessage": "Q2 2026, year-over-year change",
+    "headline": "Meta Q2: Costs Up 55%, EPS Down 13%",
+    "summary": "Q2 2026, year-over-year change",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "COST",
+        "y": 55
+      },
+      "displayText": "55",
+      "reason": "Q2 2026, year-over-year change"
+    },
+    "densityLevel": "focused"
+  }
+}

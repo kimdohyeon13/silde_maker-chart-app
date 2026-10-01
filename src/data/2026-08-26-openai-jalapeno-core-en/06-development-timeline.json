@@ -1,0 +1,220 @@
+{
+  "id": "06-development-timeline",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "schedule",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Jalapeño development timeline",
+    "preservedElements": [
+      "Official announcement on 2026-06-24",
+      "First results on 2026-08-25",
+      "Initial deployment planned for year-end 2026",
+      "Gen 2 deep in development",
+      "Gen 3 taking shape"
+    ],
+    "changedElements": [
+      "Recomposed the milestones as a horizontal timeline with clear status labels",
+      "Explicitly labeled year-end deployment as planned",
+      "Applied Paperlogy typography and toss-clean spacing"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Dates and statuses come from the official announcement and first-results pages. Year-end 2026 is a plan, while Gen 2 and Gen 3 remain an in-progress roadmap; no completed deployment is implied.",
+    "sourceAttribution": "OpenAI · official announcement and first results",
+    "sourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "The two public events come first, followed by the deployment plan and next-generation work in a five-event horizontal timeline."
+    },
+    {
+      "id": "exact-official-milestones",
+      "label": "Official milestones preserved",
+      "status": "pass",
+      "detail": "The 2026-06-24 announcement, 2026-08-25 first results, year-end 2026 initial-deployment plan, and Gen 2/Gen 3 statuses are preserved from official wording."
+    },
+    {
+      "id": "planned-not-completed",
+      "label": "Deployment status preserved",
+      "status": "pass",
+      "detail": "Initial deployment is labeled as planned, not completed; both later generations are labeled as in progress."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual event and order parity",
+      "status": "pass",
+      "detail": "The five events, dates, order, and statuses match the Korean file."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "canvasHeight 540, title weight 900, and subtitle weight 300 are specified."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask covers JSON authoring; export/preflight remains with the parent agent."
+    }
+  ],
+  "structure": {
+    "title": "Deployment is still planned",
+    "subtitle": "Official results now · initial deployment planned by year-end 2026",
+    "source": "Source: OpenAI official announcement and first results",
+    "timeRange": "2026"
+  },
+  "infographicData": {
+    "subType": "timeline",
+    "direction": "horizontal",
+    "events": [
+      {
+        "date": "2026-06-24",
+        "title": "Jalapeño announced",
+        "description": "OpenAI and Broadcom unveiled the first Intelligence Processor",
+        "importance": "critical",
+        "category": "Official announcement"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "First results published",
+        "description": "OpenAI published Jalapeño’s first official performance results",
+        "importance": "critical",
+        "category": "Official results"
+      },
+      {
+        "date": "End of 2026",
+        "title": "Initial deployment planned",
+        "description": "Initial deployment is planned; it is not presented as completed",
+        "importance": "high",
+        "category": "Plan"
+      },
+      {
+        "date": "Gen 2",
+        "title": "Generation 2",
+        "description": "Deep in development",
+        "importance": "high",
+        "category": "In development"
+      },
+      {
+        "date": "Gen 3",
+        "title": "Generation 3",
+        "description": "Taking shape",
+        "importance": "medium",
+        "category": "In development"
+      }
+    ]
+  },
+  "tableData": {
+    "columns": [
+      { "key": "when", "label": "When", "dataType": "text", "width": "30%", "align": "left", "isRowHeader": true },
+      { "key": "status", "label": "Status", "dataType": "text", "width": "70%", "align": "left" }
+    ],
+    "rows": [
+      { "rowType": "data", "cells": { "when": { "value": "2026-06-24", "displayValue": "2026-06-24" }, "status": { "value": "Jalapeño announced", "displayValue": "Jalapeño announced", "highlight": "accent" } } },
+      { "rowType": "data", "cells": { "when": { "value": "2026-08-25", "displayValue": "2026-08-25" }, "status": { "value": "First results published", "displayValue": "First results published", "highlight": "accent" } } },
+      { "rowType": "data", "cells": { "when": { "value": "End of 2026", "displayValue": "End of 2026" }, "status": { "value": "Initial deployment planned", "displayValue": "Initial deployment planned", "highlight": "positive" } } },
+      { "rowType": "data", "cells": { "when": { "value": "Gen 2", "displayValue": "Gen 2" }, "status": { "value": "Deep in development", "displayValue": "Deep in development" } } },
+      { "rowType": "data", "cells": { "when": { "value": "Gen 3", "displayValue": "Gen 3" }, "status": { "value": "Taking shape", "displayValue": "Taking shape" } } }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 58,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 52,
+      "maxRowHeight": 68,
+      "cellPadding": "6px 10px",
+      "lineHeight": 1.05,
+      "zebraStripe": true,
+      "zebraOpacity": 0.05,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": { "body": 600, "rowHeader": 750, "header": 800 },
+      "fontSize": { "header": "13px", "body": "16px", "total": "16px" }
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Milestone",
+        "data": [
+          { "x": "1", "y": 1 },
+          { "x": "2", "y": 1 },
+          { "x": "3", "y": 1 },
+          { "x": "4", "y": 1 },
+          { "x": "5", "y": 1 }
+        ]
+      }
+    ],
+    "totalDataPoints": 5
+  },
+  "narrative": {
+    "headMessage": "Deployment is still planned",
+    "subMessage": "Year-end 2026 deployment planned · Gen 2 and Gen 3 in development",
+    "headline": "Jalapeño has public results, but deployment is still planned.",
+    "summary": "The official timeline separates public events from the deployment plan and later-generation work.",
+    "story": "The first two points are published events; the last three are a plan or an in-progress roadmap.",
+    "keyTakeaways": [
+      "Year-end 2026 is the planned initial-deployment point.",
+      "Gen 2 is deep in development, while Gen 3 is taking shape."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Initial deployment planned for year-end 2026",
+      "reason": "The milestone that most needs a clear planned-versus-completed distinction"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#98A2B3", "#F79009"],
+      "positive": "#155EEF",
+      "negative": "#98A2B3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 16px 2px",
+    "sourcePadding": "0 28px 8px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0",
+    "numberLocale": "en"
+  }
+}

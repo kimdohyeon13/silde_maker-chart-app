@@ -1,0 +1,326 @@
+{
+  "id": "05-sk-16hi",
+  "sourceImage": "input/17-sk-16hi.png",
+  "analyzedAt": "2026-08-25T15:15:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "ADVANCED MR-MUF FOR 16HI",
+    "originalMessage": "HBM3E 16Hi(@48GB/Cube) and the 12Hi → 16Hi package KPI changes",
+    "sourceKey": "@wltechrsrch/hot-chips-hbm-16hi",
+    "preservedElements": [
+      "HBM3E 16Hi(@48GB/Cube) successfully developed by advanced MR-MUF technology",
+      "Key Technology: Warpage control, Fine Pitch Int’n & Narrow Gap-fill",
+      "8Hi HBM2E~, 12Hi HBM3~, 16Hi HBM4~, >16Hi stack labels",
+      "12Hi → 16Hi total package height 720→775µm",
+      "Chip thickness 1.0x→0.9x",
+      "Gap height 1.0x→0.5x",
+      "Bump pitch 1.0x→0.9x",
+      "Challenges: Die Warpage and Gap-Fill Quality"
+    ],
+    "changedElements": [
+      "원본의 우측 KPI 표를 읽기 쉬운 편집 가능한 표로 재구성",
+      "패키지 적층 라벨과 Key Technology 설명을 내러티브 메타데이터에 보존",
+      "영문 원문과 쉬운 한국어 설명을 병기",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "표의 네 KPI는 원본에 보이는 화살표·단위·배수를 그대로 유지했습니다. 8Hi/12Hi/16Hi/>16Hi 적층 라벨과 12Hi·16Hi 패키지 높이 주석도 보존했습니다.",
+    "sourceAttribution": "SK hynix source slide; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "네 개의 exact KPI 행과 Challenge 열을 중심으로 비교표를 구성했습니다."
+    },
+    {
+      "id": "exact-kpi-values",
+      "label": "12Hi→16Hi exact KPI",
+      "status": "pass",
+      "detail": "720→775µm, 1.0x→0.9x, 1.0x→0.5x, 1.0x→0.9x를 원본 표와 대조했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서·색 동일",
+      "status": "pass",
+      "detail": "KO/EN 파일의 KPI value, 행 순서, 강조 색, sourceKey를 동일하게 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "이번 하위 작업은 JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "title": "16Hi용 첨단 MR-MUF",
+    "subtitle": "HBM3E 16Hi 개발과 12Hi→16Hi 패키지 KPI",
+    "source": "SK hynix · Advanced MR-MUF for 16Hi"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 24px 0",
+    "contentPadding": "0 14px 0",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "항목",
+        "dataType": "text",
+        "width": "38%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "change",
+        "label": "12Hi→16Hi",
+        "dataType": "number",
+        "width": "34%",
+        "align": "center"
+      },
+      {
+        "key": "challenge",
+        "label": "과제",
+        "dataType": "text",
+        "width": "28%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Total PKG Height (µm)",
+            "displayValue": "전체 패키지 높이 (µm)"
+          },
+          "change": {
+            "value": "720→775µm",
+            "displayValue": "720→775µm",
+            "highlight": "accent"
+          },
+          "challenge": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Chip Thickness (µm)",
+            "displayValue": "칩 두께 (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.9x",
+            "displayValue": "1.0x→0.9x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "Die Warpage",
+            "displayValue": "다이 휨",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Gap-Height (µm)",
+            "displayValue": "갭 높이 (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.5x",
+            "displayValue": "1.0x→0.5x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "Gap-Fill Quality",
+            "displayValue": "갭 충진 품질",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "Bump Pitch (µm)",
+            "displayValue": "범프 피치 (µm)"
+          },
+          "change": {
+            "value": "1.0x→0.9x",
+            "displayValue": "1.0x→0.9x",
+            "highlight": "positive"
+          },
+          "challenge": {
+            "value": "",
+            "displayValue": ""
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+    "rowHeight": 76,
+    "fitRowsToCanvas": false,
+    "minRowHeight": 76,
+    "maxRowHeight": 76,
+    "cellPadding": "8px 10px",
+    "lineHeight": 1.08,
+    "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+      "body": 550,
+      "numeric": 800,
+      "rowHeader": 750,
+      "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "17px",
+        "total": "17px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      },
+      "zebraOpacity": 0.055,
+      "groupHeaderTone": "band",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "16Hi용 첨단 MR-MUF",
+    "subMessage": "HBM3E 16Hi(@48GB/Cube) 개발과 12Hi→16Hi 핵심 치수 변화",
+    "headline": "16Hi용 첨단 MR-MUF",
+    "summary": "16단 적층을 위해 패키지 높이는 720µm에서 775µm로 늘고, 칩·갭·범프는 더 얇고 촘촘해집니다.",
+    "story": "원본은 HBM3E 16Hi(@48GB/Cube)가 첨단 MR-MUF로 개발됐다고 설명합니다. 표의 네 KPI는 12Hi에서 16Hi로 갈 때 패키지 높이와 세부 치수가 어떻게 달라지는지 보여줍니다.",
+    "keyTakeaways": [
+      "전체 패키지 높이: 720→775µm",
+      "칩 두께: 1.0x→0.9x",
+      "갭 높이: 1.0x→0.5x",
+      "범프 피치: 1.0x→0.9x"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "패키지 높이와 함께 칩·갭·범프가 얼마나 줄어드는지 표의 화살표를 따라 읽습니다.",
+    "contextualNotes": [
+      "Key Technology: Warpage control, Fine Pitch Int’n & Narrow Gap-fill",
+      "Stack labels: 8Hi HBM2E~, 12Hi HBM3~, 16Hi HBM4~, >16Hi",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This is a package KPI comparison, not a time series.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "No time-series volatility is implied by the source table."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 0,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "12Hi→16Hi",
+        "y": 0
+      },
+      "reason": "The table preserves all four exact KPI transitions and their named challenges.",
+      "displayText": "720→775µm · 1.0x→0.5x"
+    },
+    "densityLevel": "detailed"
+  }
+}

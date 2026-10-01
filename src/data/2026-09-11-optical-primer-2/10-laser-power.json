@@ -1,0 +1,250 @@
+{
+  "id": "laser-power",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "플러거블 70mW에서 외부 광원용 400mW까지 올라간다",
+    "preservedElements": [
+      "요구 출력 수치",
+      "용도 구분",
+      "mW 단위"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "범위로 제시된 값은 중간값입니다. NPO·CPO 최소 요구는 120~150mW, NPO 자체 광원은 150~200mW입니다.",
+    "sourceAttribution": "자료: 루멘텀, Citi 2026 Global TMT Conference (2026-09-09) · 범위값은 중간값 표시"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "용도별 요구 출력을 가로 막대로. 범위는 중간값을 쓰고 라벨에 용도를 적는다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "용도별로 요구되는 광원 레이저 출력",
+    "subtitle": "플러거블 70mW에서 외부 광원용 400mW까지 올라간다",
+    "source": "자료: 루멘텀, Citi 2026 Global TMT Conference (2026-09-09) · 범위값은 중간값 표시",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "90",
+        "180",
+        "270",
+        "360",
+        "450"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 450
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "uhp",
+        "ils",
+        "min",
+        "plug"
+      ],
+      "displayTickValues": [
+        "ELS용 UHP 레이저 400mW",
+        "NPO 자체 광원 150~200mW",
+        "NPO·CPO 최소 요구 120~150mW",
+        "현재 플러거블 70mW"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "요구 출력",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "요구 출력",
+        "data": [
+          {
+            "x": "uhp",
+            "y": 400,
+            "confidence": 0.9
+          },
+          {
+            "x": "ils",
+            "y": 175,
+            "confidence": 0.9
+          },
+          {
+            "x": "min",
+            "y": 135,
+            "confidence": 0.9
+          },
+          {
+            "x": "plug",
+            "y": 70,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -82.5,
+        "absoluteChange": -330,
+        "from": 400,
+        "to": 70
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 400,
+        "at": "ELS용 UHP 레이저 400mW"
+      },
+      "min": {
+        "value": 70,
+        "at": "현재 플러거블 70mW"
+      },
+      "average": 195,
+      "median": 175,
+      "range": 330
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "용도별로 요구되는 광원 레이저 출력",
+    "subMessage": "플러거블 70mW에서 외부 광원용 400mW까지 올라간다",
+    "headline": "용도별로 요구되는 광원 레이저 출력",
+    "summary": "플러거블 70mW에서 외부 광원용 400mW까지 올라간다",
+    "story": "플러거블 70mW에서 외부 광원용 400mW까지 올라간다",
+    "keyTakeaways": [
+      "지금 플러거블에 쓰는 출력은 70mW다.",
+      "NPO와 CPO는 최소 120mW 이상을 요구한다.",
+      "400mW급은 루멘텀과 코히런트만 만든다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "지금 플러거블에 쓰는 출력은 70mW다.",
+    "contextualNotes": [
+      "자료: 루멘텀, Citi 2026 Global TMT Conference (2026-09-09) · 범위값은 중간값 표시"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

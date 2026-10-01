@@ -1,0 +1,376 @@
+{
+  "id": "speed-adoption",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "preservedElements": [
+      "속도별 채택 비중",
+      "연도 순서",
+      "비중 단위(%)"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking (2026-09-11)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "연말 분기 5개 시점에 속도 4종을 묶은 세로 그룹 막대. 가로 전환은 축 계산이 깨져 세로를 유지했다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "데이터센터 광모듈 속도별 채택 비중",
+    "subtitle": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "source": "자료: 골드만삭스 Optical Networking (2026-09-11)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028"
+      ],
+      "displayTickValues": [
+        "2024년 말",
+        "2025년 말",
+        "2026년 말",
+        "2027년 말",
+        "2028년 말"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "9",
+        "18",
+        "27",
+        "36",
+        "45"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "400G",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "800G",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "1.6T",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "3.2T",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#A78BFA"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "400G",
+        "data": [
+          {
+            "x": "2024",
+            "y": 30,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 9,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 1,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "800G",
+        "data": [
+          {
+            "x": "2024",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 41,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 26,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 23,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 23,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      },
+      {
+        "name": "1.6T",
+        "data": [
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 11,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 28,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 27,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 26,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#4AA8FF"
+      },
+      {
+        "name": "3.2T",
+        "data": [
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 11,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#A78BFA"
+      }
+    ],
+    "totalDataPoints": 20,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -63.3,
+        "absoluteChange": -19,
+        "from": 30,
+        "to": 11
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 41,
+        "at": "2024년 말"
+      },
+      "min": {
+        "value": 0,
+        "at": "2028년 말"
+      },
+      "average": 14.3,
+      "median": 11,
+      "range": 41
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "데이터센터 광모듈 속도별 채택 비중",
+    "subMessage": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "headline": "데이터센터 광모듈 속도별 채택 비중",
+    "summary": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "story": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "keyTakeaways": [
+      "400G는 2024년 30%에서 2028년 1%로 빠진다.",
+      "800G는 2025년 41%로 정점을 찍는다.",
+      "1.6T와 3.2T가 그 자리를 나눠 가진다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "400G는 2024년 30%에서 2028년 1%로 빠진다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking (2026-09-11)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

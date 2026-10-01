@@ -1,0 +1,783 @@
+{
+  "id": "dib239-15",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-239-15.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "08. Neocloud",
+    "originalMessage": "Yahoo Finance peer performance chart",
+    "preservedElements": [
+      "line chart form",
+      "Jun 1 to Aug 26, 2026 range",
+      "indexed performance baseline",
+      "original y-axis range",
+      "Yahoo Finance attribution"
+    ],
+    "changedElements": [
+      "English channel copy",
+      "exact raw daily close reconstruction",
+      "dark terminal styling"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Yahoo Finance raw daily closes through Aug 26, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-yahoo-daily-close",
+      "label": "Exact Yahoo Finance daily closes",
+      "status": "pass",
+      "detail": "Raw daily closes are frozen in input/yahoo-finance-daily.csv."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "Close, daily move, and total move",
+      "status": "pass",
+      "detail": "Aug 26 values match the request reading."
+    },
+    {
+      "id": "english-copy",
+      "label": "English-only printed copy",
+      "status": "pass",
+      "detail": "Title, subtitle, labels, source, and watermark are English."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@WorldTechRsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 240,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "08. Neocloud",
+    "subtitle": "Indexed performance since May 27, 2026 · daily move as of Aug 26",
+    "source": "Source: Yahoo Finance · close as of Aug 26, 2026",
+    "timeRange": "2026-05-27 to 2026-08-26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-03",
+        "2026-08-17"
+      ],
+      "displayTickValues": [
+        "06-01",
+        "07-01",
+        "08-01",
+        "08-15"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "3 months ago = 100",
+      "type": "value",
+      "tickValues": [
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 60,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "Nebius",
+        "role": "primary",
+        "originalColor": "#00E0A4",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "CoreWeave",
+        "role": "secondary",
+        "originalColor": "#FF6A5F",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Nebius",
+        "seriesKind": "normal",
+        "data": [
+          {
+            "x": "2026-05-27",
+            "y": 100
+          },
+          {
+            "x": "2026-05-28",
+            "y": 108.6241
+          },
+          {
+            "x": "2026-05-29",
+            "y": 110.9037
+          },
+          {
+            "x": "2026-06-01",
+            "y": 126.9425
+          },
+          {
+            "x": "2026-06-02",
+            "y": 125.0564
+          },
+          {
+            "x": "2026-06-03",
+            "y": 120.7851
+          },
+          {
+            "x": "2026-06-04",
+            "y": 124.6197
+          },
+          {
+            "x": "2026-06-05",
+            "y": 109.3296
+          },
+          {
+            "x": "2026-06-08",
+            "y": 104.6216
+          },
+          {
+            "x": "2026-06-09",
+            "y": 105.639
+          },
+          {
+            "x": "2026-06-10",
+            "y": 101.5933
+          },
+          {
+            "x": "2026-06-11",
+            "y": 106.6564
+          },
+          {
+            "x": "2026-06-12",
+            "y": 111.5132
+          },
+          {
+            "x": "2026-06-15",
+            "y": 124.8116
+          },
+          {
+            "x": "2026-06-16",
+            "y": 127.2256
+          },
+          {
+            "x": "2026-06-17",
+            "y": 134.8131
+          },
+          {
+            "x": "2026-06-18",
+            "y": 137.587
+          },
+          {
+            "x": "2026-06-22",
+            "y": 136.1088
+          },
+          {
+            "x": "2026-06-23",
+            "y": 132.0968
+          },
+          {
+            "x": "2026-06-24",
+            "y": 124.6149
+          },
+          {
+            "x": "2026-06-25",
+            "y": 123.1607
+          },
+          {
+            "x": "2026-06-26",
+            "y": 115.3237
+          },
+          {
+            "x": "2026-06-29",
+            "y": 125.3299
+          },
+          {
+            "x": "2026-06-30",
+            "y": 132.5383
+          },
+          {
+            "x": "2026-07-01",
+            "y": 109.987
+          },
+          {
+            "x": "2026-07-02",
+            "y": 103.4794
+          },
+          {
+            "x": "2026-07-06",
+            "y": 102.2316
+          },
+          {
+            "x": "2026-07-07",
+            "y": 93.6747
+          },
+          {
+            "x": "2026-07-08",
+            "y": 103.8921
+          },
+          {
+            "x": "2026-07-09",
+            "y": 103.7577
+          },
+          {
+            "x": "2026-07-10",
+            "y": 105.4134
+          },
+          {
+            "x": "2026-07-13",
+            "y": 101.027
+          },
+          {
+            "x": "2026-07-14",
+            "y": 93.1468
+          },
+          {
+            "x": "2026-07-15",
+            "y": 95.7479
+          },
+          {
+            "x": "2026-07-16",
+            "y": 82.4351
+          },
+          {
+            "x": "2026-07-17",
+            "y": 85.2858
+          },
+          {
+            "x": "2026-07-20",
+            "y": 87.6422
+          },
+          {
+            "x": "2026-07-21",
+            "y": 104.1033
+          },
+          {
+            "x": "2026-07-22",
+            "y": 104.6984
+          },
+          {
+            "x": "2026-07-23",
+            "y": 106.0469
+          },
+          {
+            "x": "2026-07-24",
+            "y": 90.1137
+          },
+          {
+            "x": "2026-07-27",
+            "y": 90.1665
+          },
+          {
+            "x": "2026-07-28",
+            "y": 81.4369
+          },
+          {
+            "x": "2026-07-29",
+            "y": 71.1331
+          },
+          {
+            "x": "2026-07-30",
+            "y": 90.4305
+          },
+          {
+            "x": "2026-07-31",
+            "y": 91.3807
+          },
+          {
+            "x": "2026-08-03",
+            "y": 102.0204
+          },
+          {
+            "x": "2026-08-04",
+            "y": 108.3361
+          },
+          {
+            "x": "2026-08-05",
+            "y": 105.0967
+          },
+          {
+            "x": "2026-08-06",
+            "y": 91.1264
+          },
+          {
+            "x": "2026-08-07",
+            "y": 90.2097
+          },
+          {
+            "x": "2026-08-10",
+            "y": 88.3573
+          },
+          {
+            "x": "2026-08-11",
+            "y": 92.7341
+          },
+          {
+            "x": "2026-08-12",
+            "y": 124.3941
+          },
+          {
+            "x": "2026-08-13",
+            "y": 122.3977
+          },
+          {
+            "x": "2026-08-14",
+            "y": 133.2629
+          },
+          {
+            "x": "2026-08-17",
+            "y": 129.0253
+          },
+          {
+            "x": "2026-08-18",
+            "y": 119.2254
+          },
+          {
+            "x": "2026-08-19",
+            "y": 107.4531
+          },
+          {
+            "x": "2026-08-20",
+            "y": 105.6342
+          },
+          {
+            "x": "2026-08-21",
+            "y": 105.1639
+          },
+          {
+            "x": "2026-08-24",
+            "y": 101.219
+          },
+          {
+            "x": "2026-08-25",
+            "y": 106.5269
+          },
+          {
+            "x": "2026-08-26",
+            "y": 102.6683
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-3.62%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "CoreWeave",
+        "seriesKind": "normal",
+        "data": [
+          {
+            "x": "2026-05-27",
+            "y": 100
+          },
+          {
+            "x": "2026-05-28",
+            "y": 102.4839
+          },
+          {
+            "x": "2026-05-29",
+            "y": 105.0446
+          },
+          {
+            "x": "2026-06-01",
+            "y": 119.7085
+          },
+          {
+            "x": "2026-06-02",
+            "y": 114.3857
+          },
+          {
+            "x": "2026-06-03",
+            "y": 106.3873
+          },
+          {
+            "x": "2026-06-04",
+            "y": 103.606
+          },
+          {
+            "x": "2026-06-05",
+            "y": 96.2789
+          },
+          {
+            "x": "2026-06-08",
+            "y": 98.1778
+          },
+          {
+            "x": "2026-06-09",
+            "y": 94.4183
+          },
+          {
+            "x": "2026-06-10",
+            "y": 91.6946
+          },
+          {
+            "x": "2026-06-11",
+            "y": 91.8193
+          },
+          {
+            "x": "2026-06-12",
+            "y": 96.4323
+          },
+          {
+            "x": "2026-06-15",
+            "y": 102.3401
+          },
+          {
+            "x": "2026-06-16",
+            "y": 112.2375
+          },
+          {
+            "x": "2026-06-17",
+            "y": 110.492
+          },
+          {
+            "x": "2026-06-18",
+            "y": 113.1198
+          },
+          {
+            "x": "2026-06-22",
+            "y": 106.7325
+          },
+          {
+            "x": "2026-06-23",
+            "y": 101.3906
+          },
+          {
+            "x": "2026-06-24",
+            "y": 96.7488
+          },
+          {
+            "x": "2026-06-25",
+            "y": 94.7156
+          },
+          {
+            "x": "2026-06-26",
+            "y": 92.6249
+          },
+          {
+            "x": "2026-06-29",
+            "y": 91.5987
+          },
+          {
+            "x": "2026-06-30",
+            "y": 95.4637
+          },
+          {
+            "x": "2026-07-01",
+            "y": 82.1761
+          },
+          {
+            "x": "2026-07-02",
+            "y": 78.3974
+          },
+          {
+            "x": "2026-07-06",
+            "y": 82.9193
+          },
+          {
+            "x": "2026-07-07",
+            "y": 80.1093
+          },
+          {
+            "x": "2026-07-08",
+            "y": 86.3144
+          },
+          {
+            "x": "2026-07-09",
+            "y": 86.0267
+          },
+          {
+            "x": "2026-07-10",
+            "y": 85.2402
+          },
+          {
+            "x": "2026-07-13",
+            "y": 79.8983
+          },
+          {
+            "x": "2026-07-14",
+            "y": 76.6664
+          },
+          {
+            "x": "2026-07-15",
+            "y": 73.9618
+          },
+          {
+            "x": "2026-07-16",
+            "y": 69.9242
+          },
+          {
+            "x": "2026-07-17",
+            "y": 70.212
+          },
+          {
+            "x": "2026-07-20",
+            "y": 70.0681
+          },
+          {
+            "x": "2026-07-21",
+            "y": 76.3211
+          },
+          {
+            "x": "2026-07-22",
+            "y": 79.2558
+          },
+          {
+            "x": "2026-07-23",
+            "y": 77.7788
+          },
+          {
+            "x": "2026-07-24",
+            "y": 68.9364
+          },
+          {
+            "x": "2026-07-27",
+            "y": 67.8911
+          },
+          {
+            "x": "2026-07-28",
+            "y": 64.544
+          },
+          {
+            "x": "2026-07-29",
+            "y": 58.3293
+          },
+          {
+            "x": "2026-07-30",
+            "y": 70.8737
+          },
+          {
+            "x": "2026-07-31",
+            "y": 68.8309
+          },
+          {
+            "x": "2026-08-03",
+            "y": 82.248
+          },
+          {
+            "x": "2026-08-04",
+            "y": 88.1366
+          },
+          {
+            "x": "2026-08-05",
+            "y": 86.2089
+          },
+          {
+            "x": "2026-08-06",
+            "y": 81.8356
+          },
+          {
+            "x": "2026-08-07",
+            "y": 86.9569
+          },
+          {
+            "x": "2026-08-10",
+            "y": 84.5785
+          },
+          {
+            "x": "2026-08-11",
+            "y": 86.6213
+          },
+          {
+            "x": "2026-08-12",
+            "y": 103.3183
+          },
+          {
+            "x": "2026-08-13",
+            "y": 101.9373
+          },
+          {
+            "x": "2026-08-14",
+            "y": 100.9495
+          },
+          {
+            "x": "2026-08-17",
+            "y": 101.6592
+          },
+          {
+            "x": "2026-08-18",
+            "y": 89.3546
+          },
+          {
+            "x": "2026-08-19",
+            "y": 87.1488
+          },
+          {
+            "x": "2026-08-20",
+            "y": 86.0842
+          },
+          {
+            "x": "2026-08-21",
+            "y": 84.2524
+          },
+          {
+            "x": "2026-08-24",
+            "y": 82.7179
+          },
+          {
+            "x": "2026-08-25",
+            "y": 84.4346
+          },
+          {
+            "x": "2026-08-26",
+            "y": 84.4059
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-0.03%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 128,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance raw daily closes"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0,
+      "description": "Indexed daily-close performance."
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": "Daily close series."
+    },
+    "changeRates": [
+      {
+        "period": "May 27 to Aug 26",
+        "percentChange": 2.7,
+        "absoluteChange": 5.56,
+        "from": 208.37,
+        "to": 213.93
+      },
+      {
+        "period": "May 27 to Aug 26",
+        "percentChange": -15.6,
+        "absoluteChange": -16.26,
+        "from": 104.27,
+        "to": 88.01
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 140,
+        "at": "2026-08-26"
+      },
+      "min": {
+        "value": 60,
+        "at": "2026-05-27"
+      },
+      "average": 100,
+      "median": 100,
+      "range": 80
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "08. Neocloud",
+    "subMessage": "Indexed performance since May 27, 2026 · daily move as of Aug 26",
+    "headline": "08. Neocloud",
+    "summary": "Indexed performance since May 27, 2026 · daily move as of Aug 26",
+    "story": "Yahoo Finance indexed daily closes.",
+    "keyTakeaways": [
+      "Nebius 2.7%",
+      "CoreWeave -15.6%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "Source: Yahoo Finance · close as of Aug 26, 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F",
+        "#4AA8FF",
+        "#A78BFA",
+        "#F472B6",
+        "#F9C74F"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-08-26",
+        "y": 100
+      },
+      "displayText": "Aug 26 close",
+      "reason": "Latest daily close"
+    },
+    "densityLevel": "high"
+  }
+}

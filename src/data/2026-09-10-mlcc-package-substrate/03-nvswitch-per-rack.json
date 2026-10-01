@@ -1,0 +1,288 @@
+{
+  "id": "03-nvswitch-per-rack",
+  "sourceImage": "input/03-nvswitch-per-rack.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 엔비디아 플랫폼 자료, 2026년 5월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "엔비디아 플랫폼 세대별 스위치 칩 탑재량",
+    "subtitle": "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다",
+    "source": "자료: 엔비디아 플랫폼 자료, 2026년 5월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "구분",
+        "dataType": "text",
+        "width": "20%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "gb200",
+        "label": "GB200 NVL72",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "gb300",
+        "label": "GB300 NVL72",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "vr200",
+        "label": "VR200 NVL72",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      },
+      {
+        "key": "pod",
+        "label": "VR200 POD",
+        "dataType": "text",
+        "width": "20%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "전체 랙 수",
+            "displayValue": "전체 랙 수"
+          },
+          "gb200": {
+            "value": "1랙",
+            "displayValue": "1랙"
+          },
+          "gb300": {
+            "value": "1랙",
+            "displayValue": "1랙"
+          },
+          "vr200": {
+            "value": "1랙",
+            "displayValue": "1랙"
+          },
+          "pod": {
+            "value": "40랙",
+            "displayValue": "40랙"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "GPU 수",
+            "displayValue": "GPU 수"
+          },
+          "gb200": {
+            "value": "72개",
+            "displayValue": "72개"
+          },
+          "gb300": {
+            "value": "72개",
+            "displayValue": "72개"
+          },
+          "vr200": {
+            "value": "72개",
+            "displayValue": "72개"
+          },
+          "pod": {
+            "value": "1,152개",
+            "displayValue": "1,152개"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "스위치 트레이",
+            "displayValue": "스위치 트레이"
+          },
+          "gb200": {
+            "value": "9개",
+            "displayValue": "9개"
+          },
+          "gb300": {
+            "value": "9개",
+            "displayValue": "9개"
+          },
+          "vr200": {
+            "value": "9개",
+            "displayValue": "9개"
+          },
+          "pod": {
+            "value": "144개",
+            "displayValue": "144개"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "트레이당 스위치 칩",
+            "displayValue": "트레이당 스위치 칩"
+          },
+          "gb200": {
+            "value": "2개",
+            "displayValue": "2개"
+          },
+          "gb300": {
+            "value": "2개",
+            "displayValue": "2개"
+          },
+          "vr200": {
+            "value": "4개",
+            "displayValue": "4개"
+          },
+          "pod": {
+            "value": "4개",
+            "displayValue": "4개"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "스위치 칩 총량",
+            "displayValue": "스위치 칩 총량"
+          },
+          "gb200": {
+            "value": "18개",
+            "displayValue": "18개"
+          },
+          "gb300": {
+            "value": "18개",
+            "displayValue": "18개"
+          },
+          "vr200": {
+            "value": "36개",
+            "displayValue": "36개"
+          },
+          "pod": {
+            "value": "576개",
+            "displayValue": "576개"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "compact",
+      "zebraStripe": true,
+      "highlightMode": "cell",
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "엔비디아 플랫폼 세대별 스위치 칩 탑재량",
+    "subMessage": "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다",
+    "headline": "엔비디아 플랫폼 세대별 스위치 칩 탑재량",
+    "summary": "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 엔비디아 플랫폼 자료, 2026년 5월"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "엔비디아 플랫폼 세대별 스위치",
+      "reason": "랙당 18개였던 스위치 칩이 루빈 세대에서 36개로 늘어납니다"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

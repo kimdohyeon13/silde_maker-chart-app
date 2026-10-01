@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-revenue-ebitda"
   },
   "allowedTransformations": [
     "translate-text",
@@ -86,14 +87,20 @@
       "label": "",
       "type": "category",
       "tickValues": [
+        "2Q25 Revenue",
+        "2Q26 Revenue",
+        "2Q25 EBITDA",
+        "2Q26 EBITDA"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
         "25년 매출",
         "26년 매출",
         "25년 EBITDA",
         "26년 EBITDA"
-      ],
-      "unit": "",
-      "startsAtZero": false,
-      "isLogScale": false
+      ]
     },
     "yAxis": {
       "label": "",
@@ -120,22 +127,22 @@
         "name": "그룹 실적",
         "data": [
           {
-            "x": "25년 매출",
+            "x": "2Q25 Revenue",
             "y": 1.05,
             "confidence": 0.74
           },
           {
-            "x": "26년 매출",
+            "x": "2Q26 Revenue",
             "y": 5.82,
             "confidence": 0.74
           },
           {
-            "x": "25년 EBITDA",
+            "x": "2Q25 EBITDA",
             "y": -0.21,
             "confidence": 0.74
           },
           {
-            "x": "26년 EBITDA",
+            "x": "2Q26 EBITDA",
             "y": 2.36,
             "confidence": 0.74
           }

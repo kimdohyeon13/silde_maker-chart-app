@@ -1,0 +1,461 @@
+{
+  "id": "14-neocloud-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.007Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존",
+      "1~4종목은 10개 지표를 행으로 전치"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "AI 클라우드",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 4종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "stock0",
+        "label": "CRWV\n코어위브\nGPU 클라우드",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock1",
+        "label": "NBIS\n네비우스\nAI 클라우드",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock2",
+        "label": "IREN\n아이렌\nAI·채굴 인프라",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock3",
+        "label": "WULF\n테라울프\nAI·채굴 인프라",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "현재가",
+            "displayValue": "현재가"
+          },
+          "stock0": {
+            "value": "81.36",
+            "displayValue": "81"
+          },
+          "stock1": {
+            "value": "223.54",
+            "displayValue": "223"
+          },
+          "stock2": {
+            "value": "46.68",
+            "displayValue": "46"
+          },
+          "stock3": {
+            "value": "17.01",
+            "displayValue": "17"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "오늘 등락",
+            "displayValue": "오늘 등락"
+          },
+          "stock0": {
+            "value": "+1.9%",
+            "displayValue": "+1.9%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "+2.5%",
+            "displayValue": "+2.5%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "+7.4%",
+            "displayValue": "+7.4%",
+            "highlight": "positive"
+          },
+          "stock3": {
+            "value": "+3.3%",
+            "displayValue": "+3.3%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1개월 수익률",
+            "displayValue": "1개월 수익률"
+          },
+          "stock0": {
+            "value": "-10.5%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "-0.2%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "stock2": {
+            "value": "9.0%",
+            "displayValue": "9%"
+          },
+          "stock3": {
+            "value": "9.7%",
+            "displayValue": "9%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1년 수익률",
+            "displayValue": "1년 수익률"
+          },
+          "stock0": {
+            "value": "-34.8%",
+            "displayValue": "-34%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "125.1%",
+            "displayValue": "125%"
+          },
+          "stock2": {
+            "value": "20.8%",
+            "displayValue": "20%"
+          },
+          "stock3": {
+            "value": "54.9%",
+            "displayValue": "54%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "52주 고점 대비",
+            "displayValue": "52주 고점 대비"
+          },
+          "stock0": {
+            "value": "53.1%",
+            "displayValue": "53%"
+          },
+          "stock1": {
+            "value": "74.5%",
+            "displayValue": "74%"
+          },
+          "stock2": {
+            "value": "60.7%",
+            "displayValue": "60%"
+          },
+          "stock3": {
+            "value": "57.0%",
+            "displayValue": "57%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가",
+            "displayValue": "목표가"
+          },
+          "stock0": {
+            "value": "144.44",
+            "displayValue": "144"
+          },
+          "stock1": {
+            "value": "290.71",
+            "displayValue": "290"
+          },
+          "stock2": {
+            "value": "80.21",
+            "displayValue": "80"
+          },
+          "stock3": {
+            "value": "35.22",
+            "displayValue": "35"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가 여력",
+            "displayValue": "목표가 여력"
+          },
+          "stock0": {
+            "value": "77.5%",
+            "displayValue": "77%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "30.0%",
+            "displayValue": "30%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "71.8%",
+            "displayValue": "71%",
+            "highlight": "positive"
+          },
+          "stock3": {
+            "value": "107.0%",
+            "displayValue": "107%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "EPS 성장",
+            "displayValue": "EPS 성장"
+          },
+          "stock0": {
+            "value": "-183.3%",
+            "displayValue": "-183%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "NM",
+            "displayValue": "NM"
+          },
+          "stock2": {
+            "value": "-416.3%",
+            "displayValue": "-416%",
+            "highlight": "negative"
+          },
+          "stock3": {
+            "value": "-18.1%",
+            "displayValue": "-18%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY+2 PER",
+            "displayValue": "FY+2 PER"
+          },
+          "stock0": {
+            "value": "-40.6x",
+            "displayValue": "-40x"
+          },
+          "stock1": {
+            "value": "-68.3x",
+            "displayValue": "-68x"
+          },
+          "stock2": {
+            "value": "-163.9x",
+            "displayValue": "-163x"
+          },
+          "stock3": {
+            "value": "-35.3x",
+            "displayValue": "-35x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "시총",
+            "displayValue": "시총"
+          },
+          "stock0": {
+            "value": "44.873 B",
+            "displayValue": "USD 44B"
+          },
+          "stock1": {
+            "value": "61.272 B",
+            "displayValue": "USD 61B"
+          },
+          "stock2": {
+            "value": "18.395 B",
+            "displayValue": "USD 18B"
+          },
+          "stock3": {
+            "value": "8.487 B",
+            "displayValue": "USD 8B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 36,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 클라우드",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 4종목",
+    "headline": "AI 클라우드",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "CRWV",
+      "instrument": "NASDAQGS:CRWV",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "NBIS",
+      "instrument": "NASDAQGS:NBIS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "IREN",
+      "instrument": "NASDAQGS:IREN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "WULF",
+      "instrument": "NASDAQCM:WULF",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "transposed-comparison-table",
+    "stockCount": 4,
+    "rowCount": 10,
+    "columns": 5,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Three-line stock headers need export inspection."
+    ]
+  }
+}

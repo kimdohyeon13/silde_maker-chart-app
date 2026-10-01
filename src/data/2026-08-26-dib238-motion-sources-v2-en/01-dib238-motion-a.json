@@ -1,0 +1,190 @@
+{
+  "id": "dib238-motion-a",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "$35B existing package vs. up to $100B planned",
+    "preservedElements": [
+      "approved-copy values",
+      "unit",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "motion-ready horizontal comparison",
+      "bilingual copy",
+      "dark derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Broadcom funding packages · approved copy"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "모션용 비교 계획",
+      "status": "pass",
+      "detail": "같은 단위 2~7개 값만 한 축에 배치했습니다."
+    },
+    {
+      "id": "approved-copy-source",
+      "label": "승인 원문·원자료",
+      "status": "pass",
+      "detail": "픽셀 판독값을 사용하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "barColorMode": "sign",
+    "numberLocale": "en",
+    "accentColor": "#1E755F",
+    "borderColor": "#D7DFDC",
+    "watermarkText": "@WorldTechRsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Broadcom AI Funding Packages",
+    "subtitle": "$35B existing package vs. up to $100B planned",
+    "source": "Broadcom funding packages · approved copy",
+    "xAxis": {
+      "label": "$B",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 110
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "p1",
+        "p2"
+      ],
+      "displayTickValues": [
+        "Existing package",
+        "Maximum plan"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Broadcom AI Funding Packages",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Broadcom AI Funding Packages",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "p1",
+            "y": 35.0,
+            "confidence": 1.0,
+            "displayLabel": "35"
+          },
+          {
+            "x": "p2",
+            "y": 100.0,
+            "confidence": 1.0,
+            "displayLabel": "100"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 35.0,
+      "max": 100.0
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "$35B existing package vs. up to $100B planned",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Broadcom AI Funding Packages",
+    "subMessage": "$35B existing package vs. up to $100B planned",
+    "headline": "Broadcom AI Funding Packages",
+    "summary": "$35B existing package vs. up to $100B planned",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "100"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

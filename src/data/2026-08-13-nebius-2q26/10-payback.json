@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-payback"
   },
   "allowedTransformations": [
     "translate-text",
@@ -86,13 +87,18 @@
       "label": "",
       "type": "category",
       "tickValues": [
-        "기존 하단",
-        "기존 상단",
-        "2Q26 신규 계약"
+        "Prior low",
+        "Prior high",
+        "2Q26 new deals"
       ],
       "unit": "",
       "startsAtZero": false,
-      "isLogScale": false
+      "isLogScale": false,
+      "displayTickValues": [
+        "기존 하단",
+        "기존 상단",
+        "2Q26 신규 계약"
+      ]
     },
     "yAxis": {
       "label": "",
@@ -117,17 +123,17 @@
         "name": "투자금 회수기간",
         "data": [
           {
-            "x": "기존 하단",
+            "x": "Prior low",
             "y": 24,
             "confidence": 0.74
           },
           {
-            "x": "기존 상단",
+            "x": "Prior high",
             "y": 36,
             "confidence": 0.74
           },
           {
-            "x": "2Q26 신규 계약",
+            "x": "2Q26 new deals",
             "y": 22,
             "confidence": 0.74
           }

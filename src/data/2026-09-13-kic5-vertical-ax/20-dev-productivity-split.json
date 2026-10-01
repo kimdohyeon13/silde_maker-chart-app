@@ -1,0 +1,239 @@
+{
+  "id": "dev-productivity-split",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "회사 집계는 플러스인데 무작위 실험은 19% 느려졌습니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 구글·아마존·메타 발표, METR 무작위 대조 실험 (2025)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 4개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "개발 현장에서 측정된 AI 효과 네 가지",
+    "subtitle": "회사 집계는 플러스인데 무작위 실험은 19% 느려졌습니다",
+    "source": "자료: 구글·아마존·메타 발표, METR 무작위 대조 실험 (2025)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "측정값",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "측정값",
+        "data": [
+          {
+            "x": "아마존 · AI 코드 리뷰 무수정 채택",
+            "y": 79,
+            "confidence": 0.95,
+            "displayLabel": "79%",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "구글 · 신규 코드 AI 작성 비중",
+            "y": 75,
+            "confidence": 0.95,
+            "displayLabel": "75%",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "메타 · 엔지니어 1인당 산출",
+            "y": 30,
+            "confidence": 0.95,
+            "displayLabel": "+30%",
+            "color": "#087A68"
+          },
+          {
+            "x": "METR · 숙련 개발자 속도",
+            "y": -19,
+            "confidence": 0.95,
+            "displayLabel": "-19%",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 79,
+        "at": ""
+      },
+      "min": {
+        "value": -19,
+        "at": ""
+      },
+      "average": 41.25,
+      "median": 75,
+      "range": 98
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "개발 현장에서 측정된 AI 효과 네 가지",
+    "subMessage": "회사 집계는 플러스인데 무작위 실험은 19% 느려졌습니다",
+    "headline": "개발 현장에서 측정된 AI 효과 네 가지",
+    "summary": "회사 집계는 플러스인데 무작위 실험은 19% 느려졌습니다",
+    "story": "회사 집계는 플러스인데 무작위 실험은 19% 느려졌습니다",
+    "keyTakeaways": [
+      "구글 75%에는 엔지니어가 승인한다는 단서가 붙습니다.",
+      "아마존은 21%를 사람이 고쳐야 했습니다.",
+      "METR만 무작위 대조 실험으로 잰 값입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "구글 75%에는 엔지니어가 승인한다는 단서가 붙습니다.",
+    "contextualNotes": [
+      "자료: 구글·아마존·메타 발표, METR 무작위 대조 실험 (2025)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

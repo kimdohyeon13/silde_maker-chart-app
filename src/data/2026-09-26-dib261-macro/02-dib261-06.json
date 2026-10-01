@@ -1,0 +1,756 @@
+{
+  "id": "dib261-06",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-06.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "미 10년물 금리 장중 5.23%, 30년물 5.50%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original series, 2026-06-25 start (same first bar as the origin), 2026-09-25 focus date, and raw-value line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "chart number prefix dropped from the title",
+      "title numbers follow the drawn Yahoo series (^TNX high 5.230, closes 5.184/5.504) instead of the cash-market 5.165%/5.49% quoted in the origin title"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-sign-color",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 24일과 25일 값으로 계산했고 상승 빨강, 하락 파랑으로 칠했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@wtm_waltechman",
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "미 10년물 금리 장중 5.23%, 30년물 5.50%",
+    "subtitle": "9월 25일: 10년물 5.184%, 30년물 5.504%, 하루 새 각각 2.2bp, 4.3bp 상승",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-06-25 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-25",
+        "2026-07-15",
+        "2026-08-03",
+        "2026-08-19",
+        "2026-09-08",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "06-25",
+        "07-15",
+        "08-03",
+        "08-19",
+        "09-08",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [
+        "4.2",
+        "4.4",
+        "4.6",
+        "4.8",
+        "5",
+        "5.2",
+        "5.4",
+        "5.6"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 4.2,
+      "max": 5.6
+    },
+    "legend": [
+      {
+        "name": "10년물",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "30년물",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "10년물",
+        "data": [
+          {
+            "x": "2026-06-25",
+            "y": 4.392
+          },
+          {
+            "x": "2026-06-26",
+            "y": 4.372
+          },
+          {
+            "x": "2026-06-29",
+            "y": 4.374
+          },
+          {
+            "x": "2026-06-30",
+            "y": 4.418
+          },
+          {
+            "x": "2026-07-01",
+            "y": 4.475
+          },
+          {
+            "x": "2026-07-02",
+            "y": 4.485
+          },
+          {
+            "x": "2026-07-06",
+            "y": 4.479
+          },
+          {
+            "x": "2026-07-07",
+            "y": 4.529
+          },
+          {
+            "x": "2026-07-08",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-09",
+            "y": 4.539
+          },
+          {
+            "x": "2026-07-10",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-13",
+            "y": 4.609
+          },
+          {
+            "x": "2026-07-14",
+            "y": 4.585
+          },
+          {
+            "x": "2026-07-15",
+            "y": 4.545
+          },
+          {
+            "x": "2026-07-16",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-17",
+            "y": 4.541
+          },
+          {
+            "x": "2026-07-20",
+            "y": 4.598
+          },
+          {
+            "x": "2026-07-21",
+            "y": 4.628
+          },
+          {
+            "x": "2026-07-22",
+            "y": 4.657
+          },
+          {
+            "x": "2026-07-23",
+            "y": 4.703
+          },
+          {
+            "x": "2026-07-24",
+            "y": 4.679
+          },
+          {
+            "x": "2026-07-27",
+            "y": 4.641
+          },
+          {
+            "x": "2026-07-28",
+            "y": 4.604
+          },
+          {
+            "x": "2026-07-29",
+            "y": 4.622
+          },
+          {
+            "x": "2026-07-30",
+            "y": 4.663
+          },
+          {
+            "x": "2026-07-31",
+            "y": 4.745
+          },
+          {
+            "x": "2026-08-03",
+            "y": 4.686
+          },
+          {
+            "x": "2026-08-04",
+            "y": 4.627
+          },
+          {
+            "x": "2026-08-05",
+            "y": 4.617
+          },
+          {
+            "x": "2026-08-06",
+            "y": 4.67
+          },
+          {
+            "x": "2026-08-07",
+            "y": 4.66
+          },
+          {
+            "x": "2026-08-10",
+            "y": 4.699
+          },
+          {
+            "x": "2026-08-11",
+            "y": 4.684
+          },
+          {
+            "x": "2026-08-12",
+            "y": 4.682
+          },
+          {
+            "x": "2026-08-13",
+            "y": 4.641
+          },
+          {
+            "x": "2026-08-14",
+            "y": 4.696
+          },
+          {
+            "x": "2026-08-17",
+            "y": 4.724
+          },
+          {
+            "x": "2026-08-18",
+            "y": 4.706
+          },
+          {
+            "x": "2026-08-19",
+            "y": 4.653
+          },
+          {
+            "x": "2026-08-20",
+            "y": 4.696
+          },
+          {
+            "x": "2026-08-21",
+            "y": 4.738
+          },
+          {
+            "x": "2026-08-24",
+            "y": 4.704
+          },
+          {
+            "x": "2026-08-25",
+            "y": 4.639
+          },
+          {
+            "x": "2026-08-26",
+            "y": 4.664
+          },
+          {
+            "x": "2026-08-27",
+            "y": 4.672
+          },
+          {
+            "x": "2026-08-28",
+            "y": 4.72
+          },
+          {
+            "x": "2026-08-31",
+            "y": 4.758
+          },
+          {
+            "x": "2026-09-01",
+            "y": 4.796
+          },
+          {
+            "x": "2026-09-02",
+            "y": 4.796
+          },
+          {
+            "x": "2026-09-03",
+            "y": 4.762
+          },
+          {
+            "x": "2026-09-04",
+            "y": 4.784
+          },
+          {
+            "x": "2026-09-08",
+            "y": 4.806
+          },
+          {
+            "x": "2026-09-09",
+            "y": 4.837
+          },
+          {
+            "x": "2026-09-10",
+            "y": 4.944
+          },
+          {
+            "x": "2026-09-11",
+            "y": 4.975
+          },
+          {
+            "x": "2026-09-14",
+            "y": 4.961
+          },
+          {
+            "x": "2026-09-15",
+            "y": 4.996
+          },
+          {
+            "x": "2026-09-16",
+            "y": 5.006
+          },
+          {
+            "x": "2026-09-17",
+            "y": 4.947
+          },
+          {
+            "x": "2026-09-18",
+            "y": 4.998
+          },
+          {
+            "x": "2026-09-21",
+            "y": 4.963
+          },
+          {
+            "x": "2026-09-22",
+            "y": 4.968
+          },
+          {
+            "x": "2026-09-23",
+            "y": 5.114
+          },
+          {
+            "x": "2026-09-24",
+            "y": 5.162
+          },
+          {
+            "x": "2026-09-25",
+            "y": 5.184
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+0.43%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "30년물",
+        "data": [
+          {
+            "x": "2026-06-25",
+            "y": 4.858
+          },
+          {
+            "x": "2026-06-26",
+            "y": 4.864
+          },
+          {
+            "x": "2026-06-29",
+            "y": 4.86
+          },
+          {
+            "x": "2026-06-30",
+            "y": 4.902
+          },
+          {
+            "x": "2026-07-01",
+            "y": 4.966
+          },
+          {
+            "x": "2026-07-02",
+            "y": 4.985
+          },
+          {
+            "x": "2026-07-06",
+            "y": 4.993
+          },
+          {
+            "x": "2026-07-07",
+            "y": 5.043
+          },
+          {
+            "x": "2026-07-08",
+            "y": 5.065
+          },
+          {
+            "x": "2026-07-09",
+            "y": 5.053
+          },
+          {
+            "x": "2026-07-10",
+            "y": 5.071
+          },
+          {
+            "x": "2026-07-13",
+            "y": 5.098
+          },
+          {
+            "x": "2026-07-14",
+            "y": 5.094
+          },
+          {
+            "x": "2026-07-15",
+            "y": 5.083
+          },
+          {
+            "x": "2026-07-16",
+            "y": 5.098
+          },
+          {
+            "x": "2026-07-17",
+            "y": 5.064
+          },
+          {
+            "x": "2026-07-20",
+            "y": 5.118
+          },
+          {
+            "x": "2026-07-21",
+            "y": 5.13
+          },
+          {
+            "x": "2026-07-22",
+            "y": 5.147
+          },
+          {
+            "x": "2026-07-23",
+            "y": 5.171
+          },
+          {
+            "x": "2026-07-24",
+            "y": 5.162
+          },
+          {
+            "x": "2026-07-27",
+            "y": 5.125
+          },
+          {
+            "x": "2026-07-28",
+            "y": 5.096
+          },
+          {
+            "x": "2026-07-29",
+            "y": 5.143
+          },
+          {
+            "x": "2026-07-30",
+            "y": 5.208
+          },
+          {
+            "x": "2026-07-31",
+            "y": 5.275
+          },
+          {
+            "x": "2026-08-03",
+            "y": 5.231
+          },
+          {
+            "x": "2026-08-04",
+            "y": 5.19
+          },
+          {
+            "x": "2026-08-05",
+            "y": 5.174
+          },
+          {
+            "x": "2026-08-06",
+            "y": 5.213
+          },
+          {
+            "x": "2026-08-07",
+            "y": 5.211
+          },
+          {
+            "x": "2026-08-10",
+            "y": 5.243
+          },
+          {
+            "x": "2026-08-11",
+            "y": 5.236
+          },
+          {
+            "x": "2026-08-12",
+            "y": 5.247
+          },
+          {
+            "x": "2026-08-13",
+            "y": 5.213
+          },
+          {
+            "x": "2026-08-14",
+            "y": 5.265
+          },
+          {
+            "x": "2026-08-17",
+            "y": 5.309
+          },
+          {
+            "x": "2026-08-18",
+            "y": 5.285
+          },
+          {
+            "x": "2026-08-19",
+            "y": 5.194
+          },
+          {
+            "x": "2026-08-20",
+            "y": 5.237
+          },
+          {
+            "x": "2026-08-21",
+            "y": 5.276
+          },
+          {
+            "x": "2026-08-24",
+            "y": 5.231
+          },
+          {
+            "x": "2026-08-25",
+            "y": 5.174
+          },
+          {
+            "x": "2026-08-26",
+            "y": 5.186
+          },
+          {
+            "x": "2026-08-27",
+            "y": 5.191
+          },
+          {
+            "x": "2026-08-28",
+            "y": 5.206
+          },
+          {
+            "x": "2026-08-31",
+            "y": 5.249
+          },
+          {
+            "x": "2026-09-01",
+            "y": 5.268
+          },
+          {
+            "x": "2026-09-02",
+            "y": 5.267
+          },
+          {
+            "x": "2026-09-03",
+            "y": 5.243
+          },
+          {
+            "x": "2026-09-04",
+            "y": 5.246
+          },
+          {
+            "x": "2026-09-08",
+            "y": 5.264
+          },
+          {
+            "x": "2026-09-09",
+            "y": 5.286
+          },
+          {
+            "x": "2026-09-10",
+            "y": 5.361
+          },
+          {
+            "x": "2026-09-11",
+            "y": 5.354
+          },
+          {
+            "x": "2026-09-14",
+            "y": 5.329
+          },
+          {
+            "x": "2026-09-15",
+            "y": 5.364
+          },
+          {
+            "x": "2026-09-16",
+            "y": 5.349
+          },
+          {
+            "x": "2026-09-17",
+            "y": 5.296
+          },
+          {
+            "x": "2026-09-18",
+            "y": 5.331
+          },
+          {
+            "x": "2026-09-21",
+            "y": 5.296
+          },
+          {
+            "x": "2026-09-22",
+            "y": 5.303
+          },
+          {
+            "x": "2026-09-23",
+            "y": 5.401
+          },
+          {
+            "x": "2026-09-24",
+            "y": 5.461
+          },
+          {
+            "x": "2026-09-25",
+            "y": 5.504
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+0.79%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 130,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 25일: 10년물 5.184%, 30년물 5.504%, 하루 새 각각 2.2bp, 4.3bp 상승",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5.504,
+        "series": "all"
+      },
+      "min": {
+        "value": 4.372,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미 10년물 금리 장중 5.23%, 30년물 5.50%",
+    "subMessage": "9월 25일: 10년물 5.184%, 30년물 5.504%, 하루 새 각각 2.2bp, 4.3bp 상승"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 5.184
+      },
+      "displayText": "5.18",
+      "reason": "9월 25일: 10년물 5.184%, 30년물 5.504%, 하루 새 각각 2.2bp, 4.3bp 상승"
+    },
+    "densityLevel": "focused"
+  }
+}

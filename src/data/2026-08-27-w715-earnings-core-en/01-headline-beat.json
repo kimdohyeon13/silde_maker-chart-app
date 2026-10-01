@@ -1,0 +1,240 @@
+{
+  "id": "01-headline-beat",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "NVIDIA FY2Q27 non-GAAP headline results exceeded consensus across revenue, operating income, and EPS.",
+    "preservedElements": [
+      "FY2Q27 actual values",
+      "consensus comparison",
+      "non-GAAP basis",
+      "source attribution"
+    ],
+    "changedElements": [
+      "New compact Korean editorial composition",
+      "Converted mixed units into percentage beats"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Beat rates are calculated from the reported actual and consensus values retained in the project data source note.",
+    "sourceAttribution": "NVIDIA FY2Q27 earnings release, August 26, 2026; consensus values supplied by the user",
+    "sourceKey": "nvidia-fy2q27-earnings-2026-08-26"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Vertical bar chart, three beats, all percentage units, with full actual-versus-consensus values in the subtitle."
+    },
+    {
+      "id": "expected-bar-count",
+      "label": "Bar count",
+      "status": "pass",
+      "detail": "Three data points are expected."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Title 900, subtitle 300, 16:9 canvas."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pass",
+      "detail": "Exported PNG and rendered DOM inspected with zero overflow findings."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": false,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "showAreaFill": false,
+    "accentColor": "#155EEF",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "NVIDIA FY2Q27 Results Beat Consensus",
+    "subtitle": "Revenue $96.2bn/$92.3bn · Op. income $64.0bn/$61.2bn · EPS $2.22/$2.09",
+    "source": "Source: NVIDIA FY2Q27 earnings release, Aug. 26, 2026 · Consensus: market estimates",
+    "timeRange": "FY2Q27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "revenue",
+        "operating_income",
+        "eps"
+      ],
+      "displayTickValues": [
+        "Revenue\n+4.3%",
+        "Operating income\n+4.5%",
+        "EPS\n+6.2%"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Beat vs. consensus",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 8
+    },
+    "legend": [
+      {
+        "name": "Beat vs. consensus",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#155EEF"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Beat vs. consensus",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#155EEF",
+        "data": [
+          {
+            "x": "revenue",
+            "y": 4.3,
+            "displayLabel": "+4.3%",
+            "confidence": 1
+          },
+          {
+            "x": "operating_income",
+            "y": 4.5,
+            "displayLabel": "+4.5%",
+            "confidence": 1
+          },
+          {
+            "x": "eps",
+            "y": 6.2,
+            "displayLabel": "+6.2%",
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "All three metrics exceeded consensus.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.2,
+      "description": "Beat magnitude range is narrow."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6.2,
+        "at": "EPS"
+      },
+      "min": {
+        "value": 4.3,
+        "at": "revenue"
+      },
+      "average": 5,
+      "median": 4.5,
+      "range": 1.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "NVIDIA FY2Q27 Results Beat Consensus",
+    "subMessage": "EPS led at +6.2%; revenue and operating income each beat by more than 4%",
+    "headline": "NVIDIA FY2Q27 Results Beat Consensus",
+    "summary": "Non-GAAP headline results beat consensus.",
+    "story": "Mixed units are represented as comparable consensus beat rates.",
+    "keyTakeaways": [
+      "Revenue +4.3%",
+      "Operating income +4.5%",
+      "EPS +6.2%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "NVIDIA FY2Q27 earnings release"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": [
+        "#98A2B3"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "eps",
+        "y": 6.2
+      },
+      "displayText": "EPS +6.2%",
+      "reason": "Largest beat."
+    },
+    "densityLevel": "compact"
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "id": "01-silicon-photonics-mix",
+  "sourceImage": "input/report-3-26.png",
+  "analyzedAt": "2026-08-19T00:00:00+09:00",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Datacom Silicon Photonics Penetration",
+    "originalMessage": "Silicon photonics penetration in datacom optical modules",
+    "sourceKey": "goldman-sachs-global-investment-research-2026-04-17-exhibit-26",
+    "preservedElements": [
+      "20 quarterly bars from 2024 Q1 through 2028 Q4",
+      "Silicon photonics and EML series",
+      "0–65% y-axis scale",
+      "Source: Goldman Sachs Global Investment Research, 2026-04-17"
+    ],
+    "changedElements": [
+      "Title, subtitle, and legend translated into concise English",
+      "Source colors organized into a restrained light palette",
+      "Paperlogy typography and 16:9 spacing applied",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The source image has no printed value labels. Bar tops were read to whole percentage points from the 0–65% grid. EML is rendered as the residual segment to the 65% total height. These are not claimed as raw-data precision.",
+    "sourceAttribution": "Source: Goldman Sachs Global Investment Research, April 17, 2026"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan documented before export",
+      "status": "pass",
+      "detail": "Preserved the source stacked-bar structure with 20 quarters, two series, and a fixed 0–65% axis."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Source-visible values",
+      "status": "pass",
+      "detail": "Recorded all 20 Silicon photonics bar heights and EML residual segments from the unlabeled image."
+    },
+    {
+      "id": "series-preserved",
+      "label": "Series and quarter count preserved",
+      "status": "pass",
+      "detail": "Kept both source series and the full 20-quarter order from 1Q24 through 4Q28."
+    },
+    {
+      "id": "source-preserved",
+      "label": "Source preserved",
+      "status": "pass",
+      "detail": "Source: Goldman Sachs Global Investment Research, April 17, 2026"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "stackedLegendAlign": "center",
+    "stackedLabelFontSize": 10,
+    "gridMode": "solid",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "Datacom Silicon Photonics Penetration",
+    "subtitle": "Rises from 6% in 1Q24 to roughly 45% in 4Q28; EML remains",
+    "source": "Source: Goldman Sachs Global Investment Research, April 17, 2026",
+    "timeRange": "2024 Q1–2028 Q4",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-Q1",
+        "2024-Q2",
+        "2024-Q3",
+        "2024-Q4",
+        "2025-Q1",
+        "2025-Q2",
+        "2025-Q3",
+        "2025-Q4",
+        "2026-Q1",
+        "2026-Q2",
+        "2026-Q3",
+        "2026-Q4",
+        "2027-Q1",
+        "2027-Q2",
+        "2027-Q3",
+        "2027-Q4",
+        "2028-Q1",
+        "2028-Q2",
+        "2028-Q3",
+        "2028-Q4"
+      ],
+      "displayTickValues": [
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1",
+        "2026 Q2",
+        "2026 Q3",
+        "2026 Q4",
+        "2027 Q1",
+        "2027 Q2",
+        "2027 Q3",
+        "2027 Q4",
+        "2028 Q1",
+        "2028 Q2",
+        "2028 Q3",
+        "2028 Q4"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        0,
+        5,
+        15,
+        25,
+        35,
+        45,
+        55,
+        65
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 65
+    },
+    "legend": [
+      {
+        "name": "Silicon photonics",
+        "role": "primary",
+        "originalColor": "#00355F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "EML",
+        "role": "secondary",
+        "originalColor": "#ACD3F0",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Silicon photonics",
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 6
+          },
+          {
+            "x": "2024-Q2",
+            "y": 7
+          },
+          {
+            "x": "2024-Q3",
+            "y": 9
+          },
+          {
+            "x": "2024-Q4",
+            "y": 11
+          },
+          {
+            "x": "2025-Q1",
+            "y": 13
+          },
+          {
+            "x": "2025-Q2",
+            "y": 18
+          },
+          {
+            "x": "2025-Q3",
+            "y": 25
+          },
+          {
+            "x": "2025-Q4",
+            "y": 37
+          },
+          {
+            "x": "2026-Q1",
+            "y": 24
+          },
+          {
+            "x": "2026-Q2",
+            "y": 24
+          },
+          {
+            "x": "2026-Q3",
+            "y": 35
+          },
+          {
+            "x": "2026-Q4",
+            "y": 40
+          },
+          {
+            "x": "2027-Q1",
+            "y": 35
+          },
+          {
+            "x": "2027-Q2",
+            "y": 36
+          },
+          {
+            "x": "2027-Q3",
+            "y": 42
+          },
+          {
+            "x": "2027-Q4",
+            "y": 53
+          },
+          {
+            "x": "2028-Q1",
+            "y": 46
+          },
+          {
+            "x": "2028-Q2",
+            "y": 47
+          },
+          {
+            "x": "2028-Q3",
+            "y": 62
+          },
+          {
+            "x": "2028-Q4",
+            "y": 46
+          }
+        ]
+      },
+      {
+        "name": "EML",
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 59
+          },
+          {
+            "x": "2024-Q2",
+            "y": 58
+          },
+          {
+            "x": "2024-Q3",
+            "y": 56
+          },
+          {
+            "x": "2024-Q4",
+            "y": 54
+          },
+          {
+            "x": "2025-Q1",
+            "y": 52
+          },
+          {
+            "x": "2025-Q2",
+            "y": 47
+          },
+          {
+            "x": "2025-Q3",
+            "y": 40
+          },
+          {
+            "x": "2025-Q4",
+            "y": 28
+          },
+          {
+            "x": "2026-Q1",
+            "y": 41
+          },
+          {
+            "x": "2026-Q2",
+            "y": 41
+          },
+          {
+            "x": "2026-Q3",
+            "y": 30
+          },
+          {
+            "x": "2026-Q4",
+            "y": 25
+          },
+          {
+            "x": "2027-Q1",
+            "y": 30
+          },
+          {
+            "x": "2027-Q2",
+            "y": 29
+          },
+          {
+            "x": "2027-Q3",
+            "y": 23
+          },
+          {
+            "x": "2027-Q4",
+            "y": 12
+          },
+          {
+            "x": "2028-Q1",
+            "y": 19
+          },
+          {
+            "x": "2028-Q2",
+            "y": 18
+          },
+          {
+            "x": "2028-Q3",
+            "y": 3
+          },
+          {
+            "x": "2028-Q4",
+            "y": 19
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 40,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "No printed source labels",
+        "2028 Q3 peak relative to the 65% ceiling"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 3,
+      "max": 62,
+      "average": 32.5,
+      "latest": 46
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Silicon photonics rises from 6% in 1Q24 to roughly 45% in 4Q28, with quarterly fluctuations.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Datacom Silicon Photonics Penetration",
+    "subMessage": "Rises from 6% in 1Q24 to roughly 45% in 4Q28; EML remains",
+    "headline": "Datacom silicon photonics penetration",
+    "summary": "Rises from 6% in 1Q24 to roughly 45% in 4Q28; EML remains",
+    "story": "Silicon photonics gains share through quarterly fluctuations while EML remains.",
+    "keyTakeaways": [
+      "Silicon photonics starts at 6% in 1Q24",
+      "Reaches roughly 45% by 4Q28",
+      "EML remains in the mix"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read both quarterly series against the 65% axis.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Global Investment Research, April 17, 2026"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2028-Q4",
+      "y": 46,
+      "displayText": "4Q28: 46%",
+      "reason": "Last-quarter source-visible Silicon photonics value"
+    },
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "dense",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

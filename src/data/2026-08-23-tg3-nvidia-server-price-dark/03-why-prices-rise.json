@@ -1,0 +1,180 @@
+{
+  "id": "03-why-prices-rise",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "directional",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "원문의 설명 세 줄을 그대로 옮겼습니다. 새 수치를 넣지 않았습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "인상 원인으로 지목된 것",
+    "subtitle": "메모리와 부품 가격이 서버 시스템에 닿는 경로",
+    "source": "자료: 업계 전망치 · 2026년 8월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "구분",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "v",
+        "label": "내용",
+        "dataType": "text",
+        "width": "66%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "가격",
+            "displayValue": "가격"
+          },
+          "v": {
+            "value": "메모리와 기타 부품 가격이 오르고 있다",
+            "displayValue": "메모리와 기타 부품 가격이 오르고 있다"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "공급",
+            "displayValue": "공급"
+          },
+          "v": {
+            "value": "AI 칩 업체들이 장기 공급계약을 확보하고 있다",
+            "displayValue": "AI 칩 업체들이 장기 공급계약을 확보하고 있다"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "수요",
+            "displayValue": "수요"
+          },
+          "v": {
+            "value": "엔비디아의 메모리 수요는 경쟁사보다 압도적으로 크다",
+            "displayValue": "엔비디아의 메모리 수요는 경쟁사보다 압도적으로 크다"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "fontSize": {
+        "header": "17px",
+        "body": "22px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "rowHeight": 29,
+      "lineHeight": 1,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "인상 원인으로 지목된 것",
+    "subMessage": "메모리와 부품 가격이 서버 시스템에 닿는 경로"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "accent": "#00E0A4",
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "backgroundTone": "dark"
+    }
+  }
+}

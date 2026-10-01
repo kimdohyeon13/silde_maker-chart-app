@@ -1,0 +1,626 @@
+{
+  "id": "b-table",
+  "mode": "redesign",
+  "sourceImage": "input/source-01-market-view-top.png",
+  "sourceImages": [
+    "input/source-01-market-view-top.png",
+    "input/source-02-market-view-continuation.png"
+  ],
+  "analyzedAt": "2026-09-05T08:25:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰",
+    "originalMessage": "InvestingPro 마켓 뷰 워치리스트의 종목 비교",
+    "preservedElements": [
+      "두 캡처의 25개 티커",
+      "현재가·오늘 등락·1개월/1년 수익률·52주 고점·목표가/여력·EPS·Fwd P/E·시총"
+    ],
+    "changedElements": [
+      "Design review B: Editorial Rule",
+      "Same source values, axes, rows, columns and source attribution; header, frame, palette and table rules varied.",
+      "Refinement: separate multiline labels; rebalance table columns; soften axis/value typography; align line grid with the left axis."
+    ],
+    "dataFidelity": "authenticated-investingpro-market-view-current-as-of-2026-09-04-close",
+    "notes": "로그인된 InvestingPro 1st CORE·2nd watch Market View 원문을 사용했다. 화면 표시값을 보존하고 PNG에서 제외한 rule40·PEG·beta는 CSV와 capture JSON에 남겼다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "8 quarterly values on a zero-based 0–50 axis; one line or eight bars; table retains all 7 stock rows and 10 columns. Source content is shared by every design."
+    }
+  ],
+  "structure": {
+    "title": "AI Infrastructure Market View",
+    "subtitle": "7 AI compute & power stocks · 2026-09-05",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "top-rule",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#202D40",
+    "borderColor": "#DCE3EB",
+    "gridMode": "none",
+    "lineStrokeWidth": 3,
+    "numberLocale": "en",
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "watermarkText": "@wltechrsrch"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "Ticker · Today",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "Business",
+        "dataType": "text",
+        "width": "12%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "Price",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1M\nReturn",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1Y\nReturn",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52W High\nRatio",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "Target\nUpside",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\nGrowth",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "Mkt Cap\n($B)",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "AI Compute & Semiconductors",
+            "displayValue": "AI Compute & Semiconductors"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMD",
+            "displayValue": "AMD\nAMD (US)",
+            "sideValue": {
+              "displayValue": "+4.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          },
+          "current": {
+            "value": "477.57",
+            "displayValue": "477"
+          },
+          "m1": {
+            "value": "-7.9%",
+            "displayValue": "-7%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "195.2%",
+            "displayValue": "195%"
+          },
+          "high52": {
+            "value": "81.7%",
+            "displayValue": "81%"
+          },
+          "target": {
+            "value": "613.84",
+            "displayValue": "613\n28%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "81.5%",
+            "displayValue": "81%"
+          },
+          "pe": {
+            "value": "28.5x",
+            "displayValue": "28x"
+          },
+          "marketCap": {
+            "value": "779.6 B",
+            "displayValue": "779 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MU",
+            "displayValue": "MU\nMicron",
+            "sideValue": {
+              "displayValue": "+6.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Memory / HBM",
+            "displayValue": "Memory / HBM"
+          },
+          "current": {
+            "value": "1,017",
+            "displayValue": "1,017"
+          },
+          "m1": {
+            "value": "13.9%",
+            "displayValue": "13%"
+          },
+          "y1": {
+            "value": "719.8%",
+            "displayValue": "719%"
+          },
+          "high52": {
+            "value": "81.1%",
+            "displayValue": "81%"
+          },
+          "target": {
+            "value": "1,513",
+            "displayValue": "1,513\n48%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "785.4%",
+            "displayValue": "785%"
+          },
+          "pe": {
+            "value": "6.1x",
+            "displayValue": "6x"
+          },
+          "marketCap": {
+            "value": "1148.1 B",
+            "displayValue": "1148 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSM",
+            "displayValue": "TSM\nTSMC (Taiwan)",
+            "sideValue": {
+              "displayValue": "+2.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Foundry",
+            "displayValue": "Foundry"
+          },
+          "current": {
+            "value": "428.91",
+            "displayValue": "428"
+          },
+          "m1": {
+            "value": "2.8%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "83.9%",
+            "displayValue": "83%"
+          },
+          "high52": {
+            "value": "89.5%",
+            "displayValue": "89%"
+          },
+          "target": {
+            "value": "552.38",
+            "displayValue": "552\n28%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "62.5%",
+            "displayValue": "62%"
+          },
+          "pe": {
+            "value": "17.1x",
+            "displayValue": "17x"
+          },
+          "marketCap": {
+            "value": "1975.8 B",
+            "displayValue": "1975 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NVDA",
+            "displayValue": "NVDA\nNVIDIA",
+            "sideValue": {
+              "displayValue": "+0.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "AI GPU",
+            "displayValue": "AI GPU"
+          },
+          "current": {
+            "value": "230.34",
+            "displayValue": "230"
+          },
+          "m1": {
+            "value": "8.7%",
+            "displayValue": "8%"
+          },
+          "y1": {
+            "value": "34.4%",
+            "displayValue": "34%"
+          },
+          "high52": {
+            "value": "97.4%",
+            "displayValue": "97%"
+          },
+          "target": {
+            "value": "327.13",
+            "displayValue": "327\n42%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "94.9%",
+            "displayValue": "94%"
+          },
+          "pe": {
+            "value": "14.7x",
+            "displayValue": "14x"
+          },
+          "marketCap": {
+            "value": "5562.5 B",
+            "displayValue": "5562 B"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "AI Cloud, Optics & Power",
+            "displayValue": "AI Cloud, Optics & Power"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRWV",
+            "displayValue": "CRWV\nCoreWeave",
+            "sideValue": {
+              "displayValue": "+5.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "GPU Cloud",
+            "displayValue": "GPU Cloud"
+          },
+          "current": {
+            "value": "89.34",
+            "displayValue": "89"
+          },
+          "m1": {
+            "value": "-2.8%",
+            "displayValue": "-2%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "2.1%",
+            "displayValue": "2%"
+          },
+          "high52": {
+            "value": "58.3%",
+            "displayValue": "58%"
+          },
+          "target": {
+            "value": "144.46",
+            "displayValue": "144\n61%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-183.0%",
+            "displayValue": "-183%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "-42.2x",
+            "displayValue": "-42x",
+            "highlight": "negative"
+          },
+          "marketCap": {
+            "value": "49.285 B",
+            "displayValue": "49 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LITE",
+            "displayValue": "LITE\nLumentum",
+            "sideValue": {
+              "displayValue": "+4.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Optical Parts",
+            "displayValue": "Optical Parts"
+          },
+          "current": {
+            "value": "881.26",
+            "displayValue": "881"
+          },
+          "m1": {
+            "value": "3.7%",
+            "displayValue": "3%"
+          },
+          "y1": {
+            "value": "521.0%",
+            "displayValue": "521%"
+          },
+          "high52": {
+            "value": "81.2%",
+            "displayValue": "81%"
+          },
+          "target": {
+            "value": "1,148",
+            "displayValue": "1,148\n30%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "149.6%",
+            "displayValue": "149%"
+          },
+          "pe": {
+            "value": "21.9x",
+            "displayValue": "21x"
+          },
+          "marketCap": {
+            "value": "79.049 B",
+            "displayValue": "79 B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "BE",
+            "displayValue": "BE\nBloom Energy",
+            "sideValue": {
+              "displayValue": "+7.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Fuel Cells",
+            "displayValue": "Fuel Cells"
+          },
+          "current": {
+            "value": "252.87",
+            "displayValue": "252"
+          },
+          "m1": {
+            "value": "10.9%",
+            "displayValue": "10%"
+          },
+          "y1": {
+            "value": "360.5%",
+            "displayValue": "360%"
+          },
+          "high52": {
+            "value": "72.0%",
+            "displayValue": "72%"
+          },
+          "target": {
+            "value": "275.08",
+            "displayValue": "275\n8%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "256.1%",
+            "displayValue": "256%"
+          },
+          "pe": {
+            "value": "42.8x",
+            "displayValue": "42x"
+          },
+          "marketCap": {
+            "value": "74.477 B",
+            "displayValue": "74 B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 32,
+      "cellPadding": "2px 6px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 43,
+      "headerTone": "inverse",
+      "groupHeaderTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#202D40",
+      "rowRuleColor": "#DDE4EA",
+      "sectionRuleColor": "#CBD5DF",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 550,
+        "rowHeader": 650,
+        "header": 650,
+        "groupHeader": 650
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI Infrastructure Market View",
+    "subMessage": "7 AI compute & power stocks · 2026-09-05",
+    "headline": "AI Infrastructure Market View",
+    "summary": "7 AI compute & power stocks · 2026-09-05",
+    "story": "종목·목표가·수익률·EPS 성장·밸류에이션을 사업군별로 비교한다.",
+    "keyTakeaways": [
+      "오늘 등락은 티커 옆 배지로 표시",
+      "화면에 보인 수치만 전사",
+      "40의 규칙·PEG·베타는 CSV에 보존"
+    ],
+    "viewerAction": "사업군별로 52주 고점 대비, 목표가 여력, EPS 성장, Fwd P/E, 시총을 비교한다."
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#202D40",
+      "secondary": [
+        "#C6CCD4"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#202D40",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  }
+}

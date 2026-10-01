@@ -1,0 +1,270 @@
+{
+  "id": "korea-vertical-revenue",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "네 곳 모두 늘었지만 합계는 1,366억 원입니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: DART 연결감사보고서, 각 사 IR 자료"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 2개, 항목 4개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "국내 버티컬 AI 네 곳의 연매출",
+    "subtitle": "네 곳 모두 늘었지만 합계는 1,366억 원입니다",
+    "source": "자료: DART 연결감사보고서, 각 사 IR 자료",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "루닛",
+        "뷰노",
+        "로앤컴퍼니",
+        "제이엘케이"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "2024년",
+        "role": "primary",
+        "originalColor": "#A0AEC0",
+        "remakeColor": "#A0AEC0"
+      },
+      {
+        "name": "2025년",
+        "role": "secondary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2024년",
+        "data": [
+          {
+            "x": "루닛",
+            "y": 541.8,
+            "confidence": 0.95,
+            "displayLabel": "541.8"
+          },
+          {
+            "x": "뷰노",
+            "y": 259,
+            "confidence": 0.95,
+            "displayLabel": "259"
+          },
+          {
+            "x": "로앤컴퍼니",
+            "y": 93.1,
+            "confidence": 0.95,
+            "displayLabel": "93.1"
+          },
+          {
+            "x": "제이엘케이",
+            "y": 14,
+            "confidence": 0.95,
+            "displayLabel": "14"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#A0AEC0"
+      },
+      {
+        "name": "2025년",
+        "data": [
+          {
+            "x": "루닛",
+            "y": 831.3,
+            "confidence": 0.95,
+            "displayLabel": "831.3억 원"
+          },
+          {
+            "x": "뷰노",
+            "y": 348,
+            "confidence": 0.95,
+            "displayLabel": "348억 원"
+          },
+          {
+            "x": "로앤컴퍼니",
+            "y": 154,
+            "confidence": 0.95,
+            "displayLabel": "154.0억 원"
+          },
+          {
+            "x": "제이엘케이",
+            "y": 33,
+            "confidence": 0.95,
+            "displayLabel": "33억 원"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 831.3,
+        "at": ""
+      },
+      "min": {
+        "value": 14,
+        "at": ""
+      },
+      "average": 284.275,
+      "median": 259,
+      "range": 817.3
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "국내 버티컬 AI 네 곳의 연매출",
+    "subMessage": "네 곳 모두 늘었지만 합계는 1,366억 원입니다",
+    "headline": "국내 버티컬 AI 네 곳의 연매출",
+    "summary": "네 곳 모두 늘었지만 합계는 1,366억 원입니다",
+    "story": "네 곳 모두 늘었지만 합계는 1,366억 원입니다",
+    "keyTakeaways": [
+      "로앤컴퍼니는 법률 SaaS가 7.4억 원에서 53.9억 원이 됐습니다.",
+      "뷰노 매출의 74%는 딥카스 한 제품에서 나옵니다.",
+      "네 곳 모두 2025년 영업손실입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "로앤컴퍼니는 법률 SaaS가 7.4억 원에서 53.9억 원이 됐습니다.",
+    "contextualNotes": [
+      "자료: DART 연결감사보고서, 각 사 IR 자료"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

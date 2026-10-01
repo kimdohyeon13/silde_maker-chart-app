@@ -1,0 +1,265 @@
+{
+  "id": "bigtech-eps-growth",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "EPS Outlook: Alphabet, Amazon Negative",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "EPS Outlook: Alphabet, Amazon Negative",
+    "subtitle": "Unit: % · Alphabet Class A",
+    "source": "Source: InvestingPro mean EPS consensus · Sep 23, 2026 intraday price",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "NVDA",
+        "TSLA",
+        "MSFT",
+        "META",
+        "AAPL",
+        "AMZN",
+        "GOOGL"
+      ],
+      "displayTickValues": [
+        "Nvidia",
+        "Tesla",
+        "Microsoft",
+        "Meta",
+        "Apple",
+        "Amazon",
+        "Alphabet"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "NVDA",
+        "TSLA",
+        "MSFT",
+        "META",
+        "AAPL",
+        "AMZN",
+        "GOOGL"
+      ],
+      "displayTickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "Nvidia",
+        "Tesla",
+        "Microsoft",
+        "Meta",
+        "Apple",
+        "Amazon",
+        "Alphabet"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -40,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "EPS growth outlook",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "EPS growth outlook",
+        "data": [
+          {
+            "x": "NVDA",
+            "y": 68.4,
+            "displayLabel": "68.4",
+            "color": "#087A68"
+          },
+          {
+            "x": "TSLA",
+            "y": 23.6,
+            "displayLabel": "23.6",
+            "color": "#087A68"
+          },
+          {
+            "x": "MSFT",
+            "y": 19.8,
+            "displayLabel": "19.8",
+            "color": "#087A68"
+          },
+          {
+            "x": "META",
+            "y": 12.1,
+            "displayLabel": "12.1",
+            "color": "#087A68"
+          },
+          {
+            "x": "AAPL",
+            "y": 8.6,
+            "displayLabel": "8.6",
+            "color": "#087A68"
+          },
+          {
+            "x": "AMZN",
+            "y": -19.3,
+            "displayLabel": "-19.3",
+            "color": "#175CD3"
+          },
+          {
+            "x": "GOOGL",
+            "y": -27.8,
+            "displayLabel": "-27.8",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Change between two fiscal-year mean EPS estimates",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 68.4,
+        "at": "NVDA"
+      },
+      "min": {
+        "value": -27.8,
+        "at": "GOOGL"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "EPS Outlook: Alphabet, Amazon Negative",
+    "subMessage": "Change between two fiscal-year mean EPS estimates",
+    "headline": "EPS Outlook: Alphabet, Amazon Negative",
+    "summary": "Change between two fiscal-year mean EPS estimates",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "NVDA",
+        "y": 68.4
+      },
+      "displayText": "68.4",
+      "reason": "Change between two fiscal-year mean EPS estimates"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "id": "speed-adoption",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "800G가 정점을 지나는 동안 1.6T가 올라오고 3.2T가 붙는다",
+    "preservedElements": [
+      "속도별 채택 비중",
+      "연도 순서",
+      "비중 단위(%)"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "연말 분기 5개 시점에 속도 4종을 묶은 세로 그룹 막대. 가로 전환은 축 계산이 깨져 세로를 유지했다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Data Center Optical Module Mix, by Speed",
+    "subtitle": "800G peaks while 1.6T climbs and 3.2T joins from 2027",
+    "source": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028"
+      ],
+      "displayTickValues": [
+        "End 2024",
+        "End 2025",
+        "End 2026",
+        "End 2027",
+        "End 2028"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "9",
+        "18",
+        "27",
+        "36",
+        "45"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 45
+    },
+    "legend": [
+      {
+        "name": "400G",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "800G",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#BDD8D1"
+      },
+      {
+        "name": "1.6T",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#7FB3A8"
+      },
+      {
+        "name": "3.2T",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#4E8C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "400G",
+        "data": [
+          {
+            "x": "2024",
+            "y": 30,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 9,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 6,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 1,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      },
+      {
+        "name": "800G",
+        "data": [
+          {
+            "x": "2024",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 41,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 26,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 23,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 23,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#BDD8D1"
+      },
+      {
+        "name": "1.6T",
+        "data": [
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 11,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 28,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 27,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 26,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#7FB3A8"
+      },
+      {
+        "name": "3.2T",
+        "data": [
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2025",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2026",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "2027",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "2028",
+            "y": 11,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#4E8C81"
+      }
+    ],
+    "totalDataPoints": 20,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -63.3,
+        "absoluteChange": -19,
+        "from": 30,
+        "to": 11
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 41,
+        "at": "End 2024"
+      },
+      "min": {
+        "value": 0,
+        "at": "End 2028"
+      },
+      "average": 14.3,
+      "median": 11,
+      "range": 41
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Data Center Optical Module Mix, by Speed",
+    "subMessage": "800G peaks while 1.6T climbs and 3.2T joins from 2027",
+    "headline": "Data Center Optical Module Mix, by Speed",
+    "summary": "800G peaks while 1.6T climbs and 3.2T joins from 2027",
+    "story": "800G peaks while 1.6T climbs and 3.2T joins from 2027",
+    "keyTakeaways": [
+      "400G falls from 30% in 2024 to 1% in 2028.",
+      "800G peaks at 41% in 2025.",
+      "1.6T and 3.2T split the space it leaves."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "400G falls from 30% in 2024 to 1% in 2028.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

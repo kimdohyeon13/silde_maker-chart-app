@@ -1,0 +1,585 @@
+{
+  "id": "p21c-state-scatter",
+  "sourceImage": "input/p21_c_state_scatter.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: EIA, 2026년 3월. 2022년 3월 대비 2026년 3월, 빨강·파랑은 상원 선거 대상주(각각 공화당·민주당), 회색은 그 외 주"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "미국 주별 주거용 전력 사용량과 비용 증가율 (2022~2026년)",
+    "subtitle": "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주",
+    "source": "자료: EIA, 2026년 3월. 2022년 3월 대비 2026년 3월, 빨강·파랑은 상원 선거 대상주(각각 공화당·민주당), 회색은 그 외 주",
+    "timeRange": "2022년 3월 ~ 2026년 3월",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -40,
+      "max": 40
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "주별 증가율",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "주별 증가율",
+        "data": [
+          {
+            "x": -8,
+            "y": 45.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 1",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -6,
+            "y": 31.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 2",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -0.5,
+            "y": 30.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 3",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -14,
+            "y": 28.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 4",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -11,
+            "y": 28.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 5",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -8,
+            "y": 28.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 6",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -1.5,
+            "y": 29.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 7",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -7,
+            "y": 26.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 8",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -7.5,
+            "y": 25.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 9",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -6.3,
+            "y": 24.8,
+            "confidence": 0.7,
+            "label": "공화당 선거주 10",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -5.3,
+            "y": 24.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 11",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -20,
+            "y": 24.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 12",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 4.5,
+            "y": 25.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 13",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -1.5,
+            "y": 23.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 14",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 3,
+            "y": 22.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 15",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -12,
+            "y": 20.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 16",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 0,
+            "y": 18.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 17",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 18.5,
+            "y": 18.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 18",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -2,
+            "y": 16.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 19",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -3.5,
+            "y": 14.5,
+            "confidence": 0.7,
+            "label": "공화당 선거주 20",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": -2.5,
+            "y": 10.0,
+            "confidence": 0.7,
+            "label": "공화당 선거주 21",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 8,
+            "y": 39.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 1",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -7,
+            "y": 35.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 2",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -3,
+            "y": 36.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 3",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 9,
+            "y": 34.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 4",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 0.5,
+            "y": 28.5,
+            "confidence": 0.7,
+            "label": "민주당 선거주 5",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 1,
+            "y": 27.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 6",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -7.5,
+            "y": 23.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 7",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -5,
+            "y": 22.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 8",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 4,
+            "y": 18.5,
+            "confidence": 0.7,
+            "label": "민주당 선거주 9",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 5,
+            "y": 16.5,
+            "confidence": 0.7,
+            "label": "민주당 선거주 10",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -7,
+            "y": 12.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 11",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -11.5,
+            "y": 10.0,
+            "confidence": 0.7,
+            "label": "민주당 선거주 12",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": -1,
+            "y": 57.0,
+            "confidence": 0.7,
+            "label": "그 외 주 1",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": -1.5,
+            "y": 42.0,
+            "confidence": 0.7,
+            "label": "그 외 주 2",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": -2.5,
+            "y": 40.0,
+            "confidence": 0.7,
+            "label": "그 외 주 3",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": -9,
+            "y": 24.5,
+            "confidence": 0.7,
+            "label": "그 외 주 4",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": 7,
+            "y": 24.0,
+            "confidence": 0.7,
+            "label": "그 외 주 5",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": 26.5,
+            "y": 22.5,
+            "confidence": 0.7,
+            "label": "그 외 주 6",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": -5,
+            "y": 19.0,
+            "confidence": 0.7,
+            "label": "그 외 주 7",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": 11,
+            "y": 18.5,
+            "confidence": 0.7,
+            "label": "그 외 주 8",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": 0.5,
+            "y": 4.5,
+            "confidence": 0.7,
+            "label": "그 외 주 9",
+            "color": "#939597",
+            "showLabel": false
+          },
+          {
+            "x": 14.5,
+            "y": 5.5,
+            "confidence": 0.7,
+            "label": "그 외 주 10",
+            "color": "#939597",
+            "showLabel": false
+          }
+        ],
+        "renderAs": "scatter",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 43,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.106,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -87.9,
+        "absoluteChange": -40.0,
+        "from": 45.5,
+        "to": 5.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 57.0,
+        "at": ""
+      },
+      "min": {
+        "value": 4.5,
+        "at": ""
+      },
+      "average": 24.925581395348836,
+      "median": 24.5,
+      "range": 52.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미국 주별 주거용 전력 사용량과 비용 증가율 (2022~2026년)",
+    "subMessage": "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주",
+    "headline": "미국 주별 주거용 전력 사용량과 비용 증가율 (2022~2026년)",
+    "summary": "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: EIA, 2026년 3월. 2022년 3월 대비 2026년 3월, 빨강·파랑은 상원 선거 대상주(각각 공화당·민주당), 회색은 그 외 주"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 5.5
+      },
+      "displayText": "미국 주별 주거용 전력 사용량",
+      "reason": "단위 %. 사용량 감소에도 비용 20~30% 상승, 빨강 공화당·파랑 민주당 선거주"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

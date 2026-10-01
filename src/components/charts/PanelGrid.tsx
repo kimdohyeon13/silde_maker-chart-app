@@ -56,6 +56,7 @@ interface PanelGridProps {
   theme?: ThemeMode;
   /** 격자 전체 높이(px) — 패널 행 수로 나눠 배분 */
   height?: number;
+  animated?: boolean;
 }
 
 // ─────────────────────────────────────────────
@@ -228,11 +229,12 @@ function renderPanelChart(
   chartType: ChartType,
   renderTheme: ThemeMode,
   panelHeight: number,
+  animated: boolean,
 ) {
   switch (chartType) {
     case "combo":
       return (
-        <TossComboChart analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
+        <TossComboChart animated={animated} analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
       );
 
     case "bar":
@@ -243,20 +245,20 @@ function renderPanelChart(
     case "radar":
     case "funnel":
       return (
-        <TossBarChart analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
+        <TossBarChart animated={animated} analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
       );
 
     case "scatter":
     case "bubble":
       return (
-        <TossScatterChart analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
+        <TossScatterChart animated={animated} analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
       );
 
     case "donut":
     case "pie":
     case "treemap":
       return (
-        <TossDonutChart analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
+        <TossDonutChart animated={animated} analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
       );
 
     case "candle":
@@ -269,7 +271,7 @@ function renderPanelChart(
     case "area":
     default:
       return (
-        <TossLineChart analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
+        <TossLineChart animated={animated} analysis={panelAnalysis} theme={renderTheme} height={panelHeight} />
       );
   }
 }
@@ -279,6 +281,7 @@ export default function PanelGrid({
   panels,
   theme = "dark",
   height = 350,
+  animated = true,
 }: PanelGridProps) {
   const renderTheme = getAnalysisThemeMode(analysis, theme);
   const themeObj = getTheme(renderTheme);
@@ -357,6 +360,7 @@ export default function PanelGrid({
                 chartType,
                 renderTheme,
                 perPanelChartHeight,
+                animated,
               )}
             </div>
           </div>

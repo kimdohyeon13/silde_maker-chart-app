@@ -1,0 +1,189 @@
+{
+  "id": "01-hormuz-reality",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "originalTitle": "Iran's answer was Hormuz",
+    "dataFidelity": "exact",
+    "preservedElements": [
+      "Mohsen Rezaei's warning that oil exports would stop through Hormuz or the Persian Gulf",
+      "The U.S. Department of Energy's report that the recent seven-day average through Hormuz exceeded 8 million barrels per day",
+      "TotalEnergies CEO's observation that oil was flowing very quietly through Hormuz"
+    ],
+    "changedElements": [
+      "Warning and observed flow arranged as two rows in a Paperlogy comparison table",
+      "16:9 spacing and a shared Korean-English color palette"
+    ],
+    "sourceAttribution": "Source: U.S. Department of Energy, TotalEnergies",
+    "notes": "Only the three specified statements from dib-237 S8 are used."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Two-row comparison layout",
+      "status": "pass",
+      "detail": "The warning and observed flow are arranged as two data rows with speakers separated into their own column."
+    },
+    {
+      "id": "source-facts-only",
+      "label": "S8 statements only",
+      "status": "pass",
+      "detail": "Only the specified statements from Mohsen Rezaei, Chris Wright, and Patrick Pouyanne are included."
+    },
+    {
+      "id": "source-visible",
+      "label": "Source line",
+      "status": "pass",
+      "detail": "Source: U.S. Department of Energy, TotalEnergies"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "2px 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "Hormuz Warning vs. Oil Still Flowing",
+    "subtitle": "Seven-day average flow through Hormuz exceeded 8 million b/d.",
+    "source": "Source: U.S. Department of Energy, TotalEnergies"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "stance",
+        "label": "Stance",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "16%",
+        "align": "left"
+      },
+      {
+        "key": "statement",
+        "label": "Statement / observation",
+        "dataType": "text",
+        "width": "62%",
+        "align": "left"
+      },
+      {
+        "key": "source",
+        "label": "Speaker",
+        "dataType": "text",
+        "width": "22%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "stance": {
+            "value": "Warning",
+            "displayValue": "Warning",
+            "highlight": "negative"
+          },
+          "statement": {
+            "value": "If economic warfare continues, not a single drop of oil will be exported through Hormuz or anywhere in the Persian Gulf.",
+            "displayValue": "If economic warfare continues, not a single drop of oil will be exported through Hormuz or anywhere in the Persian Gulf."
+          },
+          "source": {
+            "value": "Mohsen Rezaei",
+            "displayValue": "Mohsen Rezaei"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "stance": {
+            "value": "Observed flow",
+            "displayValue": "Observed flow",
+            "highlight": "positive"
+          },
+          "statement": {
+            "value": "The recent seven-day average exceeded 8 million barrels per day; oil was flowing very quietly.",
+            "displayValue": "The recent seven-day average exceeded 8 million barrels per day; oil was flowing very quietly."
+          },
+          "source": {
+            "value": "Chris Wright · Patrick Pouyanne",
+            "displayValue": "Chris Wright · Patrick Pouyanne"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 110,
+      "maxRowHeight": 170,
+      "cellPadding": "12px 16px",
+      "lineHeight": 1.24,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "sectionRules": false,
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "fontSize": {
+        "body": "19px",
+        "header": "16px"
+      },
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+    }
+  },
+  "narrative": {
+    "headMessage": "Hormuz Warning vs. Oil Still Flowing",
+    "subMessage": "Seven-day average flow through Hormuz exceeded 8 million b/d."
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": ["#667085"],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0F4C81",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "stance",
+        "reason": "Hormuz blockade warning"
+      },
+      {
+        "row": 1,
+        "col": "stance",
+        "reason": "Observed oil flow"
+      }
+    ]
+  }
+}

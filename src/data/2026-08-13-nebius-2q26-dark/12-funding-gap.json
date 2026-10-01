@@ -1,0 +1,254 @@
+{
+  "id": "12-funding-gap",
+  "sourceImage": "input/nebius-q2-2026-financial-results.pdf",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "차트 유형",
+      "제목",
+      "색상",
+      "레이아웃",
+      "라벨",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-funding-gap"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "영업현금 22억달러보다 설비투자 57억달러가 컸다",
+    "subtitle": "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다",
+    "source": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "timeRange": "2025년 1분기~2026년 2분기",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Operating cash flow",
+        "Capex",
+        "ATM equity issuance",
+        "July secured loan"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "영업현금흐름",
+        "설비투자",
+        "ATM 주식 발행",
+        "7월 담보대출"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "10억 달러",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -7,
+      "max": 4
+    },
+    "legend": [
+      {
+        "name": "현금 흐름",
+        "role": "primary",
+        "originalColor": "#0B2F4A",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "현금 흐름",
+        "data": [
+          {
+            "x": "Operating cash flow",
+            "y": 2.25,
+            "confidence": 0.74
+          },
+          {
+            "x": "Capex",
+            "y": -5.66,
+            "confidence": 0.74
+          },
+          {
+            "x": "ATM equity issuance",
+            "y": 2.85,
+            "confidence": 0.74
+          },
+          {
+            "x": "July secured loan",
+            "y": 0.78,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 8.51,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -65.3,
+        "absoluteChange": -1.47,
+        "from": 2.25,
+        "to": 0.78
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.85,
+        "at": ""
+      },
+      "min": {
+        "value": -5.66,
+        "at": ""
+      },
+      "average": 0.05499999999999999,
+      "median": 1.5150000000000001,
+      "range": 8.51
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "영업현금 22억달러보다 설비투자 57억달러가 컸다",
+    "subMessage": "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다",
+    "headline": "영업현금 22억달러보다 설비투자 57억달러가 컸다",
+    "summary": "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 0.78
+      },
+      "displayText": "영업현금 22억달러보다 설비투",
+      "reason": "고객 선납과 주식·담보대출이 성장 자금의 빈틈을 메운다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "redesign"
+}

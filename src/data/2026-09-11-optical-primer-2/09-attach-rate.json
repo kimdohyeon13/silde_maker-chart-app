@@ -1,0 +1,264 @@
+{
+  "id": "attach-rate",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "엔비디아는 GB300 2~3개에서 VR200 4~6개로 두 배가 된다",
+    "preservedElements": [
+      "가속기별 attach rate",
+      "업체와 제품 이름",
+      "연도"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "범위로 제시된 값은 중간값으로 표시했습니다. GB300은 1대 2~3, VR200은 1대 4~6, 메타는 1대 8~12입니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking Exhibit 38 (2026-09-11) · 범위값은 중간값 표시"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "업체명이 길어 가로 막대. 범위로 제시된 값은 중간값을 쓰고 부제와 출처에 범위를 밝힌다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "가속기 1개당 광트랜시버 개수",
+    "subtitle": "엔비디아는 GB300 2~3개에서 VR200 4~6개로 두 배가 된다",
+    "source": "자료: 골드만삭스 Optical Networking Exhibit 38 (2026-09-11) · 범위값은 중간값 표시",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "4",
+        "8",
+        "12",
+        "16",
+        "20"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 20
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "huawei",
+        "meta",
+        "vr200",
+        "tpu7",
+        "trn3",
+        "gb300"
+      ],
+      "displayTickValues": [
+        "화웨이 Cloud Matrix 384",
+        "메타 MTIA V1",
+        "엔비디아 VR200",
+        "구글 TPU v7",
+        "아마존 Trainium 3",
+        "엔비디아 GB300"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "가속기당 광트랜시버",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "가속기당 광트랜시버",
+        "data": [
+          {
+            "x": "huawei",
+            "y": 18,
+            "confidence": 0.9
+          },
+          {
+            "x": "meta",
+            "y": 10,
+            "confidence": 0.9
+          },
+          {
+            "x": "vr200",
+            "y": 5,
+            "confidence": 0.9
+          },
+          {
+            "x": "tpu7",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "trn3",
+            "y": 4,
+            "confidence": 0.9
+          },
+          {
+            "x": "gb300",
+            "y": 2.5,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -86.1,
+        "absoluteChange": -15.5,
+        "from": 18,
+        "to": 2.5
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 18,
+        "at": "화웨이 Cloud Matrix 384"
+      },
+      "min": {
+        "value": 2.5,
+        "at": "엔비디아 GB300"
+      },
+      "average": 7.25,
+      "median": 5,
+      "range": 15.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "가속기 1개당 광트랜시버 개수",
+    "subMessage": "엔비디아는 GB300 2~3개에서 VR200 4~6개로 두 배가 된다",
+    "headline": "가속기 1개당 광트랜시버 개수",
+    "summary": "엔비디아는 GB300 2~3개에서 VR200 4~6개로 두 배가 된다",
+    "story": "엔비디아는 GB300 2~3개에서 VR200 4~6개로 두 배가 된다",
+    "keyTakeaways": [
+      "같은 GPU 수라도 세대에 따라 광모듈 수요가 다르다.",
+      "엔비디아는 한 세대 만에 두 배가 된다.",
+      "화웨이는 구조가 달라 18개까지 올라간다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "같은 GPU 수라도 세대에 따라 광모듈 수요가 다르다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking Exhibit 38 (2026-09-11) · 범위값은 중간값 표시"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

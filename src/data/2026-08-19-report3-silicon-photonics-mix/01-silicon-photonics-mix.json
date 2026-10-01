@@ -1,0 +1,417 @@
+{
+  "id": "01-silicon-photonics-mix",
+  "sourceImage": "input/report-3-26.png",
+  "analyzedAt": "2026-08-19T00:00:00+09:00",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Datacom Silicon Photonics Penetration",
+    "originalMessage": "Silicon photonics penetration in datacom optical modules",
+    "sourceKey": "goldman-sachs-global-investment-research-2026-04-17-exhibit-26",
+    "preservedElements": [
+      "20 quarterly bars from 2024 Q1 through 2028 Q4",
+      "Silicon photonics and EML series",
+      "0–65% y-axis scale",
+      "Source: Goldman Sachs Global Investment Research, 2026-04-17"
+    ],
+    "changedElements": [
+      "제목·부제·범례를 한국어로 번역",
+      "원본의 짙은 남색·연한 파란색을 정돈된 라이트 팔레트로 조정",
+      "Paperlogy 타이포와 16:9 여백 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 이미지에 값 라벨이 없어 막대 높이를 0–65% 눈금에서 정수 퍼센트로 읽었다. EML은 각 분기 65% 총 높이에서 실리콘 포토닉스 값을 뺀 잔여 구간으로 재현했다. 원시 데이터의 정밀값으로 해석하지 않는다.",
+    "sourceAttribution": "자료: Goldman Sachs Global Investment Research, 2026년 4월 17일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "AI 레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "20개 분기·2개 계열의 원본 누적 막대 형식을 유지하고 0–65% 축을 고정했다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "화면 판독값",
+      "status": "pass",
+      "detail": "값 라벨이 없는 이미지에서 20개 Silicon photonics 막대와 EML 잔여 구간을 읽어 기록했다."
+    },
+    {
+      "id": "series-preserved",
+      "label": "계열·분기 수 보존",
+      "status": "pass",
+      "detail": "원본의 두 계열과 2024 Q1–2028 Q4 20개 순서를 유지했다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "자료: Goldman Sachs Global Investment Research, 2026년 4월 17일"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 26px 0",
+    "contentPadding": "0 8px",
+    "sourcePadding": "0 26px 7px",
+    "chartHeight": 366,
+    "compactChartMargins": true,
+    "stackedLegendAlign": "center",
+    "stackedLabelFontSize": 10,
+    "gridMode": "solid",
+    "accentColor": "#133B82",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "데이터콤 광모듈의 실리콘 포토닉스 침투율",
+    "subtitle": "2024년 1분기 6%에서 2028년 4분기 약 45%까지 상승 · EML은 잔존",
+    "source": "자료: Goldman Sachs Global Investment Research, 2026년 4월 17일",
+    "timeRange": "2024 Q1–2028 Q4",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024-Q1",
+        "2024-Q2",
+        "2024-Q3",
+        "2024-Q4",
+        "2025-Q1",
+        "2025-Q2",
+        "2025-Q3",
+        "2025-Q4",
+        "2026-Q1",
+        "2026-Q2",
+        "2026-Q3",
+        "2026-Q4",
+        "2027-Q1",
+        "2027-Q2",
+        "2027-Q3",
+        "2027-Q4",
+        "2028-Q1",
+        "2028-Q2",
+        "2028-Q3",
+        "2028-Q4"
+      ],
+      "displayTickValues": [
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1",
+        "2026 Q2",
+        "2026 Q3",
+        "2026 Q4",
+        "2027 Q1",
+        "2027 Q2",
+        "2027 Q3",
+        "2027 Q4",
+        "2028 Q1",
+        "2028 Q2",
+        "2028 Q3",
+        "2028 Q4"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        0,
+        5,
+        15,
+        25,
+        35,
+        45,
+        55,
+        65
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 65
+    },
+    "legend": [
+      {
+        "name": "실리콘 포토닉스",
+        "role": "primary",
+        "originalColor": "#00355F",
+        "remakeColor": "#133B82"
+      },
+      {
+        "name": "EML",
+        "role": "secondary",
+        "originalColor": "#ACD3F0",
+        "remakeColor": "#A7C6E1"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "실리콘 포토닉스",
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#133B82",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 6
+          },
+          {
+            "x": "2024-Q2",
+            "y": 7
+          },
+          {
+            "x": "2024-Q3",
+            "y": 9
+          },
+          {
+            "x": "2024-Q4",
+            "y": 11
+          },
+          {
+            "x": "2025-Q1",
+            "y": 13
+          },
+          {
+            "x": "2025-Q2",
+            "y": 18
+          },
+          {
+            "x": "2025-Q3",
+            "y": 25
+          },
+          {
+            "x": "2025-Q4",
+            "y": 37
+          },
+          {
+            "x": "2026-Q1",
+            "y": 24
+          },
+          {
+            "x": "2026-Q2",
+            "y": 24
+          },
+          {
+            "x": "2026-Q3",
+            "y": 35
+          },
+          {
+            "x": "2026-Q4",
+            "y": 40
+          },
+          {
+            "x": "2027-Q1",
+            "y": 35
+          },
+          {
+            "x": "2027-Q2",
+            "y": 36
+          },
+          {
+            "x": "2027-Q3",
+            "y": 42
+          },
+          {
+            "x": "2027-Q4",
+            "y": 53
+          },
+          {
+            "x": "2028-Q1",
+            "y": 46
+          },
+          {
+            "x": "2028-Q2",
+            "y": 47
+          },
+          {
+            "x": "2028-Q3",
+            "y": 62
+          },
+          {
+            "x": "2028-Q4",
+            "y": 46
+          }
+        ]
+      },
+      {
+        "name": "EML",
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#A7C6E1",
+        "data": [
+          {
+            "x": "2024-Q1",
+            "y": 59
+          },
+          {
+            "x": "2024-Q2",
+            "y": 58
+          },
+          {
+            "x": "2024-Q3",
+            "y": 56
+          },
+          {
+            "x": "2024-Q4",
+            "y": 54
+          },
+          {
+            "x": "2025-Q1",
+            "y": 52
+          },
+          {
+            "x": "2025-Q2",
+            "y": 47
+          },
+          {
+            "x": "2025-Q3",
+            "y": 40
+          },
+          {
+            "x": "2025-Q4",
+            "y": 28
+          },
+          {
+            "x": "2026-Q1",
+            "y": 41
+          },
+          {
+            "x": "2026-Q2",
+            "y": 41
+          },
+          {
+            "x": "2026-Q3",
+            "y": 30
+          },
+          {
+            "x": "2026-Q4",
+            "y": 25
+          },
+          {
+            "x": "2027-Q1",
+            "y": 30
+          },
+          {
+            "x": "2027-Q2",
+            "y": 29
+          },
+          {
+            "x": "2027-Q3",
+            "y": 23
+          },
+          {
+            "x": "2027-Q4",
+            "y": 12
+          },
+          {
+            "x": "2028-Q1",
+            "y": 19
+          },
+          {
+            "x": "2028-Q2",
+            "y": 18
+          },
+          {
+            "x": "2028-Q3",
+            "y": 3
+          },
+          {
+            "x": "2028-Q4",
+            "y": 19
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 40,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 값 라벨 부재",
+        "2028 Q3 고점과 65% 상단선 간격"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 3,
+      "max": 62,
+      "average": 32.5,
+      "latest": 46
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "실리콘 포토닉스 비중은 2024년 1분기 6%에서 2028년 4분기 약 45%까지 전반적으로 상승한다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "데이터콤 광모듈의 실리콘 포토닉스 침투율",
+    "subMessage": "2024년 1분기 6%에서 2028년 4분기 약 45%까지 상승 · EML은 잔존",
+    "headline": "데이터콤 광모듈의 실리콘 포토닉스 침투율",
+    "summary": "2024년 1분기 6%에서 2028년 4분기 약 45%까지 상승 · EML은 잔존",
+    "story": "실리콘 포토닉스 비중이 분기별 변동을 거치며 상승하고 EML 구간은 남는다.",
+    "keyTakeaways": [
+      "2024 Q1 실리콘 포토닉스 6%",
+      "2028 Q4 약 45%까지 상승",
+      "EML 구간은 잔존"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "두 계열의 분기별 높이와 65% 축을 함께 확인합니다.",
+    "contextualNotes": [
+      "자료: Goldman Sachs Global Investment Research, 2026년 4월 17일"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2028-Q4",
+      "y": 46,
+      "displayText": "2028 Q4: 46%",
+      "reason": "마지막 분기 실리콘 포토닉스 판독값"
+    },
+    "colorStrategy": {
+      "primary": "#133B82",
+      "secondary": [
+        "#A7C6E1"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#133B82",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "dense",
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": []
+  }
+}

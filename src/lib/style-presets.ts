@@ -80,8 +80,8 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
         textPrimary: "#1F2328",
         textSecondary: "#656D76",
         textTertiary: "#8C959F",
-        accent: "#0969DA",
-        gridLine: "rgba(208, 215, 222, 0.52)",
+        accent: "#087A68",
+        gridLine: "rgba(208, 215, 222, 0.72)",
         axisLine: "#9AA6B2",
         axisLabel: "#6B7280",
       },
@@ -100,11 +100,11 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
     },
     export: {
       borderRadius: "9px 9px 0 0",
-      headerPadding: "18px 34px 2px",
-      contentPadding: "0 24px",
-      sourcePadding: "0 34px 10px",
-      titleFontSize: 36,
-      subtitleFontSize: 17,
+      headerPadding: "12px 24px 2px",
+      contentPadding: "0 10px",
+      sourcePadding: "0 24px 8px",
+      titleFontSize: 38,
+      subtitleFontSize: 18,
       sourceFontSize: 11,
     },
     table: {
@@ -113,27 +113,35 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
     exportDefaults: {
       backgroundColor: "#FFFFFF",
       frameStyle: "hairline",
-      headerVariant: "centered",
+      headerVariant: "left-rail",
       contentBorder: false,
-      squareEdges: false,
+      squareEdges: true,
       showAreaFill: false,
-      gridMode: "dashed",
-      lineStrokeWidth: 2.8,
+      gridMode: "solid",
+      lineStrokeWidth: 2.6,
+      chartLabelScale: 0.85,
+      chartLabelFontWeight: 600,
       showLatestGuide: false,
-      accentColor: "#0969DA",
-      borderColor: "#D7DEE5",
+      accentColor: "#087A68",
+      borderColor: "#DCE3EB",
     },
     tableDefaults: {
       zebraStripe: false,
       highlightMode: "text",
-      headerTone: "underline",
+      headerTone: "tinted",
       rowRules: "soft",
-      groupHeaderTone: "plain",
+      groupHeaderTone: "accent-rule",
       columnRules: false,
       sectionRules: true,
-      accentColor: "#0969DA",
-      rowRuleColor: "#D7DEE5",
-      sectionRuleColor: "#D7DEE5",
+      accentColor: "#087A68",
+      rowRuleColor: "#DDE4EA",
+      sectionRuleColor: "#CBD5DF",
+      lineHeight: 1.2,
+      cellPadding: "2px 6px",
+      fitRowsToCanvas: true,
+      minRowHeight: 29,
+      maxRowHeight: 43,
+      fontWeight: { body: 500, numeric: 550, rowHeader: 650, header: 650, groupHeader: 650 },
     },
   },
   "consulting-slide": {
@@ -227,7 +235,7 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
         negativeSubtle: "rgba(74, 168, 255, 0.13)",
         warning: "#FFD166",
         warningSubtle: "rgba(255, 209, 102, 0.13)",
-        gridLine: "rgba(80, 148, 132, 0.23)",
+        gridLine: "rgba(80, 148, 132, 0.34)",
         axisLine: "#24433D",
         axisLabel: "#C2E5DC",
         tooltipBg: "#10201D",
@@ -248,12 +256,25 @@ export const STYLE_PRESETS: Record<StylePresetId, RemakeStylePreset> = {
     },
     export: {
       borderRadius: "2px 2px 0 0",
-      headerPadding: "26px 34px 0",
-      contentPadding: "6px 10px 12px",
-      sourcePadding: "0 34px 16px",
+      headerPadding: "12px 24px 2px",
+      contentPadding: "0 10px",
+      sourcePadding: "0 24px 8px",
       titleFontSize: 48,
       subtitleFontSize: 28,
       sourceFontSize: 21,
+    },
+    exportDefaults: {
+      headerVariant: "left-rail", frameStyle: "hairline", squareEdges: true,
+      backgroundColor: "#07110F", accentColor: "#00E0A4", borderColor: "#24433D",
+      showAreaFill: false, gridMode: "solid", lineStrokeWidth: 2.6,
+      chartLabelScale: 0.85, chartLabelFontWeight: 600, subtitleFontWeight: 300,
+    },
+    tableDefaults: {
+      headerTone: "tinted", groupHeaderTone: "accent-rule", zebraStripe: false,
+      lineHeight: 1.2, cellPadding: "2px 6px", fitRowsToCanvas: true,
+      minRowHeight: 29, maxRowHeight: 43, rowRules: "soft", columnRules: false,
+      accentColor: "#0F4A3B", rowRuleColor: "#24433D", sectionRuleColor: "#24433D",
+      fontWeight: { body: 500, numeric: 550, rowHeader: 650, header: 650, groupHeader: 650 },
     },
     table: {
       rowHeightDelta: -5,
@@ -454,15 +475,25 @@ export function getAnalysisPresetColors(
 }
 
 export function getPresetRechartsStyle(
-  analysis: Pick<VisualAnalysis, "stylePreset"> | undefined,
+  analysis: Pick<VisualAnalysis, "stylePreset" | "exportOptions"> | undefined,
   fallback: ThemeMode
 ) {
   const mode = getAnalysisThemeMode(analysis, fallback);
   const colors = getAnalysisPresetColors(analysis, fallback);
   const styles = getRechartsStyle(mode);
+  const presetDefaults = getAnalysisStylePreset(analysis).exportDefaults;
+  const requestedScale = analysis?.exportOptions?.chartLabelScale ?? presetDefaults?.chartLabelScale;
+  const labelScale = Number.isFinite(requestedScale)
+    ? Math.min(1.25, Math.max(0.75, requestedScale!))
+    : 1;
+  const requestedWeight = analysis?.exportOptions?.chartLabelFontWeight ?? presetDefaults?.chartLabelFontWeight;
+  const labelWeight = Number.isFinite(requestedWeight)
+    ? Math.min(900, Math.max(400, requestedWeight!))
+    : undefined;
 
   return {
     ...styles,
+    labels: { scale: labelScale, fontWeight: labelWeight },
     grid: {
       ...styles.grid,
       stroke: colors.gridLine,
@@ -473,6 +504,8 @@ export function getPresetRechartsStyle(
       tick: {
         ...styles.xAxis.tick,
         fill: colors.axisLabel,
+        fontSize: styles.xAxis.tick.fontSize * labelScale,
+        fontWeight: labelWeight ?? styles.xAxis.tick.fontWeight,
       },
       axisLine: {
         ...(typeof styles.xAxis.axisLine === "object" ? styles.xAxis.axisLine : {}),
@@ -485,6 +518,8 @@ export function getPresetRechartsStyle(
       tick: {
         ...styles.yAxis.tick,
         fill: colors.axisLabel,
+        fontSize: styles.yAxis.tick.fontSize * labelScale,
+        fontWeight: labelWeight ?? styles.yAxis.tick.fontWeight,
       },
     },
     tooltip: {

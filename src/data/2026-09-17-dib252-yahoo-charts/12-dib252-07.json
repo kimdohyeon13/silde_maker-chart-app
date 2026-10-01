@@ -1,0 +1,481 @@
+{
+  "id": "dib252-07",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-252-07.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "13. 달러인덱스",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 16일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-two-column",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    },
+    {
+      "id": "printed-close-carried",
+      "label": "원문 종가 승계",
+      "status": "pass",
+      "detail": "DX-Y.NYB 의 마지막 점과 당일 등락은 원본 차트에 인쇄된 9월 16일 FOMC 뒤 시세를 그대로 씁니다. 야후 일봉 정산가는 발표 전 값입니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "ko",
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "13. 달러인덱스",
+    "subtitle": "9월 16일 종가 100.30 · +0.65%",
+    "source": "자료: Yahoo Finance · 2026년 9월 16일 종가까지",
+    "timeRange": "2026-06-16 to 2026-09-16",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-16",
+        "2026-07-06",
+        "2026-07-23",
+        "2026-08-11",
+        "2026-08-28",
+        "2026-09-16"
+      ],
+      "displayTickValues": [
+        "06-16",
+        "07-06",
+        "07-23",
+        "08-11",
+        "08-28",
+        "09-16"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "지수",
+      "type": "value",
+      "tickValues": [
+        "98.5",
+        "99.0",
+        "99.5",
+        "100.0",
+        "100.5",
+        "101.0",
+        "101.5",
+        "102.0"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 98.5,
+      "max": 102.0
+    },
+    "legend": [
+      {
+        "name": "달러인덱스",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "달러인덱스",
+        "data": [
+          {
+            "x": "2026-06-16",
+            "y": 99.54
+          },
+          {
+            "x": "2026-06-17",
+            "y": 100.09
+          },
+          {
+            "x": "2026-06-18",
+            "y": 100.85
+          },
+          {
+            "x": "2026-06-22",
+            "y": 101.02
+          },
+          {
+            "x": "2026-06-23",
+            "y": 101.41
+          },
+          {
+            "x": "2026-06-24",
+            "y": 101.61
+          },
+          {
+            "x": "2026-06-25",
+            "y": 101.43
+          },
+          {
+            "x": "2026-06-26",
+            "y": 101.36
+          },
+          {
+            "x": "2026-06-29",
+            "y": 101.11
+          },
+          {
+            "x": "2026-06-30",
+            "y": 101.19
+          },
+          {
+            "x": "2026-07-01",
+            "y": 101.39
+          },
+          {
+            "x": "2026-07-02",
+            "y": 100.86
+          },
+          {
+            "x": "2026-07-06",
+            "y": 100.85
+          },
+          {
+            "x": "2026-07-07",
+            "y": 101.14
+          },
+          {
+            "x": "2026-07-08",
+            "y": 101.05
+          },
+          {
+            "x": "2026-07-09",
+            "y": 100.94
+          },
+          {
+            "x": "2026-07-10",
+            "y": 100.97
+          },
+          {
+            "x": "2026-07-13",
+            "y": 101.28
+          },
+          {
+            "x": "2026-07-14",
+            "y": 100.94
+          },
+          {
+            "x": "2026-07-15",
+            "y": 100.5
+          },
+          {
+            "x": "2026-07-16",
+            "y": 100.73
+          },
+          {
+            "x": "2026-07-17",
+            "y": 100.75
+          },
+          {
+            "x": "2026-07-20",
+            "y": 100.99
+          },
+          {
+            "x": "2026-07-21",
+            "y": 101.18
+          },
+          {
+            "x": "2026-07-22",
+            "y": 101.14
+          },
+          {
+            "x": "2026-07-23",
+            "y": 101.43
+          },
+          {
+            "x": "2026-07-24",
+            "y": 101.47
+          },
+          {
+            "x": "2026-07-27",
+            "y": 101.51
+          },
+          {
+            "x": "2026-07-28",
+            "y": 101.38
+          },
+          {
+            "x": "2026-07-29",
+            "y": 100.8
+          },
+          {
+            "x": "2026-07-30",
+            "y": 100.01
+          },
+          {
+            "x": "2026-07-31",
+            "y": 99.8
+          },
+          {
+            "x": "2026-08-03",
+            "y": 99.96
+          },
+          {
+            "x": "2026-08-04",
+            "y": 99.89
+          },
+          {
+            "x": "2026-08-05",
+            "y": 99.69
+          },
+          {
+            "x": "2026-08-06",
+            "y": 99.97
+          },
+          {
+            "x": "2026-08-07",
+            "y": 99.6
+          },
+          {
+            "x": "2026-08-10",
+            "y": 99.81
+          },
+          {
+            "x": "2026-08-11",
+            "y": 99.82
+          },
+          {
+            "x": "2026-08-12",
+            "y": 100.01
+          },
+          {
+            "x": "2026-08-13",
+            "y": 99.96
+          },
+          {
+            "x": "2026-08-14",
+            "y": 99.67
+          },
+          {
+            "x": "2026-08-17",
+            "y": 99.64
+          },
+          {
+            "x": "2026-08-18",
+            "y": 99.65
+          },
+          {
+            "x": "2026-08-19",
+            "y": 98.83
+          },
+          {
+            "x": "2026-08-20",
+            "y": 98.9
+          },
+          {
+            "x": "2026-08-21",
+            "y": 98.8
+          },
+          {
+            "x": "2026-08-24",
+            "y": 99.0
+          },
+          {
+            "x": "2026-08-25",
+            "y": 98.92
+          },
+          {
+            "x": "2026-08-26",
+            "y": 99.17
+          },
+          {
+            "x": "2026-08-27",
+            "y": 99.16
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.7
+          },
+          {
+            "x": "2026-08-31",
+            "y": 99.43
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.67
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.56
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.0
+          },
+          {
+            "x": "2026-09-04",
+            "y": 99.16
+          },
+          {
+            "x": "2026-09-08",
+            "y": 98.84
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.77
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.09
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.12
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.46
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.65
+          },
+          {
+            "x": "2026-09-16",
+            "y": 100.3
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+0.65%",
+          "color": "#D92D20",
+          "layout": "two-column",
+          "label": "오늘"
+        },
+        "seriesKind": "price"
+      }
+    ],
+    "totalDataPoints": 64,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 16일 종가 100.30 · +0.65%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 101.61000061035156,
+        "series": "all"
+      },
+      "min": {
+        "value": 98.7699966430664,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "13. 달러인덱스",
+    "subMessage": "9월 16일 종가 100.30 · +0.65%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#FF6A5F",
+        "#4AA8FF",
+        "#A78BFA",
+        "#F472B6",
+        "#F5B942"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-16",
+        "y": 100.3
+      },
+      "displayText": "100.3",
+      "reason": "9월 16일 종가 100.30 · +0.65%"
+    },
+    "densityLevel": "focused"
+  }
+}

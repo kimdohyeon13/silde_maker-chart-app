@@ -1,0 +1,242 @@
+{
+  "id": "01-alpha66-08",
+  "sourceImage": "input/alpha66-08.png",
+  "stylePreset": "market-terminal",
+  "mode": "redesign",
+  "dataFidelity": "source-visible",
+  "preserveIntent": {
+    "originalMessage": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목 언어",
+      "색상",
+      "라벨 밀도",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "sourceAttribution": "자료: a16z, OAI Signals 'What Frontier Firms are doing differently', 2026년 8월 12일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "업종별 출력 토큰 증가 배수",
+    "subtitle": "2025년 4월을 1로 놓았고, 업종 뒤 배수는 상위 10%와 중위의 격차다",
+    "source": "자료: a16z, OAI Signals 'What Frontier Firms are doing differently', 2026년 8월 12일",
+    "timeRange": "",
+    "xAxis": {
+      "label": "업종",
+      "type": "category",
+      "tickValues": [
+        "all-industries",
+        "information",
+        "finance-insurance",
+        "professional-technical"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "배",
+      "type": "value",
+      "tickValues": [
+        "all-industries",
+        "information",
+        "finance-insurance",
+        "professional-technical"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 35,
+      "startsAtZero": true,
+      "isLogScale": false,
+      "displayTickValues": [
+        "전산업 8.3배",
+        "정보 11.7배",
+        "금융·보험 6.7배",
+        "전문·과학·기술 7.7배"
+      ]
+    },
+    "legend": [
+      {
+        "name": "상위 10% 기업",
+        "role": "primary",
+        "originalColor": "#1D4E89",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "중위 10% 기업",
+        "role": "secondary",
+        "originalColor": "#FF7A6B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상위 10% 기업",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "all-industries",
+            "y": 17.1
+          },
+          {
+            "x": "information",
+            "y": 32.5
+          },
+          {
+            "x": "finance-insurance",
+            "y": 12.9
+          },
+          {
+            "x": "professional-technical",
+            "y": 16
+          }
+        ]
+      },
+      {
+        "name": "중위 10% 기업",
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "all-industries",
+            "y": 2.1
+          },
+          {
+            "x": "information",
+            "y": 2.8
+          },
+          {
+            "x": "finance-insurance",
+            "y": 1.9
+          },
+          {
+            "x": "professional-technical",
+            "y": 2.1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "max": {
+        "value": 32.5,
+        "at": "information"
+      },
+      "min": {
+        "value": 1.9,
+        "at": "finance-insurance"
+      },
+      "average": 8.55,
+      "median": 7.5,
+      "range": 30.6
+    },
+    "changeRates": [],
+    "correlations": []
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "업종별 출력 토큰 증가 배수",
+    "subMessage": "정보 산업 상위 10%는 32.5배, 중위 기업은 2.8배다",
+    "headline": "업종별 출력 토큰 증가 배수",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  },
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 가로 막대 유형과 두 시리즈 구성을 그대로 유지했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "chart.py 판독 결과의 값만 사용했고 새 값을 만들지 않았습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "a16z, OAI Signals 출처 줄을 그대로 옮겼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 19,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "sourceFontSize": 11,
+    "headerCopySingleLine": true,
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "squareEdges": true,
+    "numberLocale": "ko",
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true
+  }
+}

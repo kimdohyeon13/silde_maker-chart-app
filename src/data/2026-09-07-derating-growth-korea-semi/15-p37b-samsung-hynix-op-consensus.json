@@ -1,0 +1,355 @@
+{
+  "id": "p37b-samsung-hynix-op-consensus",
+  "sourceImage": "input/p37_b_samsung_hynix_op_consensus.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Quantiwise, 2026년 8월 20일. 1·2분기의 8월 20일 막대는 실적치"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 380,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "삼성전자와 SK하이닉스의 2026년 분기 영업이익 컨센서스",
+    "subtitle": "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다",
+    "source": "자료: Quantiwise, 2026년 8월 20일. 1·2분기의 8월 20일 막대는 실적치",
+    "timeRange": "2026년 1분기 ~ 4분기",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "1Q26",
+        "2Q26",
+        "3Q26",
+        "4Q26",
+        "1Q26 ",
+        "2Q26 ",
+        "3Q26 ",
+        "4Q26 "
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "6월 30일 컨센서스",
+        "role": "secondary",
+        "originalColor": "#939597",
+        "remakeColor": "#939597"
+      },
+      {
+        "name": "8월 20일 컨센서스 (1·2분기는 실적)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ],
+    "secondaryYAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 140
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "6월 30일 컨센서스",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 40,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 86,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26",
+            "y": 110,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26",
+            "y": 120,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26 ",
+            "y": 36,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26 ",
+            "y": 63,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26 ",
+            "y": 79,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26 ",
+            "y": 88,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#939597",
+        "axis": "left"
+      },
+      {
+        "name": "8월 20일 컨센서스 (1·2분기는 실적)",
+        "data": [
+          {
+            "x": "1Q26",
+            "y": 57,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 89,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26",
+            "y": 114,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26",
+            "y": 123,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26 ",
+            "y": 38,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26 ",
+            "y": 61,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q26 ",
+            "y": 79,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q26 ",
+            "y": 89,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "right"
+      }
+    ],
+    "totalDataPoints": 16,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.046,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 56.1,
+        "absoluteChange": 32.0,
+        "from": 57.0,
+        "to": 89.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 123.0,
+        "at": ""
+      },
+      "min": {
+        "value": 38.0,
+        "at": ""
+      },
+      "average": 81.25,
+      "median": 84.0,
+      "range": 85.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "삼성전자와 SK하이닉스의 2026년 분기 영업이익 컨센서스",
+    "subMessage": "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다",
+    "headline": "삼성전자와 SK하이닉스의 2026년 분기 영업이익 컨센서스",
+    "summary": "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Quantiwise, 2026년 8월 20일. 1·2분기의 8월 20일 막대는 실적치"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [
+      {
+        "fromX": "1Q26",
+        "toX": "4Q26",
+        "color": "#0F4C81",
+        "label": "삼성전자",
+        "description": "삼성전자"
+      },
+      {
+        "fromX": "1Q26 ",
+        "toX": "4Q26 ",
+        "color": "#FF6F61",
+        "label": "SK하이닉스",
+        "description": "SK하이닉스"
+      }
+    ],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 89.0
+      },
+      "displayText": "삼성전자와 SK하이닉스의 20",
+      "reason": "단위 조원. 삼성전자는 네 분기 모두 8월 20일 값이 6월 30일 컨센서스를 웃돈다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

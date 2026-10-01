@@ -1,0 +1,311 @@
+{
+  "id": "07-sk-cooling-matrix",
+  "sourceImage": "input/19-sk-cooling-matrix.png",
+  "analyzedAt": "2026-08-25T15:35:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "I-HBM Concept: Localized Hotspot Mitigation",
+    "originalMessage": "Compare SK hynix iHBM, Samsung HPB cooling + hybrid copper bonding, and Micron circuit design + enhanced base die.",
+    "sourceKey": "@wltechrsrch/hot-chips-cooling-matrix",
+    "sourceUrl": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management",
+    "preservedElements": [
+      "SK Hynix iHBM",
+      "Samsung Electronics HPB cooling + hybrid copper bonding",
+      "Micron Technology circuit design improvement + enhanced base die",
+      "Each company's core idea",
+      "Each company's key data",
+      "I-HBM localized hotspot mitigation diagram and i-HBM label",
+      "Source URL https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management"
+    ],
+    "changedElements": [
+      "Recomposed the source matrix as an editable comparison table",
+      "Added concise explanations without changing the underlying technical claims",
+      "Applied a light Paperlogy table hierarchy while keeping company order and colors"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The three rows, technologies, core ideas, key data, company order, and source URL are copied from the source slide. The diagram is represented by the i-HBM label and its dedicated first row.",
+    "sourceAttribution": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Built a three-row by four-column comparison table for company, technology, core idea, and key data."
+    },
+    {
+      "id": "company-order-and-data",
+      "label": "Company order and key data",
+      "status": "pass",
+      "detail": "Checked the SK Hynix → Samsung Electronics → Micron Technology order and each company's key data against the source."
+    },
+    {
+      "id": "source-url",
+      "label": "Source URL retained",
+      "status": "pass",
+      "detail": "Recorded the source URL exactly in preserveIntent.sourceUrl and contextualNotes."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data, order, and color parity",
+      "status": "pass",
+      "detail": "KO/EN files use the same row/column order, sourceKey, and company highlight colors."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "structure": {
+    "title": "I-HBM Concept: Localized Hotspot Mitigation",
+    "subtitle": "How SK hynix, Samsung, and Micron approach HBM thermal management",
+    "source": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "11px 20px 0",
+    "contentPadding": "0 10px 0",
+    "sourcePadding": "0 20px 0",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "company",
+        "label": "Company",
+        "dataType": "text",
+        "width": "16%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "technology",
+        "label": "Technology",
+        "dataType": "text",
+        "width": "21%",
+        "align": "left"
+      },
+      {
+        "key": "core_idea",
+        "label": "Core Idea",
+        "dataType": "text",
+        "width": "40%",
+        "align": "left"
+      },
+      {
+        "key": "key_data",
+        "label": "Key Data",
+        "dataType": "text",
+        "width": "23%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "SK Hynix",
+            "displayValue": "SK Hynix",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "iHBM",
+            "displayValue": "iHBM"
+          },
+          "core_idea": {
+            "value": "Embed a high-thermal-conductivity, electrically insulating cooling component inside the HBM's hot D2D PHY area, creating a dedicated heat path",
+            "displayValue": "Embed a high-thermal-conductivity, electrically insulating cooling component inside the HBM's hot D2D PHY area, creating a dedicated heat path"
+          },
+          "key_data": {
+            "value": ">30% reduction in thermal resistance",
+            "displayValue": ">30% reduction in thermal resistance",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "Samsung Electronics",
+            "displayValue": "Samsung Electronics",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "HPB cooling +\nhybrid copper bonding",
+            "displayValue": "HPB cooling +\nhybrid copper bonding"
+          },
+          "core_idea": {
+            "value": "Change chip stacking structure by moving DRAM to the side of the processor and placing a copper heat spreader directly above the processor core; use copper-to-copper bonding to eliminate thermal resistance",
+            "displayValue": "Change chip stacking structure by moving DRAM to the side of the processor and placing a copper heat spreader directly above the processor core; use copper-to-copper bonding to eliminate thermal resistance"
+          },
+          "key_data": {
+            "value": "~30% temperature reduction;\n16% improvement in thermal impedance",
+            "displayValue": "~30% temperature reduction;\n16% improvement in thermal impedance",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "Micron Technology",
+            "displayValue": "Micron Technology",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "Circuit design improvement +\nenhanced base die",
+            "displayValue": "Circuit design improvement +\nenhanced base die"
+          },
+          "core_idea": {
+            "value": "Improve cooling while boosting performance by refining internal circuit design and optimizing base die performance",
+            "displayValue": "Improve cooling while boosting performance by refining internal circuit design and optimizing base die performance"
+          },
+          "key_data": {
+            "value": ">20% improvement in energy efficiency",
+            "displayValue": ">20% improvement in energy efficiency",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 98,
+      "fitRowsToCanvas": false,
+      "minRowHeight": 98,
+      "maxRowHeight": 98,
+      "cellPadding": "6px 8px",
+      "lineHeight": 1.04,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "sectionRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 650,
+        "rowHeader": 800,
+        "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "14px",
+        "total": "14px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "I-HBM Concept: Localized Hotspot Mitigation",
+    "subMessage": "Three different paths to lower HBM heat: iHBM, HPB + hybrid copper bonding, and circuit/base-die design.",
+    "headline": "I-HBM Concept: Localized Hotspot Mitigation",
+    "summary": "SK hynix proposes a dedicated heat path, Samsung uses copper spreading and bonding, and Micron refines the circuit and base die.",
+    "story": "The source i-HBM concept shows heat leaving the hot D2D PHY area inside HBM. The table compares the three companies' technologies and key data in the same order as the source.",
+    "keyTakeaways": [
+      "SK hynix iHBM: >30% reduction in thermal resistance",
+      "Samsung HPB + hybrid copper bonding: ~30% temperature reduction and 16% better thermal impedance",
+      "Micron circuit design + enhanced base die: >20% improvement in energy efficiency"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Read one company row at a time, linking the core idea to the Key Data cell on the right.",
+    "contextualNotes": [
+      "Source URL: https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management",
+      "Source diagram label: [SK hynix i-HBM]",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This is a company comparison matrix, not a time series.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "No quantitative time series is present."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 0, "at": "" },
+      "min": { "value": 0, "at": "" },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#667085", "#98A2B3"],
+      "positive": "#175CD3",
+      "negative": "#D92D20",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "SK Hynix", "y": 0 },
+      "reason": "The first row maps the iHBM hotspot diagram to its quantified thermal-resistance claim.",
+      "displayText": "iHBM · >30% thermal-resistance reduction"
+    },
+    "densityLevel": "detailed"
+  }
+}

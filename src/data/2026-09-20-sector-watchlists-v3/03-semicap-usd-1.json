@@ -1,0 +1,734 @@
+{
+  "id": "03-semicap-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:49:57.477Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "승인 종목 유지. EPS 성장률과 PER를 동일한 InvestingPro EPS Forecast Mean Consensus FY+1/FY+2 원문으로 계산. EPS 아래는 FY+2 결산연월."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "반도체 장비·소재",
+    "subtitle": "2026.09.18 종가 · 평균 EPS로 성장률·PER 계산 · EPS 아래는 예상 결산연월 · 8종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가\n(USD)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n=100",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS 성장\n(FY+2)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "예상 PER\n(FY+2)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ASML",
+            "displayValue": "ASML\nASML",
+            "sideValue": {
+              "displayValue": "+3.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "노광 장비",
+            "displayValue": "노광 장비"
+          },
+          "current": {
+            "value": "1,679.92",
+            "displayValue": "1,679"
+          },
+          "m1": {
+            "value": "-4.1%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "81.2%",
+            "displayValue": "81%"
+          },
+          "high52": {
+            "value": "84.0%",
+            "displayValue": "84%"
+          },
+          "target": {
+            "value": "2,137",
+            "displayValue": "2,137\n27%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "35.0%",
+            "displayValue": "35%\n2027.12"
+          },
+          "pe": {
+            "value": "28.3x",
+            "displayValue": "28.3x"
+          },
+          "marketCap": {
+            "value": "637.9 B",
+            "displayValue": "637"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LRCX",
+            "displayValue": "LRCX\n램리서치",
+            "sideValue": {
+              "displayValue": "+7.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "식각·증착",
+            "displayValue": "식각·증착"
+          },
+          "current": {
+            "value": "288.11",
+            "displayValue": "288"
+          },
+          "m1": {
+            "value": "-6.2%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "128.3%",
+            "displayValue": "128%"
+          },
+          "high52": {
+            "value": "65.7%",
+            "displayValue": "65%"
+          },
+          "target": {
+            "value": "373.13",
+            "displayValue": "373\n29%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "22.5%",
+            "displayValue": "22%\n2028.06"
+          },
+          "pe": {
+            "value": "24.7x",
+            "displayValue": "24.7x"
+          },
+          "marketCap": {
+            "value": "360.5 B",
+            "displayValue": "360"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMAT",
+            "displayValue": "AMAT\n어플라이드M",
+            "sideValue": {
+              "displayValue": "+6.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 장비",
+            "displayValue": "반도체 장비"
+          },
+          "current": {
+            "value": "444.57",
+            "displayValue": "444"
+          },
+          "m1": {
+            "value": "-10.3%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "135.2%",
+            "displayValue": "135%"
+          },
+          "high52": {
+            "value": "60.1%",
+            "displayValue": "60%"
+          },
+          "target": {
+            "value": "640.89",
+            "displayValue": "640\n44%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "44.3%",
+            "displayValue": "44%\n2027.10"
+          },
+          "pe": {
+            "value": "24.1x",
+            "displayValue": "24.1x"
+          },
+          "marketCap": {
+            "value": "352.8 B",
+            "displayValue": "352"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TER",
+            "displayValue": "TER\n테라다인",
+            "sideValue": {
+              "displayValue": "+5.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 테스트",
+            "displayValue": "반도체 테스트"
+          },
+          "current": {
+            "value": "371.47",
+            "displayValue": "371"
+          },
+          "m1": {
+            "value": "-2.1%",
+            "displayValue": "-2%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "210.5%",
+            "displayValue": "210%"
+          },
+          "high52": {
+            "value": "76.1%",
+            "displayValue": "76%"
+          },
+          "target": {
+            "value": "446.47",
+            "displayValue": "446\n20%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "28.2%",
+            "displayValue": "28%\n2027.12"
+          },
+          "pe": {
+            "value": "31.9x",
+            "displayValue": "31.9x"
+          },
+          "marketCap": {
+            "value": "58.076 B",
+            "displayValue": "58"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FORM",
+            "displayValue": "FORM\n폼팩터",
+            "sideValue": {
+              "displayValue": "+6.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "프로브 카드",
+            "displayValue": "프로브 카드"
+          },
+          "current": {
+            "value": "118.38",
+            "displayValue": "118"
+          },
+          "m1": {
+            "value": "3.0%",
+            "displayValue": "3%"
+          },
+          "y1": {
+            "value": "236.0%",
+            "displayValue": "236%"
+          },
+          "high52": {
+            "value": "73.9%",
+            "displayValue": "73%"
+          },
+          "target": {
+            "value": "138.63",
+            "displayValue": "138\n17%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "13.7%",
+            "displayValue": "13%\n2027.12"
+          },
+          "pe": {
+            "value": "34.0x",
+            "displayValue": "34.0x"
+          },
+          "marketCap": {
+            "value": "9.248 B",
+            "displayValue": "9"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MKSI",
+            "displayValue": "MKSI\nMKS",
+            "sideValue": {
+              "displayValue": "+4.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "공정 제어",
+            "displayValue": "공정 제어"
+          },
+          "current": {
+            "value": "252.08",
+            "displayValue": "252"
+          },
+          "m1": {
+            "value": "-10.4%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "96.8%",
+            "displayValue": "96%"
+          },
+          "high52": {
+            "value": "56.3%",
+            "displayValue": "56%"
+          },
+          "target": {
+            "value": "410.86",
+            "displayValue": "410\n63%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "34.2%",
+            "displayValue": "34%\n2027.12"
+          },
+          "pe": {
+            "value": "14.3x",
+            "displayValue": "14.3x"
+          },
+          "marketCap": {
+            "value": "17.045 B",
+            "displayValue": "17"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AXTI",
+            "displayValue": "AXTI\nAXT",
+            "sideValue": {
+              "displayValue": "+3.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "화합물 기판",
+            "displayValue": "화합물 기판"
+          },
+          "current": {
+            "value": "70.03",
+            "displayValue": "70"
+          },
+          "m1": {
+            "value": "-4.6%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "1,513.6%",
+            "displayValue": "1,513%"
+          },
+          "high52": {
+            "value": "48.9%",
+            "displayValue": "48%"
+          },
+          "target": {
+            "value": "91.60",
+            "displayValue": "91\n30%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "158.6%",
+            "displayValue": "158%\n2027.12"
+          },
+          "pe": {
+            "value": "31.1x",
+            "displayValue": "31.1x"
+          },
+          "marketCap": {
+            "value": "4.496 B",
+            "displayValue": "4"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSEM",
+            "displayValue": "TSEM\n타워세미",
+            "sideValue": {
+              "displayValue": "+2.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "특수 파운드리",
+            "displayValue": "특수 파운드리"
+          },
+          "current": {
+            "value": "223.60",
+            "displayValue": "223"
+          },
+          "m1": {
+            "value": "-1.3%",
+            "displayValue": "-1%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "233.6%",
+            "displayValue": "233%"
+          },
+          "high52": {
+            "value": "69.9%",
+            "displayValue": "69%"
+          },
+          "target": {
+            "value": "314.36",
+            "displayValue": "314\n40%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "71.1%",
+            "displayValue": "71%\n2027.12"
+          },
+          "pe": {
+            "value": "33.7x",
+            "displayValue": "33.7x"
+          },
+          "marketCap": {
+            "value": "25.274 B",
+            "displayValue": "25"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 53
+    }
+  },
+  "narrative": {
+    "headMessage": "반도체 장비·소재",
+    "subMessage": "2026.09.18 종가 · 평균 EPS로 성장률·PER 계산 · EPS 아래는 예상 결산연월 · 8종목",
+    "headline": "반도체 장비·소재",
+    "summary": "승인된 63개 종목의 동일 EPS 평균 컨센서스 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "ASML",
+      "instrument": "NASDAQGS:ASML",
+      "sourceFile": "input/pro-extra-b.json",
+      "sourceUrl": "https://www.investing.com/pro/NASDAQGS:ASML",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:ASML/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "LRCX",
+      "instrument": "NASDAQGS:LRCX",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2027-06-30",
+      "fy2Date": "2028-06-30",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:LRCX/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "AMAT",
+      "instrument": "NASDAQGS:AMAT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-10-31",
+      "fy2Date": "2027-10-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:AMAT/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "TER",
+      "instrument": "NASDAQGS:TER",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:TER/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "FORM",
+      "instrument": "NASDAQGS:FORM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:FORM/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "MKSI",
+      "instrument": "NASDAQGS:MKSI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:MKSI/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "AXTI",
+      "instrument": "NASDAQGS:AXTI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:AXTI/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "TSEM",
+      "instrument": "NASDAQGS:TSEM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76330515.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:TSEM/explorer/eps_proj_mean_raw"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 8,
+    "rowCount": 8,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

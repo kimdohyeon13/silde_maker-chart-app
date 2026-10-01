@@ -1,0 +1,387 @@
+{
+  "id": "02-rack-networking-cost-summary",
+  "mode": "faithful",
+  "sourceImage": "input/report-3-11.png",
+  "analyzedAt": "2026-08-19T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Dollar content",
+    "preservedElements": [
+      "5개 구성 열과 원본 열 순서",
+      "랙당 네트워킹 비용 상위 요약 행",
+      "원본 화면에서 읽은 숫자와 단위",
+      "원본 출처 표기"
+    ],
+    "changedElements": [
+      "영문 표 텍스트의 한국어 번역",
+      "1,920×1,080 16:9 캔버스에 맞춘 표 레이아웃",
+      "전체 원본 표가 16:9에 들어가지 않아 랙당 네트워킹 비용 상위 행만 남긴 사용자 허용 요약",
+      "Paperlogy 타이포그래피와 여백 정리",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 이미지에서 직접 읽을 수 있는 랙당 네트워킹 비용 요약 행만 사용했습니다. 세부 부품·물량·ASP 행은 전체 표를 16:9에 담을 수 없어 생략했으며, 생략 범위는 프로젝트 QA에 기록했습니다. 새 수치는 추가하지 않았습니다.",
+    "sourceAttribution": "Goldman Sachs Global Investment Research, 2026-04-17"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-title-preserved",
+      "label": "원본 제목 보존",
+      "status": "pass",
+      "detail": "원본 제목 Dollar content를 한국어로만 번역했습니다."
+    },
+    {
+      "id": "source-visible-summary",
+      "label": "원본 화면 기반 요약",
+      "status": "pass",
+      "detail": "랙당 네트워킹 비용 합계·스케일 업·스케일 아웃 및 두 요약 행의 5개 구성별 수치를 보존했습니다."
+    },
+    {
+      "id": "permitted-density-reduction",
+      "label": "사용자 허용 밀도 축소",
+      "status": "pass",
+      "detail": "전체 표가 16:9에 들어가지 않아 상위 랙 네트워킹 비용 행만 표시하고 세부 부품 행은 QA에 명시해 생략했습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 완전 보존",
+      "status": "pass",
+      "detail": "Goldman Sachs Global Investment Research, 2026-04-17를 유지했습니다."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 캔버스",
+      "status": "pass",
+      "detail": "canvasHeight 540으로 1,920×1,080 PNG를 생성합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 29,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "numberLocale": "en",
+    "titleFontWeight": 900,
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "달러 콘텐츠",
+    "subtitle": "랙당 네트워킹 비용 상위 행 (US$ k)",
+    "source": "Goldman Sachs Global Investment Research, 2026-04-17"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "width": "31%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "gb300",
+        "label": "GB300 NVL72",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "veraRubin72",
+        "label": "Vera Rubin NVL72",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "veraRubin72Cpo",
+        "label": "Vera Rubin NVL72\n(CPO 25% 스케일 아웃)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "rubinUltra144",
+        "label": "Rubin Ultra NVL144\n(CPO 29% 스케일 아웃)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "rubinUltra576",
+        "label": "Rubin Ultra NVL576\n(CPO 29% 스케일 아웃)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "total",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Networking costs per rack (US$ k)",
+            "displayValue": "랙당 네트워킹 비용 (US$ k)"
+          },
+          "gb300": {
+            "value": 315,
+            "displayValue": "315"
+          },
+          "veraRubin72": {
+            "value": 489,
+            "displayValue": "489"
+          },
+          "veraRubin72Cpo": {
+            "value": 504,
+            "displayValue": "504"
+          },
+          "rubinUltra144": {
+            "value": 1113,
+            "displayValue": "1,113"
+          },
+          "rubinUltra576": {
+            "value": 1169,
+            "displayValue": "1,169"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Scale-up",
+            "displayValue": "스케일 업"
+          },
+          "gb300": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72Cpo": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "rubinUltra144": {
+            "value": 381,
+            "displayValue": "381"
+          },
+          "rubinUltra576": {
+            "value": 803,
+            "displayValue": "803"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Scale-out",
+            "displayValue": "스케일 아웃"
+          },
+          "gb300": {
+            "value": 175,
+            "displayValue": "175"
+          },
+          "veraRubin72": {
+            "value": 349,
+            "displayValue": "349"
+          },
+          "veraRubin72Cpo": {
+            "value": 364,
+            "displayValue": "364"
+          },
+          "rubinUltra144": {
+            "value": 732,
+            "displayValue": "732"
+          },
+          "rubinUltra576": {
+            "value": 366,
+            "displayValue": "366"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Scale up dollar content per rack (US$ k)",
+            "displayValue": "랙당 스케일 업 달러 콘텐츠 (US$ k)"
+          },
+          "gb300": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72Cpo": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "rubinUltra144": {
+            "value": 381,
+            "displayValue": "381"
+          },
+          "rubinUltra576": {
+            "value": 803,
+            "displayValue": "803"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Scale out dollar content per rack (US$ k)",
+            "displayValue": "랙당 스케일 아웃 달러 콘텐츠 (US$ k)"
+          },
+          "gb300": {
+            "value": 175,
+            "displayValue": "175"
+          },
+          "veraRubin72": {
+            "value": 349,
+            "displayValue": "349"
+          },
+          "veraRubin72Cpo": {
+            "value": 364,
+            "displayValue": "364"
+          },
+          "rubinUltra144": {
+            "value": 732,
+            "displayValue": "732"
+          },
+          "rubinUltra576": {
+            "value": 366,
+            "displayValue": "366"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 65,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 67,
+      "maxRowHeight": 42,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "10px",
+        "body": "12px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "달러 콘텐츠",
+    "subMessage": "랙당 네트워킹 비용 상위 행 (US$ k)",
+    "headline": "달러 콘텐츠",
+    "summary": "원본 표의 랙당 네트워킹 비용 요약 행을 5개 구성으로 비교합니다.",
+    "story": "전체 원본 표는 세부 부품·물량·ASP 행까지 포함해 16:9 카드에 모두 담기 어렵습니다. 따라서 상단의 랙당 네트워킹 비용 요약 행만 원본 순서와 수치대로 표시했습니다.",
+    "keyTakeaways": [
+      "랙당 네트워킹 비용 합계와 스케일 업·아웃 행을 함께 비교합니다.",
+      "5개 구성의 원본 행 순서와 숫자를 유지했습니다.",
+      "세부 부품 행 생략 범위는 프로젝트 QA에 기록했습니다."
+    ],
+    "questionsRaised": [
+      "구성별 스케일 업·아웃 비용 구조는 어떻게 달라지는가?"
+    ],
+    "viewerAction": "표의 행 순서, 숫자, 출처를 원본 이미지와 대조합니다.",
+    "contextualNotes": [
+      "출처: Goldman Sachs Global Investment Research, 2026-04-17",
+      "전체 표에서 상위 랙 네트워킹 비용 행만 사용자 허용 범위로 요약했습니다."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "랙당 네트워킹 비용",
+      "reason": "원본 표의 상단 요약 비용 행을 우선적으로 읽도록 했습니다."
+    },
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "metric",
+        "reason": "랙당 네트워킹 비용 합계 행"
+      },
+      {
+        "row": 3,
+        "col": "metric",
+        "reason": "스케일 업 요약 행"
+      },
+      {
+        "row": 4,
+        "col": "metric",
+        "reason": "스케일 아웃 요약 행"
+      }
+    ]
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "id": "06-sk-hybrid-bonding",
+  "sourceImage": "input/18-sk-hybrid-bonding.png",
+  "analyzedAt": "2026-08-25T15:25:00+09:00",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "NEXT GEN. HBM PACKAGING, HYBRID BONDING",
+    "originalMessage": "Hybrid bonding aims for ≥20Hi memory capacity, narrow pitch, and higher thermal efficiency.",
+    "sourceKey": "@wltechrsrch/hot-chips-hybrid-bonding",
+    "preservedElements": [
+      "Three numbered source sections",
+      "Under limited Z-height, HyB provides thicker core die",
+      "Up to 24% vs MR-MUF",
+      "HyB enables narrow TSV pitch",
+      "Below <18µm vs MR-MUF",
+      "Normalized thermal resistance at 8Hi, 12Hi, 16Hi, and 20Hi",
+      "TC-NCF, MR-MUF, and HyB series order and colors",
+      "Source-visible thermal values and the ~19%, ~25%, ~30%, ~35% reduction callouts",
+      "Source: ISMP, 2024"
+    ],
+    "changedElements": [
+      "Separated the source into three independent panels with independent axes",
+      "Made the core-die and pitch comparisons editable bar panels",
+      "Kept source-visible points at 16Hi and 20Hi explicitly marked as approximate",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The 8Hi and 12Hi thermal labels are printed in the source. The 16Hi and 20Hi markers are read against the 0.30-spaced y-axis and retained as source-visible approximations; the reduction callouts are copied exactly.",
+    "sourceAttribution": "ISMP, 2024 source slide; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Used three independent panels: core-die thickness, pitch markers, and thermal resistance."
+    },
+    {
+      "id": "thermal-source-visible-values",
+      "label": "Source-visible thermal values",
+      "status": "pass",
+      "detail": "Preserved the three method series across 8Hi/12Hi/16Hi/20Hi, with printed labels and axis-read approximations disclosed."
+    },
+    {
+      "id": "required-claims",
+      "label": "Required claims",
+      "status": "pass",
+      "detail": "Included ≥20Hi, up to +24%, below <18µm, all four stack heights, and ~19/25/30/35% callouts."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data, order, and color parity",
+      "status": "pass",
+      "detail": "KO/EN files use identical x/y values, series order, panel order, legend colors, and sourceKey."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "hideSource": true,
+    "headerPadding": "10px 20px 0",
+    "contentPadding": "0 12px 0",
+    "sourcePadding": "0",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 420,
+    "panelTitleFontSize": 13,
+    "compactChartMargins": false,
+    "showDirectLabels": true,
+    "lineStrokeWidth": 2.5,
+    "gridMode": "solid",
+    "showAreaFill": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 96,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "차세대 HBM 패키징: 하이브리드 본딩",
+    "subtitle": "20Hi 이상 적층·더 좁은 피치·더 낮은 열저항 · 자료: ISMP, 2024",
+    "source": "ISMP, 2024",
+    "xAxis": {
+      "label": "적층 높이",
+      "type": "category",
+      "tickValues": [
+        "8Hi",
+        "12Hi",
+        "16Hi",
+        "20Hi"
+      ],
+      "displayTickValues": [
+        "8Hi",
+        "12Hi",
+        "16Hi",
+        "20Hi"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "정규화 열저항",
+      "type": "numeric",
+      "tickValues": [
+        "0.60",
+        "0.90",
+        "1.20",
+        "1.50",
+        "1.80",
+        "2.10",
+        "2.40",
+        "2.70",
+        "3.00"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 0.6,
+      "max": 3
+    },
+    "panels": [
+      {
+        "title": "① 코어 다이 최대 +24%",
+        "chartType": "bar",
+        "xAxis": {
+          "label": "",
+          "type": "category",
+          "tickValues": [
+            "20Hi"
+          ],
+          "displayTickValues": [
+            "20Hi"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "yAxis": {
+          "label": "코어 다이 두께 (MR-MUF=1.0x)",
+          "type": "numeric",
+          "tickValues": [
+            "0",
+            "0.5",
+            "1.0",
+            "1.5"
+          ],
+          "unit": "x",
+          "startsAtZero": true,
+          "isLogScale": false,
+          "min": 0,
+          "max": 1.5
+        },
+        "seriesNames": [
+          "Core die · MR-MUF",
+          "Core die · HyB"
+        ]
+      },
+      {
+        "title": "② HyB는 TSV 피치를 <18µm로 줄임",
+        "chartType": "bar_horizontal",
+        "xAxis": {
+          "label": "",
+          "type": "category",
+          "tickValues": [
+            "MR-MUF · 30",
+            "MR-MUF · 20",
+            "HyB · 10",
+            "HyB · 5"
+          ],
+          "displayTickValues": [
+            "MR-MUF\n30",
+            "MR-MUF\n20",
+            "HyB\n10",
+            "HyB\n5"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "yAxis": {
+          "label": "TSV / bump pitch (µm)",
+          "type": "numeric",
+          "tickValues": [
+            "0",
+            "10",
+            "20",
+            "30"
+          ],
+          "unit": "µm",
+          "startsAtZero": true,
+          "isLogScale": false,
+          "min": 0,
+          "max": 35
+        },
+        "seriesNames": [
+          "Pitch markers (source-visible)"
+        ]
+      },
+      {
+        "title": "③ 적층이 높아질수록 HyB의 열효율 우위가 커짐",
+        "chartType": "line",
+        "xAxis": {
+          "label": "",
+          "type": "category",
+          "tickValues": [
+            "8Hi",
+            "12Hi",
+            "16Hi",
+            "20Hi"
+          ],
+          "displayTickValues": [
+            "8Hi",
+            "12Hi",
+            "16Hi",
+            "20Hi"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false
+        },
+        "yAxis": {
+          "label": "정규화 열저항",
+          "type": "numeric",
+          "tickValues": [
+            "0.60",
+            "0.90",
+            "1.20",
+            "1.50",
+            "1.80",
+            "2.10",
+            "2.40",
+            "2.70",
+            "3.00"
+          ],
+          "unit": "",
+          "startsAtZero": false,
+          "isLogScale": false,
+          "min": 0.6,
+          "max": 3
+        },
+        "seriesNames": [
+          "TC-NCF",
+          "MR-MUF",
+          "HyB"
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "name": "Core die · MR-MUF",
+        "originalColor": "#6895E9",
+        "remakeColor": "#00E0A4",
+        "role": "primary"
+      },
+      {
+        "name": "Core die · HyB",
+        "originalColor": "#E7E5DE",
+        "remakeColor": "#FF6A5F",
+        "role": "primary"
+      },
+      {
+        "name": "Pitch markers (source-visible)",
+        "originalColor": "#6895E9",
+        "remakeColor": "#4AA8FF",
+        "role": "primary"
+      },
+      {
+        "name": "TC-NCF",
+        "originalColor": "#EFA196",
+        "remakeColor": "#A78BFA",
+        "role": "primary"
+      },
+      {
+        "name": "MR-MUF",
+        "originalColor": "#6895E9",
+        "remakeColor": "#F472B6",
+        "role": "primary"
+      },
+      {
+        "name": "HyB",
+        "originalColor": "#E7E5DE",
+        "remakeColor": "#00E0A4",
+        "role": "primary"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Core die · MR-MUF",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "8Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "12Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "16Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "20Hi",
+            "y": 1,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "Core die · HyB",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "8Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "12Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "16Hi",
+            "y": 0,
+            "confidence": 1
+          },
+          {
+            "x": "20Hi",
+            "y": 1.24,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "name": "Pitch markers (source-visible)",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#4AA8FF",
+        "data": [
+          {
+            "x": "MR-MUF · 30",
+            "y": 30,
+            "displayLabel": "30",
+            "confidence": 0.82
+          },
+          {
+            "x": "MR-MUF · 20",
+            "y": 20,
+            "displayLabel": "20",
+            "confidence": 0.82
+          },
+          {
+            "x": "HyB · 10",
+            "y": 10,
+            "displayLabel": "10",
+            "confidence": 0.82
+          },
+          {
+            "x": "HyB · 5",
+            "y": 5,
+            "displayLabel": "5",
+            "confidence": 0.82
+          }
+        ]
+      },
+      {
+        "name": "TC-NCF",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#A78BFA",
+        "data": [
+          {
+            "x": "8Hi",
+            "y": 1.1,
+            "displayLabel": "1.10",
+            "confidence": 1
+          },
+          {
+            "x": "12Hi",
+            "y": 1.58,
+            "displayLabel": "1.58",
+            "confidence": 1
+          },
+          {
+            "x": "16Hi",
+            "y": 2.1,
+            "confidence": 0.72
+          },
+          {
+            "x": "20Hi",
+            "y": 2.8,
+            "confidence": 0.72
+          }
+        ]
+      },
+      {
+        "name": "MR-MUF",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#F472B6",
+        "data": [
+          {
+            "x": "8Hi",
+            "y": 1,
+            "displayLabel": "1.00",
+            "confidence": 1
+          },
+          {
+            "x": "12Hi",
+            "y": 1.41,
+            "displayLabel": "1.41",
+            "confidence": 1
+          },
+          {
+            "x": "16Hi",
+            "y": 1.9,
+            "confidence": 0.72
+          },
+          {
+            "x": "20Hi",
+            "y": 2.4,
+            "confidence": 0.72
+          }
+        ]
+      },
+      {
+        "name": "HyB",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "8Hi",
+            "y": 0.89,
+            "displayLabel": "0.89",
+            "confidence": 1
+          },
+          {
+            "x": "12Hi",
+            "y": 1.18,
+            "displayLabel": "1.18",
+            "confidence": 1
+          },
+          {
+            "x": "16Hi",
+            "y": 1.5,
+            "confidence": 0.72
+          },
+          {
+            "x": "20Hi",
+            "y": 1.8,
+            "confidence": 0.72
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 18,
+    "quality": {
+      "overallConfidence": 0.82,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "16Hi and 20Hi thermal markers are source-visible readings against the y-axis; the source prints exact labels only at 8Hi and 12Hi."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.86,
+      "description": "Thermal resistance rises with stack height for all three methods; HyB remains lowest.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.44,
+      "description": "Source-visible four-point method lines are monotonic but use different slopes."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.8,
+        "at": "20Hi / TC-NCF"
+      },
+      "min": {
+        "value": 0.89,
+        "at": "8Hi / HyB"
+      },
+      "average": 1.64,
+      "median": 1.5,
+      "range": 1.91
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "차세대 HBM 패키징: 하이브리드 본딩",
+    "subMessage": "20Hi 이상 적층·더 좁은 피치·더 낮은 열저항",
+    "headline": "차세대 HBM 패키징: 하이브리드 본딩",
+    "summary": "하이브리드 본딩은 더 많은 층을 쌓으면서 코어 다이를 두껍게 하고, 피치와 열저항을 낮추는 방향을 제시합니다.",
+    "story": "원본은 하이브리드 본딩을 20Hi 이상 적층, 좁은 피치, 높은 열전도율을 위한 차세대 방식으로 설명합니다. 세 패널은 코어 다이 두께, 피치 마커, 적층 높이에 따른 세 방식의 열저항을 분리해 보여줍니다.",
+    "keyTakeaways": [
+      "하이브리드 본딩: ≥20Hi 메모리 용량·좁은 피치·높은 열전도율",
+      "20Hi 코어 다이: MR-MUF 대비 최대 +24%",
+      "TSV 피치: MR-MUF 대비 <18µm",
+      "열저항 source-visible 값: TC-NCF 1.10/1.58/2.10/2.80, MR-MUF 1.00/1.41/1.90/2.40, HyB 0.89/1.18/1.50/1.80"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "먼저 20Hi와 <18µm 주장을 읽고, 마지막 패널에서 8Hi→20Hi 열저항 곡선을 비교합니다.",
+    "contextualNotes": [
+      "Source callouts: ~19%, ~25%, ~30%, ~35%",
+      "Source: ISMP, 2024",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "type": "badge",
+        "position": {
+          "x": "20Hi",
+          "y": 1.24
+        },
+        "text": "코어 다이 최대 +24%",
+        "style": "positive",
+        "importance": "medium"
+      },
+      {
+        "type": "badge",
+        "position": {
+          "x": "HyB · 10",
+          "y": 18
+        },
+        "text": "TSV 피치 <18µm",
+        "style": "info",
+        "importance": "critical"
+      },
+      {
+        "type": "badge",
+        "position": {
+          "x": "8Hi",
+          "y": 1.0
+        },
+        "text": "열저항 ▼19%",
+        "style": "positive",
+        "importance": "high"
+      },
+      {
+        "type": "badge",
+        "position": {
+          "x": "12Hi",
+          "y": 1.7
+        },
+        "text": "열저항 ▼25%",
+        "style": "positive",
+        "importance": "high"
+      },
+      {
+        "type": "badge",
+        "position": {
+          "x": "16Hi",
+          "y": 2.1
+        },
+        "text": "열저항 ▼30%",
+        "style": "positive",
+        "importance": "high"
+      },
+      {
+        "type": "badge",
+        "position": {
+          "x": "20Hi",
+          "y": 2.8
+        },
+        "text": "열저항 ▼35%",
+        "style": "positive",
+        "importance": "high"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "20Hi",
+        "y": 1.8
+      },
+      "reason": "HyB remains the lowest thermal-resistance series as stack height increases.",
+      "displayText": "HyB 20Hi ≈ 1.80"
+    },
+    "densityLevel": "detailed"
+  }
+}

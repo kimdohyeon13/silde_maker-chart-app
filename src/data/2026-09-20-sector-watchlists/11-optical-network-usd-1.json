@@ -1,0 +1,644 @@
+{
+  "id": "11-optical-network-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.006Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "광통신·네트워크 · 1/2",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 7종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "COHR",
+            "displayValue": "COHR\n코히런트",
+            "sideValue": {
+              "displayValue": "+7.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광통신 부품",
+            "displayValue": "광통신 부품"
+          },
+          "current": {
+            "value": "317.36",
+            "displayValue": "317"
+          },
+          "m1": {
+            "value": "10.4%",
+            "displayValue": "10%"
+          },
+          "y1": {
+            "value": "190.9%",
+            "displayValue": "190%"
+          },
+          "high52": {
+            "value": "-",
+            "displayValue": "-"
+          },
+          "target": {
+            "value": "415.36",
+            "displayValue": "415\n30%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "67.8%",
+            "displayValue": "67%"
+          },
+          "pe": {
+            "value": "21.0x",
+            "displayValue": "21x"
+          },
+          "marketCap": {
+            "value": "62.149 B",
+            "displayValue": "62"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LITE",
+            "displayValue": "LITE\n루멘텀",
+            "sideValue": {
+              "displayValue": "+4.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광통신 레이저",
+            "displayValue": "광통신 레이저"
+          },
+          "current": {
+            "value": "930.91",
+            "displayValue": "930"
+          },
+          "m1": {
+            "value": "12.5%",
+            "displayValue": "12%"
+          },
+          "y1": {
+            "value": "451.7%",
+            "displayValue": "451%"
+          },
+          "high52": {
+            "value": "85.7%",
+            "displayValue": "85%"
+          },
+          "target": {
+            "value": "1,149",
+            "displayValue": "1,149\n23%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "149.9%",
+            "displayValue": "149%"
+          },
+          "pe": {
+            "value": "20.5x",
+            "displayValue": "20x"
+          },
+          "marketCap": {
+            "value": "83.503 B",
+            "displayValue": "83"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AAOI",
+            "displayValue": "AAOI\n어플라이드옵토",
+            "sideValue": {
+              "displayValue": "+7.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광트랜시버",
+            "displayValue": "광트랜시버"
+          },
+          "current": {
+            "value": "105.17",
+            "displayValue": "105"
+          },
+          "m1": {
+            "value": "-13.9%",
+            "displayValue": "-13%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "262.8%",
+            "displayValue": "262%"
+          },
+          "high52": {
+            "value": "45.0%",
+            "displayValue": "45%"
+          },
+          "target": {
+            "value": "163.40",
+            "displayValue": "163\n55%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "361.5%",
+            "displayValue": "361%"
+          },
+          "pe": {
+            "value": "23.1x",
+            "displayValue": "23x"
+          },
+          "marketCap": {
+            "value": "8.93 B",
+            "displayValue": "8"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FN",
+            "displayValue": "FN\n파브리넷",
+            "sideValue": {
+              "displayValue": "+2.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광통신 제조",
+            "displayValue": "광통신 제조"
+          },
+          "current": {
+            "value": "388.55",
+            "displayValue": "388"
+          },
+          "m1": {
+            "value": "-14.5%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "1.4%",
+            "displayValue": "1%"
+          },
+          "high52": {
+            "value": "51.9%",
+            "displayValue": "51%"
+          },
+          "target": {
+            "value": "734.11",
+            "displayValue": "734\n88%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "28.9%",
+            "displayValue": "28%"
+          },
+          "pe": {
+            "value": "18.1x",
+            "displayValue": "18x"
+          },
+          "marketCap": {
+            "value": "13.924 B",
+            "displayValue": "13"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GLW",
+            "displayValue": "GLW\n코닝",
+            "sideValue": {
+              "displayValue": "+1.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광섬유",
+            "displayValue": "광섬유"
+          },
+          "current": {
+            "value": "150.13",
+            "displayValue": "150"
+          },
+          "m1": {
+            "value": "-1.3%",
+            "displayValue": "-1%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "90.3%",
+            "displayValue": "90%"
+          },
+          "high52": {
+            "value": "55.2%",
+            "displayValue": "55%"
+          },
+          "target": {
+            "value": "192.44",
+            "displayValue": "192\n28%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "30.1%",
+            "displayValue": "30%"
+          },
+          "pe": {
+            "value": "34.0x",
+            "displayValue": "34x"
+          },
+          "marketCap": {
+            "value": "129.3 B",
+            "displayValue": "129"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CIEN",
+            "displayValue": "CIEN\n시에나",
+            "sideValue": {
+              "displayValue": "+1.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광 네트워크",
+            "displayValue": "광 네트워크"
+          },
+          "current": {
+            "value": "348.80",
+            "displayValue": "348"
+          },
+          "m1": {
+            "value": "-12.7%",
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "152.1%",
+            "displayValue": "152%"
+          },
+          "high52": {
+            "value": "54.7%",
+            "displayValue": "54%"
+          },
+          "target": {
+            "value": "507.62",
+            "displayValue": "507\n45%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "171.5%",
+            "displayValue": "171%"
+          },
+          "pe": {
+            "value": "28.1x",
+            "displayValue": "28x"
+          },
+          "marketCap": {
+            "value": "49.463 B",
+            "displayValue": "49"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ANET",
+            "displayValue": "ANET\n아리스타",
+            "sideValue": {
+              "displayValue": "-0.1%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "데이터센터 스위치",
+            "displayValue": "데이터센터 스위치"
+          },
+          "current": {
+            "value": "199.39",
+            "displayValue": "199"
+          },
+          "m1": {
+            "value": "6.9%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "33.3%",
+            "displayValue": "33%"
+          },
+          "high52": {
+            "value": "92.8%",
+            "displayValue": "92%"
+          },
+          "target": {
+            "value": "241.04",
+            "displayValue": "241\n20%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "38.0%",
+            "displayValue": "38%"
+          },
+          "pe": {
+            "value": "37.9x",
+            "displayValue": "37x"
+          },
+          "marketCap": {
+            "value": "251.5 B",
+            "displayValue": "251"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 60
+    }
+  },
+  "narrative": {
+    "headMessage": "광통신·네트워크 · 1/2",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 7종목",
+    "headline": "광통신·네트워크 · 1/2",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "COHR",
+      "instrument": "NYSE:COHR",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "LITE",
+      "instrument": "NASDAQGS:LITE",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "AAOI",
+      "instrument": "NASDAQGM:AAOI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75364507.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "FN",
+      "instrument": "NYSE:FN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "GLW",
+      "instrument": "NYSE:GLW",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "CIEN",
+      "instrument": "NYSE:CIEN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ANET",
+      "instrument": "NYSE:ANET",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 7,
+    "rowCount": 7,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

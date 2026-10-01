@@ -1,0 +1,578 @@
+{
+  "id": "02-forward-pe",
+  "mode": "faithful",
+  "sourceImage": "projects/2026-08-27-nvidia-revenue-forward-pe-remake/input/source.png",
+  "analyzedAt": "2026-08-27T12:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "12개월 forward P/E 추이",
+    "preservedElements": [
+      "2021-08~2026-08 단일 forward P/E 시계열",
+      "y축 10~70배 범위",
+      "±2 SD·±1 SD·평균 수평 기준선과 우측 라벨",
+      "자료: FactSet, 삼성증권"
+    ],
+    "changedElements": [
+      "Paperlogy 타이포와 16:9 여백 정돈",
+      "source-visible 앵커로 원본의 고빈도 굴곡 재현"
+    ],
+    "dataFidelity": "source-visible",
+    "mode": "faithful",
+    "notes": "원본 화면의 선형을 따라 61개 앵커로 재구성했습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "단일 고밀도 선, 수평 기준선 5개, y축 10~70배, 날짜 눈금은 6개만 표시하도록 계획했습니다.",
+      "checkedAt": "2026-08-27"
+    },
+    {
+      "id": "source-visible-density",
+      "label": "source-visible 선 밀도",
+      "status": "pass",
+      "detail": "원본의 월별 굴곡을 보존하기 위해 source-visible 앵커 61개를 사용했습니다.",
+      "checkedAt": "2026-08-27"
+    },
+    {
+      "id": "reference-lines-preserved",
+      "label": "기준선 보존",
+      "status": "pass",
+      "detail": "±2 SD, ±1 SD, 평균의 5개 수준과 우측 라벨을 모두 보존했습니다.",
+      "checkedAt": "2026-08-27"
+    },
+    {
+      "id": "paperlogy-contract",
+      "label": "Paperlogy 계층 지정",
+      "status": "pass",
+      "detail": "제목 Paperlogy 900, 부제 Paperlogy 300을 지정했습니다.",
+      "checkedAt": "2026-08-27"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "top-rule",
+    "squareEdges": false,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 365,
+    "compactChartMargins": false,
+    "gridMode": "dashed",
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "showAllTrendLines": true,
+    "accentColor": "#1479D1",
+    "borderColor": "#BFC7D5",
+    "lineStrokeWidth": 2.8,
+    "endLabelRightMargin": 106,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "12개월 forward P/E 추이",
+    "source": "자료: FactSet, 삼성증권",
+    "timeRange": "2021-08~2026-08",
+    "xAxis": {
+      "label": "",
+      "type": "time",
+      "tickValues": [
+        "2021-08",
+        "2022-08",
+        "2023-08",
+        "2024-08",
+        "2025-08",
+        "2026-08"
+      ],
+      "displayTickValues": [
+        "'21.08",
+        "'22.08",
+        "'23.08",
+        "'24.08",
+        "'25.08",
+        "'26.08"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "(배)",
+      "type": "value",
+      "tickValues": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "",
+      "min": 10,
+      "max": 70,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": []
+  },
+  "data": {
+    "series": [
+      {
+        "name": "forward P/E",
+        "seriesKind": "normal",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#1479D1",
+        "data": [
+          {
+            "x": "2021-08",
+            "y": 50,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-09",
+            "y": 47,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-10",
+            "y": 45,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-11",
+            "y": 56,
+            "confidence": 0.7
+          },
+          {
+            "x": "2021-12",
+            "y": 66,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-01",
+            "y": 61,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-02",
+            "y": 53,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-03",
+            "y": 43,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-04",
+            "y": 46,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-05",
+            "y": 36,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-06",
+            "y": 31,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-07",
+            "y": 27,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-08",
+            "y": 25,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-09",
+            "y": 31,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-10",
+            "y": 35,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-11",
+            "y": 29,
+            "confidence": 0.7
+          },
+          {
+            "x": "2022-12",
+            "y": 37,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-01",
+            "y": 42,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-02",
+            "y": 47,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-03",
+            "y": 52,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-04",
+            "y": 57,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-05",
+            "y": 59,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-06",
+            "y": 53,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-07",
+            "y": 48,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-08",
+            "y": 45,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-09",
+            "y": 41,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-10",
+            "y": 30,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-11",
+            "y": 26,
+            "confidence": 0.7
+          },
+          {
+            "x": "2023-12",
+            "y": 24,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-01",
+            "y": 28,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-02",
+            "y": 32,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-03",
+            "y": 35,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-04",
+            "y": 31,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-05",
+            "y": 38,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-06",
+            "y": 42,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-07",
+            "y": 35,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-08",
+            "y": 31,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-09",
+            "y": 37,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-10",
+            "y": 33,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-11",
+            "y": 32,
+            "confidence": 0.7
+          },
+          {
+            "x": "2024-12",
+            "y": 29,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-01",
+            "y": 23,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-02",
+            "y": 21,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-03",
+            "y": 26,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-04",
+            "y": 31,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-05",
+            "y": 34,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-06",
+            "y": 32,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-07",
+            "y": 30,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-08",
+            "y": 32,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-09",
+            "y": 27,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-10",
+            "y": 25,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-11",
+            "y": 23,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025-12",
+            "y": 21,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-01",
+            "y": 20,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-02",
+            "y": 18,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-03",
+            "y": 22,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-04",
+            "y": 19,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-05",
+            "y": 21,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-06",
+            "y": 18,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-07",
+            "y": 19,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026-08",
+            "y": 18,
+            "confidence": 0.7
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 61,
+    "quality": {
+      "overallConfidence": 0.7,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": {
+        "value": 18,
+        "at": "2026-08"
+      },
+      "max": {
+        "value": 66,
+        "at": "2021-12"
+      },
+      "average": 35,
+      "latest": 18
+    },
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "원본 화면에서 보이는 궤적을 보존했습니다.",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "12개월 forward P/E 추이",
+    "subMessage": "",
+    "headline": "12개월 forward P/E 추이",
+    "summary": "",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "2021-08",
+          "y": 56
+        },
+        "to": {
+          "x": "2026-08",
+          "y": 56
+        },
+        "style": "dashed",
+        "color": "#AAB2BD",
+        "label": "+2 SD"
+      },
+      {
+        "from": {
+          "x": "2021-08",
+          "y": 45
+        },
+        "to": {
+          "x": "2026-08",
+          "y": 45
+        },
+        "style": "dashed",
+        "color": "#AAB2BD",
+        "label": "+1 SD"
+      },
+      {
+        "from": {
+          "x": "2021-08",
+          "y": 35
+        },
+        "to": {
+          "x": "2026-08",
+          "y": 35
+        },
+        "style": "dashed",
+        "color": "#98A2B3",
+        "label": "평균"
+      },
+      {
+        "from": {
+          "x": "2021-08",
+          "y": 24
+        },
+        "to": {
+          "x": "2026-08",
+          "y": 24
+        },
+        "style": "dashed",
+        "color": "#AAB2BD",
+        "label": "-1 SD"
+      },
+      {
+        "from": {
+          "x": "2021-08",
+          "y": 13
+        },
+        "to": {
+          "x": "2026-08",
+          "y": 13
+        },
+        "style": "dashed",
+        "color": "#AAB2BD",
+        "label": "-2 SD"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#1479D1",
+      "secondary": [
+        "#98A2B3"
+      ],
+      "positive": "#1479D1",
+      "negative": "#1479D1",
+      "accent": "#1479D1",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2021-12",
+        "y": 66
+      },
+      "displayText": "",
+      "reason": "원본에서 보이는 고점."
+    },
+    "densityLevel": "detailed"
+  }
+}

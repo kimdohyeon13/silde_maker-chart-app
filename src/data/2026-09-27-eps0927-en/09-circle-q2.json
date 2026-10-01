@@ -1,0 +1,241 @@
+{
+  "id": "circle-q2",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Circle Q2: Reserve Income $668M",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Circle Q2 2026 earnings release and 10-Q"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "Circle Q2: Reserve Income $668M",
+    "subtitle": "Unit: $M",
+    "source": "Source: Circle Q2 2026 earnings release and 10-Q",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "TOTAL",
+        "RESERVE",
+        "DIST",
+        "COIN",
+        "NI"
+      ],
+      "displayTickValues": [
+        "Total revenue and reserve income",
+        "Reserve income",
+        "Distribution, transaction and other costs",
+        "Paid to Coinbase",
+        "Net income"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "TOTAL",
+        "RESERVE",
+        "DIST",
+        "COIN",
+        "NI"
+      ],
+      "displayTickValues": [
+        "0",
+        "200",
+        "400",
+        "600",
+        "800",
+        "Total revenue and reserve income",
+        "Reserve income",
+        "Distribution, transaction and other costs",
+        "Paid to Coinbase",
+        "Net income"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 800
+    },
+    "legend": [
+      {
+        "name": "Q2 amount",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Q2 amount",
+        "data": [
+          {
+            "x": "TOTAL",
+            "y": 701,
+            "displayLabel": "701",
+            "color": "#087A68"
+          },
+          {
+            "x": "RESERVE",
+            "y": 668,
+            "displayLabel": "668",
+            "color": "#087A68"
+          },
+          {
+            "x": "DIST",
+            "y": 412,
+            "displayLabel": "412",
+            "color": "#087A68"
+          },
+          {
+            "x": "COIN",
+            "y": 324.6,
+            "displayLabel": "324.6",
+            "color": "#087A68"
+          },
+          {
+            "x": "NI",
+            "y": 48,
+            "displayLabel": "48",
+            "color": "#087A68"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Distribution costs $412M, net income $48M",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 701,
+        "at": "TOTAL"
+      },
+      "min": {
+        "value": 48,
+        "at": "NI"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Circle Q2: Reserve Income $668M",
+    "subMessage": "Distribution costs $412M, net income $48M",
+    "headline": "Circle Q2: Reserve Income $668M",
+    "summary": "Distribution costs $412M, net income $48M",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "TOTAL",
+        "y": 701
+      },
+      "displayText": "701",
+      "reason": "Distribution costs $412M, net income $48M"
+    },
+    "densityLevel": "focused"
+  }
+}

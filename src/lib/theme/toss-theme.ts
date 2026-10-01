@@ -162,8 +162,8 @@ export const typography = {
     messageSubtitleWeight: "700",
 
     // 축 레이블
-    axisLabel: "18px",
-    axisLabelWeight: "600",
+    axisLabel: "20px",
+    axisLabelWeight: "700",
 
     // 데이터 수치 (포인트 라벨, 뱃지)
     dataValue: "22px",

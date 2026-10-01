@@ -287,7 +287,12 @@ export default function ChartWrapper({
         </div>
       )}
 
-      {!isCompactExportCard && <Watermark color={colors.textTertiary} />}
+      {!isCompactExportCard && (
+        <Watermark
+          color={colors.textTertiary}
+          text={analysis.exportOptions?.watermarkText}
+        />
+      )}
     </div>
   );
 }

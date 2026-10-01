@@ -1,0 +1,284 @@
+{
+  "id": "04-sk-package-tech",
+  "sourceImage": "input/16-sk-package-tech.png",
+  "analyzedAt": "2026-08-25T15:10:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "HBM PACKAGE TECHNOLOGIES",
+    "originalMessage": "TC+NCF and MR+MUF packaging process, pros and cons",
+    "sourceKey": "@wltechrsrch/hot-chips-hbm-package-technologies",
+    "preservedElements": [
+      "TC+NCF (Thermo-compression + Non-Conductive Film)",
+      "MR+MUF (Mass Reflow + Molded Underfill)",
+      "Process wording for both methods",
+      "Pros and cons for both methods",
+      "NCF · EMC · Flux · MUF labels shown in the diagram",
+      "SK hynix source slide order"
+    ],
+    "changedElements": [
+      "Recomposed the two source process cards as an editable comparison table",
+      "Kept the original technical terms while simplifying the reading path",
+      "Applied Paperlogy title 900, subtitle 300, and a light palette"
+    ],
+    "dataFidelity": "exact",
+    "notes": "All printed process, pros, cons, and diagram labels are retained. The table layout is the requested editable comparison format; no numeric data is present.",
+    "sourceAttribution": "SK hynix source slide; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Built a three-row process/pros/cons comparison table while preserving the source order and all items."
+    },
+    {
+      "id": "source-text-completeness",
+      "label": "Source text completeness",
+      "status": "pass",
+      "detail": "Checked the TC+NCF and MR+MUF process/pros/cons text and the NCF, EMC, Flux, and MUF diagram labels."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data, order, and color parity",
+      "status": "pass",
+      "detail": "KO/EN files use the same column order, row order, sourceKey, and highlight colors."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Set canvasHeight 540, title weight 900, and subtitle weight 300."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask is JSON authoring only; export/preflight is reserved for the parent agent."
+    }
+  ],
+  "structure": {
+    "title": "HBM Package Technologies",
+    "subtitle": "TC+NCF vs. MR+MUF: process, advantages, and limitations",
+    "source": "SK hynix · HBM Package Technologies"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 30,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "numberLocale": "en",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "11px 24px 0",
+    "contentPadding": "0 14px 0",
+    "sourcePadding": "0 24px 6px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "item",
+        "label": "Item",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "tc_ncf",
+        "label": "TC+NCF\nThermo-compression + NCF",
+        "dataType": "text",
+        "width": "41%",
+        "align": "left"
+      },
+      {
+        "key": "mr_muf",
+        "label": "MR+MUF\nMass Reflow + MUF",
+        "dataType": "text",
+        "width": "41%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "item": {
+            "value": "PROCESS",
+            "displayValue": "Process"
+          },
+          "tc_ncf": {
+            "value": "Thermo-compression bonding with NCF\nDiagram labels: NCF · EMC",
+            "displayValue": "Thermo-compression bonding with NCF\nDiagram labels: NCF · EMC"
+          },
+          "mr_muf": {
+            "value": "Mass Reflow + Molded underfill (MUF)\nDiagram labels: Flux · MUF",
+            "displayValue": "Mass Reflow + Molded underfill (MUF)\nDiagram labels: Flux · MUF"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "cells": {
+          "item": {
+            "value": "PROS",
+            "displayValue": "Pros",
+            "highlight": "positive"
+          },
+          "tc_ncf": {
+            "value": "Less sensitive to Thin Die Warpage",
+            "displayValue": "Less sensitive to Thin Die Warpage",
+            "highlight": "positive"
+          },
+          "mr_muf": {
+            "value": "High Productivity\nLow thermal resistivity",
+            "displayValue": "High Productivity\nLow thermal resistivity",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "highlight": true,
+        "cells": {
+          "item": {
+            "value": "CONS",
+            "displayValue": "Cons",
+            "highlight": "negative"
+          },
+          "tc_ncf": {
+            "value": "Low productivity (each die bonding)\nHigh thermal resistivity",
+            "displayValue": "Low productivity (each die bonding)\nHigh thermal resistivity",
+            "highlight": "negative"
+          },
+          "mr_muf": {
+            "value": "Sensitivity to Chip Warpage\nNarrow Gap Fill",
+            "displayValue": "Sensitivity to Chip Warpage\nNarrow Gap Fill",
+            "highlight": "negative"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 86,
+      "fitRowsToCanvas": false,
+      "minRowHeight": 86,
+      "maxRowHeight": 86,
+      "cellPadding": "6px 9px",
+      "lineHeight": 1.04,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 600,
+        "rowHeader": 800,
+        "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "15px",
+        "total": "15px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "HBM Package Technologies",
+    "subMessage": "TC+NCF is less sensitive to warpage; MR+MUF favors productivity and thermal resistance.",
+    "headline": "HBM Package Technologies",
+    "summary": "The two methods use different bonding flows. The source pros and cons are shown side by side.",
+    "story": "TC+NCF is less sensitive to thin-die warpage, but bonding each die lowers productivity and raises thermal resistance. MR+MUF offers high productivity and low thermal resistivity, but is more sensitive to chip warpage and narrow gap fill.",
+    "keyTakeaways": [
+      "TC+NCF: less sensitive to thin-die warpage",
+      "MR+MUF: high productivity and low thermal resistivity",
+      "MR+MUF challenges: chip warpage sensitivity and narrow gap fill"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the two methods row by row across process, pros, and cons.",
+    "contextualNotes": [
+      "Source diagram labels: NCF, EMC, Flux, MUF",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This is a process comparison table, not a time series.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "No quantitative time series is present."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 0, "at": "" },
+      "min": { "value": 0, "at": "" },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#667085", "#98A2B3"],
+      "positive": "#175CD3",
+      "negative": "#D92D20",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "MR+MUF", "y": 0 },
+      "reason": "Compare both package flows and their trade-offs in the same rows.",
+      "displayText": "PROCESS · PROS · CONS"
+    },
+    "densityLevel": "detailed"
+  }
+}

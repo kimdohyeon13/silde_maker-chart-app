@@ -1,0 +1,225 @@
+{
+  "id": "01-token-price-index",
+  "sourceImage": "input/01-token-price-index.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Silicon Data, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "시장이 실제로 낸 토큰 100만 개당 값",
+    "subtitle": "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다",
+    "source": "자료: Silicon Data, 2026년 8월",
+    "timeRange": "2025년 12월~2026년 8월",
+    "xAxis": {
+      "label": "시점",
+      "type": "category",
+      "tickValues": [
+        "2025년 12월",
+        "2026년 5월",
+        "2026년 8월 16일"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "토큰 지출 단가 지수 (100만 토큰당 달러)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "토큰 지출 단가 지수 (100만 토큰당 달러)",
+        "data": [
+          {
+            "x": "2025년 12월",
+            "y": 1.02,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "2026년 5월",
+            "y": 2.06,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "2026년 8월 16일",
+            "y": 1.02,
+            "confidence": 0.74,
+            "color": "#0F4C81"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.761,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 0.0,
+        "absoluteChange": 0.0,
+        "from": 1.02,
+        "to": 1.02
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 2.06,
+        "at": ""
+      },
+      "min": {
+        "value": 1.02,
+        "at": ""
+      },
+      "average": 1.3666666666666667,
+      "median": 1.02,
+      "range": 1.04
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "시장이 실제로 낸 토큰 100만 개당 값",
+    "subMessage": "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다",
+    "headline": "시장이 실제로 낸 토큰 100만 개당 값",
+    "summary": "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Silicon Data, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 1.02
+      },
+      "displayText": "시장이 실제로 낸 토큰 100",
+      "reason": "여덟 달 동안 두 배가 됐다가 다시 출발점으로 돌아왔다"
+    },
+    "densityLevel": "balanced"
+  }
+}

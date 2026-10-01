@@ -1,0 +1,194 @@
+{
+  "id": "04-lumentum-peer-per",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "원문에 적힌 CY27 PER만 비교했다. EPS는 본문에 보존하되 다른 단위라 같은 축에 섞지 않았다.",
+    "sourceAttribution": "자료: 사용자 제공 원문의 CY27 추정치",
+    "sourceKey": "04-lumentum-peer-per"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@wtm_waltechman"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "루멘텀·비아비 CY27 PER 비교",
+    "subtitle": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인",
+    "source": "자료: 사용자 제공 원문의 CY27 추정치",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "lite",
+        "viav"
+      ],
+      "displayTickValues": [
+        "루멘텀 LITE",
+        "비아비 VIAV"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "unit": "x",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 32
+    },
+    "legend": [
+      {
+        "name": "CY27 PER",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CY27 PER",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "lite",
+            "y": 28.0,
+            "confidence": 1.0,
+            "displayLabel": "28.0x"
+          },
+          {
+            "x": "viav",
+            "y": 19.5,
+            "confidence": 1.0,
+            "displayLabel": "19.5x"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "루멘텀·비아비 CY27 PER 비교",
+    "subMessage": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인",
+    "headline": "루멘텀·비아비 CY27 PER 비교",
+    "summary": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "루멘텀 28.0배, 비아비 19.5배로 광학 기술 프리미엄 확인"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

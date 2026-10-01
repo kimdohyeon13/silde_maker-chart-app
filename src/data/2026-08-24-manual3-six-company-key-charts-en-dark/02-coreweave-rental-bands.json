@@ -1,0 +1,234 @@
+{
+  "id": "02-coreweave-rental-bands",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Market ranges cited in the source, not the CoreWeave-HRT contract price",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Hudson River Trading 계약 금액과 용량은 미공개다. 이 그래프는 계약가격이 아니라 원문 내 시장 임대가격 구간이다.",
+    "sourceAttribution": "Source: AI compute rental bands cited in the provided source",
+    "sourceKey": "02-coreweave-rental-bands"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": false,
+    "showDirectLabels": false,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@WorldTechRsrch",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "AI compute rental bands per GW",
+    "subtitle": "Market ranges cited in the source, not the CoreWeave-HRT contract price",
+    "source": "Source: AI compute rental bands cited in the provided source",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "g2",
+        "g3l",
+        "g3h",
+        "ltl",
+        "lth",
+        "spl",
+        "sph"
+      ],
+      "displayTickValues": [
+        "GB200",
+        "GB300 L",
+        "GB300 H",
+        "LT L",
+        "LT H",
+        "Spot L",
+        "Spot H"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Annual rental revenue ($B per GW)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 55
+    },
+    "legend": [
+      {
+        "name": "Annual rental price",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Annual rental price",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "g2",
+            "y": 10,
+            "confidence": 1.0,
+            "displayLabel": "$10B"
+          },
+          {
+            "x": "g3l",
+            "y": 12,
+            "confidence": 1.0,
+            "displayLabel": "$12B"
+          },
+          {
+            "x": "g3h",
+            "y": 13,
+            "confidence": 1.0,
+            "displayLabel": "$13B"
+          },
+          {
+            "x": "ltl",
+            "y": 20,
+            "confidence": 1.0,
+            "displayLabel": "$20B"
+          },
+          {
+            "x": "lth",
+            "y": 25,
+            "confidence": 1.0,
+            "displayLabel": "$25B"
+          },
+          {
+            "x": "spl",
+            "y": 40,
+            "confidence": 1.0,
+            "displayLabel": "$40B"
+          },
+          {
+            "x": "sph",
+            "y": 50,
+            "confidence": 1.0,
+            "displayLabel": "$50B"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "Market ranges cited in the source, not the CoreWeave-HRT contract price",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI compute rental bands per GW",
+    "subMessage": "Market ranges cited in the source, not the CoreWeave-HRT contract price",
+    "headline": "AI compute rental bands per GW",
+    "summary": "Market ranges cited in the source, not the CoreWeave-HRT contract price",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Market ranges cited in the source, not the CoreWeave-HRT contract price"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

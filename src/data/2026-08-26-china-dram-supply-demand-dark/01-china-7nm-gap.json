@@ -1,0 +1,462 @@
+{
+  "id": "01-china-7nm-gap",
+  "mode": "faithful",
+  "sourceImage": "input/01-china-7nm-gap.png",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 5: China 7nm and below supply vs demand",
+    "preservedElements": [
+      "clustered vertical bar chart",
+      "2023-2035E year axis",
+      "Demand and Supply series",
+      "k wpm; 12-inch unit",
+      "source and annotations"
+    ],
+    "changedElements": [
+      "translated title and annotations into Korean",
+      "normalized Paperlogy typography and spacing",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "중간 연도 값은 원본 crop의 막대 높이와 100 단위 눈금을 기준으로 읽은 source-visible 근사값입니다. 원본에서 숫자로 직접 보이는 2025 수요 127, 공급 10, 2035E 수요 619, 공급 410은 그대로 보존했습니다.",
+    "sourceAttribution": "출처: 기업 자료, Goldman Sachs Global Investment Research"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-title-preserved",
+      "label": "원본 제목 보존",
+      "status": "pass",
+      "detail": "Exhibit 5 제목의 의미와 7nm 이하 공급·수요 비교를 보존했습니다."
+    },
+    {
+      "id": "series-count-preserved",
+      "label": "시리즈 수 일치",
+      "status": "pass",
+      "detail": "원본의 Demand와 Supply 두 계열을 모두 유지했습니다."
+    },
+    {
+      "id": "source-visible-data",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "중간 연도는 source-visible 근사값이며 직접 표기된 네 핵심값을 정확히 유지했습니다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 완전 보존",
+      "status": "pass",
+      "detail": "Company data, Goldman Sachs Global Investment Research를 유지했습니다."
+    },
+    {
+      "id": "x-axis-preserved",
+      "label": "X축 라벨 원본 일치",
+      "status": "pass",
+      "detail": "2023부터 2035E까지 모든 연도 라벨을 유지했습니다."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 캔버스",
+      "status": "pass",
+      "detail": "canvasHeight 540으로 1,920×1,080 출력을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "showDirectLabels": false,
+    "numberLocale": "en",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "도표 5: 중국 7nm 이하 공급과 수요",
+    "subtitle": "2025 수요 127·공급 10 → 2035E 수요 619·공급 410",
+    "source": "출처: 기업 자료, Goldman Sachs Global Investment Research",
+    "timeRange": "2023-2035E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E",
+        "2029E",
+        "2030E",
+        "2031E",
+        "2032E",
+        "2033E",
+        "2034E",
+        "2035E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2023",
+        "2025",
+        "2027E",
+        "2029E",
+        "2031E",
+        "2033E",
+        "2035E"
+      ]
+    },
+    "yAxis": {
+      "label": "천 장/월, 12인치 웨이퍼",
+      "type": "value",
+      "tickValues": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 700
+    },
+    "legend": [
+      {
+        "name": "수요",
+        "role": "primary",
+        "originalColor": "#173B63",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "공급",
+        "role": "secondary",
+        "originalColor": "#A8C9E8",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "수요",
+        "data": [
+          {
+            "x": "2023",
+            "y": 80,
+            "confidence": 0.68
+          },
+          {
+            "x": "2024",
+            "y": 105,
+            "confidence": 0.68
+          },
+          {
+            "x": "2025",
+            "y": 127,
+            "confidence": 1
+          },
+          {
+            "x": "2026E",
+            "y": 158,
+            "confidence": 0.68
+          },
+          {
+            "x": "2027E",
+            "y": 195,
+            "confidence": 0.68
+          },
+          {
+            "x": "2028E",
+            "y": 250,
+            "confidence": 0.68
+          },
+          {
+            "x": "2029E",
+            "y": 300,
+            "confidence": 0.68
+          },
+          {
+            "x": "2030E",
+            "y": 355,
+            "confidence": 0.68
+          },
+          {
+            "x": "2031E",
+            "y": 405,
+            "confidence": 0.68
+          },
+          {
+            "x": "2032E",
+            "y": 460,
+            "confidence": 0.68
+          },
+          {
+            "x": "2033E",
+            "y": 510,
+            "confidence": 0.68
+          },
+          {
+            "x": "2034E",
+            "y": 565,
+            "confidence": 0.68
+          },
+          {
+            "x": "2035E",
+            "y": 619,
+            "confidence": 1
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "공급",
+        "data": [
+          {
+            "x": "2023",
+            "y": 0,
+            "confidence": 0.55
+          },
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.55
+          },
+          {
+            "x": "2025",
+            "y": 10,
+            "confidence": 1
+          },
+          {
+            "x": "2026E",
+            "y": 20,
+            "confidence": 0.55
+          },
+          {
+            "x": "2027E",
+            "y": 40,
+            "confidence": 0.55
+          },
+          {
+            "x": "2028E",
+            "y": 80,
+            "confidence": 0.55
+          },
+          {
+            "x": "2029E",
+            "y": 120,
+            "confidence": 0.55
+          },
+          {
+            "x": "2030E",
+            "y": 170,
+            "confidence": 0.55
+          },
+          {
+            "x": "2031E",
+            "y": 210,
+            "confidence": 0.55
+          },
+          {
+            "x": "2032E",
+            "y": 250,
+            "confidence": 0.55
+          },
+          {
+            "x": "2033E",
+            "y": 300,
+            "confidence": 0.55
+          },
+          {
+            "x": "2034E",
+            "y": 350,
+            "confidence": 0.55
+          },
+          {
+            "x": "2035E",
+            "y": 410,
+            "confidence": 1
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 26,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "중간 연도 막대는 원본 화면에서 읽은 source-visible 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "narrative": {
+    "headMessage": "도표 5: 중국 7nm 이하 공급과 수요",
+    "subMessage": "공급 부족률 92%→34% · 2026~2035년 설비투자 US$124bn",
+    "headline": "도표 5: 중국 7nm 이하 공급과 수요",
+    "summary": "중국 7nm 이하 공급과 수요의 격차가 2025년 92%에서 2035E 34%로 줄어드는 전망입니다.",
+    "story": "원본의 막대 구조와 수요·공급 계열을 유지했습니다.",
+    "keyTakeaways": [
+      "2025년 수요 127, 공급 10",
+      "2035E년 수요 619, 공급 410",
+      "2026-35E 공급 확대를 위한 설비투자 US$124bn"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "수요와 공급 막대의 격차 변화를 비교합니다.",
+    "contextualNotes": [
+      "공급 부족률: 2025년 92% → 2035E 34%",
+      "2035E 공급 달성에 필요한 2026~2035년 설비투자 US$124bn",
+      "출처: 기업 자료, Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "text": "공급 부족률: 2025년 92% → 2035E 34%",
+        "position": {
+          "x": "2028E",
+          "y": 600
+        },
+        "importance": "critical",
+        "style": "neutral"
+      },
+      {
+        "text": "2026-35E 설비투자 US$124bn",
+        "position": {
+          "x": "2028E",
+          "y": 430
+        },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "127",
+        "position": {
+          "x": "2025",
+          "y": 127
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "10",
+        "position": {
+          "x": "2025",
+          "y": 10
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "619",
+        "position": {
+          "x": "2035E",
+          "y": 619
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "410",
+        "position": {
+          "x": "2035E",
+          "y": 410
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2035E",
+        "y": 619
+      },
+      "displayText": "2035E demand 619 vs supply 410",
+      "reason": "공급·수요 격차 축소 전망"
+    },
+    "densityLevel": "balanced"
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "2035E까지 수요와 공급이 모두 늘지만 수요가 계속 더 높습니다.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "중간 연도 막대는 화면에서 읽은 근사값입니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 619,
+        "at": "2035E demand"
+      },
+      "min": {
+        "value": 0,
+        "at": "2023 supply"
+      },
+      "average": 243.23,
+      "median": 202.5,
+      "range": 619
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  }
+}

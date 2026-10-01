@@ -1,0 +1,334 @@
+{
+  "id": "07-unified-architecture",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "infographic",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Unified architecture for changing inference workloads",
+    "preservedElements": [
+      "Prefill은 연산 집약적이라는 점",
+      "Decode는 메모리 대역폭에 제한된다는 점",
+      "KV cache를 로컬에 두고 유지한다는 점",
+      "연산·메모리·네트워크를 통합 설계한다는 점",
+      "워크로드 균형이 계속 변한다는 점"
+    ],
+    "changedElements": [
+      "기술 문장을 쉬운 비교표로 재구성",
+      "각 개념을 의미·Jalapeño 설계 두 열로 나눔",
+      "숫자 없이 구조와 관계만 남김",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "OpenAI 첫 성능 결과의 아키텍처 설명만 사용했습니다. 수치나 별도 성능 배수는 추가하지 않았습니다.",
+    "sourceAttribution": "OpenAI · Jalapeño first results · 2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "5개 개념을 한 표에 배치하고, 각 행을 ‘무엇이 병목인가’와 ‘Jalapeño의 선택’으로 읽게 했습니다."
+    },
+    {
+      "id": "exact-official-qualitative-claims",
+      "label": "공식 질적 설명 보존",
+      "status": "pass",
+      "detail": "연산 집약적 prefill, 메모리 대역폭 제한 decode, 로컬 KV cache, 통합 설계, 변화하는 워크로드 균형을 공식 설명에서 그대로 옮겼습니다."
+    },
+    {
+      "id": "no-numeric-claims",
+      "label": "숫자 주장 없음",
+      "status": "pass",
+      "detail": "표 본문에는 성능 수치나 배수를 추가하지 않았습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 행·열 순서 동일",
+      "status": "pass",
+      "detail": "KO/EN의 5개 행, 열 구조, 핵심 관계를 동일하게 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "title": "Jalapeño의 통합 추론 구조",
+    "subtitle": "입력 처리·출력 생성·캐시·네트워크를 하나의 흐름으로 이해하기",
+    "source": "출처: OpenAI, Jalapeño first results (2026-08-25)"
+  },
+  "infographicData": {
+    "subType": "comparison_card",
+    "comparisonAttributes": [
+      "Prefill",
+      "Decode",
+      "KV cache",
+      "운영 방식"
+    ],
+    "items": [
+      {
+        "name": "어디가 막히나",
+        "attributes": {
+          "Prefill": {
+            "value": "연산",
+            "displayValue": "연산 집약"
+          },
+          "Decode": {
+            "value": "메모리",
+            "displayValue": "메모리 대역폭"
+          },
+          "KV cache": {
+            "value": "이동",
+            "displayValue": "상태 이동"
+          },
+          "운영 방식": {
+            "value": "변화",
+            "displayValue": "작업 비율 변화"
+          }
+        }
+      },
+      {
+        "name": "Jalapeño의 선택",
+        "attributes": {
+          "Prefill": {
+            "value": "통합",
+            "displayValue": "같은 칩 풀",
+            "highlight": "positive"
+          },
+          "Decode": {
+            "value": "통합",
+            "displayValue": "같은 칩 풀",
+            "highlight": "positive"
+          },
+          "KV cache": {
+            "value": "로컬",
+            "displayValue": "가까이에 유지",
+            "highlight": "positive"
+          },
+          "운영 방식": {
+            "value": "유연",
+            "displayValue": "고정 분할 없음",
+            "highlight": "positive"
+          }
+        },
+        "isWinner": true
+      }
+    ]
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "concept",
+        "label": "개념",
+        "dataType": "text",
+        "width": "24%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "meaning",
+        "label": "쉽게 말하면",
+        "dataType": "text",
+        "width": "33%",
+        "align": "left"
+      },
+      {
+        "key": "choice",
+        "label": "Jalapeño의 설계",
+        "dataType": "text",
+        "width": "43%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": {
+            "value": "Prefill",
+            "displayValue": "Prefill",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "입력을 한 번에 계산하는 단계",
+            "displayValue": "입력을 한 번에 계산하는 단계"
+          },
+          "choice": {
+            "value": "연산 집약적 작업으로 봅니다.",
+            "displayValue": "연산 집약적 작업으로 봅니다."
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": {
+            "value": "Decode",
+            "displayValue": "Decode",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "응답을 한 토큰씩 만들어 내는 단계",
+            "displayValue": "응답을 한 토큰씩 만들어 내는 단계"
+          },
+          "choice": {
+            "value": "메모리 대역폭이 중요한 작업으로 봅니다.",
+            "displayValue": "메모리 대역폭이 중요한 작업으로 봅니다."
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": {
+            "value": "KV cache",
+            "displayValue": "KV cache",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "응답을 만들 때 쓰는 모델 상태를 저장한 것",
+            "displayValue": "응답을 만들 때 쓰는 모델 상태를 저장한 것"
+          },
+          "choice": {
+            "value": "데이터 이동을 줄이도록 가까이에 두고 로컬로 유지합니다.",
+            "displayValue": "데이터 이동을 줄이도록 가까이에 두고 로컬로 유지합니다."
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": {
+            "value": "통합 운영",
+            "displayValue": "통합 운영",
+            "highlight": "accent"
+          },
+          "meaning": {
+            "value": "입력·캐시·출력의 비율은 계속 달라집니다.",
+            "displayValue": "입력·캐시·출력의 비율은 계속 달라집니다."
+          },
+          "choice": {
+            "value": "연산·메모리·네트워크를 함께 설계하고 전용 풀로 고정하지 않습니다.",
+            "displayValue": "연산·메모리·네트워크를 함께 설계하고 전용 풀로 고정하지 않습니다."
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 29,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 28,
+      "maxRowHeight": 42,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "12px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Jalapeño는 칩·메모리·네트워크를 한 흐름으로 봅니다",
+    "subMessage": "Prefill과 Decode를 고정된 별도 풀로 나누지 않고, 변화하는 작업을 함께 처리합니다.",
+    "headline": "핵심은 더 많은 부품이 아니라 데이터 이동을 줄이는 통합입니다.",
+    "summary": "연산과 메모리의 병목이 다르다는 점을 인정하되, KV cache와 네트워크를 가까이 두는 구조를 택합니다.",
+    "story": "쉽게 말하면 입력을 계산하는 일, 토큰을 출력하는 일, 캐시를 읽는 일을 하나의 시스템 흐름으로 연결한 설계입니다.",
+    "keyTakeaways": [
+      "Prefill은 연산, Decode는 메모리 대역폭이 핵심입니다.",
+      "KV cache는 가까이에 두고, 작업 비율은 미리 고정하지 않습니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "연산·메모리·네트워크 통합",
+      "reason": "Jalapeño 아키텍처를 한 문장으로 이해하는 중심 개념"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "fitRowsToCanvas": true,
+    "minRowHeight": 29,
+    "maxRowHeight": 48,
+    "numberLocale": "ko",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  }
+}

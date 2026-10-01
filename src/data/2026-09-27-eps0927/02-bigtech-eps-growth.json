@@ -1,0 +1,265 @@
+{
+  "id": "bigtech-eps-growth",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "이익 성장 전망, 알파벳·아마존만 마이너스",
+    "preservedElements": [
+      "요청서 숫자·순서·라벨 표기"
+    ],
+    "changedElements": [],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: InvestingPro 평균 EPS 컨센서스 · 2026년 9월 23일 장중 주가"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "요청서 값 그대로",
+      "status": "pass",
+      "detail": "요청서에 적힌 숫자와 라벨 표기를 그대로 썼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "이익 성장 전망, 알파벳·아마존만 마이너스",
+    "subtitle": "단위: % · 알파벳은 A주",
+    "source": "자료: InvestingPro 평균 EPS 컨센서스 · 2026년 9월 23일 장중 주가",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "NVDA",
+        "TSLA",
+        "MSFT",
+        "META",
+        "AAPL",
+        "AMZN",
+        "GOOGL"
+      ],
+      "displayTickValues": [
+        "엔비디아",
+        "테슬라",
+        "마이크로소프트",
+        "메타",
+        "애플",
+        "아마존",
+        "알파벳"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "NVDA",
+        "TSLA",
+        "MSFT",
+        "META",
+        "AAPL",
+        "AMZN",
+        "GOOGL"
+      ],
+      "displayTickValues": [
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "엔비디아",
+        "테슬라",
+        "마이크로소프트",
+        "메타",
+        "애플",
+        "아마존",
+        "알파벳"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -40,
+      "max": 80
+    },
+    "legend": [
+      {
+        "name": "EPS 성장률 전망",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "EPS 성장률 전망",
+        "data": [
+          {
+            "x": "NVDA",
+            "y": 68.4,
+            "displayLabel": "68.4",
+            "color": "#087A68"
+          },
+          {
+            "x": "TSLA",
+            "y": 23.6,
+            "displayLabel": "23.6",
+            "color": "#087A68"
+          },
+          {
+            "x": "MSFT",
+            "y": 19.8,
+            "displayLabel": "19.8",
+            "color": "#087A68"
+          },
+          {
+            "x": "META",
+            "y": 12.1,
+            "displayLabel": "12.1",
+            "color": "#087A68"
+          },
+          {
+            "x": "AAPL",
+            "y": 8.6,
+            "displayLabel": "8.6",
+            "color": "#087A68"
+          },
+          {
+            "x": "AMZN",
+            "y": -19.3,
+            "displayLabel": "-19.3",
+            "color": "#175CD3"
+          },
+          {
+            "x": "GOOGL",
+            "y": -27.8,
+            "displayLabel": "-27.8",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "두 회계연도 평균 EPS 예상치 비교",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 68.4,
+        "at": "NVDA"
+      },
+      "min": {
+        "value": -27.8,
+        "at": "GOOGL"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "이익 성장 전망, 알파벳·아마존만 마이너스",
+    "subMessage": "두 회계연도 평균 EPS 예상치 비교",
+    "headline": "이익 성장 전망, 알파벳·아마존만 마이너스",
+    "summary": "두 회계연도 평균 EPS 예상치 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "NVDA",
+        "y": 68.4
+      },
+      "displayText": "68.4",
+      "reason": "두 회계연도 평균 EPS 예상치 비교"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "id": "lighthouse-factory",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "불량과 리드타임은 절반 아래로 줄고 설비 효율은 올랐습니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: World Economic Forum, Global Lighthouse Network (2026-01, 2026-06)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 4개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "세계경제포럼 등대공장 네 곳의 개선 폭",
+    "subtitle": "불량과 리드타임은 절반 아래로 줄고 설비 효율은 올랐습니다",
+    "source": "자료: World Economic Forum, Global Lighthouse Network (2026-01, 2026-06)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "-120",
+        "-90",
+        "-60",
+        "-30",
+        "0",
+        "30",
+        "60"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "개선 폭",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "개선 폭",
+        "data": [
+          {
+            "x": "포레시아 · 고객 클레임",
+            "y": -94,
+            "confidence": 0.95,
+            "displayLabel": "-94%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "유니레버 · 리드타임",
+            "y": -75,
+            "confidence": 0.95,
+            "displayLabel": "-75%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "EVE에너지 · 불량률",
+            "y": -52,
+            "confidence": 0.95,
+            "displayLabel": "-52%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "아람코 · 설비종합효율",
+            "y": 44,
+            "confidence": 0.95,
+            "displayLabel": "+44%",
+            "color": "#D92D20"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 44,
+        "at": ""
+      },
+      "min": {
+        "value": -94,
+        "at": ""
+      },
+      "average": -44.25,
+      "median": -52,
+      "range": 138
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "세계경제포럼 등대공장 네 곳의 개선 폭",
+    "subMessage": "불량과 리드타임은 절반 아래로 줄고 설비 효율은 올랐습니다",
+    "headline": "세계경제포럼 등대공장 네 곳의 개선 폭",
+    "summary": "불량과 리드타임은 절반 아래로 줄고 설비 효율은 올랐습니다",
+    "story": "불량과 리드타임은 절반 아래로 줄고 설비 효율은 올랐습니다",
+    "keyTakeaways": [
+      "설비종합효율은 설비가 제 성능을 낸 비율입니다.",
+      "네 곳 모두 사용 사례를 40개 이상 붙였습니다.",
+      "성공한 전환의 94%가 기술 두 가지 이상을 함께 썼습니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "설비종합효율은 설비가 제 성능을 낸 비율입니다.",
+    "contextualNotes": [
+      "자료: World Economic Forum, Global Lighthouse Network (2026-01, 2026-06)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -35,6 +35,7 @@ import {
   Area,
   ComposedChart,
   Legend,
+  type LabelProps,
 } from "recharts";
 import type { ChartAnalysis, ExportOptions } from "@/lib/analysis/schema";
 import {
@@ -45,6 +46,11 @@ import {
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
+import {
+  Y_AXIS_TITLE_TOP_SPACE,
+  resolveEdgeTickAnchor,
+  resolveYAxisWidth,
+} from "@/lib/axis-label-layout";
 import {
   resolveDirectLabelFractionDigits,
   resolveDirectLabelVisibility,
@@ -98,6 +104,10 @@ const BAND_KEYWORDS = ["밴드", "band"];
 
 /** 시리즈의 성격(normal/forecast/band) */
 type SeriesKind = "band" | "forecast" | "normal";
+const DAILY_MOVE_LABEL_FONT_SIZE = 20.5;
+const DAILY_MOVE_BADGE_FONT_SIZE = 13.5;
+const DAILY_MOVE_TWO_COLUMN_LABEL_FONT_SIZE = 9;
+const DAILY_MOVE_TWO_COLUMN_VALUE_FONT_SIZE = 18;
 
 /**
  * 이름만으로 시리즈 성격을 추정 (seriesKind 명시 필드가 없을 때의 폴백)
@@ -300,6 +310,24 @@ export default function TossLineChart({
     );
 
     return `${compactName} ${formatValueWithUnit(value, inlineUnit, valueDigits)}`;
+  }
+
+  function estimateDirectLabelWidth(
+    value: string,
+    fontSize = chartSettings.directLabels.fontSize,
+  ): number {
+    // 이 값 하나가 인라인 등락 배지의 x 좌표를 정한다(유일한 호출처). 라틴을
+    // 전부 0.56em 으로 잡으면 굵기 900 의 `m`·`w` 가 들어간 라벨에서 실제 폭이
+    // 추정보다 넓어져 배지가 글자 위로 올라온다 — `Amazon 98.4` 가 그렇게 깨졌다.
+    // 같은 글자 수라도 `Apple 102.4` 는 멀쩡한 이유가 여기 있다.
+    return Array.from(value).reduce((width, character) => {
+      if (/\p{Script=Hangul}/u.test(character)) return width + fontSize * 0.94;
+      if (character === " ") return width + fontSize * 0.34;
+      if (/[ilIjtf.,:\u00b7'`]/.test(character)) return width + fontSize * 0.34;
+      if (/[mwMW&@]/.test(character)) return width + fontSize * 0.90;
+      if (/[A-Z0-9]/.test(character)) return width + fontSize * 0.62;
+      return width + fontSize * 0.60;
+    }, 0);
   }
 
   // ─────────────────────────────────────────────
@@ -934,6 +962,89 @@ export default function TossLineChart({
     return xAxisDisplayLabelByKey.get(key) ?? formatAxisTickLabel(key);
   }
 
+  // ─────────────────────────────────────────────
+  // 축 라벨 자리 — 눈금 길이에 맞춘 Y축 폭
+  // ─────────────────────────────────────────────
+  // 고정 폭을 쓰면 "110" 같은 짧은 눈금에서 40px 넘게 놀고,
+  // "1,972 B" 같은 긴 눈금은 잘린다. 실제로 그릴 문자열로 폭을 정한다.
+  function formatLeftYAxisTick(value: number | string): string {
+    const yAxis = analysis.structure.yAxis;
+    const tickUnit = getTickUnit(yAxis.unit || "", yAxis.label || "");
+    return formatValueWithUnit(
+      Number(value),
+      tickUnit,
+      getAxisFractionDigits(yAxis.min, yAxis.max, effectiveYAxisTicks),
+    );
+  }
+
+  function formatRightYAxisTick(value: number | string): string {
+    const secondary = analysis.structure.secondaryYAxis;
+    if (!secondary) return String(value);
+    const tickUnit = getTickUnit(secondary.unit || "", secondary.label || "");
+    return formatValueWithUnit(
+      Number(value),
+      tickUnit,
+      getAxisFractionDigits(secondary.min, secondary.max, effectiveSecondaryYAxisTicks),
+    );
+  }
+
+  const axisTickFontSize =
+    typeof styles.yAxis.tick === "object" && styles.yAxis.tick
+      ? Number((styles.yAxis.tick as { fontSize?: number }).fontSize) ||
+        Number.parseInt(theme.typography.fontSize.axisLabel, 10)
+      : Number.parseInt(theme.typography.fontSize.axisLabel, 10);
+
+  const resolvedYAxisWidth = resolveYAxisWidth(
+    effectiveYAxisTicks.map(formatLeftYAxisTick),
+    axisTickFontSize,
+    chartSettings.yAxis.width,
+  );
+
+  const resolvedSecondaryYAxisWidth = resolveYAxisWidth(
+    effectiveSecondaryYAxisTicks.map(formatRightYAxisTick),
+    axisTickFontSize,
+    chartSettings.yAxis.rightWidth,
+  );
+
+  /**
+   * X축 눈금 — 양끝만 안쪽으로 붙인다.
+   * 가운데 정렬을 그대로 두면 첫 라벨이 Y축 마지막 눈금과 겹치고
+   * 마지막 라벨은 plot 밖으로 나간다.
+   */
+  function renderEdgeAwareXTick(props: {
+    x?: string | number;
+    y?: string | number;
+    payload?: { value?: string | number };
+    index?: number;
+    visibleTicksCount?: number;
+  }) {
+    const { payload, index = 0, visibleTicksCount = 0 } = props;
+    const x = Number(props.x) || 0;
+    const y = Number(props.y) || 0;
+    const tickStyle = (typeof styles.xAxis.tick === "object" ? styles.xAxis.tick : {}) as {
+      fill?: string;
+      fontSize?: number;
+      fontFamily?: string;
+      fontWeight?: number;
+    };
+    const anchor = resolveEdgeTickAnchor(index, visibleTicksCount);
+
+    return (
+      <text
+        x={x}
+        y={y}
+        dy={16}
+        textAnchor={anchor}
+        fill={tickStyle.fill}
+        fontFamily={tickStyle.fontFamily}
+        fontSize={tickStyle.fontSize}
+        fontWeight={tickStyle.fontWeight}
+      >
+        {formatXAxisTickLabel(payload?.value ?? "")}
+      </text>
+    );
+  }
+
   function getHighlightZoneLabel(zone: (typeof analysis.emphasis.highlightZones)[number]) {
     const fromIndex = chartData.findIndex((point) => String(point.x) === String(zone.fromX));
     const toIndex = chartData.findIndex((point) => String(point.x) === String(zone.toX));
@@ -990,8 +1101,17 @@ export default function TossLineChart({
     exportOptions.endLabelRightMargin ?? chartSettings.directLabels.extraRightMargin;
   const compactChartMargins = exportOptions.compactChartMargins === true;
 
+  // Y축 제목이 있으면 그 높이를 상단 여백에 반드시 포함한다.
+  // compactChartMargins만 보고 8px로 줄이면 축 제목이 헤더 문장 위로 올라탄다.
+  const hasYAxisTitle = Boolean(
+    formatAxisLabel(analysis.structure.yAxis.label, analysis.structure.yAxis.unit),
+  );
+
   const computedMargin = {
-    top: compactChartMargins ? 8 : chartSettings.margin.top,
+    top: Math.max(
+      compactChartMargins ? 8 : chartSettings.margin.top,
+      hasYAxisTitle ? Y_AXIS_TITLE_TOP_SPACE : 0,
+    ),
     right: compactChartMargins
       ? 48 +
         (showDirectLabels ? endLabelRightMargin : 0) +
@@ -1225,6 +1345,7 @@ export default function TossLineChart({
         {gridMode !== "none" && (
           <CartesianGrid
             {...styles.grid}
+            yAxisId="left"
             strokeDasharray={gridMode === "solid" ? "0" : styles.grid.strokeDasharray}
           />
         )}
@@ -1236,6 +1357,7 @@ export default function TossLineChart({
           interval={xLabelInterval}
           ticks={visibleXTicks}
           tickFormatter={formatXAxisTickLabel}
+          tick={renderEdgeAwareXTick}
           label={
             xAxisLabelText
               ? {
@@ -1254,19 +1376,12 @@ export default function TossLineChart({
         {/* Y축 (좌측) — width로 숫자 잘림 방지 */}
         <YAxis
           yAxisId="left"
-          width={chartSettings.yAxis.width}
+          width={resolvedYAxisWidth}
           {...styles.yAxis}
-          tickFormatter={(value) => {
-            const yAxis = analysis.structure.yAxis;
-            // 눈금 접미사 단위는 화이트리스트/지수형/라벨중복 검사를 통과한 것만 (P0-4)
-            const tickUnit = getTickUnit(yAxis.unit || "", yAxis.label || "");
-            return formatValueWithUnit(
-              Number(value),
-              tickUnit,
-              // [D2] 실제로 그릴 눈금 배열로 자릿수 계산 → 라벨 자릿수가 눈금과 일치
-              getAxisFractionDigits(yAxis.min, yAxis.max, effectiveYAxisTicks),
-            );
-          }}
+          // 눈금 접미사 단위는 화이트리스트/지수형/라벨중복 검사를 통과한 것만 (P0-4)
+          // [D2] 실제로 그릴 눈금 배열로 자릿수 계산 → 라벨 자릿수가 눈금과 일치
+          // 축 폭 계산(resolvedYAxisWidth)과 같은 함수를 써야 폭과 글자가 어긋나지 않는다.
+          tickFormatter={formatLeftYAxisTick}
           // [수정1] 음수 하한 보존: 명시 min이 있어도 데이터 음수 저점까지 내린 yMin을 도메인 하한으로 쓴다.
           //  → yAxis.min이 0이어도 데이터에 음수가 있으면 yMin이 그 음수가 되어 저점이 잘리지 않는다.
           //  → 명시 min/max가 전혀 없으면 "auto"로 두어 기존 동작 유지.
@@ -1297,18 +1412,10 @@ export default function TossLineChart({
           <YAxis
             yAxisId="right"
             orientation="right"
-            width={chartSettings.yAxis.rightWidth}
+            width={resolvedSecondaryYAxisWidth}
             {...styles.yAxis}
-            tickFormatter={(value) => {
-              const secondary = analysis.structure.secondaryYAxis!;
-              const tickUnit = getTickUnit(secondary.unit || "", secondary.label || "");
-              return formatValueWithUnit(
-                Number(value),
-                tickUnit,
-                // [D2] 보조축도 실제로 그릴 눈금 배열로 자릿수 계산
-                getAxisFractionDigits(secondary.min, secondary.max, effectiveSecondaryYAxisTicks),
-              );
-            }}
+            // [D2] 보조축도 실제로 그릴 눈금 배열로 자릿수 계산
+            tickFormatter={formatRightYAxisTick}
             domain={[
               analysis.structure.secondaryYAxis!.min ?? "auto",
               analysis.structure.secondaryYAxis!.max ?? "auto",
@@ -1522,6 +1629,18 @@ export default function TossLineChart({
             // [C2] 좌축 시리즈만 우축 눈금 바깥으로 더 밀고 세로로 더 어긋나게 한다.
             const isLeft = isLeftAxisSeries(item.index);
             const baseDy = directLabelDy.get(item.series.name) ?? 0;
+            const labelDy =
+              baseDy + (isLeft ? Math.sign(baseDy || 1) * dualAxisLeftLabelDyBoost : 0);
+            const directLabel = getDirectSeriesLabel(
+              item.series.name,
+              item.point.y,
+              item.index,
+            );
+            const dailyMove = item.series.dailyMove;
+            const isTwoColumnDailyMove = dailyMove?.layout === "two-column";
+            const directLabelOffset =
+              chartSettings.directLabels.offset +
+              (isLeft ? dualAxisLeftLabelExtraOffset : 0);
             return (
               <ReferenceDot
                 key={`direct-label-${item.series.name}`}
@@ -1532,18 +1651,94 @@ export default function TossLineChart({
                 fill={item.color}
                 stroke={colors.surface}
                 strokeWidth={squareEdges ? 0 : 2.5}
-                label={{
-                  value: getDirectSeriesLabel(item.series.name, item.point.y, item.index),
-                  position: "right",
-                  offset:
-                    chartSettings.directLabels.offset +
-                    (isLeft ? dualAxisLeftLabelExtraOffset : 0),
-                  dy: baseDy + (isLeft ? Math.sign(baseDy || 1) * dualAxisLeftLabelDyBoost : 0),
-                  fill: item.color,
-                  fontSize: chartSettings.directLabels.fontSize,
-                  fontWeight: 900,
-                  fontFamily: theme.typography.fontFamily.sans,
-                }}
+                label={
+                  dailyMove
+                    ? {
+                        content: (props: LabelProps) => {
+                          const viewBox = props.viewBox;
+                          if (!viewBox || !("x" in viewBox)) return <g />;
+                          const labelX = viewBox.x + viewBox.width + directLabelOffset;
+                          const labelY = viewBox.y + viewBox.height / 2 + labelDy;
+                          const badgeX =
+                            labelX +
+                            estimateDirectLabelWidth(directLabel, DAILY_MOVE_LABEL_FONT_SIZE) +
+                            (isTwoColumnDailyMove ? 22 : 20);
+                          const badgeWidth = Math.max(
+                            isTwoColumnDailyMove ? 86 : 58,
+                            dailyMove.value.length * (isTwoColumnDailyMove ? 10 : 7.7) +
+                              (isTwoColumnDailyMove ? 24 : 14),
+                          );
+                          const badgeHeight = isTwoColumnDailyMove ? 38 : 22;
+                          return (
+                            <g
+                              data-direct-daily-move={dailyMove.value}
+                              data-daily-move-layout={dailyMove.layout ?? "inline"}
+                            >
+                              <text
+                                x={labelX}
+                                y={labelY}
+                                dominantBaseline="middle"
+                                fill={item.color}
+                                fontSize={DAILY_MOVE_LABEL_FONT_SIZE}
+                                fontWeight={900}
+                                fontFamily={theme.typography.fontFamily.sans}
+                              >
+                                {directLabel}
+                              </text>
+                              <rect
+                                x={badgeX}
+                                y={labelY - badgeHeight / 2}
+                                width={badgeWidth}
+                                height={badgeHeight}
+                                rx={squareEdges ? 0 : 3}
+                                fill={dailyMove.color ?? "#D92D20"}
+                              />
+                              {isTwoColumnDailyMove && (
+                                <text
+                                  x={badgeX + badgeWidth / 2}
+                                  y={labelY - 7}
+                                  dominantBaseline="middle"
+                                  textAnchor="middle"
+                                  fill="#FFFFFF"
+                                  fontSize={DAILY_MOVE_TWO_COLUMN_LABEL_FONT_SIZE}
+                                  fontWeight={800}
+                                  letterSpacing="0.08em"
+                                  fontFamily={theme.typography.fontFamily.sans}
+                                >
+                                  {dailyMove.label ?? "TODAY"}
+                                </text>
+                              )}
+                              <text
+                                x={badgeX + badgeWidth / 2}
+                                y={labelY + (isTwoColumnDailyMove ? 8 : 0)}
+                                dominantBaseline="middle"
+                                textAnchor="middle"
+                                fill="#FFFFFF"
+                                fontSize={
+                                  isTwoColumnDailyMove
+                                    ? DAILY_MOVE_TWO_COLUMN_VALUE_FONT_SIZE
+                                    : DAILY_MOVE_BADGE_FONT_SIZE
+                                }
+                                fontWeight={900}
+                                fontFamily={theme.typography.fontFamily.sans}
+                              >
+                                {dailyMove.value}
+                              </text>
+                            </g>
+                          );
+                        },
+                      }
+                    : {
+                        value: directLabel,
+                        position: "right",
+                        offset: directLabelOffset,
+                        dy: labelDy,
+                        fill: item.color,
+                        fontSize: chartSettings.directLabels.fontSize * styles.labels.scale,
+                        fontWeight: styles.labels.fontWeight ?? 900,
+                        fontFamily: theme.typography.fontFamily.sans,
+                      }
+                }
               />
             );
           })}

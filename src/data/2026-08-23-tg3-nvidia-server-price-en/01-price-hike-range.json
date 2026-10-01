@@ -1,0 +1,191 @@
+{
+  "id": "01-price-hike-range",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백"
+    ],
+    "notes": "확정 원문이 제시한 인상률 범위 두 값만 그렸습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "accentColor": "#0969DA",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Nvidia AI server prices: the hike range",
+    "subtitle": "Applies to next year's Grace Blackwell 300 and Vera Rubin 200 deliveries",
+    "source": "Source: industry forecast, Aug 2026",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "low",
+        "high"
+      ],
+      "displayTickValues": [
+        "Low end",
+        "High end"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "%",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 20
+    },
+    "legend": [
+      {
+        "name": "Price hike",
+        "role": "primary",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Price hike",
+        "data": [
+          {
+            "x": "low",
+            "y": 15
+          },
+          {
+            "x": "high",
+            "y": 17
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81",
+        "axis": "left"
+      }
+    ],
+    "totalDataPoints": 2
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.5,
+      "description": "확정 원문이 제시한 범위입니다.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.06,
+      "description": "두 값의 폭입니다."
+    },
+    "changeRates": [
+      {
+        "period": "하단 대비 상단",
+        "percentChange": 13.3,
+        "absoluteChange": 2,
+        "from": 15,
+        "to": 17
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 17,
+        "at": ""
+      },
+      "min": {
+        "value": 15,
+        "at": ""
+      },
+      "average": 16,
+      "median": 16,
+      "range": 2
+    }
+  },
+  "patterns": {
+    "seasonality": null,
+    "outliers": [],
+    "cycles": [],
+    "anomalies": []
+  },
+  "narrative": {
+    "headMessage": "Nvidia AI server prices: the hike range",
+    "subMessage": "Applies to next year's Grace Blackwell 300 and Vera Rubin 200 deliveries"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#8B95A1"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#0969DA",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

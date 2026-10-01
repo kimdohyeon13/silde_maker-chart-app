@@ -1,0 +1,543 @@
+{
+  "id": "p38a-msci-semi-pb-roe",
+  "sourceImage": "input/p38_a_msci_semi_pb_roe.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: LSEG, 2026년 8월 14일 기준. '25·'24는 1·2년 전, 라벨 없는 같은 색 점도 과거 시점. 점선은 글로벌 증시 회귀선 y = 0.2174x - 0.8786"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "scatter",
+    "title": "MSCI 반도체 업종 P/B·ROE 궤적 (2024~2026년 8월)",
+    "subtitle": "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다",
+    "source": "자료: LSEG, 2026년 8월 14일 기준. '25·'24는 1·2년 전, 라벨 없는 같은 색 점도 과거 시점. 점선은 글로벌 증시 회귀선 y = 0.2174x - 0.8786",
+    "timeRange": "2024년 8월 ~ 2026년 8월 14일",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 60
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 12
+    },
+    "legend": [
+      {
+        "name": "한국",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "미국",
+        "role": "secondary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "유럽",
+        "role": "secondary",
+        "originalColor": "#6B6D70",
+        "remakeColor": "#6B6D70"
+      },
+      {
+        "name": "대만",
+        "role": "secondary",
+        "originalColor": "#3E7CB1",
+        "remakeColor": "#3E7CB1"
+      },
+      {
+        "name": "일본",
+        "role": "secondary",
+        "originalColor": "#B79A2E",
+        "remakeColor": "#B79A2E"
+      },
+      {
+        "name": "중국",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "국가별 MSCI 반도체 업종 (2년 전 · 1년 전 · 2026년 8월 14일)",
+        "data": [
+          {
+            "x": 7.5,
+            "y": 0.75,
+            "confidence": 0.7,
+            "label": "회귀선 00",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 10.5,
+            "y": 1.4,
+            "confidence": 0.7,
+            "label": "회귀선 01",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 13.5,
+            "y": 2.06,
+            "confidence": 0.7,
+            "label": "회귀선 02",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 16.5,
+            "y": 2.71,
+            "confidence": 0.7,
+            "label": "회귀선 03",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 19.5,
+            "y": 3.36,
+            "confidence": 0.7,
+            "label": "회귀선 04",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 22.5,
+            "y": 4.01,
+            "confidence": 0.7,
+            "label": "회귀선 05",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 25.5,
+            "y": 4.67,
+            "confidence": 0.7,
+            "label": "회귀선 06",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 28.5,
+            "y": 5.32,
+            "confidence": 0.7,
+            "label": "회귀선 07",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 31.5,
+            "y": 5.97,
+            "confidence": 0.7,
+            "label": "회귀선 08",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 40.5,
+            "y": 7.93,
+            "confidence": 0.7,
+            "label": "회귀선 11",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 43.5,
+            "y": 8.58,
+            "confidence": 0.7,
+            "label": "회귀선 12",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 46.5,
+            "y": 9.23,
+            "confidence": 0.7,
+            "label": "회귀선 13",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 49.5,
+            "y": 9.88,
+            "confidence": 0.7,
+            "label": "회귀선 14",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 52.5,
+            "y": 10.54,
+            "confidence": 0.7,
+            "label": "회귀선 15",
+            "color": "#BDBFC1",
+            "showLabel": false
+          },
+          {
+            "x": 26.6,
+            "y": 1.6,
+            "confidence": 0.7,
+            "label": "한국 '24",
+            "color": "#0F4C81",
+            "showLabel": false
+          },
+          {
+            "x": 28.2,
+            "y": 1.4,
+            "confidence": 0.7,
+            "label": "  한국 '25  ",
+            "color": "#0F4C81",
+            "showLabel": true
+          },
+          {
+            "x": 52.3,
+            "y": 2.0,
+            "confidence": 0.7,
+            "label": "  한국  ",
+            "color": "#0F4C81",
+            "showLabel": true
+          },
+          {
+            "x": 29.2,
+            "y": 7.2,
+            "confidence": 0.7,
+            "label": "미국 '24",
+            "color": "#6667AB",
+            "showLabel": false
+          },
+          {
+            "x": 32.6,
+            "y": 10.0,
+            "confidence": 0.7,
+            "label": "  미국 '25  ",
+            "color": "#6667AB",
+            "showLabel": true
+          },
+          {
+            "x": 48.7,
+            "y": 8.9,
+            "confidence": 0.7,
+            "label": "  미국  ",
+            "color": "#6667AB",
+            "showLabel": true
+          },
+          {
+            "x": 28.5,
+            "y": 7.2,
+            "confidence": 0.7,
+            "label": "유럽 '24",
+            "color": "#6B6D70",
+            "showLabel": false
+          },
+          {
+            "x": 24.6,
+            "y": 6.1,
+            "confidence": 0.7,
+            "label": "  유럽 '25  ",
+            "color": "#6B6D70",
+            "showLabel": true
+          },
+          {
+            "x": 35.1,
+            "y": 10.4,
+            "confidence": 0.7,
+            "label": "  유럽  ",
+            "color": "#6B6D70",
+            "showLabel": true
+          },
+          {
+            "x": 24.7,
+            "y": 4.2,
+            "confidence": 0.7,
+            "label": "대만 '24",
+            "color": "#3E7CB1",
+            "showLabel": false
+          },
+          {
+            "x": 26.1,
+            "y": 4.7,
+            "confidence": 0.7,
+            "label": "대만 '25",
+            "color": "#3E7CB1",
+            "showLabel": false
+          },
+          {
+            "x": 34.0,
+            "y": 6.7,
+            "confidence": 0.7,
+            "label": "  대만  ",
+            "color": "#3E7CB1",
+            "showLabel": true
+          },
+          {
+            "x": 18.8,
+            "y": 3.9,
+            "confidence": 0.7,
+            "label": "일본 '24",
+            "color": "#B79A2E",
+            "showLabel": false
+          },
+          {
+            "x": 20.7,
+            "y": 4.3,
+            "confidence": 0.7,
+            "label": "일본 '25",
+            "color": "#B79A2E",
+            "showLabel": false
+          },
+          {
+            "x": 44.3,
+            "y": 6.1,
+            "confidence": 0.7,
+            "label": "  일본  ",
+            "color": "#B79A2E",
+            "showLabel": true
+          },
+          {
+            "x": 5.1,
+            "y": 2.1,
+            "confidence": 0.7,
+            "label": "  중국 '24  ",
+            "color": "#FF6F61",
+            "showLabel": true
+          },
+          {
+            "x": 8.7,
+            "y": 1.4,
+            "confidence": 0.7,
+            "label": "중국 '25",
+            "color": "#FF6F61",
+            "showLabel": false
+          },
+          {
+            "x": 6.7,
+            "y": 3.8,
+            "confidence": 0.7,
+            "label": "  중국  ",
+            "color": "#FF6F61",
+            "showLabel": true
+          }
+        ],
+        "renderAs": "scatter",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 32,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.86,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 406.7,
+        "absoluteChange": 3.05,
+        "from": 0.75,
+        "to": 3.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 10.54,
+        "at": ""
+      },
+      "min": {
+        "value": 0.75,
+        "at": ""
+      },
+      "average": 5.2628125,
+      "median": 4.6850000000000005,
+      "range": 9.79
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "MSCI 반도체 업종 P/B·ROE 궤적 (2024~2026년 8월)",
+    "subMessage": "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다",
+    "headline": "MSCI 반도체 업종 P/B·ROE 궤적 (2024~2026년 8월)",
+    "summary": "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: LSEG, 2026년 8월 14일 기준. '25·'24는 1·2년 전, 라벨 없는 같은 색 점도 과거 시점. 점선은 글로벌 증시 회귀선 y = 0.2174x - 0.8786"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": 6.0,
+          "y": 0.42579999999999996
+        },
+        "to": {
+          "x": 52.5,
+          "y": 10.5349
+        },
+        "style": "dotted",
+        "color": "#939597",
+        "label": "글로벌 증시 회귀선 y = 0.2174x - 0.8786"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 52.3,
+        "y": 2.0
+      },
+      "displayText": "한국 ROE 52.3% · P/B 2.0배",
+      "reason": "단위 배·%, 12개월 예상치. 한국은 ROE가 두 배로 뛰어도 P/B는 2배에 그친다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

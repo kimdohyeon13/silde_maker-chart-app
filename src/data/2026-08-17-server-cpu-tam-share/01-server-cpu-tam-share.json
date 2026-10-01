@@ -1,0 +1,399 @@
+{
+  "id": "01-server-cpu-tam-share",
+  "sourceImage": "input/source-server-cpu-tam.png",
+  "analyzedAt": "2026-08-17T00:00:00+09:00",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 5: We expect INTC to represent ~36% unit share, AMD ~30%, ARM merchant ~22%, and ARM custom ~12% by CY30",
+    "originalMessage": "Server CPU TAM (mn units) and Unit Market Share Outlook",
+    "preservedElements": [
+      "6개 연도 누적 막대",
+      "Intel·AMD·Arm Merchant·Arm Custom 4개 계열",
+      "막대 안 점유율 라벨",
+      "막대 위 전체 시장 대수",
+      "출처 전체"
+    ],
+    "changedElements": [
+      "제목·부제·범례 한국어화",
+      "노랑·주황을 제외한 구분색으로 정리",
+      "Paperlogy 타이포와 타이트한 16:9 여백 적용"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 이미지에 인쇄된 총 시장 대수와 점유율을 사용했다. 누적 막대 높이는 총량×점유율로 계산했으며, 표시 라벨은 원문 소수점 한 자리 값을 보존했다.",
+    "sourceAttribution": "자료: BofA Global Research 추정, Mercury Research, IDC"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "title-preserved",
+      "label": "제목 의미와 숫자 보존",
+      "status": "pass",
+      "detail": "2030년 업체별 점유율 전망 네 값을 모두 보존했다."
+    },
+    {
+      "id": "series-preserved",
+      "label": "계열 수 보존",
+      "status": "pass",
+      "detail": "원본의 4개 계열과 누적 순서를 유지했다."
+    },
+    {
+      "id": "source-visible-labels",
+      "label": "표시 숫자 보존",
+      "status": "pass",
+      "detail": "점유율 24개와 총량 6개를 모두 표시하도록 기록했다."
+    },
+    {
+      "id": "source-preserved",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "BofA Global Research estimates, Mercury Research, IDC를 모두 유지했다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": false,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 28px 0",
+    "contentPadding": "0 8px",
+    "sourcePadding": "0 28px 7px",
+    "chartHeight": 388,
+    "compactChartMargins": true,
+    "stackedLegendAlign": "left",
+    "stackedLabelFontSize": 10,
+    "gridMode": "dashed",
+    "accentColor": "#133B82",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "도표 5: 서버 CPU 전체 시장과 출하량 점유율 전망",
+    "subtitle": "2030년 Intel 36%·AMD 30%·ARM 범용 22%·자체설계 12%, 전체 시장 8,200만 대",
+    "source": "자료: BofA Global Research 추정, Mercury Research, IDC",
+    "timeRange": "2025-2030E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E",
+        "2029E",
+        "2030E"
+      ],
+      "displayTickValues": [
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E",
+        "2029E",
+        "2030E"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        0,
+        30,
+        60,
+        90
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "Intel",
+        "role": "primary",
+        "originalColor": "#0B2B78",
+        "remakeColor": "#133B82"
+      },
+      {
+        "name": "AMD",
+        "role": "secondary",
+        "originalColor": "#43A0D6",
+        "remakeColor": "#2F7EBB"
+      },
+      {
+        "name": "ARM 범용",
+        "role": "secondary",
+        "originalColor": "#DE6A22",
+        "remakeColor": "#7456C9"
+      },
+      {
+        "name": "ARM 자체설계",
+        "role": "secondary",
+        "originalColor": "#2C7184",
+        "remakeColor": "#157A74"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Intel",
+        "role": "primary",
+        "renderAs": "bar",
+        "color": "#133B82",
+        "data": [
+          {
+            "x": "2025",
+            "y": 18.538,
+            "displayLabel": "62.0%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2026E",
+            "y": 20.216,
+            "displayLabel": "53.2%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2027E",
+            "y": 23.3618,
+            "displayLabel": "45.1%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2028E",
+            "y": 25.6136,
+            "displayLabel": "40.4%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2029E",
+            "y": 27.436,
+            "displayLabel": "38.0%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2030E",
+            "y": 29.356,
+            "displayLabel": "35.8%",
+            "confidence": 0.98
+          }
+        ]
+      },
+      {
+        "name": "AMD",
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#2F7EBB",
+        "data": [
+          {
+            "x": "2025",
+            "y": 7.2358,
+            "displayLabel": "24.2%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2026E",
+            "y": 10.412,
+            "displayLabel": "27.4%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2027E",
+            "y": 15.281,
+            "displayLabel": "29.5%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2028E",
+            "y": 19.8442,
+            "displayLabel": "31.3%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2029E",
+            "y": 22.382,
+            "displayLabel": "31.0%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2030E",
+            "y": 24.846,
+            "displayLabel": "30.3%",
+            "confidence": 0.98
+          }
+        ]
+      },
+      {
+        "name": "ARM 범용",
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#7456C9",
+        "data": [
+          {
+            "x": "2025",
+            "y": 2.5714,
+            "displayLabel": "8.6%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2026E",
+            "y": 4.788,
+            "displayLabel": "12.6%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2027E",
+            "y": 8.4952,
+            "displayLabel": "16.4%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2028E",
+            "y": 10.7146,
+            "displayLabel": "16.9%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2029E",
+            "y": 13.4292,
+            "displayLabel": "18.6%",
+            "confidence": 0.98
+          },
+          {
+            "x": "2030E",
+            "y": 17.712,
+            "displayLabel": "21.6%",
+            "confidence": 0.98
+          }
+        ]
+      },
+      {
+        "name": "ARM 자체설계",
+        "role": "secondary",
+        "renderAs": "bar",
+        "color": "#157A74",
+        "data": [
+          {
+            "x": "2025",
+            "y": 1.5548,
+            "displayLabel": "5.2%",
+            "totalLabel": "29.9",
+            "confidence": 0.98
+          },
+          {
+            "x": "2026E",
+            "y": 2.584,
+            "displayLabel": "6.8%",
+            "totalLabel": "38.0",
+            "confidence": 0.98
+          },
+          {
+            "x": "2027E",
+            "y": 4.662,
+            "displayLabel": "9.0%",
+            "totalLabel": "51.8",
+            "confidence": 0.98
+          },
+          {
+            "x": "2028E",
+            "y": 7.291,
+            "displayLabel": "11.5%",
+            "totalLabel": "63.4",
+            "confidence": 0.98
+          },
+          {
+            "x": "2029E",
+            "y": 8.8806,
+            "displayLabel": "12.3%",
+            "totalLabel": "72.2",
+            "confidence": 0.98
+          },
+          {
+            "x": "2030E",
+            "y": 10.086,
+            "displayLabel": "12.3%",
+            "totalLabel": "82.0",
+            "confidence": 0.98
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 24,
+    "quality": {
+      "overallConfidence": 0.98,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "2025년 ARM 자체설계 5.2% 구간"
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {
+      "min": 29.9,
+      "max": 82,
+      "average": 56.2,
+      "latest": 82
+    },
+    "changeRates": [
+      {
+        "period": "2025-2030E",
+        "percentChange": 174.2
+      }
+    ]
+  },
+  "narrative": {
+    "headMessage": "도표 5: 서버 CPU 전체 시장과 출하량 점유율 전망",
+    "subMessage": "2030년 Intel 36%·AMD 30%·ARM 범용 22%·자체설계 12%, 전체 시장 8,200만 대",
+    "headline": "서버 CPU 전체 시장과 업체별 출하량 점유율 전망",
+    "keyTakeaways": [
+      "전체 시장은 2025년 2,990만 대에서 2030년 8,200만 대로 늘어날 전망이다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "x": "2030E",
+      "y": 82,
+      "displayText": "2030년 8,200만 대"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#133B82",
+      "secondary": [
+        "#2F7EBB",
+        "#7456C9",
+        "#157A74"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#133B82",
+      "backgroundTone": "light"
+    }
+  },
+  "patterns": {
+    "trend": "전체 시장은 2025년 2,990만 대에서 2030년 8,200만 대로 늘어날 전망이다.",
+    "supportResistance": []
+  }
+}

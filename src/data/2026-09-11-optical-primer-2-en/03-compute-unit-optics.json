@@ -1,0 +1,271 @@
+{
+  "id": "compute-unit-optics",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "NVL576은 1.6T 환산 플러거블 2,454개에 광엔진 2,592개가 더 붙는다",
+    "preservedElements": [
+      "1.6T 환산 기준",
+      "컴퓨팅 유닛 단위",
+      "Scale-up 광엔진 별도 집계"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "컴퓨팅 유닛 한 개 기준으로 1.6T 환산 플러거블과 Scale-up 광엔진을 누적. 세대 3개만 남겨 대비를 크게."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "Optical Content Required by One Compute Unit",
+    "subtitle": "NVL576 needs 2,454 pluggables in 1.6T terms plus 2,592 optical engines",
+    "source": "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GB300",
+        "VR200",
+        "VR300"
+      ],
+      "displayTickValues": [
+        "GB300 NVL72",
+        "VR200 NVL72",
+        "VR300 NVL576"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "1300",
+        "2600",
+        "3900",
+        "5200"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 5200
+    },
+    "legend": [
+      {
+        "name": "Pluggable modules (1.6T equivalent)",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Scale-up CPO optical engines",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#BDD8D1"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Pluggable modules (1.6T equivalent)",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 216,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200",
+            "y": 432,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR300",
+            "y": 2454,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      },
+      {
+        "name": "Scale-up CPO optical engines",
+        "data": [
+          {
+            "x": "GB300",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR200",
+            "y": 0,
+            "confidence": 0.9
+          },
+          {
+            "x": "VR300",
+            "y": 2592,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#BDD8D1"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 2236.1,
+        "absoluteChange": 4830,
+        "from": 216,
+        "to": 5046
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 5046,
+        "at": "VR300 NVL576"
+      },
+      "min": {
+        "value": 0,
+        "at": "VR300 NVL576"
+      },
+      "average": 1898,
+      "median": 432,
+      "range": 5046
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Optical Content Required by One Compute Unit",
+    "subMessage": "NVL576 needs 2,454 pluggables in 1.6T terms plus 2,592 optical engines",
+    "headline": "Optical Content Required by One Compute Unit",
+    "summary": "NVL576 needs 2,454 pluggables in 1.6T terms plus 2,592 optical engines",
+    "story": "NVL576 needs 2,454 pluggables in 1.6T terms plus 2,592 optical engines",
+    "keyTakeaways": [
+      "A GB300 compute unit is done at 216 modules.",
+      "NVL576 bundles eight racks, lifting counts more than tenfold.",
+      "The 2,592 rack-to-rack engines are demand that did not exist before."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "A GB300 compute unit is done at 216 modules.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Optical Networking, Optics Primer #2 (Sep 11, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

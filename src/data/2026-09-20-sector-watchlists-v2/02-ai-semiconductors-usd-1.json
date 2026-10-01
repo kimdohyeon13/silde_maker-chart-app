@@ -1,0 +1,578 @@
+{
+  "id": "02-ai-semiconductors-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:10:34.968Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "AI 반도체",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 6종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AMD",
+            "displayValue": "AMD\nAMD",
+            "sideValue": {
+              "displayValue": "+2.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "GPU·CPU",
+            "displayValue": "GPU·CPU"
+          },
+          "current": {
+            "value": "559.82",
+            "displayValue": "559"
+          },
+          "m1": {
+            "value": "20.0%",
+            "displayValue": "20%"
+          },
+          "y1": {
+            "value": "255.7%",
+            "displayValue": "255%"
+          },
+          "high52": {
+            "value": "95.7%",
+            "displayValue": "95%"
+          },
+          "target": {
+            "value": "616.51",
+            "displayValue": "616\n10%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "81.7%",
+            "displayValue": "81%"
+          },
+          "pe": {
+            "value": "34.9x",
+            "displayValue": "34x"
+          },
+          "marketCap": {
+            "value": "913.9 B",
+            "displayValue": "913"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AVGO",
+            "displayValue": "AVGO\n브로드컴",
+            "sideValue": {
+              "displayValue": "+3.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "맞춤형 AI 칩",
+            "displayValue": "맞춤형 AI 칩"
+          },
+          "current": {
+            "value": "357.61",
+            "displayValue": "357"
+          },
+          "m1": {
+            "value": "-1.3%",
+            "displayValue": "-1%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "4.4%",
+            "displayValue": "4%"
+          },
+          "high52": {
+            "value": "72.2%",
+            "displayValue": "72%"
+          },
+          "target": {
+            "value": "531.85",
+            "displayValue": "531\n48%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "70.9%",
+            "displayValue": "70%"
+          },
+          "pe": {
+            "value": "18.0x",
+            "displayValue": "18x"
+          },
+          "marketCap": {
+            "value": "1,707.1 B",
+            "displayValue": "1,707"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ARM",
+            "displayValue": "ARM\nArm",
+            "sideValue": {
+              "displayValue": "+4.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 설계 IP",
+            "displayValue": "반도체 설계 IP"
+          },
+          "current": {
+            "value": "275.61",
+            "displayValue": "275"
+          },
+          "m1": {
+            "value": "10.5%",
+            "displayValue": "10%"
+          },
+          "y1": {
+            "value": "92.9%",
+            "displayValue": "92%"
+          },
+          "high52": {
+            "value": "60.9%",
+            "displayValue": "60%"
+          },
+          "target": {
+            "value": "288.70",
+            "displayValue": "288\n4%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "25.6%",
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": "86.4x",
+            "displayValue": "86x"
+          },
+          "marketCap": {
+            "value": "294.4 B",
+            "displayValue": "294"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSM",
+            "displayValue": "TSM\nTSMC",
+            "sideValue": {
+              "displayValue": "+1.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "파운드리",
+            "displayValue": "파운드리"
+          },
+          "current": {
+            "value": "434.67",
+            "displayValue": "434"
+          },
+          "m1": {
+            "value": "5.7%",
+            "displayValue": "5%"
+          },
+          "y1": {
+            "value": "65.4%",
+            "displayValue": "65%"
+          },
+          "high52": {
+            "value": "90.7%",
+            "displayValue": "90%"
+          },
+          "target": {
+            "value": "552.26",
+            "displayValue": "552\n27%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "62.5%",
+            "displayValue": "62%"
+          },
+          "pe": {
+            "value": "17.4x",
+            "displayValue": "17x"
+          },
+          "marketCap": {
+            "value": "2,006.8 B",
+            "displayValue": "2,006"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "INTC",
+            "displayValue": "INTC\n인텔",
+            "sideValue": {
+              "displayValue": "-0.2%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "CPU·파운드리",
+            "displayValue": "CPU·파운드리"
+          },
+          "current": {
+            "value": "108.60",
+            "displayValue": "108"
+          },
+          "m1": {
+            "value": "17.0%",
+            "displayValue": "17%"
+          },
+          "y1": {
+            "value": "267.1%",
+            "displayValue": "267%"
+          },
+          "high52": {
+            "value": "76.3%",
+            "displayValue": "76%"
+          },
+          "target": {
+            "value": "116.37",
+            "displayValue": "116\n7%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "262.0%",
+            "displayValue": "262%"
+          },
+          "pe": {
+            "value": "52.8x",
+            "displayValue": "52x"
+          },
+          "marketCap": {
+            "value": "570.6 B",
+            "displayValue": "570"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MRVL",
+            "displayValue": "MRVL\n마벨",
+            "sideValue": {
+              "displayValue": "+1.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 연결 반도체",
+            "displayValue": "AI 연결 반도체"
+          },
+          "current": {
+            "value": "244.25",
+            "displayValue": "244"
+          },
+          "m1": {
+            "value": "2.9%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "229.6%",
+            "displayValue": "229%"
+          },
+          "high52": {
+            "value": "74.0%",
+            "displayValue": "74%"
+          },
+          "target": {
+            "value": "289.04",
+            "displayValue": "289\n18%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "48.3%",
+            "displayValue": "48%"
+          },
+          "pe": {
+            "value": "34.7x",
+            "displayValue": "34x"
+          },
+          "marketCap": {
+            "value": "214.2 B",
+            "displayValue": "214"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 70
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 반도체",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 6종목",
+    "headline": "AI 반도체",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "AMD",
+      "instrument": "NASDAQGS:AMD",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "AVGO",
+      "instrument": "NASDAQGS:AVGO",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ARM",
+      "instrument": "NASDAQGS:ARM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "TSM",
+      "instrument": "NYSE:TSM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "INTC",
+      "instrument": "NASDAQGS:INTC",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "MRVL",
+      "instrument": "NASDAQGS:MRVL",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 6,
+    "rowCount": 6,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

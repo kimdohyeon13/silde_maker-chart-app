@@ -1,0 +1,196 @@
+{
+  "id": "02-samsung-hbm-history",
+  "mode": "faithful",
+  "sourceImage": "input/03-samsung-hbm-history.png",
+  "sourceImages": ["input/03-samsung-hbm-history.png"],
+  "analyzedAt": "2026-08-25T15:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "HBM Development History",
+    "originalMessage": "Higher bandwidth is the primary driver of HBM evolution.",
+    "sourceKey": "samsung-hbm-development-history-hot-chips-2026",
+    "sourceAttribution": "Samsung · HBM Development History · Hot Chips 2026",
+    "preservedElements": [
+      "The original dual-axis combo format: capacity bars with a bandwidth line",
+      "All eight generations in the original order: HBM through HBM5",
+      "The left capacity axis and right bandwidth axis",
+      "The original blue-bar / contrasting-line relationship"
+    ],
+    "changedElements": [
+      "Title and subtitle rewritten in plain Korean",
+      "Source-like blue and orange colors replaced with accessible blue and magenta while keeping the two-series distinction",
+      "Point values are recorded as source-visible readings from the plotted grid"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The source image does not print point labels. Capacity and bandwidth values below are readings from the visible axes/grid, not newly asserted raw data."
+  },
+  "allowedTransformations": ["translate-text", "rewrite-title", "adjust-colors", "adjust-layout", "adjust-fonts", "adjust-spacing"],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-a",
+      "label": "Original combo-chart structure retained",
+      "status": "pass",
+      "detail": "Eight categories stay in order; capacity remains bars on the left axis and bandwidth remains a line on the right axis."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Source-visible values disclosed",
+      "status": "warning",
+      "detail": "The chart has no printed point labels. Values are read from the visible grid and must not be described as raw exact data."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "Title uses Paperlogy 900 and subtitle uses Paperlogy 300."
+    },
+    {
+      "id": "export-visual-qa",
+      "label": "Export and visual QA",
+      "status": "pending",
+      "detail": "Export/preflight intentionally left to the parent lane."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "14px 24px 1px",
+    "contentPadding": "0 18px 0",
+    "sourcePadding": "0 24px 6px",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3,
+    "showAreaFill": false,
+    "accentColor": "#173B67",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "HBM 세대가 바뀔수록 용량과 대역폭이 함께 뛴다",
+    "subtitle": "막대=최대 용량(GB) · 선=대역폭(TB/s) · HBM부터 HBM5까지",
+    "source": "Samsung · HBM Development History · Hot Chips 2026",
+    "timeRange": "HBM~HBM5",
+    "xAxis": {
+      "label": "HBM 세대",
+      "type": "category",
+      "tickValues": ["HBM", "HBM2", "HBM2E", "HBM3", "HBM3E", "HBM4", "HBM4E", "HBM5"],
+      "displayTickValues": ["HBM", "HBM2", "HBM2E", "HBM3", "HBM3E", "HBM4", "HBM4E", "HBM5"],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "최대 용량",
+      "type": "numeric",
+      "tickValues": ["0", "10", "20", "30", "40", "50", "60", "70"],
+      "unit": "GB",
+      "min": 0,
+      "max": 70,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "대역폭",
+      "type": "numeric",
+      "tickValues": ["0", "1", "2", "3", "4", "5", "6", "7"],
+      "unit": "TB/s",
+      "min": 0,
+      "max": 7,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      { "name": "최대 용량 [GB]", "role": "primary", "originalColor": "#5B9BD5", "remakeColor": "#4F8FCB" },
+      { "name": "대역폭 [TB/s]", "role": "secondary", "originalColor": "#FF9900", "remakeColor": "#C0266D" }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "최대 용량 [GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#4F8FCB",
+        "data": [
+          { "x": "HBM", "y": 4, "confidence": 0.72 },
+          { "x": "HBM2", "y": 4, "confidence": 0.72 },
+          { "x": "HBM2E", "y": 16, "confidence": 0.76 },
+          { "x": "HBM3", "y": 16, "confidence": 0.76 },
+          { "x": "HBM3E", "y": 36, "confidence": 0.72 },
+          { "x": "HBM4", "y": 36, "confidence": 0.72 },
+          { "x": "HBM4E", "y": 64, "confidence": 0.76 },
+          { "x": "HBM5", "y": 64, "confidence": 0.76 }
+        ]
+      },
+      {
+        "name": "대역폭 [TB/s]",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#C0266D",
+        "data": [
+          { "x": "HBM", "y": 0.1, "confidence": 0.45 },
+          { "x": "HBM2", "y": 0.25, "confidence": 0.45 },
+          { "x": "HBM2E", "y": 0.3, "confidence": 0.45 },
+          { "x": "HBM3", "y": 0.8, "confidence": 0.5 },
+          { "x": "HBM3E", "y": 1.0, "confidence": 0.55 },
+          { "x": "HBM4", "y": 3.0, "confidence": 0.62 },
+          { "x": "HBM4E", "y": 4.1, "confidence": 0.6 },
+          { "x": "HBM5", "y": 6.1, "confidence": 0.6 }
+        ]
+      }
+    ],
+    "totalDataPoints": 16,
+    "quality": {
+      "overallConfidence": 0.61,
+      "missingPoints": 0,
+      "hardToReadAreas": ["The source chart prints no point labels; line values are approximate readings from the right-axis grid."],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": { "direction": "strong_up", "strength": 0.9, "description": "Both capacity and bandwidth rise across generations in the source-visible chart.", "recentDirection": "accelerating_up" },
+    "volatility": { "level": "high", "coefficient": 0.84, "description": "The source-visible series make their largest jumps in HBM3E/HBM4E/HBM5." },
+    "changeRates": [],
+    "correlations": [],
+    "summary": { "max": { "value": 64, "at": "HBM4E/HBM5" }, "min": { "value": 4, "at": "HBM/HBM2" }, "average": 27.999, "median": 26, "range": 60 }
+  },
+  "patterns": { "points": [], "crossovers": [], "supportResistance": [] },
+  "narrative": {
+    "headMessage": "HBM 세대가 바뀔수록 용량과 대역폭이 함께 뛴다",
+    "subMessage": "막대는 담을 수 있는 양, 선은 초당 옮기는 양이다. 둘 다 HBM5로 갈수록 커진다.",
+    "headline": "HBM 세대가 바뀔수록 용량과 대역폭이 함께 뛴다",
+    "summary": "이 그림은 HBM 세대가 바뀔 때 메모리가 얼마나 담고 얼마나 빨리 움직이는지를 한 번에 보여줍니다.",
+    "story": "큰 창고에 물건을 많이 넣는 것만으로는 충분하지 않습니다. AI가 기다리지 않으려면 창고의 크기와 출입구의 속도가 함께 커져야 합니다. 이 차트에서 막대는 최대 용량, 선은 대역폭이며 둘 다 최신 세대에서 크게 올라갑니다.",
+    "keyTakeaways": [
+      "HBM4E와 HBM5의 최대 용량 막대는 약 64GB로 가장 높다.",
+      "대역폭 선은 HBM4 이후 약 3TB/s에서 6TB/s대로 더 빠르게 올라간다.",
+      "값은 원자료 표가 아니라 화면에서 읽은 source-visible 값이다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "막대와 선을 각각의 축에서 읽고, 서로 다른 단위라는 점을 먼저 확인한다.",
+    "contextualNotes": ["Samsung · HBM Development History · Hot Chips 2026", "Point labels are not printed in the source image."]
+  },
+  "emphasis": {
+    "focusPoint": { "position": { "x": "HBM5", "y": 6.1 }, "displayText": "HBM5 · 약 6.1 TB/s", "reason": "가장 높은 대역폭 선과 64GB 용량 막대가 최신 세대의 변화를 보여준다." },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": { "primary": "#4F8FCB", "secondary": ["#C0266D"], "positive": "#D92D20", "negative": "#175CD3", "accent": "#173B67", "backgroundTone": "light" },
+    "densityLevel": "balanced"
+  }
+}

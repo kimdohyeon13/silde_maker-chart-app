@@ -1,0 +1,246 @@
+{
+  "id": "01-headline-beat",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "NVIDIA FY2Q27 non-GAAP headline results exceeded consensus across revenue, operating income, and EPS.",
+    "preservedElements": [
+      "FY2Q27 actual values",
+      "consensus comparison",
+      "non-GAAP basis",
+      "source attribution"
+    ],
+    "changedElements": [
+      "New compact Korean editorial composition",
+      "Converted mixed units into percentage beats",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Beat rates are calculated from the reported actual and consensus values retained in the project data source note.",
+    "sourceAttribution": "NVIDIA FY2Q27 earnings release, August 26, 2026; consensus values supplied by the user",
+    "sourceKey": "nvidia-fy2q27-earnings-2026-08-26"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Vertical bar chart, three beats, all percentage units, with full actual-versus-consensus values in the subtitle."
+    },
+    {
+      "id": "expected-bar-count",
+      "label": "Bar count",
+      "status": "pass",
+      "detail": "Three data points are expected."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "Title 900, subtitle 300, 16:9 canvas."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pass",
+      "detail": "Exported PNG and rendered DOM inspected with zero overflow findings."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "lineStrokeWidth": 3.4
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "NVIDIA FY2Q27 핵심 실적, 컨센서스 상회",
+    "subtitle": "매출 962억달러 vs 923억달러 · 영업이익 640억달러 vs 612억달러 · EPS 2.22달러 vs 2.09달러",
+    "source": "자료: NVIDIA FY2Q27 실적발표, 2026.08.26 · 컨센서스: 시장 예상치",
+    "timeRange": "FY2Q27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "revenue",
+        "operating_income",
+        "eps"
+      ],
+      "displayTickValues": [
+        "매출\n+4.3%",
+        "영업이익\n+4.5%",
+        "EPS\n+6.2%"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "컨센서스 대비 상회율",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 8
+    },
+    "legend": [
+      {
+        "name": "컨센서스 대비 상회율",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "컨센서스 대비 상회율",
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "revenue",
+            "y": 4.3,
+            "displayLabel": "+4.3%",
+            "confidence": 1
+          },
+          {
+            "x": "operating_income",
+            "y": 4.5,
+            "displayLabel": "+4.5%",
+            "confidence": 1
+          },
+          {
+            "x": "eps",
+            "y": 6.2,
+            "displayLabel": "+6.2%",
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.8,
+      "description": "All three metrics exceeded consensus.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "low",
+      "coefficient": 0.2,
+      "description": "Beat magnitude range is narrow."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 6.2,
+        "at": "EPS"
+      },
+      "min": {
+        "value": 4.3,
+        "at": "revenue"
+      },
+      "average": 5,
+      "median": 4.5,
+      "range": 1.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "NVIDIA FY2Q27 핵심 실적, 컨센서스 상회",
+    "subMessage": "EPS가 6.2%로 가장 크게 상회했고, 매출과 영업이익도 4%대 상회",
+    "headline": "NVIDIA FY2Q27 핵심 실적, 컨센서스 상회",
+    "summary": "Non-GAAP headline results beat consensus.",
+    "story": "Mixed units are represented as comparable consensus beat rates.",
+    "keyTakeaways": [
+      "매출 +4.3%",
+      "영업이익 +4.5%",
+      "EPS +6.2%"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": [
+      "NVIDIA FY2Q27 earnings release"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "eps",
+        "y": 6.2
+      },
+      "displayText": "EPS +6.2%",
+      "reason": "Largest beat."
+    },
+    "densityLevel": "compact"
+  }
+}

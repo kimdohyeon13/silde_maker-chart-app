@@ -1,0 +1,281 @@
+{
+  "id": "api-price",
+  "sourceImage": "",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "exact",
+    "notes": "OpenAI 발표 글과 API 가격 문서의 표준 가격을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: OpenAI, 2026년 9월. 표준 API 가격 기준"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "공개 수치 기반 데이터",
+      "status": "pass",
+      "detail": "OpenAI 발표 글과 API 가격 문서의 표준 가격을 그대로 옮겼습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 380,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "GPT-6 계열 API 가격, 100만 토큰당 (2026년 9월)",
+    "subtitle": "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다",
+    "source": "자료: OpenAI, 2026년 9월. 표준 API 가격 기준",
+    "timeRange": "2026년 9월 30일 기준",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "GPT-6.1 Sol",
+        "GPT-6 Sol",
+        "GPT-6 Astra"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "입력",
+        "role": "secondary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      },
+      {
+        "name": "출력",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "입력",
+        "data": [
+          {
+            "x": "GPT-6.1 Sol",
+            "y": 2,
+            "confidence": 0.74
+          },
+          {
+            "x": "GPT-6 Sol",
+            "y": 2,
+            "confidence": 0.74
+          },
+          {
+            "x": "GPT-6 Astra",
+            "y": 10,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#6667AB"
+      },
+      {
+        "name": "출력",
+        "data": [
+          {
+            "x": "GPT-6.1 Sol",
+            "y": 10,
+            "confidence": 0.74
+          },
+          {
+            "x": "GPT-6 Sol",
+            "y": 10,
+            "confidence": 0.74
+          },
+          {
+            "x": "GPT-6 Astra",
+            "y": 50,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.714,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 400.0,
+        "absoluteChange": 40.0,
+        "from": 10.0,
+        "to": 50.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 50.0,
+        "at": ""
+      },
+      "min": {
+        "value": 10.0,
+        "at": ""
+      },
+      "average": 23.333333333333332,
+      "median": 10.0,
+      "range": 40.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "GPT-6 계열 API 가격, 100만 토큰당 (2026년 9월)",
+    "subMessage": "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다",
+    "headline": "GPT-6 계열 API 가격, 100만 토큰당 (2026년 9월)",
+    "summary": "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: OpenAI, 2026년 9월. 표준 API 가격 기준"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 50.0
+      },
+      "displayText": "GPT-6 계열 API 가격,",
+      "reason": "단위 달러. 6.1 Sol 가격은 전작과 같고 Astra의 5분의 1이다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

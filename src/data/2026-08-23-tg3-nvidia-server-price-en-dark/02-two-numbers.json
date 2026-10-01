@@ -1,0 +1,181 @@
+{
+  "id": "02-two-numbers",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "확정 원문의 두 금액만 옮겼습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "The numbers the hike moves",
+    "subtitle": "Assuming the 17% high end",
+    "source": "Source: industry forecast, Aug 2026"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Item",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "v",
+        "label": "Amount",
+        "dataType": "text",
+        "width": "66%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "72-GPU Vera Rubin rack",
+            "displayValue": "72-GPU Vera Rubin rack"
+          },
+          "v": {
+            "value": "About $8M",
+            "displayValue": "About $8M"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "1GW data center, chip systems",
+            "displayValue": "1GW data center, chip systems"
+          },
+          "v": {
+            "value": "At least $5B more",
+            "displayValue": "At least $5B more"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "When it applies",
+            "displayValue": "When it applies"
+          },
+          "v": {
+            "value": "From next year's deliveries",
+            "displayValue": "From next year's deliveries"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "fontSize": {
+        "header": "17px",
+        "body": "22px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "rowHeight": 29,
+      "lineHeight": 1,
+      "zebraOpacity": 0.055,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "The numbers the hike moves",
+    "subMessage": "Assuming the 17% high end"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "accent": "#00E0A4",
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "backgroundTone": "dark"
+    }
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "id": "c5-lines-changed",
+  "sourceImage": "input/page_005.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: OpenAI, 2026년 8월. 2026년 3분기는 진행 중인 분기"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 380,
+    "compactChartMargins": false,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "활성 기여자 1인당 코드 변경량, 분기별 (2021~2026년)",
+    "subtitle": "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다",
+    "source": "자료: OpenAI, 2026년 8월. 2026년 3분기는 진행 중인 분기",
+    "timeRange": "2021년 2분기 ~ 2026년 3분기",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "21Q2",
+        "21Q3",
+        "21Q4",
+        "22Q1",
+        "22Q2",
+        "22Q3",
+        "22Q4",
+        "23Q1",
+        "23Q2",
+        "23Q3",
+        "23Q4",
+        "24Q1",
+        "24Q2",
+        "24Q3",
+        "24Q4",
+        "25Q1",
+        "25Q2",
+        "25Q3",
+        "25Q4",
+        "26Q1",
+        "26Q2",
+        "26Q3"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 8
+    },
+    "legend": [
+      {
+        "name": "코드 변경량 배율",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "코드 변경량 배율",
+        "data": [
+          {
+            "x": "21Q2",
+            "y": 0.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "21Q3",
+            "y": 0.52,
+            "confidence": 0.74
+          },
+          {
+            "x": "21Q4",
+            "y": 0.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "22Q1",
+            "y": 0.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "22Q2",
+            "y": 0.78,
+            "confidence": 0.74
+          },
+          {
+            "x": "22Q3",
+            "y": 0.87,
+            "confidence": 0.74
+          },
+          {
+            "x": "22Q4",
+            "y": 1.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "23Q1",
+            "y": 1.22,
+            "confidence": 0.74
+          },
+          {
+            "x": "23Q2",
+            "y": 1.22,
+            "confidence": 0.74
+          },
+          {
+            "x": "23Q3",
+            "y": 1.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "23Q4",
+            "y": 1.05,
+            "confidence": 0.74
+          },
+          {
+            "x": "24Q1",
+            "y": 1.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "24Q2",
+            "y": 1.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "24Q3",
+            "y": 1.45,
+            "confidence": 0.74
+          },
+          {
+            "x": "24Q4",
+            "y": 1.28,
+            "confidence": 0.74
+          },
+          {
+            "x": "25Q1",
+            "y": 1.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "25Q2",
+            "y": 1.65,
+            "confidence": 0.74
+          },
+          {
+            "x": "25Q3",
+            "y": 1.87,
+            "confidence": 0.74
+          },
+          {
+            "x": "25Q4",
+            "y": 1.85,
+            "confidence": 0.74
+          },
+          {
+            "x": "26Q1",
+            "y": 3.45,
+            "confidence": 0.74
+          },
+          {
+            "x": "26Q2",
+            "y": 5.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "26Q3",
+            "y": 7.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 22,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 3.914,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1300.0,
+        "absoluteChange": 6.5,
+        "from": 0.5,
+        "to": 7.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 7.0,
+        "at": ""
+      },
+      "min": {
+        "value": 0.35,
+        "at": ""
+      },
+      "average": 1.6990909090909092,
+      "median": 1.315,
+      "range": 6.65
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "활성 기여자 1인당 코드 변경량, 분기별 (2021~2026년)",
+    "subMessage": "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다",
+    "headline": "활성 기여자 1인당 코드 변경량, 분기별 (2021~2026년)",
+    "summary": "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: OpenAI, 2026년 8월. 2026년 3분기는 진행 중인 분기"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "21Q2",
+          "y": 1.0
+        },
+        "to": {
+          "x": "26Q3",
+          "y": 1.0
+        },
+        "style": "dashed",
+        "color": "#939597",
+        "label": "평균"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 7.0
+      },
+      "displayText": "활성 기여자 1인당 코드 변경",
+      "reason": "단위 배(2025년 이전 평균=1). 2026년 들어 3.5배, 5.1배, 7배로 분기마다 계단이 커진다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

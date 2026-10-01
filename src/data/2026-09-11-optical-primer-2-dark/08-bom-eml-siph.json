@@ -1,0 +1,287 @@
+{
+  "id": "bom-eml-siph",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "1.6T에서 실리콘 포토닉스가 원가 32%, 판가 20% 낮다",
+    "preservedElements": [
+      "BoM과 ASP 금액",
+      "EML과 SiPh 구분",
+      "800G와 1.6T 구분",
+      "달러 단위"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking Exhibit 28·29 (2026-09-11)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "원가와 판가를 속도별로 네 항목에 놓고 EML과 SiPh 두 계열의 그룹 막대. 단위 달러."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "광트랜시버 원가와 판가, EML 대 실리콘 포토닉스",
+    "subtitle": "1.6T에서 실리콘 포토닉스가 원가 32%, 판가 20% 낮다",
+    "source": "자료: 골드만삭스 Optical Networking Exhibit 28·29 (2026-09-11)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "800bom",
+        "800asp",
+        "16bom",
+        "16asp"
+      ],
+      "displayTickValues": [
+        "800G 원가",
+        "800G 판가",
+        "1.6T 원가",
+        "1.6T 판가"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "220",
+        "440",
+        "660",
+        "880",
+        "1100"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1100
+    },
+    "legend": [
+      {
+        "name": "EML",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "실리콘 포토닉스",
+        "role": "secondary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "EML",
+        "data": [
+          {
+            "x": "800bom",
+            "y": 310,
+            "confidence": 0.9
+          },
+          {
+            "x": "800asp",
+            "y": 430,
+            "confidence": 0.9
+          },
+          {
+            "x": "16bom",
+            "y": 500,
+            "confidence": 0.9
+          },
+          {
+            "x": "16asp",
+            "y": 1000,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "실리콘 포토닉스",
+        "data": [
+          {
+            "x": "800bom",
+            "y": 230,
+            "confidence": 0.9
+          },
+          {
+            "x": "800asp",
+            "y": 365,
+            "confidence": 0.9
+          },
+          {
+            "x": "16bom",
+            "y": 341,
+            "confidence": 0.9
+          },
+          {
+            "x": "16asp",
+            "y": 800,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 158.1,
+        "absoluteChange": 490,
+        "from": 310,
+        "to": 800
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1000,
+        "at": "1.6T 판가"
+      },
+      "min": {
+        "value": 230,
+        "at": "1.6T 판가"
+      },
+      "average": 497,
+      "median": 430,
+      "range": 770
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "광트랜시버 원가와 판가, EML 대 실리콘 포토닉스",
+    "subMessage": "1.6T에서 실리콘 포토닉스가 원가 32%, 판가 20% 낮다",
+    "headline": "광트랜시버 원가와 판가, EML 대 실리콘 포토닉스",
+    "summary": "1.6T에서 실리콘 포토닉스가 원가 32%, 판가 20% 낮다",
+    "story": "1.6T에서 실리콘 포토닉스가 원가 32%, 판가 20% 낮다",
+    "keyTakeaways": [
+      "800G 원가는 310달러 대 230달러다.",
+      "1.6T 원가는 500달러 대 341달러로 벌어진다.",
+      "대신 판가도 1,000달러 대 800달러로 낮다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "800G 원가는 310달러 대 230달러다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking Exhibit 28·29 (2026-09-11)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

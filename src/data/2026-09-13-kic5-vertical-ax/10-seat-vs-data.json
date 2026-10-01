@@ -1,0 +1,236 @@
+{
+  "id": "seat-vs-data",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "좌석형 두 곳은 내려가고 데이터형 두 곳은 두 자릿수입니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 허브스팟·워크데이·RELX·월터스클루버 2026년 실적 발표"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 4개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "좌석으로 파는 회사와 데이터를 쥔 회사의 성장률",
+    "subtitle": "좌석형 두 곳은 내려가고 데이터형 두 곳은 두 자릿수입니다",
+    "source": "자료: 허브스팟·워크데이·RELX·월터스클루버 2026년 실적 발표",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "허브스팟 3분기 매출 가이던스",
+        "워크데이 구독 백로그",
+        "RELX 법률 유기 성장",
+        "월터스클루버 클라우드"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "성장률",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "성장률",
+        "data": [
+          {
+            "x": "허브스팟 3분기 매출 가이던스",
+            "y": 14,
+            "confidence": 0.95,
+            "displayLabel": "14%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "워크데이 구독 백로그",
+            "y": 8,
+            "confidence": 0.95,
+            "displayLabel": "8.0%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "RELX 법률 유기 성장",
+            "y": 10,
+            "confidence": 0.95,
+            "displayLabel": "10%",
+            "color": "#087A68"
+          },
+          {
+            "x": "월터스클루버 클라우드",
+            "y": 14,
+            "confidence": 0.95,
+            "displayLabel": "14%",
+            "color": "#087A68"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 14,
+        "at": ""
+      },
+      "min": {
+        "value": 8,
+        "at": ""
+      },
+      "average": 11.5,
+      "median": 14,
+      "range": 6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "좌석으로 파는 회사와 데이터를 쥔 회사의 성장률",
+    "subMessage": "좌석형 두 곳은 내려가고 데이터형 두 곳은 두 자릿수입니다",
+    "headline": "좌석으로 파는 회사와 데이터를 쥔 회사의 성장률",
+    "summary": "좌석형 두 곳은 내려가고 데이터형 두 곳은 두 자릿수입니다",
+    "story": "좌석형 두 곳은 내려가고 데이터형 두 곳은 두 자릿수입니다",
+    "keyTakeaways": [
+      "허브스팟 가이던스는 20%에서 14%로 내려왔습니다.",
+      "워크데이는 백로그 8.0%가 매출 13.9%보다 낮습니다.",
+      "RELX 법률 유기 성장 10%는 사상 최고입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "허브스팟 가이던스는 20%에서 14%로 내려왔습니다.",
+    "contextualNotes": [
+      "자료: 허브스팟·워크데이·RELX·월터스클루버 2026년 실적 발표"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

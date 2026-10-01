@@ -1,0 +1,392 @@
+{
+  "id": "11-digital-assets-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:10:34.970Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "디지털 자산",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 3종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "BMNR",
+            "displayValue": "BMNR\n비트마인",
+            "sideValue": {
+              "displayValue": "+8.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "이더리움 보유",
+            "displayValue": "이더리움 보유"
+          },
+          "current": {
+            "value": "25.99",
+            "displayValue": "25"
+          },
+          "m1": {
+            "value": "28.4%",
+            "displayValue": "28%"
+          },
+          "y1": {
+            "value": "-57.6%",
+            "displayValue": "-57%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "39.6%",
+            "displayValue": "39%"
+          },
+          "target": {
+            "value": "44.53",
+            "displayValue": "44\n71%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "105.5%",
+            "displayValue": "105%"
+          },
+          "pe": {
+            "value": "33.4x",
+            "displayValue": "33x"
+          },
+          "marketCap": {
+            "value": "15.678 B",
+            "displayValue": "15"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRCL",
+            "displayValue": "CRCL\n서클",
+            "sideValue": {
+              "displayValue": "+7.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "스테이블코인",
+            "displayValue": "스테이블코인"
+          },
+          "current": {
+            "value": "91.78",
+            "displayValue": "91"
+          },
+          "m1": {
+            "value": "16.8%",
+            "displayValue": "16%"
+          },
+          "y1": {
+            "value": "-36.3%",
+            "displayValue": "-36%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "57.6%",
+            "displayValue": "57%"
+          },
+          "target": {
+            "value": "104.28",
+            "displayValue": "104\n13%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-50.9%",
+            "displayValue": "-50%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "59.8x",
+            "displayValue": "59x"
+          },
+          "marketCap": {
+            "value": "23.301 B",
+            "displayValue": "23"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MSTR",
+            "displayValue": "MSTR\n스트래티지",
+            "sideValue": {
+              "displayValue": "+16.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "비트코인 보유",
+            "displayValue": "비트코인 보유"
+          },
+          "current": {
+            "value": "153.92",
+            "displayValue": "153"
+          },
+          "m1": {
+            "value": "47.6%",
+            "displayValue": "47%"
+          },
+          "y1": {
+            "value": "-55.4%",
+            "displayValue": "-55%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "42.1%",
+            "displayValue": "42%"
+          },
+          "target": {
+            "value": "228.53",
+            "displayValue": "228\n48%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "NM",
+            "displayValue": "NM"
+          },
+          "pe": {
+            "value": "2.8x",
+            "displayValue": "2x"
+          },
+          "marketCap": {
+            "value": "59.14 B",
+            "displayValue": "59"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 140
+    }
+  },
+  "narrative": {
+    "headMessage": "디지털 자산",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 3종목",
+    "headline": "디지털 자산",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "BMNR",
+      "instrument": "NYSE:BMNR",
+      "sourceFile": "input/pro-extra-a.json",
+      "sourceUrl": "https://www.investing.com/pro/NYSE:BMNR",
+      "peBasis": "FY+2 = 2027-08-31, latest reported annual FY Aug-25 in overview; explorer/pe_fwd",
+      "epsBasis": "EPS Growth Forecast Mean Consensus (current), explorer/eps_proj_growth_mean"
+    },
+    {
+      "ticker": "CRCL",
+      "instrument": "NYSE:CRCL",
+      "sourceFile": "input/pro-extra-a.json",
+      "sourceUrl": "https://www.investing.com/pro/NYSE:CRCL",
+      "peBasis": "FY+2 = 2027-12-31, explorer/pe_fwd second forecast annual row",
+      "epsBasis": "EPS Growth Forecast Mean Consensus (current), explorer/eps_proj_growth_mean"
+    },
+    {
+      "ticker": "MSTR",
+      "instrument": "NASDAQGS:MSTR",
+      "sourceFile": "input/pro-extra-a.json",
+      "sourceUrl": "https://www.investing.com/pro/NASDAQGS:MSTR",
+      "peBasis": "FY+2 = 2027-12-31, explorer/pe_fwd second forecast annual row",
+      "epsBasis": "EPS Growth Forecast Mean Consensus (current), explorer says not meaningful"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 3,
+    "rowCount": 3,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

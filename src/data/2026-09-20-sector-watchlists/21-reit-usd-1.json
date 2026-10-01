@@ -1,0 +1,459 @@
+{
+  "id": "21-reit-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.011Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존",
+      "1~4종목은 10개 지표를 행으로 전치"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "리츠",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 4종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "stock0",
+        "label": "EQIX\n에퀴닉스\n데이터센터 리츠",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock1",
+        "label": "DLR.PRK\n디지털리얼티 우선주\n리츠 우선주",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock2",
+        "label": "APLE\n애플호스피탈리티\n호텔 리츠",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      },
+      {
+        "key": "stock3",
+        "label": "O\n리얼티인컴\n상업시설 리츠",
+        "dataType": "text",
+        "width": "19.5%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "현재가",
+            "displayValue": "현재가"
+          },
+          "stock0": {
+            "value": "1,021",
+            "displayValue": "1,021"
+          },
+          "stock1": {
+            "value": "21.27",
+            "displayValue": "21"
+          },
+          "stock2": {
+            "value": "15.58",
+            "displayValue": "15"
+          },
+          "stock3": {
+            "value": "56.66",
+            "displayValue": "56"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "오늘 등락",
+            "displayValue": "오늘 등락"
+          },
+          "stock0": {
+            "value": "-0.5%",
+            "displayValue": "-0.5%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "+1.4%",
+            "displayValue": "+1.4%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "-0.06%",
+            "displayValue": "-0.1%",
+            "highlight": "negative"
+          },
+          "stock3": {
+            "value": "-1.15%",
+            "displayValue": "-1.1%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1개월 수익률",
+            "displayValue": "1개월 수익률"
+          },
+          "stock0": {
+            "value": "-5.2%",
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "-0.3%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "stock2": {
+            "value": "-4.3%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "stock3": {
+            "value": "-9.6%",
+            "displayValue": "-9%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1년 수익률",
+            "displayValue": "1년 수익률"
+          },
+          "stock0": {
+            "value": "31.8%",
+            "displayValue": "31%"
+          },
+          "stock1": {
+            "value": "-6.9%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "stock2": {
+            "value": "34.1%",
+            "displayValue": "34%"
+          },
+          "stock3": {
+            "value": "1.0%",
+            "displayValue": "1%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "52주 고점 대비",
+            "displayValue": "52주 고점 대비"
+          },
+          "stock0": {
+            "value": "90.5%",
+            "displayValue": "90%"
+          },
+          "stock1": {
+            "value": "86.0%",
+            "displayValue": "86%"
+          },
+          "stock2": {
+            "value": "90.2%",
+            "displayValue": "90%"
+          },
+          "stock3": {
+            "value": "83.4%",
+            "displayValue": "83%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가",
+            "displayValue": "목표가"
+          },
+          "stock0": {
+            "value": "1,233",
+            "displayValue": "1,233"
+          },
+          "stock1": {
+            "value": "-",
+            "displayValue": "-"
+          },
+          "stock2": {
+            "value": "17.17",
+            "displayValue": "17"
+          },
+          "stock3": {
+            "value": "68.16",
+            "displayValue": "68"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가 여력",
+            "displayValue": "목표가 여력"
+          },
+          "stock0": {
+            "value": "20.7%",
+            "displayValue": "20%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "-",
+            "displayValue": "-"
+          },
+          "stock2": {
+            "value": "10.2%",
+            "displayValue": "10%",
+            "highlight": "positive"
+          },
+          "stock3": {
+            "value": "20.3%",
+            "displayValue": "20%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "EPS 성장",
+            "displayValue": "EPS 성장"
+          },
+          "stock0": {
+            "value": "21.9%",
+            "displayValue": "21%"
+          },
+          "stock1": {
+            "value": "102.6%",
+            "displayValue": "102%"
+          },
+          "stock2": {
+            "value": "-",
+            "displayValue": "-"
+          },
+          "stock3": {
+            "value": "36.7%",
+            "displayValue": "36%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY+2 PER",
+            "displayValue": "FY+2 PER"
+          },
+          "stock0": {
+            "value": "53.6x",
+            "displayValue": "53x"
+          },
+          "stock1": {
+            "value": "55.9x",
+            "displayValue": "55x"
+          },
+          "stock2": {
+            "value": "21.0x",
+            "displayValue": "21x"
+          },
+          "stock3": {
+            "value": "31.3x",
+            "displayValue": "31x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "시총",
+            "displayValue": "시총"
+          },
+          "stock0": {
+            "value": "100.8 B",
+            "displayValue": "USD 100B"
+          },
+          "stock1": {
+            "value": "67.566 B",
+            "displayValue": "USD 67B"
+          },
+          "stock2": {
+            "value": "3.678 B",
+            "displayValue": "USD 3B"
+          },
+          "stock3": {
+            "value": "53.443 B",
+            "displayValue": "USD 53B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 36,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "리츠",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 4종목",
+    "headline": "리츠",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "EQIX",
+      "instrument": "NASDAQGS:EQIX",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "DLR.PRK",
+      "instrument": "NYSE:DLR.PRK",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "APLE",
+      "instrument": "NYSE:APLE",
+      "sourceFile": "input/pro-extra-b.json",
+      "sourceUrl": "https://www.investing.com/pro/NYSE:APLE",
+      "peBasis": "P/E Ratio (Fwd) FY+2: 2027-12-31; latest completed FY 2025",
+      "epsBasis": "EPS Growth Forecast Mean Consensus (eps_proj_growth_mean): InvestingPro displays not meaningful"
+    },
+    {
+      "ticker": "O",
+      "instrument": "NYSE:O",
+      "sourceFile": "input/pro-extra-b.json",
+      "sourceUrl": "https://www.investing.com/pro/NYSE:O",
+      "peBasis": "P/E Ratio (Fwd) FY+2: 2027-12-31; latest completed FY 2025",
+      "epsBasis": "EPS Growth Forecast Mean Consensus (eps_proj_growth_mean), current"
+    }
+  ],
+  "layoutPlan": {
+    "format": "transposed-comparison-table",
+    "stockCount": 4,
+    "rowCount": 10,
+    "columns": 5,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Three-line stock headers need export inspection."
+    ]
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "id": "02-growth-margin",
+  "sourceImage": "input/nebius-coreweave-q2-2026.csv",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "두 회사 비교 구성",
+      "제목",
+      "색상",
+      "레이아웃",
+      "라벨",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "notes": "두 회사의 공식 2Q26 수치를 같은 단위로 비교했습니다. 금액과 비율은 서로 다른 장표로 나눠 축 왜곡을 피했습니다.",
+    "sourceAttribution": "Source: Nebius and CoreWeave 2Q26 results and cash flow statements, August 2026",
+    "sourceKey": "nebius-coreweave-2q26-growth-margin"
+  },
+  "allowedTransformations": [
+    "rewrite-title",
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-color-emphasis"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 36,
+    "subtitleFontSize": 17,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "headerLabel": "MARKET TERMINAL / LIVE",
+    "headerLabelFontSize": 11
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Nebius Grows Faster; CoreWeave Earns More",
+    "subtitle": "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%",
+    "source": "Source: Nebius and CoreWeave 2Q26 results and cash flow statements, August 2026",
+    "timeRange": "2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "Revenue growth",
+        "Adj. EBITDA margin"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "max": 500
+    },
+    "legend": [
+      {
+        "name": "Nebius",
+        "role": "primary",
+        "originalColor": "#0B2F4A",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "CoreWeave",
+        "role": "comparison",
+        "originalColor": "#9AA4AE",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Nebius",
+        "data": [
+          {
+            "x": "Revenue growth",
+            "y": 454,
+            "confidence": 0.74
+          },
+          {
+            "x": "Adj. EBITDA margin",
+            "y": 41,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      },
+      {
+        "name": "CoreWeave",
+        "data": [
+          {
+            "x": "Revenue growth",
+            "y": 112,
+            "confidence": 0.74
+          },
+          {
+            "x": "Adj. EBITDA margin",
+            "y": 59,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "comparison",
+        "color": "#FF6A5F"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Segments needing source verification are flagged for manual review."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "Overall direction read from the source.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.669,
+      "description": "Range preserved from the source."
+    },
+    "changeRates": [
+      {
+        "period": "first vs last",
+        "percentChange": -91,
+        "absoluteChange": -413,
+        "from": 454,
+        "to": 41
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 454,
+        "at": ""
+      },
+      "min": {
+        "value": 41,
+        "at": ""
+      },
+      "average": 247.5,
+      "median": 247.5,
+      "range": 413
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Nebius Grows Faster; CoreWeave Earns More",
+    "subMessage": "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%",
+    "headline": "Nebius Grows Faster; CoreWeave Earns More",
+    "summary": "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "Source: Nebius and CoreWeave 2Q26 results and cash flow statements, August 2026"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 59
+      },
+      "displayText": "Nebius Grows Faster;",
+      "reason": "Revenue growth 454% vs 112%; adjusted EBITDA margin 41% vs 59%"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "redesign"
+}

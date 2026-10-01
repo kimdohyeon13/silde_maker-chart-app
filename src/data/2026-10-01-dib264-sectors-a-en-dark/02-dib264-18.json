@@ -1,0 +1,808 @@
+{
+  "id": "dib264-18",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-18.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "AI Chips: Intel Rises 3.7%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · as of the 2026-09-30 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "AI Chips: Intel Rises 3.7%",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · as of the 2026-09-30 close",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140",
+        "150"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 150
+    },
+    "legend": [
+      {
+        "name": "Nvidia",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Intel",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "AMD",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "Broadcom",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "Marvell",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      },
+      {
+        "name": "Qualcomm",
+        "role": "secondary",
+        "originalColor": "#2A9D8F",
+        "remakeColor": "#F5B942"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Nvidia",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 103.205482
+          },
+          {
+            "x": "2026-09-03",
+            "y": 105.063463
+          },
+          {
+            "x": "2026-09-04",
+            "y": 105.941868
+          },
+          {
+            "x": "2026-09-08",
+            "y": 103.812543
+          },
+          {
+            "x": "2026-09-09",
+            "y": 102.865156
+          },
+          {
+            "x": "2026-09-10",
+            "y": 100.423104
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.390908
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.01987
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.576341
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.371961
+          },
+          {
+            "x": "2026-09-17",
+            "y": 100.873801
+          },
+          {
+            "x": "2026-09-18",
+            "y": 102.221303
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.571377
+          },
+          {
+            "x": "2026-09-22",
+            "y": 105.256619
+          },
+          {
+            "x": "2026-09-23",
+            "y": 103.711365
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.283664
+          },
+          {
+            "x": "2026-09-25",
+            "y": 103.509016
+          },
+          {
+            "x": "2026-09-28",
+            "y": 105.252023
+          },
+          {
+            "x": "2026-09-29",
+            "y": 104.493195
+          },
+          {
+            "x": "2026-09-30",
+            "y": 105.031272
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+0.51%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Intel",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 101.213894
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.034727
+          },
+          {
+            "x": "2026-09-04",
+            "y": 107.676747
+          },
+          {
+            "x": "2026-09-08",
+            "y": 117.421603
+          },
+          {
+            "x": "2026-09-09",
+            "y": 119.411033
+          },
+          {
+            "x": "2026-09-10",
+            "y": 112.757107
+          },
+          {
+            "x": "2026-09-11",
+            "y": 115.701923
+          },
+          {
+            "x": "2026-09-14",
+            "y": 109.239071
+          },
+          {
+            "x": "2026-09-15",
+            "y": 109.182868
+          },
+          {
+            "x": "2026-09-16",
+            "y": 113.577612
+          },
+          {
+            "x": "2026-09-17",
+            "y": 122.288414
+          },
+          {
+            "x": "2026-09-18",
+            "y": 122.063614
+          },
+          {
+            "x": "2026-09-21",
+            "y": 136.877596
+          },
+          {
+            "x": "2026-09-22",
+            "y": 139.215465
+          },
+          {
+            "x": "2026-09-23",
+            "y": 137.799255
+          },
+          {
+            "x": "2026-09-24",
+            "y": 143.183093
+          },
+          {
+            "x": "2026-09-25",
+            "y": 138.248846
+          },
+          {
+            "x": "2026-09-28",
+            "y": 130.414743
+          },
+          {
+            "x": "2026-09-29",
+            "y": 130.302348
+          },
+          {
+            "x": "2026-09-30",
+            "y": 135.135437
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+3.71%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "AMD",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.445184
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.249368
+          },
+          {
+            "x": "2026-09-04",
+            "y": 103.907666
+          },
+          {
+            "x": "2026-09-08",
+            "y": 110.036772
+          },
+          {
+            "x": "2026-09-09",
+            "y": 113.378732
+          },
+          {
+            "x": "2026-09-10",
+            "y": 109.571163
+          },
+          {
+            "x": "2026-09-11",
+            "y": 112.297387
+          },
+          {
+            "x": "2026-09-14",
+            "y": 107.354065
+          },
+          {
+            "x": "2026-09-15",
+            "y": 109.70171
+          },
+          {
+            "x": "2026-09-16",
+            "y": 111.507586
+          },
+          {
+            "x": "2026-09-17",
+            "y": 118.598387
+          },
+          {
+            "x": "2026-09-18",
+            "y": 121.803273
+          },
+          {
+            "x": "2026-09-21",
+            "y": 133.922247
+          },
+          {
+            "x": "2026-09-22",
+            "y": 135.717247
+          },
+          {
+            "x": "2026-09-23",
+            "y": 133.724246
+          },
+          {
+            "x": "2026-09-24",
+            "y": 136.911736
+          },
+          {
+            "x": "2026-09-25",
+            "y": 137.209814
+          },
+          {
+            "x": "2026-09-28",
+            "y": 132.257787
+          },
+          {
+            "x": "2026-09-29",
+            "y": 132.192517
+          },
+          {
+            "x": "2026-09-30",
+            "y": 133.104158
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "+0.69%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Broadcom",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.339969
+          },
+          {
+            "x": "2026-09-03",
+            "y": 96.61329
+          },
+          {
+            "x": "2026-09-04",
+            "y": 96.813461
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.697037
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.566331
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.606036
+          },
+          {
+            "x": "2026-09-11",
+            "y": 97.919822
+          },
+          {
+            "x": "2026-09-14",
+            "y": 93.248217
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.773966
+          },
+          {
+            "x": "2026-09-16",
+            "y": 91.838892
+          },
+          {
+            "x": "2026-09-17",
+            "y": 93.946114
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.735012
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.101063
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.609613
+          },
+          {
+            "x": "2026-09-23",
+            "y": 96.026292
+          },
+          {
+            "x": "2026-09-24",
+            "y": 94.773856
+          },
+          {
+            "x": "2026-09-25",
+            "y": 95.436595
+          },
+          {
+            "x": "2026-09-28",
+            "y": 94.560164
+          },
+          {
+            "x": "2026-09-29",
+            "y": 96.056052
+          },
+          {
+            "x": "2026-09-30",
+            "y": 94.998379
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "-1.10%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Marvell",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.141545
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.258521
+          },
+          {
+            "x": "2026-09-04",
+            "y": 106.255052
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.139125
+          },
+          {
+            "x": "2026-09-09",
+            "y": 111.702075
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.875853
+          },
+          {
+            "x": "2026-09-11",
+            "y": 112.220166
+          },
+          {
+            "x": "2026-09-14",
+            "y": 104.006848
+          },
+          {
+            "x": "2026-09-15",
+            "y": 105.37573
+          },
+          {
+            "x": "2026-09-16",
+            "y": 109.182949
+          },
+          {
+            "x": "2026-09-17",
+            "y": 114.435094
+          },
+          {
+            "x": "2026-09-18",
+            "y": 116.093921
+          },
+          {
+            "x": "2026-09-21",
+            "y": 122.334714
+          },
+          {
+            "x": "2026-09-22",
+            "y": 124.701738
+          },
+          {
+            "x": "2026-09-23",
+            "y": 124.007793
+          },
+          {
+            "x": "2026-09-24",
+            "y": 123.080951
+          },
+          {
+            "x": "2026-09-25",
+            "y": 124.502117
+          },
+          {
+            "x": "2026-09-28",
+            "y": 119.730023
+          },
+          {
+            "x": "2026-09-29",
+            "y": 125.13427
+          },
+          {
+            "x": "2026-09-30",
+            "y": 125.581064
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "+0.36%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Qualcomm",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 102.010687
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.176404
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.278438
+          },
+          {
+            "x": "2026-09-08",
+            "y": 104.489524
+          },
+          {
+            "x": "2026-09-09",
+            "y": 105.875994
+          },
+          {
+            "x": "2026-09-10",
+            "y": 106.164098
+          },
+          {
+            "x": "2026-09-11",
+            "y": 109.219135
+          },
+          {
+            "x": "2026-09-14",
+            "y": 108.126759
+          },
+          {
+            "x": "2026-09-15",
+            "y": 112.718326
+          },
+          {
+            "x": "2026-09-16",
+            "y": 110.941718
+          },
+          {
+            "x": "2026-09-17",
+            "y": 113.264514
+          },
+          {
+            "x": "2026-09-18",
+            "y": 106.668268
+          },
+          {
+            "x": "2026-09-21",
+            "y": 116.577633
+          },
+          {
+            "x": "2026-09-22",
+            "y": 119.002463
+          },
+          {
+            "x": "2026-09-23",
+            "y": 118.384254
+          },
+          {
+            "x": "2026-09-24",
+            "y": 116.595639
+          },
+          {
+            "x": "2026-09-25",
+            "y": 121.223216
+          },
+          {
+            "x": "2026-09-28",
+            "y": 112.526256
+          },
+          {
+            "x": "2026-09-29",
+            "y": 110.497572
+          },
+          {
+            "x": "2026-09-30",
+            "y": 110.461557
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F5B942",
+        "dailyMove": {
+          "value": "-0.03%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 126,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 143.183093,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.773966,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI Chips: Intel Rises 3.7%",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 105.031272
+      },
+      "displayText": "105.03",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

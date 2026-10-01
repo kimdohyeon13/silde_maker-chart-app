@@ -1,0 +1,273 @@
+{
+  "id": "03-era1-starting-line",
+  "sourceImage": "input/03-era1-starting-line.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis 'Are Open Models Catching Up?', 2026년 8월 22일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "1기 출발선 : GPT-3.5 대 라마2-70B",
+    "subtitle": "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다",
+    "source": "자료: SemiAnalysis 'Are Open Models Catching Up?', 2026년 8월 22일",
+    "timeRange": "2023년 7월",
+    "xAxis": {
+      "label": "벤치마크",
+      "type": "category",
+      "tickValues": [
+        "종합",
+        "상식 TriviaQA",
+        "코딩 HumanEval",
+        "지식 MMLU-Pro",
+        "수학 GSM8K"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "정규화 점수",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "GPT-3.5 터보 (클로즈드)",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      },
+      {
+        "name": "라마2-70B (오픈)",
+        "role": "secondary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "GPT-3.5 터보 (클로즈드)",
+        "data": [
+          {
+            "x": "종합",
+            "y": 75.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "상식 TriviaQA",
+            "y": 86.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "코딩 HumanEval",
+            "y": 76.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "지식 MMLU-Pro",
+            "y": 60.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "수학 GSM8K",
+            "y": 78.8,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      },
+      {
+        "name": "라마2-70B (오픈)",
+        "data": [
+          {
+            "x": "종합",
+            "y": 39.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "상식 TriviaQA",
+            "y": 39.2,
+            "confidence": 0.74
+          },
+          {
+            "x": "코딩 HumanEval",
+            "y": 35.3,
+            "confidence": 0.74
+          },
+          {
+            "x": "지식 MMLU-Pro",
+            "y": 28.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "수학 GSM8K",
+            "y": 57.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.345,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 4.1,
+        "absoluteChange": 3.1,
+        "from": 75.7,
+        "to": 78.8
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 86.7,
+        "at": ""
+      },
+      "min": {
+        "value": 60.6,
+        "at": ""
+      },
+      "average": 75.7,
+      "median": 76.7,
+      "range": 26.1
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "1기 출발선 : GPT-3.5 대 라마2-70B",
+    "subMessage": "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다",
+    "headline": "1기 출발선 : GPT-3.5 대 라마2-70B",
+    "summary": "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis 'Are Open Models Catching Up?', 2026년 8월 22일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 57.0
+      },
+      "displayText": "1기 출발선 : GPT-3.5",
+      "reason": "2023년 7월 라마2 출시 시점 정규화 점수. 상식 문제에서 47.5점, 코딩에서 41.4점 벌어져 있었다"
+    },
+    "densityLevel": "balanced"
+  }
+}

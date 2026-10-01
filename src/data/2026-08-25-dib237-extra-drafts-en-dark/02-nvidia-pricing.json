@@ -1,0 +1,204 @@
+{
+  "id": "02-nvidia-pricing",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "exact",
+    "preservedElements": [
+      "the two figures stated in S11",
+      "the shipment timing and covered systems",
+      "the Vera Rubin 200 rack cost outlook",
+      "source attribution"
+    ],
+    "changedElements": [
+      "Paperlogy 900 title and 300 subtitle",
+      "1,920×1,080 16:9 comparison-table layout",
+      "the two figures organized into one table",
+      "natural financial-English translation",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "notes": "Uses only the figures and conditions stated in the dib-237 S11 Bloomberg report. Higher memory prices are retained as the stated reason for the increase.",
+    "sourceAttribution": "Source: Bloomberg"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan applied first",
+      "status": "pass",
+      "detail": "The format, density, labels, and source were set before writing the two-row comparison table."
+    },
+    {
+      "id": "source-exact",
+      "label": "S11 figures preserved",
+      "status": "pass",
+      "detail": "The maximum increase, covered shipments, and rack-cost outlook are copied from S11 without added calculations or estimates."
+    },
+    {
+      "id": "paired-data",
+      "label": "Korean-English figures, order, and colors match",
+      "status": "pass",
+      "detail": "The English version uses the same two rows and figures, with only the text translated into natural financial English."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 canvas",
+      "status": "pass",
+      "detail": "canvasHeight 540 contracts a 1,920×1,080 output."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "Nvidia AI server pricing and rack economics",
+    "subtitle": "Up to 17% higher; Vera Rubin 200 racks seen above $8 million",
+    "source": "Source: Bloomberg"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "48%",
+        "align": "left"
+      },
+      {
+        "key": "reading",
+        "label": "Figure",
+        "dataType": "text",
+        "width": "52%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "AI server pricing (Vera Rubin and Grace Blackwell systems)",
+            "displayValue": "AI server pricing (Vera Rubin and Grace Blackwell systems)"
+          },
+          "reading": {
+            "value": "Up to 17% higher · shipments beginning early next year",
+            "displayValue": "Up to 17% higher · shipments beginning early next year"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Vera Rubin 200 rack",
+            "displayValue": "Vera Rubin 200 rack"
+          },
+          "reading": {
+            "value": "Forecast above $8 million",
+            "displayValue": "Forecast above $8 million"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "lineHeight": 1,
+      "fontSize": {
+        "header": "17px",
+        "body": "22px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "numeric": 700,
+        "rowHeader": 700,
+        "header": 700,
+        "groupHeader": 700
+      },
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "rowHeight": 29,
+      "highlightMode": "text",
+      "groupHeaderTone": "band",
+      "sectionRules": true,
+      "sectionRuleColor": "#24433D"
+    }
+  },
+  "narrative": {
+    "headMessage": "Nvidia AI server pricing and rack economics",
+    "subMessage": "Up to 17% higher; Vera Rubin 200 racks seen above $8 million",
+    "headline": "Nvidia AI server pricing and rack economics",
+    "summary": "Bloomberg reported that Nvidia told major customers AI server prices would rise by up to 17%.",
+    "story": "The increase applies to shipments beginning early next year and systems built with Vera Rubin and Grace Blackwell chips. Vera Rubin 200 racks are forecast to cost more than $8 million each. Higher memory prices were cited as the reason.",
+    "keyTakeaways": [
+      "The increase is capped at 17%.",
+      "The covered shipments are Vera Rubin and Grace Blackwell systems beginning early next year.",
+      "Vera Rubin 200 racks are forecast to cost more than $8 million each."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the two figures and shipment conditions with the Bloomberg report.",
+    "contextualNotes": [
+      "Source: Bloomberg",
+      "Higher memory prices were cited as the reason for the increase."
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "accent": "#00E0A4",
+      "backgroundTone": "dark",
+      "positive": "#D92D20",
+      "negative": "#175CD3"
+    },
+    "densityLevel": "balanced"
+  }
+}

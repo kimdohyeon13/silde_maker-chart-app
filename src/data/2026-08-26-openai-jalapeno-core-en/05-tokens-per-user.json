@@ -1,0 +1,191 @@
+{
+  "id": "05-tokens-per-user",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Token throughput per user at minimum TBT",
+    "preservedElements": [
+      "GPT-OSS, DeepSeek, and Kimi comparison",
+      "Tokens per user at the minimum-TBT point",
+      "Jalapeño and comparison-baseline series",
+      "All source values and model order"
+    ],
+    "changedElements": [
+      "Recomposed the three models as grouped horizontal bars",
+      "Displayed exact value labels on every bar",
+      "Applied Paperlogy typography and toss-clean spacing"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Uses only the official OpenAI first-results values for tokens per user at minimum TBT. No competitor identity or additional multiple was inferred.",
+    "sourceAttribution": "OpenAI · Jalapeño first results · 2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Three models by two series, six bars total, with every exact value shown directly."
+    },
+    {
+      "id": "exact-official-values",
+      "label": "Official OpenAI values",
+      "status": "pass",
+      "detail": "GPT-OSS 1,459 vs 535, DeepSeek 700 vs 169, and Kimi 694 vs 182 tok/s/user are preserved exactly."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual data and order parity",
+      "status": "pass",
+      "detail": "The six values, model order, series, and axis range match the Korean file."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "canvasHeight 540, title weight 900, and subtitle weight 300 are specified."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask covers JSON authoring; export/preflight remains with the parent agent."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Jalapeño leads on tokens per user",
+    "subtitle": "Tokens per user at the minimum-TBT point · Unit: tok/s/user",
+    "source": "Source: OpenAI, Jalapeño first results (2026-08-25)",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "Model",
+      "type": "category",
+      "tickValues": ["GPT-OSS", "DeepSeek", "Kimi"],
+      "displayTickValues": ["GPT-OSS", "DeepSeek", "Kimi"],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Tokens per user",
+      "type": "value",
+      "tickValues": ["0", "400", "800", "1,200", "1,600"],
+      "unit": "tok/s/user",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1600
+    },
+    "legend": [
+      {
+        "name": "Jalapeño",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#155EEF"
+      },
+      {
+        "name": "Comparison baseline",
+        "role": "secondary",
+        "originalColor": "#98A2B3",
+        "remakeColor": "#98A2B3"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Jalapeño",
+        "data": [
+          { "x": "GPT-OSS", "y": 1459, "confidence": 1, "displayValue": "1,459" },
+          { "x": "DeepSeek", "y": 700, "confidence": 1, "displayValue": "700" },
+          { "x": "Kimi", "y": 694, "confidence": 1, "displayValue": "694" }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#155EEF"
+      },
+      {
+        "name": "Comparison baseline",
+        "data": [
+          { "x": "GPT-OSS", "y": 535, "confidence": 1, "displayValue": "535" },
+          { "x": "DeepSeek", "y": 169, "confidence": 1, "displayValue": "169" },
+          { "x": "Kimi", "y": 182, "confidence": 1, "displayValue": "182" }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#98A2B3"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "Jalapeño leads on tokens per user",
+    "subMessage": "Only official comparison values at the minimum-TBT point are shown.",
+    "headline": "Jalapeño leads on tokens per user",
+    "summary": "Jalapeño bars are higher than the comparison baseline for all three models.",
+    "story": "The chart compares tokens per user at the minimum-TBT point for each model.",
+    "keyTakeaways": ["Model order and values are preserved from the official OpenAI results."],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#98A2B3"],
+      "positive": "#155EEF",
+      "negative": "#98A2B3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 18px 2px",
+    "sourcePadding": "0 28px 8px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "barColorMode": "series",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "numberLocale": "en"
+  }
+}

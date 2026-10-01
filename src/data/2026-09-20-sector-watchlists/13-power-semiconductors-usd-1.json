@@ -1,0 +1,708 @@
+{
+  "id": "13-power-semiconductors-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.006Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "전력·아날로그 반도체",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 8종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TXN",
+            "displayValue": "TXN\n텍사스인스트루먼트",
+            "sideValue": {
+              "displayValue": "+3.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "아날로그 칩",
+            "displayValue": "아날로그 칩"
+          },
+          "current": {
+            "value": "266.64",
+            "displayValue": "266"
+          },
+          "m1": {
+            "value": "-0.3%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "52.5%",
+            "displayValue": "52%"
+          },
+          "high52": {
+            "value": "79.8%",
+            "displayValue": "79%"
+          },
+          "target": {
+            "value": "324.71",
+            "displayValue": "324\n21%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "51.8%",
+            "displayValue": "51%"
+          },
+          "pe": {
+            "value": "25.7x",
+            "displayValue": "25x"
+          },
+          "marketCap": {
+            "value": "243.5 B",
+            "displayValue": "243"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ADI",
+            "displayValue": "ADI\n아날로그디바이스",
+            "sideValue": {
+              "displayValue": "+3.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "아날로그 칩",
+            "displayValue": "아날로그 칩"
+          },
+          "current": {
+            "value": "375.72",
+            "displayValue": "375"
+          },
+          "m1": {
+            "value": "1.0%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "55.1%",
+            "displayValue": "55%"
+          },
+          "high52": {
+            "value": "84.3%",
+            "displayValue": "84%"
+          },
+          "target": {
+            "value": "470.72",
+            "displayValue": "470\n25%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "65.5%",
+            "displayValue": "65%"
+          },
+          "pe": {
+            "value": "21.9x",
+            "displayValue": "21x"
+          },
+          "marketCap": {
+            "value": "182.1 B",
+            "displayValue": "182"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "IFNN.Y",
+            "displayValue": "IFNN.Y\n인피니온 ADR",
+            "sideValue": {
+              "displayValue": "+3.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력 반도체",
+            "displayValue": "전력 반도체"
+          },
+          "current": {
+            "value": "64.75",
+            "displayValue": "64"
+          },
+          "m1": {
+            "value": "1.4%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "67.5%",
+            "displayValue": "67%"
+          },
+          "high52": {
+            "value": "62.7%",
+            "displayValue": "62%"
+          },
+          "target": {
+            "value": "106.50",
+            "displayValue": "106\n64%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "25.3%",
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": "20.1x",
+            "displayValue": "20x"
+          },
+          "marketCap": {
+            "value": "83.187 B",
+            "displayValue": "83"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ON",
+            "displayValue": "ON\n온세미",
+            "sideValue": {
+              "displayValue": "+2.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력·센서",
+            "displayValue": "전력·센서"
+          },
+          "current": {
+            "value": "69.98",
+            "displayValue": "69"
+          },
+          "m1": {
+            "value": "-8.6%",
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "37.0%",
+            "displayValue": "37%"
+          },
+          "high52": {
+            "value": "51.9%",
+            "displayValue": "51%"
+          },
+          "target": {
+            "value": "103.84",
+            "displayValue": "103\n48%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "36.3%",
+            "displayValue": "36%"
+          },
+          "pe": {
+            "value": "15.6x",
+            "displayValue": "15x"
+          },
+          "marketCap": {
+            "value": "27.244 B",
+            "displayValue": "27"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "WOLF",
+            "displayValue": "WOLF\n울프스피드",
+            "sideValue": {
+              "displayValue": "+7.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "SiC 반도체",
+            "displayValue": "SiC 반도체"
+          },
+          "current": {
+            "value": "25.59",
+            "displayValue": "25"
+          },
+          "m1": {
+            "value": "-12.0%",
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "15.8%",
+            "displayValue": "15%"
+          },
+          "high52": {
+            "value": "31.7%",
+            "displayValue": "31%"
+          },
+          "target": {
+            "value": "27.50",
+            "displayValue": "27\n7%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "54.7%",
+            "displayValue": "54%"
+          },
+          "pe": {
+            "value": "-4.1x",
+            "displayValue": "-4x"
+          },
+          "marketCap": {
+            "value": "1.354 B",
+            "displayValue": "1"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NVTS",
+            "displayValue": "NVTS\n나비타스",
+            "sideValue": {
+              "displayValue": "+2.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "GaN·SiC",
+            "displayValue": "GaN·SiC"
+          },
+          "current": {
+            "value": "11.43",
+            "displayValue": "11"
+          },
+          "m1": {
+            "value": "-10.9%",
+            "displayValue": "-10%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "63.1%",
+            "displayValue": "63%"
+          },
+          "high52": {
+            "value": "33.5%",
+            "displayValue": "33%"
+          },
+          "target": {
+            "value": "14.07",
+            "displayValue": "14\n23%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "25.0%",
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": "-94.1x",
+            "displayValue": "-94x"
+          },
+          "marketCap": {
+            "value": "2.984 B",
+            "displayValue": "2"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "STM",
+            "displayValue": "STM\nST마이크로",
+            "sideValue": {
+              "displayValue": "+3.2%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력·차량 반도체",
+            "displayValue": "전력·차량 반도체"
+          },
+          "current": {
+            "value": "50.18",
+            "displayValue": "50"
+          },
+          "m1": {
+            "value": "-0.5%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "82.1%",
+            "displayValue": "82%"
+          },
+          "high52": {
+            "value": "61.6%",
+            "displayValue": "61%"
+          },
+          "target": {
+            "value": "75.04",
+            "displayValue": "75\n49%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "153.3%",
+            "displayValue": "153%"
+          },
+          "pe": {
+            "value": "18.3x",
+            "displayValue": "18x"
+          },
+          "marketCap": {
+            "value": "44.528 B",
+            "displayValue": "44"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "NXPI",
+            "displayValue": "NXPI\nNXP",
+            "sideValue": {
+              "displayValue": "0.0%",
+              "color": "#FFFFFF",
+              "background": "#667085",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "차량 반도체",
+            "displayValue": "차량 반도체"
+          },
+          "current": {
+            "value": "227.99",
+            "displayValue": "227"
+          },
+          "m1": {
+            "value": "1.3%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "3.6%",
+            "displayValue": "3%"
+          },
+          "high52": {
+            "value": "67.1%",
+            "displayValue": "67%"
+          },
+          "target": {
+            "value": "311.10",
+            "displayValue": "311\n36%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "27.5%",
+            "displayValue": "27%"
+          },
+          "pe": {
+            "value": "12.6x",
+            "displayValue": "12x"
+          },
+          "marketCap": {
+            "value": "57.491 B",
+            "displayValue": "57"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 53
+    }
+  },
+  "narrative": {
+    "headMessage": "전력·아날로그 반도체",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 8종목",
+    "headline": "전력·아날로그 반도체",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "TXN",
+      "instrument": "NASDAQGS:TXN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ADI",
+      "instrument": "NASDAQGS:ADI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76181839.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "IFNN.Y",
+      "instrument": "OTCPK:IFNN.Y",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76181839.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ON",
+      "instrument": "NASDAQGS:ON",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76181839.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "WOLF",
+      "instrument": "NYSE:WOLF",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76181839.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "NVTS",
+      "instrument": "NASDAQGM:NVTS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76181839.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "STM",
+      "instrument": "NYSE:STM",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76271283.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "NXPI",
+      "instrument": "NASDAQGS:NXPI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-76271283.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 8,
+    "rowCount": 8,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

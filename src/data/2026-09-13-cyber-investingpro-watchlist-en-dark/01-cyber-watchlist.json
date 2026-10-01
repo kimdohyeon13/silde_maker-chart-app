@@ -1,0 +1,453 @@
+{
+  "stylePreset": "market-terminal",
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 28,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "numberLocale": "en",
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "watermarkText": "@wltechrsrch",
+    "titleFontWeight": 900,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "chartHeight": 370
+  },
+  "emphasis": {
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "id": "cyber-watchlist",
+  "mode": "redesign",
+  "preserveIntent": {
+    "originalTitle": "Cybersecurity Market View",
+    "originalMessage": "InvestingPro Market View · Sep 13, 2026 · Prices & targets in USD",
+    "preservedElements": [
+      "5 ticker order",
+      "raw source values",
+      "FY+2 PE",
+      "EPS mean consensus",
+      "day direction"
+    ],
+    "changedElements": [
+      "select eight standard watchlist columns",
+      "translated names and business labels",
+      "truncate display decimals",
+      "C left rail styling",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "select-columns",
+    "truncate-display-decimals",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "Authenticated Pro snapshot",
+      "status": "pass",
+      "detail": "Five observed rows; day arrows checked on screenshot; raw decimals retained in source JSON."
+    }
+  ],
+  "narrative": {
+    "headMessage": "Cybersecurity Watchlist",
+    "headline": "Cybersecurity Watchlist",
+    "subMessage": "InvestingPro Market View · Sep 13, 2026 · Prices & targets in USD",
+    "summary": "InvestingPro Market View · Sep 13, 2026 · Prices & targets in USD",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "structure": {
+    "title": "Cybersecurity Watchlist",
+    "subtitle": "InvestingPro Market View · Sep 13, 2026 · Prices & targets in USD",
+    "source": "investing pro"
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "Ticker",
+        "dataType": "text",
+        "width": "20%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "Focus",
+        "dataType": "text",
+        "width": "15%",
+        "align": "left",
+        "isRowHeader": false
+      },
+      {
+        "key": "current",
+        "label": "Price",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right",
+        "isRowHeader": false
+      },
+      {
+        "key": "m1",
+        "label": "1M\nreturn",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right",
+        "isRowHeader": false
+      },
+      {
+        "key": "y1",
+        "label": "1Y\nreturn",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right",
+        "isRowHeader": false
+      },
+      {
+        "key": "target",
+        "label": "Target\nupside",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right",
+        "isRowHeader": false
+      },
+      {
+        "key": "eps",
+        "label": "EPS growth\nconsensus",
+        "dataType": "number",
+        "width": "13%",
+        "align": "right",
+        "isRowHeader": false
+      },
+      {
+        "key": "pe",
+        "label": "Fwd P/E\nFY+2",
+        "dataType": "number",
+        "width": "11%",
+        "align": "right",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRWD",
+            "displayValue": "CRWD\nCrowdStrike",
+            "sideValue": {
+              "displayValue": "1.0%↓",
+              "color": "#FFFFFF",
+              "background": "#175CD3",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Endpoint / SOC",
+            "displayValue": "Endpoint / SOC"
+          },
+          "current": {
+            "value": 206.74,
+            "displayValue": "206"
+          },
+          "target": {
+            "value": 234.09,
+            "displayValue": "234\n+13%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 34.7,
+            "displayValue": "34%"
+          },
+          "pe": {
+            "value": 125.7,
+            "displayValue": "125x"
+          },
+          "m1": {
+            "value": -8.3,
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 89.6,
+            "displayValue": "+89%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PANW",
+            "displayValue": "PANW\nPalo Alto Networks",
+            "sideValue": {
+              "displayValue": "2.3%↓",
+              "color": "#FFFFFF",
+              "background": "#175CD3",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Security platform",
+            "displayValue": "Security platform"
+          },
+          "current": {
+            "value": 330.65,
+            "displayValue": "330"
+          },
+          "target": {
+            "value": 393.42,
+            "displayValue": "393\n+19%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 9.1,
+            "displayValue": "9%"
+          },
+          "pe": {
+            "value": 65.3,
+            "displayValue": "65x"
+          },
+          "m1": {
+            "value": -16.5,
+            "displayValue": "-16%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 68.4,
+            "displayValue": "+68%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FTNT",
+            "displayValue": "FTNT\nFortinet",
+            "sideValue": {
+              "displayValue": "1.8%↓",
+              "color": "#FFFFFF",
+              "background": "#175CD3",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Network security",
+            "displayValue": "Network security"
+          },
+          "current": {
+            "value": 156.07,
+            "displayValue": "156"
+          },
+          "target": {
+            "value": 163.13,
+            "displayValue": "163\n+4%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 25,
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": 40.7,
+            "displayValue": "40x"
+          },
+          "m1": {
+            "value": -5.7,
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 95.9,
+            "displayValue": "+95%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "S",
+            "displayValue": "S\nSentinelOne",
+            "sideValue": {
+              "displayValue": "0.3%↓",
+              "color": "#FFFFFF",
+              "background": "#175CD3",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Endpoint / response",
+            "displayValue": "Endpoint / response"
+          },
+          "current": {
+            "value": 19.75,
+            "displayValue": "19"
+          },
+          "target": {
+            "value": 24.25,
+            "displayValue": "24\n+22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 59.7,
+            "displayValue": "59%"
+          },
+          "pe": {
+            "value": 39.3,
+            "displayValue": "39x"
+          },
+          "m1": {
+            "value": -17.2,
+            "displayValue": "-17%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": 8,
+            "displayValue": "+8%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ZS",
+            "displayValue": "ZS\nZscaler",
+            "sideValue": {
+              "displayValue": "0.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "2px 5px",
+              "borderRadius": "999px",
+              "fontSize": "12px",
+              "fontWeight": 750
+            }
+          },
+          "keyword": {
+            "value": "Access / data",
+            "displayValue": "Access / data"
+          },
+          "current": {
+            "value": 164.54,
+            "displayValue": "164"
+          },
+          "target": {
+            "value": 207.18,
+            "displayValue": "207\n+25%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": 16.6,
+            "displayValue": "16%"
+          },
+          "pe": {
+            "value": 26.8,
+            "displayValue": "26x"
+          },
+          "m1": {
+            "value": -12.6,
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": -41.9,
+            "displayValue": "-41%",
+            "highlight": "negative"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 76,
+      "cellPadding": "2px 6px",
+      "lineHeight": 1.2,
+      "zebraStripe": false,
+      "zebraOpacity": 0.055,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "15px",
+        "body": "18px",
+        "total": "18px",
+        "badge": "12px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 48,
+      "maxRowHeight": 84,
+      "headerTone": "tinted",
+      "groupHeaderTone": "accent-rule",
+      "rowRules": "soft",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 550,
+        "rowHeader": 650,
+        "header": 650,
+        "groupHeader": 650
+      }
+    }
+  }
+}

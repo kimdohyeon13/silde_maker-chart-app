@@ -1,0 +1,303 @@
+{
+  "id": "dib263-13",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-13.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "반도체 지수, 금리 부담에도 1.32% 상승",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "y-axis ticks kept at the origin's 200 step and extended to 12,800 so the top tick covers the max close",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 29일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 28일과 29일 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@wtm_waltechman",
+    "numberLocale": "ko",
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 300
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "반도체 지수, 금리 부담에도 1.32% 상승",
+    "subtitle": "9월 29일: 12,629.16, 하루 새 1.32% 상승",
+    "source": "자료: Yahoo Finance · 2026년 9월 29일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "지수",
+      "type": "value",
+      "tickValues": [
+        "11000",
+        "11200",
+        "11400",
+        "11600",
+        "11800",
+        "12000",
+        "12200",
+        "12400",
+        "12600",
+        "12800"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 11000,
+      "max": 12800
+    },
+    "legend": [
+      {
+        "name": "반도체 지수",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "반도체 지수",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 11535.0498
+          },
+          {
+            "x": "2026-09-01",
+            "y": 11288.6104
+          },
+          {
+            "x": "2026-09-02",
+            "y": 11339.25
+          },
+          {
+            "x": "2026-09-03",
+            "y": 11352.1299
+          },
+          {
+            "x": "2026-09-04",
+            "y": 11735.2598
+          },
+          {
+            "x": "2026-09-08",
+            "y": 11887.8701
+          },
+          {
+            "x": "2026-09-09",
+            "y": 11931.3203
+          },
+          {
+            "x": "2026-09-10",
+            "y": 11614.1699
+          },
+          {
+            "x": "2026-09-11",
+            "y": 11824
+          },
+          {
+            "x": "2026-09-14",
+            "y": 11131.2803
+          },
+          {
+            "x": "2026-09-15",
+            "y": 11175.5498
+          },
+          {
+            "x": "2026-09-16",
+            "y": 11246.1104
+          },
+          {
+            "x": "2026-09-17",
+            "y": 11599.4902
+          },
+          {
+            "x": "2026-09-18",
+            "y": 11921.6904
+          },
+          {
+            "x": "2026-09-21",
+            "y": 12433.1699
+          },
+          {
+            "x": "2026-09-22",
+            "y": 12689.8203
+          },
+          {
+            "x": "2026-09-23",
+            "y": 12534.2803
+          },
+          {
+            "x": "2026-09-24",
+            "y": 12492.54
+          },
+          {
+            "x": "2026-09-25",
+            "y": 12668.9297
+          },
+          {
+            "x": "2026-09-28",
+            "y": 12465.2402
+          },
+          {
+            "x": "2026-09-29",
+            "y": 12629.1611
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+1.32%",
+          "color": "#D92D20",
+          "layout": "two-column",
+          "label": "오늘"
+        }
+      }
+    ],
+    "totalDataPoints": 21,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 29일: 12,629.16, 하루 새 1.32% 상승",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 12689.8203,
+        "series": "all"
+      },
+      "min": {
+        "value": 11131.2803,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "반도체 지수, 금리 부담에도 1.32% 상승",
+    "subMessage": "9월 29일: 12,629.16, 하루 새 1.32% 상승"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 12629.1611
+      },
+      "displayText": "12,629",
+      "reason": "9월 29일: 12,629.16, 하루 새 1.32% 상승"
+    },
+    "densityLevel": "focused"
+  }
+}

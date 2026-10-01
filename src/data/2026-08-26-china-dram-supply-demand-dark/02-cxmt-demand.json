@@ -1,0 +1,365 @@
+{
+  "id": "02-cxmt-demand",
+  "mode": "faithful",
+  "sourceImage": "input/02-cxmt-demand.png",
+  "sourceImages": [
+    "input/02-cxmt-demand.png"
+  ],
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "CXMT supply to cover 50% of China DRAM demand by 2028E",
+    "originalMessage": "CXMT supply to cover 50% of China DRAM demand by 2028E",
+    "sourceAttribution": "Company data, Goldman Sachs Global Investment Research",
+    "preservedElements": [
+      "2024~2028E 순서",
+      "CXMT 공급 막대와 중국 DRAM 수요 막대",
+      "공급/수요 비율을 나타내는 S/D 선",
+      "0% 기준선",
+      "Company data, Goldman Sachs Global Investment Research 출처"
+    ],
+    "changedElements": [
+      "원본의 라이트 색상과 Paperlogy 타이포로 정리",
+      "화면에서 읽은 막대값과 S/D 비율을 source-visible 근사값으로 기록",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 crop에 인쇄된 정확한 데이터 표가 없어 막대 높이와 축 눈금에서 읽은 근사값입니다. 정확한 원자료 수치로 해석하지 않습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-visible-approximation",
+      "label": "이미지 기반 근사값 표시",
+      "status": "warning",
+      "detail": "공급·수요 막대와 S/D 선은 원본 이미지의 축과 막대 높이에서 읽은 근사값입니다."
+    },
+    {
+      "id": "combo-structure-preserved",
+      "label": "콤보 차트 구조 보존",
+      "status": "pass",
+      "detail": "공급·수요는 좌측 축 막대, S/D는 우측 축 선으로 유지했습니다."
+    },
+    {
+      "id": "zero-guide-preserved",
+      "label": "0% 기준선 보존",
+      "status": "pass",
+      "detail": "S/D 축의 0% 점선 가이드가 원본과 같은 의미로 남아 있습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 900·300 형식",
+      "status": "pass",
+      "detail": "제목은 Paperlogy 900, 부제와 라벨은 Paperlogy 300을 사용합니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "CXMT, 2028년 중국 DRAM 수요의 50% 공급 목표",
+    "subtitle": "공급 단위 mn GB · S/D는 우측 백분율 축",
+    "source": "출처: 기업 자료, Goldman Sachs Global Investment Research",
+    "timeRange": "2024~2028E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E"
+      ],
+      "displayTickValues": [
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "공급·수요 (mn GB)",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5,000",
+        "10,000",
+        "15,000",
+        "20,000",
+        "25,000"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 25000,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "S/D",
+      "type": "numeric",
+      "tickValues": [
+        "-100",
+        "-80",
+        "-60",
+        "-40",
+        "-20",
+        "0"
+      ],
+      "unit": "%",
+      "min": -100,
+      "max": 0,
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "CXMT 공급 [mn GB]",
+        "role": "primary",
+        "originalColor": "#5B9BD5",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "중국 DRAM 수요 [mn GB]",
+        "role": "primary",
+        "originalColor": "#ED7D31",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "S/D [%]",
+        "role": "secondary",
+        "originalColor": "#7F7F7F",
+        "remakeColor": "#4AA8FF"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "CXMT 공급 [mn GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "2024",
+            "y": 2000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025",
+            "y": 4000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 5500,
+            "confidence": 0.65
+          },
+          {
+            "x": "2027E",
+            "y": 7500,
+            "confidence": 0.65
+          },
+          {
+            "x": "2028E",
+            "y": 10000,
+            "confidence": 0.65
+          }
+        ]
+      },
+      {
+        "name": "중국 DRAM 수요 [mn GB]",
+        "renderAs": "bar",
+        "role": "primary",
+        "axis": "left",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "2024",
+            "y": 7000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2025",
+            "y": 8000,
+            "confidence": 0.7
+          },
+          {
+            "x": "2026E",
+            "y": 9200,
+            "confidence": 0.65
+          },
+          {
+            "x": "2027E",
+            "y": 12000,
+            "confidence": 0.65
+          },
+          {
+            "x": "2028E",
+            "y": 19500,
+            "confidence": 0.65
+          }
+        ]
+      },
+      {
+        "name": "S/D [%]",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#4AA8FF",
+        "data": [
+          {
+            "x": "2024",
+            "y": -71.4,
+            "confidence": 0.65
+          },
+          {
+            "x": "2025",
+            "y": -50,
+            "confidence": 0.65
+          },
+          {
+            "x": "2026E",
+            "y": -40.2,
+            "confidence": 0.6
+          },
+          {
+            "x": "2027E",
+            "y": -37.5,
+            "confidence": 0.6
+          },
+          {
+            "x": "2028E",
+            "y": -48.7,
+            "confidence": 0.6
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 15,
+    "quality": {
+      "overallConfidence": 0.64,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 이미지에서 막대값과 S/D 선의 세부 수치는 축에서 읽은 source-visible 근사값입니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.72,
+      "description": "공급과 수요 모두 증가하지만 수요 막대가 계속 더 높습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.44,
+      "description": "S/D 선은 2027E에 가장 좁혀졌다가 2028E에 다시 벌어집니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 19500,
+        "at": "2028E 중국 DRAM 수요"
+      },
+      "min": {
+        "value": 2000,
+        "at": "2024 CXMT 공급"
+      },
+      "average": 8800,
+      "median": 7500,
+      "range": 17500
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "CXMT, 2028년 중국 DRAM 수요의 50% 공급 목표",
+    "subMessage": "공급은 늘지만 수요도 함께 커진다. S/D 선은 2027E에 가장 좁혀졌다가 2028E 다시 벌어진다.",
+    "headline": "CXMT, 2028년 중국 DRAM 수요의 50% 공급 목표",
+    "summary": "CXMT 공급과 중국 DRAM 수요를 같은 기간에 비교한 콤보 차트입니다.",
+    "story": "공급 막대는 2024년 약 2,000mn GB에서 2028E 약 10,000mn GB로 늘어납니다. 수요 막대도 같은 기간 약 7,000mn GB에서 19,500mn GB로 커져, S/D 선은 2027E에 가장 좁혀진 뒤 2028E 다시 낮아집니다.",
+    "keyTakeaways": [
+      "2028E CXMT 공급은 약 10,000mn GB",
+      "2028E 중국 DRAM 수요는 약 19,500mn GB",
+      "공급과 수요의 격차는 2028E에도 남아 있음"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "막대는 좌측 mn GB 축, S/D 선은 우측 % 축에서 각각 읽습니다.",
+    "contextualNotes": [
+      "Company data, Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [
+      {
+        "from": {
+          "x": "2024",
+          "y": 0
+        },
+        "to": {
+          "x": "2028E",
+          "y": 0
+        },
+        "style": "dashed",
+        "color": "#A7A7A7",
+        "label": "0%"
+      }
+    ],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "id": "15-ccml-holdings",
+  "sourceImage": "input/15-ccml-holdings.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 라운드힐 인베스트먼츠 보유 내역, 2026년 9월 10일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "라운드힐 MLCC·전자부품 ETF의 종목별 비중",
+    "subtitle": "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다",
+    "source": "자료: 라운드힐 인베스트먼츠 보유 내역, 2026년 9월 10일",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "무라타",
+        "삼성전기",
+        "차오저우 싼환",
+        "야게오",
+        "광둥 펑화",
+        "타이요유덴",
+        "왈신테크",
+        "홀리스톤"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "편입 비중",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "편입 비중",
+        "data": [
+          {
+            "x": "무라타",
+            "y": 23.2,
+            "confidence": 0.74
+          },
+          {
+            "x": "삼성전기",
+            "y": 21.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "차오저우 싼환",
+            "y": 15.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "야게오",
+            "y": 14.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "광둥 펑화",
+            "y": 7.7,
+            "confidence": 0.74
+          },
+          {
+            "x": "타이요유덴",
+            "y": 6.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "왈신테크",
+            "y": 5.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "홀리스톤",
+            "y": 5.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.436,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -77.6,
+        "absoluteChange": -18.0,
+        "from": 23.2,
+        "to": 5.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 23.2,
+        "at": ""
+      },
+      "min": {
+        "value": 5.2,
+        "at": ""
+      },
+      "average": 12.5375,
+      "median": 11.2,
+      "range": 18.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "라운드힐 MLCC·전자부품 ETF의 종목별 비중",
+    "subMessage": "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다",
+    "headline": "라운드힐 MLCC·전자부품 ETF의 종목별 비중",
+    "summary": "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 라운드힐 인베스트먼츠 보유 내역, 2026년 9월 10일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 5.2
+      },
+      "displayText": "라운드힐 MLCC·전자부품 E",
+      "reason": "단위 퍼센트. 무라타와 삼성전기 둘이 전체의 45%를 차지합니다"
+    },
+    "densityLevel": "balanced"
+  }
+}

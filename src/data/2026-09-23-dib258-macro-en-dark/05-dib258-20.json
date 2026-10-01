@@ -1,0 +1,745 @@
+{
+  "id": "dib258-20",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-258-20.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "MSCI Korea, EM ETFs Rise on Memory Rally",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original series order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 22, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-sign-color",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했고 상승 빨강, 하락 파랑으로 칠했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@WorldTechRsrch",
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 300,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "MSCI Korea, EM ETFs Rise on Memory Rally",
+    "subtitle": "Sep 22: MSCI Korea +1.83%, MSCI EM +0.39%",
+    "source": "Source: Yahoo Finance · through the September 22, 2026 close",
+    "timeRange": "2026-06-23 to 2026-09-22",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-23",
+        "2026-07-13",
+        "2026-07-29",
+        "2026-08-17",
+        "2026-09-02",
+        "2026-09-22"
+      ],
+      "displayTickValues": [
+        "06-23",
+        "07-13",
+        "07-29",
+        "08-17",
+        "09-02",
+        "09-22"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "3 months ago = 100",
+      "type": "value",
+      "tickValues": [
+        "70",
+        "75",
+        "80",
+        "85",
+        "90",
+        "95",
+        "100",
+        "105",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 70,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "MSCI Korea",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "MSCI EM",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "MSCI Korea",
+        "data": [
+          {
+            "x": "2026-06-23",
+            "y": 100
+          },
+          {
+            "x": "2026-06-24",
+            "y": 102.6327
+          },
+          {
+            "x": "2026-06-25",
+            "y": 106.6597
+          },
+          {
+            "x": "2026-06-26",
+            "y": 102.6431
+          },
+          {
+            "x": "2026-06-29",
+            "y": 102.7575
+          },
+          {
+            "x": "2026-06-30",
+            "y": 105.0468
+          },
+          {
+            "x": "2026-07-01",
+            "y": 96.514
+          },
+          {
+            "x": "2026-07-02",
+            "y": 93.7253
+          },
+          {
+            "x": "2026-07-06",
+            "y": 98.7773
+          },
+          {
+            "x": "2026-07-07",
+            "y": 94.3236
+          },
+          {
+            "x": "2026-07-08",
+            "y": 95.0676
+          },
+          {
+            "x": "2026-07-09",
+            "y": 96.1238
+          },
+          {
+            "x": "2026-07-10",
+            "y": 95.4839
+          },
+          {
+            "x": "2026-07-13",
+            "y": 87.4194
+          },
+          {
+            "x": "2026-07-14",
+            "y": 92.0812
+          },
+          {
+            "x": "2026-07-15",
+            "y": 89.3028
+          },
+          {
+            "x": "2026-07-16",
+            "y": 84.9948
+          },
+          {
+            "x": "2026-07-17",
+            "y": 84.5682
+          },
+          {
+            "x": "2026-07-20",
+            "y": 84.7347
+          },
+          {
+            "x": "2026-07-21",
+            "y": 89.9584
+          },
+          {
+            "x": "2026-07-22",
+            "y": 88.6733
+          },
+          {
+            "x": "2026-07-23",
+            "y": 90.4579
+          },
+          {
+            "x": "2026-07-24",
+            "y": 84.7867
+          },
+          {
+            "x": "2026-07-27",
+            "y": 83.871
+          },
+          {
+            "x": "2026-07-28",
+            "y": 78.7981
+          },
+          {
+            "x": "2026-07-29",
+            "y": 75.0312
+          },
+          {
+            "x": "2026-07-30",
+            "y": 83.8762
+          },
+          {
+            "x": "2026-07-31",
+            "y": 81.7378
+          },
+          {
+            "x": "2026-08-03",
+            "y": 83.3715
+          },
+          {
+            "x": "2026-08-04",
+            "y": 89.0427
+          },
+          {
+            "x": "2026-08-05",
+            "y": 88.0021
+          },
+          {
+            "x": "2026-08-06",
+            "y": 85.3902
+          },
+          {
+            "x": "2026-08-07",
+            "y": 86.4152
+          },
+          {
+            "x": "2026-08-10",
+            "y": 84.8699
+          },
+          {
+            "x": "2026-08-11",
+            "y": 87.0135
+          },
+          {
+            "x": "2026-08-12",
+            "y": 91.5036
+          },
+          {
+            "x": "2026-08-13",
+            "y": 92.9344
+          },
+          {
+            "x": "2026-08-14",
+            "y": 93.5172
+          },
+          {
+            "x": "2026-08-17",
+            "y": 96.3059
+          },
+          {
+            "x": "2026-08-18",
+            "y": 88.4755
+          },
+          {
+            "x": "2026-08-19",
+            "y": 90.7544
+          },
+          {
+            "x": "2026-08-20",
+            "y": 92.6951
+          },
+          {
+            "x": "2026-08-21",
+            "y": 92.7888
+          },
+          {
+            "x": "2026-08-24",
+            "y": 90.3434
+          },
+          {
+            "x": "2026-08-25",
+            "y": 93.7305
+          },
+          {
+            "x": "2026-08-26",
+            "y": 93.2258
+          },
+          {
+            "x": "2026-08-27",
+            "y": 94.7659
+          },
+          {
+            "x": "2026-08-28",
+            "y": 93.7565
+          },
+          {
+            "x": "2026-08-31",
+            "y": 94.0999
+          },
+          {
+            "x": "2026-09-01",
+            "y": 91.4672
+          },
+          {
+            "x": "2026-09-02",
+            "y": 93.0593
+          },
+          {
+            "x": "2026-09-03",
+            "y": 93.9438
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.2674
+          },
+          {
+            "x": "2026-09-08",
+            "y": 98.8085
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.2612
+          },
+          {
+            "x": "2026-09-10",
+            "y": 95.0989
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.1894
+          },
+          {
+            "x": "2026-09-14",
+            "y": 91.6857
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.8262
+          },
+          {
+            "x": "2026-09-16",
+            "y": 91.3319
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.8959
+          },
+          {
+            "x": "2026-09-18",
+            "y": 94.334
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.4183
+          },
+          {
+            "x": "2026-09-22",
+            "y": 100.2185
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+1.83%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "MSCI EM",
+        "data": [
+          {
+            "x": "2026-06-23",
+            "y": 100
+          },
+          {
+            "x": "2026-06-24",
+            "y": 100.1191
+          },
+          {
+            "x": "2026-06-25",
+            "y": 101.1761
+          },
+          {
+            "x": "2026-06-26",
+            "y": 100.0298
+          },
+          {
+            "x": "2026-06-29",
+            "y": 100.3871
+          },
+          {
+            "x": "2026-06-30",
+            "y": 101.8461
+          },
+          {
+            "x": "2026-07-01",
+            "y": 98.9728
+          },
+          {
+            "x": "2026-07-02",
+            "y": 97.8115
+          },
+          {
+            "x": "2026-07-06",
+            "y": 100.5955
+          },
+          {
+            "x": "2026-07-07",
+            "y": 97.8413
+          },
+          {
+            "x": "2026-07-08",
+            "y": 98.6006
+          },
+          {
+            "x": "2026-07-09",
+            "y": 99.4194
+          },
+          {
+            "x": "2026-07-10",
+            "y": 99.598
+          },
+          {
+            "x": "2026-07-13",
+            "y": 96.025
+          },
+          {
+            "x": "2026-07-14",
+            "y": 97.7669
+          },
+          {
+            "x": "2026-07-15",
+            "y": 97.618
+          },
+          {
+            "x": "2026-07-16",
+            "y": 95.5635
+          },
+          {
+            "x": "2026-07-17",
+            "y": 94.2236
+          },
+          {
+            "x": "2026-07-20",
+            "y": 94.6256
+          },
+          {
+            "x": "2026-07-21",
+            "y": 97.2756
+          },
+          {
+            "x": "2026-07-22",
+            "y": 96.7545
+          },
+          {
+            "x": "2026-07-23",
+            "y": 96.1739
+          },
+          {
+            "x": "2026-07-24",
+            "y": 94.2832
+          },
+          {
+            "x": "2026-07-27",
+            "y": 94.7149
+          },
+          {
+            "x": "2026-07-28",
+            "y": 92.8391
+          },
+          {
+            "x": "2026-07-29",
+            "y": 90.9186
+          },
+          {
+            "x": "2026-07-30",
+            "y": 94.6702
+          },
+          {
+            "x": "2026-07-31",
+            "y": 95.4146
+          },
+          {
+            "x": "2026-08-03",
+            "y": 95.757
+          },
+          {
+            "x": "2026-08-04",
+            "y": 98.2582
+          },
+          {
+            "x": "2026-08-05",
+            "y": 97.8413
+          },
+          {
+            "x": "2026-08-06",
+            "y": 96.7992
+          },
+          {
+            "x": "2026-08-07",
+            "y": 97.7222
+          },
+          {
+            "x": "2026-08-10",
+            "y": 97.0225
+          },
+          {
+            "x": "2026-08-11",
+            "y": 97.4096
+          },
+          {
+            "x": "2026-08-12",
+            "y": 98.943
+          },
+          {
+            "x": "2026-08-13",
+            "y": 99.2705
+          },
+          {
+            "x": "2026-08-14",
+            "y": 99.1663
+          },
+          {
+            "x": "2026-08-17",
+            "y": 100.2233
+          },
+          {
+            "x": "2026-08-18",
+            "y": 97.2756
+          },
+          {
+            "x": "2026-08-19",
+            "y": 98.4219
+          },
+          {
+            "x": "2026-08-20",
+            "y": 99.1812
+          },
+          {
+            "x": "2026-08-21",
+            "y": 99.9256
+          },
+          {
+            "x": "2026-08-24",
+            "y": 98.4219
+          },
+          {
+            "x": "2026-08-25",
+            "y": 100.1191
+          },
+          {
+            "x": "2026-08-26",
+            "y": 100
+          },
+          {
+            "x": "2026-08-27",
+            "y": 100.6551
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.9553
+          },
+          {
+            "x": "2026-08-31",
+            "y": 99.7767
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.4045
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.9702
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.4466
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.2778
+          },
+          {
+            "x": "2026-09-08",
+            "y": 102.4713
+          },
+          {
+            "x": "2026-09-09",
+            "y": 101.9503
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.7469
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.9975
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.2433
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.9009
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.8413
+          },
+          {
+            "x": "2026-09-17",
+            "y": 99.6129
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.7916
+          },
+          {
+            "x": "2026-09-21",
+            "y": 102.4713
+          },
+          {
+            "x": "2026-09-22",
+            "y": 102.8733
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+0.39%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 128,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 22: MSCI Korea +1.83%, MSCI EM +0.39%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 106.6597,
+        "series": "all"
+      },
+      "min": {
+        "value": 75.0312,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "MSCI Korea, EM ETFs Rise on Memory Rally",
+    "subMessage": "Sep 22: MSCI Korea +1.83%, MSCI EM +0.39%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-22",
+        "y": 100.2185
+      },
+      "displayText": "100.22",
+      "reason": "Sep 22: MSCI Korea +1.83%, MSCI EM +0.39%"
+    },
+    "densityLevel": "focused"
+  }
+}

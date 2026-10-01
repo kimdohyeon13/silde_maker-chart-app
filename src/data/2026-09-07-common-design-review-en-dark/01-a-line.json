@@ -1,0 +1,280 @@
+{
+  "id": "a-line",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "2Q26 매출 402억 달러, 전년 동기 대비 34% 증가",
+    "preservedElements": [
+      "3Q24~2Q26의 8개 분기 순서와 값",
+      "단일 분기 매출 시리즈",
+      "0 기준축",
+      "십억 달러 단위",
+      "TSMC IR 출처",
+      "source-visible 데이터 상태"
+    ],
+    "changedElements": [
+      "Design review A: Quiet Report",
+      "Same source values, axes, rows, columns and source attribution; header, frame, palette and table rules varied.",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화",
+      "Refinement: separate multiline labels; rebalance table columns; soften axis/value typography; align line grid with the left axis."
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "slide_maker 스킬 동작 확인용 예시입니다. 저장소의 기존 검증 데이터를 재사용하고 형식만 바꿨습니다.",
+    "sourceAttribution": "Source: TSMC IR (2026-07-16)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "8 quarterly values on a zero-based 0–50 axis; one line or eight bars; table retains all 7 stock rows and 10 columns. Source content is shared by every design."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "borderColor": "#24433D",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "endLabelRightMargin": 148,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false,
+    "watermarkText": "@wltechrsrch",
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "TSMC Quarterly Revenue",
+    "subtitle": "3Q24–2Q26 · US$ billions",
+    "source": "Source: TSMC IR (2026-07-16)",
+    "timeRange": "3Q24~2Q26",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "displayTickValues": [
+        "3Q24",
+        "4Q24",
+        "1Q25",
+        "2Q25",
+        "3Q25",
+        "4Q25",
+        "1Q26",
+        "2Q26"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "Revenue",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue",
+        "data": [
+          {
+            "x": "3Q24",
+            "y": 23.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q24",
+            "y": 26.88,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q25",
+            "y": 25.53,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q25",
+            "y": 30.07,
+            "confidence": 0.74
+          },
+          {
+            "x": "3Q25",
+            "y": 33.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "4Q25",
+            "y": 33.73,
+            "confidence": 0.74
+          },
+          {
+            "x": "1Q26",
+            "y": 35.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "2Q26",
+            "y": 40.2,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원본 화면에서 읽은 값이므로 정밀 분석 전 TSMC 원자료 대조가 필요합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.537,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 71.1,
+        "absoluteChange": 16.7,
+        "from": 23.5,
+        "to": 40.2
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 40.2,
+        "at": "2Q26"
+      },
+      "min": {
+        "value": 23.5,
+        "at": "3Q24"
+      },
+      "average": 31.113749999999996,
+      "median": 31.585,
+      "range": 16.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "TSMC Quarterly Revenue",
+    "subMessage": "3Q24–2Q26 · US$ billions",
+    "headline": "TSMC Quarterly Revenue",
+    "summary": "3Q24–2Q26 · US$ billions",
+    "story": "형식 예시 2/3 — 같은 값을 추세 중심으로 읽는 꺾은선입니다.",
+    "keyTakeaways": [
+      "2Q26 매출 402억 달러로 8분기 중 최대입니다.",
+      "3Q24~2Q26 매출이 71.1% 늘었습니다.",
+      "수치는 원본 화면 기반 source-visible 값입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "마지막 분기 최고 매출과 8분기 상승 흐름을 함께 확인합니다.",
+    "contextualNotes": [
+      "Source: TSMC IR (2026-07-16) · source-visible · 저장소 기존 검증 데이터 재사용",
+      "데이터 상태: source-visible"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2Q26",
+        "y": 40.2
+      },
+      "displayText": "40.2",
+      "reason": "8분기 중 최대 분기 매출"
+    },
+    "densityLevel": "focused"
+  }
+}

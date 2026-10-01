@@ -1,0 +1,190 @@
+{
+  "id": "06-nvidia-ports-pike-scale",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시",
+    "preservedElements": [
+      "원문 숫자",
+      "단위",
+      "조건",
+      "순서",
+      "출처"
+    ],
+    "changedElements": [
+      "핵심 숫자만 그래프로 재구성",
+      "다크 터미널 팔레트",
+      "한영 라벨 분리"
+    ],
+    "dataFidelity": "exact",
+    "notes": "4.25GW와 8GW만 그래프에 사용했다. $150~200B는 GPU ASP가 아니라 GPU·CPU·네트워크를 포함한 시스템 매출이라는 조건을 부제와 원고에 보존했다.",
+    "sourceAttribution": "자료: NVIDIA·SB Energy·OpenAI 계약 설명",
+    "sourceKey": "06-nvidia-ports-pike-scale"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "회사별 핵심 숫자와 비교 관계를 먼저 고른 뒤 차트 유형과 축을 결정했습니다."
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "한국어 정본 숫자만 사용",
+      "status": "pass",
+      "detail": "manual-3 한국어 초안에 들어간 숫자만 사용하고 파생 수치를 추가하지 않았습니다."
+    },
+    {
+      "id": "paperlogy",
+      "label": "Paperlogy 위계",
+      "status": "pass",
+      "detail": "제목 900, 부제 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "endLabelRightMargin": 120,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "watermarkText": "@wtm_waltechman"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "엔비디아 PORTS-Pike 전력 규모",
+    "subtitle": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시",
+    "source": "자료: NVIDIA·SB Energy·OpenAI 계약 설명",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "initial",
+        "full"
+      ],
+      "displayTickValues": [
+        "초기 4.25GW",
+        "전체 8GW"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "전력 규모 (IT-GW)",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 9
+    },
+    "legend": [
+      {
+        "name": "IT-GW",
+        "role": "primary",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "IT-GW",
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "initial",
+            "y": 4.25,
+            "confidence": 1.0
+          },
+          {
+            "x": "full",
+            "y": 8.0,
+            "confidence": 1.0
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 1.0,
+      "missingPoints": 0,
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "엔비디아 PORTS-Pike 전력 규모",
+    "subMessage": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시",
+    "headline": "엔비디아 PORTS-Pike 전력 규모",
+    "summary": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "초기 4.25GW 한 세대에서 NVIDIA 시스템 매출 1,500억~2,000억달러 제시"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#4AA8FF"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

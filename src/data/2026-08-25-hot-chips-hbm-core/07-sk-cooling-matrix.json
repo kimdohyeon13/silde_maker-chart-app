@@ -1,0 +1,310 @@
+{
+  "id": "07-sk-cooling-matrix",
+  "sourceImage": "input/19-sk-cooling-matrix.png",
+  "analyzedAt": "2026-08-25T15:35:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "I-HBM Concept: Localized Hotspot Mitigation",
+    "originalMessage": "Compare SK hynix iHBM, Samsung HPB cooling + hybrid copper bonding, and Micron circuit design + enhanced base die.",
+    "sourceKey": "@wltechrsrch/hot-chips-cooling-matrix",
+    "sourceUrl": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management",
+    "preservedElements": [
+      "SK Hynix iHBM",
+      "Samsung Electronics HPB cooling + hybrid copper bonding",
+      "Micron Technology circuit design improvement + enhanced base die",
+      "Each company's core idea",
+      "Each company's key data",
+      "I-HBM localized hotspot mitigation diagram and i-HBM label",
+      "Source URL https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management"
+    ],
+    "changedElements": [
+      "Recomposed the source matrix as an editable comparison table",
+      "Added short Korean explanations alongside the exact technical concepts",
+      "Applied a light Paperlogy table hierarchy while keeping company order and colors"
+    ],
+    "dataFidelity": "exact",
+    "notes": "The three rows, technologies, core ideas, key data, company order, and source URL are copied from the source slide. The diagram's visual is represented by the i-HBM label and its dedicated first row.",
+    "sourceAttribution": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management; output credit @wltechrsrch"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "기업 3행×기술·핵심 아이디어·핵심 데이터 4열 비교표로 구성했습니다."
+    },
+    {
+      "id": "company-order-and-data",
+      "label": "기업 순서·핵심 데이터 보존",
+      "status": "pass",
+      "detail": "SK Hynix → Samsung Electronics → Micron Technology 순서와 각 회사의 key data를 원문과 대조했습니다."
+    },
+    {
+      "id": "source-url",
+      "label": "원문 URL 보존",
+      "status": "pass",
+      "detail": "원본 하단 URL을 preserveIntent.sourceUrl과 contextualNotes에 그대로 기록했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서·색 동일",
+      "status": "pass",
+      "detail": "KO/EN 파일의 행·열 순서, sourceKey, 회사별 강조 색을 동일하게 작성했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "이번 하위 작업은 JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "title": "I-HBM 개념: 국소 핫스팟 완화",
+    "subtitle": "SK hynix·Samsung·Micron의 HBM 발열 저감 아이디어와 핵심 데이터",
+    "source": "https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 10,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "11px 20px 0",
+    "contentPadding": "0 10px 0",
+    "sourcePadding": "0 20px 0",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "company",
+        "label": "회사",
+        "dataType": "text",
+        "width": "16%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "technology",
+        "label": "기술",
+        "dataType": "text",
+        "width": "21%",
+        "align": "left"
+      },
+      {
+        "key": "core_idea",
+        "label": "핵심 원리",
+        "dataType": "text",
+        "width": "40%",
+        "align": "left"
+      },
+      {
+        "key": "key_data",
+        "label": "주요 수치",
+        "dataType": "text",
+        "width": "23%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "SK Hynix",
+            "displayValue": "SK 하이닉스",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "iHBM",
+            "displayValue": "iHBM"
+          },
+          "core_idea": {
+            "value": "Embed a high-thermal-conductivity, electrically insulating cooling component inside the HBM's hot D2D PHY area, creating a dedicated heat path",
+            "displayValue": "HBM의 뜨거운 D2D PHY 영역 안에 열전도율이 높고 전기는 통하지 않는 냉각 부품을 넣어 전용 열 배출 경로를 만듭니다."
+          },
+          "key_data": {
+            "value": ">30% reduction in thermal resistance",
+            "displayValue": "열저항 30% 이상 감소",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "Samsung Electronics",
+            "displayValue": "삼성전자",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "HPB cooling +\nhybrid copper bonding",
+            "displayValue": "HPB 냉각 +\n하이브리드 구리 본딩"
+          },
+          "core_idea": {
+            "value": "Change chip stacking structure by moving DRAM to the side of the processor and placing a copper heat spreader directly above the processor core; use copper-to-copper bonding to eliminate thermal resistance",
+            "displayValue": "DRAM을 프로세서 옆으로 옮기고 프로세서 코어 바로 위에 구리 방열판을 배치합니다. 구리와 구리를 직접 붙여 열저항을 없앱니다."
+          },
+          "key_data": {
+            "value": "~30% temperature reduction;\n16% improvement in thermal impedance",
+            "displayValue": "온도 약 30% 감소;\n열 임피던스 16% 개선",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "company": {
+            "value": "Micron Technology",
+            "displayValue": "Micron Technology",
+            "highlight": "accent"
+          },
+          "technology": {
+            "value": "Circuit design improvement +\nenhanced base die",
+            "displayValue": "회로 설계 개선 +\n향상된 베이스 다이"
+          },
+          "core_idea": {
+            "value": "Improve cooling while boosting performance by refining internal circuit design and optimizing base die performance",
+            "displayValue": "내부 회로 설계를 다듬고 베이스 다이 성능을 최적화해 냉각과 성능을 함께 개선합니다."
+          },
+          "key_data": {
+            "value": ">20% improvement in energy efficiency",
+            "displayValue": "에너지 효율 20% 이상 개선",
+            "highlight": "positive"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 98,
+      "fitRowsToCanvas": false,
+      "minRowHeight": 98,
+      "maxRowHeight": 98,
+      "cellPadding": "6px 8px",
+      "lineHeight": 1.04,
+      "zebraStripe": false,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "sectionRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 500,
+        "numeric": 650,
+        "rowHeader": 800,
+        "header": 800,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "12px",
+        "body": "14px",
+        "total": "14px",
+        "badge": "10px",
+        "unit": "10px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "I-HBM 개념: 국소 핫스팟 완화",
+    "subMessage": "세 회사가 발열을 줄이는 방법은 서로 다릅니다.",
+    "headline": "I-HBM 개념: 국소 핫스팟 완화",
+    "summary": "SK hynix는 전용 열 배출 경로를, 삼성전자는 구리 방열·본딩을, Micron은 회로와 베이스 다이 개선을 제안합니다.",
+    "story": "원본의 i-HBM 개념도는 HBM 안의 뜨거운 D2D PHY 영역에서 열을 빼내는 구조를 보여줍니다. 아래 표는 세 회사의 기술과 핵심 데이터를 같은 순서로 비교합니다.",
+    "keyTakeaways": [
+      "SK hynix iHBM: 열저항 30% 이상 감소",
+      "Samsung HPB+hybrid copper bonding: 온도 약 30% 감소·열 임피던스 16% 개선",
+      "Micron circuit design+enhanced base die: 에너지 효율 20% 이상 개선"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "회사별 핵심 아이디어와 오른쪽 Key Data를 한 행씩 연결해 읽습니다.",
+    "contextualNotes": [
+      "Source URL: https://www.oscoo.com/news/sk-hynix-ihbm-a-new-path-for-ai-chip-heat-management",
+      "원본 다이어그램 라벨: [SK hynix i-HBM]",
+      "Output credit: @wltechrsrch"
+    ]
+  },
+  "data": {
+    "series": [],
+    "totalDataPoints": 0,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "sideways",
+      "strength": 0,
+      "description": "This is a company comparison matrix, not a time series.",
+      "recentDirection": "flat"
+    },
+    "volatility": {
+      "level": "very_low",
+      "coefficient": 0,
+      "description": "No quantitative time series is present."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": { "value": 0, "at": "" },
+      "min": { "value": 0, "at": "" },
+      "average": 0,
+      "median": 0,
+      "range": 0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#667085", "#98A2B3"],
+      "positive": "#175CD3",
+      "negative": "#D92D20",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": { "x": "SK Hynix", "y": 0 },
+      "reason": "The first row maps the iHBM hotspot diagram to its quantified thermal-resistance claim.",
+      "displayText": "iHBM · >30% thermal-resistance reduction"
+    },
+    "densityLevel": "detailed"
+  }
+}

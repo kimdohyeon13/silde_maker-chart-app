@@ -62,8 +62,10 @@ export function resolveBarCategoryAxisLayout(
       mode,
       maxCharsPerLine,
       maxLineCount,
+      // 회전 라벨은 xAxisHeight가 이미 제 높이를 확보한다.
+      // 여기에 큰 bottomMargin을 더하면 라벨 아래가 통째로 빈다.
       xAxisHeight: 92 + titleSpace,
-      bottomMargin: 32 + legendSpace,
+      bottomMargin: 12 + legendSpace,
       tickMargin: 14,
     };
   }
@@ -74,7 +76,7 @@ export function resolveBarCategoryAxisLayout(
       maxCharsPerLine,
       maxLineCount,
       xAxisHeight: 34 + maxLineCount * 18 + titleSpace,
-      bottomMargin: 22 + legendSpace,
+      bottomMargin: 10 + legendSpace,
       tickMargin: 12,
     };
   }

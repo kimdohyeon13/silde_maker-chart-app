@@ -1,0 +1,204 @@
+{
+  "id": "07-fcbga-bottleneck",
+  "sourceImage": "input/07-fcbga-bottleneck.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 아지노모토 자료와 업계 확인, 2026년 5월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "structure": {
+    "title": "FC-BGA 생산을 막는 다섯 가지 병목",
+    "subtitle": "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다",
+    "source": "자료: 아지노모토 자료와 업계 확인, 2026년 5월"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "part",
+        "label": "구분",
+        "dataType": "text",
+        "width": "50%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "why",
+        "label": "무엇이 문제인가",
+        "dataType": "text",
+        "width": "50%",
+        "align": "center",
+        "isRowHeader": false
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "part": {
+            "value": "ABF 필름",
+            "displayValue": "ABF 필름"
+          },
+          "why": {
+            "value": "여러 층을 쌓는 기판의 필수 절연재. 아지노모토가 사실상 독점하고 증설은 보수적",
+            "displayValue": "여러 층을 쌓는 기판의 필수 절연재. 아지노모토가 사실상 독점하고 증설은 보수적"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "part": {
+            "value": "저손실 동박적층판",
+            "displayValue": "저손실 동박적층판"
+          },
+          "why": {
+            "value": "빠른 신호를 손실 없이 보내야 함. 특히 T-glass 확보가 최대 관문",
+            "displayValue": "빠른 신호를 손실 없이 보내야 함. 특히 T-glass 확보가 최대 관문"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "part": {
+            "value": "동박(HVLP)",
+            "displayValue": "동박(HVLP)"
+          },
+          "why": {
+            "value": "신호 품질을 좌우하는 얇은 구리막. 미쓰이금속이 세계 시장을 독점",
+            "displayValue": "신호 품질을 좌우하는 얇은 구리막. 미쓰이금속이 세계 시장을 독점"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "part": {
+            "value": "장비",
+            "displayValue": "장비"
+          },
+          "why": {
+            "value": "레이저 드릴과 적층·검사 장비의 주문 대기가 길어짐. 특히 드릴이 병목",
+            "displayValue": "레이저 드릴과 적층·검사 장비의 주문 대기가 길어짐. 특히 드릴이 병목"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "part": {
+            "value": "공정",
+            "displayValue": "공정"
+          },
+          "why": {
+            "value": "넓고 두꺼워질수록 휨과 신뢰성 문제가 커져 수율이 떨어짐",
+            "displayValue": "넓고 두꺼워질수록 휨과 신뢰성 문제가 커져 수율이 떨어짐"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": "compact",
+      "zebraStripe": true,
+      "highlightMode": "cell",
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "FC-BGA 생산을 막는 다섯 가지 병목",
+    "subMessage": "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다",
+    "headline": "FC-BGA 생산을 막는 다섯 가지 병목",
+    "summary": "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 아지노모토 자료와 업계 확인, 2026년 5월"
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "FC-BGA 생산을 막는 다섯",
+      "reason": "소재부터 장비, 수율까지 한 곳이 아니라 전 구간에서 걸립니다"
+    },
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  }
+}

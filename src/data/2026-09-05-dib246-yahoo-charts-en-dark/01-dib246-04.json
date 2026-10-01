@@ -1,0 +1,473 @@
+{
+  "id": "dib246-04",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-246-04.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "01. US 10-Year Treasury Yield (%)",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 4, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-two-column",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 500,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 300,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "01. US 10-Year Treasury Yield (%)",
+    "subtitle": "Sep 4 close 4.78% · +0.46%",
+    "source": "Source: Yahoo Finance · through the September 4, 2026 close",
+    "timeRange": "2026-06-05 to 2026-09-04",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-05",
+        "2026-06-24",
+        "2026-07-14",
+        "2026-07-31",
+        "2026-08-19",
+        "2026-09-04"
+      ],
+      "displayTickValues": [
+        "06-05",
+        "06-24",
+        "07-14",
+        "07-31",
+        "08-19",
+        "09-04"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "Treasury yield",
+      "type": "value",
+      "tickValues": [
+        "4.35",
+        "4.40",
+        "4.45",
+        "4.50",
+        "4.55",
+        "4.60",
+        "4.65",
+        "4.70",
+        "4.75",
+        "4.80"
+      ],
+      "unit": "%",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 4.35,
+      "max": 4.8
+    },
+    "legend": [
+      {
+        "name": "US 10-year",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "US 10-year",
+        "data": [
+          {
+            "x": "2026-06-05",
+            "y": 4.536
+          },
+          {
+            "x": "2026-06-08",
+            "y": 4.552
+          },
+          {
+            "x": "2026-06-09",
+            "y": 4.528
+          },
+          {
+            "x": "2026-06-10",
+            "y": 4.542
+          },
+          {
+            "x": "2026-06-11",
+            "y": 4.463
+          },
+          {
+            "x": "2026-06-12",
+            "y": 4.487
+          },
+          {
+            "x": "2026-06-15",
+            "y": 4.469
+          },
+          {
+            "x": "2026-06-16",
+            "y": 4.428
+          },
+          {
+            "x": "2026-06-17",
+            "y": 4.463
+          },
+          {
+            "x": "2026-06-18",
+            "y": 4.451
+          },
+          {
+            "x": "2026-06-22",
+            "y": 4.509
+          },
+          {
+            "x": "2026-06-23",
+            "y": 4.493
+          },
+          {
+            "x": "2026-06-24",
+            "y": 4.402
+          },
+          {
+            "x": "2026-06-25",
+            "y": 4.392
+          },
+          {
+            "x": "2026-06-26",
+            "y": 4.372
+          },
+          {
+            "x": "2026-06-29",
+            "y": 4.374
+          },
+          {
+            "x": "2026-06-30",
+            "y": 4.418
+          },
+          {
+            "x": "2026-07-01",
+            "y": 4.475
+          },
+          {
+            "x": "2026-07-02",
+            "y": 4.485
+          },
+          {
+            "x": "2026-07-06",
+            "y": 4.479
+          },
+          {
+            "x": "2026-07-07",
+            "y": 4.529
+          },
+          {
+            "x": "2026-07-08",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-09",
+            "y": 4.539
+          },
+          {
+            "x": "2026-07-10",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-13",
+            "y": 4.609
+          },
+          {
+            "x": "2026-07-14",
+            "y": 4.585
+          },
+          {
+            "x": "2026-07-15",
+            "y": 4.545
+          },
+          {
+            "x": "2026-07-16",
+            "y": 4.569
+          },
+          {
+            "x": "2026-07-17",
+            "y": 4.541
+          },
+          {
+            "x": "2026-07-20",
+            "y": 4.598
+          },
+          {
+            "x": "2026-07-21",
+            "y": 4.628
+          },
+          {
+            "x": "2026-07-22",
+            "y": 4.657
+          },
+          {
+            "x": "2026-07-23",
+            "y": 4.703
+          },
+          {
+            "x": "2026-07-24",
+            "y": 4.679
+          },
+          {
+            "x": "2026-07-27",
+            "y": 4.641
+          },
+          {
+            "x": "2026-07-28",
+            "y": 4.604
+          },
+          {
+            "x": "2026-07-29",
+            "y": 4.622
+          },
+          {
+            "x": "2026-07-30",
+            "y": 4.663
+          },
+          {
+            "x": "2026-07-31",
+            "y": 4.745
+          },
+          {
+            "x": "2026-08-03",
+            "y": 4.686
+          },
+          {
+            "x": "2026-08-04",
+            "y": 4.627
+          },
+          {
+            "x": "2026-08-05",
+            "y": 4.617
+          },
+          {
+            "x": "2026-08-06",
+            "y": 4.67
+          },
+          {
+            "x": "2026-08-07",
+            "y": 4.66
+          },
+          {
+            "x": "2026-08-10",
+            "y": 4.699
+          },
+          {
+            "x": "2026-08-11",
+            "y": 4.684
+          },
+          {
+            "x": "2026-08-12",
+            "y": 4.682
+          },
+          {
+            "x": "2026-08-13",
+            "y": 4.641
+          },
+          {
+            "x": "2026-08-14",
+            "y": 4.696
+          },
+          {
+            "x": "2026-08-17",
+            "y": 4.724
+          },
+          {
+            "x": "2026-08-18",
+            "y": 4.706
+          },
+          {
+            "x": "2026-08-19",
+            "y": 4.653
+          },
+          {
+            "x": "2026-08-20",
+            "y": 4.696
+          },
+          {
+            "x": "2026-08-21",
+            "y": 4.738
+          },
+          {
+            "x": "2026-08-24",
+            "y": 4.704
+          },
+          {
+            "x": "2026-08-25",
+            "y": 4.639
+          },
+          {
+            "x": "2026-08-26",
+            "y": 4.664
+          },
+          {
+            "x": "2026-08-27",
+            "y": 4.672
+          },
+          {
+            "x": "2026-08-28",
+            "y": 4.72
+          },
+          {
+            "x": "2026-08-31",
+            "y": 4.758
+          },
+          {
+            "x": "2026-09-01",
+            "y": 4.796
+          },
+          {
+            "x": "2026-09-02",
+            "y": 4.796
+          },
+          {
+            "x": "2026-09-03",
+            "y": 4.762
+          },
+          {
+            "x": "2026-09-04",
+            "y": 4.784
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+0.46%",
+          "color": "#D92D20",
+          "layout": "two-column",
+          "label": "TODAY"
+        },
+        "seriesKind": "price"
+      }
+    ],
+    "totalDataPoints": 64,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 4 close 4.78% · +0.46%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.796000003814697,
+        "series": "all"
+      },
+      "min": {
+        "value": 4.372000217437744,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "01. US 10-Year Treasury Yield (%)",
+    "subMessage": "Sep 4 close 4.78% · +0.46%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-04",
+        "y": 4.784
+      },
+      "displayText": "4.784",
+      "reason": "Sep 4 close 4.78% · +0.46%"
+    },
+    "densityLevel": "focused"
+  }
+}

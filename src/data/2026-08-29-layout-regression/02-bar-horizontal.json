@@ -1,0 +1,294 @@
+{
+  "id": "02-bar-horizontal",
+  "sourceImage": "input/HQvlJaobgAAUv0o.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: 두 회사 공개 컴퓨팅 계획과 필요 ARR 성장률 · 2027년 이후는 시나리오 값"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 372,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "오픈AI·앤스로픽 컴퓨팅 계획과 필요 ARR",
+    "subtitle": "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다",
+    "source": "자료: 두 회사 공개 컴퓨팅 계획과 필요 ARR 성장률 · 2027년 이후는 시나리오 값",
+    "timeRange": "2026년 7월 ~ 2030년 말",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026년 7월",
+        "2026년 말",
+        "2027년 말",
+        "2028년",
+        "2030년 말"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "컴퓨팅 계획 (기가와트)",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "필요 누적 ARR (100억 달러)",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "컴퓨팅 계획 (기가와트)",
+        "data": [
+          {
+            "x": "2026년 7월",
+            "y": 6.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026년 말",
+            "y": 11,
+            "confidence": 0.74
+          },
+          {
+            "x": "2027년 말",
+            "y": 22,
+            "confidence": 0.74
+          },
+          {
+            "x": "2028년",
+            "y": 45,
+            "confidence": 0.74
+          },
+          {
+            "x": "2030년 말",
+            "y": 100,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "필요 누적 ARR (100억 달러)",
+        "data": [
+          {
+            "x": "2026년 7월",
+            "y": 11,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026년 말",
+            "y": 17.6,
+            "confidence": 0.74
+          },
+          {
+            "x": "2027년 말",
+            "y": 35,
+            "confidence": 0.74
+          },
+          {
+            "x": "2028년",
+            "y": 63,
+            "confidence": 0.74
+          },
+          {
+            "x": "2030년 말",
+            "y": 126,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.534,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 1438.5,
+        "absoluteChange": 93.5,
+        "from": 6.5,
+        "to": 100
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 100,
+        "at": ""
+      },
+      "min": {
+        "value": 6.5,
+        "at": ""
+      },
+      "average": 36.9,
+      "median": 22,
+      "range": 93.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "오픈AI·앤스로픽 컴퓨팅 계획과 필요 ARR",
+    "subMessage": "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다",
+    "headline": "오픈AI·앤스로픽 컴퓨팅 계획과 필요 ARR",
+    "summary": "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: 두 회사 공개 컴퓨팅 계획과 필요 ARR 성장률 · 2027년 이후는 시나리오 값"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 126
+      },
+      "displayText": "오픈AI·앤스로픽 컴퓨팅 계획",
+      "reason": "컴퓨팅이 15배 늘어나는 동안 합산 ARR도 11배로 커져야 계산이 맞는다"
+    },
+    "densityLevel": "balanced"
+  }
+}

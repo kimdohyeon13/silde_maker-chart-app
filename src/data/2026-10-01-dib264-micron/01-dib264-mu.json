@@ -1,0 +1,239 @@
+{
+  "id": "dib264-mu",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "마이크론 매출: 실제·가이던스 vs 예상",
+    "preservedElements": [
+      "원문 숫자 네 개"
+    ],
+    "changedElements": [],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: 마이크론 4분기 실적 발표, 월가 컨센서스",
+    "sourceKey": "micron-fq4-fy2026-earnings-release+wall-street-consensus"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-values",
+      "label": "원문 값 그대로",
+      "status": "pass",
+      "detail": "노션 원문 마이크론 절의 매출·예상·가이던스·컨센서스만 썼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "마이크론 매출: 실제·가이던스 vs 예상",
+    "subtitle": "단위: 10억 달러",
+    "source": "자료: 마이크론 4분기 실적 발표, 월가 컨센서스",
+    "timeRange": "단위: 10억 달러",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "FQ4_ACT",
+        "FQ4_EST",
+        "FQ1_GUIDE",
+        "FQ1_CONS"
+      ],
+      "displayTickValues": [
+        "4분기 매출 실제",
+        "4분기 매출 예상",
+        "1분기 매출 가이던스",
+        "1분기 매출 컨센서스"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "FQ4_ACT",
+        "FQ4_EST",
+        "FQ1_GUIDE",
+        "FQ1_CONS"
+      ],
+      "displayTickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "4분기 매출 실제",
+        "4분기 매출 예상",
+        "1분기 매출 가이던스",
+        "1분기 매출 컨센서스"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "매출",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출",
+        "data": [
+          {
+            "x": "FQ4_ACT",
+            "y": 54.23,
+            "displayLabel": "54.23",
+            "color": "#087A68"
+          },
+          {
+            "x": "FQ4_EST",
+            "y": 51.07,
+            "displayLabel": "51.07",
+            "color": "#BDD8D1"
+          },
+          {
+            "x": "FQ1_GUIDE",
+            "y": 61.5,
+            "displayLabel": "61.5",
+            "color": "#087A68"
+          },
+          {
+            "x": "FQ1_CONS",
+            "y": 57.0,
+            "displayLabel": "57.0",
+            "color": "#BDD8D1"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "source page values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "회계연도 4분기 실제 매출과 1분기 매출 가이던스",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "source page values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 61.5,
+        "at": "FQ1_GUIDE"
+      },
+      "min": {
+        "value": 51.07,
+        "at": "FQ4_EST"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "마이크론 매출: 실제·가이던스 vs 예상",
+    "subMessage": "회계연도 4분기 실제 매출과 1분기 매출 가이던스",
+    "headline": "마이크론 매출: 실제·가이던스 vs 예상",
+    "summary": "회계연도 4분기 실제 매출과 1분기 매출 가이던스",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "FQ1_GUIDE",
+        "y": 61.5
+      },
+      "displayText": "61.5",
+      "reason": "회계연도 4분기 실제 매출과 1분기 매출 가이던스"
+    },
+    "densityLevel": "focused"
+  }
+}

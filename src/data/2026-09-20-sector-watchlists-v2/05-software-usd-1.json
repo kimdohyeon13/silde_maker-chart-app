@@ -1,0 +1,580 @@
+{
+  "id": "05-software-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:10:34.968Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "소프트웨어·보안",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 6종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PLTR",
+            "displayValue": "PLTR\n팔란티어",
+            "sideValue": {
+              "displayValue": "+0.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "데이터·AI",
+            "displayValue": "데이터·AI"
+          },
+          "current": {
+            "value": "177.64",
+            "displayValue": "177"
+          },
+          "m1": {
+            "value": "1.4%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "-2.6%",
+            "displayValue": "-2%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "85.6%",
+            "displayValue": "85%"
+          },
+          "target": {
+            "value": "196.84",
+            "displayValue": "196\n10%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "114.3%",
+            "displayValue": "114%"
+          },
+          "pe": {
+            "value": "71.6x",
+            "displayValue": "71x"
+          },
+          "marketCap": {
+            "value": "426.9 B",
+            "displayValue": "426"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ORCL",
+            "displayValue": "ORCL\n오라클",
+            "sideValue": {
+              "displayValue": "-2.0%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "DB·클라우드",
+            "displayValue": "DB·클라우드"
+          },
+          "current": {
+            "value": "147.61",
+            "displayValue": "147"
+          },
+          "m1": {
+            "value": "2.6%",
+            "displayValue": "2%"
+          },
+          "y1": {
+            "value": "-51.6%",
+            "displayValue": "-51%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "44.8%",
+            "displayValue": "44%"
+          },
+          "target": {
+            "value": "237.97",
+            "displayValue": "237\n61%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "6.7%",
+            "displayValue": "6%"
+          },
+          "pe": {
+            "value": "13.4x",
+            "displayValue": "13x"
+          },
+          "marketCap": {
+            "value": "446.3 B",
+            "displayValue": "446"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ZS",
+            "displayValue": "ZS\n지스케일러",
+            "sideValue": {
+              "displayValue": "-0.1%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "클라우드 보안",
+            "displayValue": "클라우드 보안"
+          },
+          "current": {
+            "value": "197.31",
+            "displayValue": "197"
+          },
+          "m1": {
+            "value": "6.9%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "-32.9%",
+            "displayValue": "-32%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "58.6%",
+            "displayValue": "58%"
+          },
+          "target": {
+            "value": "208.86",
+            "displayValue": "208\n5%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "16.6%",
+            "displayValue": "16%"
+          },
+          "pe": {
+            "value": "32.2x",
+            "displayValue": "32x"
+          },
+          "marketCap": {
+            "value": "32.172 B",
+            "displayValue": "32"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PANW",
+            "displayValue": "PANW\n팔로알토",
+            "sideValue": {
+              "displayValue": "-3.1%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "통합 보안",
+            "displayValue": "통합 보안"
+          },
+          "current": {
+            "value": "363.58",
+            "displayValue": "363"
+          },
+          "m1": {
+            "value": "1.1%",
+            "displayValue": "1%"
+          },
+          "y1": {
+            "value": "74.6%",
+            "displayValue": "74%"
+          },
+          "high52": {
+            "value": "91.2%",
+            "displayValue": "91%"
+          },
+          "target": {
+            "value": "395.38",
+            "displayValue": "395\n8%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "9.1%",
+            "displayValue": "9%"
+          },
+          "pe": {
+            "value": "71.6x",
+            "displayValue": "71x"
+          },
+          "marketCap": {
+            "value": "297.4 B",
+            "displayValue": "297"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRWD",
+            "displayValue": "CRWD\n크라우드스트라이크",
+            "sideValue": {
+              "displayValue": "-3.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "엔드포인트 보안",
+            "displayValue": "엔드포인트 보안"
+          },
+          "current": {
+            "value": "237.65",
+            "displayValue": "237"
+          },
+          "m1": {
+            "value": "17.9%",
+            "displayValue": "17%"
+          },
+          "y1": {
+            "value": "89.2%",
+            "displayValue": "89%"
+          },
+          "high52": {
+            "value": "94.9%",
+            "displayValue": "94%"
+          },
+          "target": {
+            "value": "235.35",
+            "displayValue": "235\n-1%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "34.7%",
+            "displayValue": "34%"
+          },
+          "pe": {
+            "value": "144.4x",
+            "displayValue": "144x"
+          },
+          "marketCap": {
+            "value": "243.9 B",
+            "displayValue": "243"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FTNT",
+            "displayValue": "FTNT\n포티넷",
+            "sideValue": {
+              "displayValue": "-1.6%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "네트워크 보안",
+            "displayValue": "네트워크 보안"
+          },
+          "current": {
+            "value": "169.84",
+            "displayValue": "169"
+          },
+          "m1": {
+            "value": "11.1%",
+            "displayValue": "11%"
+          },
+          "y1": {
+            "value": "101.7%",
+            "displayValue": "101%"
+          },
+          "high52": {
+            "value": "96.4%",
+            "displayValue": "96%"
+          },
+          "target": {
+            "value": "164.32",
+            "displayValue": "164\n-3%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "25.0%",
+            "displayValue": "25%"
+          },
+          "pe": {
+            "value": "44.3x",
+            "displayValue": "44x"
+          },
+          "marketCap": {
+            "value": "124.6 B",
+            "displayValue": "124"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 70
+    }
+  },
+  "narrative": {
+    "headMessage": "소프트웨어·보안",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 6종목",
+    "headline": "소프트웨어·보안",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "PLTR",
+      "instrument": "NASDAQGS:PLTR",
+      "sourceFile": "input/pro-extra-main.json",
+      "sourceUrl": "https://kr.investing.com/pro/NASDAQGS:PLTR",
+      "peBasis": "FY+2 = FY2027-12-31, latest completed FY2025",
+      "epsBasis": "eps_proj_growth_mean current value"
+    },
+    {
+      "ticker": "ORCL",
+      "instrument": "NYSE:ORCL",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ZS",
+      "instrument": "NASDAQGS:ZS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-78737728.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "PANW",
+      "instrument": "NASDAQGS:PANW",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-78737728.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "CRWD",
+      "instrument": "NASDAQGS:CRWD",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-78737728.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "FTNT",
+      "instrument": "NASDAQGS:FTNT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-78737728.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 6,
+    "rowCount": 6,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

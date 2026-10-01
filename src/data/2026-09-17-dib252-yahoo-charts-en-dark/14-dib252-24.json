@@ -1,0 +1,735 @@
+{
+  "id": "dib252-24",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-252-24.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "17. SpaceX and Space Stocks",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 16, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 300,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "numberLocale": "en",
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "17. SpaceX and Space Stocks",
+    "subtitle": "Sep 16: AST SpaceMobile +0.85%, Rocket Lab +0.24%",
+    "source": "Source: Yahoo Finance · through the September 16, 2026 close",
+    "timeRange": "2026-06-17 to 2026-09-16",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-17",
+        "2026-07-07",
+        "2026-07-24",
+        "2026-08-11",
+        "2026-08-28",
+        "2026-09-16"
+      ],
+      "displayTickValues": [
+        "06-17",
+        "07-07",
+        "07-24",
+        "08-11",
+        "08-28",
+        "09-16"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "3 months ago = 100",
+      "type": "value",
+      "tickValues": [
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 50,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "ASTS",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "RKLB",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "ASTS",
+        "data": [
+          {
+            "x": "2026-06-17",
+            "y": 100.0
+          },
+          {
+            "x": "2026-06-18",
+            "y": 94.4165
+          },
+          {
+            "x": "2026-06-22",
+            "y": 85.6725
+          },
+          {
+            "x": "2026-06-23",
+            "y": 85.2979
+          },
+          {
+            "x": "2026-06-24",
+            "y": 79.609
+          },
+          {
+            "x": "2026-06-25",
+            "y": 76.8114
+          },
+          {
+            "x": "2026-06-26",
+            "y": 83.6357
+          },
+          {
+            "x": "2026-06-29",
+            "y": 101.5685
+          },
+          {
+            "x": "2026-06-30",
+            "y": 104.015
+          },
+          {
+            "x": "2026-07-01",
+            "y": 100.7843
+          },
+          {
+            "x": "2026-07-02",
+            "y": 99.6488
+          },
+          {
+            "x": "2026-07-06",
+            "y": 94.3931
+          },
+          {
+            "x": "2026-07-07",
+            "y": 86.8664
+          },
+          {
+            "x": "2026-07-08",
+            "y": 87.7326
+          },
+          {
+            "x": "2026-07-09",
+            "y": 86.4802
+          },
+          {
+            "x": "2026-07-10",
+            "y": 85.8247
+          },
+          {
+            "x": "2026-07-13",
+            "y": 79.1057
+          },
+          {
+            "x": "2026-07-14",
+            "y": 80.5572
+          },
+          {
+            "x": "2026-07-15",
+            "y": 77.6191
+          },
+          {
+            "x": "2026-07-16",
+            "y": 64.3919
+          },
+          {
+            "x": "2026-07-17",
+            "y": 67.6577
+          },
+          {
+            "x": "2026-07-20",
+            "y": 67.2129
+          },
+          {
+            "x": "2026-07-21",
+            "y": 74.1426
+          },
+          {
+            "x": "2026-07-22",
+            "y": 72.5155
+          },
+          {
+            "x": "2026-07-23",
+            "y": 69.2731
+          },
+          {
+            "x": "2026-07-24",
+            "y": 65.7849
+          },
+          {
+            "x": "2026-07-27",
+            "y": 68.2313
+          },
+          {
+            "x": "2026-07-28",
+            "y": 66.1945
+          },
+          {
+            "x": "2026-07-29",
+            "y": 62.0742
+          },
+          {
+            "x": "2026-07-30",
+            "y": 68.4069
+          },
+          {
+            "x": "2026-07-31",
+            "y": 69.039
+          },
+          {
+            "x": "2026-08-03",
+            "y": 74.3533
+          },
+          {
+            "x": "2026-08-04",
+            "y": 82.3013
+          },
+          {
+            "x": "2026-08-05",
+            "y": 80.0421
+          },
+          {
+            "x": "2026-08-06",
+            "y": 78.8482
+          },
+          {
+            "x": "2026-08-07",
+            "y": 84.2093
+          },
+          {
+            "x": "2026-08-10",
+            "y": 80.487
+          },
+          {
+            "x": "2026-08-11",
+            "y": 83.8464
+          },
+          {
+            "x": "2026-08-12",
+            "y": 86.9835
+          },
+          {
+            "x": "2026-08-13",
+            "y": 83.7177
+          },
+          {
+            "x": "2026-08-14",
+            "y": 83.0856
+          },
+          {
+            "x": "2026-08-17",
+            "y": 83.2729
+          },
+          {
+            "x": "2026-08-18",
+            "y": 78.5087
+          },
+          {
+            "x": "2026-08-19",
+            "y": 77.7596
+          },
+          {
+            "x": "2026-08-20",
+            "y": 76.1559
+          },
+          {
+            "x": "2026-08-21",
+            "y": 80.3582
+          },
+          {
+            "x": "2026-08-24",
+            "y": 72.9837
+          },
+          {
+            "x": "2026-08-25",
+            "y": 72.5857
+          },
+          {
+            "x": "2026-08-26",
+            "y": 70.0925
+          },
+          {
+            "x": "2026-08-27",
+            "y": 71.9185
+          },
+          {
+            "x": "2026-08-28",
+            "y": 67.9504
+          },
+          {
+            "x": "2026-08-31",
+            "y": 69.1794
+          },
+          {
+            "x": "2026-09-01",
+            "y": 65.3166
+          },
+          {
+            "x": "2026-09-02",
+            "y": 73.0423
+          },
+          {
+            "x": "2026-09-03",
+            "y": 72.7262
+          },
+          {
+            "x": "2026-09-04",
+            "y": 72.9369
+          },
+          {
+            "x": "2026-09-08",
+            "y": 77.3967
+          },
+          {
+            "x": "2026-09-09",
+            "y": 73.0657
+          },
+          {
+            "x": "2026-09-10",
+            "y": 70.1276
+          },
+          {
+            "x": "2026-09-11",
+            "y": 70.0691
+          },
+          {
+            "x": "2026-09-14",
+            "y": 70.2329
+          },
+          {
+            "x": "2026-09-15",
+            "y": 68.7932
+          },
+          {
+            "x": "2026-09-16",
+            "y": 69.3784
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+0.85%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "RKLB",
+        "data": [
+          {
+            "x": "2026-06-17",
+            "y": 100.0
+          },
+          {
+            "x": "2026-06-18",
+            "y": 99.3147
+          },
+          {
+            "x": "2026-06-22",
+            "y": 92.8783
+          },
+          {
+            "x": "2026-06-23",
+            "y": 88.0904
+          },
+          {
+            "x": "2026-06-24",
+            "y": 79.098
+          },
+          {
+            "x": "2026-06-25",
+            "y": 74.7268
+          },
+          {
+            "x": "2026-06-26",
+            "y": 78.2923
+          },
+          {
+            "x": "2026-06-29",
+            "y": 90.7668
+          },
+          {
+            "x": "2026-06-30",
+            "y": 94.1378
+          },
+          {
+            "x": "2026-07-01",
+            "y": 92.6746
+          },
+          {
+            "x": "2026-07-02",
+            "y": 93.0357
+          },
+          {
+            "x": "2026-07-06",
+            "y": 86.2104
+          },
+          {
+            "x": "2026-07-07",
+            "y": 77.2458
+          },
+          {
+            "x": "2026-07-08",
+            "y": 77.1902
+          },
+          {
+            "x": "2026-07-09",
+            "y": 76.4493
+          },
+          {
+            "x": "2026-07-10",
+            "y": 75.0509
+          },
+          {
+            "x": "2026-07-13",
+            "y": 71.0595
+          },
+          {
+            "x": "2026-07-14",
+            "y": 72.9857
+          },
+          {
+            "x": "2026-07-15",
+            "y": 70.5686
+          },
+          {
+            "x": "2026-07-16",
+            "y": 62.3727
+          },
+          {
+            "x": "2026-07-17",
+            "y": 62.6227
+          },
+          {
+            "x": "2026-07-20",
+            "y": 60.8816
+          },
+          {
+            "x": "2026-07-21",
+            "y": 64.0119
+          },
+          {
+            "x": "2026-07-22",
+            "y": 64.5953
+          },
+          {
+            "x": "2026-07-23",
+            "y": 64.8176
+          },
+          {
+            "x": "2026-07-24",
+            "y": 59.1869
+          },
+          {
+            "x": "2026-07-27",
+            "y": 61.993
+          },
+          {
+            "x": "2026-07-28",
+            "y": 59.1684
+          },
+          {
+            "x": "2026-07-29",
+            "y": 54.2693
+          },
+          {
+            "x": "2026-07-30",
+            "y": 59.9
+          },
+          {
+            "x": "2026-07-31",
+            "y": 60.15
+          },
+          {
+            "x": "2026-08-03",
+            "y": 65.225
+          },
+          {
+            "x": "2026-08-04",
+            "y": 68.9757
+          },
+          {
+            "x": "2026-08-05",
+            "y": 69.2906
+          },
+          {
+            "x": "2026-08-06",
+            "y": 70.0778
+          },
+          {
+            "x": "2026-08-07",
+            "y": 76.7086
+          },
+          {
+            "x": "2026-08-10",
+            "y": 74.1248
+          },
+          {
+            "x": "2026-08-11",
+            "y": 74.0971
+          },
+          {
+            "x": "2026-08-12",
+            "y": 75.1713
+          },
+          {
+            "x": "2026-08-13",
+            "y": 74.1804
+          },
+          {
+            "x": "2026-08-14",
+            "y": 74.3193
+          },
+          {
+            "x": "2026-08-17",
+            "y": 76.0141
+          },
+          {
+            "x": "2026-08-18",
+            "y": 73.3099
+          },
+          {
+            "x": "2026-08-19",
+            "y": 70.2352
+          },
+          {
+            "x": "2026-08-20",
+            "y": 67.5588
+          },
+          {
+            "x": "2026-08-21",
+            "y": 67.2069
+          },
+          {
+            "x": "2026-08-24",
+            "y": 63.2339
+          },
+          {
+            "x": "2026-08-25",
+            "y": 61.9652
+          },
+          {
+            "x": "2026-08-26",
+            "y": 61.2891
+          },
+          {
+            "x": "2026-08-27",
+            "y": 62.5394
+          },
+          {
+            "x": "2026-08-28",
+            "y": 59.6314
+          },
+          {
+            "x": "2026-08-31",
+            "y": 59.1961
+          },
+          {
+            "x": "2026-09-01",
+            "y": 57.9181
+          },
+          {
+            "x": "2026-09-02",
+            "y": 58.4367
+          },
+          {
+            "x": "2026-09-03",
+            "y": 59.0943
+          },
+          {
+            "x": "2026-09-04",
+            "y": 59.511
+          },
+          {
+            "x": "2026-09-08",
+            "y": 61.002
+          },
+          {
+            "x": "2026-09-09",
+            "y": 58.409
+          },
+          {
+            "x": "2026-09-10",
+            "y": 57.381
+          },
+          {
+            "x": "2026-09-11",
+            "y": 58.2978
+          },
+          {
+            "x": "2026-09-14",
+            "y": 57.9274
+          },
+          {
+            "x": "2026-09-15",
+            "y": 58.8535
+          },
+          {
+            "x": "2026-09-16",
+            "y": 58.9924
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+0.24%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 126,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 16: AST SpaceMobile +0.85%, Rocket Lab +0.24%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 104.01498336992043,
+        "series": "all"
+      },
+      "min": {
+        "value": 54.26930603105809,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "17. SpaceX and Space Stocks",
+    "subMessage": "Sep 16: AST SpaceMobile +0.85%, Rocket Lab +0.24%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-16",
+        "y": 69.3784
+      },
+      "displayText": "69.3784",
+      "reason": "Sep 16: AST SpaceMobile +0.85%, Rocket Lab +0.24%"
+    },
+    "densityLevel": "focused"
+  }
+}

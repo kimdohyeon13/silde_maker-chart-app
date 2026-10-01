@@ -1,0 +1,245 @@
+{
+  "id": "meta-q2",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "메타 2분기, 비용 55% 늘고 주당이익 13% 줄어",
+    "preservedElements": [
+      "요청서 숫자·순서·라벨 표기"
+    ],
+    "changedElements": [
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: 메타 2026년 2분기 실적 발표"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "요청서 값 그대로",
+      "status": "pass",
+      "detail": "요청서에 적힌 숫자와 라벨 표기를 그대로 썼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "메타 2분기, 비용 55% 늘고 주당이익 13% 줄어",
+    "subtitle": "단위: %",
+    "source": "자료: 메타 2026년 2분기 실적 발표",
+    "timeRange": "단위: %",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "REV",
+        "COST",
+        "OPINC",
+        "NI",
+        "EPS"
+      ],
+      "displayTickValues": [
+        "매출",
+        "비용",
+        "영업이익",
+        "순이익",
+        "주당이익"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "REV",
+        "COST",
+        "OPINC",
+        "NI",
+        "EPS"
+      ],
+      "displayTickValues": [
+        "-20",
+        "0",
+        "20",
+        "40",
+        "60",
+        "매출",
+        "비용",
+        "영업이익",
+        "순이익",
+        "주당이익"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": -20,
+      "max": 60
+    },
+    "legend": [
+      {
+        "name": "전년 대비 증감률",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전년 대비 증감률",
+        "data": [
+          {
+            "x": "REV",
+            "y": 28,
+            "displayLabel": "28",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "COST",
+            "y": 55,
+            "displayLabel": "55",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "OPINC",
+            "y": -8,
+            "displayLabel": "-8",
+            "color": "#175CD3"
+          },
+          {
+            "x": "NI",
+            "y": -14,
+            "displayLabel": "-14",
+            "color": "#175CD3"
+          },
+          {
+            "x": "EPS",
+            "y": -13,
+            "displayLabel": "-13",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "2026년 2분기 전년 대비 증감률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 55,
+        "at": "COST"
+      },
+      "min": {
+        "value": -14,
+        "at": "NI"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "메타 2분기, 비용 55% 늘고 주당이익 13% 줄어",
+    "subMessage": "2026년 2분기 전년 대비 증감률",
+    "headline": "메타 2분기, 비용 55% 늘고 주당이익 13% 줄어",
+    "summary": "2026년 2분기 전년 대비 증감률",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "COST",
+        "y": 55
+      },
+      "displayText": "55",
+      "reason": "2026년 2분기 전년 대비 증감률"
+    },
+    "densityLevel": "focused"
+  }
+}

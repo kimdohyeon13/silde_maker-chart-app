@@ -1,0 +1,518 @@
+{
+  "id": "10-power-equipment-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:10:34.969Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "전력 장비·전력망",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 5종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "PWR",
+            "displayValue": "PWR\n콴타서비스",
+            "sideValue": {
+              "displayValue": "+3.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력망 시공",
+            "displayValue": "전력망 시공"
+          },
+          "current": {
+            "value": "636.71",
+            "displayValue": "636"
+          },
+          "m1": {
+            "value": "-6.0%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "64.0%",
+            "displayValue": "64%"
+          },
+          "high52": {
+            "value": "80.7%",
+            "displayValue": "80%"
+          },
+          "target": {
+            "value": "768.70",
+            "displayValue": "768\n20%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "55.7%",
+            "displayValue": "55%"
+          },
+          "pe": {
+            "value": "31.8x",
+            "displayValue": "31x"
+          },
+          "marketCap": {
+            "value": "95.725 B",
+            "displayValue": "95"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GEV",
+            "displayValue": "GEV\nGE버노바",
+            "sideValue": {
+              "displayValue": "+1.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "발전·전력망",
+            "displayValue": "발전·전력망"
+          },
+          "current": {
+            "value": "940.33",
+            "displayValue": "940"
+          },
+          "m1": {
+            "value": "-4.8%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "51.0%",
+            "displayValue": "51%"
+          },
+          "high52": {
+            "value": "78.6%",
+            "displayValue": "78%"
+          },
+          "target": {
+            "value": "1,237",
+            "displayValue": "1,237\n31%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-8.8%",
+            "displayValue": "-8%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "37.2x",
+            "displayValue": "37x"
+          },
+          "marketCap": {
+            "value": "250.4 B",
+            "displayValue": "250"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ETN",
+            "displayValue": "ETN\n이튼",
+            "sideValue": {
+              "displayValue": "+3.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "배전 장비",
+            "displayValue": "배전 장비"
+          },
+          "current": {
+            "value": "424.77",
+            "displayValue": "424"
+          },
+          "m1": {
+            "value": "0.0%",
+            "displayValue": "0%"
+          },
+          "y1": {
+            "value": "14.7%",
+            "displayValue": "14%"
+          },
+          "high52": {
+            "value": "88.9%",
+            "displayValue": "88%"
+          },
+          "target": {
+            "value": "479.57",
+            "displayValue": "479\n12%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "12.3%",
+            "displayValue": "12%"
+          },
+          "pe": {
+            "value": "25.7x",
+            "displayValue": "25x"
+          },
+          "marketCap": {
+            "value": "165 B",
+            "displayValue": "165"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "BE",
+            "displayValue": "BE\n블룸에너지",
+            "sideValue": {
+              "displayValue": "-5.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "연료전지",
+            "displayValue": "연료전지"
+          },
+          "current": {
+            "value": "265.63",
+            "displayValue": "265"
+          },
+          "m1": {
+            "value": "28.6%",
+            "displayValue": "28%"
+          },
+          "y1": {
+            "value": "212.8%",
+            "displayValue": "212%"
+          },
+          "high52": {
+            "value": "75.6%",
+            "displayValue": "75%"
+          },
+          "target": {
+            "value": "280.24",
+            "displayValue": "280\n5%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "256.0%",
+            "displayValue": "256%"
+          },
+          "pe": {
+            "value": "48.2x",
+            "displayValue": "48x"
+          },
+          "marketCap": {
+            "value": "78.235 B",
+            "displayValue": "78"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VRT",
+            "displayValue": "VRT\n버티브",
+            "sideValue": {
+              "displayValue": "+3.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력·냉각",
+            "displayValue": "전력·냉각"
+          },
+          "current": {
+            "value": "249.39",
+            "displayValue": "249"
+          },
+          "m1": {
+            "value": "-4.4%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "73.9%",
+            "displayValue": "73%"
+          },
+          "high52": {
+            "value": "65.6%",
+            "displayValue": "65%"
+          },
+          "target": {
+            "value": "338.15",
+            "displayValue": "338\n35%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "60.4%",
+            "displayValue": "60%"
+          },
+          "pe": {
+            "value": "26.0x",
+            "displayValue": "26x"
+          },
+          "marketCap": {
+            "value": "96.012 B",
+            "displayValue": "96"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 84
+    }
+  },
+  "narrative": {
+    "headMessage": "전력 장비·전력망",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 5종목",
+    "headline": "전력 장비·전력망",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "PWR",
+      "instrument": "NYSE:PWR",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "GEV",
+      "instrument": "NYSE:GEV",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ETN",
+      "instrument": "NYSE:ETN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "BE",
+      "instrument": "NYSE:BE",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "VRT",
+      "instrument": "NYSE:VRT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 5,
+    "rowCount": 5,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

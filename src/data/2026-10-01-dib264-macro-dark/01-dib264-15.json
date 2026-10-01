@@ -1,0 +1,600 @@
+{
+  "id": "dib264-15",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-15.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "3대 지수 혼조 마감, 나스닥만 0.24% 상승",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 2026-09-01 start (same first bar as the origin), 2026-09-30 focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 기준일 2026-09-30 종가"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 29일과 30일 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@wtm_waltechman",
+    "numberLocale": "ko",
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "3대 지수 혼조 마감, 나스닥만 0.24% 상승",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 기준일 2026-09-30 종가",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "9월 1일 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "S&P500",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "나스닥",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "다우",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "러셀2000",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "S&P500",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.460329
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.523163
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.141718
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.551005
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.064072
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.478868
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.334271
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.849436
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.400637
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.956162
+          },
+          {
+            "x": "2026-09-17",
+            "y": 100.082416
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.249359
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.745797
+          },
+          {
+            "x": "2026-09-22",
+            "y": 101.74501
+          },
+          {
+            "x": "2026-09-23",
+            "y": 100.977001
+          },
+          {
+            "x": "2026-09-24",
+            "y": 100.952106
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.46682
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.684268
+          },
+          {
+            "x": "2026-09-29",
+            "y": 100.515885
+          },
+          {
+            "x": "2026-09-30",
+            "y": 100.262988
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-0.25%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "나스닥",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.452343
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.855538
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.560246
+          },
+          {
+            "x": "2026-09-08",
+            "y": 101.23235
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.588397
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.930847
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.893761
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.331959
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.547125
+          },
+          {
+            "x": "2026-09-16",
+            "y": 99.535092
+          },
+          {
+            "x": "2026-09-17",
+            "y": 101.220437
+          },
+          {
+            "x": "2026-09-18",
+            "y": 101.619821
+          },
+          {
+            "x": "2026-09-21",
+            "y": 103.916971
+          },
+          {
+            "x": "2026-09-22",
+            "y": 104.385134
+          },
+          {
+            "x": "2026-09-23",
+            "y": 103.204126
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.216885
+          },
+          {
+            "x": "2026-09-25",
+            "y": 103.712489
+          },
+          {
+            "x": "2026-09-28",
+            "y": 102.760987
+          },
+          {
+            "x": "2026-09-29",
+            "y": 102.67347
+          },
+          {
+            "x": "2026-09-30",
+            "y": 102.916865
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+0.24%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "다우",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.559196
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.74206
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.226851
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.03637
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.268066
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.668147
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.633122
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.344893
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.72312
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.526895
+          },
+          {
+            "x": "2026-09-17",
+            "y": 98.126022
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.945229
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.639202
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.288344
+          },
+          {
+            "x": "2026-09-23",
+            "y": 97.621066
+          },
+          {
+            "x": "2026-09-24",
+            "y": 97.314796
+          },
+          {
+            "x": "2026-09-25",
+            "y": 98.221881
+          },
+          {
+            "x": "2026-09-28",
+            "y": 97.564064
+          },
+          {
+            "x": "2026-09-29",
+            "y": 97.314685
+          },
+          {
+            "x": "2026-09-30",
+            "y": 96.473492
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-0.86%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "러셀2000",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100
+          },
+          {
+            "x": "2026-09-02",
+            "y": 101.131458
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.648561
+          },
+          {
+            "x": "2026-09-04",
+            "y": 101.901286
+          },
+          {
+            "x": "2026-09-08",
+            "y": 101.372202
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.038016
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.000732
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.445575
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.044909
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.293232
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.900099
+          },
+          {
+            "x": "2026-09-17",
+            "y": 98.44185
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.954544
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.466857
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.965458
+          },
+          {
+            "x": "2026-09-23",
+            "y": 97.210057
+          },
+          {
+            "x": "2026-09-24",
+            "y": 97.104245
+          },
+          {
+            "x": "2026-09-25",
+            "y": 97.172049
+          },
+          {
+            "x": "2026-09-28",
+            "y": 96.499472
+          },
+          {
+            "x": "2026-09-29",
+            "y": 96.157364
+          },
+          {
+            "x": "2026-09-30",
+            "y": 95.778754
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "-0.39%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 84,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 104.385134,
+        "series": "all"
+      },
+      "min": {
+        "value": 95.778754,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "3대 지수 혼조 마감, 나스닥만 0.24% 상승",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 100.262988
+      },
+      "displayText": "100.26",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

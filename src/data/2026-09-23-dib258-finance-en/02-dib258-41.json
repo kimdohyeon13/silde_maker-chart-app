@@ -1,0 +1,744 @@
+{
+  "id": "dib258-41",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-258-41.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Quantum Stocks Flat in Regular Trading",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 22, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Quantum Stocks Flat in Regular Trading",
+    "subtitle": "Sep 22: IonQ +0.57%, D-Wave -0.79%",
+    "source": "Source: Yahoo Finance · through the September 22, 2026 close",
+    "timeRange": "2026-06-23 to 2026-09-22",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-23",
+        "2026-07-13",
+        "2026-07-29",
+        "2026-08-17",
+        "2026-09-02",
+        "2026-09-22"
+      ],
+      "displayTickValues": [
+        "06-23",
+        "07-13",
+        "07-29",
+        "08-17",
+        "09-02",
+        "09-22"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "3 months ago = 100",
+      "type": "value",
+      "tickValues": [
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 50,
+      "max": 100
+    },
+    "legend": [
+      {
+        "name": "IonQ",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "D-Wave",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "IonQ",
+        "data": [
+          {
+            "x": "2026-06-23",
+            "y": 100.0
+          },
+          {
+            "x": "2026-06-24",
+            "y": 92.6534
+          },
+          {
+            "x": "2026-06-25",
+            "y": 87.3984
+          },
+          {
+            "x": "2026-06-26",
+            "y": 85.2377
+          },
+          {
+            "x": "2026-06-29",
+            "y": 93.1374
+          },
+          {
+            "x": "2026-06-30",
+            "y": 92.0657
+          },
+          {
+            "x": "2026-07-01",
+            "y": 88.8505
+          },
+          {
+            "x": "2026-07-02",
+            "y": 84.9092
+          },
+          {
+            "x": "2026-07-06",
+            "y": 84.4771
+          },
+          {
+            "x": "2026-07-07",
+            "y": 78.4097
+          },
+          {
+            "x": "2026-07-08",
+            "y": 77.9257
+          },
+          {
+            "x": "2026-07-09",
+            "y": 77.3898
+          },
+          {
+            "x": "2026-07-10",
+            "y": 74.0882
+          },
+          {
+            "x": "2026-07-13",
+            "y": 67.2083
+          },
+          {
+            "x": "2026-07-14",
+            "y": 67.917
+          },
+          {
+            "x": "2026-07-15",
+            "y": 64.8401
+          },
+          {
+            "x": "2026-07-16",
+            "y": 60.6742
+          },
+          {
+            "x": "2026-07-17",
+            "y": 60.121
+          },
+          {
+            "x": "2026-07-20",
+            "y": 59.1876
+          },
+          {
+            "x": "2026-07-21",
+            "y": 61.3829
+          },
+          {
+            "x": "2026-07-22",
+            "y": 59.9481
+          },
+          {
+            "x": "2026-07-23",
+            "y": 58.8937
+          },
+          {
+            "x": "2026-07-24",
+            "y": 56.7675
+          },
+          {
+            "x": "2026-07-27",
+            "y": 62.0916
+          },
+          {
+            "x": "2026-07-28",
+            "y": 58.5653
+          },
+          {
+            "x": "2026-07-29",
+            "y": 55.2982
+          },
+          {
+            "x": "2026-07-30",
+            "y": 61.8323
+          },
+          {
+            "x": "2026-07-31",
+            "y": 62.9905
+          },
+          {
+            "x": "2026-08-03",
+            "y": 67.1564
+          },
+          {
+            "x": "2026-08-04",
+            "y": 72.1175
+          },
+          {
+            "x": "2026-08-05",
+            "y": 69.0233
+          },
+          {
+            "x": "2026-08-06",
+            "y": 68.6603
+          },
+          {
+            "x": "2026-08-07",
+            "y": 76.8021
+          },
+          {
+            "x": "2026-08-10",
+            "y": 73.5177
+          },
+          {
+            "x": "2026-08-11",
+            "y": 75.0908
+          },
+          {
+            "x": "2026-08-12",
+            "y": 78.1331
+          },
+          {
+            "x": "2026-08-13",
+            "y": 77.7528
+          },
+          {
+            "x": "2026-08-14",
+            "y": 79.9654
+          },
+          {
+            "x": "2026-08-17",
+            "y": 80.968
+          },
+          {
+            "x": "2026-08-18",
+            "y": 76.2662
+          },
+          {
+            "x": "2026-08-19",
+            "y": 74.9525
+          },
+          {
+            "x": "2026-08-20",
+            "y": 71.7891
+          },
+          {
+            "x": "2026-08-21",
+            "y": 77.5454
+          },
+          {
+            "x": "2026-08-24",
+            "y": 70.9767
+          },
+          {
+            "x": "2026-08-25",
+            "y": 72.688
+          },
+          {
+            "x": "2026-08-26",
+            "y": 69.1962
+          },
+          {
+            "x": "2026-08-27",
+            "y": 73.3967
+          },
+          {
+            "x": "2026-08-28",
+            "y": 67.7615
+          },
+          {
+            "x": "2026-08-31",
+            "y": 67.9516
+          },
+          {
+            "x": "2026-09-01",
+            "y": 65.3068
+          },
+          {
+            "x": "2026-09-02",
+            "y": 65.0648
+          },
+          {
+            "x": "2026-09-03",
+            "y": 67.4503
+          },
+          {
+            "x": "2026-09-04",
+            "y": 68.3146
+          },
+          {
+            "x": "2026-09-08",
+            "y": 69.9568
+          },
+          {
+            "x": "2026-09-09",
+            "y": 65.9291
+          },
+          {
+            "x": "2026-09-10",
+            "y": 63.6819
+          },
+          {
+            "x": "2026-09-11",
+            "y": 63.5264
+          },
+          {
+            "x": "2026-09-14",
+            "y": 64.8228
+          },
+          {
+            "x": "2026-09-15",
+            "y": 64.0449
+          },
+          {
+            "x": "2026-09-16",
+            "y": 63.6819
+          },
+          {
+            "x": "2026-09-17",
+            "y": 69.7321
+          },
+          {
+            "x": "2026-09-18",
+            "y": 67.6405
+          },
+          {
+            "x": "2026-09-21",
+            "y": 70.0259
+          },
+          {
+            "x": "2026-09-22",
+            "y": 70.4235
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+0.57%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "D-Wave",
+        "data": [
+          {
+            "x": "2026-06-23",
+            "y": 100.0
+          },
+          {
+            "x": "2026-06-24",
+            "y": 91.8098
+          },
+          {
+            "x": "2026-06-25",
+            "y": 87.535
+          },
+          {
+            "x": "2026-06-26",
+            "y": 90.9309
+          },
+          {
+            "x": "2026-06-29",
+            "y": 95.2058
+          },
+          {
+            "x": "2026-06-30",
+            "y": 95.845
+          },
+          {
+            "x": "2026-07-01",
+            "y": 93.8873
+          },
+          {
+            "x": "2026-07-02",
+            "y": 90.012
+          },
+          {
+            "x": "2026-07-06",
+            "y": 90.1318
+          },
+          {
+            "x": "2026-07-07",
+            "y": 84.139
+          },
+          {
+            "x": "2026-07-08",
+            "y": 82.461
+          },
+          {
+            "x": "2026-07-09",
+            "y": 84.5386
+          },
+          {
+            "x": "2026-07-10",
+            "y": 80.2637
+          },
+          {
+            "x": "2026-07-13",
+            "y": 74.5505
+          },
+          {
+            "x": "2026-07-14",
+            "y": 75.7091
+          },
+          {
+            "x": "2026-07-15",
+            "y": 72.9924
+          },
+          {
+            "x": "2026-07-16",
+            "y": 67.5989
+          },
+          {
+            "x": "2026-07-17",
+            "y": 66.8398
+          },
+          {
+            "x": "2026-07-20",
+            "y": 66.7998
+          },
+          {
+            "x": "2026-07-21",
+            "y": 71.1147
+          },
+          {
+            "x": "2026-07-22",
+            "y": 69.3168
+          },
+          {
+            "x": "2026-07-23",
+            "y": 68.318
+          },
+          {
+            "x": "2026-07-24",
+            "y": 64.7623
+          },
+          {
+            "x": "2026-07-27",
+            "y": 77.9465
+          },
+          {
+            "x": "2026-07-28",
+            "y": 70.4555
+          },
+          {
+            "x": "2026-07-29",
+            "y": 64.6424
+          },
+          {
+            "x": "2026-07-30",
+            "y": 71.8338
+          },
+          {
+            "x": "2026-07-31",
+            "y": 72.2333
+          },
+          {
+            "x": "2026-08-03",
+            "y": 79.8242
+          },
+          {
+            "x": "2026-08-04",
+            "y": 87.2153
+          },
+          {
+            "x": "2026-08-05",
+            "y": 85.4574
+          },
+          {
+            "x": "2026-08-06",
+            "y": 77.527
+          },
+          {
+            "x": "2026-08-07",
+            "y": 82.9405
+          },
+          {
+            "x": "2026-08-10",
+            "y": 80.6632
+          },
+          {
+            "x": "2026-08-11",
+            "y": 80.823
+          },
+          {
+            "x": "2026-08-12",
+            "y": 82.8606
+          },
+          {
+            "x": "2026-08-13",
+            "y": 83.4998
+          },
+          {
+            "x": "2026-08-14",
+            "y": 84.5785
+          },
+          {
+            "x": "2026-08-17",
+            "y": 83.3799
+          },
+          {
+            "x": "2026-08-18",
+            "y": 78.0264
+          },
+          {
+            "x": "2026-08-19",
+            "y": 77.1874
+          },
+          {
+            "x": "2026-08-20",
+            "y": 75.1099
+          },
+          {
+            "x": "2026-08-21",
+            "y": 81.4622
+          },
+          {
+            "x": "2026-08-24",
+            "y": 74.6304
+          },
+          {
+            "x": "2026-08-25",
+            "y": 77.3072
+          },
+          {
+            "x": "2026-08-26",
+            "y": 69.9561
+          },
+          {
+            "x": "2026-08-27",
+            "y": 71.5142
+          },
+          {
+            "x": "2026-08-28",
+            "y": 67.8785
+          },
+          {
+            "x": "2026-08-31",
+            "y": 68.7175
+          },
+          {
+            "x": "2026-09-01",
+            "y": 66.0807
+          },
+          {
+            "x": "2026-09-02",
+            "y": 65.8809
+          },
+          {
+            "x": "2026-09-03",
+            "y": 67.1994
+          },
+          {
+            "x": "2026-09-04",
+            "y": 66.2405
+          },
+          {
+            "x": "2026-09-08",
+            "y": 70.5953
+          },
+          {
+            "x": "2026-09-09",
+            "y": 68.3979
+          },
+          {
+            "x": "2026-09-10",
+            "y": 66.5601
+          },
+          {
+            "x": "2026-09-11",
+            "y": 67.1195
+          },
+          {
+            "x": "2026-09-14",
+            "y": 67.2393
+          },
+          {
+            "x": "2026-09-15",
+            "y": 65.5613
+          },
+          {
+            "x": "2026-09-16",
+            "y": 65.002
+          },
+          {
+            "x": "2026-09-17",
+            "y": 70.6752
+          },
+          {
+            "x": "2026-09-18",
+            "y": 68.358
+          },
+          {
+            "x": "2026-09-21",
+            "y": 70.7151
+          },
+          {
+            "x": "2026-09-22",
+            "y": 70.1558
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-0.79%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 128,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Sep 22: IonQ +0.57%, D-Wave -0.79%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 100.0,
+        "series": "all"
+      },
+      "min": {
+        "value": 55.2982,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Quantum Stocks Flat in Regular Trading",
+    "subMessage": "Sep 22: IonQ +0.57%, D-Wave -0.79%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-22",
+        "y": 70.4235
+      },
+      "displayText": "70.42",
+      "reason": "Sep 22: IonQ +0.57%, D-Wave -0.79%"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,703 @@
+{
+  "id": "dib263-20",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-20.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "Software: Only Oracle Gains, Up 3.9%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 29, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Software: Only Oracle Gains, Up 3.9%",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 29, 2026 close",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "Oracle",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "Salesforce",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "ServiceNow",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "Palantir",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "Palo Alto",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Oracle",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.769321
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.740078
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.299355
+          },
+          {
+            "x": "2026-09-04",
+            "y": 106.478007
+          },
+          {
+            "x": "2026-09-08",
+            "y": 108.986058
+          },
+          {
+            "x": "2026-09-09",
+            "y": 108.389224
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.5617
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.777899
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.096297
+          },
+          {
+            "x": "2026-09-15",
+            "y": 94.118838
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.003224
+          },
+          {
+            "x": "2026-09-17",
+            "y": 100.985784
+          },
+          {
+            "x": "2026-09-18",
+            "y": 98.987396
+          },
+          {
+            "x": "2026-09-21",
+            "y": 99.624465
+          },
+          {
+            "x": "2026-09-22",
+            "y": 100.053649
+          },
+          {
+            "x": "2026-09-23",
+            "y": 96.942062
+          },
+          {
+            "x": "2026-09-24",
+            "y": 93.575642
+          },
+          {
+            "x": "2026-09-25",
+            "y": 91.939385
+          },
+          {
+            "x": "2026-09-28",
+            "y": 88.921681
+          },
+          {
+            "x": "2026-09-29",
+            "y": 92.402095
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+3.91%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Salesforce",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 100.221316
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.763137
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.675306
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.65621
+          },
+          {
+            "x": "2026-09-08",
+            "y": 96.7306
+          },
+          {
+            "x": "2026-09-09",
+            "y": 94.804689
+          },
+          {
+            "x": "2026-09-10",
+            "y": 94.354272
+          },
+          {
+            "x": "2026-09-11",
+            "y": 96.186997
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.73386
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.266128
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.28197
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.296031
+          },
+          {
+            "x": "2026-09-18",
+            "y": 92.381762
+          },
+          {
+            "x": "2026-09-21",
+            "y": 91.799328
+          },
+          {
+            "x": "2026-09-22",
+            "y": 90.580101
+          },
+          {
+            "x": "2026-09-23",
+            "y": 92.249745
+          },
+          {
+            "x": "2026-09-24",
+            "y": 92.49825
+          },
+          {
+            "x": "2026-09-25",
+            "y": 90.867437
+          },
+          {
+            "x": "2026-09-28",
+            "y": 88.246485
+          },
+          {
+            "x": "2026-09-29",
+            "y": 87.485436
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-0.86%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "ServiceNow",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.560571
+          },
+          {
+            "x": "2026-09-02",
+            "y": 92.384618
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.378263
+          },
+          {
+            "x": "2026-09-04",
+            "y": 95.452388
+          },
+          {
+            "x": "2026-09-08",
+            "y": 90.688561
+          },
+          {
+            "x": "2026-09-09",
+            "y": 88.593821
+          },
+          {
+            "x": "2026-09-10",
+            "y": 88.634363
+          },
+          {
+            "x": "2026-09-11",
+            "y": 89.553344
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.188932
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.884849
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.479358
+          },
+          {
+            "x": "2026-09-17",
+            "y": 93.56713
+          },
+          {
+            "x": "2026-09-18",
+            "y": 91.539966
+          },
+          {
+            "x": "2026-09-21",
+            "y": 93.033305
+          },
+          {
+            "x": "2026-09-22",
+            "y": 92.573819
+          },
+          {
+            "x": "2026-09-23",
+            "y": 95.128045
+          },
+          {
+            "x": "2026-09-24",
+            "y": 93.100881
+          },
+          {
+            "x": "2026-09-25",
+            "y": 91.64132
+          },
+          {
+            "x": "2026-09-28",
+            "y": 88.823564
+          },
+          {
+            "x": "2026-09-29",
+            "y": 87.803227
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-1.15%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Palantir",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.533959
+          },
+          {
+            "x": "2026-09-02",
+            "y": 90.921774
+          },
+          {
+            "x": "2026-09-03",
+            "y": 97.934324
+          },
+          {
+            "x": "2026-09-04",
+            "y": 93.534713
+          },
+          {
+            "x": "2026-09-08",
+            "y": 91.372464
+          },
+          {
+            "x": "2026-09-09",
+            "y": 90.959327
+          },
+          {
+            "x": "2026-09-10",
+            "y": 88.990233
+          },
+          {
+            "x": "2026-09-11",
+            "y": 89.725288
+          },
+          {
+            "x": "2026-09-14",
+            "y": 92.987441
+          },
+          {
+            "x": "2026-09-15",
+            "y": 92.585038
+          },
+          {
+            "x": "2026-09-16",
+            "y": 93.540075
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.559503
+          },
+          {
+            "x": "2026-09-18",
+            "y": 95.310653
+          },
+          {
+            "x": "2026-09-21",
+            "y": 98.234785
+          },
+          {
+            "x": "2026-09-22",
+            "y": 99.254212
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.902666
+          },
+          {
+            "x": "2026-09-24",
+            "y": 103.331898
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.765207
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.590187
+          },
+          {
+            "x": "2026-09-29",
+            "y": 100.316555
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "-0.27%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Palo Alto",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.755709
+          },
+          {
+            "x": "2026-09-02",
+            "y": 85.960277
+          },
+          {
+            "x": "2026-09-03",
+            "y": 86.865726
+          },
+          {
+            "x": "2026-09-04",
+            "y": 87.21116
+          },
+          {
+            "x": "2026-09-08",
+            "y": 88.184651
+          },
+          {
+            "x": "2026-09-09",
+            "y": 87.692671
+          },
+          {
+            "x": "2026-09-10",
+            "y": 88.579799
+          },
+          {
+            "x": "2026-09-11",
+            "y": 86.528142
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.85675
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.157693
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.304239
+          },
+          {
+            "x": "2026-09-17",
+            "y": 98.149842
+          },
+          {
+            "x": "2026-09-18",
+            "y": 95.145626
+          },
+          {
+            "x": "2026-09-21",
+            "y": 97.286265
+          },
+          {
+            "x": "2026-09-22",
+            "y": 98.021616
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.923084
+          },
+          {
+            "x": "2026-09-24",
+            "y": 102.038575
+          },
+          {
+            "x": "2026-09-25",
+            "y": 98.066099
+          },
+          {
+            "x": "2026-09-28",
+            "y": 102.606441
+          },
+          {
+            "x": "2026-09-29",
+            "y": 101.643418
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "-0.94%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 108.986058,
+        "series": "all"
+      },
+      "min": {
+        "value": 85.960277,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Software: Only Oracle Gains, Up 3.9%",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 92.402095
+      },
+      "displayText": "92.40",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

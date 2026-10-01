@@ -1,0 +1,456 @@
+{
+  "id": "01-china-7nm-gap",
+  "mode": "faithful",
+  "sourceImage": "input/01-china-7nm-gap.png",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Exhibit 5: China 7nm and below supply vs demand",
+    "preservedElements": [
+      "clustered vertical bar chart",
+      "2023-2035E year axis",
+      "Demand and Supply series",
+      "k wpm; 12-inch unit",
+      "source and annotations"
+    ],
+    "changedElements": [
+      "normalized Paperlogy typography and spacing"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Intermediate years are source-visible approximations read from bar heights. The directly printed 2025 demand 127, supply 10, 2035E demand 619, and supply 410 are preserved exactly.",
+    "sourceAttribution": "Source: Company data, Goldman Sachs Global Investment Research"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-title-preserved",
+      "label": "Source title preserved",
+      "status": "pass",
+      "detail": "The original Exhibit 5 title and comparison are retained."
+    },
+    {
+      "id": "series-count-preserved",
+      "label": "Series count preserved",
+      "status": "pass",
+      "detail": "Demand and Supply are both retained."
+    },
+    {
+      "id": "source-visible-data",
+      "label": "Source-visible data",
+      "status": "pass",
+      "detail": "Intermediate values are source-visible approximations; four printed anchor values are exact."
+    },
+    {
+      "id": "source-preserved",
+      "label": "Source preserved",
+      "status": "pass",
+      "detail": "Company data, Goldman Sachs Global Investment Research is retained."
+    },
+    {
+      "id": "x-axis-preserved",
+      "label": "X-axis preserved",
+      "status": "pass",
+      "detail": "All year labels from 2023 through 2035E are retained."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 canvas",
+      "status": "pass",
+      "detail": "canvasHeight 540 produces a 1,920×1,080 output."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 32,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "16px 30px 2px",
+    "contentPadding": "0 20px",
+    "sourcePadding": "0 30px 8px",
+    "accentColor": "#173B63",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "showDirectLabels": false,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "Exhibit 5: China 7nm and below supply vs demand",
+    "subtitle": "2025 demand 127 / supply 10 → 2035E demand 619 / supply 410",
+    "source": "Source: Company data, Goldman Sachs Global Investment Research",
+    "timeRange": "2023-2035E",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2023",
+        "2024",
+        "2025",
+        "2026E",
+        "2027E",
+        "2028E",
+        "2029E",
+        "2030E",
+        "2031E",
+        "2032E",
+        "2033E",
+        "2034E",
+        "2035E"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "2023",
+        "2025",
+        "2027E",
+        "2029E",
+        "2031E",
+        "2033E",
+        "2035E"
+      ]
+    },
+    "yAxis": {
+      "label": "k wpm; 12-inch",
+      "type": "value",
+      "tickValues": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 700
+    },
+    "legend": [
+      {
+        "name": "Demand",
+        "role": "primary",
+        "originalColor": "#173B63",
+        "remakeColor": "#173B63"
+      },
+      {
+        "name": "Supply",
+        "role": "secondary",
+        "originalColor": "#A8C9E8",
+        "remakeColor": "#A8C9E8"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Demand",
+        "data": [
+          {
+            "x": "2023",
+            "y": 80,
+            "confidence": 0.68
+          },
+          {
+            "x": "2024",
+            "y": 105,
+            "confidence": 0.68
+          },
+          {
+            "x": "2025",
+            "y": 127,
+            "confidence": 1
+          },
+          {
+            "x": "2026E",
+            "y": 158,
+            "confidence": 0.68
+          },
+          {
+            "x": "2027E",
+            "y": 195,
+            "confidence": 0.68
+          },
+          {
+            "x": "2028E",
+            "y": 250,
+            "confidence": 0.68
+          },
+          {
+            "x": "2029E",
+            "y": 300,
+            "confidence": 0.68
+          },
+          {
+            "x": "2030E",
+            "y": 355,
+            "confidence": 0.68
+          },
+          {
+            "x": "2031E",
+            "y": 405,
+            "confidence": 0.68
+          },
+          {
+            "x": "2032E",
+            "y": 460,
+            "confidence": 0.68
+          },
+          {
+            "x": "2033E",
+            "y": 510,
+            "confidence": 0.68
+          },
+          {
+            "x": "2034E",
+            "y": 565,
+            "confidence": 0.68
+          },
+          {
+            "x": "2035E",
+            "y": 619,
+            "confidence": 1
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#173B63"
+      },
+      {
+        "name": "Supply",
+        "data": [
+          {
+            "x": "2023",
+            "y": 0,
+            "confidence": 0.55
+          },
+          {
+            "x": "2024",
+            "y": 0,
+            "confidence": 0.55
+          },
+          {
+            "x": "2025",
+            "y": 10,
+            "confidence": 1
+          },
+          {
+            "x": "2026E",
+            "y": 20,
+            "confidence": 0.55
+          },
+          {
+            "x": "2027E",
+            "y": 40,
+            "confidence": 0.55
+          },
+          {
+            "x": "2028E",
+            "y": 80,
+            "confidence": 0.55
+          },
+          {
+            "x": "2029E",
+            "y": 120,
+            "confidence": 0.55
+          },
+          {
+            "x": "2030E",
+            "y": 170,
+            "confidence": 0.55
+          },
+          {
+            "x": "2031E",
+            "y": 210,
+            "confidence": 0.55
+          },
+          {
+            "x": "2032E",
+            "y": 250,
+            "confidence": 0.55
+          },
+          {
+            "x": "2033E",
+            "y": 300,
+            "confidence": 0.55
+          },
+          {
+            "x": "2034E",
+            "y": 350,
+            "confidence": 0.55
+          },
+          {
+            "x": "2035E",
+            "y": 410,
+            "confidence": 1
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#A8C9E8"
+      }
+    ],
+    "totalDataPoints": 26,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Intermediate bars are source-visible approximations."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "narrative": {
+    "headMessage": "Exhibit 5: China 7nm and below supply vs demand",
+    "subMessage": "S/D gap: 92%→34% · 2026-35E capex: US$124bn",
+    "headline": "Exhibit 5: China 7nm and below supply vs demand",
+    "summary": "China's 7nm-and-below supply-demand gap is projected to narrow from 92% in 2025 to 34% in 2035E.",
+    "story": "The original clustered bars and both series are retained.",
+    "keyTakeaways": [
+      "2025 demand 127 vs supply 10",
+      "2035E demand 619 vs supply 410",
+      "US$124bn capex is needed in 2026-35E to reach the 2035E supply"
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Compare the Demand and Supply bar gap across the years.",
+    "contextualNotes": [
+      "China 7nm and below S/D gap: 92% in 2025 → 34% in 2035E",
+      "To reach the supply by 2035E, capex in 2026-35E would be at US$124bn",
+      "Source: Company data, Goldman Sachs Global Investment Research"
+    ]
+  },
+  "emphasis": {
+    "annotations": [
+      {
+        "text": "China 7nm and below S/D gap: 92% in 2025 → 34% in 2035E",
+        "position": {
+          "x": "2028E",
+          "y": 600
+        },
+        "importance": "critical",
+        "style": "neutral"
+      },
+      {
+        "text": "2026-35E capex US$124bn",
+        "position": {
+          "x": "2028E",
+          "y": 430
+        },
+        "importance": "high",
+        "style": "neutral"
+      },
+      {
+        "text": "127",
+        "position": {
+          "x": "2025",
+          "y": 127
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "10",
+        "position": {
+          "x": "2025",
+          "y": 10
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "619",
+        "position": {
+          "x": "2035E",
+          "y": 619
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      },
+      {
+        "text": "410",
+        "position": {
+          "x": "2035E",
+          "y": 410
+        },
+        "importance": "high",
+        "style": "neutral",
+        "type": "point_label"
+      }
+    ],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#173B63",
+      "secondary": [
+        "#A8C9E8"
+      ],
+      "positive": "#16A34A",
+      "negative": "#D92D20",
+      "accent": "#173B63",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2035E",
+        "y": 619
+      },
+      "displayText": "2035E demand 619 vs supply 410",
+      "reason": "Projected supply-demand gap narrows"
+    },
+    "densityLevel": "balanced"
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.9,
+      "description": "Demand and supply both rise through 2035E, while demand remains higher.",
+      "recentDirection": "up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "Intermediate bars are source-visible estimates."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 619,
+        "at": "2035E demand"
+      },
+      "min": {
+        "value": 0,
+        "at": "2023 supply"
+      },
+      "average": 243.23,
+      "median": 202.5,
+      "range": 619
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  }
+}

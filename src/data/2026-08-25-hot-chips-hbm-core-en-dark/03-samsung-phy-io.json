@@ -1,0 +1,361 @@
+{
+  "id": "03-samsung-phy-io",
+  "mode": "faithful",
+  "sourceImage": "input/04-samsung-phy-io.png",
+  "sourceImages": [
+    "input/04-samsung-phy-io.png"
+  ],
+  "analyzedAt": "2026-08-25T15:00:00+09:00",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "PHY IO in B-die",
+    "originalMessage": "The number of DQs and DQ speed rise across HBM generations.",
+    "sourceKey": "samsung-phy-io-b-die-hot-chips-2026",
+    "sourceAttribution": "Samsung · PHY IO in B-die · Hot Chips 2026",
+    "preservedElements": [
+      "The original two-line dual-axis format",
+      "All eight generations in the original order: HBM through HBM5",
+      "DQ count on the left axis and DQ speed on the right axis",
+      "The 16Gbps HBM4E and 23.5Gbps HBM5 anchors"
+    ],
+    "changedElements": [
+      "Title and subtitle rewritten in plain English",
+      "Source-like blue and orange colors replaced with accessible blue and magenta while keeping the two-line distinction",
+      "Axis labels are expanded so the two different units are easy to read",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "The graph prints no point labels. The HBM4E 16Gbps and HBM5 23.5Gbps values are explicit input anchors; other points are read from the visible axes/grid and remain source-visible."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-a",
+      "label": "Original two-line dual-axis structure retained",
+      "status": "pass",
+      "detail": "Eight categories stay in order; DQ count remains the left-axis line and DQ speed remains the right-axis line."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "Source-visible values disclosed",
+      "status": "warning",
+      "detail": "The source has no labels at each marker. HBM4E = 16Gbps and HBM5 = 23.5Gbps are explicit anchors; remaining points are axis readings."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy title hierarchy",
+      "status": "pass",
+      "detail": "Title uses Paperlogy 900 and subtitle uses Paperlogy 300."
+    },
+    {
+      "id": "export-visual-qa",
+      "label": "Export and visual QA",
+      "status": "pending",
+      "detail": "Export/preflight intentionally left to the parent lane."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "watermarkText": "@wltechrsrch",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "combo",
+    "title": "HBM moves more data, faster",
+    "subtitle": "DQ count (left axis) and DQ speed (right axis) · HBM through HBM5",
+    "source": "Samsung · PHY IO in B-die · Hot Chips 2026",
+    "timeRange": "HBM to HBM5",
+    "xAxis": {
+      "label": "HBM generation",
+      "type": "category",
+      "tickValues": [
+        "HBM",
+        "HBM2",
+        "HBM2E",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "HBM4E",
+        "HBM5"
+      ],
+      "displayTickValues": [
+        "HBM",
+        "HBM2",
+        "HBM2E",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "HBM4E",
+        "HBM5"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "DQ count",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "500",
+        "1000",
+        "1500",
+        "2000",
+        "2500"
+      ],
+      "unit": "",
+      "min": 0,
+      "max": 2500,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "secondaryYAxis": {
+      "label": "DQ speed",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "unit": "Gbps",
+      "min": 0,
+      "max": 30,
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "DQ count",
+        "role": "primary",
+        "originalColor": "#5B9BD5",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "DQ speed [Gbps]",
+        "role": "secondary",
+        "originalColor": "#FF9900",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "DQ count",
+        "renderAs": "line",
+        "role": "primary",
+        "axis": "left",
+        "color": "#00E0A4",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 1024,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM2",
+            "y": 1024,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM2E",
+            "y": 1024,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM3",
+            "y": 1024,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM3E",
+            "y": 1024,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM4",
+            "y": 2048,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM4E",
+            "y": 2048,
+            "confidence": 0.78
+          },
+          {
+            "x": "HBM5",
+            "y": 2048,
+            "confidence": 0.78
+          }
+        ]
+      },
+      {
+        "name": "DQ speed [Gbps]",
+        "renderAs": "line",
+        "role": "secondary",
+        "axis": "right",
+        "color": "#FF6A5F",
+        "data": [
+          {
+            "x": "HBM",
+            "y": 1,
+            "confidence": 0.68
+          },
+          {
+            "x": "HBM2",
+            "y": 2,
+            "confidence": 0.68
+          },
+          {
+            "x": "HBM2E",
+            "y": 2.4,
+            "confidence": 0.68
+          },
+          {
+            "x": "HBM3",
+            "y": 6.4,
+            "confidence": 0.7
+          },
+          {
+            "x": "HBM3E",
+            "y": 8,
+            "confidence": 0.7
+          },
+          {
+            "x": "HBM4",
+            "y": 11.5,
+            "confidence": 0.66
+          },
+          {
+            "x": "HBM4E",
+            "y": 16,
+            "confidence": 1
+          },
+          {
+            "x": "HBM5",
+            "y": 23.5,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 16,
+    "quality": {
+      "overallConfidence": 0.75,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "Marker labels are not printed. HBM4E and HBM5 speed anchors are explicit; the other speed points are source-visible axis readings."
+      ],
+      "readabilityScore": "fair"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "strong_up",
+      "strength": 0.96,
+      "description": "DQ count steps up at HBM4 while DQ speed rises steadily toward HBM5.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.86,
+      "description": "Speed makes the largest step from HBM4E to HBM5; DQ count stays flat after HBM4."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 23.5,
+        "at": "HBM5 DQ speed"
+      },
+      "min": {
+        "value": 1,
+        "at": "HBM DQ speed"
+      },
+      "average": 8.85,
+      "median": 5.6,
+      "range": 22.5
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "HBM moves more data, faster",
+    "subMessage": "DQ count doubles at HBM4, while speed reaches 23.5Gbps at HBM5.",
+    "headline": "HBM moves more data, faster",
+    "summary": "DQ is the path that lets data move in and out. Tracking both path count and per-path speed makes the generation change easier to understand.",
+    "story": "Think of a highway. DQ count is the number of lanes, and DQ speed is how fast cars can travel in one lane. HBM4 takes the lanes from 1024 to 2048, while HBM5 raises per-lane speed to 23.5Gbps.",
+    "keyTakeaways": [
+      "DQ count stays at 1024 from HBM through HBM3E in the source-visible chart.",
+      "DQ count reaches 2048 at HBM4 and stays there through HBM5.",
+      "DQ speed is 16Gbps for HBM4E and 23.5Gbps for HBM5."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Separate the left and right units, then compare the HBM4 count jump with the HBM5 speed jump.",
+    "contextualNotes": [
+      "Samsung · PHY IO in B-die · Hot Chips 2026",
+      "HBM4E = 16Gbps and HBM5 = 23.5Gbps are explicit input anchors."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "position": {
+        "x": "HBM5",
+        "y": 23.5
+      },
+      "displayText": "HBM5 · 23.5 Gbps",
+      "reason": "The latest explicit speed anchor shows the faster data path."
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  }
+}

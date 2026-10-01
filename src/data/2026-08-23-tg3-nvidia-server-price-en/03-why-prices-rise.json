@@ -1,0 +1,161 @@
+{
+  "id": "03-why-prices-rise",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "directional",
+    "preservedElements": [
+      "numbers",
+      "order",
+      "source"
+    ],
+    "changedElements": [
+      "Paperlogy 제목 900·서브메시지 300",
+      "16:9 여백"
+    ],
+    "notes": "원문의 설명 세 줄을 그대로 옮겼습니다. 새 수치를 넣지 않았습니다."
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "형식·밀도·라벨·출처를 먼저 정한 뒤 JSON을 만들었습니다.",
+      "checkedAt": "2026-08-23"
+    },
+    {
+      "id": "numbers-from-master",
+      "label": "확정 한국어 원문에서만 수치 인용",
+      "status": "pass",
+      "detail": "tg-3:b 확정 원문에 있는 값만 사용했고 새 값을 계산하지 않았습니다.",
+      "checkedAt": "2026-08-23"
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "2px 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#0969DA",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "What is pushing the price up",
+    "subtitle": "Memory and component prices reaching the server system",
+    "source": "Source: industry forecast, Aug 2026"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Item",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "34%",
+        "align": "left"
+      },
+      {
+        "key": "v",
+        "label": "What it says",
+        "dataType": "text",
+        "width": "66%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "Cost",
+            "displayValue": "Cost"
+          },
+          "v": {
+            "value": "Memory and other component prices are rising",
+            "displayValue": "Memory and other component prices are rising"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "Supply",
+            "displayValue": "Supply"
+          },
+          "v": {
+            "value": "AI chip makers are locking in long-term supply deals",
+            "displayValue": "AI chip makers are locking in long-term supply deals"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "k": {
+            "value": "Demand",
+            "displayValue": "Demand"
+          },
+          "v": {
+            "value": "Nvidia's memory demand dwarfs its rivals'",
+            "displayValue": "Nvidia's memory demand dwarfs its rivals'"
+          }
+        }
+      }
+    ],
+    "visualOptions": {
+      "fitRowsToCanvas": true,
+      "minRowHeight": 60,
+      "maxRowHeight": 260,
+      "cellPadding": "10px 16px",
+      "fontSize": {
+        "header": "17px",
+        "body": "22px"
+      },
+      "fontWeight": {
+        "body": 400,
+        "rowHeader": 700,
+        "header": 700
+      },
+      "zebraStripe": true,
+      "headerTone": "plain",
+      "rowRules": "soft",
+      "columnRules": false,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif"
+    }
+  },
+  "narrative": {
+    "headMessage": "What is pushing the price up",
+    "subMessage": "Memory and component prices reaching the server system"
+  },
+  "emphasis": {
+    "annotations": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#8B95A1"
+      ],
+      "accent": "#0969DA"
+    }
+  }
+}

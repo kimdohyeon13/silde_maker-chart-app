@@ -1,0 +1,847 @@
+{
+  "id": "c2-coding-agent-top10",
+  "sourceImage": "input/page_004.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: OpenAI, 2026년 8월"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "chartHeight": 380,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "연구원 1인당 코딩 에이전트 하루 사용액, 상위 10% (2026년)",
+    "subtitle": "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다",
+    "source": "자료: OpenAI, 2026년 8월",
+    "timeRange": "2026년 1월 1일 ~ 2026년 8월 28일",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-01-31",
+        "2026-04-01",
+        "2026-05-31",
+        "2026-08-01"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "26.02",
+        "26.04",
+        "26.06",
+        "26.08"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        0,
+        2000,
+        4000,
+        6000,
+        8000
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 8000
+    },
+    "legend": [
+      {
+        "name": "상위 10%",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상위 10%",
+        "data": [
+          {
+            "x": "2026-01-01",
+            "y": 20.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-03",
+            "y": 21.93,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-05",
+            "y": 23.87,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-07",
+            "y": 25.81,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-09",
+            "y": 27.74,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-11",
+            "y": 29.68,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-13",
+            "y": 31.61,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-15",
+            "y": 33.55,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-17",
+            "y": 35.48,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-19",
+            "y": 37.42,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-21",
+            "y": 39.35,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-23",
+            "y": 41.29,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-25",
+            "y": 43.23,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-27",
+            "y": 45.16,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-29",
+            "y": 47.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01-31",
+            "y": 49.03,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-02",
+            "y": 53.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-04",
+            "y": 60.71,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-06",
+            "y": 67.86,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-08",
+            "y": 75.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-10",
+            "y": 82.14,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-12",
+            "y": 89.29,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-14",
+            "y": 96.43,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-16",
+            "y": 103.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-18",
+            "y": 110.71,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-20",
+            "y": 117.86,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-22",
+            "y": 125.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-24",
+            "y": 132.14,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-26",
+            "y": 139.29,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02-28",
+            "y": 146.43,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-02",
+            "y": 158.06,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-04",
+            "y": 174.19,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-06",
+            "y": 190.32,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-08",
+            "y": 206.45,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-10",
+            "y": 222.58,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-12",
+            "y": 238.71,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-14",
+            "y": 254.84,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-16",
+            "y": 270.97,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-18",
+            "y": 287.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-20",
+            "y": 303.23,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-22",
+            "y": 319.36,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-24",
+            "y": 335.48,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-26",
+            "y": 351.61,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-28",
+            "y": 367.74,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03-30",
+            "y": 383.87,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-01",
+            "y": 400.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-03",
+            "y": 413.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-05",
+            "y": 426.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-07",
+            "y": 440.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-09",
+            "y": 453.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-11",
+            "y": 466.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-13",
+            "y": 480.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-15",
+            "y": 493.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-17",
+            "y": 510.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-19",
+            "y": 530.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-21",
+            "y": 550.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-23",
+            "y": 570.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-25",
+            "y": 590.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-27",
+            "y": 610.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04-29",
+            "y": 630.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-01",
+            "y": 650.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-03",
+            "y": 670.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-05",
+            "y": 690.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-07",
+            "y": 710.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-09",
+            "y": 730.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-11",
+            "y": 750.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-13",
+            "y": 770.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-15",
+            "y": 790.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-17",
+            "y": 812.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-19",
+            "y": 837.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-21",
+            "y": 862.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-23",
+            "y": 887.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-25",
+            "y": 912.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-27",
+            "y": 937.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-29",
+            "y": 962.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05-31",
+            "y": 987.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-02",
+            "y": 1011.11,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-04",
+            "y": 1033.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-06",
+            "y": 1055.56,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-08",
+            "y": 1077.78,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-10",
+            "y": 1100.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-12",
+            "y": 1083.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-14",
+            "y": 1066.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-16",
+            "y": 1050.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-18",
+            "y": 1076.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-20",
+            "y": 1103.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-22",
+            "y": 1130.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-24",
+            "y": 1156.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-26",
+            "y": 1183.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-28",
+            "y": 1210.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06-30",
+            "y": 1236.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-02",
+            "y": 1266.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-04",
+            "y": 1300.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-06",
+            "y": 1333.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-08",
+            "y": 1366.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-10",
+            "y": 1400.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-12",
+            "y": 1433.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-14",
+            "y": 1466.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-16",
+            "y": 1500.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-18",
+            "y": 1566.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-20",
+            "y": 1633.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-22",
+            "y": 1700.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-24",
+            "y": 1766.67,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-26",
+            "y": 1833.33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-28",
+            "y": 1900.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07-30",
+            "y": 2175.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-01",
+            "y": 2450.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-03",
+            "y": 2725.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-05",
+            "y": 3000.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-07",
+            "y": 3428.57,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-09",
+            "y": 3857.14,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-11",
+            "y": 4285.71,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-13",
+            "y": 4687.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-15",
+            "y": 5062.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-17",
+            "y": 5437.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-19",
+            "y": 5812.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-21",
+            "y": 6125.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-23",
+            "y": 6375.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-25",
+            "y": 6625.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-27",
+            "y": 6875.0,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08-28",
+            "y": 7000.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#0F4C81"
+      }
+    ],
+    "totalDataPoints": 121,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 6.011,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 34900.0,
+        "absoluteChange": 6980.0,
+        "from": 20.0,
+        "to": 7000.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 7000.0,
+        "at": ""
+      },
+      "min": {
+        "value": 20.0,
+        "at": ""
+      },
+      "average": 1161.1787603305786,
+      "median": 650.0,
+      "range": 6980.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "연구원 1인당 코딩 에이전트 하루 사용액, 상위 10% (2026년)",
+    "subMessage": "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다",
+    "headline": "연구원 1인당 코딩 에이전트 하루 사용액, 상위 10% (2026년)",
+    "summary": "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: OpenAI, 2026년 8월"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 7000.0
+      },
+      "displayText": "연구원 1인당 코딩 에이전트 ",
+      "reason": "단위 달러/일. 상위 10%는 8월에 7,000달러까지 올라 중위값의 약 12배다"
+    },
+    "densityLevel": "balanced"
+  },
+  "mode": "faithful"
+}

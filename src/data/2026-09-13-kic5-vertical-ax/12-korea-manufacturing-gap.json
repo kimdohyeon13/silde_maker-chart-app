@@ -1,0 +1,236 @@
+{
+  "id": "korea-manufacturing-gap",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "공정에 실제로 넣은 곳은 0.1%, 설문 응답은 25.4%입니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 중소벤처기업부 대면조사, 통계청 기업활동조사, 한국지능정보사회진흥원"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 4개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "한국 제조업 AI 도입률, 조사 방법별 결과",
+    "subtitle": "공정에 실제로 넣은 곳은 0.1%, 설문 응답은 25.4%입니다",
+    "source": "자료: 중소벤처기업부 대면조사, 통계청 기업활동조사, 한국지능정보사회진흥원",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "대면조사 · 제조 AI 공정 도입",
+        "행정통계 · 제조업",
+        "행정통계 · 전체 기업",
+        "설문조사 · 제조업"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "도입률",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "도입률",
+        "data": [
+          {
+            "x": "대면조사 · 제조 AI 공정 도입",
+            "y": 0.1,
+            "confidence": 0.95,
+            "displayLabel": "0.1%",
+            "color": "#087A68"
+          },
+          {
+            "x": "행정통계 · 제조업",
+            "y": 4,
+            "confidence": 0.95,
+            "displayLabel": "약 4%",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "행정통계 · 전체 기업",
+            "y": 6.4,
+            "confidence": 0.95,
+            "displayLabel": "6.4%",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "설문조사 · 제조업",
+            "y": 25.4,
+            "confidence": 0.95,
+            "displayLabel": "25.4%",
+            "color": "#A0AEC0"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 4,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 25.4,
+        "at": ""
+      },
+      "min": {
+        "value": 0.1,
+        "at": ""
+      },
+      "average": 8.975,
+      "median": 6.4,
+      "range": 25.299999999999997
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "한국 제조업 AI 도입률, 조사 방법별 결과",
+    "subMessage": "공정에 실제로 넣은 곳은 0.1%, 설문 응답은 25.4%입니다",
+    "headline": "한국 제조업 AI 도입률, 조사 방법별 결과",
+    "summary": "공정에 실제로 넣은 곳은 0.1%, 설문 응답은 25.4%입니다",
+    "story": "공정에 실제로 넣은 곳은 0.1%, 설문 응답은 25.4%입니다",
+    "keyTakeaways": [
+      "대면조사는 제조기업 5,000곳을 직접 찾아가 물었습니다.",
+      "설문은 담당자가 챗GPT만 써도 도입으로 답합니다.",
+      "행정통계는 2023년, 설문은 2023년 기준입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "대면조사는 제조기업 5,000곳을 직접 찾아가 물었습니다.",
+    "contextualNotes": [
+      "자료: 중소벤처기업부 대면조사, 통계청 기업활동조사, 한국지능정보사회진흥원"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

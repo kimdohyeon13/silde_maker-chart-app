@@ -1,0 +1,255 @@
+{
+  "id": "bandwidth-tiers",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Scale-across를 1로 놓으면 Scale-in은 1,000배까지 간다",
+    "preservedElements": [
+      "계층별 상대 배수",
+      "계층 이름과 순서"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "Source: Lumentum, Citi 2026 Global TMT Conference (Sep 9, 2026)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "계층 간 차이가 1만 배라 로그 축 가로 막대로 그린다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Relative Bandwidth by Connection Tier",
+    "subtitle": "With scale-across at 1, scale-in reaches 1,000x",
+    "source": "Source: Lumentum, Citi 2026 Global TMT Conference (Sep 9, 2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0.1",
+        "1",
+        "10",
+        "100",
+        "1000"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": true,
+      "min": 0,
+      "max": 1000
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "in",
+        "up",
+        "out",
+        "across",
+        "dci"
+      ],
+      "displayTickValues": [
+        "Scale-in 1,000",
+        "Scale-up 100",
+        "Scale-out 10",
+        "Scale-across 1",
+        "Legacy DCI and telecom 0.1"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Relative multiple",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Relative multiple",
+        "data": [
+          {
+            "x": "in",
+            "y": 1000,
+            "confidence": 0.9
+          },
+          {
+            "x": "up",
+            "y": 100,
+            "confidence": 0.9
+          },
+          {
+            "x": "out",
+            "y": 10,
+            "confidence": 0.9
+          },
+          {
+            "x": "across",
+            "y": 1,
+            "confidence": 0.9
+          },
+          {
+            "x": "dci",
+            "y": 0.1,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -100,
+        "absoluteChange": -999.9,
+        "from": 1000,
+        "to": 0.1
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 1000,
+        "at": "Scale-in 1,000"
+      },
+      "min": {
+        "value": 0.1,
+        "at": "Legacy DCI and telecom 0.1"
+      },
+      "average": 222.21999999999997,
+      "median": 10,
+      "range": 999.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Relative Bandwidth by Connection Tier",
+    "subMessage": "With scale-across at 1, scale-in reaches 1,000x",
+    "headline": "Relative Bandwidth by Connection Tier",
+    "summary": "With scale-across at 1, scale-in reaches 1,000x",
+    "story": "With scale-across at 1, scale-in reaches 1,000x",
+    "keyTakeaways": [
+      "Scale-in inside the chip carries the largest demand.",
+      "Legacy telecom sits at 0.1 on this scale.",
+      "Lumentum has exposure across all four tiers."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Scale-in inside the chip carries the largest demand.",
+    "contextualNotes": [
+      "Source: Lumentum, Citi 2026 Global TMT Conference (Sep 9, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

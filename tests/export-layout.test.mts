@@ -9,6 +9,11 @@ import {
   resolveHeaderLayout,
 } from "../src/lib/export-layout.ts";
 import { getStylePreset } from "../src/lib/style-presets.ts";
+// 스킬 쪽 표준 모듈(JS)을 그대로 읽어 값 드리프트를 막는다.
+import {
+  CHART_CARD_LAYOUT,
+  MIN_CHART_SUBTITLE_FONT_SIZE,
+} from "../../../.agents/skills/slide_maker/scripts/card-layout.mjs";
 
 test("화이트 시안의 캔버스 높이는 유효한 양수만 사용한다", () => {
   assert.equal(resolveCanvasHeight(), undefined);
@@ -61,20 +66,28 @@ test("직접 지정한 제목 크기와 중앙 외 헤더의 제목 크기는 �
   assert.equal(resolveCenteredTitleFontSize(orphanTitle, 36, undefined, "stacked"), 36);
 });
 
-test("일반 Slide_maker 기본형은 순백 중앙 갤러리 헤더와 헤어라인 프레임을 쓴다", () => {
+test("일반 Slide_maker 기본형은 승인된 C 좌측 강조형과 보정된 간격을 쓴다", () => {
   const preset = getStylePreset("toss-clean");
   const defaults = preset.exportDefaults;
 
-  assert.equal(defaults?.headerVariant, "centered");
+  assert.equal(defaults?.headerVariant, "left-rail");
   assert.equal(defaults?.frameStyle, "hairline");
   assert.equal(defaults?.backgroundColor, "#FFFFFF");
   assert.equal(defaults?.contentBorder, false);
-  assert.equal(defaults?.squareEdges, false);
-  assert.equal(preset.export.titleFontSize, 36);
-  assert.equal(preset.export.subtitleFontSize, 17);
-  assert.equal(preset.export.sourceFontSize, 11);
-  assert.equal(preset.tableDefaults?.headerTone, "underline");
-  assert.equal(preset.tableDefaults?.groupHeaderTone, "plain");
+  assert.equal(defaults?.squareEdges, true);
+  // 여백·글자 표준의 원본은 .agents/skills/slide_maker/scripts/card-layout.mjs다.
+  // 프리셋 기본값이 그 표준과 어긋나면 여기서 잡는다.
+  assert.equal(preset.export.headerPadding, CHART_CARD_LAYOUT.headerPadding);
+  assert.equal(preset.export.contentPadding, CHART_CARD_LAYOUT.contentPadding);
+  assert.equal(preset.export.sourcePadding, CHART_CARD_LAYOUT.sourcePadding);
+  assert.equal(preset.export.titleFontSize, CHART_CARD_LAYOUT.titleFontSize);
+  assert.equal(preset.export.sourceFontSize, CHART_CARD_LAYOUT.sourceFontSize);
+  assert.ok(preset.export.subtitleFontSize >= MIN_CHART_SUBTITLE_FONT_SIZE);
+  assert.equal(preset.tableDefaults?.headerTone, "tinted");
+  assert.equal(preset.tableDefaults?.groupHeaderTone, "accent-rule");
+  assert.equal(defaults?.chartLabelScale, 0.85);
+  assert.equal(defaults?.chartLabelFontWeight, 600);
+  assert.equal(preset.tableDefaults?.lineHeight, 1.2);
 });
 
 test("시그널 에디토리얼 헤더는 상단 규칙과 우측 핵심 수치를 함께 쓴다", () => {

@@ -1,0 +1,738 @@
+{
+  "id": "dib253-04",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-253-04.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "03. 브렌트유와 WTI, 사우디 휴전 제안에 하락",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 17일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 2,
+    "endLabelRightMargin": 260,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "03. 브렌트유와 WTI, 사우디 휴전 제안에 하락",
+    "subtitle": "9월 17일: 브렌트 -1.64%, WTI -1.31%",
+    "source": "자료: Yahoo Finance · 2026년 9월 17일 종가까지",
+    "timeRange": "2026-06-18 to 2026-09-17",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-06-18",
+        "2026-07-08",
+        "2026-07-27",
+        "2026-08-12",
+        "2026-08-31",
+        "2026-09-17"
+      ],
+      "displayTickValues": [
+        "06-18",
+        "07-08",
+        "07-27",
+        "08-12",
+        "08-31",
+        "09-17"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "유가",
+      "type": "value",
+      "tickValues": [
+        "65",
+        "70",
+        "75",
+        "80",
+        "85",
+        "90",
+        "95",
+        "100",
+        "105",
+        "110"
+      ],
+      "unit": "$",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 65,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "브렌트",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "WTI",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "브렌트",
+        "data": [
+          {
+            "x": "2026-06-18",
+            "y": 79.85
+          },
+          {
+            "x": "2026-06-22",
+            "y": 77.9
+          },
+          {
+            "x": "2026-06-23",
+            "y": 77.08
+          },
+          {
+            "x": "2026-06-24",
+            "y": 73.74
+          },
+          {
+            "x": "2026-06-25",
+            "y": 75.26
+          },
+          {
+            "x": "2026-06-26",
+            "y": 71.99
+          },
+          {
+            "x": "2026-06-29",
+            "y": 73.15
+          },
+          {
+            "x": "2026-06-30",
+            "y": 72.92
+          },
+          {
+            "x": "2026-07-01",
+            "y": 71.57
+          },
+          {
+            "x": "2026-07-02",
+            "y": 71.8
+          },
+          {
+            "x": "2026-07-06",
+            "y": 71.99
+          },
+          {
+            "x": "2026-07-07",
+            "y": 74.16
+          },
+          {
+            "x": "2026-07-08",
+            "y": 78.02
+          },
+          {
+            "x": "2026-07-09",
+            "y": 76.3
+          },
+          {
+            "x": "2026-07-10",
+            "y": 76.01
+          },
+          {
+            "x": "2026-07-13",
+            "y": 83.3
+          },
+          {
+            "x": "2026-07-14",
+            "y": 84.73
+          },
+          {
+            "x": "2026-07-15",
+            "y": 84.95
+          },
+          {
+            "x": "2026-07-16",
+            "y": 84.23
+          },
+          {
+            "x": "2026-07-17",
+            "y": 88.1
+          },
+          {
+            "x": "2026-07-20",
+            "y": 89.22
+          },
+          {
+            "x": "2026-07-21",
+            "y": 91.01
+          },
+          {
+            "x": "2026-07-22",
+            "y": 94.07
+          },
+          {
+            "x": "2026-07-23",
+            "y": 100.69
+          },
+          {
+            "x": "2026-07-24",
+            "y": 96.78
+          },
+          {
+            "x": "2026-07-27",
+            "y": 88.36
+          },
+          {
+            "x": "2026-07-28",
+            "y": 84.09
+          },
+          {
+            "x": "2026-07-29",
+            "y": 90.74
+          },
+          {
+            "x": "2026-07-30",
+            "y": 89.03
+          },
+          {
+            "x": "2026-07-31",
+            "y": 90.12
+          },
+          {
+            "x": "2026-08-03",
+            "y": 83.77
+          },
+          {
+            "x": "2026-08-04",
+            "y": 79.36
+          },
+          {
+            "x": "2026-08-05",
+            "y": 79.45
+          },
+          {
+            "x": "2026-08-06",
+            "y": 82.49
+          },
+          {
+            "x": "2026-08-07",
+            "y": 83.55
+          },
+          {
+            "x": "2026-08-10",
+            "y": 87.72
+          },
+          {
+            "x": "2026-08-11",
+            "y": 88.91
+          },
+          {
+            "x": "2026-08-12",
+            "y": 88.98
+          },
+          {
+            "x": "2026-08-13",
+            "y": 87.07
+          },
+          {
+            "x": "2026-08-14",
+            "y": 88.52
+          },
+          {
+            "x": "2026-08-17",
+            "y": 90.87
+          },
+          {
+            "x": "2026-08-18",
+            "y": 91.02
+          },
+          {
+            "x": "2026-08-19",
+            "y": 91.62
+          },
+          {
+            "x": "2026-08-20",
+            "y": 93.78
+          },
+          {
+            "x": "2026-08-21",
+            "y": 94.39
+          },
+          {
+            "x": "2026-08-24",
+            "y": 92.17
+          },
+          {
+            "x": "2026-08-25",
+            "y": 88.58
+          },
+          {
+            "x": "2026-08-26",
+            "y": 87.84
+          },
+          {
+            "x": "2026-08-27",
+            "y": 89.7
+          },
+          {
+            "x": "2026-08-28",
+            "y": 89.31
+          },
+          {
+            "x": "2026-08-31",
+            "y": 90.49
+          },
+          {
+            "x": "2026-09-01",
+            "y": 94.65
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.63
+          },
+          {
+            "x": "2026-09-03",
+            "y": 95.52
+          },
+          {
+            "x": "2026-09-04",
+            "y": 96.28
+          },
+          {
+            "x": "2026-09-08",
+            "y": 97.92
+          },
+          {
+            "x": "2026-09-09",
+            "y": 101.21
+          },
+          {
+            "x": "2026-09-10",
+            "y": 107.63
+          },
+          {
+            "x": "2026-09-11",
+            "y": 104.61
+          },
+          {
+            "x": "2026-09-14",
+            "y": 105.68
+          },
+          {
+            "x": "2026-09-15",
+            "y": 108.75
+          },
+          {
+            "x": "2026-09-16",
+            "y": 105.83
+          },
+          {
+            "x": "2026-09-17",
+            "y": 104.09
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-1.64%",
+          "color": "#175CD3"
+        }
+      },
+      {
+        "name": "WTI",
+        "data": [
+          {
+            "x": "2026-06-18",
+            "y": 76.6
+          },
+          {
+            "x": "2026-06-22",
+            "y": 74.82
+          },
+          {
+            "x": "2026-06-23",
+            "y": 73.21
+          },
+          {
+            "x": "2026-06-24",
+            "y": 70.34
+          },
+          {
+            "x": "2026-06-25",
+            "y": 71.92
+          },
+          {
+            "x": "2026-06-26",
+            "y": 69.23
+          },
+          {
+            "x": "2026-06-29",
+            "y": 70.75
+          },
+          {
+            "x": "2026-06-30",
+            "y": 69.5
+          },
+          {
+            "x": "2026-07-01",
+            "y": 68.58
+          },
+          {
+            "x": "2026-07-02",
+            "y": 68.69
+          },
+          {
+            "x": "2026-07-06",
+            "y": 68.55
+          },
+          {
+            "x": "2026-07-07",
+            "y": 70.44
+          },
+          {
+            "x": "2026-07-08",
+            "y": 73.52
+          },
+          {
+            "x": "2026-07-09",
+            "y": 72.08
+          },
+          {
+            "x": "2026-07-10",
+            "y": 71.41
+          },
+          {
+            "x": "2026-07-13",
+            "y": 78.14
+          },
+          {
+            "x": "2026-07-14",
+            "y": 79.34
+          },
+          {
+            "x": "2026-07-15",
+            "y": 79.6
+          },
+          {
+            "x": "2026-07-16",
+            "y": 78.95
+          },
+          {
+            "x": "2026-07-17",
+            "y": 82.49
+          },
+          {
+            "x": "2026-07-20",
+            "y": 83.23
+          },
+          {
+            "x": "2026-07-21",
+            "y": 84.91
+          },
+          {
+            "x": "2026-07-22",
+            "y": 86.83
+          },
+          {
+            "x": "2026-07-23",
+            "y": 92.19
+          },
+          {
+            "x": "2026-07-24",
+            "y": 89.31
+          },
+          {
+            "x": "2026-07-27",
+            "y": 82.61
+          },
+          {
+            "x": "2026-07-28",
+            "y": 79.26
+          },
+          {
+            "x": "2026-07-29",
+            "y": 84.46
+          },
+          {
+            "x": "2026-07-30",
+            "y": 83.59
+          },
+          {
+            "x": "2026-07-31",
+            "y": 84.67
+          },
+          {
+            "x": "2026-08-03",
+            "y": 80.34
+          },
+          {
+            "x": "2026-08-04",
+            "y": 75.77
+          },
+          {
+            "x": "2026-08-05",
+            "y": 75.22
+          },
+          {
+            "x": "2026-08-06",
+            "y": 77.29
+          },
+          {
+            "x": "2026-08-07",
+            "y": 78.18
+          },
+          {
+            "x": "2026-08-10",
+            "y": 82.13
+          },
+          {
+            "x": "2026-08-11",
+            "y": 83.2
+          },
+          {
+            "x": "2026-08-12",
+            "y": 83.27
+          },
+          {
+            "x": "2026-08-13",
+            "y": 81.25
+          },
+          {
+            "x": "2026-08-14",
+            "y": 82.4
+          },
+          {
+            "x": "2026-08-17",
+            "y": 84.5
+          },
+          {
+            "x": "2026-08-18",
+            "y": 84.94
+          },
+          {
+            "x": "2026-08-19",
+            "y": 85.83
+          },
+          {
+            "x": "2026-08-20",
+            "y": 87.83
+          },
+          {
+            "x": "2026-08-21",
+            "y": 87.06
+          },
+          {
+            "x": "2026-08-24",
+            "y": 85.01
+          },
+          {
+            "x": "2026-08-25",
+            "y": 82.36
+          },
+          {
+            "x": "2026-08-26",
+            "y": 82.23
+          },
+          {
+            "x": "2026-08-27",
+            "y": 83.53
+          },
+          {
+            "x": "2026-08-28",
+            "y": 83.4
+          },
+          {
+            "x": "2026-08-31",
+            "y": 85.76
+          },
+          {
+            "x": "2026-09-01",
+            "y": 90.22
+          },
+          {
+            "x": "2026-09-02",
+            "y": 91.01
+          },
+          {
+            "x": "2026-09-03",
+            "y": 91.3
+          },
+          {
+            "x": "2026-09-04",
+            "y": 91.48
+          },
+          {
+            "x": "2026-09-08",
+            "y": 93.03
+          },
+          {
+            "x": "2026-09-09",
+            "y": 96.05
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.48
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.05
+          },
+          {
+            "x": "2026-09-14",
+            "y": 101.39
+          },
+          {
+            "x": "2026-09-15",
+            "y": 105.83
+          },
+          {
+            "x": "2026-09-16",
+            "y": 102.43
+          },
+          {
+            "x": "2026-09-17",
+            "y": 101.09
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-1.31%",
+          "color": "#175CD3"
+        }
+      }
+    ],
+    "totalDataPoints": 126,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "9월 17일: 브렌트 -1.64%, WTI -1.31%",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 108.75,
+        "series": "all"
+      },
+      "min": {
+        "value": 68.55,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "03. 브렌트유와 WTI, 사우디 휴전 제안에 하락",
+    "subMessage": "9월 17일: 브렌트 -1.64%, WTI -1.31%"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-17",
+        "y": 104.09
+      },
+      "displayText": "104.09",
+      "reason": "9월 17일: 브렌트 -1.64%, WTI -1.31%"
+    },
+    "densityLevel": "focused"
+  }
+}

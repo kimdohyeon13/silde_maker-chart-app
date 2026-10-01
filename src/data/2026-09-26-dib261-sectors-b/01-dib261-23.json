@@ -1,0 +1,407 @@
+{
+  "id": "dib261-23",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-23.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "애플 +1.53%, 퀄컴 +3.97% 특허 계약 갱신",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-26) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "애플 +1.53%, 퀄컴 +3.97% 특허 계약 갱신",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-08-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-26",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-21",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "08-26",
+        "09-01",
+        "09-08",
+        "09-15",
+        "09-21",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 100,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "애플",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "퀄컴",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "애플",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 100.3605
+          },
+          {
+            "x": "2026-08-28",
+            "y": 101.9939
+          },
+          {
+            "x": "2026-08-31",
+            "y": 101.0847
+          },
+          {
+            "x": "2026-09-01",
+            "y": 103.7263
+          },
+          {
+            "x": "2026-09-02",
+            "y": 103.672
+          },
+          {
+            "x": "2026-09-03",
+            "y": 104.7089
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.0801
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.8837
+          },
+          {
+            "x": "2026-09-09",
+            "y": 100.603
+          },
+          {
+            "x": "2026-09-10",
+            "y": 104.1857
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.0041
+          },
+          {
+            "x": "2026-09-14",
+            "y": 106.2626
+          },
+          {
+            "x": "2026-09-15",
+            "y": 105.7074
+          },
+          {
+            "x": "2026-09-16",
+            "y": 106.0488
+          },
+          {
+            "x": "2026-09-17",
+            "y": 107.5132
+          },
+          {
+            "x": "2026-09-18",
+            "y": 107.2356
+          },
+          {
+            "x": "2026-09-21",
+            "y": 108.1448
+          },
+          {
+            "x": "2026-09-22",
+            "y": 108.3905
+          },
+          {
+            "x": "2026-09-23",
+            "y": 107.5195
+          },
+          {
+            "x": "2026-09-24",
+            "y": 107.1686
+          },
+          {
+            "x": "2026-09-25",
+            "y": 108.8116
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+1.53%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "퀄컴",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100.0
+          },
+          {
+            "x": "2026-08-27",
+            "y": 100.6474
+          },
+          {
+            "x": "2026-08-28",
+            "y": 100.2871
+          },
+          {
+            "x": "2026-08-31",
+            "y": 104.129
+          },
+          {
+            "x": "2026-09-01",
+            "y": 101.7652
+          },
+          {
+            "x": "2026-09-02",
+            "y": 103.8114
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.9624
+          },
+          {
+            "x": "2026-09-04",
+            "y": 103.0662
+          },
+          {
+            "x": "2026-09-08",
+            "y": 106.334
+          },
+          {
+            "x": "2026-09-09",
+            "y": 107.7449
+          },
+          {
+            "x": "2026-09-10",
+            "y": 108.0381
+          },
+          {
+            "x": "2026-09-11",
+            "y": 111.1471
+          },
+          {
+            "x": "2026-09-14",
+            "y": 110.0354
+          },
+          {
+            "x": "2026-09-15",
+            "y": 114.708
+          },
+          {
+            "x": "2026-09-16",
+            "y": 112.9001
+          },
+          {
+            "x": "2026-09-17",
+            "y": 115.2639
+          },
+          {
+            "x": "2026-09-18",
+            "y": 108.5512
+          },
+          {
+            "x": "2026-09-21",
+            "y": 118.6355
+          },
+          {
+            "x": "2026-09-22",
+            "y": 121.1031
+          },
+          {
+            "x": "2026-09-23",
+            "y": 120.474
+          },
+          {
+            "x": "2026-09-24",
+            "y": 118.6538
+          },
+          {
+            "x": "2026-09-25",
+            "y": 123.3631
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+3.97%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 44,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 123.3631,
+        "series": "all"
+      },
+      "min": {
+        "value": 100.0,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "애플 +1.53%, 퀄컴 +3.97% 특허 계약 갱신",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 108.8116
+      },
+      "displayText": "108.81",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

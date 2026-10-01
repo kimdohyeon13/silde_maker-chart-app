@@ -1,0 +1,602 @@
+{
+  "id": "dib263-21",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-21.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "우주·양자·로봇·드론주 약세",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 29일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "우주·양자·로봇·드론주 약세",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 29일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "로켓랩",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "아이온큐",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "심보틱",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "크라토스",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "로켓랩",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.841056
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.717147
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.827915
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.531921
+          },
+          {
+            "x": "2026-09-08",
+            "y": 103.050696
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.670215
+          },
+          {
+            "x": "2026-09-10",
+            "y": 96.933668
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.482482
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.856697
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.421153
+          },
+          {
+            "x": "2026-09-16",
+            "y": 99.655824
+          },
+          {
+            "x": "2026-09-17",
+            "y": 106.101379
+          },
+          {
+            "x": "2026-09-18",
+            "y": 101.016899
+          },
+          {
+            "x": "2026-09-21",
+            "y": 109.339802
+          },
+          {
+            "x": "2026-09-22",
+            "y": 112.60952
+          },
+          {
+            "x": "2026-09-23",
+            "y": 109.99687
+          },
+          {
+            "x": "2026-09-24",
+            "y": 115.159579
+          },
+          {
+            "x": "2026-09-25",
+            "y": 115.691488
+          },
+          {
+            "x": "2026-09-28",
+            "y": 112.938055
+          },
+          {
+            "x": "2026-09-29",
+            "y": 109.042556
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-3.45%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "아이온큐",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.107854
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.751712
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.262272
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.534213
+          },
+          {
+            "x": "2026-09-08",
+            "y": 102.950903
+          },
+          {
+            "x": "2026-09-09",
+            "y": 97.023653
+          },
+          {
+            "x": "2026-09-10",
+            "y": 93.716609
+          },
+          {
+            "x": "2026-09-11",
+            "y": 93.487659
+          },
+          {
+            "x": "2026-09-14",
+            "y": 95.39557
+          },
+          {
+            "x": "2026-09-15",
+            "y": 94.250822
+          },
+          {
+            "x": "2026-09-16",
+            "y": 93.716609
+          },
+          {
+            "x": "2026-09-17",
+            "y": 102.620195
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.5421
+          },
+          {
+            "x": "2026-09-21",
+            "y": 103.05265
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.637752
+          },
+          {
+            "x": "2026-09-23",
+            "y": 108.216737
+          },
+          {
+            "x": "2026-09-24",
+            "y": 114.423806
+          },
+          {
+            "x": "2026-09-25",
+            "y": 115.695747
+          },
+          {
+            "x": "2026-09-28",
+            "y": 113.406259
+          },
+          {
+            "x": "2026-09-29",
+            "y": 111.701853
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-1.50%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "심보틱",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.344852
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.504161
+          },
+          {
+            "x": "2026-09-03",
+            "y": 104.865138
+          },
+          {
+            "x": "2026-09-04",
+            "y": 108.243006
+          },
+          {
+            "x": "2026-09-08",
+            "y": 109.150495
+          },
+          {
+            "x": "2026-09-09",
+            "y": 107.436352
+          },
+          {
+            "x": "2026-09-10",
+            "y": 103.60474
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.201167
+          },
+          {
+            "x": "2026-09-14",
+            "y": 104.865138
+          },
+          {
+            "x": "2026-09-15",
+            "y": 107.814476
+          },
+          {
+            "x": "2026-09-16",
+            "y": 108.671547
+          },
+          {
+            "x": "2026-09-17",
+            "y": 112.452742
+          },
+          {
+            "x": "2026-09-18",
+            "y": 105.596172
+          },
+          {
+            "x": "2026-09-21",
+            "y": 110.81422
+          },
+          {
+            "x": "2026-09-22",
+            "y": 113.612306
+          },
+          {
+            "x": "2026-09-23",
+            "y": 110.133604
+          },
+          {
+            "x": "2026-09-24",
+            "y": 111.015888
+          },
+          {
+            "x": "2026-09-25",
+            "y": 109.579035
+          },
+          {
+            "x": "2026-09-28",
+            "y": 105.873461
+          },
+          {
+            "x": "2026-09-29",
+            "y": 104.638271
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-1.17%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "크라토스",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 96.783053
+          },
+          {
+            "x": "2026-09-02",
+            "y": 93.723027
+          },
+          {
+            "x": "2026-09-03",
+            "y": 94.350724
+          },
+          {
+            "x": "2026-09-04",
+            "y": 93.801491
+          },
+          {
+            "x": "2026-09-08",
+            "y": 94.546883
+          },
+          {
+            "x": "2026-09-09",
+            "y": 91.683017
+          },
+          {
+            "x": "2026-09-10",
+            "y": 92.153786
+          },
+          {
+            "x": "2026-09-11",
+            "y": 91.584933
+          },
+          {
+            "x": "2026-09-14",
+            "y": 93.330722
+          },
+          {
+            "x": "2026-09-15",
+            "y": 93.409179
+          },
+          {
+            "x": "2026-09-16",
+            "y": 93.350335
+          },
+          {
+            "x": "2026-09-17",
+            "y": 93.487643
+          },
+          {
+            "x": "2026-09-18",
+            "y": 93.095331
+          },
+          {
+            "x": "2026-09-21",
+            "y": 95.311888
+          },
+          {
+            "x": "2026-09-22",
+            "y": 92.134173
+          },
+          {
+            "x": "2026-09-23",
+            "y": 90.545312
+          },
+          {
+            "x": "2026-09-24",
+            "y": 92.23225
+          },
+          {
+            "x": "2026-09-25",
+            "y": 89.486072
+          },
+          {
+            "x": "2026-09-28",
+            "y": 86.445665
+          },
+          {
+            "x": "2026-09-29",
+            "y": 84.444881
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "-2.31%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 84,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 115.695747,
+        "series": "all"
+      },
+      "min": {
+        "value": 84.444881,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "우주·양자·로봇·드론주 약세",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 109.042556
+      },
+      "displayText": "109.04",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

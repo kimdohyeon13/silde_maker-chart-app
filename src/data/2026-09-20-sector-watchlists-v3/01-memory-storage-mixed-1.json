@@ -1,0 +1,463 @@
+{
+  "id": "01-memory-storage-mixed-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:49:57.466Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "승인 종목 유지. EPS 성장률과 PER를 동일한 InvestingPro EPS Forecast Mean Consensus FY+1/FY+2 원문으로 계산. EPS 아래는 FY+2 결산연월."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "메모리·스토리지",
+    "subtitle": "2026.09.18 종가 · 평균 EPS로 성장률·PER 계산 · EPS 아래는 예상 결산연월 · 4종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "18%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "10%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "6%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n=100",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "15%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS 성장\n(FY+2)",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "예상 PER\n(FY+2)",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총",
+        "dataType": "number",
+        "width": "10%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MU",
+            "displayValue": "MU\n마이크론",
+            "sideValue": {
+              "displayValue": "+3.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "DRAM·HBM",
+            "displayValue": "DRAM\nHBM"
+          },
+          "current": {
+            "value": "1,016",
+            "displayValue": "$1,016"
+          },
+          "m1": {
+            "value": "8.4%",
+            "displayValue": "8%"
+          },
+          "y1": {
+            "value": "525.2%",
+            "displayValue": "525%"
+          },
+          "high52": {
+            "value": "80.9%",
+            "displayValue": "80%"
+          },
+          "target": {
+            "value": "1,513",
+            "displayValue": "$1,513\n49%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "113.1%",
+            "displayValue": "113%\n2027.08"
+          },
+          "pe": {
+            "value": "6.5x",
+            "displayValue": "6.5x"
+          },
+          "marketCap": {
+            "value": "1,147.2 B",
+            "displayValue": "$1,147B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SNDK",
+            "displayValue": "SNDK\n샌디스크",
+            "sideValue": {
+              "displayValue": "+11.0%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "낸드·SSD",
+            "displayValue": "낸드·SSD"
+          },
+          "current": {
+            "value": "1,792",
+            "displayValue": "$1,792"
+          },
+          "m1": {
+            "value": "14.2%",
+            "displayValue": "14%"
+          },
+          "y1": {
+            "value": "1,653.1%",
+            "displayValue": "1,653%"
+          },
+          "high52": {
+            "value": "76.1%",
+            "displayValue": "76%"
+          },
+          "target": {
+            "value": "2,125",
+            "displayValue": "$2,125\n18%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "23.6%",
+            "displayValue": "23%\n2028.06"
+          },
+          "pe": {
+            "value": "6.8x",
+            "displayValue": "6.8x"
+          },
+          "marketCap": {
+            "value": "262.4 B",
+            "displayValue": "$262B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "A000660",
+            "displayValue": "A000660\nSK하이닉스",
+            "sideValue": {
+              "displayValue": "+6.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "DRAM·HBM",
+            "displayValue": "DRAM\nHBM"
+          },
+          "current": {
+            "value": "1,857,000",
+            "displayValue": "₩1,857,000"
+          },
+          "m1": {
+            "value": "23.8%",
+            "displayValue": "23%"
+          },
+          "y1": {
+            "value": "427.6%",
+            "displayValue": "427%"
+          },
+          "high52": {
+            "value": "62.2%",
+            "displayValue": "62%"
+          },
+          "target": {
+            "value": "3,184,025",
+            "displayValue": "₩3,184,025\n71%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "33.4%",
+            "displayValue": "33%\n2027.12"
+          },
+          "pe": {
+            "value": "4.0x",
+            "displayValue": "4.0x"
+          },
+          "marketCap": {
+            "value": "1,353,503.2 B",
+            "displayValue": "₩1,353조"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "A005930",
+            "displayValue": "A005930\n삼성전자",
+            "sideValue": {
+              "displayValue": "+3.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "메모리·파운드리",
+            "displayValue": "메모리·파운드리"
+          },
+          "current": {
+            "value": "261,000",
+            "displayValue": "₩261,000"
+          },
+          "m1": {
+            "value": "5.5%",
+            "displayValue": "5%"
+          },
+          "y1": {
+            "value": "231.6%",
+            "displayValue": "231%"
+          },
+          "high52": {
+            "value": "69.7%",
+            "displayValue": "69%"
+          },
+          "target": {
+            "value": "475,850",
+            "displayValue": "₩475,850\n82%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "46.1%",
+            "displayValue": "46%\n2027.12"
+          },
+          "pe": {
+            "value": "3.7x",
+            "displayValue": "3.7x"
+          },
+          "marketCap": {
+            "value": "1,662,081.9 B",
+            "displayValue": "₩1,662조"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 105
+    }
+  },
+  "narrative": {
+    "headMessage": "메모리·스토리지",
+    "subMessage": "2026.09.18 종가 · 평균 EPS로 성장률·PER 계산 · EPS 아래는 예상 결산연월 · 4종목",
+    "headline": "메모리·스토리지",
+    "summary": "승인된 63개 종목의 동일 EPS 평균 컨센서스 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "MU",
+      "instrument": "NASDAQGS:MU",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-08-31",
+      "fy2Date": "2027-08-31",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:MU/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "SNDK",
+      "instrument": "NASDAQGS:SNDK",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2027-06-30",
+      "fy2Date": "2028-06-30",
+      "epsSourceUrl": "https://www.investing.com/pro/NASDAQGS:SNDK/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "A000660",
+      "instrument": "KOSE:A000660",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/KOSE:A000660/explorer/eps_proj_mean_raw"
+    },
+    {
+      "ticker": "A005930",
+      "instrument": "KOSE:A005930",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-75390178.iwl/v-25444546",
+      "peBasis": "regular-session quote / EPS Forecast Mean Consensus FY+2",
+      "epsBasis": "EPS Forecast Mean Consensus; FY+2 / FY+1 - 1",
+      "fy1Date": "2026-12-31",
+      "fy2Date": "2027-12-31",
+      "epsSourceUrl": "https://www.investing.com/pro/KOSE:A005930/explorer/eps_proj_mean_raw"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 4,
+    "rowCount": 4,
+    "columns": 10,
+    "currency": "MIXED",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

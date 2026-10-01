@@ -1,0 +1,387 @@
+{
+  "id": "02-rack-networking-cost-summary",
+  "mode": "faithful",
+  "sourceImage": "input/report-3-11.png",
+  "analyzedAt": "2026-08-19T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "comparison",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalTitle": "Dollar content",
+    "preservedElements": [
+      "5 configuration columns and original column order",
+      "selected top rack networking cost rows",
+      "numbers and units visible in the source image",
+      "source attribution"
+    ],
+    "changedElements": [
+      "translated table text into English",
+      "adapted the table to a 1,920×1,080 16:9 canvas",
+      "used the user-permitted source-grounded summary of top rack networking cost rows because the full source table cannot fit",
+      "normalized Paperlogy typography and spacing",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "Only the rack networking cost summary rows directly readable in the source image are used. Detailed component, volume, and ASP rows are omitted because the full table cannot fit a 16:9 card; the omission scope is recorded in project QA. No new figures were added.",
+    "sourceAttribution": "Goldman Sachs Global Investment Research, 2026-04-17"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-title-preserved",
+      "label": "Source title preserved",
+      "status": "pass",
+      "detail": "The source title Dollar content is retained."
+    },
+    {
+      "id": "source-visible-summary",
+      "label": "Source-visible summary",
+      "status": "pass",
+      "detail": "The total, scale-up, scale-out, and two dollar-content summary rows retain all five configuration values."
+    },
+    {
+      "id": "permitted-density-reduction",
+      "label": "User-permitted density reduction",
+      "status": "pass",
+      "detail": "The full table does not fit 16:9, so only the top rack networking cost rows are shown and the omitted detail rows are documented in QA."
+    },
+    {
+      "id": "source-preserved",
+      "label": "Source preserved",
+      "status": "pass",
+      "detail": "Goldman Sachs Global Investment Research, 2026-04-17 is retained."
+    },
+    {
+      "id": "canvas-16-9",
+      "label": "16:9 canvas",
+      "status": "pass",
+      "detail": "canvasHeight 540 produces a 1,920×1,080 PNG."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "10px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 29,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#00E0A4",
+    "numberLocale": "en",
+    "titleFontWeight": 900,
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "showAreaFill": true,
+    "chartHeight": 370
+  },
+  "structure": {
+    "title": "Dollar content",
+    "subtitle": "Top rack networking cost rows (US$ k)",
+    "source": "Goldman Sachs Global Investment Research, 2026-04-17"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "Metric",
+        "dataType": "text",
+        "width": "31%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "gb300",
+        "label": "GB300 NVL72",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "veraRubin72",
+        "label": "Vera Rubin NVL72",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "veraRubin72Cpo",
+        "label": "Vera Rubin NVL72\n(25% CPO scale out)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "rubinUltra144",
+        "label": "Rubin Ultra NVL144\n(29% CPO scale out)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      },
+      {
+        "key": "rubinUltra576",
+        "label": "Rubin Ultra NVL576\n(29% CPO scale out)",
+        "dataType": "number",
+        "width": "13.8%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "total",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Networking costs per rack (US$ k)",
+            "displayValue": "Networking costs per rack (US$ k)"
+          },
+          "gb300": {
+            "value": 315,
+            "displayValue": "315"
+          },
+          "veraRubin72": {
+            "value": 489,
+            "displayValue": "489"
+          },
+          "veraRubin72Cpo": {
+            "value": 504,
+            "displayValue": "504"
+          },
+          "rubinUltra144": {
+            "value": 1113,
+            "displayValue": "1,113"
+          },
+          "rubinUltra576": {
+            "value": 1169,
+            "displayValue": "1,169"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Scale-up",
+            "displayValue": "Scale-up"
+          },
+          "gb300": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72Cpo": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "rubinUltra144": {
+            "value": 381,
+            "displayValue": "381"
+          },
+          "rubinUltra576": {
+            "value": 803,
+            "displayValue": "803"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "Scale-out",
+            "displayValue": "Scale-out"
+          },
+          "gb300": {
+            "value": 175,
+            "displayValue": "175"
+          },
+          "veraRubin72": {
+            "value": 349,
+            "displayValue": "349"
+          },
+          "veraRubin72Cpo": {
+            "value": 364,
+            "displayValue": "364"
+          },
+          "rubinUltra144": {
+            "value": 732,
+            "displayValue": "732"
+          },
+          "rubinUltra576": {
+            "value": 366,
+            "displayValue": "366"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Scale up dollar content per rack (US$ k)",
+            "displayValue": "Scale up dollar content per rack (US$ k)"
+          },
+          "gb300": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "veraRubin72Cpo": {
+            "value": 140,
+            "displayValue": "140"
+          },
+          "rubinUltra144": {
+            "value": 381,
+            "displayValue": "381"
+          },
+          "rubinUltra576": {
+            "value": 803,
+            "displayValue": "803"
+          }
+        }
+      },
+      {
+        "rowType": "subtotal",
+        "highlight": true,
+        "cells": {
+          "metric": {
+            "value": "Scale out dollar content per rack (US$ k)",
+            "displayValue": "Scale out dollar content per rack (US$ k)"
+          },
+          "gb300": {
+            "value": 175,
+            "displayValue": "175"
+          },
+          "veraRubin72": {
+            "value": 349,
+            "displayValue": "349"
+          },
+          "veraRubin72Cpo": {
+            "value": 364,
+            "displayValue": "364"
+          },
+          "rubinUltra144": {
+            "value": 732,
+            "displayValue": "732"
+          },
+          "rubinUltra576": {
+            "value": 366,
+            "displayValue": "366"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": true,
+    "visualOptions": {
+      "rowHeight": 65,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 67,
+      "maxRowHeight": 42,
+      "cellPadding": "1px 5px",
+      "lineHeight": 1,
+      "zebraStripe": true,
+      "zebraOpacity": 0.055,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "columnRules": false,
+      "sectionRules": true,
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D",
+      "fontWeight": {
+        "body": 550,
+        "numeric": 700,
+        "rowHeader": 750,
+        "header": 750,
+        "groupHeader": 700
+      },
+      "fontSize": {
+        "header": "10px",
+        "body": "12px",
+        "total": "14px",
+        "badge": "9.5px",
+        "unit": "10.5px",
+        "groupHeader": "11px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Dollar content",
+    "subMessage": "Top rack networking cost rows (US$ k)",
+    "headline": "Dollar content",
+    "summary": "The source table's rack networking cost summary rows are compared across five configurations.",
+    "story": "The full source table includes detailed component, volume, and ASP rows that do not fit on a readable 16:9 card. This card therefore shows only the top rack networking cost summary rows in the original order and with the original figures.",
+    "keyTakeaways": [
+      "The total, scale-up, and scale-out rows are shown together.",
+      "The original order and figures for all five configurations are retained.",
+      "The omitted detail-row scope is recorded in project QA."
+    ],
+    "questionsRaised": [
+      "How does the scale-up versus scale-out cost mix differ by configuration?"
+    ],
+    "viewerAction": "Compare the row order, figures, and source with the source image.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Global Investment Research, 2026-04-17",
+      "Only the top rack networking cost rows are shown under the user-permitted summary scope."
+    ]
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Rack networking cost",
+      "reason": "The source table's top summary cost rows are the primary reading path."
+    },
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50",
+        "#24433D"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced",
+    "highlightCells": [
+      {
+        "row": 0,
+        "col": "metric",
+        "reason": "Total networking cost row"
+      },
+      {
+        "row": 3,
+        "col": "metric",
+        "reason": "Scale-up summary row"
+      },
+      {
+        "row": 4,
+        "col": "metric",
+        "reason": "Scale-out summary row"
+      }
+    ]
+  }
+}

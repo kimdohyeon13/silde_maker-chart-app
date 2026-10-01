@@ -1,0 +1,519 @@
+{
+  "id": "15-server-datacenter-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.008Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "서버·데이터센터",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 5종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SMCI",
+            "displayValue": "SMCI\n슈퍼마이크로",
+            "sideValue": {
+              "displayValue": "-3.1%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 서버",
+            "displayValue": "AI 서버"
+          },
+          "current": {
+            "value": "39.09",
+            "displayValue": "39"
+          },
+          "m1": {
+            "value": "6.9%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "-14.7%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "66.5%",
+            "displayValue": "66%"
+          },
+          "target": {
+            "value": "42.38",
+            "displayValue": "42\n8%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "19.5%",
+            "displayValue": "19%"
+          },
+          "pe": {
+            "value": "6.3x",
+            "displayValue": "6x"
+          },
+          "marketCap": {
+            "value": "25.681 B",
+            "displayValue": "25"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "DELL",
+            "displayValue": "DELL\n델",
+            "sideValue": {
+              "displayValue": "-3.5%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "서버·PC",
+            "displayValue": "서버·PC"
+          },
+          "current": {
+            "value": "568.06",
+            "displayValue": "568"
+          },
+          "m1": {
+            "value": "29.8%",
+            "displayValue": "29%"
+          },
+          "y1": {
+            "value": "336.0%",
+            "displayValue": "336%"
+          },
+          "high52": {
+            "value": "95.4%",
+            "displayValue": "95%"
+          },
+          "target": {
+            "value": "576.88",
+            "displayValue": "576\n1%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "151.3%",
+            "displayValue": "151%"
+          },
+          "pe": {
+            "value": "18.5x",
+            "displayValue": "18x"
+          },
+          "marketCap": {
+            "value": "361.2 B",
+            "displayValue": "361"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VRT",
+            "displayValue": "VRT\n버티브",
+            "sideValue": {
+              "displayValue": "+3.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력·냉각",
+            "displayValue": "전력·냉각"
+          },
+          "current": {
+            "value": "249.39",
+            "displayValue": "249"
+          },
+          "m1": {
+            "value": "-4.4%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "73.9%",
+            "displayValue": "73%"
+          },
+          "high52": {
+            "value": "65.6%",
+            "displayValue": "65%"
+          },
+          "target": {
+            "value": "338.15",
+            "displayValue": "338\n35%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "60.4%",
+            "displayValue": "60%"
+          },
+          "pe": {
+            "value": "26.0x",
+            "displayValue": "26x"
+          },
+          "marketCap": {
+            "value": "96.012 B",
+            "displayValue": "96"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TT",
+            "displayValue": "TT\n트레인",
+            "sideValue": {
+              "displayValue": "+1.4%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "공조·냉각",
+            "displayValue": "공조·냉각"
+          },
+          "current": {
+            "value": "429.11",
+            "displayValue": "429"
+          },
+          "m1": {
+            "value": "-5.6%",
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "6.5%",
+            "displayValue": "6%"
+          },
+          "high52": {
+            "value": "84.8%",
+            "displayValue": "84%"
+          },
+          "target": {
+            "value": "526.99",
+            "displayValue": "526\n22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "16.9%",
+            "displayValue": "16%"
+          },
+          "pe": {
+            "value": "24.5x",
+            "displayValue": "24x"
+          },
+          "marketCap": {
+            "value": "94.414 B",
+            "displayValue": "94"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FRMI",
+            "displayValue": "FRMI\n페르미",
+            "sideValue": {
+              "displayValue": "+0.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "전력·데이터센터",
+            "displayValue": "전력·데이터센터"
+          },
+          "current": {
+            "value": "4.98",
+            "displayValue": "4"
+          },
+          "m1": {
+            "value": "-13.5%",
+            "displayValue": "-13%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-84.7%",
+            "displayValue": "-84%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "13.5%",
+            "displayValue": "13%"
+          },
+          "target": {
+            "value": "17.13",
+            "displayValue": "17\n243%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "68.2%",
+            "displayValue": "68%"
+          },
+          "pe": {
+            "value": "30.7x",
+            "displayValue": "30x"
+          },
+          "marketCap": {
+            "value": "3.19 B",
+            "displayValue": "3"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 84
+    }
+  },
+  "narrative": {
+    "headMessage": "서버·데이터센터",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 5종목",
+    "headline": "서버·데이터센터",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "SMCI",
+      "instrument": "NASDAQGS:SMCI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "DELL",
+      "instrument": "NYSE:DELL",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "VRT",
+      "instrument": "NYSE:VRT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "TT",
+      "instrument": "NYSE:TT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "FRMI",
+      "instrument": "NASDAQGS:FRMI",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 5,
+    "rowCount": 5,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

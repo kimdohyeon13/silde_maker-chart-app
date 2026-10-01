@@ -10,11 +10,13 @@ const EMPTY_ANALYSES: VisualAnalysis[] = [];
 
 interface UseProjectBrowserOptions {
   demoAnalyses?: VisualAnalysis[];
+  initialProjectQuery?: string;
 }
 
 export function useProjectBrowser(
   options: UseProjectBrowserOptions = {}
 ) {
+  const initialProjectQuery = options.initialProjectQuery;
   const demoAnalyses = options.demoAnalyses ?? EMPTY_ANALYSES;
   const hasDemoData = demoAnalyses.length > 0;
 
@@ -45,6 +47,13 @@ export function useProjectBrowser(
             return currentProject;
           }
 
+          const requested = initialProjectQuery
+            ? new URLSearchParams(window.location.search).get(initialProjectQuery)
+            : null;
+          if (requested && nextProjects.some((project) => project.slug === requested)) {
+            return requested;
+          }
+
           const firstReadyProject =
             nextProjects.find((project) => project.analysisCount > 0) ??
             nextProjects[0];
@@ -63,7 +72,7 @@ export function useProjectBrowser(
     return () => {
       cancelled = true;
     };
-  }, [hasDemoData]);
+  }, [hasDemoData, initialProjectQuery]);
 
   useEffect(() => {
     let cancelled = false;

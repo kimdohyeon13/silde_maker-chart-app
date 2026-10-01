@@ -1,0 +1,220 @@
+{
+  "id": "06-development-timeline",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "table",
+  "tableSubType": "schedule",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Jalapeño development timeline",
+    "preservedElements": [
+      "2026-06-24 공식 공개",
+      "2026-08-25 첫 성능 결과",
+      "2026년 말 초기 배치 계획",
+      "2세대는 깊이 개발 중",
+      "3세대는 구체화되는 중"
+    ],
+    "changedElements": [
+      "공개·결과·계획·진행 중 상태가 분리되어 보이는 가로 타임라인",
+      "완료되지 않은 배치를 예정으로 명시",
+      "Paperlogy 타이포와 toss-clean 여백을 적용"
+    ],
+    "dataFidelity": "exact",
+    "notes": "공식 발표와 첫 성능 결과의 날짜·상태를 그대로 옮겼습니다. 2026년 말 초기 배치는 계획이며, 2세대와 3세대는 진행 중인 로드맵으로 표시해 완료된 배치로 해석되지 않게 했습니다.",
+    "sourceAttribution": "OpenAI · official announcement and first results",
+    "sourceUrls": [
+      "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/",
+      "https://openai.com/index/jalapeno-first-results/"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "공식 공개와 첫 결과를 앞에, 배치 계획과 후속 세대를 뒤에 둔 5개 이벤트 가로 타임라인입니다."
+    },
+    {
+      "id": "exact-official-milestones",
+      "label": "공식 이정표 보존",
+      "status": "pass",
+      "detail": "2026-06-24 공개, 2026-08-25 첫 결과, 2026년 말 초기 배치 계획, Gen 2·Gen 3의 진행 상태를 공식 문구 기준으로 보존했습니다."
+    },
+    {
+      "id": "planned-not-completed",
+      "label": "배치 계획 상태 보존",
+      "status": "pass",
+      "detail": "초기 배치를 완료가 아닌 계획으로 표시하고, 후속 세대도 진행 중 상태로 구분했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 이벤트·순서 동일",
+      "status": "pass",
+      "detail": "KO/EN의 5개 이벤트, 날짜, 순서, 상태를 동일하게 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "title": "Jalapeño 개발 타임라인",
+    "subtitle": "공식 공개부터 다음 세대 개발까지, 완료와 계획을 구분해 읽습니다.",
+    "source": "출처: OpenAI 공식 발표, OpenAI 첫 성능 결과",
+    "timeRange": "2026"
+  },
+  "infographicData": {
+    "subType": "timeline",
+    "direction": "horizontal",
+    "events": [
+      {
+        "date": "2026-06-24",
+        "title": "Jalapeño 공개",
+        "description": "OpenAI와 Broadcom이 첫 Intelligence Processor를 공개",
+        "importance": "critical",
+        "category": "공식 공개"
+      },
+      {
+        "date": "2026-08-25",
+        "title": "첫 성능 결과 공개",
+        "description": "Jalapeño의 첫 공식 성능 결과 발표",
+        "importance": "critical",
+        "category": "공식 결과"
+      },
+      {
+        "date": "2026년 말",
+        "title": "초기 배치 계획",
+        "description": "초기 배치 예정, 아직 완료된 배치가 아님",
+        "importance": "high",
+        "category": "계획"
+      },
+      {
+        "date": "Gen 2",
+        "title": "2세대",
+        "description": "개발이 깊이 진행 중",
+        "importance": "high",
+        "category": "개발 중"
+      },
+      {
+        "date": "Gen 3",
+        "title": "3세대",
+        "description": "구체화되는 중",
+        "importance": "medium",
+        "category": "개발 중"
+      }
+    ]
+  },
+  "tableData": {
+    "columns": [
+      { "key": "when", "label": "시점", "dataType": "text", "width": "30%", "align": "left", "isRowHeader": true },
+      { "key": "status", "label": "상태", "dataType": "text", "width": "70%", "align": "left" }
+    ],
+    "rows": [
+      { "rowType": "data", "cells": { "when": { "value": "2026-06-24", "displayValue": "2026-06-24" }, "status": { "value": "Jalapeño 공개", "displayValue": "Jalapeño 공개", "highlight": "accent" } } },
+      { "rowType": "data", "cells": { "when": { "value": "2026-08-25", "displayValue": "2026-08-25" }, "status": { "value": "첫 성능 결과 공개", "displayValue": "첫 성능 결과 공개", "highlight": "accent" } } },
+      { "rowType": "data", "cells": { "when": { "value": "2026년 말", "displayValue": "2026년 말" }, "status": { "value": "초기 배치 계획", "displayValue": "초기 배치 계획", "highlight": "positive" } } },
+      { "rowType": "data", "cells": { "when": { "value": "Gen 2", "displayValue": "Gen 2" }, "status": { "value": "2세대 개발 중", "displayValue": "2세대 개발 중" } } },
+      { "rowType": "data", "cells": { "when": { "value": "Gen 3", "displayValue": "Gen 3" }, "status": { "value": "3세대 구체화 중", "displayValue": "3세대 구체화 중" } } }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 58,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 52,
+      "maxRowHeight": 68,
+      "cellPadding": "6px 10px",
+      "lineHeight": 1.05,
+      "zebraStripe": true,
+      "zebraOpacity": 0.05,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": { "body": 600, "rowHeader": 750, "header": 800 },
+      "fontSize": { "header": "13px", "body": "17px", "total": "17px" }
+    }
+  },
+  "data": {
+    "series": [
+      {
+        "name": "이정표",
+        "data": [
+          { "x": "1", "y": 1 },
+          { "x": "2", "y": 1 },
+          { "x": "3", "y": 1 },
+          { "x": "4", "y": 1 },
+          { "x": "5", "y": 1 }
+        ]
+      }
+    ],
+    "totalDataPoints": 5
+  },
+  "narrative": {
+    "headMessage": "공개는 끝났지만, 배치는 아직 계획 단계",
+    "subMessage": "2026년 말 초기 배치 예정 · Gen 2·Gen 3는 개발 중",
+    "headline": "Jalapeño의 공개와 성능 결과는 완료됐지만, 초기 배치는 아직 계획입니다.",
+    "summary": "공식 타임라인은 공개와 결과, 계획과 후속 세대를 서로 다른 상태로 보여줍니다.",
+    "story": "앞의 두 점은 이미 공개된 사건이고, 뒤의 세 점은 계획 또는 진행 중인 로드맵입니다.",
+    "keyTakeaways": [
+      "2026년 말은 초기 배치 계획 시점입니다.",
+      "2세대는 깊이 개발 중이고 3세대는 구체화되는 중입니다."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "2026년 말 초기 배치 계획",
+      "reason": "완료가 아닌 계획 상태를 가장 분명하게 보여주는 이정표"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#98A2B3", "#F79009"],
+      "positive": "#155EEF",
+      "negative": "#98A2B3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 16px 2px",
+    "sourcePadding": "0 28px 8px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0",
+    "numberLocale": "ko"
+  }
+}

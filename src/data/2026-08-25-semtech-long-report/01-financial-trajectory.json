@@ -1,0 +1,61 @@
+{
+  "id": "01-financial-trajectory",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "exact",
+    "preservedElements": ["5개 분기", "매출", "GAAP 순이익", "잉여현금흐름", "매출총이익률", "단위", "출처"],
+    "changedElements": ["Paperlogy 900·300 타이포", "표 간격과 강조색"],
+    "notes": "Semtech 분기 수치의 순서와 단위를 그대로 보존했습니다."
+  },
+  "allowedTransformations": ["translate-text", "adjust-fonts", "adjust-spacing", "adjust-colors"],
+  "qualityChecks": [
+    {"id":"layout-plan-first","label":"레이아웃 계획 선행","status":"pass","detail":"5행×5열 재무표, 천 달러 단위, 최신 분기 강조로 계획했습니다.","checkedAt":"2026-08-25"},
+    {"id":"exact-values","label":"공시 수치 보존","status":"pass","detail":"Semtech 실적 발표와 10-Q 수치를 사용했습니다.","checkedAt":"2026-08-25"}
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": false,
+    "titleFontSize": 34,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "2px 24px",
+    "sourcePadding": "0 34px 10px",
+    "accentColor": "#0969DA",
+    "borderColor": "#D7DEE5"
+  },
+  "structure": {
+    "title": "매출은 늘고 현금흐름은 흔들렸다",
+    "subtitle": "최근 5개 분기 핵심 재무지표 · 단위 천 달러",
+    "source": "자료: Semtech 실적 발표·SEC 10-Q"
+  },
+  "tableData": {
+    "columns": [
+      {"key":"metric","label":"항목","dataType":"text","isRowHeader":true,"width":"24%","align":"left"},
+      {"key":"q1","label":"2025.04","dataType":"text","width":"15.2%","align":"right"},
+      {"key":"q2","label":"2025.07","dataType":"text","width":"15.2%","align":"right"},
+      {"key":"q3","label":"2025.10","dataType":"text","width":"15.2%","align":"right"},
+      {"key":"q4","label":"2026.01","dataType":"text","width":"15.2%","align":"right"},
+      {"key":"q5","label":"2026.04","dataType":"text","width":"15.2%","align":"right"}
+    ],
+    "rows": [
+      {"rowType":"data","cells":{"metric":{"value":"매출","displayValue":"매출"},"q1":{"value":251060,"displayValue":"251,060"},"q2":{"value":257589,"displayValue":"257,589"},"q3":{"value":266971,"displayValue":"266,971"},"q4":{"value":274355,"displayValue":"274,355"},"q5":{"value":291018,"displayValue":"291,018","highlight":"positive"}}},
+      {"rowType":"data","cells":{"metric":{"value":"매출총이익률","displayValue":"매출총이익률"},"q1":{"value":52.3,"displayValue":"52.3%"},"q2":{"value":52.1,"displayValue":"52.1%"},"q3":{"value":51.9,"displayValue":"51.9%"},"q4":{"value":50.4,"displayValue":"50.4%"},"q5":{"value":52.0,"displayValue":"52.0%","highlight":"accent"}}},
+      {"rowType":"data","cells":{"metric":{"value":"GAAP 순이익","displayValue":"GAAP 순이익"},"q1":{"value":19345,"displayValue":"19,345"},"q2":{"value":-27064,"displayValue":"-27,064","highlight":"negative"},"q3":{"value":-2862,"displayValue":"-2,862","highlight":"negative"},"q4":{"value":-29795,"displayValue":"-29,795","highlight":"negative"},"q5":{"value":26563,"displayValue":"26,563","highlight":"positive"}}},
+      {"rowType":"data","cells":{"metric":{"value":"잉여현금흐름","displayValue":"잉여현금흐름"},"q1":{"value":25645,"displayValue":"25,645"},"q2":{"value":39261,"displayValue":"39,261"},"q3":{"value":42008,"displayValue":"42,008"},"q4":{"value":58449,"displayValue":"58,449","highlight":"positive"},"q5":{"value":22737,"displayValue":"22,737","highlight":"warning"}}}
+    ],
+    "visualOptions": {"fitRowsToCanvas":true,"minRowHeight":54,"maxRowHeight":90,"cellPadding":"8px 12px","fontSize":{"header":"15px","body":"18px"},"fontWeight":{"body":400,"rowHeader":700,"header":700},"zebraStripe":true,"headerTone":"plain","rowRules":"soft","columnRules":false,"fontFamily":"Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", sans-serif"}
+  },
+  "narrative": {"headMessage":"매출은 늘고 현금흐름은 흔들렸다","subMessage":"최근 5개 분기 핵심 재무지표 · 단위 천 달러"},
+  "emphasis": {"annotations":[],"colorStrategy":{"primary":"#0F4C81","secondary":["#8B95A1"],"positive":"#DC2626","negative":"#2563EB","accent":"#0969DA"}}
+}

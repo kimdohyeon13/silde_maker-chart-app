@@ -1,0 +1,503 @@
+{
+  "id": "05-month-end-arr",
+  "sourceImage": "input/HQtZxwJbAAEciBx.jpg",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: Paul Bonnet(@P_Bonnet), 20VC · 2026년 8월은 추정치"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 400,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch",
+    "stackedLegendAlign": "center",
+    "stackedLabelFontSize": 10
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "오픈AI와 앤스로픽의 월말 ARR (10억 달러)",
+    "subtitle": "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다",
+    "source": "자료: Paul Bonnet(@P_Bonnet), 20VC · 2026년 8월은 추정치",
+    "timeRange": "2025년 1월 ~ 2026년 8월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "displayTickValues": [
+        "25년\n1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+        "26년\n1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월 추정"
+      ]
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "오픈AI",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "앤스로픽",
+        "role": "primary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "오픈AI",
+        "data": [
+          {
+            "x": "2025-01",
+            "y": 6,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-02",
+            "y": 7,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-03",
+            "y": 7,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-04",
+            "y": 8,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-05",
+            "y": 9,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-06",
+            "y": 10,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-07",
+            "y": 12,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-08",
+            "y": 13,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-09",
+            "y": 15,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-10",
+            "y": 17,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-11",
+            "y": 19,
+            "confidence": 0.74
+          },
+          {
+            "x": "2025-12",
+            "y": 21,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-01",
+            "y": 23,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-02",
+            "y": 25,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-03",
+            "y": 27,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-04",
+            "y": 29,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-05",
+            "y": 31,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-06",
+            "y": 33,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-07",
+            "y": 40,
+            "confidence": 0.74
+          },
+          {
+            "x": "2026-08",
+            "y": 48,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "앤스로픽",
+        "data": [
+          {
+            "x": "2025-01",
+            "y": 1,
+            "confidence": 0.74,
+            "totalLabel": "7"
+          },
+          {
+            "x": "2025-02",
+            "y": 1,
+            "confidence": 0.74,
+            "totalLabel": "8"
+          },
+          {
+            "x": "2025-03",
+            "y": 2,
+            "confidence": 0.74,
+            "totalLabel": "9"
+          },
+          {
+            "x": "2025-04",
+            "y": 2,
+            "confidence": 0.74,
+            "totalLabel": "11"
+          },
+          {
+            "x": "2025-05",
+            "y": 3,
+            "confidence": 0.74,
+            "totalLabel": "12"
+          },
+          {
+            "x": "2025-06",
+            "y": 4,
+            "confidence": 0.74,
+            "totalLabel": "14"
+          },
+          {
+            "x": "2025-07",
+            "y": 5,
+            "confidence": 0.74,
+            "totalLabel": "17"
+          },
+          {
+            "x": "2025-08",
+            "y": 6,
+            "confidence": 0.74,
+            "totalLabel": "19"
+          },
+          {
+            "x": "2025-09",
+            "y": 6,
+            "confidence": 0.74,
+            "totalLabel": "21"
+          },
+          {
+            "x": "2025-10",
+            "y": 7,
+            "confidence": 0.74,
+            "totalLabel": "24"
+          },
+          {
+            "x": "2025-11",
+            "y": 8,
+            "confidence": 0.74,
+            "totalLabel": "27"
+          },
+          {
+            "x": "2025-12",
+            "y": 9,
+            "confidence": 0.74,
+            "totalLabel": "30"
+          },
+          {
+            "x": "2026-01",
+            "y": 14,
+            "confidence": 0.74,
+            "totalLabel": "37"
+          },
+          {
+            "x": "2026-02",
+            "y": 19,
+            "confidence": 0.74,
+            "totalLabel": "44"
+          },
+          {
+            "x": "2026-03",
+            "y": 30,
+            "confidence": 0.74,
+            "totalLabel": "57"
+          },
+          {
+            "x": "2026-04",
+            "y": 38,
+            "confidence": 0.74,
+            "totalLabel": "66"
+          },
+          {
+            "x": "2026-05",
+            "y": 47,
+            "confidence": 0.74,
+            "totalLabel": "78"
+          },
+          {
+            "x": "2026-06",
+            "y": 56,
+            "confidence": 0.74,
+            "totalLabel": "89"
+          },
+          {
+            "x": "2026-07",
+            "y": 65,
+            "confidence": 0.74,
+            "totalLabel": "105"
+          },
+          {
+            "x": "2026-08",
+            "y": 74,
+            "confidence": 0.74,
+            "totalLabel": "123"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 40,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 2.1,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 700.0,
+        "absoluteChange": 42.0,
+        "from": 6.0,
+        "to": 48.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 48.0,
+        "at": ""
+      },
+      "min": {
+        "value": 6.0,
+        "at": ""
+      },
+      "average": 20.0,
+      "median": 18.0,
+      "range": 42.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "오픈AI와 앤스로픽의 월말 ARR (10억 달러)",
+    "subMessage": "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다",
+    "headline": "오픈AI와 앤스로픽의 월말 ARR (10억 달러)",
+    "summary": "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: Paul Bonnet(@P_Bonnet), 20VC · 2026년 8월은 추정치"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 74.0
+      },
+      "displayText": "오픈AI와 앤스로픽의 월말 A",
+      "reason": "합산 ARR이 20개월 만에 70억 달러에서 1,230억 달러로 늘었다"
+    },
+    "densityLevel": "balanced"
+  }
+}

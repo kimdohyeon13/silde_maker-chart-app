@@ -1,0 +1,228 @@
+{
+  "id": "korea-ai-firms",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "열 곳 중 네 곳이 연매출 10억 원에 못 미칩니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "10억~1,000억 원 구간 877곳은 응답 1,622곳에서 공표된 두 구간(693곳, 52곳)을 뺀 값입니다.",
+    "sourceAttribution": "자료: 과학기술정보통신부·소프트웨어정책연구소, 2024년 인공지능산업실태조사"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 3개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "국내 AI 기업 1,622곳의 연매출 구간 분포",
+    "subtitle": "열 곳 중 네 곳이 연매출 10억 원에 못 미칩니다",
+    "source": "자료: 과학기술정보통신부·소프트웨어정책연구소, 2024년 인공지능산업실태조사",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "10억 원 미만",
+        "10억~1,000억 원",
+        "1,000억 원 이상"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "기업 수",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "기업 수",
+        "data": [
+          {
+            "x": "10억 원 미만",
+            "y": 693,
+            "confidence": 0.95,
+            "displayLabel": "693곳",
+            "color": "#087A68"
+          },
+          {
+            "x": "10억~1,000억 원",
+            "y": 877,
+            "confidence": 0.95,
+            "displayLabel": "877곳",
+            "color": "#A0AEC0"
+          },
+          {
+            "x": "1,000억 원 이상",
+            "y": 52,
+            "confidence": 0.95,
+            "displayLabel": "52곳",
+            "color": "#A0AEC0"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 877,
+        "at": ""
+      },
+      "min": {
+        "value": 52,
+        "at": ""
+      },
+      "average": 540.6666666666666,
+      "median": 693,
+      "range": 825
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "국내 AI 기업 1,622곳의 연매출 구간 분포",
+    "subMessage": "열 곳 중 네 곳이 연매출 10억 원에 못 미칩니다",
+    "headline": "국내 AI 기업 1,622곳의 연매출 구간 분포",
+    "summary": "열 곳 중 네 곳이 연매출 10억 원에 못 미칩니다",
+    "story": "열 곳 중 네 곳이 연매출 10억 원에 못 미칩니다",
+    "keyTakeaways": [
+      "모집단 2,517곳 가운데 1,622곳이 응답했습니다.",
+      "회사당 평균 AI 매출은 30.7억 원입니다.",
+      "수출하는 기업은 4.0%뿐입니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "모집단 2,517곳 가운데 1,622곳이 응답했습니다.",
+    "contextualNotes": [
+      "자료: 과학기술정보통신부·소프트웨어정책연구소, 2024년 인공지능산업실태조사"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

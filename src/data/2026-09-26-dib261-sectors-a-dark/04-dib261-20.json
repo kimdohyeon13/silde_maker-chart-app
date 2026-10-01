@@ -1,0 +1,406 @@
+{
+  "id": "dib261-20",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-261-20.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "AI 서버: 델 +5.01%, 슈퍼마이크로 +4.22%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, source window, focus date, and line-chart form",
+      "start date = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 25일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "AI 서버: 델 +5.01%, 슈퍼마이크로 +4.22%",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 25일 종가까지",
+    "timeRange": "2026-08-26 to 2026-09-25",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-26",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-21",
+        "2026-09-25"
+      ],
+      "displayTickValues": [
+        "08-26",
+        "09-01",
+        "09-08",
+        "09-15",
+        "09-21",
+        "09-25"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "델",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "슈퍼마이크로",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "델",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100
+          },
+          {
+            "x": "2026-08-27",
+            "y": 101.819672
+          },
+          {
+            "x": "2026-08-28",
+            "y": 98.365742
+          },
+          {
+            "x": "2026-08-31",
+            "y": 98.316158
+          },
+          {
+            "x": "2026-09-01",
+            "y": 91.630372
+          },
+          {
+            "x": "2026-09-02",
+            "y": 106.118754
+          },
+          {
+            "x": "2026-09-03",
+            "y": 111.33414
+          },
+          {
+            "x": "2026-09-04",
+            "y": 113.005046
+          },
+          {
+            "x": "2026-09-08",
+            "y": 115.104997
+          },
+          {
+            "x": "2026-09-09",
+            "y": 115.400369
+          },
+          {
+            "x": "2026-09-10",
+            "y": 109.227715
+          },
+          {
+            "x": "2026-09-11",
+            "y": 122.308216
+          },
+          {
+            "x": "2026-09-14",
+            "y": 115.191242
+          },
+          {
+            "x": "2026-09-15",
+            "y": 117.181234
+          },
+          {
+            "x": "2026-09-16",
+            "y": 121.445813
+          },
+          {
+            "x": "2026-09-17",
+            "y": 126.859561
+          },
+          {
+            "x": "2026-09-18",
+            "y": 122.474233
+          },
+          {
+            "x": "2026-09-21",
+            "y": 124.03734
+          },
+          {
+            "x": "2026-09-22",
+            "y": 118.347629
+          },
+          {
+            "x": "2026-09-23",
+            "y": 118.543833
+          },
+          {
+            "x": "2026-09-24",
+            "y": 115.566386
+          },
+          {
+            "x": "2026-09-25",
+            "y": 121.35958
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "+5.01%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "슈퍼마이크로",
+        "data": [
+          {
+            "x": "2026-08-26",
+            "y": 100
+          },
+          {
+            "x": "2026-08-27",
+            "y": 102.861727
+          },
+          {
+            "x": "2026-08-28",
+            "y": 99.170908
+          },
+          {
+            "x": "2026-08-31",
+            "y": 99.705802
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.181331
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.956942
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.283765
+          },
+          {
+            "x": "2026-09-04",
+            "y": 105.883928
+          },
+          {
+            "x": "2026-09-08",
+            "y": 107.675846
+          },
+          {
+            "x": "2026-09-09",
+            "y": 104.118751
+          },
+          {
+            "x": "2026-09-10",
+            "y": 99.973259
+          },
+          {
+            "x": "2026-09-11",
+            "y": 107.247925
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.261573
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.319604
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.555761
+          },
+          {
+            "x": "2026-09-17",
+            "y": 107.916553
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.546672
+          },
+          {
+            "x": "2026-09-21",
+            "y": 110.189894
+          },
+          {
+            "x": "2026-09-22",
+            "y": 111.099229
+          },
+          {
+            "x": "2026-09-23",
+            "y": 110.831771
+          },
+          {
+            "x": "2026-09-24",
+            "y": 111.018986
+          },
+          {
+            "x": "2026-09-25",
+            "y": 115.699382
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "+4.22%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 44,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 126.859561,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.630372,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 서버: 델 +5.01%, 슈퍼마이크로 +4.22%",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-25",
+        "y": 121.35958
+      },
+      "displayText": "121.36",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

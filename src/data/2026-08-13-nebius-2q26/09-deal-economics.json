@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "네비우스 공식 발표 수치를 보고서용 차트로 새로 구성했습니다.",
-    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일"
+    "sourceAttribution": "자료: Nebius 2Q26 보도자료·주주서한, 2026년 8월 12일",
+    "sourceKey": "nebius-2q26-deal-economics"
   },
   "allowedTransformations": [
     "translate-text",
@@ -86,13 +87,18 @@
       "label": "",
       "type": "category",
       "tickValues": [
-        "평균 TCV",
-        "ACV 하단/MW",
-        "ACV 상단/MW"
+        "Avg. TCV",
+        "ACV low / MW",
+        "ACV high / MW"
       ],
       "unit": "",
       "startsAtZero": false,
-      "isLogScale": false
+      "isLogScale": false,
+      "displayTickValues": [
+        "평균 TCV",
+        "ACV 하단/MW",
+        "ACV 상단/MW"
+      ]
     },
     "yAxis": {
       "label": "",
@@ -117,17 +123,17 @@
         "name": "계약 금액",
         "data": [
           {
-            "x": "평균 TCV",
+            "x": "Avg. TCV",
             "y": 1000,
             "confidence": 0.74
           },
           {
-            "x": "ACV 하단/MW",
+            "x": "ACV low / MW",
             "y": 20,
             "confidence": 0.74
           },
           {
-            "x": "ACV 상단/MW",
+            "x": "ACV high / MW",
             "y": 25,
             "confidence": 0.74
           }

@@ -1,0 +1,225 @@
+{
+  "id": "10-flagship-refresh-cycle",
+  "sourceImage": "input/10-flagship-refresh-cycle.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: SemiAnalysis 집계, 각 랩 출시 공지 기준, 2026년 8월 17일 확인"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "titleFontSize": 42,
+    "subtitleFontSize": 24,
+    "sourceFontSize": 17,
+    "fontFamily": "var(--font-noto-sans-kr), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "24px 38px 2px",
+    "contentPadding": "8px 16px 6px",
+    "sourcePadding": "0 38px 16px",
+    "squareEdges": true
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "프런티어 랩의 플래그십 교체 주기가 무너졌다",
+    "subtitle": "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일",
+    "source": "자료: SemiAnalysis 집계, 각 랩 출시 공지 기준, 2026년 8월 17일 확인",
+    "timeRange": "2023년 3월~2026년 8월",
+    "xAxis": {
+      "label": "시대",
+      "type": "category",
+      "tickValues": [
+        "1기 초기 확장",
+        "2기 추론",
+        "3기 에이전트"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "플래그십 출시 평균 간격",
+        "role": "primary",
+        "originalColor": "#6667AB",
+        "remakeColor": "#6667AB"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "플래그십 출시 평균 간격",
+        "data": [
+          {
+            "x": "1기 초기 확장",
+            "y": 213,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "2기 추론",
+            "y": 132,
+            "confidence": 0.74,
+            "color": "#939597"
+          },
+          {
+            "x": "3기 에이전트",
+            "y": 51,
+            "confidence": 0.74,
+            "color": "#6667AB"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#6667AB"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 1.227,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -76.1,
+        "absoluteChange": -162.0,
+        "from": 213.0,
+        "to": 51.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 213.0,
+        "at": ""
+      },
+      "min": {
+        "value": 51.0,
+        "at": ""
+      },
+      "average": 132.0,
+      "median": 132.0,
+      "range": 162.0
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "프런티어 랩의 플래그십 교체 주기가 무너졌다",
+    "subMessage": "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일",
+    "headline": "프런티어 랩의 플래그십 교체 주기가 무너졌다",
+    "summary": "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: SemiAnalysis 집계, 각 랩 출시 공지 기준, 2026년 8월 17일 확인"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#1458D4",
+      "secondary": [
+        "#8B95A1",
+        "#F2B705",
+        "#FF8A3D",
+        "#16A34A"
+      ],
+      "positive": "#16A34A",
+      "negative": "#EF4444",
+      "accent": "#2563EB",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 51.0
+      },
+      "displayText": "프런티어 랩의 플래그십 교체 ",
+      "reason": "연속 출시 사이 평균 간격이 213일에서 51일로 줄었다. 3기는 OpenAI 53일, 앤트로픽 49일"
+    },
+    "densityLevel": "balanced"
+  }
+}

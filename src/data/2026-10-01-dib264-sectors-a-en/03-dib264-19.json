@@ -1,0 +1,605 @@
+{
+  "id": "dib264-19",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-19.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "AI Data Centers: HPE Rises 3.9%",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · as of the 2026-09-30 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "AI Data Centers: HPE Rises 3.9%",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · as of the 2026-09-30 close",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 140
+    },
+    "legend": [
+      {
+        "name": "HPE",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Dell",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "CoreWeave",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "Supermicro",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "HPE",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 101.887169
+          },
+          {
+            "x": "2026-09-03",
+            "y": 107.017888
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.221351
+          },
+          {
+            "x": "2026-09-08",
+            "y": 110.143503
+          },
+          {
+            "x": "2026-09-09",
+            "y": 115.785341
+          },
+          {
+            "x": "2026-09-10",
+            "y": 108.551214
+          },
+          {
+            "x": "2026-09-11",
+            "y": 122.056225
+          },
+          {
+            "x": "2026-09-14",
+            "y": 108.924712
+          },
+          {
+            "x": "2026-09-15",
+            "y": 109.848638
+          },
+          {
+            "x": "2026-09-16",
+            "y": 111.421273
+          },
+          {
+            "x": "2026-09-17",
+            "y": 119.992141
+          },
+          {
+            "x": "2026-09-18",
+            "y": 119.441713
+          },
+          {
+            "x": "2026-09-21",
+            "y": 121.387854
+          },
+          {
+            "x": "2026-09-22",
+            "y": 119.972479
+          },
+          {
+            "x": "2026-09-23",
+            "y": 122.528019
+          },
+          {
+            "x": "2026-09-24",
+            "y": 124.867312
+          },
+          {
+            "x": "2026-09-25",
+            "y": 123.727148
+          },
+          {
+            "x": "2026-09-28",
+            "y": 123.117756
+          },
+          {
+            "x": "2026-09-29",
+            "y": 120.87675
+          },
+          {
+            "x": "2026-09-30",
+            "y": 125.594656
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+3.90%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Dell",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 115.811768
+          },
+          {
+            "x": "2026-09-03",
+            "y": 121.503533
+          },
+          {
+            "x": "2026-09-04",
+            "y": 123.327062
+          },
+          {
+            "x": "2026-09-08",
+            "y": 125.618825
+          },
+          {
+            "x": "2026-09-09",
+            "y": 125.941176
+          },
+          {
+            "x": "2026-09-10",
+            "y": 119.204705
+          },
+          {
+            "x": "2026-09-11",
+            "y": 133.479995
+          },
+          {
+            "x": "2026-09-14",
+            "y": 125.712948
+          },
+          {
+            "x": "2026-09-15",
+            "y": 127.884708
+          },
+          {
+            "x": "2026-09-16",
+            "y": 132.538818
+          },
+          {
+            "x": "2026-09-17",
+            "y": 138.447065
+          },
+          {
+            "x": "2026-09-18",
+            "y": 133.661176
+          },
+          {
+            "x": "2026-09-21",
+            "y": 135.367058
+          },
+          {
+            "x": "2026-09-22",
+            "y": 129.157643
+          },
+          {
+            "x": "2026-09-23",
+            "y": 129.371769
+          },
+          {
+            "x": "2026-09-24",
+            "y": 126.122358
+          },
+          {
+            "x": "2026-09-25",
+            "y": 132.444709
+          },
+          {
+            "x": "2026-09-28",
+            "y": 127.865881
+          },
+          {
+            "x": "2026-09-29",
+            "y": 126.962359
+          },
+          {
+            "x": "2026-09-30",
+            "y": 126.576471
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-0.30%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "CoreWeave",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 98.875995
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.310934
+          },
+          {
+            "x": "2026-09-04",
+            "y": 109.175323
+          },
+          {
+            "x": "2026-09-08",
+            "y": 121.967017
+          },
+          {
+            "x": "2026-09-09",
+            "y": 115.992675
+          },
+          {
+            "x": "2026-09-10",
+            "y": 108.882107
+          },
+          {
+            "x": "2026-09-11",
+            "y": 108.723274
+          },
+          {
+            "x": "2026-09-14",
+            "y": 101.38058
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.863775
+          },
+          {
+            "x": "2026-09-16",
+            "y": 101.832621
+          },
+          {
+            "x": "2026-09-17",
+            "y": 97.593157
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.401347
+          },
+          {
+            "x": "2026-09-21",
+            "y": 104.373857
+          },
+          {
+            "x": "2026-09-22",
+            "y": 105.998783
+          },
+          {
+            "x": "2026-09-23",
+            "y": 106.169827
+          },
+          {
+            "x": "2026-09-24",
+            "y": 110.116065
+          },
+          {
+            "x": "2026-09-25",
+            "y": 107.012826
+          },
+          {
+            "x": "2026-09-28",
+            "y": 103.934027
+          },
+          {
+            "x": "2026-09-29",
+            "y": 104.98473
+          },
+          {
+            "x": "2026-09-30",
+            "y": 106.438609
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "+1.38%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Supermicro",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.789978
+          },
+          {
+            "x": "2026-09-03",
+            "y": 103.159902
+          },
+          {
+            "x": "2026-09-04",
+            "y": 107.845277
+          },
+          {
+            "x": "2026-09-08",
+            "y": 109.670388
+          },
+          {
+            "x": "2026-09-09",
+            "y": 106.047402
+          },
+          {
+            "x": "2026-09-10",
+            "y": 101.825121
+          },
+          {
+            "x": "2026-09-11",
+            "y": 109.23454
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.081729
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.085264
+          },
+          {
+            "x": "2026-09-16",
+            "y": 100.381366
+          },
+          {
+            "x": "2026-09-17",
+            "y": 109.915553
+          },
+          {
+            "x": "2026-09-18",
+            "y": 106.48325
+          },
+          {
+            "x": "2026-09-21",
+            "y": 112.231005
+          },
+          {
+            "x": "2026-09-22",
+            "y": 113.157183
+          },
+          {
+            "x": "2026-09-23",
+            "y": 112.884772
+          },
+          {
+            "x": "2026-09-24",
+            "y": 113.075455
+          },
+          {
+            "x": "2026-09-25",
+            "y": 117.842548
+          },
+          {
+            "x": "2026-09-28",
+            "y": 113.81095
+          },
+          {
+            "x": "2026-09-29",
+            "y": 111.740674
+          },
+          {
+            "x": "2026-09-30",
+            "y": 111.876876
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "+0.12%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 84,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 138.447065,
+        "series": "all"
+      },
+      "min": {
+        "value": 97.085264,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI Data Centers: HPE Rises 3.9%",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 125.594656
+      },
+      "displayText": "125.59",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

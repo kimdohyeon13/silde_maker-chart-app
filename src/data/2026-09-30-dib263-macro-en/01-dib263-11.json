@@ -1,0 +1,602 @@
+{
+  "id": "dib263-11",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-263-11.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "Indexes, Russell 2000 Edge Lower on Rates",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · through the September 29, 2026 close"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 28일과 29일 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "watermarkText": "@WorldTechRsrch",
+    "numberLocale": "en",
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "Indexes, Russell 2000 Edge Lower on Rates",
+    "subtitle": "Indexed: start = 100 · daily change",
+    "source": "Source: Yahoo Finance · through the September 29, 2026 close",
+    "timeRange": "2026-08-31 to 2026-09-29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-17",
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-17",
+        "09-23",
+        "09-29"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1 month ago = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 110
+    },
+    "legend": [
+      {
+        "name": "Dow",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "Nasdaq",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "S&P 500",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "Russell 2K",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Dow",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.21216
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.766951
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.940495
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.429346
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.248244
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.485993
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.8908
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.848173
+          },
+          {
+            "x": "2026-09-14",
+            "y": 98.562214
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.945341
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.758539
+          },
+          {
+            "x": "2026-09-17",
+            "y": 97.352946
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.173578
+          },
+          {
+            "x": "2026-09-21",
+            "y": 97.862083
+          },
+          {
+            "x": "2026-09-22",
+            "y": 97.513989
+          },
+          {
+            "x": "2026-09-23",
+            "y": 96.851969
+          },
+          {
+            "x": "2026-09-24",
+            "y": 96.548111
+          },
+          {
+            "x": "2026-09-25",
+            "y": 97.44805
+          },
+          {
+            "x": "2026-09-28",
+            "y": 96.795416
+          },
+          {
+            "x": "2026-09-29",
+            "y": 96.548001
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "-0.26%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Nasdaq",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.971893
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.419585
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.808353
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.516098
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.191573
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.55424
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.90345
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.856465
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.300439
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.523674
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.511765
+          },
+          {
+            "x": "2026-09-17",
+            "y": 100.179782
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.57506
+          },
+          {
+            "x": "2026-09-21",
+            "y": 102.848593
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.311942
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.143077
+          },
+          {
+            "x": "2026-09-24",
+            "y": 102.155705
+          },
+          {
+            "x": "2026-09-25",
+            "y": 102.646214
+          },
+          {
+            "x": "2026-09-28",
+            "y": 101.704494
+          },
+          {
+            "x": "2026-09-29",
+            "y": 101.617884
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "-0.09%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "S&P 500",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.288721
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.745776
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.80105
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.422318
+          },
+          {
+            "x": "2026-09-08",
+            "y": 99.835807
+          },
+          {
+            "x": "2026-09-09",
+            "y": 99.352337
+          },
+          {
+            "x": "2026-09-10",
+            "y": 98.771296
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.620614
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.139228
+          },
+          {
+            "x": "2026-09-15",
+            "y": 98.693621
+          },
+          {
+            "x": "2026-09-16",
+            "y": 98.252308
+          },
+          {
+            "x": "2026-09-17",
+            "y": 99.37055
+          },
+          {
+            "x": "2026-09-18",
+            "y": 99.536306
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.0221
+          },
+          {
+            "x": "2026-09-22",
+            "y": 101.021319
+          },
+          {
+            "x": "2026-09-23",
+            "y": 100.258773
+          },
+          {
+            "x": "2026-09-24",
+            "y": 100.234054
+          },
+          {
+            "x": "2026-09-25",
+            "y": 100.745108
+          },
+          {
+            "x": "2026-09-28",
+            "y": 99.968122
+          },
+          {
+            "x": "2026-09-29",
+            "y": 99.800937
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "-0.17%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "Russell 2K",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.771497
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.889055
+          },
+          {
+            "x": "2026-09-03",
+            "y": 100.399806
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.649426
+          },
+          {
+            "x": "2026-09-08",
+            "y": 100.126841
+          },
+          {
+            "x": "2026-09-09",
+            "y": 98.809046
+          },
+          {
+            "x": "2026-09-10",
+            "y": 97.784505
+          },
+          {
+            "x": "2026-09-11",
+            "y": 98.223883
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.82814
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.085697
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.697394
+          },
+          {
+            "x": "2026-09-17",
+            "y": 97.232489
+          },
+          {
+            "x": "2026-09-18",
+            "y": 96.751169
+          },
+          {
+            "x": "2026-09-21",
+            "y": 97.257189
+          },
+          {
+            "x": "2026-09-22",
+            "y": 97.749665
+          },
+          {
+            "x": "2026-09-23",
+            "y": 96.015828
+          },
+          {
+            "x": "2026-09-24",
+            "y": 95.911316
+          },
+          {
+            "x": "2026-09-25",
+            "y": 95.978288
+          },
+          {
+            "x": "2026-09-28",
+            "y": 95.313973
+          },
+          {
+            "x": "2026-09-29",
+            "y": 94.976143
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "-0.35%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 84,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Indexed: start = 100 · daily change",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 103.311942,
+        "series": "all"
+      },
+      "min": {
+        "value": 94.976143,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Indexes, Russell 2000 Edge Lower on Rates",
+    "subMessage": "Indexed: start = 100 · daily change"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-29",
+        "y": 96.548001
+      },
+      "displayText": "96.55",
+      "reason": "Indexed: start = 100 · daily change"
+    },
+    "densityLevel": "focused"
+  }
+}

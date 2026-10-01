@@ -158,6 +158,10 @@ export interface DataPoint {
   x: string | number;
   /** Y값 (실제 수치) */
   y: number;
+  /** 막대 안에 표시할 원문 라벨. 예: 시장점유율 35.8% */
+  displayLabel?: string;
+  /** 누적 막대 위에 표시할 합계 라벨. 한 계열의 포인트에만 둔다. */
+  totalLabel?: string;
   /** 보조 Y값 (이중축인 경우) */
   y2?: number;
   /** 캔들차트 전용: 시가, 고가, 저가, 종가 */
@@ -176,6 +180,15 @@ export interface DataSeries {
   renderAs?: "line" | "bar" | "area";
   /** 주연/조연 구분 — secondary는 가는 선 + 낮은 투명도로 시각적 약화 */
   role?: "primary" | "secondary";
+  /** 선 끝 기준값 옆에 붙이는 작은 당일 등락 배지 */
+  dailyMove?: {
+    value: string;
+    color?: string;
+    /** 기준값과 당일 등락을 겹치지 않는 두 열로 나눠 표시 */
+    layout?: "inline" | "two-column";
+    /** 두 열형 배지의 작은 머리말. 예: 오늘, TODAY */
+    label?: string;
+  };
   /**
    * 시리즈 성격 구분 (P0-3 밴드/전망 처리용) — LegendItem.seriesKind와 동일 의미
    * → "band": PER 밴드 등 상·하한선 묶음 / "forecast": 전망선 / "normal": 일반 시리즈
@@ -656,7 +669,15 @@ export interface ExportOptions {
   subtitleFontSize?: number;
   /** 서브메시지 글자 굵기(100~900). 생략하면 Paperlogy Light(300), 명시하면 사용자 예외값을 사용 */
   subtitleFontWeight?: number;
+  /** 제목 아래 두 번째 보조문장(metaMessage)의 글자 크기 */
+  metaFontSize?: number;
+  /** 제목 아래 두 번째 보조문장(metaMessage)의 글자 굵기 */
+  metaFontWeight?: number;
+  /** 키메시지와 보조문장을 각각 한 줄로 고정 */
+  headerCopySingleLine?: boolean;
   sourceFontSize?: number;
+  /** 채널별 공개 계정 워터마크. 생략하면 X 계정 기본값을 사용 */
+  watermarkText?: string;
   fontFamily?: string;
   titleFontFamily?: string;
   titleLetterSpacing?: number;
@@ -687,6 +708,14 @@ export interface ExportOptions {
   metricColor?: string;
   metricFontSize?: number;
   metricFontFamily?: string;
+  /** 최신 거래일 등락을 차트 기준값과 분리해 보여주는 상단 색상 블록 제목 */
+  sessionMoveTitle?: string;
+  /** 미국식 상승 초록·하락 주황 화살표 블록. 당일 등락 전용이며 그래프 기준값과 섞지 않는다. */
+  sessionMoveItems?: Array<{
+    label: string;
+    value: string;
+    direction: "up" | "down" | "flat";
+  }>;
   sourceReplica?: boolean;
   /** 카드, 막대, 선 끝/꺾임의 둥근 처리를 제거해 각진 형태로 렌더링 */
   squareEdges?: boolean;
@@ -700,6 +729,10 @@ export interface ExportOptions {
   directLabelFractionDigits?: number;
   /** 주 시리즈 선 두께(px) */
   lineStrokeWidth?: number;
+  /** 장표별 축·값 라벨 크기 배율. 생략하면 기존 크기 유지. */
+  chartLabelScale?: number;
+  /** 장표별 축·값 라벨 굵기. 제목·부제와 독립적으로 조정한다. */
+  chartLabelFontWeight?: number;
   /** 평균선 외의 명시적 수평 기준선도 모두 표시 */
   showAllTrendLines?: boolean;
   /** 첫 번째 시리즈 최신값 위치에 옅은 수평 가이드선을 표시 */
@@ -714,6 +747,10 @@ export interface ExportOptions {
   compactChartMargins?: boolean;
   /** 막대 색을 최댓값 강조가 아니라 양수/음수 부호 기준으로 표시 */
   barColorMode?: "emphasis" | "sign";
+  /** 누적 막대 범례 정렬. 생략하면 기존 오른쪽 정렬 */
+  stackedLegendAlign?: "left" | "center" | "right";
+  /** 누적 막대 구간 안 직접 라벨 크기(px) */
+  stackedLabelFontSize?: number;
   /**
    * 값 라벨 숫자 표기 로케일. 기본값 "ko"는 기존 동작(1만 이상은 "만"·"억" 축약).
    * "en"이면 축약 없이 영어권 자릿수 구분만 쓴다 — 영문 덱에 한글이 섞이지 않게 한다.

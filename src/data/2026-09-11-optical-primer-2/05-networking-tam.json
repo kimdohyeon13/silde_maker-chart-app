@@ -1,0 +1,236 @@
+{
+  "id": "networking-tam",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "CY26 150억 달러에서 CY28 1,540억 달러로 커진다",
+    "preservedElements": [
+      "CY26과 CY28 시점",
+      "TAM 금액",
+      "십억 달러 단위"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 골드만삭스 Optical Networking (2026-09-11)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "두 시점만 비교하는 세로 막대. 0 기준축, 단위 십억 달러."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "AI 네트워킹 시장 규모 전망",
+    "subtitle": "CY26 150억 달러에서 CY28 1,540억 달러로 커진다",
+    "source": "자료: 골드만삭스 Optical Networking (2026-09-11)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "CY26",
+        "CY28"
+      ],
+      "displayTickValues": [
+        "CY26 GB300 NVL72",
+        "CY28 VR300 NVL576"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "35",
+        "70",
+        "105",
+        "140",
+        "175"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 175
+    },
+    "legend": [
+      {
+        "name": "네트워킹 TAM",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "네트워킹 TAM",
+        "data": [
+          {
+            "x": "CY26",
+            "y": 15,
+            "confidence": 0.9
+          },
+          {
+            "x": "CY28",
+            "y": 154,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 2,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": 926.7,
+        "absoluteChange": 139,
+        "from": 15,
+        "to": 154
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 154,
+        "at": "CY28 VR300 NVL576"
+      },
+      "min": {
+        "value": 15,
+        "at": "CY28 VR300 NVL576"
+      },
+      "average": 84.5,
+      "median": 154,
+      "range": 139
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 네트워킹 시장 규모 전망",
+    "subMessage": "CY26 150억 달러에서 CY28 1,540억 달러로 커진다",
+    "headline": "AI 네트워킹 시장 규모 전망",
+    "summary": "CY26 150억 달러에서 CY28 1,540억 달러로 커진다",
+    "story": "CY26 150억 달러에서 CY28 1,540억 달러로 커진다",
+    "keyTakeaways": [
+      "CY26 기준 시장은 150억 달러다.",
+      "CY28에는 1,540억 달러로 커진다.",
+      "두 해 사이에 열 배 규모가 된다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "CY26 기준 시장은 150억 달러다.",
+    "contextualNotes": [
+      "자료: 골드만삭스 Optical Networking (2026-09-11)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "id": "services-headcount-revenue",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "사람 수를 줄인 곳에서도 매출은 줄지 않았습니다",
+    "preservedElements": [
+      "원자료 수치",
+      "비교 대상과 순서",
+      "출처"
+    ],
+    "changedElements": [
+      "한국어 제목·부제",
+      "공통 C 좌측 강조형 카드 규격",
+      "색 강조"
+    ],
+    "dataFidelity": "source-reported",
+    "notes": "조사 파일에 적힌 발표 수치를 그대로 옮겼습니다.",
+    "sourceAttribution": "자료: 글로반트·젠팩트·텔레퍼포먼스 2026년 실적 발표"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels",
+    "rewrite-title"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "가로 막대로 계열 1개, 항목 6개를 먼저 확정했습니다."
+    },
+    {
+      "id": "source-reported-values",
+      "label": "발표 수치 기반",
+      "status": "pass",
+      "detail": "원 보고서·공시에 적힌 값을 그대로 사용했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    },
+    {
+      "id": "title-is-subject",
+      "label": "제목은 대상, 부제는 해석",
+      "status": "pass",
+      "detail": "제목에 결론을 넣지 않고 부제 한 문장으로 해석을 적었습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "chartHeight": 350,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "서비스 기업 세 곳의 인원과 매출 증감률",
+    "subtitle": "사람 수를 줄인 곳에서도 매출은 줄지 않았습니다",
+    "source": "자료: 글로반트·젠팩트·텔레퍼포먼스 2026년 실적 발표",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "-15",
+        "-10",
+        "-5",
+        "0",
+        "5",
+        "10"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "전년 대비 증감률",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "전년 대비 증감률",
+        "data": [
+          {
+            "x": "글로반트 · 인원",
+            "y": -10,
+            "confidence": 0.95,
+            "displayLabel": "-10.0%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "글로반트 · 1인당 매출",
+            "y": 9.7,
+            "confidence": 0.95,
+            "displayLabel": "+9.7%",
+            "color": "#087A68"
+          },
+          {
+            "x": "젠팩트 · 평균 인원",
+            "y": -2.6,
+            "confidence": 0.95,
+            "displayLabel": "-2.6%",
+            "color": "#175CD3"
+          },
+          {
+            "x": "젠팩트 · 매출",
+            "y": 7.1,
+            "confidence": 0.95,
+            "displayLabel": "+7.1%",
+            "color": "#087A68"
+          },
+          {
+            "x": "텔레퍼포먼스 · 매출 (심사 제외)",
+            "y": 1.7,
+            "confidence": 0.95,
+            "displayLabel": "+1.7%",
+            "color": "#087A68"
+          },
+          {
+            "x": "텔레퍼포먼스 · 매출 (심사 포함)",
+            "y": -1.7,
+            "confidence": 0.95,
+            "displayLabel": "-1.7%",
+            "color": "#175CD3"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 0.95,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0.5,
+      "description": "발표 수치의 크기 관계를 그대로 옮겼습니다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "항목 간 격차를 보존했습니다."
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 9.7,
+        "at": ""
+      },
+      "min": {
+        "value": -10,
+        "at": ""
+      },
+      "average": 0.6999999999999998,
+      "median": 1.7,
+      "range": 19.7
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "서비스 기업 세 곳의 인원과 매출 증감률",
+    "subMessage": "사람 수를 줄인 곳에서도 매출은 줄지 않았습니다",
+    "headline": "서비스 기업 세 곳의 인원과 매출 증감률",
+    "summary": "사람 수를 줄인 곳에서도 매출은 줄지 않았습니다",
+    "story": "사람 수를 줄인 곳에서도 매출은 줄지 않았습니다",
+    "keyTakeaways": [
+      "글로반트는 매출이 보합인데 인원만 10% 줄었습니다.",
+      "젠팩트는 인원 2.6% 감소와 매출 7.1% 증가가 함께 왔습니다.",
+      "텔레퍼포먼스는 콘텐츠 심사 매출 급감을 자동화 탓으로 밝혔습니다."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "글로반트는 매출이 보합인데 인원만 10% 줄었습니다.",
+    "contextualNotes": [
+      "자료: 글로반트·젠팩트·텔레퍼포먼스 2026년 실적 발표"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BDD8D1",
+        "#7FB3A8",
+        "#4E8C81",
+        "#2C6459"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "focused"
+  }
+}

@@ -43,6 +43,7 @@ import {
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { formatNumber, formatNumberEn } from "@/lib/analysis/insight-engine";
 import { chartSettings } from "@/lib/chart-settings";
+import { Y_AXIS_TITLE_TOP_SPACE, resolveYAxisWidth } from "@/lib/axis-label-layout";
 import {
   formatAxisLabel,
   formatAxisTickLabel,
@@ -120,8 +121,14 @@ export default function TossBarChart({
   const horizontalBarSeries = isHorizontalBarChart
     ? analysis.data.series.filter((series) => series.renderAs !== "line")
     : [];
+  const horizontalDisplayLabels = new Map(
+    (analysis.structure.yAxis.tickValues ?? []).map((value, index) => [
+      String(value),
+      String(analysis.structure.yAxis.displayTickValues?.[index] ?? value),
+    ]),
+  );
   const horizontalChartData = isHorizontalBarChart
-    ? buildHorizontalSeriesData(horizontalBarSeries)
+    ? buildHorizontalSeriesData(horizontalBarSeries, horizontalDisplayLabels)
     : [];
 
   const groupedCategories = Array.from(
@@ -150,9 +157,11 @@ export default function TossBarChart({
     const row: StackedDatum = { name, value: 0, __total: 0 };
 
     stackedBarSeries.forEach((series) => {
-      const value =
-        series.data.find((point) => String(point.x) === name)?.y ?? 0;
+      const point = series.data.find((candidate) => String(candidate.x) === name);
+      const value = point?.y ?? 0;
       row[series.name] = value;
+      row[`${series.name}__label`] = point?.displayLabel ?? "";
+      if (point?.totalLabel) row.__totalLabel = point.totalLabel;
       row.__total += value;
     });
 
@@ -180,6 +189,9 @@ export default function TossBarChart({
       : firstSeries.data.map((point) => ({
           name: String(point.x),
           value: point.y,
+          // 데이터 포인트가 color를 들고 오면 막대별로 그 색을 쓴다.
+          // 진영별 색 구분(예: 중국 대 미국)처럼 최댓값 강조로는 표현할 수 없는 경우에 쓴다.
+          pointColor: (point as typeof point & { color?: string }).color,
         }));
 
   // 최댓값/최솟값 인덱스 (강조용)
@@ -233,6 +245,9 @@ export default function TossBarChart({
       : ["#38414D", "#4B5664", "#657487", "#8492A6"];
 
   function getBarColor(value: number, index: number): string {
+    // 데이터에 색이 지정돼 있으면 최댓값 강조보다 우선한다.
+    const declared = (chartData[index] as { pointColor?: string } | undefined)?.pointColor;
+    if (declared) return declared;
     if (exportOptions.barColorMode === "sign") {
       return value < 0 ? negativeAccent : positiveSeriesColor;
     }
@@ -341,6 +356,34 @@ export default function TossBarChart({
     analysis.structure.yAxis.unit,
   );
 
+  /**
+   * 값 축 눈금 문자열.
+   * 축 폭 계산과 실제 라벨이 같은 함수를 쓰도록 한 곳에 모은다.
+   *
+   * [D2] 소수 자릿수는 "실제로 그릴 눈금 배열" 기준으로 맞춘다.
+   * → 0.5 간격 눈금을 0자리로 반올림하면 '1,1,2,2'(중복)가 되므로,
+   *   눈금 간격이 1 미만이면 1자리(0.5/1.0/1.5)로 표시해 중복을 막는다.
+   */
+  function formatYAxisTick(value: number | string): string {
+    return formatValueWithUnit(
+      Number(value),
+      getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
+      getAxisFractionDigits(yMin, yMax, yAxisTicks),
+    );
+  }
+
+  // 값 축 폭은 실제 눈금 길이로 정한다. 짧은 눈금에서 좌측 여백이 놀지 않게 한다.
+  const axisTickFontSize =
+    typeof styles.yAxis.tick === "object" && styles.yAxis.tick
+      ? Number((styles.yAxis.tick as { fontSize?: number }).fontSize) ||
+        Number.parseInt(theme.typography.fontSize.axisLabel, 10)
+      : Number.parseInt(theme.typography.fontSize.axisLabel, 10);
+  const resolvedYAxisWidth = resolveYAxisWidth(
+    yAxisTicks.map(formatYAxisTick),
+    axisTickFontSize,
+    chartSettings.yAxis.width,
+  );
+
   const verticalCategoryKeys = isGroupedBarChart
     ? groupedCategories
     : isStackedBarChart
@@ -354,7 +397,7 @@ export default function TossBarChart({
     {
       hasLegend: isGroupedBarChart || isStackedBarChart,
       hasAxisTitle: Boolean(xAxisTitle),
-      yAxisWidth: chartSettings.yAxis.width,
+      yAxisWidth: resolvedYAxisWidth,
       leftMargin: compactChartMargins ? 8 : chartSettings.margin.left,
       rightMargin: compactChartMargins ? 36 : chartSettings.margin.right,
     },
@@ -509,15 +552,9 @@ export default function TossBarChart({
             label={categoryAxisLabel}
           />
           <YAxis
-            width={chartSettings.yAxis.width}
+            width={resolvedYAxisWidth}
             {...styles.yAxis}
-            tickFormatter={(value) =>
-              formatValueWithUnit(
-                Number(value),
-                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
-                getAxisFractionDigits(yMin, yMax, yAxisTicks),
-              )
-            }
+            tickFormatter={formatYAxisTick}
             domain={
               yAxisTicks.length > 0
                 ? [yAxisTicks[0], yAxisTicks[yAxisTicks.length - 1]]
@@ -545,19 +582,50 @@ export default function TossBarChart({
           />
           <Legend
             verticalAlign="top"
-            align="right"
+            align={exportOptions.stackedLegendAlign ?? "right"}
             height={30}
             iconType="circle"
-            formatter={(value) => (
-              <span
+            content={() => (
+              <div
                 style={{
-                  color: colors.textSecondary,
-                  fontSize: 13,
-                  fontWeight: 800,
+                  display: "flex",
+                  justifyContent:
+                    exportOptions.stackedLegendAlign === "center"
+                      ? "center"
+                      : exportOptions.stackedLegendAlign === "left"
+                        ? "flex-start"
+                        : "flex-end",
+                  alignItems: "center",
+                  gap: 18,
+                  width: "100%",
+                  height: 30,
                 }}
               >
-                {String(value)}
-              </span>
+                {stackedBarSeries.map((series, index) => (
+                  <span
+                    key={series.name}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                      color: colors.textSecondary,
+                      fontSize: 13,
+                      fontWeight: 800,
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 12,
+                        height: 12,
+                        borderRadius: "50%",
+                        background: getStackColor(index, series.name),
+                      }}
+                    />
+                    {series.name}
+                  </span>
+                ))}
+              </div>
             )}
           />
           {stackedBarSeries.map((series, index) => (
@@ -571,7 +639,29 @@ export default function TossBarChart({
               animationDuration={theme.animation.chartEntrance.duration}
               animationEasing="ease-out"
               maxBarSize={48}
-            />
+            >
+              {showLabels && (
+                <LabelList
+                  dataKey={`${series.name}__label`}
+                  position="center"
+                  fill={renderThemeMode === "dark" ? "#07110F" : "#FFFFFF"}
+                  fontSize={exportOptions.stackedLabelFontSize ?? 11}
+                  fontWeight={800}
+                  fontFamily={theme.typography.fontFamily.sans}
+                />
+              )}
+              {showLabels && index === stackedBarSeries.length - 1 && (
+                <LabelList
+                  dataKey="__totalLabel"
+                  position="top"
+                  offset={8}
+                  fill={colors.textPrimary}
+                  fontSize={14}
+                  fontWeight={900}
+                  fontFamily={theme.typography.fontFamily.sans}
+                />
+              )}
+            </Bar>
           ))}
           {stackedLineSeries.map((series, index) => (
             <Line
@@ -621,15 +711,9 @@ export default function TossBarChart({
             label={categoryAxisLabel}
           />
           <YAxis
-            width={chartSettings.yAxis.width}
+            width={resolvedYAxisWidth}
             {...styles.yAxis}
-            tickFormatter={(value) =>
-              formatValueWithUnit(
-                Number(value),
-                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
-                getAxisFractionDigits(yMin, yMax, yAxisTicks),
-              )
-            }
+            tickFormatter={formatYAxisTick}
             domain={
               yAxisTicks.length > 0
                 ? [yAxisTicks[0], yAxisTicks[yAxisTicks.length - 1]]
@@ -686,6 +770,26 @@ export default function TossBarChart({
   }
 
   if (isHorizontalBarChart) {
+    // 항목 이름 자리를 가장 긴 라벨에 맞춘다. 132px 고정값은 한글 7자나
+    // 영문 두 단어에서 이미 잘렸다(2026-08-30, alpha66-08). 한글은 글자 크기만큼,
+    // 영문·숫자는 그 절반 남짓으로 잡고 눈금 여백 8px 과 여유 12px 을 더한다.
+    const horizontalTickFontSize = 18;
+    const horizontalLabelWidth = Math.max(
+      ...horizontalChartData.map((row) =>
+        Array.from(String(row.name ?? "")).reduce((width, character) => {
+          if (/\s/u.test(character)) return width + horizontalTickFontSize * 0.3;
+          if (/[0-9]/u.test(character)) return width + horizontalTickFontSize * 0.68;
+          if (/[\u0000-\u024f]/u.test(character)) return width + horizontalTickFontSize * 0.72;
+          if (/[\p{P}\p{S}]/u.test(character)) return width + horizontalTickFontSize * 0.5;
+          return width + horizontalTickFontSize;
+        }, 0),
+      ),
+      0,
+    );
+    const horizontalCategoryAxisWidth = Math.min(
+      420,
+      Math.max(132, Math.ceil(horizontalLabelWidth) + 20),
+    );
     const horizontalValues = horizontalChartData.flatMap((row) =>
       horizontalBarSeries.map((series) => Number(row[series.name] ?? 0)),
     );
@@ -703,22 +807,19 @@ export default function TossBarChart({
           layout="vertical"
           margin={{
             top: horizontalBarSeries.length > 1 ? 42 : 18,
-            right: 92,
+            // 막대 끝 값 라벨이 들어갈 만큼만 남긴다.
+            right: 60,
             bottom: 18,
-            left: 132,
+            // 항목 이름 자리는 아래 YAxis width 가 이미 갖고 있다.
+            // 여기에 같은 값을 또 주면 왼쪽이 두 배로 빈다.
+            left: 8,
           }}
         >
           <CartesianGrid {...styles.grid} horizontal={false} />
           <XAxis
             type="number"
             {...styles.xAxis}
-            tickFormatter={(value) =>
-              formatValueWithUnit(
-                Number(value),
-                getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
-                getAxisFractionDigits(yMin, yMax, yAxisTicks),
-              )
-            }
+            tickFormatter={formatYAxisTick}
             domain={
               horizontalTicks.length > 0
                 ? [horizontalTicks[0], horizontalTicks[horizontalTicks.length - 1]]
@@ -729,7 +830,7 @@ export default function TossBarChart({
           <YAxis
             type="category"
             dataKey="name"
-            width={132}
+            width={horizontalCategoryAxisWidth}
             interval={0}
             tickMargin={8}
             tick={{
@@ -775,6 +876,7 @@ export default function TossBarChart({
               (item) => item.name === series.name,
             )?.remakeColor;
             const fill = legendColor ?? stackPalette[seriesIndex % stackPalette.length];
+            const hasDisplayLabels = series.data.some((point) => !!point.displayLabel);
 
             return (
               <Bar
@@ -787,16 +889,25 @@ export default function TossBarChart({
                 animationEasing="ease-out"
                 maxBarSize={horizontalBarSeries.length > 1 ? 11 : 18}
               >
+                {horizontalBarSeries.length === 1 &&
+                  horizontalChartData.map((row, index) => (
+                    <Cell
+                      key={`hcell-${index}`}
+                      fill={(row as { __pointColor?: string }).__pointColor ?? fill}
+                    />
+                  ))}
                 {showLabels && (
                   <LabelList
-                    dataKey={series.name}
+                    dataKey={hasDisplayLabels ? `${series.name}__label` : series.name}
                     position="right"
-                    formatter={(value) => fmt(Number(value ?? 0))}
+                    formatter={(value) =>
+                      hasDisplayLabels ? String(value ?? "") : fmt(Number(value ?? 0))
+                    }
                     style={{
                       fill: colors.textSecondary,
-                      fontSize: horizontalBarSeries.length > 1 ? 13 : 17,
+                      fontSize: (horizontalBarSeries.length > 1 ? 13 : 17) * styles.labels.scale,
                       fontFamily: theme.typography.fontFamily.mono,
-                      fontWeight: 700,
+                      fontWeight: styles.labels.fontWeight ?? 700,
                     }}
                   />
                 )}
@@ -822,7 +933,11 @@ export default function TossBarChart({
               : 12
             : hasFloatingCallout
               ? chartSettings.margin.top + 64
-              : Math.max(22, chartSettings.margin.top - 14),
+              : Math.max(
+                  22,
+                  chartSettings.margin.top - 14,
+                  yAxisLabel ? Y_AXIS_TITLE_TOP_SPACE : 0,
+                ),
           right: compactChartMargins ? 36 : chartSettings.margin.right,
           bottom: Math.max(
             categoryAxisLayout.bottomMargin,
@@ -850,18 +965,9 @@ export default function TossBarChart({
         />
 
         <YAxis
-          width={chartSettings.yAxis.width}
+          width={resolvedYAxisWidth}
           {...styles.yAxis}
-          tickFormatter={(value) =>
-            formatValueWithUnit(
-              Number(value),
-              getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label),
-              // [D2] 소수 자릿수도 "실제로 그릴 눈금 배열" 기준으로 맞춘다.
-              // → 0.5 간격 눈금을 0자리로 반올림하면 '1,1,2,2'(중복)가 되므로,
-              //   눈금 간격이 1 미만이면 1자리(0.5/1.0/1.5)로 표시해 중복을 막는다.
-              getAxisFractionDigits(yMin, yMax, yAxisTicks),
-            )
-          }
+          tickFormatter={formatYAxisTick}
           // [D2] tickValues가 없을 때만 균등 눈금/도메인을 강제한다(있으면 기존 동작 유지).
           // → 도메인을 눈금의 처음/끝으로 맞춰 0/1/2/3 또는 0/100/200/300/400처럼 균등하게 그린다.
           domain={
@@ -982,9 +1088,9 @@ export default function TossBarChart({
               formatter={(value) => fmt(Number(value ?? 0))}
               style={{
                 fill: colors.textSecondary,
-                fontSize: 22,
+                fontSize: 22 * styles.labels.scale,
                 fontFamily: theme.typography.fontFamily.mono,
-                fontWeight: 800,
+                fontWeight: styles.labels.fontWeight ?? 800,
               }}
             />
           )}

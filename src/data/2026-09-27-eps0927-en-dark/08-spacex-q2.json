@@ -1,0 +1,226 @@
+{
+  "id": "spacex-q2",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "SpaceX Q2 Revenue: $7.81B",
+    "preservedElements": [
+      "request numbers, order, and label text"
+    ],
+    "changedElements": [
+      "slide_maker_dark: approved dark terminal palette, frame, header and density rules",
+      "slide_maker_dark: title, labels, axes and source raised to white-mint contrast"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: SpaceX Q2 2026 earnings release"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "Exact request values",
+      "status": "pass",
+      "detail": "Numbers and label text are copied from the request as given."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en"
+  },
+  "structure": {
+    "title": "SpaceX Q2 Revenue: $7.81B",
+    "subtitle": "Unit: $B",
+    "source": "Source: SpaceX Q2 2026 earnings release",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "CONN",
+        "AI",
+        "SPACE"
+      ],
+      "displayTickValues": [
+        "Connectivity (Starlink)",
+        "AI",
+        "Space"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "CONN",
+        "AI",
+        "SPACE"
+      ],
+      "displayTickValues": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "Connectivity (Starlink)",
+        "AI",
+        "Space"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 5
+    },
+    "legend": [
+      {
+        "name": "Revenue by segment",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Revenue by segment",
+        "data": [
+          {
+            "x": "CONN",
+            "y": 4.29,
+            "displayLabel": "4.29",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "AI",
+            "y": 2.56,
+            "displayLabel": "2.56",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "SPACE",
+            "y": 0.96,
+            "displayLabel": "0.96",
+            "color": "#00E0A4"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "Up 92% year over year, by segment",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 4.29,
+        "at": "CONN"
+      },
+      "min": {
+        "value": 0.96,
+        "at": "SPACE"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "SpaceX Q2 Revenue: $7.81B",
+    "subMessage": "Up 92% year over year, by segment",
+    "headline": "SpaceX Q2 Revenue: $7.81B",
+    "summary": "Up 92% year over year, by segment",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "CONN",
+        "y": 4.29
+      },
+      "displayText": "4.29",
+      "reason": "Up 92% year over year, by segment"
+    },
+    "densityLevel": "focused"
+  }
+}

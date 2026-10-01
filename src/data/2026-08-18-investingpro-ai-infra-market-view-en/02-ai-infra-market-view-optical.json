@@ -1,0 +1,720 @@
+{
+  "id": "02-ai-infra-market-view-optical",
+  "mode": "redesign",
+  "sourceImage": "input/source-01-market-view.png",
+  "sourceImages": [
+    "input/source-01-market-view.png"
+  ],
+  "analyzedAt": "2026-08-18T06:15:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Market View",
+    "originalMessage": "Ticker comparison from the InvestingPro Market View watchlist",
+    "preservedElements": [
+      "25 tickers",
+      "price, today change, 1M/1Y return, 52-week high, target upside, EPS, Fwd P/E, market cap"
+    ],
+    "changedElements": [
+      "removed filters and the empty top area",
+      "split 25 tickers into 7/9/9-row 16:9 tables",
+      "moved today change into a signal badge next to the ticker",
+      "kept Rule of 40, PEG and beta in the CSV"
+    ]
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows"
+  ],
+  "qualityChecks": [
+    {
+      "id": "public-web-source",
+      "label": "public latest quote collection",
+      "status": "pass",
+      "detail": "raw StockAnalysis overview, statistics and history fields for 25 tickers preserved in the capture JSON",
+      "checkedAt": "2026-08-18T06:15:00+09:00"
+    },
+    {
+      "id": "compact-v3-b-signal-pill",
+      "label": "compact v3 B signal-badge variant",
+      "status": "pass",
+      "detail": "red badge for gains, blue badge for declines",
+      "checkedAt": "2026-08-18T06:15:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI Infrastructure Market View - 2/3",
+    "subtitle": "9 names across optical, connectivity and equipment",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "8px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "Ticker - Today",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "Category",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "Price",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1M\nReturn",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1Y\nReturn",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "Vs. 52W\nHigh",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "Target\nUpside",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\nGrowth",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "Mkt Cap\n($B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "Optical - AI Connectivity",
+            "displayValue": "Optical - AI Connectivity"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "COHR",
+            "displayValue": "COHR\nCoherent",
+            "sideValue": {
+              "displayValue": "+7.79↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Optical Components",
+            "displayValue": "Optical Components"
+          },
+          "current": {
+            "value": "351.22",
+            "displayValue": "351"
+          },
+          "m1": {
+            "value": "26.52%",
+            "displayValue": "26%"
+          },
+          "y1": {
+            "value": "208.06%",
+            "displayValue": "208%"
+          },
+          "high52": {
+            "value": "79.82%",
+            "displayValue": "79%"
+          },
+          "target": {
+            "value": "410.76",
+            "displayValue": "410\n17%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-",
+            "displayValue": "-",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "37.68",
+            "displayValue": "37"
+          },
+          "marketCap": {
+            "value": "68.78B",
+            "displayValue": "68B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VIAV",
+            "displayValue": "VIAV\nViavi",
+            "sideValue": {
+              "displayValue": "+6.29↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Optical Test",
+            "displayValue": "Optical Test"
+          },
+          "current": {
+            "value": "46.28",
+            "displayValue": "46"
+          },
+          "m1": {
+            "value": "21.28%",
+            "displayValue": "21%"
+          },
+          "y1": {
+            "value": "319.58%",
+            "displayValue": "319%"
+          },
+          "high52": {
+            "value": "76.58%",
+            "displayValue": "76%"
+          },
+          "target": {
+            "value": "61.43",
+            "displayValue": "61\n32%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-",
+            "displayValue": "-",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "28.14",
+            "displayValue": "28"
+          },
+          "marketCap": {
+            "value": "11.41B",
+            "displayValue": "11B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AAOI",
+            "displayValue": "AAOI\nApplied Opto",
+            "sideValue": {
+              "displayValue": "+3.07↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Optical Module Parts",
+            "displayValue": "Optical Module Parts"
+          },
+          "current": {
+            "value": "154.89",
+            "displayValue": "154"
+          },
+          "m1": {
+            "value": "51.24%",
+            "displayValue": "51%"
+          },
+          "y1": {
+            "value": "572.85%",
+            "displayValue": "572%"
+          },
+          "high52": {
+            "value": "66.29%",
+            "displayValue": "66%"
+          },
+          "target": {
+            "value": "163.40",
+            "displayValue": "163\n5%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-",
+            "displayValue": "-",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "53.33",
+            "displayValue": "53"
+          },
+          "marketCap": {
+            "value": "13.10B",
+            "displayValue": "13B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ALAB",
+            "displayValue": "ALAB\nAstera Labs",
+            "sideValue": {
+              "displayValue": "-0.45↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI Connectivity",
+            "displayValue": "AI Connectivity"
+          },
+          "current": {
+            "value": "320.17",
+            "displayValue": "320"
+          },
+          "m1": {
+            "value": "5.45%",
+            "displayValue": "5%"
+          },
+          "y1": {
+            "value": "65.34%",
+            "displayValue": "65%"
+          },
+          "high52": {
+            "value": "64.10%",
+            "displayValue": "64%"
+          },
+          "target": {
+            "value": "391.77",
+            "displayValue": "391\n22%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "+240%",
+            "displayValue": "+240%"
+          },
+          "pe": {
+            "value": "57.06",
+            "displayValue": "57"
+          },
+          "marketCap": {
+            "value": "55.54B",
+            "displayValue": "55B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRDO",
+            "displayValue": "CRDO\nCredo Tech",
+            "sideValue": {
+              "displayValue": "+8.82↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI Connectivity",
+            "displayValue": "AI Connectivity"
+          },
+          "current": {
+            "value": "282.82",
+            "displayValue": "282"
+          },
+          "m1": {
+            "value": "39.54%",
+            "displayValue": "39%"
+          },
+          "y1": {
+            "value": "133.48%",
+            "displayValue": "133%"
+          },
+          "high52": {
+            "value": "91.63%",
+            "displayValue": "91%"
+          },
+          "target": {
+            "value": "279.29",
+            "displayValue": "279\n-1%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "+765%",
+            "displayValue": "+765%"
+          },
+          "pe": {
+            "value": "46.17",
+            "displayValue": "46"
+          },
+          "marketCap": {
+            "value": "52.74B",
+            "displayValue": "52B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MRVL",
+            "displayValue": "MRVL\nMarvell",
+            "sideValue": {
+              "displayValue": "+5.55↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI Networking",
+            "displayValue": "AI Networking"
+          },
+          "current": {
+            "value": "234.35",
+            "displayValue": "234"
+          },
+          "m1": {
+            "value": "24.21%",
+            "displayValue": "24%"
+          },
+          "y1": {
+            "value": "195.45%",
+            "displayValue": "195%"
+          },
+          "high52": {
+            "value": "71.04%",
+            "displayValue": "71%"
+          },
+          "target": {
+            "value": "256.29",
+            "displayValue": "256\n9%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-",
+            "displayValue": "-",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "51.44",
+            "displayValue": "51"
+          },
+          "marketCap": {
+            "value": "205.22B",
+            "displayValue": "205B"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "Semi Equipment - Foundry",
+            "displayValue": "Semi Equipment - Foundry"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AEHR",
+            "displayValue": "AEHR\nAehr Test",
+            "sideValue": {
+              "displayValue": "+8.62↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Semi Test",
+            "displayValue": "Semi Test"
+          },
+          "current": {
+            "value": "145.61",
+            "displayValue": "145"
+          },
+          "m1": {
+            "value": "79.65%",
+            "displayValue": "79%"
+          },
+          "y1": {
+            "value": "622.27%",
+            "displayValue": "622%"
+          },
+          "high52": {
+            "value": "98.79%",
+            "displayValue": "98%"
+          },
+          "target": {
+            "value": "130.00",
+            "displayValue": "130\n-10%",
+            "highlight": "negative"
+          },
+          "eps": {
+            "value": "-",
+            "displayValue": "-",
+            "highlight": "muted"
+          },
+          "pe": {
+            "value": "194.15",
+            "displayValue": "194"
+          },
+          "marketCap": {
+            "value": "4.75B",
+            "displayValue": "4B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MKSI",
+            "displayValue": "MKSI\nMKS Instruments",
+            "sideValue": {
+              "displayValue": "+3.57↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Semi Equipment",
+            "displayValue": "Semi Equipment"
+          },
+          "current": {
+            "value": "321.82",
+            "displayValue": "321"
+          },
+          "m1": {
+            "value": "-0.88%",
+            "displayValue": "0%"
+          },
+          "y1": {
+            "value": "208.37%",
+            "displayValue": "208%"
+          },
+          "high52": {
+            "value": "71.90%",
+            "displayValue": "71%"
+          },
+          "target": {
+            "value": "413.62",
+            "displayValue": "413\n28%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "+59%",
+            "displayValue": "+59%"
+          },
+          "pe": {
+            "value": "20.48",
+            "displayValue": "20"
+          },
+          "marketCap": {
+            "value": "21.69B",
+            "displayValue": "21B"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSEM",
+            "displayValue": "TSEM\nTower Semi",
+            "sideValue": {
+              "displayValue": "+1.07↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "Foundry",
+            "displayValue": "Foundry"
+          },
+          "current": {
+            "value": "268.31",
+            "displayValue": "268"
+          },
+          "m1": {
+            "value": "14.61%",
+            "displayValue": "14%"
+          },
+          "y1": {
+            "value": "471.60%",
+            "displayValue": "471%"
+          },
+          "high52": {
+            "value": "83.86%",
+            "displayValue": "83%"
+          },
+          "target": {
+            "value": "321.32",
+            "displayValue": "321\n19%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "+45%",
+            "displayValue": "+45%"
+          },
+          "pe": {
+            "value": "51.90",
+            "displayValue": "51"
+          },
+          "marketCap": {
+            "value": "29.73B",
+            "displayValue": "29B"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 32,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "AI Infrastructure Market View - 2/3",
+    "subMessage": "9 names across optical, connectivity and equipment",
+    "headline": "AI Infrastructure Market View - 2/3",
+    "summary": "Latest public market metrics for 25 AI infrastructure names arranged as a presentation comparison table.",
+    "story": "Compares tickers, targets, returns, EPS growth and valuation by business group.",
+    "keyTakeaways": [
+      "today change shown as a badge next to the ticker",
+      "public values and - or NM are preserved",
+      "kept Rule of 40, PEG and beta in the CSV"
+    ],
+    "viewerAction": "Compare vs. 52-week high, target upside, EPS growth, Fwd P/E and market cap by business group."
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "target upside, EPS, valuation",
+      "reason": "compact v3 default comparison axes"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  }
+}

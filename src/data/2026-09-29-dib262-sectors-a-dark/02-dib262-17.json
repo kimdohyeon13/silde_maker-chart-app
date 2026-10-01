@@ -1,0 +1,684 @@
+{
+  "id": "dib262-17",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-262-17.png",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "메모리·스토리지, OpenAI 학습 중단 소식에 하락",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-08-31) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: Yahoo Finance · 2026년 9월 28일 종가까지"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-inline-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "최신 두 거래일 원 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "메모리·스토리지, OpenAI 학습 중단 소식에 하락",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "자료: Yahoo Finance · 2026년 9월 28일 종가까지",
+    "timeRange": "2026-08-31 to 2026-09-28",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-08-31",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-16",
+        "2026-09-22",
+        "2026-09-28"
+      ],
+      "displayTickValues": [
+        "08-31",
+        "09-04",
+        "09-11",
+        "09-16",
+        "09-22",
+        "09-28"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "1개월 전 = 100",
+      "type": "value",
+      "tickValues": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 90,
+      "max": 130
+    },
+    "legend": [
+      {
+        "name": "마이크론",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#00E0A4"
+      },
+      {
+        "name": "하이닉스 ADR",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#FF6A5F"
+      },
+      {
+        "name": "샌디스크",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#4AA8FF"
+      },
+      {
+        "name": "시게이트",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#A78BFA"
+      },
+      {
+        "name": "웨스턴디지털",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#F472B6"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "마이크론",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.362138
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.723596
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.940546
+          },
+          {
+            "x": "2026-09-04",
+            "y": 106.035072
+          },
+          {
+            "x": "2026-09-08",
+            "y": 104.331775
+          },
+          {
+            "x": "2026-09-09",
+            "y": 107.201197
+          },
+          {
+            "x": "2026-09-10",
+            "y": 101.94841
+          },
+          {
+            "x": "2026-09-11",
+            "y": 101.724159
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.380634
+          },
+          {
+            "x": "2026-09-15",
+            "y": 96.752996
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.643477
+          },
+          {
+            "x": "2026-09-17",
+            "y": 101.9578
+          },
+          {
+            "x": "2026-09-18",
+            "y": 105.952667
+          },
+          {
+            "x": "2026-09-21",
+            "y": 108.889884
+          },
+          {
+            "x": "2026-09-22",
+            "y": 114.334594
+          },
+          {
+            "x": "2026-09-23",
+            "y": 111.802074
+          },
+          {
+            "x": "2026-09-24",
+            "y": 112.704312
+          },
+          {
+            "x": "2026-09-25",
+            "y": 112.886845
+          },
+          {
+            "x": "2026-09-28",
+            "y": 109.935018
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#00E0A4",
+        "dailyMove": {
+          "value": "-2.61%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "하이닉스 ADR",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 97.691091
+          },
+          {
+            "x": "2026-09-02",
+            "y": 100.243039
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.453148
+          },
+          {
+            "x": "2026-09-04",
+            "y": 107.546481
+          },
+          {
+            "x": "2026-09-08",
+            "y": 112.741524
+          },
+          {
+            "x": "2026-09-09",
+            "y": 120.689028
+          },
+          {
+            "x": "2026-09-10",
+            "y": 114.412444
+          },
+          {
+            "x": "2026-09-11",
+            "y": 115.487912
+          },
+          {
+            "x": "2026-09-14",
+            "y": 106.714062
+          },
+          {
+            "x": "2026-09-15",
+            "y": 106.227974
+          },
+          {
+            "x": "2026-09-16",
+            "y": 106.252274
+          },
+          {
+            "x": "2026-09-17",
+            "y": 111.186051
+          },
+          {
+            "x": "2026-09-18",
+            "y": 113.926357
+          },
+          {
+            "x": "2026-09-21",
+            "y": 114.752703
+          },
+          {
+            "x": "2026-09-22",
+            "y": 118.708223
+          },
+          {
+            "x": "2026-09-23",
+            "y": 115.007897
+          },
+          {
+            "x": "2026-09-24",
+            "y": 113.239758
+          },
+          {
+            "x": "2026-09-25",
+            "y": 116.393241
+          },
+          {
+            "x": "2026-09-28",
+            "y": 110.535907
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#FF6A5F",
+        "dailyMove": {
+          "value": "-5.03%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "샌디스크",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.096001
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.151087
+          },
+          {
+            "x": "2026-09-03",
+            "y": 99.252572
+          },
+          {
+            "x": "2026-09-04",
+            "y": 111.06147
+          },
+          {
+            "x": "2026-09-08",
+            "y": 110.933174
+          },
+          {
+            "x": "2026-09-09",
+            "y": 112.604206
+          },
+          {
+            "x": "2026-09-10",
+            "y": 108.035362
+          },
+          {
+            "x": "2026-09-11",
+            "y": 104.254166
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.061086
+          },
+          {
+            "x": "2026-09-15",
+            "y": 97.714627
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.017299
+          },
+          {
+            "x": "2026-09-17",
+            "y": 103.043982
+          },
+          {
+            "x": "2026-09-18",
+            "y": 114.369056
+          },
+          {
+            "x": "2026-09-21",
+            "y": 112.761861
+          },
+          {
+            "x": "2026-09-22",
+            "y": 120.446805
+          },
+          {
+            "x": "2026-09-23",
+            "y": 115.94881
+          },
+          {
+            "x": "2026-09-24",
+            "y": 111.930813
+          },
+          {
+            "x": "2026-09-25",
+            "y": 113.474188
+          },
+          {
+            "x": "2026-09-28",
+            "y": 109.331082
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#4AA8FF",
+        "dailyMove": {
+          "value": "-3.65%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "시게이트",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 98.582777
+          },
+          {
+            "x": "2026-09-02",
+            "y": 97.604961
+          },
+          {
+            "x": "2026-09-03",
+            "y": 96.406236
+          },
+          {
+            "x": "2026-09-04",
+            "y": 102.523
+          },
+          {
+            "x": "2026-09-08",
+            "y": 109.174533
+          },
+          {
+            "x": "2026-09-09",
+            "y": 106.946085
+          },
+          {
+            "x": "2026-09-10",
+            "y": 104.098362
+          },
+          {
+            "x": "2026-09-11",
+            "y": 100.216082
+          },
+          {
+            "x": "2026-09-14",
+            "y": 97.244016
+          },
+          {
+            "x": "2026-09-15",
+            "y": 93.171008
+          },
+          {
+            "x": "2026-09-16",
+            "y": 94.543566
+          },
+          {
+            "x": "2026-09-17",
+            "y": 96.951882
+          },
+          {
+            "x": "2026-09-18",
+            "y": 103.671017
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.909125
+          },
+          {
+            "x": "2026-09-22",
+            "y": 111.040829
+          },
+          {
+            "x": "2026-09-23",
+            "y": 111.526109
+          },
+          {
+            "x": "2026-09-24",
+            "y": 109.360436
+          },
+          {
+            "x": "2026-09-25",
+            "y": 110.677468
+          },
+          {
+            "x": "2026-09-28",
+            "y": 111.242425
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#A78BFA",
+        "dailyMove": {
+          "value": "+0.51%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "웨스턴디지털",
+        "data": [
+          {
+            "x": "2026-08-31",
+            "y": 100
+          },
+          {
+            "x": "2026-09-01",
+            "y": 99.975589
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.633782
+          },
+          {
+            "x": "2026-09-03",
+            "y": 98.006885
+          },
+          {
+            "x": "2026-09-04",
+            "y": 103.753191
+          },
+          {
+            "x": "2026-09-08",
+            "y": 105.937188
+          },
+          {
+            "x": "2026-09-09",
+            "y": 107.042506
+          },
+          {
+            "x": "2026-09-10",
+            "y": 102.303852
+          },
+          {
+            "x": "2026-09-11",
+            "y": 99.252026
+          },
+          {
+            "x": "2026-09-14",
+            "y": 94.759741
+          },
+          {
+            "x": "2026-09-15",
+            "y": 91.434913
+          },
+          {
+            "x": "2026-09-16",
+            "y": 92.54689
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.07835
+          },
+          {
+            "x": "2026-09-18",
+            "y": 97.96027
+          },
+          {
+            "x": "2026-09-21",
+            "y": 99.471762
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.118415
+          },
+          {
+            "x": "2026-09-23",
+            "y": 105.135948
+          },
+          {
+            "x": "2026-09-24",
+            "y": 99.946734
+          },
+          {
+            "x": "2026-09-25",
+            "y": 101.389415
+          },
+          {
+            "x": "2026-09-28",
+            "y": 100.594834
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#F472B6",
+        "dailyMove": {
+          "value": "-0.78%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 100,
+    "quality": {
+      "completeness": 1,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 120.689028,
+        "series": "all"
+      },
+      "min": {
+        "value": 91.434913,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "메모리·스토리지, OpenAI 학습 중단 소식에 하락",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-28",
+        "y": 109.935018
+      },
+      "displayText": "109.94",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

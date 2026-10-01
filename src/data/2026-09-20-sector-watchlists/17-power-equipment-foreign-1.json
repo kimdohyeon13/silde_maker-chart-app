@@ -1,0 +1,400 @@
+{
+  "id": "17-power-equipment-foreign-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-19T16:57:19.008Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존",
+      "1~4종목은 10개 지표를 행으로 전치"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "전력 장비·전력망 · 해외 상장",
+    "subtitle": "2026.09.18 종가 · 가격·시총은 각 상장 통화 · 3종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "metric",
+        "label": "지표",
+        "dataType": "text",
+        "isRowHeader": true,
+        "width": "22%",
+        "align": "left"
+      },
+      {
+        "key": "stock0",
+        "label": "ABBN\nABB\n전력·자동화",
+        "dataType": "text",
+        "width": "26%",
+        "align": "right"
+      },
+      {
+        "key": "stock1",
+        "label": "SIEMENS\n지멘스 인도\n전력·산업 자동화",
+        "dataType": "text",
+        "width": "26%",
+        "align": "right"
+      },
+      {
+        "key": "stock2",
+        "label": "A034020\n두산에너빌리티\n원전·발전 장비",
+        "dataType": "text",
+        "width": "26%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "현재가",
+            "displayValue": "현재가"
+          },
+          "stock0": {
+            "value": "80.02",
+            "displayValue": "CHF 80"
+          },
+          "stock1": {
+            "value": "3,914",
+            "displayValue": "₹3,914"
+          },
+          "stock2": {
+            "value": "84,900",
+            "displayValue": "₩84,900"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "오늘 등락",
+            "displayValue": "오늘 등락"
+          },
+          "stock0": {
+            "value": "+0.6%",
+            "displayValue": "+0.6%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "+4.0%",
+            "displayValue": "+4.0%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "-0.6%",
+            "displayValue": "-0.6%",
+            "highlight": "negative"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1개월 수익률",
+            "displayValue": "1개월 수익률"
+          },
+          "stock0": {
+            "value": "-0.4%",
+            "displayValue": "0%",
+            "highlight": "negative"
+          },
+          "stock1": {
+            "value": "0.4%",
+            "displayValue": "0%"
+          },
+          "stock2": {
+            "value": "11.4%",
+            "displayValue": "11%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "1년 수익률",
+            "displayValue": "1년 수익률"
+          },
+          "stock0": {
+            "value": "44.9%",
+            "displayValue": "44%"
+          },
+          "stock1": {
+            "value": "18.3%",
+            "displayValue": "18%"
+          },
+          "stock2": {
+            "value": "39.6%",
+            "displayValue": "39%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "52주 고점 대비",
+            "displayValue": "52주 고점 대비"
+          },
+          "stock0": {
+            "value": "89.8%",
+            "displayValue": "89%"
+          },
+          "stock1": {
+            "value": "94.3%",
+            "displayValue": "94%"
+          },
+          "stock2": {
+            "value": "61.0%",
+            "displayValue": "61%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가",
+            "displayValue": "목표가"
+          },
+          "stock0": {
+            "value": "83.50",
+            "displayValue": "CHF 83"
+          },
+          "stock1": {
+            "value": "3,971",
+            "displayValue": "₹3,971"
+          },
+          "stock2": {
+            "value": "125,361",
+            "displayValue": "₩125,361"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "목표가 여력",
+            "displayValue": "목표가 여력"
+          },
+          "stock0": {
+            "value": "4.3%",
+            "displayValue": "4%",
+            "highlight": "positive"
+          },
+          "stock1": {
+            "value": "1.5%",
+            "displayValue": "1%",
+            "highlight": "positive"
+          },
+          "stock2": {
+            "value": "47.7%",
+            "displayValue": "47%",
+            "highlight": "positive"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "EPS 성장",
+            "displayValue": "EPS 성장"
+          },
+          "stock0": {
+            "value": "22.6%",
+            "displayValue": "22%"
+          },
+          "stock1": {
+            "value": "-21.3%",
+            "displayValue": "-21%",
+            "highlight": "negative"
+          },
+          "stock2": {
+            "value": "339.6%",
+            "displayValue": "339%"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "FY+2 PER",
+            "displayValue": "FY+2 PER"
+          },
+          "stock0": {
+            "value": "26.7x",
+            "displayValue": "26x"
+          },
+          "stock1": {
+            "value": "48.1x",
+            "displayValue": "48x"
+          },
+          "stock2": {
+            "value": "80.9x",
+            "displayValue": "80x"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "metric": {
+            "value": "시총",
+            "displayValue": "시총"
+          },
+          "stock0": {
+            "value": "145.2 B",
+            "displayValue": "CHF 145B"
+          },
+          "stock1": {
+            "value": "1,393.8 B",
+            "displayValue": "INR 1,393B"
+          },
+          "stock2": {
+            "value": "54,262.4 B",
+            "displayValue": "KRW 54조"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 36,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "전력 장비·전력망 · 해외 상장",
+    "subMessage": "2026.09.18 종가 · 가격·시총은 각 상장 통화 · 3종목",
+    "headline": "전력 장비·전력망 · 해외 상장",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "ABBN",
+      "instrument": "SWX:ABBN",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68051142.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "SIEMENS",
+      "instrument": "NSEI:SIEMENS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "A034020",
+      "instrument": "KOSE:A034020",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68961656.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "transposed-comparison-table",
+    "stockCount": 3,
+    "rowCount": 10,
+    "columns": 4,
+    "currency": "FOREIGN",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Three-line stock headers need export inspection."
+    ]
+  }
+}

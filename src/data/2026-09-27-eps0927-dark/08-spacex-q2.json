@@ -1,0 +1,227 @@
+{
+  "id": "spacex-q2",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "스페이스X 2분기 매출 78.1억 달러",
+    "preservedElements": [
+      "요청서 숫자·순서·라벨 표기"
+    ],
+    "changedElements": [
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "자료: 스페이스X 2026년 2분기 실적 발표"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-request-values",
+      "label": "요청서 값 그대로",
+      "status": "pass",
+      "detail": "요청서에 적힌 숫자와 라벨 표기를 그대로 썼습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "showLatestGuide": false,
+    "showDirectLabels": true,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko"
+  },
+  "structure": {
+    "title": "스페이스X 2분기 매출 78.1억 달러",
+    "subtitle": "단위: 억 달러",
+    "source": "자료: 스페이스X 2026년 2분기 실적 발표",
+    "timeRange": "단위: 억 달러",
+    "chartType": "bar_horizontal",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "CONN",
+        "AI",
+        "SPACE"
+      ],
+      "displayTickValues": [
+        "커넥티비티(스타링크)",
+        "AI",
+        "우주"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "CONN",
+        "AI",
+        "SPACE"
+      ],
+      "displayTickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "커넥티비티(스타링크)",
+        "AI",
+        "우주"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "부문별 매출",
+        "role": "primary",
+        "originalColor": "#087A68",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "부문별 매출",
+        "data": [
+          {
+            "x": "CONN",
+            "y": 42.9,
+            "displayLabel": "42.9",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "AI",
+            "y": 25.6,
+            "displayLabel": "25.6",
+            "color": "#00E0A4"
+          },
+          {
+            "x": "SPACE",
+            "y": 9.6,
+            "displayLabel": "9.6",
+            "color": "#00E0A4"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 3,
+    "quality": {
+      "completeness": 1,
+      "notes": "request values"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "전년 대비 92% 증가, 부문별 매출",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.5,
+      "description": "request values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 42.9,
+        "at": "CONN"
+      },
+      "min": {
+        "value": 9.6,
+        "at": "SPACE"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "스페이스X 2분기 매출 78.1억 달러",
+    "subMessage": "전년 대비 92% 증가, 부문별 매출",
+    "headline": "스페이스X 2분기 매출 78.1억 달러",
+    "summary": "전년 대비 92% 증가, 부문별 매출",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "CONN",
+        "y": 42.9
+      },
+      "displayText": "42.9",
+      "reason": "전년 대비 92% 증가, 부문별 매출"
+    },
+    "densityLevel": "focused"
+  }
+}

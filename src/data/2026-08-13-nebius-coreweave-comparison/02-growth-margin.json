@@ -21,7 +21,8 @@
     ],
     "dataFidelity": "exact",
     "notes": "두 회사의 공식 2Q26 수치를 같은 단위로 비교했습니다. 금액과 비율은 서로 다른 장표로 나눠 축 왜곡을 피했습니다.",
-    "sourceAttribution": "자료: Nebius·CoreWeave 2Q26 실적 발표 및 현금흐름표, 2026년 8월"
+    "sourceAttribution": "자료: Nebius·CoreWeave 2Q26 실적 발표 및 현금흐름표, 2026년 8월",
+    "sourceKey": "nebius-coreweave-2q26-growth-margin"
   },
   "allowedTransformations": [
     "rewrite-title",
@@ -83,12 +84,16 @@
       "label": "",
       "type": "category",
       "tickValues": [
-        "매출 성장률",
-        "조정 EBITDA 마진"
+        "Revenue growth",
+        "Adj. EBITDA margin"
       ],
       "unit": "",
       "startsAtZero": false,
-      "isLogScale": false
+      "isLogScale": false,
+      "displayTickValues": [
+        "매출 성장률",
+        "조정 EBITDA 마진"
+      ]
     },
     "yAxis": {
       "label": "",
@@ -120,12 +125,12 @@
         "name": "네비우스",
         "data": [
           {
-            "x": "매출 성장률",
+            "x": "Revenue growth",
             "y": 454,
             "confidence": 0.74
           },
           {
-            "x": "조정 EBITDA 마진",
+            "x": "Adj. EBITDA margin",
             "y": 41,
             "confidence": 0.74
           }
@@ -138,12 +143,12 @@
         "name": "코어위브",
         "data": [
           {
-            "x": "매출 성장률",
+            "x": "Revenue growth",
             "y": 112,
             "confidence": 0.74
           },
           {
-            "x": "조정 EBITDA 마진",
+            "x": "Adj. EBITDA margin",
             "y": 59,
             "confidence": 0.74
           }

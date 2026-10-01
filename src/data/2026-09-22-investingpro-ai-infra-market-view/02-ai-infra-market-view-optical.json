@@ -1,0 +1,742 @@
+{
+  "id": "02-ai-infra-market-view-optical.json",
+  "mode": "redesign",
+  "sourceImages": [
+    "input/source-01-market-view-top.png",
+    "input/source-02-market-view-continuation.png"
+  ],
+  "analyzedAt": "2026-09-23T06:15:00+09:00",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "마켓 뷰",
+    "originalMessage": "InvestingPro 마켓 뷰 워치리스트의 종목 비교",
+    "preservedElements": [
+      "두 캡처의 25개 티커",
+      "현재가·오늘 등락·1개월/1년 수익률·52주 고점·목표가/여력·EPS·Fwd P/E·시총"
+    ],
+    "changedElements": [
+      "필터·체크박스·빈 상단 영역 제거",
+      "25개 종목을 7·9·9개 16:9 표로 분할",
+      "오늘 등락률을 티커 옆 신호 배지로 이동",
+      "40의 규칙·PEG·베타는 CSV에 보존",
+      "소수점 아래를 PNG에서 버리고 CSV에 원문 보존"
+    ],
+    "dataFidelity": "InvestingPro-authenticated-7-rows-plus-public-web-18-rows-as-of-2026-09-22-close",
+    "notes": "2026-09-22 미국장 종가 기준. 인증 InvestingPro Market View에서 7개 행을 읽고, 나머지 18개는 StockAnalysis 공개 원문과 Yahoo Finance 일별 종가로 수집했다. Rule of 40·PEG·beta는 CSV/캡처 JSON에만 보존하고 당일 변동은 티커 옆 배지로 표시했다."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [
+    {
+      "id": "pro-visible-rows",
+      "label": "InvestingPro 화면 접근 확인",
+      "status": "pass",
+      "detail": "인증 Market View에서 ALAB·MRVL·LITE·AAOI·COHR·VIAV·CRDO 7행을 관찰",
+      "checkedAt": "2026-09-23T06:15:00+09:00"
+    },
+    {
+      "id": "public-latest-source",
+      "label": "공개 최신 원문 수집",
+      "status": "pass",
+      "detail": "18개 StockAnalysis overview/forecast와 Yahoo Finance chart URL 및 기준일을 input/public-web-capture.json에 보존",
+      "checkedAt": "2026-09-23T06:15:00+09:00"
+    },
+    {
+      "id": "compact-v3-b-signal-pill",
+      "label": "compact v3 B 신호 배지형",
+      "status": "pass",
+      "detail": "상승 빨강, 하락 파랑, 중립 회색 배지",
+      "checkedAt": "2026-09-23T06:15:00+09:00"
+    },
+    {
+      "id": "market-close-date",
+      "label": "미국장 기준일",
+      "status": "pass",
+      "detail": "2026-09-22 정규장 종가",
+      "checkedAt": "2026-09-23T06:15:00+09:00"
+    }
+  ],
+  "structure": {
+    "title": "AI 인프라 마켓 뷰 · 2/3",
+    "subtitle": "",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n($B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "광통신·AI 연결",
+            "displayValue": "광통신·AI 연결"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "COHR",
+            "displayValue": "COHR\n코히런트",
+            "sideValue": {
+              "displayValue": "+3.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광통신 부품",
+            "displayValue": "광통신 부품"
+          },
+          "current": {
+            "value": "310.39",
+            "displayValue": "310"
+          },
+          "m1": {
+            "value": "11.1%",
+            "displayValue": "11%"
+          },
+          "y1": {
+            "value": "180.6%",
+            "displayValue": "180%"
+          },
+          "high52": {
+            "value": "NM%",
+            "displayValue": "NM",
+            "highlight": "muted"
+          },
+          "target": {
+            "value": "415.36",
+            "displayValue": "415\n33%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "48.2%",
+            "displayValue": "48%"
+          },
+          "pe": {
+            "value": "21.3x",
+            "displayValue": "21x"
+          },
+          "marketCap": {
+            "value": "62.964 B",
+            "displayValue": "62"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "VIAV",
+            "displayValue": "VIAV\n비아비",
+            "sideValue": {
+              "displayValue": "+0.6%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광통신 테스트",
+            "displayValue": "광통신 테스트"
+          },
+          "current": {
+            "value": "36.40",
+            "displayValue": "36"
+          },
+          "m1": {
+            "value": "-6.9%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "192.4%",
+            "displayValue": "192%"
+          },
+          "high52": {
+            "value": "60.2%",
+            "displayValue": "60%"
+          },
+          "target": {
+            "value": "61.43",
+            "displayValue": "61\n68%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "18.8%",
+            "displayValue": "18%"
+          },
+          "pe": {
+            "value": "16.6x",
+            "displayValue": "16x"
+          },
+          "marketCap": {
+            "value": "8.932 B",
+            "displayValue": "8"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AAOI",
+            "displayValue": "AAOI\n어플라이드 옵토",
+            "sideValue": {
+              "displayValue": "+1.5%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "광모듈 부품",
+            "displayValue": "광모듈 부품"
+          },
+          "current": {
+            "value": "107",
+            "displayValue": "107"
+          },
+          "m1": {
+            "value": "-12.9%",
+            "displayValue": "-12%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "255.8%",
+            "displayValue": "255%"
+          },
+          "high52": {
+            "value": "45.8%",
+            "displayValue": "45%"
+          },
+          "target": {
+            "value": "163.40",
+            "displayValue": "163\n52%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "576.8%",
+            "displayValue": "576%"
+          },
+          "pe": {
+            "value": "23.9x",
+            "displayValue": "23x"
+          },
+          "marketCap": {
+            "value": "9.227 B",
+            "displayValue": "9"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ALAB",
+            "displayValue": "ALAB\n아스테라 랩스",
+            "sideValue": {
+              "displayValue": "+6.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 연결 칩",
+            "displayValue": "AI 연결 칩"
+          },
+          "current": {
+            "value": "363.46",
+            "displayValue": "363"
+          },
+          "m1": {
+            "value": "19.6%",
+            "displayValue": "19%"
+          },
+          "y1": {
+            "value": "43.6%",
+            "displayValue": "43%"
+          },
+          "high52": {
+            "value": "72.8%",
+            "displayValue": "72%"
+          },
+          "target": {
+            "value": "389.95",
+            "displayValue": "389\n7%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "58.6%",
+            "displayValue": "58%"
+          },
+          "pe": {
+            "value": "50.3x",
+            "displayValue": "50x"
+          },
+          "marketCap": {
+            "value": "59.113 B",
+            "displayValue": "59"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "CRDO",
+            "displayValue": "CRDO\n크레도 테크",
+            "sideValue": {
+              "displayValue": "+2.8%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 연결 칩",
+            "displayValue": "AI 연결 칩"
+          },
+          "current": {
+            "value": "192.56",
+            "displayValue": "192"
+          },
+          "m1": {
+            "value": "-18.8%",
+            "displayValue": "-18%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "14.1%",
+            "displayValue": "14%"
+          },
+          "high52": {
+            "value": "62.4%",
+            "displayValue": "62%"
+          },
+          "target": {
+            "value": "280.10",
+            "displayValue": "280\n45%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "53.9%",
+            "displayValue": "53%"
+          },
+          "pe": {
+            "value": "17.1x",
+            "displayValue": "17x"
+          },
+          "marketCap": {
+            "value": "35.198 B",
+            "displayValue": "35"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MRVL",
+            "displayValue": "MRVL\n마벨",
+            "sideValue": {
+              "displayValue": "+1.9%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "AI 네트워크",
+            "displayValue": "AI 네트워크"
+          },
+          "current": {
+            "value": "262.36",
+            "displayValue": "262"
+          },
+          "m1": {
+            "value": "8.6%",
+            "displayValue": "8%"
+          },
+          "y1": {
+            "value": "241.5%",
+            "displayValue": "241%"
+          },
+          "high52": {
+            "value": "79.5%",
+            "displayValue": "79%"
+          },
+          "target": {
+            "value": "289.56",
+            "displayValue": "289\n10%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "60.5%",
+            "displayValue": "60%"
+          },
+          "pe": {
+            "value": "36.5x",
+            "displayValue": "36x"
+          },
+          "marketCap": {
+            "value": "225.7 B",
+            "displayValue": "225"
+          }
+        }
+      },
+      {
+        "rowType": "header",
+        "cells": {
+          "ticker": {
+            "value": "반도체 장비·파운드리",
+            "displayValue": "반도체 장비·파운드리"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "AEHR",
+            "displayValue": "AEHR\n에어 테스트",
+            "sideValue": {
+              "displayValue": "+3.7%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 테스트",
+            "displayValue": "반도체 테스트"
+          },
+          "current": {
+            "value": "100.60",
+            "displayValue": "100"
+          },
+          "m1": {
+            "value": "-1.1108%",
+            "displayValue": "-1%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "209.2530%",
+            "displayValue": "209%"
+          },
+          "high52": {
+            "value": "68.2497%",
+            "displayValue": "68%"
+          },
+          "target": {
+            "value": "128.00",
+            "displayValue": "128\n27%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "2,516.67%",
+            "displayValue": "2,516%"
+          },
+          "pe": {
+            "value": "134.13x",
+            "displayValue": "134x"
+          },
+          "marketCap": {
+            "value": "3.28 B",
+            "displayValue": "3"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "MKSI",
+            "displayValue": "MKSI\nMKS 인스트",
+            "sideValue": {
+              "displayValue": "+1.3%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "반도체 장비",
+            "displayValue": "반도체 장비"
+          },
+          "current": {
+            "value": "260.37",
+            "displayValue": "260"
+          },
+          "m1": {
+            "value": "-6.7142%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "103.5731%",
+            "displayValue": "103%"
+          },
+          "high52": {
+            "value": "58.1676%",
+            "displayValue": "58%"
+          },
+          "target": {
+            "value": "410.86",
+            "displayValue": "410\n57%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "66.83%",
+            "displayValue": "66%"
+          },
+          "pe": {
+            "value": "16.56x",
+            "displayValue": "16x"
+          },
+          "marketCap": {
+            "value": "17.61 B",
+            "displayValue": "17"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "TSEM",
+            "displayValue": "TSEM\n타워 세미",
+            "sideValue": {
+              "displayValue": "+1.1%↑",
+              "color": "#FFFFFF",
+              "background": "#D92D20",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "파운드리",
+            "displayValue": "파운드리"
+          },
+          "current": {
+            "value": "236.61",
+            "displayValue": "236"
+          },
+          "m1": {
+            "value": "6.2986%",
+            "displayValue": "6%"
+          },
+          "y1": {
+            "value": "240.2013%",
+            "displayValue": "240%"
+          },
+          "high52": {
+            "value": "73.9545%",
+            "displayValue": "73%"
+          },
+          "target": {
+            "value": "314.91",
+            "displayValue": "314\n33%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "69.43%",
+            "displayValue": "69%"
+          },
+          "pe": {
+            "value": "46.41x",
+            "displayValue": "46x"
+          },
+          "marketCap": {
+            "value": "26.74 B",
+            "displayValue": "26"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 32,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 44
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 인프라 마켓 뷰 · 2/3",
+    "subMessage": "InvestingPro 마켓 뷰 · 2026.09.22 종가 기준",
+    "headline": "AI 인프라 마켓 뷰 · 2/3",
+    "summary": "사용자 제공 InvestingPro 워치리스트를 발표용 비교표로 정리했다.",
+    "story": "종목·목표가·수익률·EPS 성장·밸류에이션을 사업군별로 비교한다.",
+    "keyTakeaways": [
+      "오늘 등락은 티커 옆 배지로 표시",
+      "화면에 보인 수치만 전사",
+      "40의 규칙·PEG·베타는 CSV에 보존"
+    ],
+    "viewerAction": "사업군별로 52주 고점 대비, 목표가 여력, EPS 성장, Fwd P/E, 시총을 비교한다."
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceImage": "input/source-02-market-view-continuation.png"
+}

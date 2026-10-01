@@ -1,0 +1,706 @@
+{
+  "id": "dib264-22",
+  "mode": "faithful",
+  "sourceImage": "input/original/dib-264-22.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "서비스나우 3.13%, 팔로알토 2.29% 상승",
+    "preservedElements": [
+      "Yahoo Finance daily closes frozen in input/yahoo-finance-daily.csv",
+      "original ticker order, 1-month source window, focus date, and line-chart form",
+      "start date (2026-09-01) = 100 indexing"
+    ],
+    "changedElements": [
+      "channel-localized copy",
+      "dark terminal derivative"
+    ],
+    "dataFidelity": "exact",
+    "sourceAttribution": "Source: Yahoo Finance · 기준일 2026-09-30 종가"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing"
+  ],
+  "qualityChecks": [
+    {
+      "id": "exact-source-data",
+      "label": "원자료 CSV 기반",
+      "status": "pass",
+      "detail": "Yahoo Finance 일봉 종가를 CSV에 고정했습니다."
+    },
+    {
+      "id": "daily-move-badge",
+      "label": "당일 등락 배지",
+      "status": "pass",
+      "detail": "9월 29일과 30일 종가로 계산했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": true,
+    "sourceFontSize": 11,
+    "watermarkText": "@wtm_waltechman",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#087A68",
+    "borderColor": "#DCE3EB",
+    "chartHeight": 350,
+    "compactChartMargins": false,
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.2,
+    "showAreaFill": false,
+    "showDirectLabels": true,
+    "showLatestGuide": false,
+    "latestGuideOpacity": 0.22,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "ko",
+    "directLabelFractionDigits": 1,
+    "endLabelRightMargin": 340
+  },
+  "structure": {
+    "chartType": "line",
+    "title": "서비스나우 3.13%, 팔로알토 2.29% 상승",
+    "subtitle": "비교 기준: 시작일=100 · 전일 대비 등락률",
+    "source": "Source: Yahoo Finance · 기준일 2026-09-30 종가",
+    "timeRange": "2026-09-01 to 2026-09-30",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-18",
+        "2026-09-24",
+        "2026-09-30"
+      ],
+      "displayTickValues": [
+        "09-01",
+        "09-08",
+        "09-14",
+        "09-18",
+        "09-24",
+        "09-30"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "9월 1일 = 100",
+      "type": "value",
+      "tickValues": [
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false,
+      "min": 80,
+      "max": 120
+    },
+    "legend": [
+      {
+        "name": "서비스나우",
+        "role": "primary",
+        "originalColor": "#1E755F",
+        "remakeColor": "#087A68"
+      },
+      {
+        "name": "팔로알토",
+        "role": "secondary",
+        "originalColor": "#BC432B",
+        "remakeColor": "#BC432B"
+      },
+      {
+        "name": "세일즈포스",
+        "role": "secondary",
+        "originalColor": "#245275",
+        "remakeColor": "#245275"
+      },
+      {
+        "name": "오라클",
+        "role": "secondary",
+        "originalColor": "#D9A52E",
+        "remakeColor": "#886B12"
+      },
+      {
+        "name": "팔란티어",
+        "role": "secondary",
+        "originalColor": "#7A4E9E",
+        "remakeColor": "#7A4E9E"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "서비스나우",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 95.675302
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.882437
+          },
+          {
+            "x": "2026-09-04",
+            "y": 98.852345
+          },
+          {
+            "x": "2026-09-08",
+            "y": 93.918833
+          },
+          {
+            "x": "2026-09-09",
+            "y": 91.74948
+          },
+          {
+            "x": "2026-09-10",
+            "y": 91.791465
+          },
+          {
+            "x": "2026-09-11",
+            "y": 92.74318
+          },
+          {
+            "x": "2026-09-14",
+            "y": 99.615124
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.30021
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.844656
+          },
+          {
+            "x": "2026-09-17",
+            "y": 96.899935
+          },
+          {
+            "x": "2026-09-18",
+            "y": 94.800565
+          },
+          {
+            "x": "2026-09-21",
+            "y": 96.347095
+          },
+          {
+            "x": "2026-09-22",
+            "y": 95.871243
+          },
+          {
+            "x": "2026-09-23",
+            "y": 98.516448
+          },
+          {
+            "x": "2026-09-24",
+            "y": 96.417078
+          },
+          {
+            "x": "2026-09-25",
+            "y": 94.905529
+          },
+          {
+            "x": "2026-09-28",
+            "y": 91.987406
+          },
+          {
+            "x": "2026-09-29",
+            "y": 90.930726
+          },
+          {
+            "x": "2026-09-30",
+            "y": 93.77887
+          }
+        ],
+        "renderAs": "line",
+        "role": "primary",
+        "color": "#087A68",
+        "dailyMove": {
+          "value": "+3.13%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "팔로알토",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 90.717781
+          },
+          {
+            "x": "2026-09-03",
+            "y": 91.673342
+          },
+          {
+            "x": "2026-09-04",
+            "y": 92.037895
+          },
+          {
+            "x": "2026-09-08",
+            "y": 93.065264
+          },
+          {
+            "x": "2026-09-09",
+            "y": 92.546055
+          },
+          {
+            "x": "2026-09-10",
+            "y": 93.482282
+          },
+          {
+            "x": "2026-09-11",
+            "y": 91.317075
+          },
+          {
+            "x": "2026-09-14",
+            "y": 103.272669
+          },
+          {
+            "x": "2026-09-15",
+            "y": 103.590268
+          },
+          {
+            "x": "2026-09-16",
+            "y": 103.744925
+          },
+          {
+            "x": "2026-09-17",
+            "y": 103.581983
+          },
+          {
+            "x": "2026-09-18",
+            "y": 100.411497
+          },
+          {
+            "x": "2026-09-21",
+            "y": 102.67061
+          },
+          {
+            "x": "2026-09-22",
+            "y": 103.44666
+          },
+          {
+            "x": "2026-09-23",
+            "y": 108.619402
+          },
+          {
+            "x": "2026-09-24",
+            "y": 107.685939
+          },
+          {
+            "x": "2026-09-25",
+            "y": 103.493605
+          },
+          {
+            "x": "2026-09-28",
+            "y": 108.285233
+          },
+          {
+            "x": "2026-09-29",
+            "y": 107.268913
+          },
+          {
+            "x": "2026-09-30",
+            "y": 109.726865
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#BC432B",
+        "dailyMove": {
+          "value": "+2.29%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "세일즈포스",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 99.542833
+          },
+          {
+            "x": "2026-09-03",
+            "y": 102.448571
+          },
+          {
+            "x": "2026-09-04",
+            "y": 100.433933
+          },
+          {
+            "x": "2026-09-08",
+            "y": 96.516992
+          },
+          {
+            "x": "2026-09-09",
+            "y": 94.595334
+          },
+          {
+            "x": "2026-09-10",
+            "y": 94.145912
+          },
+          {
+            "x": "2026-09-11",
+            "y": 95.97459
+          },
+          {
+            "x": "2026-09-14",
+            "y": 100.511413
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.046921
+          },
+          {
+            "x": "2026-09-16",
+            "y": 97.067145
+          },
+          {
+            "x": "2026-09-17",
+            "y": 94.0878
+          },
+          {
+            "x": "2026-09-18",
+            "y": 92.177758
+          },
+          {
+            "x": "2026-09-21",
+            "y": 91.596611
+          },
+          {
+            "x": "2026-09-22",
+            "y": 90.380075
+          },
+          {
+            "x": "2026-09-23",
+            "y": 92.046033
+          },
+          {
+            "x": "2026-09-24",
+            "y": 92.293989
+          },
+          {
+            "x": "2026-09-25",
+            "y": 90.666777
+          },
+          {
+            "x": "2026-09-28",
+            "y": 88.051613
+          },
+          {
+            "x": "2026-09-29",
+            "y": 87.292244
+          },
+          {
+            "x": "2026-09-30",
+            "y": 88.942704
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#245275",
+        "dailyMove": {
+          "value": "+1.89%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "오라클",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 103.134724
+          },
+          {
+            "x": "2026-09-03",
+            "y": 109.000839
+          },
+          {
+            "x": "2026-09-04",
+            "y": 112.354932
+          },
+          {
+            "x": "2026-09-08",
+            "y": 115.001412
+          },
+          {
+            "x": "2026-09-09",
+            "y": 114.371636
+          },
+          {
+            "x": "2026-09-10",
+            "y": 108.22247
+          },
+          {
+            "x": "2026-09-11",
+            "y": 106.340214
+          },
+          {
+            "x": "2026-09-14",
+            "y": 102.45541
+          },
+          {
+            "x": "2026-09-15",
+            "y": 99.313614
+          },
+          {
+            "x": "2026-09-16",
+            "y": 101.302007
+          },
+          {
+            "x": "2026-09-17",
+            "y": 106.559573
+          },
+          {
+            "x": "2026-09-18",
+            "y": 104.450887
+          },
+          {
+            "x": "2026-09-21",
+            "y": 105.123118
+          },
+          {
+            "x": "2026-09-22",
+            "y": 105.57599
+          },
+          {
+            "x": "2026-09-23",
+            "y": 102.292662
+          },
+          {
+            "x": "2026-09-24",
+            "y": 98.740437
+          },
+          {
+            "x": "2026-09-25",
+            "y": 97.013869
+          },
+          {
+            "x": "2026-09-28",
+            "y": 93.829606
+          },
+          {
+            "x": "2026-09-29",
+            "y": 97.502113
+          },
+          {
+            "x": "2026-09-30",
+            "y": 97.155387
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#886B12",
+        "dailyMove": {
+          "value": "-0.36%",
+          "color": "#D92D20"
+        }
+      },
+      {
+        "name": "팔란티어",
+        "data": [
+          {
+            "x": "2026-09-01",
+            "y": 100.0
+          },
+          {
+            "x": "2026-09-02",
+            "y": 94.18631
+          },
+          {
+            "x": "2026-09-03",
+            "y": 101.450645
+          },
+          {
+            "x": "2026-09-04",
+            "y": 96.893066
+          },
+          {
+            "x": "2026-09-08",
+            "y": 94.653182
+          },
+          {
+            "x": "2026-09-09",
+            "y": 94.225211
+          },
+          {
+            "x": "2026-09-10",
+            "y": 92.185417
+          },
+          {
+            "x": "2026-09-11",
+            "y": 92.946864
+          },
+          {
+            "x": "2026-09-14",
+            "y": 96.326145
+          },
+          {
+            "x": "2026-09-15",
+            "y": 95.909293
+          },
+          {
+            "x": "2026-09-16",
+            "y": 96.898621
+          },
+          {
+            "x": "2026-09-17",
+            "y": 97.954651
+          },
+          {
+            "x": "2026-09-18",
+            "y": 98.732771
+          },
+          {
+            "x": "2026-09-21",
+            "y": 101.761893
+          },
+          {
+            "x": "2026-09-22",
+            "y": 102.817923
+          },
+          {
+            "x": "2026-09-23",
+            "y": 106.597374
+          },
+          {
+            "x": "2026-09-24",
+            "y": 107.042018
+          },
+          {
+            "x": "2026-09-25",
+            "y": 105.419075
+          },
+          {
+            "x": "2026-09-28",
+            "y": 104.201866
+          },
+          {
+            "x": "2026-09-29",
+            "y": 103.91841
+          },
+          {
+            "x": "2026-09-30",
+            "y": 103.962873
+          }
+        ],
+        "renderAs": "line",
+        "role": "secondary",
+        "color": "#7A4E9E",
+        "dailyMove": {
+          "value": "+0.04%",
+          "color": "#D92D20"
+        }
+      }
+    ],
+    "totalDataPoints": 105,
+    "quality": {
+      "completeness": 1.0,
+      "notes": "Yahoo Finance OHLC snapshot"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "mixed",
+      "strength": 0.5,
+      "description": "비교 기준: 시작일=100 · 전일 대비 등락률",
+      "recentDirection": "mixed"
+    },
+    "volatility": {
+      "level": "high",
+      "coefficient": 0.5,
+      "description": "Daily source values"
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 115.001412,
+        "series": "all"
+      },
+      "min": {
+        "value": 87.292244,
+        "series": "all"
+      }
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "서비스나우 3.13%, 팔로알토 2.29% 상승",
+    "subMessage": "비교 기준: 시작일=100 · 전일 대비 등락률"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#BC432B",
+        "#245275",
+        "#886B12",
+        "#7A4E9E",
+        "#B07A1E"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026-09-30",
+        "y": 93.77887
+      },
+      "displayText": "93.78",
+      "reason": "비교 기준: 시작일=100 · 전일 대비 등락률"
+    },
+    "densityLevel": "focused"
+  }
+}

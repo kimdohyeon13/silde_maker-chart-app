@@ -1,0 +1,242 @@
+{
+  "id": "07-unified-architecture",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "contentType": "infographic",
+  "tableSubType": "comparison",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Unified architecture for changing inference workloads",
+    "preservedElements": [
+      "Prefill is compute-intensive",
+      "Decode is limited by memory bandwidth",
+      "The KV cache is kept local",
+      "Compute, memory, and network are designed together",
+      "Workload balance keeps changing"
+    ],
+    "changedElements": [
+      "Recomposed the technical explanation as an easy comparison table",
+      "Split each concept into meaning and Jalapeño design",
+      "Kept the explanation qualitative without numeric claims"
+    ],
+    "dataFidelity": "exact",
+    "notes": "Uses only the architectural explanation in OpenAI’s first-results page. No performance number or additional multiple was added.",
+    "sourceAttribution": "OpenAI · Jalapeño first results · 2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "Layout plan",
+      "status": "pass",
+      "detail": "Five concepts are presented in one table, read as ‘what is the bottleneck’ and ‘Jalapeño’s choice’."
+    },
+    {
+      "id": "exact-official-qualitative-claims",
+      "label": "Official qualitative claims",
+      "status": "pass",
+      "detail": "Compute-intensive prefill, memory-bandwidth-limited decode, local KV cache, integrated design, and changing workload balance are preserved from the official explanation."
+    },
+    {
+      "id": "no-numeric-claims",
+      "label": "No numeric claims",
+      "status": "pass",
+      "detail": "No performance figure or multiple was added to the table body."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "Bilingual row and column parity",
+      "status": "pass",
+      "detail": "The five rows, column structure, and core relationships match the Korean file."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy hierarchy",
+      "status": "pass",
+      "detail": "canvasHeight 540, title weight 900, and subtitle weight 300 are specified."
+    },
+    {
+      "id": "render-overflow",
+      "label": "Render overflow",
+      "status": "pending",
+      "detail": "This subtask covers JSON authoring; export/preflight remains with the parent agent."
+    }
+  ],
+  "structure": {
+    "title": "Jalapeño’s unified inference architecture",
+    "subtitle": "A simple view of input processing, token generation, cache, and network",
+    "source": "Source: OpenAI, Jalapeño first results (2026-08-25)"
+  },
+  "infographicData": {
+    "subType": "comparison_card",
+    "comparisonAttributes": ["Prefill", "Decode", "KV cache", "Operation"],
+    "items": [
+      {
+        "name": "Main bottleneck",
+        "attributes": {
+          "Prefill": { "value": "Compute", "displayValue": "Compute-intensive" },
+          "Decode": { "value": "Memory", "displayValue": "Memory bandwidth" },
+          "KV cache": { "value": "Movement", "displayValue": "State movement" },
+          "Operation": { "value": "Changing", "displayValue": "Changing workload mix" }
+        }
+      },
+      {
+        "name": "Jalapeño choice",
+        "attributes": {
+          "Prefill": { "value": "Unified", "displayValue": "Shared chip pool", "highlight": "positive" },
+          "Decode": { "value": "Unified", "displayValue": "Shared chip pool", "highlight": "positive" },
+          "KV cache": { "value": "Local", "displayValue": "Keep it nearby", "highlight": "positive" },
+          "Operation": { "value": "Flexible", "displayValue": "No fixed split", "highlight": "positive" }
+        },
+        "isWinner": true
+      }
+    ]
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "concept",
+        "label": "Concept",
+        "dataType": "text",
+        "width": "24%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "meaning",
+        "label": "In simple terms",
+        "dataType": "text",
+        "width": "33%",
+        "align": "left"
+      },
+      {
+        "key": "choice",
+        "label": "Jalapeño’s design",
+        "dataType": "text",
+        "width": "43%",
+        "align": "left"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": { "value": "Prefill", "displayValue": "Prefill", "highlight": "accent" },
+          "meaning": { "value": "The stage that processes the input in one pass", "displayValue": "The stage that processes the input in one pass" },
+          "choice": { "value": "Treat it as a compute-intensive workload.", "displayValue": "Treat it as a compute-intensive workload." }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": { "value": "Decode", "displayValue": "Decode", "highlight": "accent" },
+          "meaning": { "value": "The stage that produces the response one token at a time", "displayValue": "The stage that produces the response one token at a time" },
+          "choice": { "value": "Treat it as a memory-bandwidth-limited workload.", "displayValue": "Treat it as a memory-bandwidth-limited workload." }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": { "value": "KV cache", "displayValue": "KV cache", "highlight": "accent" },
+          "meaning": { "value": "The stored model state used while generating a response", "displayValue": "The stored model state used while generating a response" },
+          "choice": { "value": "Keep it close to the compute and local to reduce data movement.", "displayValue": "Keep it close to the compute and local to reduce data movement." }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "concept": { "value": "Unified operation", "displayValue": "Unified operation", "highlight": "accent" },
+          "meaning": { "value": "The mix of input, cache, and output keeps changing.", "displayValue": "The mix of input, cache, and output keeps changing." },
+          "choice": { "value": "Co-design compute, memory, and network without fixed prefill and decode pools.", "displayValue": "Co-design compute, memory, and network without fixed prefill and decode pools." }
+        }
+      }
+    ],
+    "visualOptions": {
+      "rowHeight": 78,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 70,
+      "maxRowHeight": 92,
+      "cellPadding": "8px 9px",
+      "lineHeight": 1.08,
+      "zebraStripe": true,
+      "zebraOpacity": 0.05,
+      "highlightMode": "text",
+      "headerTone": "underline",
+      "rowRules": "soft",
+      "columnRules": true,
+      "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+      "fontWeight": {
+        "body": 550,
+        "rowHeader": 750,
+        "header": 800
+      },
+      "fontSize": {
+        "header": "13px",
+        "body": "13px",
+        "total": "13px"
+      }
+    }
+  },
+  "narrative": {
+    "headMessage": "Jalapeño treats compute, memory, and network as one flow",
+    "subMessage": "It keeps prefill and decode flexible instead of locking them into separate pools.",
+    "headline": "The key is not more parts, but an integrated design that reduces data movement.",
+    "summary": "The architecture recognizes different compute and memory bottlenecks while keeping the KV cache and network close to the work.",
+    "story": "In simple terms, input processing, token generation, and cache reads are connected as one system flow.",
+    "keyTakeaways": [
+      "Prefill is about compute; decode is about memory bandwidth.",
+      "The KV cache stays close, while the workload mix is not fixed in advance."
+    ],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "Integrated compute, memory, and network",
+      "reason": "The central idea for understanding Jalapeño’s architecture in one phrase"
+    },
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#98A2B3"],
+      "positive": "#155EEF",
+      "negative": "#98A2B3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 30,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px 0",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0",
+    "fitRowsToCanvas": true,
+    "minRowHeight": 29,
+    "maxRowHeight": 48,
+    "numberLocale": "en"
+  }
+}

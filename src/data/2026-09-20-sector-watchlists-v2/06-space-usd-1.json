@@ -1,0 +1,716 @@
+{
+  "id": "06-space-usd-1",
+  "mode": "redesign",
+  "analyzedAt": "2026-09-20T14:10:34.969Z",
+  "contentType": "table",
+  "tableSubType": "financial",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "InvestingPro 관심종목",
+    "preservedElements": [
+      "관측 원문 수치",
+      "통화·상장 증권 구분"
+    ],
+    "changedElements": [
+      "섹터·통화별 최대 8행 분할",
+      "한글 기업명",
+      "40의 규칙·PEG·베타는 CSV 보존"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "KSD는 종목 선정에만 사용. 시세는 해당 InvestingPro 관측 입력에서만 사용."
+  },
+  "allowedTransformations": [
+    "adjust-layout",
+    "adjust-density",
+    "adjust-labels",
+    "adjust-colors",
+    "group-rows",
+    "remove-filter-ui",
+    "add-korean-aliases"
+  ],
+  "qualityChecks": [],
+  "structure": {
+    "title": "우주·위성",
+    "subtitle": "2026.09.18 종가 · 가격 USD · 8종목",
+    "source": "investing pro"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "headerPadding": "6px 18px 0",
+    "contentPadding": "0 3px 0",
+    "sourcePadding": "0 18px 3px",
+    "titleFontSize": 25,
+    "subtitleFontSize": 13,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 12,
+    "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#101828",
+    "headerCopySingleLine": true
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "ticker",
+        "label": "티커 · 오늘",
+        "dataType": "text",
+        "width": "17%",
+        "align": "left",
+        "isRowHeader": true
+      },
+      {
+        "key": "keyword",
+        "label": "핵심 분류",
+        "dataType": "text",
+        "width": "13%",
+        "align": "left"
+      },
+      {
+        "key": "current",
+        "label": "현재가",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "m1",
+        "label": "1개월\n수익률",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "y1",
+        "label": "1년\n수익률",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "high52",
+        "label": "52주 고점\n대비",
+        "dataType": "number",
+        "width": "8%",
+        "align": "right"
+      },
+      {
+        "key": "target",
+        "label": "목표가\n여력",
+        "dataType": "number",
+        "width": "12%",
+        "align": "right"
+      },
+      {
+        "key": "eps",
+        "label": "EPS\n성장",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      },
+      {
+        "key": "pe",
+        "label": "Fwd\nP/E",
+        "dataType": "number",
+        "width": "7%",
+        "align": "right"
+      },
+      {
+        "key": "marketCap",
+        "label": "시총\n(USD B)",
+        "dataType": "number",
+        "width": "9%",
+        "align": "right"
+      }
+    ],
+    "rows": [
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SPCX",
+            "displayValue": "SPCX\n스페이스X",
+            "sideValue": {
+              "displayValue": "-1.4%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "발사체·위성",
+            "displayValue": "발사체·위성"
+          },
+          "current": {
+            "value": "152.71",
+            "displayValue": "152"
+          },
+          "m1": {
+            "value": "9.4%",
+            "displayValue": "9%"
+          },
+          "y1": {
+            "value": "-5.1%",
+            "displayValue": "-5%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "67.7%",
+            "displayValue": "67%"
+          },
+          "target": {
+            "value": "222.42",
+            "displayValue": "222\n45%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "NM",
+            "displayValue": "NM"
+          },
+          "pe": {
+            "value": "83.1x",
+            "displayValue": "83x"
+          },
+          "marketCap": {
+            "value": "2,072.7 B",
+            "displayValue": "2,072"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "RKLB",
+            "displayValue": "RKLB\n로켓랩",
+            "sideValue": {
+              "displayValue": "-4.8%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "발사체·우주시스템",
+            "displayValue": "발사체·우주시스템"
+          },
+          "current": {
+            "value": "64.57",
+            "displayValue": "64"
+          },
+          "m1": {
+            "value": "-14.9%",
+            "displayValue": "-14%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "35.1%",
+            "displayValue": "35%"
+          },
+          "high52": {
+            "value": "42.8%",
+            "displayValue": "42%"
+          },
+          "target": {
+            "value": "109.37",
+            "displayValue": "109\n69%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "76.5%",
+            "displayValue": "76%"
+          },
+          "pe": {
+            "value": "653.9x",
+            "displayValue": "653x"
+          },
+          "marketCap": {
+            "value": "38.643 B",
+            "displayValue": "38"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "GILT",
+            "displayValue": "GILT\n길랫",
+            "sideValue": {
+              "displayValue": "-1.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "위성 통신장비",
+            "displayValue": "위성 통신장비"
+          },
+          "current": {
+            "value": "9.82",
+            "displayValue": "9"
+          },
+          "m1": {
+            "value": "-9.2%",
+            "displayValue": "-9%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-15.6%",
+            "displayValue": "-15%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "46.9%",
+            "displayValue": "46%"
+          },
+          "target": {
+            "value": "19.20",
+            "displayValue": "19\n95%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "6.3%",
+            "displayValue": "6%"
+          },
+          "pe": {
+            "value": "13.1x",
+            "displayValue": "13x"
+          },
+          "marketCap": {
+            "value": "756.4 M",
+            "displayValue": "0.76"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "SPCE",
+            "displayValue": "SPCE\n버진갤럭틱",
+            "sideValue": {
+              "displayValue": "-1.3%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "우주 관광",
+            "displayValue": "우주 관광"
+          },
+          "current": {
+            "value": "3.07",
+            "displayValue": "3"
+          },
+          "m1": {
+            "value": "-4.4%",
+            "displayValue": "-4%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-6.7%",
+            "displayValue": "-6%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "34.5%",
+            "displayValue": "34%"
+          },
+          "target": {
+            "value": "3.56",
+            "displayValue": "3\n16%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "56.6%",
+            "displayValue": "56%"
+          },
+          "pe": {
+            "value": "-5.5x",
+            "displayValue": "-5x"
+          },
+          "marketCap": {
+            "value": "465.4 M",
+            "displayValue": "0.47"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "FLY",
+            "displayValue": "FLY\n파이어플라이",
+            "sideValue": {
+              "displayValue": "-3.5%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "발사체·달 탐사",
+            "displayValue": "발사체·달 탐사"
+          },
+          "current": {
+            "value": "20.97",
+            "displayValue": "20"
+          },
+          "m1": {
+            "value": "-17.1%",
+            "displayValue": "-17%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "-53.6%",
+            "displayValue": "-53%",
+            "highlight": "negative"
+          },
+          "high52": {
+            "value": "33.7%",
+            "displayValue": "33%"
+          },
+          "target": {
+            "value": "38.60",
+            "displayValue": "38\n84%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "42.0%",
+            "displayValue": "42%"
+          },
+          "pe": {
+            "value": "-12.1x",
+            "displayValue": "-12x"
+          },
+          "marketCap": {
+            "value": "3.51 B",
+            "displayValue": "3"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "RDW",
+            "displayValue": "RDW\n레드와이어",
+            "sideValue": {
+              "displayValue": "-7.0%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "우주 인프라",
+            "displayValue": "우주 인프라"
+          },
+          "current": {
+            "value": "10.74",
+            "displayValue": "10"
+          },
+          "m1": {
+            "value": "-13.4%",
+            "displayValue": "-13%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "35.1%",
+            "displayValue": "35%"
+          },
+          "high52": {
+            "value": "40.3%",
+            "displayValue": "40%"
+          },
+          "target": {
+            "value": "14.69",
+            "displayValue": "14\n36%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "49.5%",
+            "displayValue": "49%"
+          },
+          "pe": {
+            "value": "-31.2x",
+            "displayValue": "-31x"
+          },
+          "marketCap": {
+            "value": "2.674 B",
+            "displayValue": "2"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "ASTS",
+            "displayValue": "ASTS\nAST스페이스모바일",
+            "sideValue": {
+              "displayValue": "-6.7%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "위성 휴대전화",
+            "displayValue": "위성 휴대전화"
+          },
+          "current": {
+            "value": "58.52",
+            "displayValue": "58"
+          },
+          "m1": {
+            "value": "-11.9%",
+            "displayValue": "-11%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "29.8%",
+            "displayValue": "29%"
+          },
+          "high52": {
+            "value": "43.7%",
+            "displayValue": "43%"
+          },
+          "target": {
+            "value": "79.61",
+            "displayValue": "79\n36%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-52.0%",
+            "displayValue": "-52%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "-35.9x",
+            "displayValue": "-35x"
+          },
+          "marketCap": {
+            "value": "17.544 B",
+            "displayValue": "17"
+          }
+        }
+      },
+      {
+        "rowType": "data",
+        "cells": {
+          "ticker": {
+            "value": "LUNR",
+            "displayValue": "LUNR\n인튜이티브머신스",
+            "sideValue": {
+              "displayValue": "-5.9%↓",
+              "color": "#FFFFFF",
+              "background": "#2563EB",
+              "padding": "1px 5px",
+              "borderRadius": "999px",
+              "fontSize": "10px",
+              "fontWeight": 900
+            }
+          },
+          "keyword": {
+            "value": "달 탐사",
+            "displayValue": "달 탐사"
+          },
+          "current": {
+            "value": "13.92",
+            "displayValue": "13"
+          },
+          "m1": {
+            "value": "-24.8%",
+            "displayValue": "-24%",
+            "highlight": "negative"
+          },
+          "y1": {
+            "value": "43.4%",
+            "displayValue": "43%"
+          },
+          "high52": {
+            "value": "29.8%",
+            "displayValue": "29%"
+          },
+          "target": {
+            "value": "29.50",
+            "displayValue": "29\n111%",
+            "highlight": "positive"
+          },
+          "eps": {
+            "value": "-29.7%",
+            "displayValue": "-29%",
+            "highlight": "negative"
+          },
+          "pe": {
+            "value": "-79.6x",
+            "displayValue": "-79x"
+          },
+          "marketCap": {
+            "value": "2.411 B",
+            "displayValue": "2"
+          }
+        }
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 44,
+      "cellPadding": "1px 4px",
+      "lineHeight": 0.92,
+      "zebraStripe": false,
+      "zebraOpacity": 0,
+      "fontFamily": "Paperlogy, var(--font-noto-sans-kr), \"Noto Sans KR\", ui-sans-serif, system-ui, sans-serif",
+      "highlightMode": "text",
+      "fontSize": {
+        "header": "13px",
+        "body": "16px",
+        "total": "17px",
+        "badge": "11px",
+        "unit": "12px",
+        "groupHeader": "12px"
+      },
+      "fitRowsToCanvas": true,
+      "minRowHeight": 29,
+      "maxRowHeight": 53
+    }
+  },
+  "narrative": {
+    "headMessage": "우주·위성",
+    "subMessage": "2026.09.18 종가 · 가격 USD · 8종목",
+    "headline": "우주·위성",
+    "summary": "관심종목과 KSD 상위 50위 내 개별주식의 섹터별 비교",
+    "story": "",
+    "keyTakeaways": [],
+    "viewerAction": ""
+  },
+  "emphasis": {
+    "focusPoint": {
+      "displayText": "목표가 여력·EPS·밸류에이션",
+      "reason": "compact v3 기본 비교 축"
+    },
+    "colorStrategy": {
+      "primary": "#0064FF",
+      "secondary": [
+        "#8B95A1",
+        "#D1D6DB"
+      ],
+      "positive": "#D92D20",
+      "negative": "#2563EB",
+      "accent": "#0064FF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "compact",
+    "highlightCells": []
+  },
+  "sourceEvidence": [
+    {
+      "ticker": "SPCX",
+      "instrument": "NASDAQGS:SPCX",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "RKLB",
+      "instrument": "NASDAQGS:RKLB",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "GILT",
+      "instrument": "NASDAQGS:GILT",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "SPCE",
+      "instrument": "NYSE:SPCE",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "FLY",
+      "instrument": "NASDAQGM:FLY",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "RDW",
+      "instrument": "NYSE:RDW",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "ASTS",
+      "instrument": "NASDAQGS:ASTS",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    },
+    {
+      "ticker": "LUNR",
+      "instrument": "NASDAQGM:LUNR",
+      "sourceFile": "input/watchlist-observed.tsv",
+      "sourceUrl": "https://kr.investing.com/pro/watchlist/w-68142336.iwl/v-25444546",
+      "peBasis": "pe_fwd FY+2",
+      "epsBasis": "eps_proj_growth_mean"
+    }
+  ],
+  "layoutPlan": {
+    "format": "comparison-table",
+    "stockCount": 8,
+    "rowCount": 8,
+    "columns": 10,
+    "currency": "USD",
+    "maxStocks": 8,
+    "canvas": [
+      1920,
+      1080
+    ],
+    "risks": [
+      "Long company names and badges need export inspection."
+    ]
+  }
+}

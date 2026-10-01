@@ -1,0 +1,294 @@
+{
+  "id": "04-frontier-vs-typical",
+  "sourceImage": "input/HQtZRCab0AEBsqD.png",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalMessage": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+    "preservedElements": [
+      "원본 차트 유형",
+      "시리즈 수",
+      "축 구조",
+      "비교 방향",
+      "핵심 메시지",
+      "출처 맥락"
+    ],
+    "changedElements": [
+      "제목",
+      "색상",
+      "라벨 밀도",
+      "가독성",
+      "주석 표현"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "원본 화면에서 보이는 축, 시리즈, 상대 위치를 기준으로 보존했습니다.",
+    "sourceAttribution": "자료: a16z, OAI Signals 'What Frontier Firms are doing differently', 2026년 8월 12일"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "rewrite-title",
+    "simplify-labels",
+    "adjust-colors",
+    "adjust-layout",
+    "adjust-density"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-structure-preserved",
+      "label": "원본 구조 보존",
+      "status": "pass",
+      "detail": "원본의 차트 유형과 시리즈 구성을 먼저 맞춘 뒤 스타일을 바꿨습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 화면 기반 데이터",
+      "status": "pass",
+      "detail": "원본 crop에서 보이는 축, 시리즈, 상대 위치를 기준으로 값을 읽었습니다."
+    },
+    {
+      "id": "source-visual-similarity-90",
+      "label": "원본 90% 유사도 목표",
+      "status": "pass",
+      "detail": "원본의 차트 유형, 축 구조, 시리즈 수, 고점·저점 위치를 먼저 맞춘 뒤 스타일만 정리했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 36,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 17,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "18px 34px 2px",
+    "contentPadding": "0 24px",
+    "sourcePadding": "0 34px 10px",
+    "chartHeight": 372,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "accentColor": "#0F4C81",
+    "borderColor": "#D7DEE5",
+    "numberLocale": "ko",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "업종별 출력 토큰 증가 배수",
+    "subtitle": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+    "source": "자료: a16z, OAI Signals 'What Frontier Firms are doing differently', 2026년 8월 12일",
+    "timeRange": "2025년 4월 ~ 2026년 6월",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "전산업",
+        "정보",
+        "금융·보험",
+        "전문·과학·기술"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "전산업",
+        "정보",
+        "금융·보험",
+        "전문·과학·기술"
+      ],
+      "unit": "배",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 36,
+      "displayTickValues": [
+        "전산업\n격차 8.3배",
+        "정보\n격차 11.7배",
+        "금융·보험\n격차 6.7배",
+        "전문·과학·기술\n격차 7.7배"
+      ]
+    },
+    "legend": [
+      {
+        "name": "상위 10% 기업",
+        "role": "primary",
+        "originalColor": "#0F4C81",
+        "remakeColor": "#0F4C81"
+      },
+      {
+        "name": "중위 10% 기업",
+        "role": "secondary",
+        "originalColor": "#FF6F61",
+        "remakeColor": "#FF6F61"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "상위 10% 기업",
+        "data": [
+          {
+            "x": "전산업",
+            "y": 17.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "정보",
+            "y": 32.5,
+            "confidence": 0.74
+          },
+          {
+            "x": "금융·보험",
+            "y": 12.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "전문·과학·기술",
+            "y": 16.0,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#0F4C81"
+      },
+      {
+        "name": "중위 10% 기업",
+        "data": [
+          {
+            "x": "전산업",
+            "y": 2.1,
+            "confidence": 0.74
+          },
+          {
+            "x": "정보",
+            "y": 2.8,
+            "confidence": 0.74
+          },
+          {
+            "x": "금융·보험",
+            "y": 1.9,
+            "confidence": 0.74
+          },
+          {
+            "x": "전문·과학·기술",
+            "y": 2.1,
+            "confidence": 0.74
+          }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#FF6F61"
+      }
+    ],
+    "totalDataPoints": 8,
+    "quality": {
+      "overallConfidence": 0.72,
+      "missingPoints": 0,
+      "hardToReadAreas": [
+        "원자료 확인이 필요한 구간은 별도 수기 검수 대상으로 표시합니다."
+      ],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "down",
+      "strength": 0.68,
+      "description": "원본 화면에서 읽은 전체 방향입니다.",
+      "recentDirection": "decelerating_down"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.999,
+      "description": "원본 화면에서 보이는 변동폭을 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -6.4,
+        "absoluteChange": -1.1,
+        "from": 17.1,
+        "to": 16.0
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 32.5,
+        "at": ""
+      },
+      "min": {
+        "value": 12.9,
+        "at": ""
+      },
+      "average": 19.625,
+      "median": 16.55,
+      "range": 19.6
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "업종별 출력 토큰 증가 배수",
+    "subMessage": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+    "headline": "업종별 출력 토큰 증가 배수",
+    "summary": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+    "story": "원본의 데이터 관계를 유지하되, 보고서 삽입용으로 라벨과 강조를 정리했습니다.",
+    "keyTakeaways": [
+      "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다",
+      "원본의 축과 비교 관계를 우선 보존했습니다.",
+      "정밀값보다 방향, 순서, 격차를 먼저 봅니다."
+    ],
+    "questionsRaised": [
+      "이 흐름이 다음 주도주와 지역 선택을 어떻게 바꾸는가?"
+    ],
+    "viewerAction": "원본과 함께 방향, 축, 시리즈 구성을 확인합니다.",
+    "contextualNotes": [
+      "자료: a16z, OAI Signals 'What Frontier Firms are doing differently', 2026년 8월 12일"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#0F4C81",
+      "secondary": [
+        "#939597",
+        "#6667AB",
+        "#3E7CB1",
+        "#6B6D70",
+        "#43447A",
+        "#B79A2E"
+      ],
+      "positive": "#FF6F61",
+      "negative": "#0F4C81",
+      "accent": "#FF6F61",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "",
+        "y": 2.1
+      },
+      "displayText": "업종별 출력 토큰 증가 배수",
+      "reason": "2025년 4월을 1로 놓으면 상위 10% 기업은 최대 32.5배, 중위 기업은 3배 아래다"
+    },
+    "densityLevel": "balanced"
+  }
+}

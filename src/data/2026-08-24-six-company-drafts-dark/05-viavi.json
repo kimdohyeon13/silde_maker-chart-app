@@ -1,0 +1,226 @@
+{
+  "id": "05-viavi",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "mode": "faithful",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원문 핵심 숫자",
+      "기업별 논지",
+      "확인 필요 항목"
+    ],
+    "changedElements": [
+      "장편 초안 검토용 3열 비교표",
+      "다크 터미널 팔레트",
+      "Paperlogy 계층"
+    ],
+    "notes": "사용자 제공 Notion 페이지의 문장과 숫자를 장편 초안 검토용으로 압축했습니다. 외부 검증 전 초안입니다.",
+    "sourceAttribution": "자료: 사용자 제공 Notion 원문 (2026-08-24 확인)"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "기업별 3개 KPI 카드로 핵심 근거·숫자·검토 질문을 고정하고, 긴 본문은 별도 초안 문서로 분리했습니다."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원문 숫자 보존",
+      "status": "pass",
+      "detail": "노션 원문에 표시된 숫자만 사용했습니다. 추가 계산과 외부 추정은 넣지 않았습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 서브메시지 300."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "boxed",
+    "contentBorder": false,
+    "headerVariant": "stacked",
+    "squareEdges": true,
+    "titleFontSize": 29,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 14,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 20px",
+    "sourcePadding": "0 28px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "gridMode": "solid",
+    "lineStrokeWidth": 3.4,
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "headerLabel": null,
+    "headerLabelFontSize": null,
+    "fitRowsToCanvas": true,
+    "minRowHeight": 30,
+    "maxRowHeight": 42,
+    "visualOptions": {
+      "accentColor": "#00E0A4",
+      "fontSize": {
+        "body": "18px",
+        "header": "14px",
+        "total": "20px"
+      }
+    }
+  },
+  "structure": {
+    "chartType": "table",
+    "title": "비아비: 1.6T·CPO가 테스트 횟수를 늘린다",
+    "subtitle": "광학 고속화는 장비 대수뿐 아니라 제품당 테스트 Dollar Contents를 키운다",
+    "source": "자료: 사용자 제공 Notion 원문 (2026-08-24 확인)"
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "patterns": {
+    "trend": "기업별 핵심 근거와 검토 질문을 한 장에 배치",
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "비아비: 1.6T·CPO가 테스트 횟수를 늘린다",
+    "subMessage": "광학 고속화는 장비 대수뿐 아니라 제품당 테스트 Dollar Contents를 키운다",
+    "keyTakeaways": [],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "balanced"
+  },
+  "contentType": "infographic",
+  "infographicData": {
+    "subType": "kpi_card",
+    "items": [
+      {
+        "label": "핵심 근거",
+        "value": "1.6T",
+        "unit": "생산 초입",
+        "accentColor": "#00E0A4"
+      },
+      {
+        "label": "원문 숫자",
+        "value": "+50%",
+        "unit": "ASP",
+        "accentColor": "#275A50"
+      },
+      {
+        "label": "검토 질문",
+        "value": "27~29",
+        "unit": "% OPM",
+        "accentColor": "#4AA8FF"
+      }
+    ],
+    "layout": "row"
+  },
+  "tableData": {
+    "columns": [
+      {
+        "key": "label",
+        "label": "구분",
+        "dataType": "text",
+        "width": "25%",
+        "isRowHeader": true
+      },
+      {
+        "key": "value",
+        "label": "핵심 값",
+        "dataType": "text",
+        "width": "35%"
+      },
+      {
+        "key": "unit",
+        "label": "설명",
+        "dataType": "text",
+        "width": "40%"
+      }
+    ],
+    "rows": [
+      {
+        "cells": {
+          "label": {
+            "value": "핵심 근거"
+          },
+          "value": {
+            "value": "1.6T"
+          },
+          "unit": {
+            "value": "생산 초입"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "label": {
+            "value": "원문 숫자"
+          },
+          "value": {
+            "value": "+50%"
+          },
+          "unit": {
+            "value": "ASP"
+          }
+        },
+        "rowType": "data"
+      },
+      {
+        "cells": {
+          "label": {
+            "value": "검토 질문"
+          },
+          "value": {
+            "value": "27~29"
+          },
+          "unit": {
+            "value": "% OPM"
+          }
+        },
+        "rowType": "data"
+      }
+    ],
+    "hasTotalRow": false,
+    "visualOptions": {
+      "rowHeight": 34,
+      "fitRowsToCanvas": true,
+      "minRowHeight": 30,
+      "maxRowHeight": 42,
+      "zebraStripe": true,
+      "highlightMode": "text",
+      "headerTone": "inverse",
+      "rowRules": "soft",
+      "groupHeaderTone": "band",
+      "accentColor": "#0F4A3B",
+      "rowRuleColor": "#24433D",
+      "sectionRuleColor": "#24433D"
+    }
+  }
+}

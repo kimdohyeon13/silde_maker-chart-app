@@ -1,0 +1,273 @@
+{
+  "id": "quantumx-bom",
+  "mode": "redesign",
+  "stylePreset": "market-terminal",
+  "preserveIntent": {
+    "originalMessage": "광엔진이 43%로 스위치 ASIC 16%보다 훨씬 크다",
+    "preservedElements": [
+      "부품별 비중",
+      "Quantum-X 기준",
+      "비중 단위(%)"
+    ],
+    "changedElements": [
+      "원본 워터마크를 제거하고 한국어 라벨로 다시 그림",
+      "공통 C 좌측 강조형 카드 규격 적용",
+      "값·단위·출처는 원본 그대로 보존",
+      "slide_maker_dark: 승인된 다크 터미널 팔레트·프레임·헤더·고밀도 표시 규칙 적용",
+      "slide_maker_dark: 제목·보조 라벨·축·출처를 백색 민트 계열로 강화"
+    ],
+    "dataFidelity": "source-visible",
+    "notes": "골드만삭스 이그지빗에서 읽은 값을 그대로 옮겼습니다.",
+    "sourceAttribution": "Source: Goldman Sachs Optical Networking, Exhibit 23 (Sep 11, 2026)"
+  },
+  "allowedTransformations": [
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "simplify-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획 선행",
+      "status": "pass",
+      "detail": "부품명이 길어 가로 막대. 비중이 큰 순으로 일곱 항목."
+    },
+    {
+      "id": "source-visible-values",
+      "label": "원본 기반 데이터",
+      "status": "pass",
+      "detail": "골드만삭스 이그지빗 표기값을 그대로 사용했습니다."
+    },
+    {
+      "id": "watermark-removed",
+      "label": "원본 워터마크 제거",
+      "status": "pass",
+      "detail": "원본에 얹혀 있던 나무 워터마크를 제거하고 새로 그렸습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 제목 계층",
+      "status": "pass",
+      "detail": "제목 900, 부제 300을 유지했습니다."
+    }
+  ],
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#07110F",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontSize": 38,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "accentColor": "#00E0A4",
+    "borderColor": "#24433D",
+    "chartHeight": 370,
+    "compactChartMargins": true,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "showAreaFill": false,
+    "chartLabelScale": 0.85,
+    "chartLabelFontWeight": 600,
+    "numberLocale": "en",
+    "watermarkText": "@wltechrsrch",
+    "metaFontSize": 14,
+    "metaFontWeight": 700,
+    "headerCopySingleLine": false
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "Nvidia Quantum-X CPO Switch BoM Mix",
+    "subtitle": "Optical engines take 43%, well above the switch ASIC at 16%",
+    "source": "Source: Goldman Sachs Optical Networking, Exhibit 23 (Sep 11, 2026)",
+    "timeRange": "",
+    "xAxis": {
+      "label": "",
+      "type": "value",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "yAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "engine",
+        "asic",
+        "fiber",
+        "els",
+        "mpo",
+        "fau",
+        "shuffle"
+      ],
+      "displayTickValues": [
+        "Optical engines 1.6T",
+        "Switch ASIC",
+        "Single mode fiber",
+        "External laser source",
+        "MPO connectors and cables",
+        "FAU",
+        "Shuffle box"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "legend": [
+      {
+        "name": "Share of BoM",
+        "role": "primary",
+        "originalColor": "#1F3864",
+        "remakeColor": "#00E0A4"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Share of BoM",
+        "data": [
+          {
+            "x": "engine",
+            "y": 43,
+            "confidence": 0.9
+          },
+          {
+            "x": "asic",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "fiber",
+            "y": 16,
+            "confidence": 0.9
+          },
+          {
+            "x": "els",
+            "y": 9,
+            "confidence": 0.9
+          },
+          {
+            "x": "mpo",
+            "y": 8,
+            "confidence": 0.9
+          },
+          {
+            "x": "fau",
+            "y": 5,
+            "confidence": 0.9
+          },
+          {
+            "x": "shuffle",
+            "y": 3,
+            "confidence": 0.9
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#00E0A4"
+      }
+    ],
+    "totalDataPoints": 7,
+    "quality": {
+      "overallConfidence": 0.9,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "up",
+      "strength": 0.7,
+      "description": "원본 이그지빗의 방향을 그대로 유지했습니다.",
+      "recentDirection": "accelerating_up"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0.4,
+      "description": "원본 값의 분포를 보존했습니다."
+    },
+    "changeRates": [
+      {
+        "period": "처음 대비 마지막",
+        "percentChange": -93,
+        "absoluteChange": -40,
+        "from": 43,
+        "to": 3
+      }
+    ],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 43,
+        "at": "Optical engines 1.6T"
+      },
+      "min": {
+        "value": 3,
+        "at": "Shuffle box"
+      },
+      "average": 14.285714285714286,
+      "median": 9,
+      "range": 40
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "Nvidia Quantum-X CPO Switch BoM Mix",
+    "subMessage": "Optical engines take 43%, well above the switch ASIC at 16%",
+    "headline": "Nvidia Quantum-X CPO Switch BoM Mix",
+    "summary": "Optical engines take 43%, well above the switch ASIC at 16%",
+    "story": "Optical engines take 43%, well above the switch ASIC at 16%",
+    "keyTakeaways": [
+      "Optical engines alone are 43% of cost.",
+      "The switch ASIC is only 16%.",
+      "Fiber and light source parts together exceed half."
+    ],
+    "questionsRaised": [],
+    "viewerAction": "Optical engines alone are 43% of cost.",
+    "contextualNotes": [
+      "Source: Goldman Sachs Optical Networking, Exhibit 23 (Sep 11, 2026)"
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#00E0A4",
+      "secondary": [
+        "#275A50"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#00E0A4",
+      "backgroundTone": "dark"
+    },
+    "densityLevel": "focused"
+  }
+}

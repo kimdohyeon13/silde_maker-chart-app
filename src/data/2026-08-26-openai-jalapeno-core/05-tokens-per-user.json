@@ -1,0 +1,191 @@
+{
+  "id": "05-tokens-per-user",
+  "analyzedAt": "2026-08-26T00:00:00+09:00",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Token throughput per user at minimum TBT",
+    "preservedElements": [
+      "GPT-OSS, DeepSeek, Kimi 세 모델의 비교",
+      "최저 TBT 지점의 사용자당 토큰 처리량",
+      "Jalapeño와 비교 기준의 두 계열",
+      "모든 원자료 수치와 모델 순서"
+    ],
+    "changedElements": [
+      "세 모델을 한눈에 읽는 그룹형 가로 막대로 재구성",
+      "모든 막대에 exact 값 라벨을 표시",
+      "Paperlogy 타이포와 toss-clean 여백을 적용"
+    ],
+    "dataFidelity": "exact",
+    "notes": "OpenAI 공식 첫 성능 결과에 제시된 최소 TBT 기준 사용자당 처리량만 사용했습니다. 비교 기준 칩의 정체나 추가 배수는 추정하지 않았습니다.",
+    "sourceAttribution": "OpenAI · Jalapeño first results · 2026-08-25",
+    "sourceUrl": "https://openai.com/index/jalapeno-first-results/"
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout"
+  ],
+  "qualityChecks": [
+    {
+      "id": "layout-plan-first",
+      "label": "레이아웃 계획",
+      "status": "pass",
+      "detail": "세 모델×두 계열, 총 여섯 막대를 그룹형 가로 막대로 배치하고 모든 exact 값을 직접 표시했습니다."
+    },
+    {
+      "id": "exact-official-values",
+      "label": "OpenAI 공식 수치 보존",
+      "status": "pass",
+      "detail": "GPT-OSS 1,459 대 535, DeepSeek 700 대 169, Kimi 694 대 182 tok/s/user를 그대로 사용했습니다."
+    },
+    {
+      "id": "bilingual-data-parity",
+      "label": "한영 데이터·순서 동일",
+      "status": "pass",
+      "detail": "KO/EN의 여섯 값, 모델 순서, 두 계열, 축 범위를 동일하게 유지했습니다."
+    },
+    {
+      "id": "paperlogy-hierarchy",
+      "label": "Paperlogy 계층",
+      "status": "pass",
+      "detail": "canvasHeight 540, 제목 900, 서브메시지 300을 지정했습니다."
+    },
+    {
+      "id": "render-overflow",
+      "label": "렌더 오버플로",
+      "status": "pending",
+      "detail": "JSON 저작 범위이며 export/preflight는 상위 에이전트가 수행합니다."
+    }
+  ],
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "사용자당 토큰 속도, Jalapeño가 앞선다",
+    "subtitle": "최저 TBT 지점의 사용자당 처리량 비교 · 단위: tok/s/user",
+    "source": "출처: OpenAI, Jalapeño first results (2026-08-25)",
+    "timeRange": "2026",
+    "xAxis": {
+      "label": "모델",
+      "type": "category",
+      "tickValues": ["GPT-OSS", "DeepSeek", "Kimi"],
+      "displayTickValues": ["GPT-OSS", "DeepSeek", "Kimi"],
+      "unit": "",
+      "startsAtZero": true,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "사용자당 토큰 처리량",
+      "type": "value",
+      "tickValues": ["0", "400", "800", "1,200", "1,600"],
+      "unit": "tok/s/user",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 1600
+    },
+    "legend": [
+      {
+        "name": "Jalapeño",
+        "role": "primary",
+        "originalColor": "#155EEF",
+        "remakeColor": "#155EEF"
+      },
+      {
+        "name": "비교 기준",
+        "role": "secondary",
+        "originalColor": "#98A2B3",
+        "remakeColor": "#98A2B3"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "Jalapeño",
+        "data": [
+          { "x": "GPT-OSS", "y": 1459, "confidence": 1, "displayValue": "1,459" },
+          { "x": "DeepSeek", "y": 700, "confidence": 1, "displayValue": "700" },
+          { "x": "Kimi", "y": 694, "confidence": 1, "displayValue": "694" }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#155EEF"
+      },
+      {
+        "name": "비교 기준",
+        "data": [
+          { "x": "GPT-OSS", "y": 535, "confidence": 1, "displayValue": "535" },
+          { "x": "DeepSeek", "y": 169, "confidence": 1, "displayValue": "169" },
+          { "x": "Kimi", "y": 182, "confidence": 1, "displayValue": "182" }
+        ],
+        "renderAs": "bar",
+        "role": "secondary",
+        "color": "#98A2B3"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "good"
+    }
+  },
+  "statistics": {
+    "summary": {},
+    "changeRates": []
+  },
+  "narrative": {
+    "headMessage": "사용자당 토큰 속도, Jalapeño가 앞선다",
+    "subMessage": "최저 TBT 지점의 공식 비교값만 표시했습니다.",
+    "headline": "사용자당 토큰 속도, Jalapeño가 앞선다",
+    "summary": "세 모델 모두 Jalapeño 계열의 막대가 비교 기준보다 높습니다.",
+    "story": "모델별 최소 TBT 지점에서 사용자당 처리량을 두 막대로 비교합니다.",
+    "keyTakeaways": ["모델 순서와 수치는 OpenAI 공식 결과를 그대로 보존"],
+    "sentiment": "neutral"
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#155EEF",
+      "secondary": ["#98A2B3"],
+      "positive": "#155EEF",
+      "negative": "#98A2B3",
+      "accent": "#155EEF",
+      "backgroundTone": "light"
+    },
+    "densityLevel": "balanced"
+  },
+  "exportOptions": {
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "centered",
+    "squareEdges": true,
+    "titleFontSize": 31,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 15,
+    "subtitleFontWeight": 300,
+    "sourceFontSize": 11,
+    "watermarkText": "@wltechrsrch",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "headerPadding": "14px 28px 2px",
+    "contentPadding": "0 18px 2px",
+    "sourcePadding": "0 28px 8px",
+    "accentColor": "#155EEF",
+    "borderColor": "#D8E2F0",
+    "chartHeight": 360,
+    "compactChartMargins": true,
+    "gridMode": "dashed",
+    "barColorMode": "series",
+    "showDirectLabels": true,
+    "directLabelFractionDigits": 0,
+    "numberLocale": "en"
+  }
+}
