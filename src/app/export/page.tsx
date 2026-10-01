@@ -236,6 +236,7 @@ function ExportCardContent({
       <ContentRouter
         analysis={analysis}
         theme={theme}
+        animated={false}
         showInsights={false}
         showHeader={false}
         height={shouldFillCanvas ? resolvedHeight : requestedHeight}
@@ -245,9 +246,9 @@ function ExportCardContent({
 }
 
 export default function ExportPage() {
-  const { isDark, themeMode, toggleTheme } = useThemeMode();
+  const { isDark, themeMode, toggleTheme } = useThemeMode("light");
   const { analyses, loading, projects, selectedProject, setSelectedProject } =
-    useProjectBrowser();
+    useProjectBrowser({ initialProjectQuery: "project" });
   const [exporting, setExporting] = useState(false);
 
   /**
@@ -456,7 +457,10 @@ export default function ExportPage() {
                   </div>
                 )}
 
-                <Watermark color={presetColors.textTertiary} />
+                <Watermark
+                  color={presetColors.textTertiary}
+                  text={exportOptions.watermarkText}
+                />
               </div>
 
               {/* 개별 다운로드 버튼 — chartSettings에서 켜고 끌 수 있음 */}

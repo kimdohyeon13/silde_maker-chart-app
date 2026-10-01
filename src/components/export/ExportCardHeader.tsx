@@ -49,6 +49,19 @@ export default function ExportCardHeader({
     exportOptions.titleFontSize,
     exportOptions.headerVariant,
   );
+  const sessionMoveItems = exportOptions.sessionMoveItems ?? [];
+  const hasSessionMoveStrip = sessionMoveItems.length > 0;
+  const sessionMoveBlockBasis = sessionMoveItems.length <= 5 ? 118 : 92;
+  const sessionMoveColor = (direction: "up" | "down" | "flat") => {
+    if (direction === "up") return "#16A34A";
+    if (direction === "down") return "#C2410C";
+    return "#667085";
+  };
+  const sessionMoveArrow = (direction: "up" | "down" | "flat") => {
+    if (direction === "up") return "▲";
+    if (direction === "down") return "▼";
+    return "■";
+  };
 
   return (
     <div data-export-header style={{ padding: exportOptions.headerPadding ?? defaultPadding }}>
@@ -87,7 +100,7 @@ export default function ExportCardHeader({
             >
               {headMessage}
             </h2>
-            {subMessage && (
+            {subMessage && !hasSessionMoveStrip && (
               <p
                 style={{
                   color: textSecondary,
@@ -99,20 +112,99 @@ export default function ExportCardHeader({
                     exportOptions.subtitleFontWeight,
                     subtitleWeight,
                   ),
+                  whiteSpace: exportOptions.headerCopySingleLine ? "nowrap" : undefined,
                 }}
               >
                 {subMessage}
               </p>
             )}
+            {hasSessionMoveStrip && (
+              <div
+                data-session-move-strip
+                style={{
+                  display: "flex",
+                  alignItems: "stretch",
+                  gap: 5,
+                  marginTop: 7,
+                  width: "100%",
+                  minWidth: 0,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    color: textSecondary,
+                    fontFamily,
+                    fontSize: 11.5,
+                    fontWeight: 900,
+                    lineHeight: 1.15,
+                    minWidth: 88,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {exportOptions.sessionMoveTitle ?? "오늘 등락"}
+                </div>
+                {sessionMoveItems.map((item) => (
+                  <div
+                    key={`${item.label}-${item.value}`}
+                    style={{
+                      alignItems: "stretch",
+                      background: sessionMoveColor(item.direction),
+                      borderRadius: exportOptions.squareEdges ? 0 : 5,
+                      color: "#FFFFFF",
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: `0 1 ${sessionMoveBlockBasis}px`,
+                      fontFamily,
+                      gap: 2,
+                      justifyContent: "center",
+                      minWidth: 0,
+                      minHeight: 36,
+                      padding: "4px 8px",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: 10.5,
+                        fontWeight: 800,
+                        lineHeight: 1.05,
+                        overflowWrap: "anywhere",
+                        whiteSpace: "normal",
+                        wordBreak: "keep-all",
+                      }}
+                    >
+                      {item.label}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 14.5,
+                        fontWeight: 950,
+                        letterSpacing: "-0.03em",
+                        lineHeight: 1,
+                        textAlign: "left",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {sessionMoveArrow(item.direction)} {item.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
             {metaMessage && (
               <p
                 style={{
                   color: textTertiary,
-                  fontSize: exportOptions.sourceFontSize ?? defaultSourceFontSize,
+                  fontSize:
+                    exportOptions.metaFontSize ??
+                    exportOptions.sourceFontSize ??
+                    defaultSourceFontSize,
                   fontFamily,
                   margin: "6px 0 0",
                   lineHeight: 1.35,
-                  fontWeight: 600,
+                  fontWeight: exportOptions.metaFontWeight ?? 600,
+                  whiteSpace: exportOptions.headerCopySingleLine ? "nowrap" : undefined,
                 }}
               >
                 {metaMessage}

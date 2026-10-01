@@ -40,6 +40,7 @@ interface ChartRouterProps {
   showHeader?: boolean;
   width?: number | string;
   height?: number;
+  animated?: boolean;
 }
 
 export default function ChartRouter({
@@ -49,6 +50,7 @@ export default function ChartRouter({
   showHeader = true,
   width,
   height = 350,
+  animated = true,
 }: ChartRouterProps) {
   const { chartType, panels } = analysis.structure;
   const renderTheme = getAnalysisThemeMode(analysis, theme);
@@ -91,7 +93,7 @@ export default function ChartRouter({
     // 다중 패널이 있으면 단일 차트 switch보다 우선해서 PanelGrid로 그린다.
     if (hasPanels) {
       return (
-        <PanelGrid
+        <PanelGrid animated={animated}
           analysis={analysis}
           panels={panels!}
           theme={renderTheme}
@@ -104,7 +106,7 @@ export default function ChartRouter({
       // ── 콤보 차트 ──
       case "combo":
         return (
-          <TossComboChart
+          <TossComboChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}
@@ -121,7 +123,7 @@ export default function ChartRouter({
       case "radar":
       case "funnel":
         return (
-          <TossBarChart
+          <TossBarChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}
@@ -133,7 +135,7 @@ export default function ChartRouter({
       case "line":
       case "area":
         return (
-          <TossLineChart
+          <TossLineChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}
@@ -145,7 +147,7 @@ export default function ChartRouter({
       case "scatter":
       case "bubble":
         return (
-          <TossScatterChart
+          <TossScatterChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}
@@ -158,7 +160,7 @@ export default function ChartRouter({
       case "pie":
       case "treemap":
         return (
-          <TossDonutChart
+          <TossDonutChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}
@@ -180,7 +182,7 @@ export default function ChartRouter({
       // ── 기본값: 선 차트 ──
       default:
         return (
-          <TossLineChart
+          <TossLineChart animated={animated}
             analysis={analysis}
             theme={renderTheme}
             width={responsiveWidth}

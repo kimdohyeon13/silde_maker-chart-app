@@ -38,6 +38,7 @@ interface ContentRouterProps {
   showHeader?: boolean;
   width?: number | string;
   height?: number;
+  animated?: boolean;
 }
 
 export default function ContentRouter({
@@ -47,6 +48,7 @@ export default function ContentRouter({
   showHeader = true,
   width,
   height = 350,
+  animated = true,
 }: ContentRouterProps) {
   const renderTheme = getAnalysisThemeMode(analysis, theme);
 
@@ -54,6 +56,7 @@ export default function ContentRouter({
   if (isChartAnalysis(analysis)) {
     return (
       <ChartRouter
+        animated={animated}
         analysis={analysis}
         theme={renderTheme}
         showInsights={showInsights}

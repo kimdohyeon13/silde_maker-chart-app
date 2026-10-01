@@ -1,21 +1,22 @@
 "use client";
 
-const WATERMARK_TEXT = "@wltechrsrch";
+const DEFAULT_WATERMARK_TEXT = "@WorldTechRsrch";
 
 interface WatermarkProps {
   color: string;
+  text?: string;
 }
 
 // NEXT_PUBLIC_HIDE_WATERMARK=1 로 실행하면 워터마크를 숨긴다.
 // 워터마크 없는 납품본이 필요한 프로젝트에서만 쓰고, 기본값은 노출이다.
 const HIDDEN = process.env.NEXT_PUBLIC_HIDE_WATERMARK === "1";
 
-export default function Watermark({ color }: WatermarkProps) {
+export default function Watermark({ color, text = DEFAULT_WATERMARK_TEXT }: WatermarkProps) {
   if (HIDDEN) return null;
   return (
     <span
-      data-watermark="wltechrsrch"
-      aria-label={WATERMARK_TEXT}
+      data-watermark={text.replace(/^@/, "")}
+      aria-label={text}
       style={{
         position: "absolute",
         right: 12,
@@ -32,7 +33,7 @@ export default function Watermark({ color }: WatermarkProps) {
         userSelect: "none",
       }}
     >
-      {WATERMARK_TEXT}
+      {text}
     </span>
   );
 }
