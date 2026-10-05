@@ -1,0 +1,264 @@
+{
+  "id": "03-cost-structure",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Estimated S&P 500 expenses as a share of revenues",
+    "originalMessage": "New incremental budget is the largest source of AI spending, but inference is still just a tiny slice of the overall cost stack",
+    "sourceAttribution": "FactSet, Goldman Sachs Global Investment Research",
+    "sourcePdf": "/Users/mac/waltech/26.10/State-of-Markets-Sep-2026.pdf",
+    "sourcePdfPage": 29,
+    "sourceImage": "input/06-ai-spending-source.png",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 숫자·단위·항목 순서",
+      "선택한 그래프의 모든 계열과 원문 출처"
+    ],
+    "changedElements": [
+      "원본의 독립된 비용 구성 패널만 제작",
+      "원자료의 추정 의미와 5개 항목·숫자 유지",
+      "AI 추론의 점선 강조를 초록색으로 정리"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "원본 숫자 보존",
+      "status": "pass",
+      "detail": "현재 PDF의 인쇄 숫자를 원본 해상도 이미지와 대조했다."
+    },
+    {
+      "id": "layout-plan-first",
+      "label": "배치 계획",
+      "status": "pass",
+      "detail": "5개 항목, 1개 표시 계열. 0 기준축, 모든 숫자 직접 표시. 원자료 순서를 유지한다."
+    },
+    {
+      "id": "source-attribution",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "FactSet, Goldman Sachs Global Investment Research"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "subtitleFontSize": 20,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "compactChartMargins": true,
+    "chartHeight": 350,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "chartLabelScale": 1.08,
+    "chartLabelFontWeight": 700,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "showDirectLabels": true,
+    "watermarkText": "@wltechrsrch",
+    "headerLabel": "a16z 시장 보고서 · 2026년 9월 · 예시 03",
+    "headerLabelFontSize": 11,
+    "stackedLegendAlign": "right"
+  },
+  "structure": {
+    "chartType": "bar",
+    "title": "S&P 500 기업의 매출 대비 비용 비중",
+    "subtitle": "추정 비용 구성 · AI 추론은 매출의 0.1%를 차지",
+    "source": "자료: FactSet·Goldman Sachs Global Investment Research, a16z State of Markets (2026.09), p.29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "매출원가",
+        "판매관리비",
+        "인건비",
+        "연구개발",
+        "AI 추론"
+      ],
+      "displayTickValues": [
+        "매출원가",
+        "판매관리비",
+        "인건비",
+        "연구개발",
+        "AI 추론"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "displayTickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 70
+    },
+    "legend": [
+      {
+        "name": "매출 대비 비용 비중",
+        "role": "primary",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출 대비 비용 비중",
+        "data": [
+          {
+            "x": "매출원가",
+            "y": 57,
+            "confidence": 1,
+            "color": "#AABBB6"
+          },
+          {
+            "x": "판매관리비",
+            "y": 12,
+            "confidence": 1,
+            "color": "#AABBB6"
+          },
+          {
+            "x": "인건비",
+            "y": 12,
+            "confidence": 1,
+            "color": "#AABBB6"
+          },
+          {
+            "x": "연구개발",
+            "y": 4,
+            "confidence": 1,
+            "color": "#AABBB6"
+          },
+          {
+            "x": "AI 추론",
+            "y": 0.1,
+            "confidence": 1,
+            "color": "#087A68"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0,
+      "description": "원본의 수치와 비교 관계를 표시한다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": ""
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 57,
+        "at": ""
+      },
+      "min": {
+        "value": 0.1,
+        "at": ""
+      },
+      "average": 17.02,
+      "median": 0,
+      "range": 56.9
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "S&P 500 기업의 매출 대비 비용 비중",
+    "subMessage": "추정 비용 구성 · AI 추론은 매출의 0.1%를 차지",
+    "headline": "S&P 500 기업의 매출 대비 비용 비중",
+    "summary": "추정 비용 구성 · AI 추론은 매출의 0.1%를 차지",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#AABBB6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "AI 추론",
+        "y": 0.1
+      },
+      "displayText": "",
+      "reason": "원본의 강조 항목"
+    },
+    "densityLevel": "balanced"
+  }
+}

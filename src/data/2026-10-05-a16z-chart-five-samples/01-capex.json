@@ -1,0 +1,335 @@
+{
+  "id": "01-capex",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "Capex Is A Multi-Trillion Dollar Affair",
+    "originalMessage": "Hyperscaler capex (actual and consensus est.)",
+    "sourceAttribution": "Vanguard calculations, based on data from Bloomberg, as of July 31, 2026. Hyperscalers include Alphabet, Amazon, Meta, Microsoft, and Oracle. Forecasts for 2026 onward reflect Bloomberg consensus estimates.",
+    "sourcePdf": "/Users/mac/waltech/26.10/State-of-Markets-Sep-2026.pdf",
+    "sourcePdfPage": 15,
+    "sourceImage": "input/01-capex-source.png",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 숫자·단위·항목 순서",
+      "선택한 그래프의 모든 계열과 원문 출처"
+    ],
+    "changedElements": [
+      "11개 연도 유지, 억 달러로 단위 환산",
+      "11개 숫자 직접 표시를 위해 단일 계열 세로 막대로 구성",
+      "원본의 실적과 전망 구분을 범례와 부제로 표시",
+      "원문의 설명 문구를 한글 부제로 배치"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "원본 숫자 보존",
+      "status": "pass",
+      "detail": "현재 PDF의 인쇄 숫자를 원본 해상도 이미지와 대조했다."
+    },
+    {
+      "id": "layout-plan-first",
+      "label": "배치 계획",
+      "status": "pass",
+      "detail": "11개 항목, 1개 표시 계열. 0 기준축, 모든 숫자 직접 표시. 원자료 순서를 유지한다."
+    },
+    {
+      "id": "source-attribution",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "Vanguard calculations, based on data from Bloomberg, as of July 31, 2026. Hyperscalers include Alphabet, Amazon, Meta, Microsoft, and Oracle. Forecasts for 2026 onward reflect Bloomberg consensus estimates."
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "subtitleFontSize": 20,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "compactChartMargins": true,
+    "chartHeight": 350,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "chartLabelScale": 1.08,
+    "chartLabelFontWeight": 700,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "showDirectLabels": true,
+    "watermarkText": "@wltechrsrch",
+    "headerLabel": "a16z 시장 보고서 · 2026년 9월 · 예시 01",
+    "headerLabelFontSize": 11,
+    "stackedLegendAlign": "right"
+  },
+  "structure": {
+    "chartType": "stacked_bar",
+    "title": "대형 클라우드 기업의 설비투자",
+    "subtitle": "2026년 약 8,000억 달러, 2027년부터 연간 1조 달러 초과 전망",
+    "source": "자료: Vanguard·Bloomberg (2026.07.31), a16z (2026.09), p.15 · 알파벳·아마존·메타·마이크로소프트·오라클 · 2026년부터 시장 전망",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028",
+        "2029",
+        "2030"
+      ],
+      "displayTickValues": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028",
+        "2029",
+        "2030"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "2000",
+        "4000",
+        "6000",
+        "8000",
+        "10000",
+        "12000",
+        "14000"
+      ],
+      "displayTickValues": [
+        "0",
+        "2000",
+        "4000",
+        "6000",
+        "8000",
+        "10000",
+        "12000",
+        "14000"
+      ],
+      "unit": "억 달러",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 14000
+    },
+    "legend": [
+      {
+        "name": "2020~2025년 실적 · 2026~2030년 전망",
+        "role": "primary",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2020~2025년 실적 · 2026~2030년 전망",
+        "data": [
+          {
+            "x": "2020",
+            "y": 970,
+            "confidence": 1,
+            "totalLabel": "970",
+            "sourceKind": "actual",
+            "originalLabel": "$97B"
+          },
+          {
+            "x": "2021",
+            "y": 1310,
+            "confidence": 1,
+            "totalLabel": "1,310",
+            "sourceKind": "actual",
+            "originalLabel": "$131B"
+          },
+          {
+            "x": "2022",
+            "y": 1590,
+            "confidence": 1,
+            "totalLabel": "1,590",
+            "sourceKind": "actual",
+            "originalLabel": "$159B"
+          },
+          {
+            "x": "2023",
+            "y": 1540,
+            "confidence": 1,
+            "totalLabel": "1,540",
+            "sourceKind": "actual",
+            "originalLabel": "$154B"
+          },
+          {
+            "x": "2024",
+            "y": 2410,
+            "confidence": 1,
+            "totalLabel": "2,410",
+            "sourceKind": "actual",
+            "originalLabel": "$241B"
+          },
+          {
+            "x": "2025",
+            "y": 4160,
+            "confidence": 1,
+            "totalLabel": "4,160",
+            "sourceKind": "actual",
+            "originalLabel": "$416B"
+          },
+          {
+            "x": "2026",
+            "y": 7770,
+            "confidence": 1,
+            "totalLabel": "7,770",
+            "sourceKind": "consensus_estimate",
+            "originalLabel": "$777B"
+          },
+          {
+            "x": "2027",
+            "y": 11000,
+            "confidence": 1,
+            "totalLabel": "11,000",
+            "sourceKind": "consensus_estimate",
+            "originalLabel": "$1.1T"
+          },
+          {
+            "x": "2028",
+            "y": 12000,
+            "confidence": 1,
+            "totalLabel": "12,000",
+            "sourceKind": "consensus_estimate",
+            "originalLabel": "$1.2T"
+          },
+          {
+            "x": "2029",
+            "y": 11000,
+            "confidence": 1,
+            "totalLabel": "11,000",
+            "sourceKind": "consensus_estimate",
+            "originalLabel": "$1.1T"
+          },
+          {
+            "x": "2030",
+            "y": 12000,
+            "confidence": 1,
+            "totalLabel": "12,000",
+            "sourceKind": "consensus_estimate",
+            "originalLabel": "$1.2T"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 11,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0,
+      "description": "원본의 수치와 비교 관계를 표시한다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": ""
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 12000,
+        "at": ""
+      },
+      "min": {
+        "value": 970,
+        "at": ""
+      },
+      "average": 5977.272727272727,
+      "median": 0,
+      "range": 11030
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "대형 클라우드 기업의 설비투자",
+    "subMessage": "2026년 약 8,000억 달러, 2027년부터 연간 1조 달러 초과 전망",
+    "headline": "대형 클라우드 기업의 설비투자",
+    "summary": "2026년 약 8,000억 달러, 2027년부터 연간 1조 달러 초과 전망",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#AABBB6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "2026",
+        "y": 7770
+      },
+      "displayText": "",
+      "reason": "원본의 강조 항목"
+    },
+    "densityLevel": "balanced"
+  }
+}

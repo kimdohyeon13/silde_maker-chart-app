@@ -1,0 +1,272 @@
+{
+  "id": "04-ai-funding",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "GS IT Spending Survey (June '26)",
+    "originalMessage": "Source of IT budget funding for AI inference expenses (% of respondents)",
+    "sourceAttribution": "Goldman Sachs Global Investment Research (8/14/26)",
+    "sourcePdf": "/Users/mac/waltech/26.10/State-of-Markets-Sep-2026.pdf",
+    "sourcePdfPage": 29,
+    "sourceImage": "input/06-ai-spending-source.png",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 숫자·단위·항목 순서",
+      "선택한 그래프의 모든 계열과 원문 출처"
+    ],
+    "changedElements": [
+      "원본의 독립된 예산 재원 패널만 제작",
+      "6개 항목·순서·숫자 유지",
+      "신규 예산의 점선 강조를 초록색으로 정리"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "원본 숫자 보존",
+      "status": "pass",
+      "detail": "현재 PDF의 인쇄 숫자를 원본 해상도 이미지와 대조했다."
+    },
+    {
+      "id": "layout-plan-first",
+      "label": "배치 계획",
+      "status": "pass",
+      "detail": "6개 항목, 1개 표시 계열. 0 기준축, 모든 숫자 직접 표시. 원자료 순서를 유지한다."
+    },
+    {
+      "id": "source-attribution",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "Goldman Sachs Global Investment Research (8/14/26)"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "subtitleFontSize": 20,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "compactChartMargins": true,
+    "chartHeight": 350,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "chartLabelScale": 1.08,
+    "chartLabelFontWeight": 700,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "showDirectLabels": true,
+    "watermarkText": "@wltechrsrch",
+    "headerLabel": "a16z 시장 보고서 · 2026년 9월 · 예시 04",
+    "headerLabelFontSize": 11,
+    "stackedLegendAlign": "right"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "AI 추론 비용은 어떤 예산으로 충당하나",
+    "subtitle": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "source": "자료: Goldman Sachs Global Investment Research (2026.08.14), a16z State of Markets (2026.09), p.29",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "신규 예산",
+        "비용 효율화",
+        "인건비 예산 전환",
+        "소프트웨어 예산 전환",
+        "클라우드 예산 전환",
+        "분석 예산 전환"
+      ],
+      "displayTickValues": [
+        "신규 예산",
+        "비용 효율화",
+        "인건비 예산 전환",
+        "소프트웨어 예산 전환",
+        "클라우드 예산 전환",
+        "분석 예산 전환"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "displayTickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 40
+    },
+    "legend": [
+      {
+        "name": "응답자 비중",
+        "role": "primary",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "응답자 비중",
+        "data": [
+          {
+            "x": "신규 예산",
+            "y": 35,
+            "confidence": 1,
+            "displayLabel": "35%",
+            "color": "#087A68"
+          },
+          {
+            "x": "비용 효율화",
+            "y": 18,
+            "confidence": 1,
+            "displayLabel": "18%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "인건비 예산 전환",
+            "y": 18,
+            "confidence": 1,
+            "displayLabel": "18%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "소프트웨어 예산 전환",
+            "y": 11,
+            "confidence": 1,
+            "displayLabel": "11%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "클라우드 예산 전환",
+            "y": 10,
+            "confidence": 1,
+            "displayLabel": "10%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "분석 예산 전환",
+            "y": 9,
+            "confidence": 1,
+            "displayLabel": "9%",
+            "color": "#AABBB6"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0,
+      "description": "원본의 수치와 비교 관계를 표시한다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": ""
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 35,
+        "at": ""
+      },
+      "min": {
+        "value": 9,
+        "at": ""
+      },
+      "average": 16.833333333333332,
+      "median": 0,
+      "range": 26
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 추론 비용은 어떤 예산으로 충당하나",
+    "subMessage": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "headline": "AI 추론 비용은 어떤 예산으로 충당하나",
+    "summary": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#AABBB6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "신규 예산",
+        "y": 35
+      },
+      "displayText": "",
+      "reason": "원본의 강조 항목"
+    },
+    "densityLevel": "balanced"
+  }
+}

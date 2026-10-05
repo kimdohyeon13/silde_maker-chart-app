@@ -1,0 +1,303 @@
+{
+  "id": "02-ai-adoption",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "69% of the S&P 500 Point To A Live AI deployment. Only 2% Disclose A Metric They Track Over Time",
+    "originalMessage": "Share of SP500 companies",
+    "sourceAttribution": "Apollo Daily Spark (9.11.26)",
+    "sourcePdf": "/Users/mac/waltech/26.10/State-of-Markets-Sep-2026.pdf",
+    "sourcePdfPage": 27,
+    "sourceImage": "input/03-ai-adoption-source.png",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 숫자·단위·항목 순서",
+      "선택한 그래프의 모든 계열과 원문 출처"
+    ],
+    "changedElements": [
+      "두 분기·5개 공시 항목·0% 두 값 유지",
+      "두 분기 0%인 항목은 항목명에 0%를 직접 표기",
+      "긴 한글 항목명과 모든 값이 읽히도록 가로 막대로 배치"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "원본 숫자 보존",
+      "status": "pass",
+      "detail": "현재 PDF의 인쇄 숫자를 원본 해상도 이미지와 대조했다."
+    },
+    {
+      "id": "layout-plan-first",
+      "label": "배치 계획",
+      "status": "pass",
+      "detail": "5개 항목, 2개 표시 계열. 0 기준축, 모든 숫자 직접 표시. 원자료 순서를 유지한다."
+    },
+    {
+      "id": "source-attribution",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "Apollo Daily Spark (9.11.26)"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "subtitleFontSize": 20,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "compactChartMargins": true,
+    "chartHeight": 350,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "chartLabelScale": 1.08,
+    "chartLabelFontWeight": 700,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "showDirectLabels": true,
+    "watermarkText": "@wltechrsrch",
+    "headerLabel": "a16z 시장 보고서 · 2026년 9월 · 예시 02",
+    "headerLabelFontSize": 11,
+    "stackedLegendAlign": "right"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "AI 도입은 69%, 지표 추적 공시는 2%",
+    "subtitle": "S&P 500 기업의 AI 관련 공시 비중 · 2026년 1분기와 2분기",
+    "source": "자료: Apollo Daily Spark (2026.09.11), a16z State of Markets (2026.09), p.27",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "AI 계획·목표 제시",
+        "실제 도입·사용 통계 제시",
+        "성과 수치 제시",
+        "지표의 변화 추적",
+        "지표별 구분·추적 (두 분기 0%)"
+      ],
+      "displayTickValues": [
+        "AI 계획·목표 제시",
+        "실제 도입·사용 통계 제시",
+        "성과 수치 제시",
+        "지표의 변화 추적",
+        "지표별 구분·추적 (두 분기 0%)"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "90"
+      ],
+      "displayTickValues": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "90"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 90
+    },
+    "legend": [
+      {
+        "name": "2026년 1분기",
+        "role": "primary",
+        "remakeColor": "#AABBB6"
+      },
+      {
+        "name": "2026년 2분기",
+        "role": "primary",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "2026년 1분기",
+        "data": [
+          {
+            "x": "AI 계획·목표 제시",
+            "y": 68,
+            "confidence": 1,
+            "displayLabel": "68%"
+          },
+          {
+            "x": "실제 도입·사용 통계 제시",
+            "y": 64,
+            "confidence": 1,
+            "displayLabel": "64%"
+          },
+          {
+            "x": "성과 수치 제시",
+            "y": 26,
+            "confidence": 1,
+            "displayLabel": "26%"
+          },
+          {
+            "x": "지표의 변화 추적",
+            "y": 1,
+            "confidence": 1,
+            "displayLabel": "1%"
+          },
+          {
+            "x": "지표별 구분·추적 (두 분기 0%)",
+            "y": 0,
+            "confidence": 1,
+            "displayLabel": "0%"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#AABBB6"
+      },
+      {
+        "name": "2026년 2분기",
+        "data": [
+          {
+            "x": "AI 계획·목표 제시",
+            "y": 74,
+            "confidence": 1,
+            "displayLabel": "74%"
+          },
+          {
+            "x": "실제 도입·사용 통계 제시",
+            "y": 69,
+            "confidence": 1,
+            "displayLabel": "69%"
+          },
+          {
+            "x": "성과 수치 제시",
+            "y": 29,
+            "confidence": 1,
+            "displayLabel": "29%"
+          },
+          {
+            "x": "지표의 변화 추적",
+            "y": 2,
+            "confidence": 1,
+            "displayLabel": "2%"
+          },
+          {
+            "x": "지표별 구분·추적 (두 분기 0%)",
+            "y": 0,
+            "confidence": 1,
+            "displayLabel": "0%"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 10,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0,
+      "description": "원본의 수치와 비교 관계를 표시한다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": ""
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 74,
+        "at": ""
+      },
+      "min": {
+        "value": 0,
+        "at": ""
+      },
+      "average": 33.3,
+      "median": 0,
+      "range": 74
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "AI 도입은 69%, 지표 추적 공시는 2%",
+    "subMessage": "S&P 500 기업의 AI 관련 공시 비중 · 2026년 1분기와 2분기",
+    "headline": "AI 도입은 69%, 지표 추적 공시는 2%",
+    "summary": "S&P 500 기업의 AI 관련 공시 비중 · 2026년 1분기와 2분기",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#AABBB6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "실제 도입·사용 통계 제시",
+        "y": 69
+      },
+      "displayText": "",
+      "reason": "원본의 강조 항목"
+    },
+    "densityLevel": "balanced"
+  }
+}

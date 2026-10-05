@@ -1,0 +1,274 @@
+{
+  "id": "05-unicorn-growth",
+  "mode": "redesign",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "originalTitle": "YoY Rev Growth",
+    "originalMessage": "Select benchmarks for U.S. VC-backed tech unicorns in 2026",
+    "sourceAttribution": "SVB State of Markets H2 '26. SVB proprietary data, taxonomy, and analysis.",
+    "sourcePdf": "/Users/mac/waltech/26.10/State-of-Markets-Sep-2026.pdf",
+    "sourcePdfPage": 75,
+    "sourceImage": "input/07-unicorns-source.png",
+    "dataFidelity": "source-visible",
+    "preservedElements": [
+      "원본 숫자·단위·항목 순서",
+      "선택한 그래프의 모든 계열과 원문 출처"
+    ],
+    "changedElements": [
+      "원본의 독립된 매출 성장률 패널만 제작",
+      "6개 성장률 구간·순서·100% 합계 유지",
+      "가장 큰 기업 비중인 0~20% 구간 강조"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-colors",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values",
+      "label": "원본 숫자 보존",
+      "status": "pass",
+      "detail": "현재 PDF의 인쇄 숫자를 원본 해상도 이미지와 대조했다."
+    },
+    {
+      "id": "layout-plan-first",
+      "label": "배치 계획",
+      "status": "pass",
+      "detail": "6개 항목, 1개 표시 계열. 0 기준축, 모든 숫자 직접 표시. 원자료 순서를 유지한다."
+    },
+    {
+      "id": "source-attribution",
+      "label": "출처 보존",
+      "status": "pass",
+      "detail": "SVB State of Markets H2 '26. SVB proprietary data, taxonomy, and analysis."
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "hairline",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontWeight": 300,
+    "subtitleFontSize": 20,
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "titleFontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", \"Apple SD Gothic Neo\", ui-sans-serif, system-ui, sans-serif",
+    "accentColor": "#087A68",
+    "borderColor": "#D7DEE5",
+    "compactChartMargins": true,
+    "chartHeight": 350,
+    "gridMode": "solid",
+    "lineStrokeWidth": 2.6,
+    "chartLabelScale": 1.08,
+    "chartLabelFontWeight": 700,
+    "showAreaFill": false,
+    "numberLocale": "ko",
+    "showDirectLabels": true,
+    "watermarkText": "@wltechrsrch",
+    "headerLabel": "a16z 시장 보고서 · 2026년 9월 · 예시 05",
+    "headerLabelFontSize": 11,
+    "stackedLegendAlign": "right"
+  },
+  "structure": {
+    "chartType": "bar_horizontal",
+    "title": "미국 유니콘 기업의 매출 성장률 분포",
+    "subtitle": "2026년 벤처투자를 받은 유니콘 기업 · 전년 대비 성장률 · 기업 비중",
+    "source": "자료: SVB State of Markets H2 '26 (자체 데이터·분류·분석), a16z State of Markets (2026.09), p.75",
+    "xAxis": {
+      "label": "",
+      "type": "category",
+      "tickValues": [
+        "80% 이상",
+        "60~80%",
+        "40~60%",
+        "20~40%",
+        "0~20%",
+        "매출 감소"
+      ],
+      "displayTickValues": [
+        "80% 이상",
+        "60~80%",
+        "40~60%",
+        "20~40%",
+        "0~20%",
+        "매출 감소"
+      ],
+      "unit": "",
+      "startsAtZero": false,
+      "isLogScale": false
+    },
+    "yAxis": {
+      "label": "",
+      "type": "numeric",
+      "tickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "displayTickValues": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "unit": "%",
+      "startsAtZero": true,
+      "isLogScale": false,
+      "min": 0,
+      "max": 50
+    },
+    "legend": [
+      {
+        "name": "기업 비중",
+        "role": "primary",
+        "remakeColor": "#087A68"
+      }
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "name": "기업 비중",
+        "data": [
+          {
+            "x": "80% 이상",
+            "y": 9,
+            "confidence": 1,
+            "displayLabel": "9%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "60~80%",
+            "y": 5,
+            "confidence": 1,
+            "displayLabel": "5%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "40~60%",
+            "y": 10,
+            "confidence": 1,
+            "displayLabel": "10%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "20~40%",
+            "y": 19,
+            "confidence": 1,
+            "displayLabel": "19%",
+            "color": "#AABBB6"
+          },
+          {
+            "x": "0~20%",
+            "y": 42,
+            "confidence": 1,
+            "displayLabel": "42%",
+            "color": "#087A68"
+          },
+          {
+            "x": "매출 감소",
+            "y": 15,
+            "confidence": 1,
+            "displayLabel": "15%",
+            "color": "#AABBB6"
+          }
+        ],
+        "renderAs": "bar",
+        "role": "primary",
+        "color": "#087A68"
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "statistics": {
+    "trend": {
+      "direction": "flat",
+      "strength": 0,
+      "description": "원본의 수치와 비교 관계를 표시한다.",
+      "recentDirection": "stable"
+    },
+    "volatility": {
+      "level": "moderate",
+      "coefficient": 0,
+      "description": ""
+    },
+    "changeRates": [],
+    "correlations": [],
+    "summary": {
+      "max": {
+        "value": 42,
+        "at": ""
+      },
+      "min": {
+        "value": 5,
+        "at": ""
+      },
+      "average": 16.666666666666668,
+      "median": 0,
+      "range": 37
+    }
+  },
+  "patterns": {
+    "points": [],
+    "crossovers": [],
+    "supportResistance": []
+  },
+  "narrative": {
+    "headMessage": "미국 유니콘 기업의 매출 성장률 분포",
+    "subMessage": "2026년 벤처투자를 받은 유니콘 기업 · 전년 대비 성장률 · 기업 비중",
+    "headline": "미국 유니콘 기업의 매출 성장률 분포",
+    "summary": "2026년 벤처투자를 받은 유니콘 기업 · 전년 대비 성장률 · 기업 비중",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#087A68",
+      "secondary": [
+        "#AABBB6"
+      ],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#087A68",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": "0~20%",
+        "y": 42
+      },
+      "displayText": "",
+      "reason": "원본의 강조 항목"
+    },
+    "densityLevel": "balanced"
+  }
+}
