@@ -1,0 +1,172 @@
+{
+  "id": "04-ai-funding",
+  "contentType": "infographic",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "sourceImage": "input/06-ai-spending-source.png",
+    "sourcePdfPage": 29,
+    "dataFidelity": "source-visible",
+    "originalTitle": "GS IT Spending Survey (June '26)",
+    "originalMessage": "원본 그래프의 픽셀과 인쇄 숫자를 보존한다.",
+    "preservedElements": [
+      "원본 막대의 높이·폭·상대 간격",
+      "원본 시리즈 색상",
+      "원본의 인쇄 숫자·범례 구분",
+      "해당 패널의 모든 항목과 0%"
+    ],
+    "changedElements": [
+      "영문 설명을 한글로 교체",
+      "핵심 데이터 포인트를 별도 라벨링",
+      "원출처만 표시"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "crop-source-image"
+  ],
+  "qualityChecks": [
+    {
+      "id": "original-geometry",
+      "label": "원본 형태 보존",
+      "status": "pass",
+      "detail": "원본 그래프 픽셀을 비율 유지 확대·축소로 사용했다. 막대 모양과 상대 높이를 다시 계산하지 않았다."
+    },
+    {
+      "id": "original-colors",
+      "label": "원색 보존",
+      "status": "pass",
+      "detail": "#5A92A3"
+    },
+    {
+      "id": "source-attribution",
+      "label": "원출처",
+      "status": "pass",
+      "detail": "자료: Goldman Sachs Global Investment Research (2026.08.14)"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "sourceReplica": true,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "accentColor": "#5A92A3",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", sans-serif",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "title": "AI 추론 비용을 마련하는 예산",
+    "subtitle": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "source": "자료: Goldman Sachs Global Investment Research (2026.08.14)"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "응답자 비중",
+        "data": [
+          {
+            "x": "신규 예산",
+            "y": 35,
+            "confidence": 1,
+            "displayLabel": "35%"
+          },
+          {
+            "x": "비용 효율화",
+            "y": 18,
+            "confidence": 1,
+            "displayLabel": "18%"
+          },
+          {
+            "x": "인건비 예산 전환",
+            "y": 18,
+            "confidence": 1,
+            "displayLabel": "18%"
+          },
+          {
+            "x": "소프트웨어 예산 전환",
+            "y": 11,
+            "confidence": 1,
+            "displayLabel": "11%"
+          },
+          {
+            "x": "클라우드 예산 전환",
+            "y": 10,
+            "confidence": 1,
+            "displayLabel": "10%"
+          },
+          {
+            "x": "분석 예산 전환",
+            "y": 9,
+            "confidence": 1,
+            "displayLabel": "9%"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "narrative": {
+    "headMessage": "AI 추론 비용을 마련하는 예산",
+    "subMessage": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "headline": "AI 추론 비용을 마련하는 예산",
+    "summary": "골드만삭스 IT 지출 설문 · 2026년 6월 · 응답자 비중",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "infographicData": {
+    "subType": "news_brief",
+    "originalHeadline": "AI 추론 비용을 마련하는 예산",
+    "summaryBullets": [],
+    "translatedBody": [],
+    "media": [
+      {
+        "path": "input/04-ai-funding-ko.png",
+        "alt": "AI 추론 비용을 마련하는 예산"
+      }
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#5A92A3",
+      "secondary": [],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#5A92A3",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "displayText": "신규 예산 35%",
+      "reason": "사용자가 요청한 별도 키 데이터 라벨"
+    },
+    "densityLevel": "balanced"
+  }
+}

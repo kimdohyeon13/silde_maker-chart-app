@@ -1,0 +1,172 @@
+{
+  "id": "05-unicorn-growth",
+  "contentType": "infographic",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "sourceImage": "input/07-unicorns-source.png",
+    "sourcePdfPage": 75,
+    "dataFidelity": "source-visible",
+    "originalTitle": "YoY Rev Growth",
+    "originalMessage": "원본 그래프의 픽셀과 인쇄 숫자를 보존한다.",
+    "preservedElements": [
+      "원본 막대의 높이·폭·상대 간격",
+      "원본 시리즈 색상",
+      "원본의 인쇄 숫자·범례 구분",
+      "해당 패널의 모든 항목과 0%"
+    ],
+    "changedElements": [
+      "영문 설명을 한글로 교체",
+      "핵심 데이터 포인트를 별도 라벨링",
+      "원출처만 표시"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "crop-source-image"
+  ],
+  "qualityChecks": [
+    {
+      "id": "original-geometry",
+      "label": "원본 형태 보존",
+      "status": "pass",
+      "detail": "원본 그래프 픽셀을 비율 유지 확대·축소로 사용했다. 막대 모양과 상대 높이를 다시 계산하지 않았다."
+    },
+    {
+      "id": "original-colors",
+      "label": "원색 보존",
+      "status": "pass",
+      "detail": "#C69344"
+    },
+    {
+      "id": "source-attribution",
+      "label": "원출처",
+      "status": "pass",
+      "detail": "자료: SVB State of Markets H2 '26 · SVB 자체 데이터·분류·분석"
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "sourceReplica": true,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "accentColor": "#C69344",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", sans-serif",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "title": "미국 유니콘 기업의 매출 성장률 분포",
+    "subtitle": "미국 벤처투자 유치 기술 유니콘 · 2026년 기준 · 전년 대비 성장률",
+    "source": "자료: SVB State of Markets H2 '26 · SVB 자체 데이터·분류·분석"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "기업 비중",
+        "data": [
+          {
+            "x": "80% 이상",
+            "y": 9,
+            "confidence": 1,
+            "displayLabel": "9%"
+          },
+          {
+            "x": "60~80%",
+            "y": 5,
+            "confidence": 1,
+            "displayLabel": "5%"
+          },
+          {
+            "x": "40~60%",
+            "y": 10,
+            "confidence": 1,
+            "displayLabel": "10%"
+          },
+          {
+            "x": "20~40%",
+            "y": 19,
+            "confidence": 1,
+            "displayLabel": "19%"
+          },
+          {
+            "x": "0~20%",
+            "y": 42,
+            "confidence": 1,
+            "displayLabel": "42%"
+          },
+          {
+            "x": "매출 감소",
+            "y": 15,
+            "confidence": 1,
+            "displayLabel": "15%"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 6,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "narrative": {
+    "headMessage": "미국 유니콘 기업의 매출 성장률 분포",
+    "subMessage": "미국 벤처투자 유치 기술 유니콘 · 2026년 기준 · 전년 대비 성장률",
+    "headline": "미국 유니콘 기업의 매출 성장률 분포",
+    "summary": "미국 벤처투자 유치 기술 유니콘 · 2026년 기준 · 전년 대비 성장률",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "infographicData": {
+    "subType": "news_brief",
+    "originalHeadline": "미국 유니콘 기업의 매출 성장률 분포",
+    "summaryBullets": [],
+    "translatedBody": [],
+    "media": [
+      {
+        "path": "input/05-unicorn-growth-ko.png",
+        "alt": "미국 유니콘 기업의 매출 성장률 분포"
+      }
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#C69344",
+      "secondary": [],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#C69344",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "displayText": "매출 성장률 0~20% 구간 42%",
+      "reason": "사용자가 요청한 별도 키 데이터 라벨"
+    },
+    "densityLevel": "balanced"
+  }
+}
