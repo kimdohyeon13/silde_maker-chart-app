@@ -10,41 +10,42 @@
     "originalTitle": "Estimated S&P 500 expenses as a share of revenues",
     "originalMessage": "원본 그래프의 픽셀과 인쇄 숫자를 보존한다.",
     "preservedElements": [
-      "원본 막대의 높이·폭·상대 간격",
-      "원본 시리즈 색상",
-      "원본의 인쇄 숫자·범례 구분",
-      "해당 패널의 모든 항목과 0%"
+      "원본 인쇄 숫자와 단위",
+      "원본 시리즈 색상·막대 방향·항목 순서",
+      "설비투자는 원본 막대의 상대 높이",
+      "원출처와 예상·추정·표본 조건"
     ],
     "changedElements": [
-      "영문 설명을 한글로 교체",
-      "핵심 데이터 포인트를 별도 라벨링",
-      "원출처만 표시"
+      "오른쪽 KPI 상자 제거",
+      "Plot을 캔버스에 맞춰 확대하고 여백 축소",
+      "비교·변화를 나타내는 라벨을 데이터에 연결"
     ]
   },
   "allowedTransformations": [
     "translate-text",
     "adjust-fonts",
     "adjust-spacing",
-    "crop-source-image"
+    "adjust-layout",
+    "adjust-labels"
   ],
   "qualityChecks": [
     {
-      "id": "original-geometry",
-      "label": "원본 형태 보존",
+      "id": "source-values-and-colors",
+      "label": "원본 숫자·색·방향 보존",
       "status": "pass",
-      "detail": "원본 그래프 픽셀을 비율 유지 확대·축소로 사용했다. 막대 모양과 상대 높이를 다시 계산하지 않았다."
+      "detail": "원본 인쇄값 38개와 원색·항목 순서를 보존했다."
     },
     {
-      "id": "original-colors",
-      "label": "원색 보존",
+      "id": "comparative-labels",
+      "label": "핵심 비교 라벨",
       "status": "pass",
-      "detail": "#85A655"
+      "detail": "AI 추론의 추정 비용 비중은 인건비의 약 1/120"
     },
     {
-      "id": "source-attribution",
-      "label": "원출처",
+      "id": "tight-layout",
+      "label": "타이트한 여백",
       "status": "pass",
-      "detail": "자료: FactSet·Goldman Sachs Global Investment Research (2026.08.14)"
+      "detail": "1800×780 Plot 패널을 사용해 바깥 여백과 하단 빈 공간을 줄였다."
     }
   ],
   "exportOptions": {
@@ -137,7 +138,8 @@
     "media": [
       {
         "path": "input/03-cost-structure-ko.png",
-        "alt": "S&P 500 기업의 매출 대비 비용 비중"
+        "alt": "S&P 500 기업의 매출 대비 비용 비중",
+        "url": "/api/projects/2026-10-05-source-faithful-chart-five/assets/input/03-cost-structure-ko.png?revision=tight-labels-3"
       }
     ]
   },
@@ -158,9 +160,15 @@
         "x": 0,
         "y": 0
       },
-      "displayText": "AI 추론 0.1%",
+      "displayText": "AI 추론의 추정 비용 비중은 인건비의 약 1/120",
       "reason": "사용자가 요청한 별도 키 데이터 라벨"
     },
     "densityLevel": "balanced"
+  },
+  "derivedLabels": {
+    "formula": "0.1/12",
+    "value": 0.008333333333333333,
+    "display": "약 1/120",
+    "condition": "같은 매출 대비 추정 비용 비중"
   }
 }
