@@ -1,0 +1,179 @@
+{
+  "id": "p029-x594-a",
+  "contentType": "infographic",
+  "mode": "faithful",
+  "stylePreset": "toss-clean",
+  "preserveIntent": {
+    "sourceImage": "input/06-ai-spending-source.png",
+    "sourcePdfPage": 29,
+    "dataFidelity": "source-visible",
+    "originalTitle": "Estimated S&P 500 expenses as a share of revenues",
+    "originalMessage": "원본 그래프의 픽셀과 인쇄 숫자를 보존한다.",
+    "preservedElements": [
+      "원본 인쇄 숫자와 단위",
+      "원본 시리즈 색상·막대 방향·항목 순서",
+      "설비투자는 원본 막대의 상대 높이",
+      "원출처와 예상·추정·표본 조건"
+    ],
+    "changedElements": [
+      "오른쪽 KPI 상자 제거",
+      "Plot을 캔버스에 맞춰 확대하고 여백 축소",
+      "비교·변화를 나타내는 라벨을 데이터에 연결"
+    ]
+  },
+  "allowedTransformations": [
+    "translate-text",
+    "adjust-fonts",
+    "adjust-spacing",
+    "adjust-layout",
+    "adjust-labels"
+  ],
+  "qualityChecks": [
+    {
+      "id": "source-values-and-colors",
+      "label": "원본 숫자·색·방향 보존",
+      "status": "pass",
+      "detail": "원본 인쇄값 38개와 원색·항목 순서를 보존했다."
+    },
+    {
+      "id": "comparative-labels",
+      "label": "핵심 비교 라벨",
+      "status": "pass",
+      "detail": "AI 추론의 추정 비용 비중은 인건비의 약 1/120"
+    },
+    {
+      "id": "tight-layout",
+      "label": "타이트한 여백",
+      "status": "pass",
+      "detail": "1800×780 Plot 패널을 사용해 바깥 여백과 하단 빈 공간을 줄였다."
+    }
+  ],
+  "exportOptions": {
+    "headerPadding": "12px 24px 2px",
+    "contentPadding": "0 10px",
+    "sourcePadding": "0 24px 8px",
+    "titleFontSize": 38,
+    "sourceFontSize": 11,
+    "canvasHeight": 540,
+    "sourceReplica": true,
+    "backgroundColor": "#FFFFFF",
+    "frameStyle": "none",
+    "contentBorder": false,
+    "headerVariant": "left-rail",
+    "squareEdges": true,
+    "titleFontWeight": 900,
+    "subtitleFontSize": 18,
+    "subtitleFontWeight": 300,
+    "accentColor": "#85A655",
+    "fontFamily": "Paperlogy, var(--font-paperlogy), \"Noto Sans KR\", sans-serif",
+    "watermarkText": "@wltechrsrch"
+  },
+  "structure": {
+    "title": "S&P 500 기업의 매출 대비 비용 비중",
+    "subtitle": "기업 비용 구성의 추정치 · 단위: %",
+    "source": "자료: FactSet·Goldman Sachs Global Investment Research (2026.08.14)"
+  },
+  "data": {
+    "series": [
+      {
+        "name": "매출 대비 비용 비중",
+        "data": [
+          {
+            "x": "매출원가",
+            "y": 57,
+            "confidence": 1,
+            "displayLabel": "57%"
+          },
+          {
+            "x": "판매관리비",
+            "y": 12,
+            "confidence": 1,
+            "displayLabel": "12%"
+          },
+          {
+            "x": "인건비",
+            "y": 12,
+            "confidence": 1,
+            "displayLabel": "12%"
+          },
+          {
+            "x": "연구개발",
+            "y": 4,
+            "confidence": 1,
+            "displayLabel": "4%"
+          },
+          {
+            "x": "AI 추론",
+            "y": 0.1,
+            "confidence": 1,
+            "displayLabel": "0.1%"
+          }
+        ]
+      }
+    ],
+    "totalDataPoints": 5,
+    "quality": {
+      "overallConfidence": 1,
+      "missingPoints": 0,
+      "hardToReadAreas": [],
+      "readabilityScore": "excellent"
+    }
+  },
+  "narrative": {
+    "headMessage": "S&P 500 기업의 매출 대비 비용 비중",
+    "subMessage": "기업 비용 구성의 추정치 · 단위: %",
+    "headline": "S&P 500 기업의 매출 대비 비용 비중",
+    "summary": "기업 비용 구성의 추정치 · 단위: %",
+    "story": "",
+    "keyTakeaways": [],
+    "questionsRaised": [],
+    "viewerAction": "",
+    "contextualNotes": []
+  },
+  "infographicData": {
+    "subType": "news_brief",
+    "originalHeadline": "S&P 500 기업의 매출 대비 비용 비중",
+    "summaryBullets": [],
+    "translatedBody": [],
+    "media": [
+      {
+        "path": "input/p029-x594-a-panel.png",
+        "alt": "S&P 500 기업의 매출 대비 비용 비중"
+      }
+    ]
+  },
+  "emphasis": {
+    "annotations": [],
+    "highlightZones": [],
+    "trendLines": [],
+    "colorStrategy": {
+      "primary": "#85A655",
+      "secondary": [],
+      "positive": "#D92D20",
+      "negative": "#175CD3",
+      "accent": "#85A655",
+      "backgroundTone": "light"
+    },
+    "focusPoint": {
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "displayText": "AI 추론의 추정 비용 비중은 인건비의 약 1/120",
+      "reason": "사용자가 요청한 별도 키 데이터 라벨"
+    },
+    "densityLevel": "balanced"
+  },
+  "derivedLabels": {
+    "formula": "0.1/12",
+    "value": 0.008333333333333333,
+    "display": "약 1/120",
+    "condition": "같은 매출 대비 추정 비용 비중"
+  },
+  "deliveryMeta": {
+    "id": "p029-x594-a",
+    "already_approved": true,
+    "source_project": "/Users/mac/waltech/automation/silde_maker/projects/2026-10-05-source-faithful-chart-five",
+    "source_original": "자료: FactSet·Goldman Sachs Global Investment Research (2026.08.14)"
+  }
+}
