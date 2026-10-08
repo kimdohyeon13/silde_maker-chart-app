@@ -137,8 +137,11 @@ export default function TossBarChart({
   const groupedChartData: StackedDatum[] = groupedCategories.map((name) => {
     const row: StackedDatum = { name, value: 0, __total: 0 };
     groupedBarSeries.forEach((series) => {
-      const value = series.data.find((point) => String(point.x) === name)?.y ?? 0;
+      const point = series.data.find((candidate) => String(candidate.x) === name);
+      const value = point?.y ?? 0;
       row[series.name] = value;
+      // 값 라벨(groupedBarValueLabels)용. 원본 인쇄 문자열(-0%, +0% 등)을 그대로 보존한다.
+      row[`${series.name}__label`] = point?.displayLabel ?? fmt(value);
       row.value = Math.max(row.value, value);
     });
     return row;
@@ -687,27 +690,132 @@ export default function TossBarChart({
   }
 
   if (isGroupedBarChart && groupedChartData.length > 0) {
+    // [GROUPED-LABELS] 선택 기능. exportOptions.groupedBarValueLabels 가 true 일 때만 켠다.
+    // → 묶음 막대는 그동안 값 라벨이 없어서, 막대에 인쇄된 값만 있는 원본(업종별 P/E 괴리 등)을
+    //   다시 그리면 숫자를 읽을 수 없었다. 켜면 막대마다 값 라벨(양수는 위, 음수는 아래),
+    //   0 기준선, 줄바꿈 카테고리 라벨을 그린다. 끄면 기존 그림과 같다.
+    const groupedValueLabels = exportOptions.groupedBarValueLabels === true;
+    const highlightCategory = groupedValueLabels
+      ? exportOptions.groupedBarHighlightCategory
+      : undefined;
+    const hasGroupedHighlight =
+      !!highlightCategory && groupedCategories.includes(highlightCategory);
+    const groupedLabelFontSize = 13 * styles.labels.scale;
+    // 표시 라벨에 줄바꿈(\n)이 있으면 그 자리에서만 나눈다. 없으면 단어 단위로 감싼다.
+    const splitGroupedCategory = (key: string) => {
+      const label = formatCategoryTick(key);
+      return label.includes("\n")
+        ? label.split("\n").map((line) => line.trim()).filter(Boolean)
+        : wrapCategoryLabel(label, Math.max(categoryAxisLayout.maxCharsPerLine, 11), 3);
+    };
+    const groupedLabelLines = groupedValueLabels
+      ? groupedCategories.map(splitGroupedCategory)
+      : [];
+    const groupedMaxLines = Math.max(1, ...groupedLabelLines.map((lines) => lines.length));
+    const groupedTickRenderer = ({ x = 0, y = 0, payload }: CategoryTickProps) => {
+      const key = String(payload?.value ?? "");
+      const isFocus = hasGroupedHighlight && key === highlightCategory;
+      const lines =
+        groupedLabelLines[groupedCategories.indexOf(key)] ?? splitGroupedCategory(key);
+      return (
+        <g transform={`translate(${Number(x)},${Number(y)})`}>
+          <text
+            x={0}
+            y={0}
+            dy={14}
+            textAnchor="middle"
+            fill={isFocus ? colors.textPrimary : colors.textSecondary}
+            fontFamily={theme.typography.fontFamily.sans}
+            fontSize={12}
+            fontWeight={isFocus ? 900 : 700}
+          >
+            {lines.map((line, index) => (
+              <tspan key={`${line}-${index}`} x={0} dy={index === 0 ? 0 : 14}>
+                {line}
+              </tspan>
+            ))}
+          </text>
+        </g>
+      );
+    };
+    // Recharts 는 높이 0 인 막대를 라벨 목록에서 빼므로 index 가 밀린다.
+    // 그래서 valueAccessor 로 카테고리 이름을 받아 행을 찾는다.
+    const groupedRowByName = new Map(groupedChartData.map((row) => [String(row.name), row]));
+    const renderGroupedValueLabel = (seriesName: string) =>
+      function GroupedValueLabel(props: { viewBox?: unknown; value?: unknown }) {
+        const box = (props.viewBox ?? {}) as {
+          x?: number;
+          y?: number;
+          width?: number;
+          height?: number;
+        };
+        const bx = Number(box.x ?? 0);
+        const by = Number(box.y ?? 0);
+        const bw = Number(box.width ?? 0);
+        const bh = Number(box.height ?? 0);
+        const row = groupedRowByName.get(String(props.value ?? ""));
+        if (!row) return <g />;
+        const numeric = Number(row[seriesName] ?? 0);
+        const isFocus = hasGroupedHighlight && row.name === highlightCategory;
+        const top = Math.min(by, by + bh);
+        const bottom = Math.max(by, by + bh);
+        const labelY = numeric < 0 ? bottom + groupedLabelFontSize + 3 : top - 5;
+        return (
+          <text
+            x={bx + bw / 2}
+            y={labelY}
+            textAnchor="middle"
+            fill={isFocus ? colors.textPrimary : colors.textSecondary}
+            fontFamily={theme.typography.fontFamily.mono}
+            fontSize={groupedLabelFontSize}
+            fontWeight={isFocus ? 900 : (styles.labels.fontWeight ?? 700)}
+          >
+            {String(row[`${seriesName}__label`] ?? "")}
+          </text>
+        );
+      };
+    // 눈금에 이미 단위(%)가 붙으면 같은 단위를 축 제목으로 또 쓰지 않는다.
+    const groupedAxisTitle =
+      groupedValueLabels &&
+      yAxisLabel ===
+        getTickUnit(analysis.structure.yAxis.unit, analysis.structure.yAxis.label)
+        ? ""
+        : yAxisLabel;
+    const groupedAxisHeight = groupedValueLabels
+      ? 22 + groupedMaxLines * 14
+      : categoryAxisLayout.xAxisHeight;
     return (
       <ResponsiveContainer width={width} height={height} onResize={handleChartResize}>
         <BarChart
           data={groupedChartData}
           margin={{
-            top: yAxisLabel ? 48 : 18,
+            top: groupedAxisTitle ? 48 : 18,
             right: 28,
             bottom: Math.max(26, categoryAxisLayout.bottomMargin),
             left: yAxisLabel ? 8 : 0,
           }}
         >
           <CartesianGrid {...styles.grid} />
+          {hasGroupedHighlight && yAxisTicks.length > 0 && (
+            <ReferenceArea
+              x1={highlightCategory}
+              x2={highlightCategory}
+              y1={yAxisTicks[0]}
+              y2={yAxisTicks[yAxisTicks.length - 1]}
+              fill={colors.accent}
+              fillOpacity={0.1}
+              strokeOpacity={0}
+            />
+          )}
           <XAxis
             dataKey="name"
             {...styles.xAxis}
             interval={0}
             ticks={visibleCategoryTicks}
             tickFormatter={formatCategoryTick}
-            height={categoryAxisLayout.xAxisHeight}
-            tickMargin={categoryAxisLayout.tickMargin}
-            tick={categoryTick}
+            height={groupedAxisHeight}
+            tickMargin={groupedValueLabels ? 6 : categoryAxisLayout.tickMargin}
+            tick={groupedValueLabels ? groupedTickRenderer : categoryTick}
             label={categoryAxisLabel}
           />
           <YAxis
@@ -721,7 +829,7 @@ export default function TossBarChart({
             }
             ticks={yAxisTicks.length > 0 ? yAxisTicks : undefined}
             label={{
-              value: yAxisLabel,
+              value: groupedAxisTitle,
               position: "insideTopLeft",
               offset: 0,
               dy: -32,
@@ -746,12 +854,16 @@ export default function TossBarChart({
             verticalAlign="bottom"
             align="center"
             iconType="square"
+            {...(groupedValueLabels ? { itemSorter: null } : {})}
             formatter={(value) => (
               <span style={{ color: colors.textSecondary, fontSize: 13, fontWeight: 700 }}>
                 {String(value)}
               </span>
             )}
           />
+          {groupedValueLabels && plottedValues.some((value) => value < 0) && (
+            <ReferenceLine y={0} stroke={colors.axisLine} strokeWidth={1.2} />
+          )}
           {groupedBarSeries.map((series, seriesIndex) => (
             <Bar
               key={series.name}
@@ -762,7 +874,26 @@ export default function TossBarChart({
               animationDuration={theme.animation.chartEntrance.duration}
               animationEasing="ease-out"
               maxBarSize={32}
-            />
+              // 값 0 인 막대도 라벨(+0%, -0%)이 남도록 1px 막대로 그린다.
+              {...(groupedValueLabels ? { minPointSize: 1 } : {})}
+            >
+              {hasGroupedHighlight &&
+                groupedChartData.map((row, index) => (
+                  <Cell
+                    key={`gcell-${series.name}-${index}`}
+                    fill={getStackColor(seriesIndex, series.name)}
+                    fillOpacity={row.name === highlightCategory ? 1 : 0.5}
+                  />
+                ))}
+              {groupedValueLabels && showLabels && (
+                <LabelList
+                  valueAccessor={(entry) =>
+                    String((entry.payload as { name?: string } | undefined)?.name ?? "")
+                  }
+                  content={renderGroupedValueLabel(series.name)}
+                />
+              )}
+            </Bar>
           ))}
         </BarChart>
       </ResponsiveContainer>

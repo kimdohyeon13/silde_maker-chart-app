@@ -747,6 +747,13 @@ export interface ExportOptions {
   compactChartMargins?: boolean;
   /** 막대 색을 최댓값 강조가 아니라 양수/음수 부호 기준으로 표시 */
   barColorMode?: "emphasis" | "sign";
+  /**
+   * 세로 묶음 막대(시리즈 2개 이상)에 막대마다 값 라벨을 붙인다. 점의 displayLabel 이 있으면
+   * 그 문자열을 그대로 쓴다(원본 인쇄값 보존). 0 기준선과 줄바꿈 카테고리 라벨도 함께 켠다. 기본 꺼짐.
+   */
+  groupedBarValueLabels?: boolean;
+  /** groupedBarValueLabels 가 켜졌을 때 강조할 카테고리. 나머지 막대는 흐리게 그린다 */
+  groupedBarHighlightCategory?: string;
   /** 누적 막대 범례 정렬. 생략하면 기존 오른쪽 정렬 */
   stackedLegendAlign?: "left" | "center" | "right";
   /** 누적 막대 구간 안 직접 라벨 크기(px) */
