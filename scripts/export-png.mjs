@@ -472,7 +472,11 @@ async function main() {
 
   // ── Playwright 실행 ──
   log("🚀", "브라우저 시작 중...");
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    // 이 맥처럼 Playwright 브라우저가 없으면 PW_CHANNEL=chrome 으로 설치된 Chrome을 쓴다.
+    ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}),
+  });
   const context = await browser.newContext({
     deviceScaleFactor: PIXEL_RATIO,
     // 960px CSS canvas × 2 = 1920px 납품 폭. PageShell 기본 960px에는 좌우 패딩이 포함된다.
