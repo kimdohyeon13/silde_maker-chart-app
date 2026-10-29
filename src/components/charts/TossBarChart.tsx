@@ -39,6 +39,7 @@ import {
   getAnalysisThemeMode,
   getPresetColors,
   getPresetRechartsStyle,
+  usesCompactChartDesign,
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { formatNumber, formatNumberEn } from "@/lib/analysis/insight-engine";
@@ -98,6 +99,7 @@ export default function TossBarChart({
   );
   const squareEdges = !!exportOptions.squareEdges;
   const compactChartMargins = exportOptions.compactChartMargins === true;
+  const compactDesign = usesCompactChartDesign(analysis);
   const [measuredChartWidth, setMeasuredChartWidth] = React.useState(
     typeof width === "number" ? width : 860,
   );
@@ -195,6 +197,7 @@ export default function TossBarChart({
           // 데이터 포인트가 color를 들고 오면 막대별로 그 색을 쓴다.
           // 진영별 색 구분(예: 중국 대 미국)처럼 최댓값 강조로는 표현할 수 없는 경우에 쓴다.
           pointColor: (point as typeof point & { color?: string }).color,
+          compactLabel: point.displayLabel ?? `${fmt(point.y)}${analysis.structure.yAxis.unit ?? ""}`,
         }));
 
   // 최댓값/최솟값 인덱스 (강조용)
@@ -253,6 +256,11 @@ export default function TossBarChart({
     if (declared) return declared;
     if (exportOptions.barColorMode === "sign") {
       return value < 0 ? negativeAccent : positiveSeriesColor;
+    }
+    // 신규 기본형은 값의 크기나 부호만으로 강조할 대상을 결정하지 않는다.
+    if (compactDesign) {
+      return firstSeries.color ?? analysis.structure.legend[0]?.remakeColor ??
+        colorStrategy?.primary ?? colors.accent;
     }
     if (value < 0) return index === minIndex ? negativeAccent : negativeSubtle;
     if (index === maxIndex) return positiveAccent;
@@ -1006,7 +1014,9 @@ export default function TossBarChart({
             const legendColor = analysis.structure.legend.find(
               (item) => item.name === series.name,
             )?.remakeColor;
-            const fill = legendColor ?? stackPalette[seriesIndex % stackPalette.length];
+            const fill = compactDesign
+              ? series.color ?? legendColor ?? colors.series[seriesIndex % colors.series.length]
+              : legendColor ?? stackPalette[seriesIndex % stackPalette.length];
             const hasDisplayLabels = series.data.some((point) => !!point.displayLabel);
 
             return (
@@ -1018,7 +1028,7 @@ export default function TossBarChart({
                 isAnimationActive={animated}
                 animationDuration={theme.animation.chartEntrance.duration}
                 animationEasing="ease-out"
-                maxBarSize={horizontalBarSeries.length > 1 ? 11 : 18}
+                maxBarSize={horizontalBarSeries.length > 1 ? 11 : compactDesign ? 42 : 18}
               >
                 {horizontalBarSeries.length === 1 &&
                   horizontalChartData.map((row, index) => (
@@ -1036,7 +1046,7 @@ export default function TossBarChart({
                     }
                     style={{
                       fill: colors.textSecondary,
-                      fontSize: (horizontalBarSeries.length > 1 ? 13 : 17) * styles.labels.scale,
+                      fontSize: (horizontalBarSeries.length > 1 ? 13 : compactDesign ? 23 : 17) * styles.labels.scale,
                       fontFamily: theme.typography.fontFamily.mono,
                       fontWeight: styles.labels.fontWeight ?? 700,
                     }}
@@ -1214,9 +1224,9 @@ export default function TossBarChart({
               "385370365360"처럼 읽을 수 없으므로 표시하지 않는다(겹침 방지) [A6-b] */}
           {showLabels && chartData.length <= 8 && (
             <LabelList
-              dataKey="value"
+              dataKey={compactDesign ? "compactLabel" : "value"}
               position="top"
-              formatter={(value) => fmt(Number(value ?? 0))}
+              formatter={(value) => compactDesign ? String(value ?? "") : fmt(Number(value ?? 0))}
               style={{
                 fill: colors.textSecondary,
                 fontSize: 22 * styles.labels.scale,

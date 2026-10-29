@@ -43,6 +43,7 @@ import {
   getAnalysisThemeMode,
   getPresetColors,
   getPresetRechartsStyle,
+  usesCompactChartDesign,
 } from "@/lib/style-presets";
 import { getTheme, type ThemeMode } from "@/lib/theme/toss-theme";
 import { chartSettings } from "@/lib/chart-settings";
@@ -108,6 +109,10 @@ const DAILY_MOVE_LABEL_FONT_SIZE = 20.5;
 const DAILY_MOVE_BADGE_FONT_SIZE = 13.5;
 const DAILY_MOVE_TWO_COLUMN_LABEL_FONT_SIZE = 9;
 const DAILY_MOVE_TWO_COLUMN_VALUE_FONT_SIZE = 18;
+/** endLabelLines 여러 줄 끝 라벨의 줄 높이·블록 간격·글자 크기(px) */
+const END_LABEL_LINE_HEIGHT = 23;
+const END_LABEL_BLOCK_GAP = 6;
+const END_LABEL_LINES_FONT_SIZE = 20.5;
 
 /**
  * 이름만으로 시리즈 성격을 추정 (seriesKind 명시 필드가 없을 때의 폴백)
@@ -157,6 +162,7 @@ export default function TossLineChart({
     analysis.exportOptions,
   );
   const squareEdges = !!exportOptions.squareEdges;
+  const compactDesign = usesCompactChartDesign(analysis);
 
   // 듀얼 축 여부 판단
   const hasSecondaryYAxis = !!analysis.structure.secondaryYAxis;
@@ -207,6 +213,9 @@ export default function TossLineChart({
     if (legendItem?.remakeColor) {
       return legendItem.remakeColor;
     }
+    if (compactDesign && analysis.data.series[i]?.color) {
+      return analysis.data.series[i].color!;
+    }
     if (legendItem?.originalColor) {
       const oc = legendItem.originalColor;
       if (renderThemeMode === "dark" && DARK_MODE_COLOR_MAP[oc]) {
@@ -214,7 +223,9 @@ export default function TossLineChart({
       }
       return oc;
     }
-    return colors.series[i % colors.series.length];
+    return compactDesign && isForecastIndex(i)
+      ? colors.textSecondary
+      : colors.series[i % colors.series.length];
   }
 
   /**
@@ -300,8 +311,9 @@ export default function TossLineChart({
       valueAxis?.max,
       valueAxis?.tickValues,
     );
-    const automaticValueDigits =
-      Math.abs(value) < 10 && !Number.isInteger(value)
+    const automaticValueDigits = compactDesign
+      ? Math.max(axisDigits, Math.min(6, String(value).split(".")[1]?.length ?? 0))
+      : Math.abs(value) < 10 && !Number.isInteger(value)
         ? Math.max(axisDigits, 2)
         : axisDigits;
     const valueDigits = resolveDirectLabelFractionDigits(
@@ -621,7 +633,17 @@ export default function TossLineChart({
     .filter((item): item is NonNullable<typeof item> => item !== null);
 
   // [수정2] 최소 간격 강제 분산(+상/하단 클램프) → 직접라벨끼리 글자가 맞붙지 않게.
-  const directLabelDy = buildSpacedEndLabelDyMap(directLabelPoints, MIN_DIRECT_LABEL_GAP);
+  // 여러 줄 끝 라벨(endLabelLines)이 있으면 줄 수만큼 세로 간격을 넓힌다.
+  const maxEndLabelLineCount = Math.max(
+    1,
+    ...directLabelPoints.map((item) => item.series.endLabelLines?.length ?? 1),
+  );
+  const directLabelDy = buildSpacedEndLabelDyMap(
+    directLabelPoints,
+    maxEndLabelLineCount > 1
+      ? maxEndLabelLineCount * END_LABEL_LINE_HEIGHT + END_LABEL_BLOCK_GAP
+      : MIN_DIRECT_LABEL_GAP,
+  );
   const latestGuideCandidates = directLabelPoints.filter((item) => {
     const legendItem = analysis.structure.legend[item.index];
     const role = item.series.role ?? legendItem?.role;
@@ -1097,8 +1119,15 @@ export default function TossLineChart({
   const compactBottomMargin = xAxisLabelText
     ? chartSettings.margin.bottom
     : Math.max(30, chartSettings.margin.bottom - 20);
-  const endLabelRightMargin =
-    exportOptions.endLabelRightMargin ?? chartSettings.directLabels.extraRightMargin;
+  const compactEndLabelWidth = compactDesign && showDirectLabels
+    ? Math.max(0, ...directLabelPoints.map((item) => estimateDirectLabelWidth(
+        getDirectSeriesLabel(item.series.name, item.point.y, item.index),
+      ))) + 16
+    : 0;
+  const endLabelRightMargin = Math.max(
+    compactEndLabelWidth,
+    exportOptions.endLabelRightMargin ?? (compactDesign ? 48 : chartSettings.directLabels.extraRightMargin),
+  );
   const compactChartMargins = exportOptions.compactChartMargins === true;
 
   // Y축 제목이 있으면 그 높이를 상단 여백에 반드시 포함한다.
@@ -1113,7 +1142,7 @@ export default function TossLineChart({
       hasYAxisTitle ? Y_AXIS_TITLE_TOP_SPACE : 0,
     ),
     right: compactChartMargins
-      ? 48 +
+      ? (compactDesign ? 20 : 48) +
         (showDirectLabels ? endLabelRightMargin : 0) +
         (needsBandRightMargin ? endLabelRightMargin : 0)
       : chartSettings.margin.right +
@@ -1652,7 +1681,38 @@ export default function TossLineChart({
                 stroke={colors.surface}
                 strokeWidth={squareEdges ? 0 : 2.5}
                 label={
-                  dailyMove
+                  item.series.endLabelLines && item.series.endLabelLines.length > 0
+                    ? {
+                        content: (props: LabelProps) => {
+                          const viewBox = props.viewBox;
+                          if (!viewBox || !("x" in viewBox)) return <g />;
+                          const lines = item.series.endLabelLines ?? [];
+                          const labelX = viewBox.x + viewBox.width + directLabelOffset;
+                          const centerY = viewBox.y + viewBox.height / 2 + labelDy;
+                          const firstY =
+                            centerY - ((lines.length - 1) * END_LABEL_LINE_HEIGHT) / 2;
+                          return (
+                            <g data-direct-end-label-lines={lines.join(" | ")}>
+                              {lines.map((line, lineIndex) => (
+                                <text
+                                  key={`${item.series.name}-line-${lineIndex}`}
+                                  x={labelX}
+                                  y={firstY + lineIndex * END_LABEL_LINE_HEIGHT}
+                                  dominantBaseline="middle"
+                                  fill={item.color}
+                                  fontSize={END_LABEL_LINES_FONT_SIZE}
+                                  fontWeight={lineIndex === 0 ? 900 : 700}
+                                  fontFamily={theme.typography.fontFamily.sans}
+                                  style={{ whiteSpace: "pre" }}
+                                >
+                                  {line}
+                                </text>
+                              ))}
+                            </g>
+                          );
+                        },
+                      }
+                    : dailyMove
                     ? {
                         content: (props: LabelProps) => {
                           const viewBox = props.viewBox;

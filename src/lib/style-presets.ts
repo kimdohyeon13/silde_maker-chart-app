@@ -443,8 +443,51 @@ export function getStylePreset(id?: string): RemakeStylePreset {
   return STYLE_PRESETS[DEFAULT_STYLE_PRESET];
 }
 
-export function getAnalysisStylePreset(analysis?: Pick<VisualAnalysis, "stylePreset">) {
-  return getStylePreset(analysis?.stylePreset);
+type PresetAnalysis = Pick<VisualAnalysis, "stylePreset"> & {
+  exportOptions?: ExportOptions;
+  structure?: { chartType?: string; title?: string };
+};
+
+export function usesCompactChartDesign(analysis?: PresetAnalysis): boolean {
+  return analysis?.exportOptions?.chartDesign === "compact-contextual" &&
+    ["bar", "bar_horizontal", "line"].includes(analysis.structure?.chartType ?? "");
+}
+
+export function getAnalysisStylePreset(analysis?: PresetAnalysis): RemakeStylePreset {
+  const preset = getStylePreset(analysis?.stylePreset);
+  if (!usesCompactChartDesign(analysis)) return preset;
+  const dark = preset.mode === "dark";
+  return {
+    ...preset,
+    colors: {
+      light: {
+        ...preset.colors.light,
+        background: "#FFFFFF", surface: "#FFFFFF", textPrimary: "#111318",
+        textSecondary: "#4C5564", textTertiary: "#7B8491", accent: "#175CD3",
+        gridLine: "#E7EAF0", axisLine: "#7B8491", axisLabel: "#4C5564",
+        series: ["#175CD3", "#303744", "#718096", "#7C59AB"],
+      },
+      dark: {
+        ...preset.colors.dark,
+        background: "#0B0E14", surface: "#0B0E14", textPrimary: "#F7F9FF",
+        textSecondary: "#AEB8C9", textTertiary: "#788499", accent: "#6698FF",
+        gridLine: "#262E3D", axisLine: "#788499", axisLabel: "#AEB8C9",
+        series: ["#6698FF", "#D2DBEB", "#96A4BD", "#B79AE6"],
+      },
+    },
+    export: {
+      ...preset.export,
+      headerPadding: "10px 20px 0", contentPadding: "0 10px", sourcePadding: "0 20px 6px",
+      titleFontSize: 32, subtitleFontSize: 15, sourceFontSize: 10,
+    },
+    exportDefaults: {
+      ...preset.exportDefaults,
+      chartHeight: 420, compactChartMargins: true, lineStrokeWidth: 3.5,
+      showAreaFill: false, showLatestGuide: false, chartLabelScale: 1,
+      backgroundColor: dark ? "#0B0E14" : "#FFFFFF",
+      accentColor: dark ? "#6698FF" : "#175CD3",
+    },
+  };
 }
 
 export function getAnalysisThemeMode(

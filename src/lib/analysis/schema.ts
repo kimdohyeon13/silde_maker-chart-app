@@ -172,6 +172,8 @@ export interface DataPoint {
 
 /** 데이터 시리즈 (하나의 선/막대 그룹) */
 export interface DataSeries {
+  /** 시리즈를 구분하는 명시 색. 컴팩트 기본형에서도 원본 색 지정은 보존한다. */
+  color?: string;
   /** 시리즈 이름 (예: "삼성전자 주가") */
   name: string;
   /** 데이터 포인트 배열 */
@@ -180,6 +182,12 @@ export interface DataSeries {
   renderAs?: "line" | "bar" | "area";
   /** 주연/조연 구분 — secondary는 가는 선 + 낮은 투명도로 시각적 약화 */
   role?: "primary" | "secondary";
+  /**
+   * 선 끝 직접 라벨을 이 문자열 줄들로 그대로 찍는다(원본 인쇄 라벨 보존).
+   * 예: ["테슬라  +14.6%", "404.22 · 오늘 -0.80%"]. 첫 줄은 굵게, 나머지는 같은 색 보조 줄.
+   * 있으면 이름+값 자동 라벨과 dailyMove 배지 대신 쓰인다. 없으면 기존 렌더 그대로.
+   */
+  endLabelLines?: string[];
   /** 선 끝 기준값 옆에 붙이는 작은 당일 등락 배지 */
   dailyMove?: {
     value: string;
@@ -662,6 +670,8 @@ export interface QualityCheck {
 }
 
 export interface ExportOptions {
+  /** 승인된 신규 막대·선 기본 디자인. 기존 JSON의 재출력에는 자동 적용하지 않는다. */
+  chartDesign?: "compact-contextual";
   headerPadding?: string;
   contentPadding?: string;
   sourcePadding?: string;
