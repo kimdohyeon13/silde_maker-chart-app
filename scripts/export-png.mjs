@@ -396,9 +396,13 @@ async function findCardDomProblems(card) {
 
     // 출처가 있는 고정 카드에서 차트와 출처 사이가 다시 크게 벌어지면 중단한다.
     // 실제 렌더링된 Recharts 바깥쪽을 기준으로 재므로 제목 줄 수와 축 높이 변화도 반영된다.
+    // 패널(스몰멀티플) 카드는 Recharts가 여러 개라 첫 번째가 아니라 가장 아래 것을 기준으로 잰다.
     const source = element.querySelector("[data-export-source]");
-    if (recharts && source && isVisible(recharts) && isVisible(source)) {
-      const chartRect = recharts.getBoundingClientRect();
+    const lowestRecharts = [...element.querySelectorAll(".recharts-wrapper")]
+      .filter((node) => isVisible(node))
+      .sort((a, b) => b.getBoundingClientRect().bottom - a.getBoundingClientRect().bottom)[0];
+    if (lowestRecharts && source && isVisible(source)) {
+      const chartRect = lowestRecharts.getBoundingClientRect();
       const sourceRect = source.getBoundingClientRect();
       const gap = Math.round(sourceRect.top - chartRect.bottom);
       if (gap > 48) {
